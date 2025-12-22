@@ -1,0 +1,63 @@
+{{ define "main" }}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 mb-4">
+                <nav class="sidebar-nav">
+                    <h5 class="mb-3">{{ .Parent.Title | default .Title }}</h5>
+                    {{ $current := . }}
+                    {{ with .Parent }}
+                    {{ range .Pages }}
+                    <a href="{{ .Permalink }}" {{ if eq .Permalink $current.Permalink }}class="active" {{ end }}>
+                        {{ .Title }}
+                    </a>
+                    {{ end }}
+                    {{ else }}
+                    {{ range .Pages }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{ end }}
+                    {{ end }}
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Главная</a></li>
+                        {{ range .Ancestors.Reverse }}
+                        <li class="breadcrumb-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                        <li class="breadcrumb-item active">{{ .Title }}</li>
+                    </ol>
+                </nav>
+
+                <h1>{{ .Title }}</h1>
+                {{ with .Description }}<p class="lead text-muted">{{ . }}</p>{{ end }}
+
+                {{ .Content }}
+
+                <!-- Child Pages Grid -->
+                {{ if .Pages }}
+                <div class="row g-4 mt-4">
+                    {{ range .Pages }}
+                    {{ if not .Draft }}
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title h5">{{ .Title }}</h3>
+                                <p class="card-text text-muted small">{{ .Description }}</p>
+                                <a href="{{ .Permalink }}" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,39 @@
+# TravelRadar LK — Hugo Configuration
+baseURL = 'https://leonid-cordon.github.io/travelradar-lk/'
+languageCode = 'ru'
+title = 'TravelRadar LK'
+theme = 'doks'
+
+# Enable emoji in content
+enableEmoji = true
+
+# Taxonomies
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+# Permalinks
+[permalinks]
+  destinations = '/destinations/:slug/'
+
+# Menu configuration
+[menus]
+  [[menus.main]]
+    name = 'Направления'
+    pageRef = '/destinations/'
+    weight = 10
+  [[menus.main]]
+    name = 'Египет'
+    pageRef = '/destinations/egypt/'
+    parent = 'Направления'
+    weight = 1
+  [[menus.main]]
+    name = 'Турция'
+    pageRef = '/destinations/turkey/'
+    parent = 'Направления'
+    weight = 2
+  [[menus.main]]
+    name = 'Испания'
+    pageRef = '/destinations/spain/'
+    parent = 'Направления'
+    weight = 3

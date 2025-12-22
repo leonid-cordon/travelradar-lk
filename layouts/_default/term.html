@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="section">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+
+        <div class="row g-4 mt-3">
+            {{ range .Pages }}
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">{{ .Title }}</h3>
+                        <p class="card-text text-muted small">{{ .Description }}</p>
+                        <a href="{{ .Permalink }}" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

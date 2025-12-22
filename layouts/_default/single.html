@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 mb-4">
+                <nav class="sidebar-nav">
+                    {{ with .Parent }}
+                    <h5 class="mb-3">{{ .Title }}</h5>
+                    {{ range .Pages }}
+                    <a href="{{ .Permalink }}" {{ if eq .Permalink $.Permalink }}class="active" {{ end }}>
+                        {{ .Title }}
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Главная</a></li>
+                        {{ range .Ancestors.Reverse }}
+                        <li class="breadcrumb-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                        <li class="breadcrumb-item active">{{ .Title }}</li>
+                    </ol>
+                </nav>
+
+                <article>
+                    <h1>{{ .Title }}</h1>
+                    {{ with .Description }}<p class="lead text-muted">{{ . }}</p>{{ end }}
+
+                    <div class="content mt-4">
+                        {{ .Content }}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

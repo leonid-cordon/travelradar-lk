@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="lead text-muted">{{ . }}</p>{{ end }}
+
+        <div class="row g-3 mt-4">
+            {{ range .Pages }}
+            <div class="col-md-4">
+                <a href="{{ .Permalink }}" class="btn btn-outline-secondary w-100">
+                    {{ .Title }}
+                    <span class="badge bg-secondary ms-2">{{ len .Pages }}</span>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

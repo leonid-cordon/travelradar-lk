@@ -1,0 +1,37 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <p class="lead">{{ . }}</p>
+        {{ end }}
+    </div>
+</section>
+
+<!-- Content -->
+<section class="section">
+    <div class="container">
+        {{ .Content }}
+
+        <!-- Destinations Grid -->
+        {{ $destinations := .Site.GetPage "/destinations" }}
+        {{ if $destinations }}
+        <h2 class="mb-4">Направления</h2>
+        <div class="row g-4">
+            {{ range $destinations.Pages }}
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">{{ .Title }}</h3>
+                        <p class="card-text text-muted">{{ .Description }}</p>
+                        <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
