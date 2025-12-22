@@ -1,75 +1,287 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Travel Radar LK — шпаргалки для отдыха в Египте зимой без сюрпризов. Бухты, красный флаг, план Б и тёплые бассейны.">
+    <meta name="description"
+        content="Travel Radar LK — шпаргалки для отдыха в Египте зимой без сюрпризов. Бухты, красный флаг, план Б и тёплые бассейны.">
     <title>Travel Radar LK — шпаргалки для отдыха без сюрпризов</title>
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --secondary: #ec4899;
+            --accent: #f59e0b;
+            --bg-dark: #0f172a;
+            --bg-darker: #020617;
+            --card-bg: rgba(30, 41, 59, 0.6);
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-darker);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+            animation: rotate 30s linear infinite;
         }
 
-        .hero::before {
+        .animated-bg::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(99, 102, 241, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
             right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
-            opacity: 0.3;
+            padding: 20px 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        nav.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Reveal Animation */
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            position: relative;
         }
 
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 10;
+        }
+
+        .logo-wrapper {
+            margin: 0 auto 40px;
+            position: relative;
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.5));
+            animation: logoFloat 3s ease-in-out infinite;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+        @keyframes logoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            max-width: 700px;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -77,320 +289,462 @@
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             align-items: center;
         }
 
+        /* Premium Buttons */
         .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            border-radius: 8px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1rem;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
         }
 
         .btn-primary {
-            background: #ff6b6b;
+            background: linear-gradient(135deg, #ec4899 0%, #ef4444 100%);
             color: white;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.4);
         }
 
         .btn-primary:hover {
-            background: #ee5a52;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(236, 72, 153, 0.6);
         }
 
         .btn-secondary {
-            background: white;
-            color: #667eea;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-primary);
         }
 
         .btn-secondary:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
         }
 
         .btn-small {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.3);
+            padding: 12px 24px;
+            font-size: 0.95rem;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: var(--text-primary);
         }
 
         .btn-small:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(99, 102, 241, 0.3);
             transform: translateY(-2px);
         }
 
-        /* Section Styles */
+        /* Section Styling */
         section {
-            padding: 80px 20px;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 50px;
-            color: #2d3748;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Cards Section */
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Cards Grid */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
         .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
         }
 
         .card-title {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-weight: 700;
             margin-bottom: 15px;
-            color: #2d3748;
+            color: var(--text-primary);
         }
 
         .card-text {
-            color: #718096;
-            margin-bottom: 25px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
             line-height: 1.7;
         }
 
         .card-buttons {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .btn-card {
-            padding: 12px 20px;
-            font-size: 0.95rem;
-        }
-
-        /* How I Choose Section */
-        .features-list {
-            max-width: 800px;
-            margin: 0 auto;
+        /* Features Grid */
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .feature-item {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid #667eea;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: all 0.3s ease;
         }
 
-        .feature-item::before {
-            content: '✓';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background: #667eea;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 24px;
-            margin-right: 12px;
-            font-weight: bold;
+        .feature-item:hover {
+            transform: translateX(10px);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
 
         /* Services Section */
-        .services-bg {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .services-bg .section-title {
-            color: white;
-        }
-
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 900px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .service-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
         .service-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.4);
         }
 
         .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 10px rgba(99, 102, 241, 0.3));
         }
 
         .service-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #2d3748;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
         }
 
         .service-desc {
-            font-size: 0.9rem;
-            color: #718096;
-            margin-bottom: 15px;
-        }
-
-        .btn-service {
-            width: 100%;
-            background: #667eea;
-            color: white;
-            padding: 12px;
-        }
-
-        .btn-service:hover {
-            background: #5a67d8;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
         }
 
         /* FAQ Section */
         .faq-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: white;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+            border-radius: 15px;
             overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(99, 102, 241, 0.3);
         }
 
         .faq-question {
             width: 100%;
-            padding: 20px;
-            background: white;
+            padding: 25px 30px;
+            background: transparent;
             border: none;
             text-align: left;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #2d3748;
-            transition: background 0.3s ease;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
         }
 
         .faq-question:hover {
-            background: #f7fafc;
+            color: var(--primary-light);
         }
 
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
+        .faq-icon {
+            width: 30px;
+            height: 30px;
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
-        .faq-question.active::after {
+        .faq-question.active .faq-icon {
+            background: var(--primary);
             transform: rotate(45deg);
         }
 
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
-            padding: 0 20px;
-            color: #718096;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 30px;
+            color: var(--text-muted);
         }
 
         .faq-answer.active {
-            max-height: 500px;
-            padding: 0 20px 20px;
+            max-height: 600px;
+            padding: 0 30px 25px;
+        }
+
+        .faq-answer p {
+            line-height: 1.8;
         }
 
         /* Footer */
         footer {
-            background: #2d3748;
-            color: white;
-            padding: 50px 20px 30px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+            padding: 60px 20px 30px;
             text-align: center;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 40px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
         .footer-link {
-            color: white;
+            color: var(--text-secondary);
             text-decoration: none;
             font-size: 1.1rem;
-            transition: opacity 0.3s ease;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .footer-link:hover {
-            opacity: 0.8;
+            color: var(--primary-light);
+            transform: translateY(-2px);
         }
 
         .disclaimer {
-            max-width: 800px;
-            margin: 0 auto 20px;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            padding: 30px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 15px;
             font-size: 0.9rem;
-            line-height: 1.6;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        .disclaimer strong {
+            color: var(--text-primary);
         }
 
         .copyright {
-            margin-top: 30px;
-            opacity: 0.7;
+            margin-top: 40px;
+            color: var(--text-muted);
             font-size: 0.9rem;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.6);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
+            .nav-links {
+                display: none;
             }
 
             .hero {
-                padding: 60px 20px 80px;
+                padding: 100px 20px 60px;
             }
 
             section {
@@ -403,127 +757,178 @@
 
             .hero-buttons {
                 flex-direction: column;
+                width: 100%;
             }
 
             .btn {
                 width: 100%;
-                max-width: 300px;
+                max-width: 400px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
             }
         }
 
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Quick navigation */
-        .quick-nav {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            z-index: 1000;
-            display: none;
-        }
-
-        .quick-nav a {
-            display: block;
-            padding: 8px 15px;
-            text-decoration: none;
-            color: #667eea;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
-            border-radius: 4px;
-        }
-
-        .quick-nav a:hover {
-            background: #f7fafc;
-        }
-
-        @media (min-width: 1024px) {
-            .quick-nav {
-                display: block;
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
         }
     </style>
 </head>
+
 <body>
-    <!-- Quick Navigation (Desktop) -->
-    <nav class="quick-nav">
-        <a href="#cheatsheets">📝 Шпаргалки</a>
-        <a href="#services">🛠 Сервисы</a>
-        <a href="#faq">❓ FAQ</a>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="35" fill="none" stroke="#6366f1" stroke-width="3" />
+                    <circle cx="100" cy="100" r="5" fill="#6366f1" />
+                    <line x1="100" y1="100" x2="120" y2="85" stroke="#ec4899" stroke-width="3" stroke-linecap="round" />
+                    <path d="M 130 60 L 140 75 L 155 50 L 165 60 L 145 85 L 165 95 L 155 105 L 140 85 L 130 95 Z"
+                        fill="#6366f1" />
+                </svg>
+                Travel Radar LK
+            </a>
+            <ul class="nav-links">
+                <li><a href="#cheatsheets">Шпаргалки</a></li>
+                <li><a href="#how">Как выбираю</a></li>
+                <li><a href="#services">Сервисы</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <!-- Logo SVG (based on uploaded image) -->
-            <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="130" r="60" fill="none" stroke="white" stroke-width="3"/>
-                <circle cx="100" cy="130" r="50" fill="none" stroke="white" stroke-width="2"/>
-                <circle cx="100" cy="130" r="40" fill="none" stroke="white" stroke-width="2"/>
-                <circle cx="100" cy="130" r="30" fill="none" stroke="white" stroke-width="2"/>
-                <circle cx="100" cy="130" r="5" fill="white"/>
-                <line x1="100" y1="130" x2="130" y2="110" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                <path d="M 140 70 L 150 90 L 170 60 L 180 70 L 160 100 L 180 110 L 170 120 L 150 100 L 140 110 Z" fill="#4A90E2"/>
-                <text x="100" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">LK</text>
-            </svg>
+    <section id="hero" class="hero">
+        <div class="hero-content fade-in-up">
+            <div class="logo-wrapper">
+                <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="130" r="60" fill="none" stroke="url(#grad1)" stroke-width="3" />
+                    <circle cx="100" cy="130" r="50" fill="none" stroke="rgba(99, 102, 241, 0.6)" stroke-width="2" />
+                    <circle cx="100" cy="130" r="40" fill="none" stroke="rgba(99, 102, 241, 0.4)" stroke-width="2" />
+                    <circle cx="100" cy="130" r="30" fill="none" stroke="rgba(99, 102, 241, 0.2)" stroke-width="2" />
+                    <circle cx="100" cy="130" r="8" fill="url(#grad1)" />
+                    <line x1="100" y1="130" x2="130" y2="110" stroke="#ec4899" stroke-width="4"
+                        stroke-linecap="round" />
+                    <path d="M 140 70 L 150 90 L 170 60 L 180 70 L 160 100 L 180 110 L 170 120 L 150 100 L 140 110 Z"
+                        fill="#6366f1" />
+                    <text x="100" y="45" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white"
+                        text-anchor="middle">LK</text>
+                </svg>
+            </div>
 
             <h1>Travel Radar LK — шпаргалки для отдыха без сюрпризов</h1>
             <p class="hero-subtitle">Египет зимой: ветер, бухты, красный флаг, план Б и тёплые бассейны.</p>
-            
+
             <div class="hero-buttons">
                 <!-- ЗАГЛУШКА: Замените BOOKING_LINK на ваш партнёрский Booking.com deeplink -->
-                <a href="#BOOKING_LINK" class="btn btn-primary">Проверить цены на Booking</a>
-                <a href="https://www.youtube.com/@TravelRadar_LK" target="_blank" class="btn btn-secondary">Смотреть Shorts</a>
-                <a href="https://t.me/TravelRadar_LK" target="_blank" class="btn btn-small">📱 Telegram</a>
+                <a href="#BOOKING_LINK" class="btn btn-primary">
+                    <span>🏨</span>
+                    Проверить цены на Booking
+                </a>
+                <a href="https://www.youtube.com/@TravelRadar_LK" target="_blank" class="btn btn-secondary">
+                    <span>▶️</span>
+                    Смотреть Shorts
+                </a>
+                <a href="https://t.me/TravelRadar_LK" target="_blank" class="btn btn-small">
+                    <span>💬</span>
+                    Telegram
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Popular Cheatsheets Section -->
-    <section id="cheatsheets">
+    <!-- Cheatsheets Section -->
+    <section id="cheatsheets" class="section-reveal">
         <div class="container">
-            <h2 class="section-title">Популярные шпаргалки</h2>
-            
+            <div class="section-header">
+                <span class="section-label">Шпаргалки</span>
+                <h2 class="section-title">Популярные шпаргалки</h2>
+                <p class="section-description">Быстрые советы для комфортного зимнего отдыха в Египте</p>
+            </div>
+
             <div class="cards-grid">
                 <!-- Card 1: Red Flag -->
                 <div class="card">
-                    <h3 class="card-title">🚩 Красный флаг зимой: Plan B</h3>
+                    <span class="card-icon">🚩</span>
+                    <h3 class="card-title">Красный флаг зимой: Plan B</h3>
                     <p class="card-text">Почему море закрывают даже при тёплой погоде и что делать.</p>
                     <div class="card-buttons">
                         <!-- ЗАГЛУШКА: Замените SHORT_RED_FLAG на ссылку на YouTube Short -->
-                        <a href="#SHORT_RED_FLAG" target="_blank" class="btn btn-secondary btn-card">Смотреть Shorts</a>
+                        <a href="#SHORT_RED_FLAG" target="_blank" class="btn btn-secondary">
+                            <span>▶️</span>
+                            Смотреть Shorts
+                        </a>
                         <!-- ЗАГЛУШКА: Замените BOOKING_LINK на партнёрскую ссылку Booking -->
-                        <a href="#BOOKING_LINK" target="_blank" class="btn btn-primary btn-card">Открыть Booking</a>
+                        <a href="#BOOKING_LINK" target="_blank" class="btn btn-primary">
+                            <span>🏨</span>
+                            Открыть Booking
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 2: Sharm Bays -->
                 <div class="card">
-                    <h3 class="card-title">🏝️ Шарм зимой: безветренные бухты</h3>
+                    <span class="card-icon">🏝️</span>
+                    <h3 class="card-title">Шарм зимой: безветренные бухты</h3>
                     <p class="card-text">Наама / Шаркс / Хадаба — где обычно комфортнее зимой.</p>
                     <div class="card-buttons">
                         <!-- ЗАГЛУШКА: Замените SHORT_SHARM_BAYS на ссылку на YouTube Short -->
-                        <a href="#SHORT_SHARM_BAYS" target="_blank" class="btn btn-secondary btn-card">Смотреть Shorts</a>
+                        <a href="#SHORT_SHARM_BAYS" target="_blank" class="btn btn-secondary">
+                            <span>▶️</span>
+                            Смотреть Shorts
+                        </a>
                         <!-- ЗАГЛУШКА: Замените BOOKING_SHARM_LINK на партнёрскую ссылку Booking для Шарм-эль-Шейха -->
-                        <a href="#BOOKING_SHARM_LINK" target="_blank" class="btn btn-primary btn-card">Открыть Booking (Шарм)</a>
+                        <a href="#BOOKING_SHARM_LINK" target="_blank" class="btn btn-primary">
+                            <span>🏨</span>
+                            Booking (Шарм)
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 3: Hurghada/Makadi -->
                 <div class="card">
-                    <h3 class="card-title">🌬️ Хургада зимой: где меньше ветра</h3>
+                    <span class="card-icon">🌬️</span>
+                    <h3 class="card-title">Хургада зимой: где меньше ветра</h3>
                     <p class="card-text">Makadi Bay и как выбирать район, а не "просто курорт".</p>
                     <div class="card-buttons">
                         <!-- ЗАГЛУШКА: Замените SHORT_MAKADI на ссылку на YouTube Short -->
-                        <a href="#SHORT_MAKADI" target="_blank" class="btn btn-secondary btn-card">Смотреть Shorts</a>
+                        <a href="#SHORT_MAKADI" target="_blank" class="btn btn-secondary">
+                            <span>▶️</span>
+                            Смотреть Shorts
+                        </a>
                         <!-- ЗАГЛУШКА: Замените BOOKING_HURGHADA_LINK на партнёрскую ссылку Booking для Хургады/Макади -->
-                        <a href="#BOOKING_HURGHADA_LINK" target="_blank" class="btn btn-primary btn-card">Открыть Booking (Хургада/Макади)</a>
+                        <a href="#BOOKING_HURGHADA_LINK" target="_blank" class="btn btn-primary">
+                            <span>🏨</span>
+                            Booking (Хургада)
+                        </a>
                     </div>
                 </div>
             </div>
@@ -531,47 +936,63 @@
     </section>
 
     <!-- How I Choose Section -->
-    <section>
+    <section id="how" class="section-reveal">
         <div class="container">
-            <h2 class="section-title">Как я выбираю</h2>
-            
-            <div class="features-list">
+            <div class="section-header">
+                <span class="section-label">Методология</span>
+                <h2 class="section-title">Как я выбираю</h2>
+                <p class="section-description">Мой подход к выбору идеального зимнего отеля</p>
+            </div>
+
+            <div class="features-grid">
                 <div class="feature-item">
-                    Смотрю прогноз ветра по дням
+                    <div class="feature-icon">🌡️</div>
+                    <div class="feature-text">Смотрю прогноз ветра по дням</div>
                 </div>
                 <div class="feature-item">
-                    Выбираю бухту/район, а не просто город
+                    <div class="feature-icon">🗺️</div>
+                    <div class="feature-text">Выбираю бухту/район, а не просто город</div>
                 </div>
                 <div class="feature-item">
-                    Plan B: подогреваемый бассейн
+                    <div class="feature-icon">🏊</div>
+                    <div class="feature-text">Plan B: подогреваемый бассейн</div>
                 </div>
                 <div class="feature-item">
-                    Сверяю отзывы и карту
+                    <div class="feature-icon">⭐</div>
+                    <div class="feature-text">Сверяю отзывы и карту</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Useful Services Section -->
-    <section id="services" class="services-bg">
+    <!-- Services Section -->
+    <section id="services" class="section-reveal">
         <div class="container">
-            <h2 class="section-title">Полезные сервисы</h2>
-            
+            <div class="section-header">
+                <span class="section-label">Полезные инструменты</span>
+                <h2 class="section-title">Полезные сервисы</h2>
+                <p class="section-description">Проверенные сервисы для подготовки к путешествию</p>
+            </div>
+
             <div class="services-grid">
                 <!-- Aviasales -->
                 <div class="service-card">
                     <div class="service-icon">✈️</div>
                     <h3 class="service-title">Авиабилеты</h3>
                     <p class="service-desc">Поиск дешёвых билетов на Aviasales</p>
-                    <a href="https://aviasales.tp.st/uyWWsuwy" target="_blank" class="btn btn-service">Найти билеты</a>
+                    <a href="https://aviasales.tp.st/uyWWsuwy" target="_blank" class="btn btn-primary">
+                        Найти билеты
+                    </a>
                 </div>
 
                 <!-- EKTA Insurance -->
                 <div class="service-card">
-                    <div class="service-icon">🛡</div>
+                    <div class="service-icon">🛡️</div>
                     <h3 class="service-title">Страховка</h3>
                     <p class="service-desc">Туристическая страховка от EKTA</p>
-                    <a href="https://ektatraveling.tp.st/WUHSV7KZ" target="_blank" class="btn btn-service">Оформить страховку</a>
+                    <a href="https://ektatraveling.tp.st/WUHSV7KZ" target="_blank" class="btn btn-primary">
+                        Оформить страховку
+                    </a>
                 </div>
 
                 <!-- YESIM eSIM -->
@@ -579,68 +1000,96 @@
                     <div class="service-icon">📶</div>
                     <h3 class="service-title">eSIM (YESIM)</h3>
                     <p class="service-desc">Мобильный интернет за границей</p>
-                    <a href="https://yesim.tp.st/QvMYHyS5" target="_blank" class="btn btn-service">Получить eSIM</a>
+                    <a href="https://yesim.tp.st/QvMYHyS5" target="_blank" class="btn btn-primary">
+                        Получить eSIM
+                    </a>
                 </div>
 
                 <!-- Airalo eSIM -->
                 <div class="service-card">
-                    <div class="service-icon">📶</div>
+                    <div class="service-icon">📱</div>
                     <h3 class="service-title">eSIM (Airalo)</h3>
                     <p class="service-desc">Альтернативный провайдер eSIM</p>
-                    <a href="https://airalo.tp.st/n8zsAbkj" target="_blank" class="btn btn-service">Получить eSIM</a>
+                    <a href="https://airalo.tp.st/n8zsAbkj" target="_blank" class="btn btn-primary">
+                        Получить eSIM
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq">
+    <section id="faq" class="section-reveal">
         <div class="container">
-            <h2 class="section-title">Часто задаваемые вопросы</h2>
-            
+            <div class="section-header">
+                <span class="section-label">Вопросы и ответы</span>
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <p class="section-description">Ответы на популярные вопросы о зимнем отдыхе в Египте</p>
+            </div>
+
             <div class="faq-container">
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>Почему зимой бывает красный флаг?</span>
+                        <div class="faq-icon">+</div>
                     </button>
                     <div class="faq-answer">
-                        <p>Зимой в Египте дует северный ветер, который создаёт волны и течения на Красном море. Красный флаг поднимают не только из-за температуры воды (она обычно 22-24°C), но из-за безопасности: сильные волны и течения опасны для купания. Даже если воздух тёплый (+25°C), море может быть закрыто. Поэтому важно иметь Plan B — подогреваемый бассейн.</p>
+                        <p>Зимой в Египте дует северный ветер, который создаёт волны и течения на Красном море. Красный
+                            флаг поднимают не только из-за температуры воды (она обычно 22-24°C), но из-за безопасности:
+                            сильные волны и течения опасны для купания. Даже если воздух тёплый (+25°C), море может быть
+                            закрыто. Поэтому важно иметь Plan B — подогреваемый бассейн.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>Шарм или Хургада зимой?</span>
+                        <div class="faq-icon">+</div>
                     </button>
                     <div class="faq-answer">
-                        <p>В Шарм-эль-Шейхе защищённые бухты (Наама, Шаркс Бей, Хадаба) обычно спокойнее зимой благодаря горам, которые блокируют северный ветер. В Хургаде более открытое море, но есть защищённые районы типа Makadi Bay. Важно выбирать не просто города, а конкретные бухты и районы. Смотрите карту и прогноз ветра перед бронированием.</p>
+                        <p>В Шарм-эль-Шейхе защищённые бухты (Наама, Шаркс Бей, Хадаба) обычно спокойнее зимой благодаря
+                            горам, которые блокируют северный ветер. В Хургаде более открытое море, но есть защищённые
+                            районы типа Makadi Bay. Важно выбирать не просто города, а конкретные бухты и районы.
+                            Смотрите карту и прогноз ветра перед бронированием.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>Какие бухты в Шарме спокойнее?</span>
+                        <div class="faq-icon">+</div>
                     </button>
                     <div class="faq-answer">
-                        <p>Naama Bay, Sharks Bay и Hadaba — это самые защищённые от ветра бухты в Шарм-эль-Шейхе. Они окружены горами с севера, что создаёт естественную защиту. Набк-Бей более открыт ветрам. При выборе отеля всегда проверяйте его точное расположение на карте и читайте свежие отзывы о ветре и волнах.</p>
+                        <p>Naama Bay, Sharks Bay и Hadaba — это самые защищённые от ветра бухты в Шарм-эль-Шейхе. Они
+                            окружены горами с севера, что создаёт естественную защиту. Набк-Бей более открыт ветрам. При
+                            выборе отеля всегда проверяйте его точное расположение на карте и читайте свежие отзывы о
+                            ветре и волнах.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>Нужен ли подогреваемый бассейн?</span>
+                        <div class="faq-icon">+</div>
                     </button>
                     <div class="faq-answer">
-                        <p>Зимой — обязательно! Это ваш Plan B на случай красного флага. Даже если море будет открыто большую часть времени, наличие тёплого бассейна делает отдых комфортным в любую погоду. Проверяйте в описании отеля, что бассейн именно подогреваемый (heated pool), а не просто крытый.</p>
+                        <p>Зимой — обязательно! Это ваш Plan B на случай красного флага. Даже если море будет открыто
+                            большую часть времени, наличие тёплого бассейна делает отдых комфортным в любую погоду.
+                            Проверяйте в описании отеля, что бассейн именно подогреваемый (heated pool), а не просто
+                            крытый.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>Как быстро проверить ветер на день?</span>
+                        <div class="faq-icon">+</div>
                     </button>
                     <div class="faq-answer">
-                        <p>Используйте сайты Windfinder или Windy. Вводите название курорта и смотрите прогноз по дням. Обращайте внимание на скорость ветра (м/с) и направление. Северный и северо-западный ветер более 7-10 м/с обычно означает волны и возможный красный флаг. Проверяйте прогноз за 3-5 дней до вылета.</p>
+                        <p>Используйте сайты Windfinder или Windy. Вводите название курорта и смотрите прогноз по дням.
+                            Обращайте внимание на скорость ветра (м/с) и направление. Северный и северо-западный ветер
+                            более 7-10 м/с обычно означает волны и возможный красный флаг. Проверяйте прогноз за 3-5
+                            дней до вылета.</p>
                     </div>
                 </div>
             </div>
@@ -651,36 +1100,97 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="https://www.youtube.com/@TravelRadar_LK" target="_blank" class="footer-link">📺 YouTube</a>
-                <a href="https://t.me/TravelRadar_LK" target="_blank" class="footer-link">💬 Telegram</a>
+                <a href="https://www.youtube.com/@TravelRadar_LK" target="_blank" class="footer-link">
+                    <span>▶️</span> YouTube
+                </a>
+                <a href="https://t.me/TravelRadar_LK" target="_blank" class="footer-link">
+                    <span>💬</span> Telegram
+                </a>
             </div>
 
             <div class="disclaimer">
                 <p style="margin-bottom: 15px;"><strong>Партнёрский дисклеймер:</strong></p>
-                <p style="margin-bottom: 10px;">As a Booking.com Affiliate, I earn from qualifying transactions.</p>
-                <p>Некоторые ссылки на этой странице могут быть партнёрскими — это помогает развивать проект и создавать больше полезного контента для вас.</p>
+                <p style="margin-bottom: 10px;"><strong>As a Booking.com Affiliate, I earn from qualifying
+                        transactions.</strong></p>
+                <p>Некоторые ссылки на этой странице могут быть партнёрскими — это помогает развивать проект и создавать
+                    больше полезного контента для вас.</p>
             </div>
 
-            <p class="copyright">© 2024 Travel Radar LK</p>
+            <p class="copyright">© 2024 Travel Radar LK. Все права защищены.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for FAQ Accordion and Smooth Scroll -->
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <span style="font-size: 1.5rem;">↑</span>
+    </div>
+
+    <!-- JavaScript -->
     <script>
+        // Particles Generation
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Navbar Hide/Show on Scroll
+        let lastScroll = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (currentScroll > lastScroll && currentScroll > 500) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Section Reveal on Scroll
+        const revealSections = document.querySelectorAll('.section-reveal');
+
+        const revealOnScroll = () => {
+            revealSections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
         // FAQ Accordion
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const answer = button.nextElementSibling;
                 const isActive = answer.classList.contains('active');
-                
-                // Close all other answers
+
+                // Close all answers
                 document.querySelectorAll('.faq-answer').forEach(item => {
                     item.classList.remove('active');
                 });
                 document.querySelectorAll('.faq-question').forEach(item => {
                     item.classList.remove('active');
                 });
-                
+
                 // Toggle current answer
                 if (!isActive) {
                     answer.classList.add('active');
@@ -689,26 +1199,48 @@
             });
         });
 
-        // Smooth scroll for anchor links (already handled by CSS scroll-behavior, but adding for older browsers)
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
-                
+
                 // Skip placeholder links
                 if (href.includes('BOOKING') || href.includes('SHORT_')) {
                     return;
                 }
-                
+
                 const target = document.querySelector(href);
                 if (target) {
                     e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = target.offsetTop - navbarHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
     </script>
 </body>
+
 </html>
