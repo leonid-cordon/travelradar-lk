@@ -1,0 +1,45 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="{{ "/" | relURL }}" class="logo">
+                <span class="logo-main">Travel Radar</span>
+                <span class="logo-sub">LK</span>
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="{{ "/countries/" | relURL }}">Страны</a></li>
+                    
+                    <li class="nav-dropdown">
+                        <a href="{{ "/services/" | relURL }}" class="dropdown-toggle">Сервисы ▾</a>
+                        <ul class="dropdown-menu">
+                            {{ range .Site.Menus.services }}
+                            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-dropdown">
+                        <a href="{{ "/materials/" | relURL }}" class="dropdown-toggle">Материалы ▾</a>
+                        <ul class="dropdown-menu">
+                            {{ range .Site.Menus.materials }}
+                            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                    
+                    <li><a href="{{ "/about/" | relURL }}">О проекте</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active">RU</button>
+                    <button class="lang-btn">UA</button>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <a href="/login/" class="login-link">Вход</a>
+            </div>
+        </div>
+    </div>
+</header>

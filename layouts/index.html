@@ -1,37 +1,267 @@
 {{ define "main" }}
+<style>
+    /* Homepage specific styles */
+    .hero-section {
+        background: linear-gradient(135deg, #0F3460 0%, #1A4D7C 50%, #0A2342 100%);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        color: white;
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        margin-top: 24px;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .service-tile {
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        transition: all 150ms;
+        text-align: center;
+    }
+
+    .service-tile:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+    }
+
+    .country-card {
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        transition: all 150ms;
+    }
+
+    .country-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    }
+
+    .mini-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+    }
+
+    .mini-btn {
+        padding: 6px 12px;
+        background: #F1F5F9;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #0F3460;
+        transition: all 150ms;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mini-btn:hover {
+        background: #E2E8F0;
+    }
+
+    .trust-points {
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+        flex-wrap: wrap;
+        padding: 48px 0;
+    }
+
+    .trust-point {
+        text-align: center;
+        max-width: 250px;
+    }
+
+    .trust-point-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+</style>
+
 <!-- Hero Section -->
-<section class="hero text-center">
+<section class="hero-section">
     <div class="container">
-        <h1 class="display-4 fw-bold">{{ .Title }}</h1>
-        {{ with .Params.description }}
-        <p class="lead">{{ . }}</p>
-        {{ end }}
+        <h1 class="hero-title">Travel Radar LK — путешествия по странам без лишних ошибок</h1>
+        <p class="hero-subtitle">Выберите страну → получите понятные гайды + сервисы (билеты, отели, страховка, eSIM).
+        </p>
+        <div class="hero-cta">
+            <a href="{{ " /countries/" | relURL }}" class="btn btn-accent">Выбрать страну</a>
+            <a href="{{ " /services/" | relURL }}" class="btn btn-secondary">Сервисы</a>
+        </div>
+        <div class="hero-badge">
+            Сейчас активно: Египет (зима) ❄️
+        </div>
     </div>
 </section>
 
-<!-- Content -->
+<!-- Services Section -->
 <section class="section">
     <div class="container">
-        {{ .Content }}
-
-        <!-- Destinations Grid -->
-        {{ $destinations := .Site.GetPage "/destinations" }}
-        {{ if $destinations }}
-        <h2 class="mb-4">Направления</h2>
-        <div class="row g-4">
-            {{ range $destinations.Pages }}
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title h5">{{ .Title }}</h3>
-                        <p class="card-text text-muted">{{ .Description }}</p>
-                        <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm">Подробнее →</a>
-                    </div>
-                </div>
+        <h2 class="section-title">Сервисы для поездки</h2>
+        <div class="grid grid-4">
+            <div class="service-tile">
+                <div class="service-icon">✈️</div>
+                <h3 class="card-title">Авиа</h3>
+                <p class="card-text">Как найти дешёвые билеты и не переплатить</p>
+                <a href="{{ " /services/avia/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
             </div>
-            {{ end }}
+
+            <div class="service-tile">
+                <div class="service-icon">🏨</div>
+                <h3 class="card-title">Отели</h3>
+                <p class="card-text">Как выбрать район и не пожалеть зимой</p>
+                <a href="{{ " /services/hotels/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
+            </div>
+
+            <div class="service-tile">
+                <div class="service-icon">🛡️</div>
+                <h3 class="card-title">Страховка</h3>
+                <p class="card-text">Что важно в полисе: франшиза, спорт, ассистанс</p>
+                <a href="{{ " /services/insurance/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
+            </div>
+
+            <div class="service-tile">
+                <div class="service-icon">📱</div>
+                <h3 class="card-title">eSIM</h3>
+                <p class="card-text">Интернет без роуминга: что купить и когда включать</p>
+                <a href="{{ " /services/esim/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
+            </div>
         </div>
-        {{ end }}
     </div>
 </section>
+
+<!-- Popular Country -->
+<section class="section-sm" style="background: #F8FAFC;">
+    <div class="container">
+        <h2 class="section-title">Популярная страна сейчас</h2>
+        <div class="country-card" style="max-width: 600px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+                <h3 class="card-title mb-0">Египет</h3>
+                <span class="badge badge-success">Готово ✅</span>
+            </div>
+            <p class="card-text">Зима, курорты, перелёты, ошибки туристов — всё в одном месте</p>
+            <div class="mini-buttons">
+                <button class="mini-btn" onclick="location.href='{{ " /countries/egypt/" | relURL }}'">Перелёт</button>
+                <button class="mini-btn" onclick="location.href='{{ " /countries/egypt/" | relURL }}'">Отели</button>
+                <button class="mini-btn" onclick="location.href='{{ " /countries/egypt/" | relURL
+                    }}'">Страховка</button>
+                <button class="mini-btn" onclick="location.href='{{ " /countries/egypt/" | relURL }}'">eSIM</button>
+                <button class="mini-btn" onclick="location.href='{{ " /countries/egypt/" | relURL }}'">Зима</button>
+            </div>
+            <a href="{{ " /countries/egypt/" | relURL }}" class="btn btn-primary" style="margin-top: 24px;">Открыть
+                страну</a>
+        </div>
+    </div>
+</section>
+
+<!-- Developing Countries -->
+<section class="section-sm">
+    <div class="container">
+        <h2 class="section-title">Страны в разработке</h2>
+        <div class="grid grid-2">
+            <div class="country-card">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+                    <h3 class="card-title mb-0">Турция</h3>
+                    <span class="badge badge-warning">В разработке ⏳</span>
+                </div>
+                <p class="card-text">Материалы готовятся. Хотите уведомление — подпишитесь на Telegram.</p>
+                <a href="https://t.me/TravelRadar_LK" target="_blank" rel="noopener"
+                    class="btn btn-accent btn-sm">Подписаться</a>
+            </div>
+
+            <div class="country-card">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
+                    <h3 class="card-title mb-0">Испания</h3>
+                    <span class="badge badge-warning">В разработке ⏳</span>
+                </div>
+                <p class="card-text">Материалы готовятся. Хотите уведомление — подпишитесь на Telegram.</p>
+                <a href="https://t.me/TravelRadar_LK" target="_blank" rel="noopener"
+                    class="btn btn-accent btn-sm">Подписаться</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Materials -->
+<section class="section-sm" style="background: #F8FAFC;">
+    <div class="container">
+        <h2 class="section-title">Последние материалы</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">YouTube Shorts</h3>
+                <p class="card-text">Разборы Египта и перелётов за 60 секунд</p>
+                <a href="{{ " /materials/shorts/" | relURL }}" class="btn btn-primary btn-sm">Смотреть</a>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Telegram</h3>
+                <p class="card-text">Шпаргалки и полезные ссылки в одном месте</p>
+                <a href="{{ " /materials/telegram/" | relURL }}" class="btn btn-primary btn-sm">Подписаться</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Section -->
+<section class="section-sm">
+    <div class="container">
+        <div class="trust-points">
+            <div class="trust-point">
+                <div class="trust-point-icon">⚡</div>
+                <h4>Коротко и по делу</h4>
+                <p style="color: #64748B; font-size: 14px;">Без воды, только практика</p>
+            </div>
+            <div class="trust-point">
+                <div class="trust-point-icon">✓</div>
+                <h4>Без мифов</h4>
+                <p style="color: #64748B; font-size: 14px;">Только проверенные советы</p>
+            </div>
+            <div class="trust-point">
+                <div class="trust-point-icon">🤝</div>
+                <h4>Честно о партнёрках</h4>
+                <p style="color: #64748B; font-size: 14px;">Ссылки помогают проекту</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{ end }}

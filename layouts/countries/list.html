@@ -1,0 +1,119 @@
+{{ define "main" }}
+<style>
+    .page-header {
+        padding: 64px 0 48px;
+        text-align: center;
+        background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+    }
+
+    .countries-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 32px;
+        padding: 64px 0;
+    }
+
+    .country-card-full {
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        transition: all 150ms;
+        cursor: pointer;
+    }
+
+    .country-card-full:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    }
+
+    .country-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 16px;
+    }
+
+    .service-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 16px 0;
+    }
+
+    .service-tag {
+        padding: 6px 12px;
+        background: #EFF6FF;
+        color: #0F3460;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        border: 1px solid #DBEAFE;
+        transition: all 150ms;
+    }
+
+    .service-tag:hover {
+        background: #DBEAFE;
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="page-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p class="section-subtitle">{{ .Description }}</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="countries-grid">
+            <!-- Egypt Card -->
+            <div class="country-card-full clickable-card" data-href="{{ " /countries/egypt/" | relURL }}">
+                <div class="country-header">
+                    <h2 class="card-title mb-0">Египет</h2>
+                    <span class="badge badge-success">Готово ✅</span>
+                </div>
+                <p class="card-text">Зима, курорты, перелёты, ошибки туристов.</p>
+
+                <div class="service-tags">
+                    <span class="service-tag">Перелёт</span>
+                    <span class="service-tag">Отели</span>
+                    <span class="service-tag">Страховка</span>
+                    <span class="service-tag">eSIM</span>
+                    <span class="service-tag">Зима</span>
+                </div>
+
+                <a href="{{ " /countries/egypt/" | relURL }}" class="btn btn-primary">Открыть страну</a>
+            </div>
+
+            <!-- Turkey Card -->
+            <div class="country-card-full clickable-card" data-href="{{ " /countries/turkey/" | relURL }}">
+                <div class="country-header">
+                    <h2 class="card-title mb-0">Турция</h2>
+                    <span class="badge badge-warning">В разработке ⏳</span>
+                </div>
+                <p class="card-text">Готовим материалы. Подпишитесь — сообщим, когда выйдет.</p>
+
+                <a href="https://t.me/TravelRadar_LK" target="_blank" rel="noopener" class="btn btn-accent">
+                    Telegram
+                </a>
+            </div>
+
+            <!-- Spain Card -->
+            <div class="country-card-full clickable-card" data-href="{{ " /countries/spain/" | relURL }}">
+                <div class="country-header">
+                    <h2 class="card-title mb-0">Испания</h2>
+                    <span class="badge badge-warning">В разработке ⏳</span>
+                </div>
+                <p class="card-text">Готовим материалы. Подпишитесь — сообщим, когда выйдет.</p>
+
+                <a href="https://t.me/TravelRadar_LK" target="_blank" rel="noopener" class="btn btn-accent">
+                    Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

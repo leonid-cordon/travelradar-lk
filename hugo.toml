@@ -1,7 +1,7 @@
 # TravelRadar LK — Hugo Configuration
 baseURL = 'https://leonid-cordon.github.io/travelradar-lk/'
 languageCode = 'ru'
-title = 'TravelRadar LK'
+title = 'Travel Radar LK'
 theme = 'doks'
 
 # Enable emoji in content
@@ -14,26 +14,83 @@ enableEmoji = true
 
 # Permalinks
 [permalinks]
-  destinations = '/destinations/:slug/'
+  countries = '/countries/:slug/'
+  services = '/services/:slug/'
+  materials = '/materials/:slug/'
+
+# Languages (visual only for now)
+[languages]
+  [languages.ru]
+    languageName = 'RU'
+    weight = 1
+    title = 'Travel Radar LK'
+  [languages.ua]
+    languageName = 'UA'
+    weight = 2
+    title = 'Travel Radar LK'
+  [languages.en]
+    languageName = 'EN'
+    weight = 3
+    title = 'Travel Radar LK'
 
 # Menu configuration
 [menus]
   [[menus.main]]
-    name = 'Направления'
-    pageRef = '/destinations/'
+    name = 'Страны'
+    pageRef = '/countries/'
     weight = 10
+  
   [[menus.main]]
-    name = 'Египет'
-    pageRef = '/destinations/egypt/'
-    parent = 'Направления'
+    name = 'Сервисы'
+    pageRef = '/services/'
+    weight = 20
+    
+  [[menus.services]]
+    name = 'Авиа'
+    pageRef = '/services/avia/'
     weight = 1
-  [[menus.main]]
-    name = 'Турция'
-    pageRef = '/destinations/turkey/'
-    parent = 'Направления'
+    
+  [[menus.services]]
+    name = 'Отели'
+    pageRef = '/services/hotels/'
     weight = 2
-  [[menus.main]]
-    name = 'Испания'
-    pageRef = '/destinations/spain/'
-    parent = 'Направления'
+    
+  [[menus.services]]
+    name = 'Страховка'
+    pageRef = '/services/insurance/'
     weight = 3
+    
+  [[menus.services]]
+    name = 'eSIM'
+    pageRef = '/services/esim/'
+    weight = 4
+  
+  [[menus.main]]
+    name = 'Материалы'
+    pageRef = '/materials/'
+    weight = 30
+    
+  [[menus.materials]]
+    name = 'По странам'
+    pageRef = '/materials/'
+    weight = 1
+    
+  [[menus.materials]]
+    name = 'Ошибки туристов'
+    pageRef = '/materials/'
+    weight = 2
+    
+  [[menus.materials]]
+    name = 'YouTube Shorts'
+    pageRef = '/materials/shorts/'
+    weight = 3
+    
+  [[menus.materials]]
+    name = 'Telegram'
+    pageRef = '/materials/telegram/'
+    weight = 4
+  
+  [[menus.main]]
+    name = 'О проекте'
+    pageRef = '/about/'
+    weight = 40

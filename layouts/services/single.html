@@ -1,0 +1,117 @@
+{{ define "main" }}
+<style>
+    .service-header {
+        padding: 64px 0;
+        background: linear-gradient(135deg, #0F3460 0%, #1A4D7C 100%);
+        color: white;
+        text-align: center;
+    }
+
+    .service-header h1 {
+        color: white;
+    }
+
+    .service-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 64px 0;
+    }
+
+    .key-points {
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        margin-bottom: 48px;
+    }
+
+    .key-points h2 {
+        margin-bottom: 24px;
+    }
+
+    .key-points ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .key-points li {
+        padding: 12px 0;
+        padding-left: 32px;
+        position: relative;
+        color: #475569;
+        line-height: 1.7;
+    }
+
+    .key-points li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #10B981;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .partner-buttons {
+        display: flex;
+        gap: 16px;
+        margin: 32px 0;
+        flex-wrap: wrap;
+    }
+
+    .faq-section {
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .faq-item {
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #E2E8F0;
+    }
+
+    .faq-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .faq-question {
+        font-weight: 600;
+        color: #0F3460;
+        margin-bottom: 8px;
+    }
+
+    .faq-answer {
+        color: #64748B;
+        line-height: 1.7;
+    }
+
+    .disclaimer {
+        text-align: center;
+        color: #94A3B8;
+        font-size: 14px;
+        margin-top: 48px;
+        font-style: italic;
+    }
+</style>
+
+<div class="service-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="service-content">
+            {{ .Content }}
+
+            <p class="disclaimer">{{ .Params.disclaimer | default "Ссылки могут быть партнёрскими — это поддерживает
+                проект." }}</p>
+        </div>
+    </div>
+</section>
+
+{{ end }}

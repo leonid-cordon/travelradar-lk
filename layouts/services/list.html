@@ -1,0 +1,58 @@
+{{ define "main" }}
+<style>
+    .page-header {
+        padding: 64px 0 48px;
+        text-align: center;
+        background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        padding: 64px 0;
+    }
+</style>
+
+<div class="page-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p class="section-subtitle">{{ .Description }}</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="services-grid">
+            <div class="card">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 16px;">✈️</div>
+                <h3 class="card-title">Авиа</h3>
+                <p class="card-text">Как найти дешёвые билеты и не переплатить за багаж</p>
+                <a href="{{ " /services/avia/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
+            </div>
+
+            <div class="card">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 16px;">🏨</div>
+                <h3 class="card-title">Отели</h3>
+                <p class="card-text">Как выбрать район и не пожалеть о выборе</p>
+                <a href="{{ " /services/hotels/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
+            </div>
+
+            <div class="card">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 16px;">🛡️</div>
+                <h3 class="card-title">Страховка</h3>
+                <p class="card-text">Что проверить в полисе до покупки</p>
+                <a href="{{ " /services/insurance/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
+            </div>
+
+            <div class="card">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 16px;">📱</div>
+                <h3 class="card-title">eSIM</h3>
+                <p class="card-text">Интернет в поездке без роуминга</p>
+                <a href="{{ " /services/esim/" | relURL }}" class="btn btn-primary btn-sm">Открыть</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
