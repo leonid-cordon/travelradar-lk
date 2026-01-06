@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site-base" content="">
+    <title>Travel Radar LK — Практичні розбори подорожей</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/pages/home.css">
+    <script>
+        // Early theme initialization
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body data-page="home">
+
+    <div id="site-header"></div>
+
+    <!-- Hero секція -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Travel Radar LK
+                </h1>
+                <p class="hero-subtitle">
+                    Практичні розбори подорожей без помилок і переплат — 👍
+                </p>
+                <p class="hero-description">
+                    Глибокі розбори країн і курортів, чесні поради та зрозумілі чек-листи — щоб планувати подорож
+                    впевнено, без зайвих витрат
+                </p>
+                <a href="#destinations" class="btn-primary">
+                    Обрати країну
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Напрямки -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Популярні напрямки</h2>
+                <p class="section-subtitle">Обирайте країну для детального вивчення</p>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- Єгипет - активна картка -->
+                <a href="egypt/" class="destination-card active" data-country="egypt">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="card-badge">Доступно</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Єгипет</h3>
+                        <p class="card-description">Червоне море, коралові рифи та цілорічний відпочинок</p>
+                        <div class="card-stats">
+                            <span class="stat">
+                                <span class="stat-icon">📍</span>
+                                <span class="stat-text">8 курортів</span>
+                            </span>
+                            <span class="stat">
+                                <span class="stat-icon">📝</span>
+                                <span class="stat-text">12 гідів</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <!-- Туреччина - скоро -->
+                <div class="destination-card disabled" data-country="turkey">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="card-badge coming-soon">Незабаром</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Туреччина</h3>
+                        <p class="card-description">Середземне море, історія та гостинність</p>
+                        <div class="card-stats">
+                            <span class="stat">
+                                <span class="stat-icon">📍</span>
+                                <span class="stat-text">В розробці</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Іспанія - скоро -->
+                <div class="destination-card disabled" data-country="spain">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="card-badge coming-soon">Незабаром</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Іспанія</h3>
+                        <p class="card-description">Європейський шарм, пляжі та культура</p>
+                        <div class="card-stats">
+                            <span class="stat">
+                                <span class="stat-icon">📍</span>
+                                <span class="stat-text">В розробці</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Останні матеріали -->
+    <section class="latest-content" id="content">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Останні матеріали</h2>
+                <p class="section-subtitle">Свіжі огляди та корисні поради</p>
+            </div>
+
+            <div class="content-grid">
+                <article class="content-card">
+                    <div class="content-image placeholder-image"></div>
+                    <div class="content-body">
+                        <span class="content-category">Єгипет</span>
+                        <h3 class="content-title">Як обрати курорт у Єгипті</h3>
+                        <p class="content-excerpt">Детальний розбір усіх популярних курортів з реальними порадами</p>
+                        <div class="content-meta">
+                            <span class="meta-item">5 хв читання</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-item">Незабаром</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <div class="content-image placeholder-image"></div>
+                    <div class="content-body">
+                        <span class="content-category">Єгипет</span>
+                        <h3 class="content-title">Погода та сезони відпочинку</h3>
+                        <p class="content-excerpt">Коли краще їхати і чого очікувати в різні місяці</p>
+                        <div class="content-meta">
+                            <span class="meta-item">7 хв читання</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-item">Незабаром</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <div class="content-image placeholder-image"></div>
+                    <div class="content-body">
+                        <span class="content-category">Поради</span>
+                        <h3 class="content-title">Корисні лайфхаки мандрівника</h3>
+                        <p class="content-excerpt">Перевірені поради для комфортного відпочинку</p>
+                        <div class="content-meta">
+                            <span class="meta-item">4 хв читання</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-item">Незабаром</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Про проєкт -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Про проєкт</h2>
+                <p class="about-text">
+                    Travel Radar LK — незалежний проєкт для тих, хто хоче подорожувати усвідомлено. Ми робимо
+                    практичні розбори країн і курортів, ділимося досвідом і збираємо чек-листи, які допомагають уникнути
+                    типових помилок. Якщо десь є партнерські посилання — ми позначаємо це прямо.
+                    Проєкт росте: додаються нові країни, оновлюються матеріали, виходять відео та з'являються
+                    інструменти, які спрощують планування подорожі.
+                </p>
+                <p class="about-text">
+                    Проєкт постійно розвивається: додаються нові країни, оновлюються матеріали,
+                    з'являються відео та корисні інструменти для планування подорожей.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="../js/load-header.js"></script>
+</body>
+
+</html>

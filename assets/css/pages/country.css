@@ -1,0 +1,246 @@
+/* Country Page Styles */
+
+.breadcrumbs {
+    padding: 1.5rem 0;
+    background-color: var(--bg-secondary);
+}
+
+.breadcrumb-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: var(--text-light);
+}
+
+.breadcrumb-current {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.country-header {
+    position: relative;
+    padding: 4rem 0;
+    background-color: var(--bg-primary);
+    overflow: hidden;
+}
+
+.country-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    opacity: 0.08;
+}
+
+body[data-theme="dark"] .country-header-bg {
+    opacity: 0.15;
+}
+
+.country-header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.country-label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.country-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.country-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.country-quick-info {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.quick-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quick-info-icon {
+    font-size: 1.5rem;
+}
+
+.quick-info-text {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.country-sections {
+    background-color: var(--bg-secondary);
+}
+
+.sections-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sections-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.section-card {
+    background-color: var(--bg-primary);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    border: 1px solid var(--border-color);
+}
+
+.section-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.section-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.icon-emoji {
+    font-size: 2rem;
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.section-card-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.section-topics {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.section-topics li {
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.section-topics li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.section-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge.in-progress {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: var(--accent-dark);
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .country-quick-info {
+        gap: 1rem;
+    }
+    
+    .section-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .section-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .section-status {
+        justify-content: flex-start;
+    }
+}

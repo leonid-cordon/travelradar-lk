@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site-base" content="">
+    <title>Travel Radar LK — Practical Travel Guides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/pages/home.css">
+    <script>
+        // Early theme initialization
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body data-page="home">
+
+    <div id="site-header"></div>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Travel Radar LK
+                </h1>
+                <p class="hero-subtitle">
+                    Practical travel guides without mistakes and overpayments — 👍
+                </p>
+                <p class="hero-description">
+                    In-depth breakdowns of countries and resorts, honest advice and clear checklists — to plan your trip
+                    confidently, without unnecessary expenses
+                </p>
+                <a href="#destinations" class="btn-primary">
+                    Choose a country
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Destinations</h2>
+                <p class="section-subtitle">Choose a country for detailed study</p>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- Egypt - active card -->
+                <a href="egypt/" class="destination-card active" data-country="egypt">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="card-badge">Available</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Egypt</h3>
+                        <p class="card-description">Red Sea, coral reefs and year-round vacation</p>
+                        <div class="card-stats">
+                            <span class="stat">
+                                <span class="stat-icon">📍</span>
+                                <span class="stat-text">8 resorts</span>
+                            </span>
+                            <span class="stat">
+                                <span class="stat-icon">📝</span>
+                                <span class="stat-text">12 guides</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <!-- Turkey - coming soon -->
+                <div class="destination-card disabled" data-country="turkey">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="card-badge coming-soon">Coming soon</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Turkey</h3>
+                        <p class="card-description">Mediterranean sea, history and hospitality</p>
+                        <div class="card-stats">
+                            <span class="stat">
+                                <span class="stat-icon">📍</span>
+                                <span class="stat-text">In development</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spain - coming soon -->
+                <div class="destination-card disabled" data-country="spain">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="card-badge coming-soon">Coming soon</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Spain</h3>
+                        <p class="card-description">European charm, beaches and culture</p>
+                        <div class="card-stats">
+                            <span class="stat">
+                                <span class="stat-icon">📍</span>
+                                <span class="stat-text">In development</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest content -->
+    <section class="latest-content" id="content">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Content</h2>
+                <p class="section-subtitle">Fresh reviews and useful tips</p>
+            </div>
+
+            <div class="content-grid">
+                <article class="content-card">
+                    <div class="content-image placeholder-image"></div>
+                    <div class="content-body">
+                        <span class="content-category">Egypt</span>
+                        <h3 class="content-title">How to choose a resort in Egypt</h3>
+                        <p class="content-excerpt">Detailed breakdown of all popular resorts with real advice</p>
+                        <div class="content-meta">
+                            <span class="meta-item">5 min read</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-item">Coming soon</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <div class="content-image placeholder-image"></div>
+                    <div class="content-body">
+                        <span class="content-category">Egypt</span>
+                        <h3 class="content-title">Weather and vacation seasons</h3>
+                        <p class="content-excerpt">When is the best time to go and what to expect in different months
+                        </p>
+                        <div class="content-meta">
+                            <span class="meta-item">7 min read</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-item">Coming soon</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <div class="content-image placeholder-image"></div>
+                    <div class="content-body">
+                        <span class="content-category">Tips</span>
+                        <h3 class="content-title">Useful traveler life hacks</h3>
+                        <p class="content-excerpt">Proven tips for a comfortable vacation</p>
+                        <div class="content-meta">
+                            <span class="meta-item">4 min read</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-item">Coming soon</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the project -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About the Project</h2>
+                <p class="about-text">
+                    Travel Radar LK is an independent project for those who want to travel consciously. We create
+                    practical breakdowns of countries and resorts, share experience and compile checklists that help
+                    avoid
+                    typical mistakes. If there are affiliate links somewhere — we mark this directly.
+                    The project grows: new countries are added, materials are updated, videos are released, and tools
+                    appear
+                    that simplify trip planning.
+                </p>
+                <p class="about-text">
+                    The project is constantly developing: new countries are added, materials are updated,
+                    videos appear, and useful tools for planning trips.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="../js/load-header.js"></script>
+</body>
+
+</html>
