@@ -195,6 +195,19 @@
     box-shadow: var(--shadow-md);
 }
 
+/* Clickable tip cards */
+.tip-card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+}
+
+.tip-card-link:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
 .tip-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;

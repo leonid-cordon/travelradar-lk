@@ -1,3 +1,7 @@
+#site-header {
+    height: 72px;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -34,10 +38,28 @@
     font-size: 18px;
     transition: opacity 0.2s;
     z-index: 1001;
+    margin-right: 48px;
 }
 
 .brand:hover {
     opacity: 0.8;
+}
+
+.logo-icon {
+    font-size: 24px;
+    line-height: 1;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Theme-specific colors for airplane icon in header */
+[data-theme="light"] header .logo-icon {
+    color: #000;
+}
+
+[data-theme="dark"] header .logo-icon {
+    color: #fff;
 }
 
 .brand-icon {
