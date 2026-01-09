@@ -4,6 +4,8 @@
 .egypt-hero {
     position: relative;
     overflow: hidden;
+    margin: calc(-1 * var(--header-height)) 0 0 0 !important;
+    padding: 0 !important;
 }
 
 .hero-image-container {
@@ -11,13 +13,16 @@
     width: 100%;
     height: 400px;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 30%;
 }
 
 .hero-overlay {
@@ -32,7 +37,11 @@
     bottom: 0;
     left: 0;
     right: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
     padding-bottom: 2rem;
+    z-index: 3;
 }
 
 .hero-content {
@@ -52,7 +61,7 @@
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     opacity: 0.95;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6),
         0 2px 16px rgba(0, 0, 0, 0.4);
@@ -78,7 +87,7 @@
 /* Quick Navigation */
 .quick-nav {
     background-color: var(--bg-secondary);
-    padding: 1.5rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 70px;
