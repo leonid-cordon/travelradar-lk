@@ -148,7 +148,7 @@
     background-color: var(--bg-primary);
     padding: 1.5rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 2px dashed var(--border-color);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
 }
@@ -175,6 +175,32 @@
     line-height: 1.5;
 }
 
+/* Clickable mini-card links - remove default link styles */
+a.mini-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+}
+
+a.mini-card:visited {
+    color: inherit;
+}
+
+a.mini-card:focus {
+    outline: none;
+}
+
+a.mini-card .mini-card-title,
+a.mini-card .mini-card-text {
+    color: inherit;
+    text-shadow: none;
+}
+
+a.mini-card:hover {
+    border-color: var(--primary-color);
+}
+
 /* Tips Grid */
 .tips-grid {
     display: grid;
@@ -186,7 +212,7 @@
     background-color: var(--bg-tertiary);
     padding: 1.5rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 2px dashed var(--border-color);
     transition: all var(--transition-base);
 }
 
@@ -258,6 +284,21 @@
     font-size: 0.95rem;
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+/* Clickable content placeholder cards */
+.content-placeholder-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    transition: all var(--transition-base);
+}
+
+.content-placeholder-link:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
 }
 
 /* Responsive */
