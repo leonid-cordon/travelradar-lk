@@ -1,5 +1,27 @@
 /* Egypt Country Page Styles */
 
+/* Anchor scroll offset for fixed header + quick-nav */
+body[data-page="egypt"] {
+    --anchor-offset: 150px;
+}
+
+/* Apply scroll offset to all anchor sections */
+body[data-page="egypt"] #flights,
+body[data-page="egypt"] #hotels,
+body[data-page="egypt"] #insurance,
+body[data-page="egypt"] #esim,
+body[data-page="egypt"] #tours,
+body[data-page="egypt"] #tips {
+    scroll-margin-top: var(--anchor-offset);
+}
+
+/* Flights section needs LESS offset (first section after hero, to hide hero banner) */
+body[data-page="egypt"] #flights {
+    scroll-margin-top: 110px;
+}
+
+
+
 /* Hero Section */
 .egypt-hero {
     position: relative;
@@ -115,6 +137,15 @@
     color: var(--primary-color);
     background-color: var(--bg-tertiary);
 }
+
+/* Active state for scrollspy */
+.quick-nav-item.active {
+    color: var(--primary-color);
+    background-color: var(--bg-tertiary);
+    border: 2px dashed var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
 
 /* Content Sections */
 .content-section {

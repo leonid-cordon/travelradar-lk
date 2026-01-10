@@ -1,0 +1,187 @@
+/* Content Page Styles */
+
+/* Hero Section - same structure as Egypt page, but 300px height */
+.content-hero {
+    position: relative;
+    overflow: hidden;
+    margin: calc(-1 * var(--header-height)) 0 0 0 !important;
+    padding: 0 !important;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: clamp(180px, 15vw, 300px);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 75% center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    display: none;
+}
+
+.hero-content-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    z-index: 3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Content page specific: smaller, more compact hero text */
+.content-hero .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 4.25vw, 3.4rem);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6),
+        0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.content-hero .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    margin-bottom: 0;
+    opacity: 0.95;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6),
+        0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Quick Navigation - same as Egypt page */
+.quick-nav {
+    background-color: var(--bg-secondary);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+}
+
+.quick-nav-list {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-nav-item {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color var(--transition-fast);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.quick-nav-item:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-tertiary);
+}
+
+/* Remove visited link color */
+.quick-nav-item:visited {
+    color: var(--text-secondary);
+}
+
+.quick-nav-item:visited:hover {
+    color: var(--primary-color);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+/* Content Placeholders - same as Egypt page */
+.content-placeholders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.content-placeholder {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+    transition: all var(--transition-base);
+}
+
+.content-placeholder:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.placeholder-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.placeholder-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quick-nav {
+        top: 60px;
+    }
+
+    .quick-nav-list {
+        gap: 0.75rem;
+    }
+
+    .quick-nav-item {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .content-section {
+        padding: 3rem 0;
+    }
+
+    .content-placeholders {
+        grid-template-columns: 1fr;
+    }
+}
