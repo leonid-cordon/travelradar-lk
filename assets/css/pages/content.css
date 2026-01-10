@@ -68,13 +68,12 @@
         0 2px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Quick Navigation - same as Egypt page */
-.quick-nav {
+/* Quick Navigation - NOT sticky on content pages */
+body[data-page="content"] .quick-nav {
     background-color: var(--bg-secondary);
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 70px;
+    position: relative;
     z-index: 10;
 }
 
@@ -96,6 +95,12 @@
 }
 
 .quick-nav-item:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-tertiary);
+}
+
+/* Active state for content pages - like hover, no dashed border */
+body[data-page="content"] .quick-nav-item.active {
     color: var(--primary-color);
     background-color: var(--bg-tertiary);
 }
