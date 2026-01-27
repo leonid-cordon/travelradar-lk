@@ -168,6 +168,18 @@ body[data-theme="dark"] .hero-background {
     background-image: url('../../images/countries/spain-1200.jpg');
 }
 
+.destination-card[data-country="uae"] .card-image {
+    background-image: url('../../images/countries/uae_1920.jpg');
+}
+
+.destination-card[data-country="thailand"] .card-image {
+    background-image: url('../../images/countries/thailand_1920.jpg');
+}
+
+.destination-card[data-country="sri-lanka"] .card-image {
+    background-image: url('../../images/countries/sri-lanka_1920.jpg');
+}
+
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -270,7 +282,9 @@ body[data-theme="dark"] .card-badge {
 
 .content-image {
     height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .placeholder-image {
@@ -472,4 +486,11 @@ body[data-theme="dark"] .card-badge {
 /* Remove padding-top only on home page so banner sits flush under header */
 body[data-page="home"] {
     padding-top: 0 !important;
+}
+
+/* Убираем браузерные стили ссылок внутри карточек */
+.content-card,
+.content-card:visited {
+    color: inherit;
+    text-decoration: none;
 }

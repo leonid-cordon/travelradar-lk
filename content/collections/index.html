@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="site-base" content="">
-    <title>Подборки — Контент | Travel Radar LK</title>
+    <title>Подборки путешествий | Travel Radar LK</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="../../favicon.ico?v=3">
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico?v=3">
+
     <link rel="stylesheet" href="../../theme.css">
     <link rel="stylesheet" href="../../assets/css/base.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/pages/content.css">
+
     <script>
-        // Early theme initialization
         (function () {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
@@ -31,21 +34,22 @@
 
     <div id="site-header"></div>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="content-hero">
         <div class="hero-image-container">
-            <img src="../../assets/images/hero/hero_1920x300.jpg" alt="Контент" class="hero-image">
+            <img src="../../assets/images/hero/hero_1920x300.jpg" alt="Подборки" class="hero-image">
             <div class="hero-overlay"></div>
+
             <div class="container hero-content-wrapper">
                 <div class="hero-content">
-                    <h1 class="hero-title">Контент</h1>
-                    <p class="hero-subtitle">Гайды и подборки для путешествий</p>
+                    <h1 class="hero-title">Подборки</h1>
+                    <p class="hero-subtitle">Готовые идеи и маршруты для путешествий</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quick Navigation -->
+    <!-- Navigation -->
     <section class="quick-nav">
         <div class="container">
             <nav class="quick-nav-list">
@@ -53,32 +57,37 @@
                 <a href="../countries/" class="quick-nav-item">Страны</a>
                 <a href="../flights/" class="quick-nav-item">Авиаперелёты</a>
                 <a href="../lifehacks/" class="quick-nav-item">Лайфхаки</a>
-                <a href="../collections/" class="quick-nav-item active">Подборки</a>
+                <a href="./" class="quick-nav-item active">Подборки</a>
                 <a href="../news/" class="quick-nav-item">Новости</a>
             </nav>
         </div>
     </section>
 
-    <!-- Latest Materials Section -->
+    <!-- Content -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title">Последние материалы</h2>
-            <div class="content-placeholders">
-                <div class="content-placeholder">
-                    <div class="placeholder-icon">📝</div>
-                    <h3 class="placeholder-title">Египет</h3>
-                    <p class="placeholder-text">Скоро: Как выбрать курорт в Египте</p>
-                </div>
-                <div class="content-placeholder">
-                    <div class="placeholder-icon">🌤️</div>
-                    <h3 class="placeholder-title">Египет</h3>
-                    <p class="placeholder-text">Скоро: Погода и сезоны отдыха</p>
-                </div>
-                <div class="content-placeholder">
-                    <div class="placeholder-icon">💡</div>
-                    <h3 class="placeholder-title">Советы</h3>
-                    <p class="placeholder-text">Скоро: Полезные лайфхаки путешественника</p>
-                </div>
+            <div class="content-grid">
+
+                <!-- ВРЕМЕННО: единственный реальный материал -->
+                <a href="../egypt-bez-obmana.html" class="content-card">
+                    <div class="content-image"
+                        style="background-image: url('../../assets/images/content/egypt-bez-obmana/card_1200x600.jpg');">
+                    </div>
+
+                    <div class="content-body">
+                        <span class="content-category">Подборки</span>
+                        <span class="content-category">Египет</span>
+
+                        <h3 class="content-title">
+                            Египет без обмана: ТОП-10 схем + как избежать
+                        </h3>
+
+                        <p class="content-excerpt">
+                            Самые распространённые схемы обмана туристов в Египте и способы их избежать.
+                        </p>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>

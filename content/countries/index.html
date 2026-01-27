@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="site-base" content="">
-    <title>Страны — Контент | Travel Radar LK</title>
+    <title>Страны — путеводители и направления | Travel Radar LK</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="../../favicon.ico?v=3">
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico?v=3">
+
     <link rel="stylesheet" href="../../theme.css">
     <link rel="stylesheet" href="../../assets/css/base.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/pages/content.css">
+    <link rel="stylesheet" href="../../assets/css/pages/home.css">
+
+
     <script>
-        // Early theme initialization
         (function () {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
@@ -31,26 +36,27 @@
 
     <div id="site-header"></div>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="content-hero">
         <div class="hero-image-container">
-            <img src="../../assets/images/hero/hero_1920x300.jpg" alt="Контент" class="hero-image">
+            <img src="../../assets/images/hero/hero_1920x300.jpg" alt="Страны" class="hero-image">
             <div class="hero-overlay"></div>
+
             <div class="container hero-content-wrapper">
                 <div class="hero-content">
-                    <h1 class="hero-title">Контент</h1>
-                    <p class="hero-subtitle">Гайды и подборки для путешествий</p>
+                    <h1 class="hero-title">Страны</h1>
+                    <p class="hero-subtitle">Путеводители и материалы по направлениям</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quick Navigation -->
+    <!-- Navigation -->
     <section class="quick-nav">
         <div class="container">
             <nav class="quick-nav-list">
                 <a href="../" class="quick-nav-item">Все</a>
-                <a href="../countries/" class="quick-nav-item active">Страны</a>
+                <a href="./" class="quick-nav-item active">Страны</a>
                 <a href="../flights/" class="quick-nav-item">Авиаперелёты</a>
                 <a href="../lifehacks/" class="quick-nav-item">Лайфхаки</a>
                 <a href="../collections/" class="quick-nav-item">Подборки</a>
@@ -59,26 +65,73 @@
         </div>
     </section>
 
-    <!-- Latest Materials Section -->
-    <section class="content-section">
+    <!-- Countries -->
+    <section class="destinations" style="padding: 4rem 0;">
         <div class="container">
-            <h2 class="section-title">Последние материалы</h2>
-            <div class="content-placeholders">
-                <div class="content-placeholder">
-                    <div class="placeholder-icon">📝</div>
-                    <h3 class="placeholder-title">Египет</h3>
-                    <p class="placeholder-text">Скоро: Как выбрать курорт в Египте</p>
-                </div>
-                <div class="content-placeholder">
-                    <div class="placeholder-icon">🌤️</div>
-                    <h3 class="placeholder-title">Египет</h3>
-                    <p class="placeholder-text">Скоро: Погода и сезоны отдыха</p>
-                </div>
-                <div class="content-placeholder">
-                    <div class="placeholder-icon">💡</div>
-                    <h3 class="placeholder-title">Советы</h3>
-                    <p class="placeholder-text">Скоро: Полезные лайфхаки путешественника</p>
-                </div>
+            <div class="destinations-grid">
+
+                <!-- Египет (рабочий) -->
+                <a href="./egypt/" class="destination-card" data-country="egypt">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Египет</h3>
+                        <p class="card-description">Красное море и круглогодичный отдых</p>
+                    </div>
+                </a>
+
+                <!-- Остальные — пока неактивные -->
+                <a href="#" class="destination-card" data-country="turkey">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Турция</h3>
+                        <p class="card-description">Средиземное море и гостеприимство</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="spain">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Испания</h3>
+                        <p class="card-description">Европейский шарм и культура</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="uae">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">ОАЭ</h3>
+                        <p class="card-description">Роскошь и современность Востока</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="thailand">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Таиланд</h3>
+                        <p class="card-description">Тропический рай Юго-Восточной Азии</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="sri-lanka">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Шри-Ланка</h3>
+                        <p class="card-description">Остров с богатой историей</p>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>

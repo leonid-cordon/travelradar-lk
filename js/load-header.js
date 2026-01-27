@@ -100,6 +100,49 @@ async function loadPartials() {
 
             // Fix navigation links to point to current language home
             fixNavigationLinks();
+            initActiveNav();
+            window.addEventListener('hashchange', initActiveNav);
+
+            // ===== Active nav highlight (strict & correct) =====
+            const pathname = window.location.pathname;
+            const hash = window.location.hash;
+
+            // Сначала снимаем всё
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Контент (список и статьи)
+            if (pathname.includes('/content')) {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.getAttribute('href')?.includes('content')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // О проекте — ТОЛЬКО если есть #about
+            else if (hash === '#about') {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.getAttribute('href')?.includes('#about')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Страны — ТОЛЬКО если есть #destinations
+            else if (hash === '#destinations') {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.getAttribute('href')?.includes('#destinations')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Главная (Travel Radar) — НИЧЕГО не подсвечиваем
+
+
+
         } else {
             console.error(`❌ Header load failed: ${headerRes.status} ${headerRes.statusText} - URL: ${headerPath}`);
             return; // Stop if header fails
@@ -117,6 +160,7 @@ async function loadPartials() {
         // Initialize after loading
         initThemeToggle();
         initLanguageSwitcher();
+        initMobileMenu();
 
         console.log('✅ Partials loaded successfully');
     } catch (err) {
@@ -212,6 +256,110 @@ function initLanguageSwitcher() {
 
         link.setAttribute('href', newHref);
     });
+}
+
+// Mobile menu functionality
+function initMobileMenu() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (!mobileToggle || !navMenu) return;
+
+    // Toggle mobile menu
+    mobileToggle.addEventListener('click', () => {
+        const isActive = navMenu.classList.toggle('active');
+        mobileToggle.classList.toggle('active');
+        mobileToggle.setAttribute('aria-expanded', isActive);
+
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    // Handle dropdown toggle on mobile
+    const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown, .nav-item:has(.has-dropdown)');
+
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav-link.has-dropdown');
+
+        if (link) {
+            link.addEventListener('click', (e) => {
+                // Only prevent default on mobile (when menu is visible as off-canvas)
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    item.classList.toggle('dropdown-open');
+                }
+            });
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            const isClickInsideMenu = navMenu.contains(e.target);
+            const isClickOnToggle = mobileToggle.contains(e.target);
+
+            if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+
+    // Close menu on window resize to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Initialize aria-expanded
+    mobileToggle.setAttribute('aria-expanded', 'false');
+}
+function initActiveNav() {
+    const pathname = window.location.pathname;
+    const hash = window.location.hash;
+
+    // Сброс
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Контент (список + статьи)
+    if (pathname.includes('/content')) {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href')?.includes('content')) {
+                link.classList.add('active');
+            }
+        });
+        return;
+    }
+
+    // О проекте
+    if (hash === '#about') {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href')?.includes('#about')) {
+                link.classList.add('active');
+            }
+        });
+        return;
+    }
+
+    // Страны
+    if (hash === '#destinations') {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href')?.includes('#destinations')) {
+                link.classList.add('active');
+            }
+        });
+        return;
+    }
+
+    // Главная (Travel Radar) — НИЧЕГО не активно
 }
 
 // Load on DOM ready
