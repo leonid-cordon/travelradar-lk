@@ -50,7 +50,7 @@ Hi leonid-cordon! You've successfully authenticated, but GitHub does not provide
 
 git status
 git add .
-git commit -m "Краткое описание изменений"
+git commit -m "ABOUT"
 git push
 
 - логин не спрашивается
