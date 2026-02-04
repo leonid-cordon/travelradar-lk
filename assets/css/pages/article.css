@@ -233,3 +233,50 @@
 .article-footer {
     margin-top: 1.5rem;
 }
+
+/* ================= ARTICLE TABLE ================= */
+
+.article-subpoint--table {
+    padding: 1.5rem;
+}
+
+.article-table-intro {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.article-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.article-table th,
+.article-table td {
+    padding: 0.75rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Шапка таблицы */
+.article-table thead th {
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Чередование строк */
+.article-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Светлая тема */
+[data-theme="light"] .article-table thead th {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .article-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.025);
+}

@@ -132,13 +132,13 @@ body[data-page="content"] .content-section .container {
     color: var(--text-primary);
 }
 
-/* Content cards grid */
-/* Content grid — SAME AS HOME */
+/*
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+*/
 
 .content-placeholders {
     display: grid;
@@ -147,17 +147,29 @@ body[data-page="content"] .content-section .container {
 }
 
 
+/* 
+   DISABLED: forcing fixed columns breaks auto-fit responsive behavior.
+   We use auto-fit + minmax for natural reflow like destinations-grid.
+*/
+/*
 @media (max-width: 1024px) {
     .content-placeholders {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+*/
 
+/* 
+   DISABLED: manual column override.
+   Auto-fit handles 1-column layout automatically on small screens.
+*/
+/*
 @media (max-width: 640px) {
     .content-placeholders {
         grid-template-columns: 1fr;
     }
 }
+*/
 
 .content-placeholder {
     text-align: center;
@@ -211,10 +223,15 @@ body[data-page="content"] .content-section .container {
         padding: 3rem 0;
     }
 
-    .content-placeholders {
-        grid-template-columns: 1fr;
-    }
-
+    /* 
+   DISABLED: duplicate mobile override.
+   Causes card squeezing instead of grid reflow.
+*/
+    /*
+.content-placeholders {
+    grid-template-columns: 1fr;
+}
+*/
     /* =========================================================
    ARTICLE CONTENT — VISUAL HIERARCHY (ENHANCED CONTRAST)
    ========================================================= */
@@ -411,4 +428,26 @@ body[data-page="content"] .content-section .container {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* =========================================================
+   ФИКС ДЛЯ СЕТКИ НА СТРАНИЦЕ "КОНТЕНТ (ВСЁ)"
+   Принудительно применяем рабочий grid,
+   как на странице "Страны"
+   ========================================================= */
+
+body[data-page="content"] .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* =========================================
+   FIX: одиночная карточка в destinations-grid
+   Для страниц контента
+   ========================================= */
+
+.destinations-grid>*:only-child {
+    max-width: 420px;
+    justify-self: start;
 }

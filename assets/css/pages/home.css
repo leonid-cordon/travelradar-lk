@@ -467,12 +467,21 @@ body[data-theme="dark"] .card-badge {
         text-align: center;
     }
 
-    .destinations-grid,
-    .content-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+    /* =========================================================
+   ОТКЛЮЧЕНО:
+   Универсальный grid (destinations-grid) НЕ должен
+   принудительно превращаться в 1 колонку на mobile.
+   Адаптивность обеспечивается auto-fit + minmax.
+   Это правило ломало использование grid на других страницах.
+   ========================================================= */
 
+    /*
+.destinations-grid,
+.content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+*/
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -493,4 +502,14 @@ body[data-page="home"] {
 .content-card:visited {
     color: inherit;
     text-decoration: none;
+}
+
+/* =========================================
+   FIX: одиночная карточка в destinations-grid
+   Не растягивать на всю ширину
+   ========================================= */
+
+.destinations-grid>*:only-child {
+    max-width: 420px;
+    justify-self: start;
 }
