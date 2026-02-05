@@ -30,9 +30,20 @@ function getPageContext() {
     if (pathname.includes('/ua/')) currentLang = 'ua';
     else if (pathname.includes('/en/')) currentLang = 'en';
 
-    // Определяем текущую страницу (country) 
     let currentPage = 'home';
-    if (pathname.includes('/egypt/')) currentPage = 'egypt';
+
+    // CONTENT sections (сначала самые конкретные)
+    if (pathname.includes('/content/countries/')) currentPage = 'content/countries';
+    else if (pathname.includes('/content/flights/')) currentPage = 'content/flights';
+    else if (pathname.includes('/content/lifehacks/')) currentPage = 'content/lifehacks';
+    else if (pathname.includes('/content/collections/')) currentPage = 'content/collections';
+    else if (pathname.includes('/content/news/')) currentPage = 'content/news';
+    else if (pathname.includes('/content/')) currentPage = 'content';
+
+    // Countries
+    else if (pathname.includes('/egypt/')) currentPage = 'egypt';
+
+
 
     return { currentLang, currentPage };
 }
@@ -64,9 +75,12 @@ function getLangHomePath() {
 // Load header and footer
 async function loadPartials() {
     try {
-        // Определяем пути к Partials
-        const headerPath = BASE + '/Partials/header.html';
-        const footerPath = BASE + '/Partials/footer.html';
+        // Определяем пути к Partials в зависимости от языка
+        const lang = PAGE_CONTEXT.currentLang || 'ru';
+
+        const headerPath = BASE + `/Partials/header-${lang}.html`;
+        const footerPath = BASE + `/Partials/footer-${lang}.html`;
+
 
         console.log(`🔄 Loading partials from BASE: "${BASE}"`);
         console.log(`   Header: ${headerPath}`);
@@ -168,24 +182,51 @@ async function loadPartials() {
     }
 }
 
-// Fix navigation links to point to current language home
 function fixNavigationLinks() {
     const langHome = getLangHomePath();
 
-    // Fix brand/logo link
+    // Логотип → главная текущего языка
     const brand = document.querySelector('.brand');
     if (brand) {
         brand.setAttribute('href', langHome);
     }
 
-    // Fix nav menu links (Страны, Контент, О проекте)
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
+    // Навигация
+    document.querySelectorAll('.nav-link').forEach(link => {
         const href = link.getAttribute('href');
-        if (href && href.startsWith('./')) {
-            // Replace "./" with path to current language home
-            const newHref = langHome + href.substring(2);
-            link.setAttribute('href', newHref);
+        if (!href) return;
+
+        // ЯКОРЯ НЕ ТРОГАЕМ (они работают на текущей странице)
+        if (href.startsWith('#')) {
+            return;
+        }
+
+        // Относительные пути
+        if (href.startsWith('./')) {
+            link.setAttribute('href', langHome + href.substring(2));
+            return;
+        }
+
+        // Абсолютные пути типа /content/, /egypt/
+        if (href.startsWith('/')) {
+            link.setAttribute('href', langHome + href.substring(1));
+            return;
+        }
+    });
+
+    // Футер
+    document.querySelectorAll('footer a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        if (href === '/') {
+            link.setAttribute('href', langHome);
+            return;
+        }
+
+        if (href.startsWith('/')) {
+            link.setAttribute('href', langHome + href.substring(1));
+            return;
         }
     });
 }
@@ -216,47 +257,52 @@ function updateThemeIcon(theme) {
     }
 }
 
-// Language switcher - preserves page context
 function initLanguageSwitcher() {
     const links = document.querySelectorAll('.lang-link');
-    const { currentLang, currentPage } = PAGE_CONTEXT;
+    const pathname = window.location.pathname;
+
+    // Убираем /ru, /ua, /en из начала пути
+    const cleanPath = pathname
+        .replace(/^\/(ru|ua|en)\//, '/')
+        .replace(/^\/(ru|ua|en)$/, '/');
 
     links.forEach(link => {
         link.classList.remove('active');
         const targetLang = link.getAttribute('data-lang');
 
-        // Mark current language as active
-        if (targetLang === currentLang) {
-            link.classList.add('active');
-        }
-
-        // Calculate correct href preserving current page
         let newHref;
 
         if (BASE) {
-            // GitHub Pages - абсолютные пути
+            // GitHub Pages
             if (targetLang === 'ru') {
-                newHref = BASE + '/' + (currentPage === 'home' ? '' : currentPage + '/');
+                newHref = BASE + cleanPath;
             } else {
-                newHref = BASE + '/' + targetLang + '/' + (currentPage === 'home' ? '' : currentPage + '/');
+                newHref = BASE + '/' + targetLang + cleanPath;
             }
         } else {
-            // Локальная разработка - относительный путь к корню
-            const pathname = window.location.pathname;
-            const depth = (pathname.match(/\//g) || []).length - 1;
-            const pathUp = depth === 0 ? './' : '../'.repeat(depth);
-
-            // Затем строим путь к целевому языку/странице
+            // Обычный домен / localhost
             if (targetLang === 'ru') {
-                newHref = pathUp + (currentPage === 'home' ? '' : currentPage + '/');
+                newHref = cleanPath;
             } else {
-                newHref = pathUp + targetLang + '/' + (currentPage === 'home' ? '' : currentPage + '/');
+                newHref = '/' + targetLang + cleanPath;
             }
         }
 
+        // Убираем двойные //
+        newHref = newHref.replace(/\/{2,}/g, '/');
+
         link.setAttribute('href', newHref);
+
+        // Active language
+        if (
+            (targetLang === 'ru' && !pathname.match(/^\/(ua|en)\//)) ||
+            pathname.startsWith('/' + targetLang + '/')
+        ) {
+            link.classList.add('active');
+        }
     });
 }
+
 
 // Mobile menu functionality
 function initMobileMenu() {

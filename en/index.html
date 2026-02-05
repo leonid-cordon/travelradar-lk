@@ -11,11 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=3">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?v=3">
     <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/pages/home.css">
+    <link rel="stylesheet" href="../assets/css/pages/home.css?v=2">
     <script>
         // Early theme initialization
         (function () {
@@ -29,13 +31,18 @@
 
     <div id="site-header"></div>
 
+    <!-- Hero Banner Strip -->
+    <section class="hero-strip" aria-label="Hero banner">
+        <img src="../assets/images/hero/hero_1920x300.jpg" alt="Banner" loading="eager">
+    </section>
+
     <!-- Hero section -->
     <section class="hero">
-        <div class="hero-background"></div>
+        <!-- <div class="hero-background"></div> -->
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Travel Radar LK
+                    <span class="hero-plane">✈</span>Travel Radar LK
                 </h1>
                 <p class="hero-subtitle">
                     Practical travel guides without mistakes and overpayments — 👍
@@ -129,51 +136,65 @@
             <div class="section-header">
                 <h2 class="section-title">Latest Content</h2>
                 <p class="section-subtitle">Fresh reviews and useful tips</p>
+                <a href="content/" class="btn-view-all">View all content →</a>
             </div>
 
             <div class="content-grid">
-                <article class="content-card">
-                    <div class="content-image placeholder-image"></div>
-                    <div class="content-body">
-                        <span class="content-category">Egypt</span>
-                        <h3 class="content-title">How to choose a resort in Egypt</h3>
-                        <p class="content-excerpt">Detailed breakdown of all popular resorts with real advice</p>
-                        <div class="content-meta">
-                            <span class="meta-item">5 min read</span>
-                            <span class="meta-divider">•</span>
-                            <span class="meta-item">Coming soon</span>
-                        </div>
+                <a href="content/egypt-bez-obmana.html" class="content-card">
+                    <div class="content-image"
+                        style="background-image: url('../assets/images/content/egypt-bez-obmana/card_1200x600.jpg');">
                     </div>
-                </article>
 
-                <article class="content-card">
-                    <div class="content-image placeholder-image"></div>
                     <div class="content-body">
+                        <span class="content-category">Lifehacks</span>
                         <span class="content-category">Egypt</span>
-                        <h3 class="content-title">Weather and vacation seasons</h3>
-                        <p class="content-excerpt">When is the best time to go and what to expect in different months
+                        <h3 class="content-title">Egypt Without Scams: TOP-10 Schemes + How to Avoid</h3>
+                        <p class="content-excerpt">
+                            The most common tourist scams in Egypt and how to avoid them.
                         </p>
-                        <div class="content-meta">
-                            <span class="meta-item">7 min read</span>
-                            <span class="meta-divider">•</span>
-                            <span class="meta-item">Coming soon</span>
-                        </div>
                     </div>
-                </article>
+                </a>
 
-                <article class="content-card">
-                    <div class="content-image placeholder-image"></div>
-                    <div class="content-body">
-                        <span class="content-category">Tips</span>
-                        <h3 class="content-title">Useful traveler life hacks</h3>
-                        <p class="content-excerpt">Proven tips for a comfortable vacation</p>
-                        <div class="content-meta">
-                            <span class="meta-item">4 min read</span>
-                            <span class="meta-divider">•</span>
-                            <span class="meta-item">Coming soon</span>
-                        </div>
+
+                <a href="content/kuda-poehat-bez-vizy.html" class="content-card">
+                    <div class="content-image"
+                        style="background-image: url('../assets/images/content/kuda-poehat-bez-vizy/card_1200x600.jpg');">
                     </div>
-                </article>
+
+                    <div class="content-body">
+                        <span class="content-category">Collections</span>
+
+                        <h3 class="content-title">
+                            Where to Travel Without a Visa
+                        </h3>
+
+                        <p class="content-excerpt">
+                            Best visa-free beach destinations for vacation and travel.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="content/flights-egypt.html" class="content-card">
+                    <div class="content-image"
+                        style="background-image: url('../assets/images/content/flights-egypt/card_1200x600.jpg');">
+                    </div>
+
+                    <div class="content-body">
+                        <span class="content-category">Air Travel</span>
+                        <span class="content-category">Egypt</span>
+
+                        <h3 class="content-title">
+                            Flights to Egypt
+                        </h3>
+
+                        <p class="content-excerpt">
+                            Charter and regular flights, arrival airports and important flight details.
+                        </p>
+                    </div>
+                </a>
+
+
+
             </div>
         </div>
     </section>

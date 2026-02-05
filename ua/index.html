@@ -11,11 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=3">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?v=3">
     <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/pages/home.css">
+    <link rel="stylesheet" href="../assets/css/pages/home.css?v=2">
     <script>
         // Early theme initialization
         (function () {
@@ -29,13 +31,18 @@
 
     <div id="site-header"></div>
 
+    <!-- Hero Banner Strip -->
+    <section class="hero-strip" aria-label="Hero banner">
+        <img src="../assets/images/hero/hero_1920x300.jpg" alt="Банер" loading="eager">
+    </section>
+
     <!-- Hero секція -->
     <section class="hero">
-        <div class="hero-background"></div>
+        <!-- <div class="hero-background"></div> -->
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Travel Radar LK
+                    <span class="hero-plane">✈</span>Travel Radar LK
                 </h1>
                 <p class="hero-subtitle">
                     Практичні розбори подорожей без помилок і переплат — 👍
@@ -129,50 +136,65 @@
             <div class="section-header">
                 <h2 class="section-title">Останні матеріали</h2>
                 <p class="section-subtitle">Свіжі огляди та корисні поради</p>
+                <a href="content/" class="btn-view-all">Дивитися весь контент →</a>
             </div>
 
             <div class="content-grid">
-                <article class="content-card">
-                    <div class="content-image placeholder-image"></div>
-                    <div class="content-body">
-                        <span class="content-category">Єгипет</span>
-                        <h3 class="content-title">Як обрати курорт у Єгипті</h3>
-                        <p class="content-excerpt">Детальний розбір усіх популярних курортів з реальними порадами</p>
-                        <div class="content-meta">
-                            <span class="meta-item">5 хв читання</span>
-                            <span class="meta-divider">•</span>
-                            <span class="meta-item">Незабаром</span>
-                        </div>
+                <a href="content/egypt-bez-obmana.html" class="content-card">
+                    <div class="content-image"
+                        style="background-image: url('../assets/images/content/egypt-bez-obmana/card_1200x600.jpg');">
                     </div>
-                </article>
 
-                <article class="content-card">
-                    <div class="content-image placeholder-image"></div>
                     <div class="content-body">
+                        <span class="content-category">Лайфхаки</span>
                         <span class="content-category">Єгипет</span>
-                        <h3 class="content-title">Погода та сезони відпочинку</h3>
-                        <p class="content-excerpt">Коли краще їхати і чого очікувати в різні місяці</p>
-                        <div class="content-meta">
-                            <span class="meta-item">7 хв читання</span>
-                            <span class="meta-divider">•</span>
-                            <span class="meta-item">Незабаром</span>
-                        </div>
+                        <h3 class="content-title">Єгипет без обману: ТОП-10 схем + як уникнути</h3>
+                        <p class="content-excerpt">
+                            Найпоширеніші схеми обману туристів у Єгипті та способи їх уникнути.
+                        </p>
                     </div>
-                </article>
+                </a>
 
-                <article class="content-card">
-                    <div class="content-image placeholder-image"></div>
-                    <div class="content-body">
-                        <span class="content-category">Поради</span>
-                        <h3 class="content-title">Корисні лайфхаки мандрівника</h3>
-                        <p class="content-excerpt">Перевірені поради для комфортного відпочинку</p>
-                        <div class="content-meta">
-                            <span class="meta-item">4 хв читання</span>
-                            <span class="meta-divider">•</span>
-                            <span class="meta-item">Незабаром</span>
-                        </div>
+
+                <a href="content/kuda-poehat-bez-vizy.html" class="content-card">
+                    <div class="content-image"
+                        style="background-image: url('../assets/images/content/kuda-poehat-bez-vizy/card_1200x600.jpg');">
                     </div>
-                </article>
+
+                    <div class="content-body">
+                        <span class="content-category">Добірки</span>
+
+                        <h3 class="content-title">
+                            Куди поїхати без візи
+                        </h3>
+
+                        <p class="content-excerpt">
+                            Найкращі пляжні напрямки без візи для відпочинку та подорожей.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="content/flights-egypt.html" class="content-card">
+                    <div class="content-image"
+                        style="background-image: url('../assets/images/content/flights-egypt/card_1200x600.jpg');">
+                    </div>
+
+                    <div class="content-body">
+                        <span class="content-category">Авіаперельоти</span>
+                        <span class="content-category">Єгипет</span>
+
+                        <h3 class="content-title">
+                            Авіаперельоти до Єгипту
+                        </h3>
+
+                        <p class="content-excerpt">
+                            Чартери та регулярні рейси, аеропорти прильоту та важливі нюанси перельотів.
+                        </p>
+                    </div>
+                </a>
+
+
+
             </div>
         </div>
     </section>

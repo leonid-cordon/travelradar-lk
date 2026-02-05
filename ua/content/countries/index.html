@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site-base" content="">
+    <title>Країни — путівники та напрямки | Travel Radar LK</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico?v=3">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico?v=3">
+
+    <link rel="stylesheet" href="../../../theme.css">
+    <link rel="stylesheet" href="../../../assets/css/base.css">
+    <link rel="stylesheet" href="../../../assets/css/header.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/content.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/home.css">
+
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body data-page="content">
+
+    <div id="site-header"></div>
+
+    <!-- Hero -->
+    <section class="content-hero">
+        <div class="hero-image-container">
+            <img src="../../../assets/images/hero/hero_1920x300.jpg" alt="Країни" class="hero-image">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content-wrapper">
+                <div class="hero-content">
+                    <h1 class="hero-title">Країни</h1>
+                    <p class="hero-subtitle">Путівники та матеріали за напрямками</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="quick-nav">
+        <div class="container">
+            <nav class="quick-nav-list">
+                <a href="../" class="quick-nav-item">Всі</a>
+                <a href="./" class="quick-nav-item active">Країни</a>
+                <a href="../flights/" class="quick-nav-item">Авіаперельоти</a>
+                <a href="../lifehacks/" class="quick-nav-item">Лайфхаки</a>
+                <a href="../collections/" class="quick-nav-item">Добірки</a>
+                <a href="../news/" class="quick-nav-item">Новини</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Countries -->
+    <section class="destinations" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="destinations-grid">
+
+                <!-- Єгипет (робочий) -->
+                <a href="./egypt/" class="destination-card" data-country="egypt">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Єгипет</h3>
+                        <p class="card-description">Червоне море та цілорічний відпочинок</p>
+                    </div>
+                </a>
+
+                <!-- Решта — поки неактивні -->
+                <a href="#" class="destination-card" data-country="turkey">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Туреччина</h3>
+                        <p class="card-description">Середземне море та гостинність</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="spain">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Іспанія</h3>
+                        <p class="card-description">Європейський шарм та культура</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="uae">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">ОАЕ</h3>
+                        <p class="card-description">Розкіш та сучасність Сходу</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="thailand">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Таїланд</h3>
+                        <p class="card-description">Тропічний рай Південно-Східної Азії</p>
+                    </div>
+                </a>
+
+                <a href="#" class="destination-card" data-country="sri-lanka">
+                    <div class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Шрі-Ланка</h3>
+                        <p class="card-description">Острів з багатою історією</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="../../../js/load-header.js"></script>
+</body>
+
+</html>
