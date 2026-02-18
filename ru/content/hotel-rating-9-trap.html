@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site-base" content="">
+    <title>Почему рейтинг 9.2 может испортить ваш отпуск | Travel Radar LK</title>
+    <meta name="description"
+        content="Почему высокий рейтинг отеля не гарантирует хороший отдых. Метод трёх совпадений и пошаговый алгоритм выбора отеля, который подойдёт именно вам.">
+    <link rel="canonical" href="https://travelradarlk.com/ru/content/hotel-rating-9-trap">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Почему рейтинг отеля 9.2 может испортить ваш отпуск">
+    <meta property="og:description"
+        content="Как выбирать отель профессионально, а не по цифре. Метод трёх совпадений и мини-алгоритм анализа за 5 минут.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://travelradarlk.com/ru/content/hotel-rating-9-trap">
+    <meta property="og:image"
+        content="https://travelradarlk.com/assets/images/content/hotel-rating-9-trap/hero_1920x250.jpg">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Почему рейтинг отеля 9.2 может испортить ваш отпуск",
+        "description": "Почему высокий рейтинг отеля не гарантирует хороший отдых. Метод трёх совпадений и пошаговый алгоритм выбора отеля, который подойдёт именно вам.",
+        "image": "https://travelradarlk.com/assets/images/content/hotel-rating-9-trap/hero_1920x250.jpg",
+        "datePublished": "2026-02-17",
+        "author": {
+            "@type": "Organization",
+            "name": "TravelRadar LK"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TravelRadar LK"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://travelradarlk.com/ru/content/hotel-rating-9-trap"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+    <link rel="stylesheet" href="/theme.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/pages/article.css">
+    <link rel="stylesheet" href="/assets/css/pages/content.css">
+
+    <!-- Стили статьи — микро-акценты и премиальная подача -->
+    <style>
+        /* ============================
+           ЛИДОВАЯ ЧАСТЬ И МЕТА
+           ============================ */
+
+        /* Лид-подзаголовок */
+        .article-lead {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 0.01em;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Мета-строка автора */
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .article-meta .meta-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            display: inline-block;
+        }
+
+        /* Вступительные абзацы — крупнее */
+        .article-intro p {
+            font-size: 1.08rem;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        .article-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ============================
+           HERO СЕКЦИЯ
+           ============================ */
+
+        /* 
+ВРЕМЕННОЕ РЕШЕНИЕ ДЛЯ HERO ЭТОЙ СТРАНИЦЫ (hotel-rating-9-trap)
+
+Высота hero увеличена до 350px.
+Используется object-position: 20% center,
+чтобы сохранить левую композицию изображения при адаптивном сжатии.
+
+В будущем:
+– унифицировать стандартную высоту hero для всех статей (350–380px)
+– вынести эти стили в общий CSS-файл
+– проверить адаптив на всех страницах проекта
+*/
+        .article-hero {
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 20% center;
+            transition: transform 6s ease;
+        }
+
+        /* 
+ШАГ 1 — Градиентный overlay для hero
+Добавляет глубину и контраст.
+Делает изображение менее плоским.
+Подготавливает hero для текста поверх.
+*/
+
+        /* Псевдоэлемент поверх картинки */
+        .article-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            /* не мешает кликам */
+            background:
+                linear-gradient(to right,
+                    rgba(0, 0, 0, 0.08) 0%,
+                    rgba(0, 0, 0, 0.12) 35%,
+                    rgba(0, 0, 0, 0.22) 100%),
+                linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.05) 0%,
+                    rgba(0, 0, 0, 0.12) 100%);
+        }
+
+        /* === ШАГ 10: Лёгкий эффект движения фона === */
+        /* Очень мягкий, без перегруза */
+
+        .article-hero:hover .article-hero-image {
+            transform: scale(1.03);
+        }
+
+        /* 
+ШАГ 2 — Заголовок поверх hero (редакционная обложка)
+
+Что делает:
+– превращает hero в полноценную обложку статьи
+– усиливает первый экран
+– повышает вовлечённость
+*/
+
+        /* === HERO: фиксируем текст внизу справа (десктоп) === */
+        /* === ШАГ 4: Ограничение ширины заголовка Hero === */
+        /* === ШАГ 6: Ограничение ширины текста в Hero === */
+        /* Делает текст более премиальным и читабельным */
+        .hero-content {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            max-width: 600px;
+            color: #ffffff;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroFade 0.8s ease-out forwards;
+        }
+
+        /* === ШАГ 3: Лёгкий объём заголовка Hero === */
+        /* === ШАГ 8: Микроконтраст заголовка === */
+        /* === ШАГ 9: Типографика заголовка Hero === */
+        /* Делаем заголовок более журнальным и воздушным */
+        .hero-content h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.35),
+                0 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* === ШАГ 11: Мягкое появление Hero === */
+
+        @keyframes heroFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================
+           КОНТЕНТНЫЕ БЛОКИ
+           ============================ */
+
+        /* 
+ЛОКАЛЬНАЯ ПОЛИРОВКА ДИЗАЙНА ДЛЯ СТРАНИЦЫ hotel-rating-9-trap
+
+Добавлены:
+– увеличенные отступы между article-point (воздух)
+– мягкая внутренняя градация для article-subpoint
+– улучшенное оформление изображений (скругление + тень)
+– усиленный финальный блок
+– лёгкий hover для ссылок
+
+Это временная доработка внутри HTML.
+В будущем:
+– вынести в общий CSS для статей
+– унифицировать визуальный стиль всех content-страниц
+– протестировать в светлой и тёмной теме
+
+Дата: 2026
+*/
+        .article-point {
+            margin: 70px 0;
+        }
+
+        .article-subpoint {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 24px;
+            border-radius: 14px;
+            margin-top: 20px;
+        }
+
+        /* Цитатный блок-акцент */
+        .article-quote {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1.5rem 1.75rem 1.5rem 2rem;
+            border-left: 3px solid #2563eb;
+            border-radius: 0 12px 12px 0;
+            background: linear-gradient(135deg,
+                    rgba(37, 99, 235, 0.06),
+                    rgba(37, 99, 235, 0.02));
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+
+        [data-theme="light"] .article-quote {
+            background: linear-gradient(135deg,
+                    rgba(37, 99, 235, 0.08),
+                    rgba(37, 99, 235, 0.03));
+        }
+
+        /* Тонкий декоративный разделитель */
+        .article-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    var(--border-color) 20%,
+                    var(--border-color) 80%,
+                    transparent);
+            margin: 3rem 0;
+        }
+
+        /* Изображения */
+        .article-image {
+            margin: 60px 0;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .article-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 12px;
+        }
+
+        /* ============================
+           ЦЕНТРАЛЬНЫЙ АКЦЕНТНЫЙ БЛОК
+           (Метод трёх совпадений)
+           ============================ */
+
+        .article-point--accent {
+            position: relative;
+            border-color: #2563eb !important;
+            box-shadow:
+                0 0 0 1px rgba(37, 99, 235, 0.15),
+                0 8px 32px rgba(37, 99, 235, 0.08);
+        }
+
+        .article-point--accent::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            height: 3px;
+            background: linear-gradient(90deg, #2563eb, #60a5fa);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .article-point--accent>h2 {
+            color: #2563eb !important;
+        }
+
+        [data-theme="light"] .article-point--accent {
+            box-shadow:
+                0 0 0 1px rgba(37, 99, 235, 0.2),
+                0 8px 32px rgba(37, 99, 235, 0.06);
+        }
+
+        /* Совпадение-карточки (три штуки) */
+        .match-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin: 1.25rem 0;
+        }
+
+        .match-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0.08),
+                    rgba(255, 255, 255, 0.03));
+        }
+
+        [data-theme="light"] .match-card {
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.04),
+                    rgba(0, 0, 0, 0.015));
+        }
+
+        .match-card-num {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .match-card-text strong {
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .match-card-text span {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        /* ============================
+           ЧЕК-ЛИСТ — ПРЕМИАЛЬНАЯ ВЕРСИЯ
+           ============================ */
+
+        .checklist-premium {
+            padding: 2rem !important;
+            border-left: 3px solid #2563eb;
+            border-radius: 0 16px 16px 0 !important;
+        }
+
+        .checklist-premium h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .checklist-premium .checklist-intro {
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: background 0.2s ease;
+        }
+
+        [data-theme="light"] .check-item {
+            border-bottom-color: rgba(0, 0, 0, 0.04);
+        }
+
+        .check-item:last-child {
+            border-bottom: none;
+        }
+
+        .check-item:hover {
+            background: rgba(37, 99, 235, 0.04);
+            border-radius: 8px;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .check-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .check-icon::after {
+            content: '✓';
+            color: #2563eb;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        /* ============================
+           ФИНАЛЬНЫЙ БЛОК И ИТОГ
+           ============================ */
+
+        .article-summary--note {
+            padding: 35px;
+            border-left: 4px solid #2563eb;
+            background: rgba(37, 99, 235, 0.06);
+            border-radius: 14px;
+        }
+
+        /* Финальный блок — более глубокий */
+        .article-finale {
+            padding: 2rem !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-finale::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #2563eb 50%, transparent);
+        }
+
+        .article-finale .finale-cta {
+            margin-top: 1.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .article-finale .finale-cta a {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* ============================
+           ССЫЛКИ И АНИМАЦИИ
+           ============================ */
+
+        /* Внутренние ссылки внутри статьи (акцентный стиль для контентных страниц) */
+        .article-content a {
+            transition: 0.3s ease;
+        }
+
+        .article-content a:hover {
+            opacity: 0.8;
+        }
+
+        .article-content a.internal-link {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+            transition: border-color 0.2s ease;
+        }
+
+        .article-content a.internal-link:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        /* Плавное появление блоков */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================
+           АДАПТИВНОСТЬ — МОБИЛЬНЫЕ
+           ============================ */
+
+        @media (max-width: 768px) {
+
+            /* Лид и мета */
+            .article-lead {
+                font-size: 1.05rem;
+                margin-bottom: 2rem;
+                padding-bottom: 1.5rem;
+            }
+
+            .article-meta {
+                flex-wrap: wrap;
+                font-size: 0.82rem;
+            }
+
+            /* Цитата */
+            .article-quote {
+                padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            /* Чек-лист */
+            .checklist-premium {
+                padding: 1.5rem !important;
+            }
+
+            /* Карточки совпадений */
+            .match-card {
+                padding: 0.85rem 1rem;
+            }
+
+            /* Адаптация hero для мобильных устройств */
+            .article-hero-image {
+                height: 240px;
+            }
+
+            /* === ШАГ 7: Адаптив Hero для мобильных === */
+            /* === HERO: адаптация для мобильных === */
+            .hero-content {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                left: 20px;
+                max-width: 85%;
+                text-align: left;
+            }
+
+            .hero-content h1 {
+                font-size: 20px;
+                margin-bottom: 6px;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body data-page="article">
+
+    <div id="site-header"></div>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <img src="/assets/images/content/hotel-rating-9-trap/hero_1920x350.jpg"
+            alt="Женщина выбирает отель с видом на море — концепция осознанного выбора рейтинга"
+            class="article-hero-image">
+
+        <div class="hero-content">
+            <h1>Почему рейтинг <span class="rating-accent">9,2</span> может испортить отпуск</h1>
+            <p class="hero-subtitle">
+                И как выбирать отель так, чтобы отдых действительно совпал с ожиданиями
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Content Navigation -->
+    <nav class="article-nav">
+        <div class="quick-nav-list">
+            <a href="./" class="quick-nav-item">Все</a>
+            <a href="./countries/" class="quick-nav-item">Страны</a>
+            <a href="./flights/" class="quick-nav-item">Авиаперелёты</a>
+            <a href="./lifehacks/" class="quick-nav-item active">Лайфхаки</a>
+            <a href="./collections/" class="quick-nav-item">Подборки</a>
+            <a href="./news/" class="quick-nav-item">Новости</a>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <div class="article-container">
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <!-- <h1 class="article-title">Почему рейтинг отеля 9.2 может испортить ваш отпуск</h1> -->
+            <div class="article-meta">
+                <span>TravelRadar LK</span>
+                <span class="meta-dot"></span>
+                <span>17 февраля 2026</span>
+                <span class="meta-dot"></span>
+                <span>8 мин чтения</span>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <article class="article-content">
+
+            <!-- Лид -->
+            <!-- <p class="article-lead">И как выбирать отель профессионально, а не по цифре</p> -->
+
+            <!-- Вступление — крупный текст -->
+            <div class="article-intro">
+                <p>Большинство туристов выбирают отель одинаково:
+                    открывают сервис бронирования, сортируют по рейтингу
+                    и выбирают вариант с оценкой выше 9.</p>
+
+                <p>Это кажется разумным.
+                    Высокая цифра воспринимается как гарантия качества.</p>
+
+                <p>Но именно здесь часто начинается разочарование.</p>
+
+                <p>Отель может иметь 9.2 —
+                    и при этом не подойти именно вам.
+                    Проблема не в отеле.
+                    Проблема в том, как мы читаем рейтинг.</p>
+            </div>
+
+            <hr class="article-divider">
+
+            <!-- Раздел 1: Как работает рейтинг -->
+            <div class="article-point reveal">
+                <h2>Как на самом деле работает рейтинг</h2>
+
+                <p>Рейтинг — это не экспертная оценка.
+                    Это среднее арифметическое впечатлений.</p>
+
+                <p>Его формируют:</p>
+
+                <ul>
+                    <li>семьи с детьми</li>
+                    <li>пары</li>
+                    <li>компании друзей</li>
+                    <li>туристы с ограниченным бюджетом</li>
+                    <li>гости с завышенными ожиданиями</li>
+                    <li>гости, которые впервые выехали за границу</li>
+                </ul>
+
+                <p>Каждый оценивает отель по своему сценарию.
+                    Семья ставит 10 за детскую анимацию.
+                    Пара — за атмосферу.
+                    Компания — за вечеринки.</p>
+
+                <p>Никто не оценивает «объективное качество».
+                    Люди оценивают совпадение ожиданий с реальностью.</p>
+
+                <p>И вот здесь начинается главная ловушка.</p>
+            </div>
+
+            <!-- Раздел 2: Главная ошибка -->
+            <div class="article-point reveal">
+                <h2>Главная ошибка туристов</h2>
+
+                <p>Мы принимаем среднюю оценку за личную гарантию.</p>
+
+                <p>Цифра 9.2 создаёт иллюзию безопасности.
+                    Но рейтинг отвечает только на один вопрос:</p>
+
+                <div class="article-quote">
+                    «Понравилось ли большинству?»
+                </div>
+
+                <p>Он не отвечает на главный:</p>
+
+                <div class="article-quote">
+                    «Подойдёт ли это именно вам?»
+                </div>
+
+                <p>И это — совершенно разные вещи.</p>
+            </div>
+
+            <!-- Раздел 3: Цена и рейтинг -->
+            <div class="article-point reveal">
+                <h2>Неочевидный инсайт: цена и рейтинг</h2>
+
+                <p>Есть тонкий момент, о котором редко говорят.</p>
+
+                <p>Чем дешевле отель, тем чаще гости оценивают его по принципу
+                    «за такие деньги — отлично».</p>
+
+                <p>То есть человек ставит 9 не потому, что уровень высокий,
+                    а потому что ожидания были ниже.</p>
+
+                <p>В дорогих отелях ситуация обратная:
+                    ожидания выше — оценки строже.</p>
+
+                <p>Поэтому рейтинг всегда нужно читать в контексте цены.</p>
+            </div>
+
+            <!-- Раздел 4: Почему 8.5 лучше 9.3 -->
+            <div class="article-point reveal">
+                <h2>Почему 8.5 иногда лучше 9.3</h2>
+
+                <p>Разница между 8.5 и 9.3 — это не пропасть качества.
+                    Это разница аудитории и ожиданий.</p>
+
+                <p>Отель 9.3 может быть:</p>
+
+                <ul>
+                    <li>шумным</li>
+                    <li>с длинной территорией</li>
+                    <li>с неудобным входом в море</li>
+                    <li>ориентированным на определённый тип отдыха</li>
+                </ul>
+
+                <p>Отель 8.5 может быть идеально вашим —
+                    по атмосфере, расположению и логистике.</p>
+
+                <p>Цифра не говорит «лучше».
+                    Она говорит «понравилось большему количеству людей».
+                    Это не одно и то же — особенно при выборе
+                    <a href="/ru/egypt/" class="internal-link">отелей в Египте</a>,
+                    где разброс форматов отдыха огромен.
+                </p>
+            </div>
+
+            <!-- Изображение 1 -->
+            <div class="article-image reveal">
+                <img src="/assets/images/content/hotel-rating-9-trap/block-01_1200.jpg"
+                    alt="Анализ отзывов туристов — как читать рейтинг отеля правильно">
+            </div>
+
+            <hr class="article-divider">
+
+            <!-- ЦЕНТРАЛЬНЫЙ БЛОК: Метод трёх совпадений -->
+            <div class="article-point article-point--accent reveal">
+                <h2>Метод трёх совпадений</h2>
+
+                <p>Чтобы не зависеть от цифры, используйте простой принцип —
+                    <strong>метод трёх совпадений</strong>.
+                </p>
+
+                <p>Отель стоит бронировать не тогда, когда рейтинг высокий,
+                    а когда совпадают три вещи:</p>
+
+                <div class="match-cards">
+                    <div class="match-card">
+                        <div class="match-card-num">1</div>
+                        <div class="match-card-text">
+                            <strong>Тип гостей</strong>
+                            <span>Кто чаще всего останавливается в этом отеле</span>
+                        </div>
+                    </div>
+                    <div class="match-card">
+                        <div class="match-card-num">2</div>
+                        <div class="match-card-text">
+                            <strong>Реальное расположение</strong>
+                            <span>Логистика внутри территории и до пляжа</span>
+                        </div>
+                    </div>
+                    <div class="match-card">
+                        <div class="match-card-num">3</div>
+                        <div class="match-card-text">
+                            <strong>Формат инфраструктуры</strong>
+                            <span>Пляж, вход в море, территория</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Если совпадают все три — вероятность разочарования резко снижается.</p>
+            </div>
+
+            <!-- Раздел 6: Совпадение №1 -->
+            <div class="article-point reveal">
+                <h2>Совпадение №1: тип гостей</h2>
+
+                <p>Это самый недооценённый фактор.</p>
+
+                <p>Если большинство гостей — семьи,
+                    днём будет активная анимация.
+                    Если молодёжь — возможны вечеринки.
+                    Если пары и взрослые туристы — атмосфера спокойнее.</p>
+
+                <div class="article-subpoint">
+                    <h3>Быстрая проверка (2 минуты)</h3>
+                    <ul>
+                        <li>откройте 10–15 последних отзывов</li>
+                        <li>не читайте подробно — сканируйте</li>
+                        <li>отмечайте повторяющиеся слова</li>
+                    </ul>
+                </div>
+
+                <p>Повторяемость важнее отдельных эмоций.
+                    Если слово «шумно» встречается регулярно — это не случайность.</p>
+            </div>
+
+            <!-- Раздел 7: Совпадение №2 -->
+            <div class="article-point reveal">
+                <h2>Совпадение №2: реальное расположение</h2>
+
+                <p>Описание «5 минут до моря» ничего не гарантирует.</p>
+
+                <p>Важно:</p>
+
+                <ul>
+                    <li>расстояние от корпуса до пляжа</li>
+                    <li>рельеф территории</li>
+                    <li>логистика внутри комплекса</li>
+                    <li>удалённость от активных зон</li>
+                </ul>
+
+                <div class="article-subpoint">
+                    <h3>Проверка</h3>
+                    <ul>
+                        <li>откройте карту</li>
+                        <li>переключитесь в спутниковый режим</li>
+                        <li>оцените масштаб</li>
+                    </ul>
+                </div>
+
+                <p>Логистика влияет на отдых каждый день.
+                    И она почти не влияет на рейтинг.</p>
+            </div>
+
+            <!-- Раздел 8: Совпадение №3 -->
+            <div class="article-point reveal">
+                <h2>Совпадение №3: формат пляжа и инфраструктуры</h2>
+
+                <p>Фото показывают красивый ракурс.
+                    Но не показывают детали.</p>
+
+                <p>Проверьте:</p>
+
+                <ul>
+                    <li>песок или кораллы</li>
+                    <li>глубину</li>
+                    <li>понтон</li>
+                    <li>камни</li>
+                    <li>резкие перепады</li>
+                </ul>
+
+                <p>Если вы любите плавать с берега,
+                    понтон может стать ежедневным раздражением.
+                    И об этом редко пишут в описании.</p>
+            </div>
+
+            <!-- Изображение 2 -->
+            <div class="article-image reveal">
+                <img src="/assets/images/content/hotel-rating-9-trap/block-02_1200.jpg"
+                    alt="Пляж отеля — песок, кораллы и вход в море: на что обращать внимание">
+            </div>
+
+            <hr class="article-divider">
+
+            <!-- Раздел 9: Мини-алгоритм -->
+            <div class="article-point reveal">
+                <h2>Мини-алгоритм анализа за 5 минут</h2>
+
+                <div class="article-subpoint">
+                    <h3>Четыре шага</h3>
+                    <ol style="padding-left: 1.25rem; margin: 0;">
+                        <li style="margin: 0.6rem 0;">Определите свой формат отдыха.</li>
+                        <li style="margin: 0.6rem 0;">Просканируйте отзывы на совпадение сценария.</li>
+                        <li style="margin: 0.6rem 0;">Проверьте карту и реальные фото.</li>
+                        <li style="margin: 0.6rem 0;">Сравните 2–3 похожих варианта по совпадениям, а не по цифре.</li>
+                    </ol>
+                </div>
+
+                <p>Сначала совпадение. Потом рейтинг.
+                    Не наоборот.</p>
+
+                <p>Больше практических советов — в разделе
+                    <a href="/ru/content/lifehacks/" class="internal-link">лайфхаков для путешественников</a>.
+                </p>
+            </div>
+
+            <!-- Раздел 10: Когда рейтинг полезен -->
+            <div class="article-point reveal">
+                <h2>Когда рейтинг всё же полезен</h2>
+
+                <p>Рейтинг — не враг.
+                    Он помогает отсеять откровенно слабые варианты.</p>
+
+                <p>Но он должен быть фильтром первого уровня,
+                    а не финальным аргументом.</p>
+
+                <div class="article-quote">
+                    Высокая оценка — это повод изучить.
+                    Не повод бронировать автоматически.
+                </div>
+            </div>
+
+            <!-- Чек-лист -->
+            <section class="article-checklist reveal">
+                <div class="article-summary checklist-premium">
+                    <h2>Перед нажатием «Забронировать»</h2>
+                    <p class="checklist-intro">Задайте себе четыре вопроса:</p>
+
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Подходит ли аудитория отеля моему сценарию?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Удобно ли он расположен именно для меня?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Подходит ли формат пляжа и инфраструктуры?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Совпадают ли отзывы с моими ожиданиями?</span>
+                    </div>
+
+                    <p style="margin-top: 1.25rem;">Если да — цифра становится вторичной.</p>
+                </div>
+            </section>
+
+            <!-- Финальный блок -->
+            <footer class="article-footer reveal">
+                <div class="article-summary article-summary--note article-finale">
+                    <p><strong>Итог.</strong> Рейтинг — это мнение большинства.
+                        Хороший отдых — это совпадение с вашими ожиданиями.</p>
+
+                    <p>И эти две вещи не всегда равны.</p>
+
+                    <p>Цифра 9.2 может впечатлять.
+                        Но правильный выбор начинается не с оценки,
+                        а с понимания своего сценария поездки.</p>
+
+                    <p>Когда вы перестаёте искать «самый высокий рейтинг»
+                        и начинаете искать максимальное совпадение с собой —
+                        рейтинг перестаёт быть ловушкой
+                        и становится инструментом.</p>
+
+                    <p>Именно в этот момент выбор становится осознанным.</p>
+
+                    <div class="finale-cta">
+                        Планируете перелёт? Загляните в раздел
+                        <a href="/ru/content/flights/">авиаперелётов</a>,
+                        чтобы найти лучшие варианты.
+                    </div>
+                </div>
+            </footer>
+
+        </article>
+
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="/js/load-header.js"></script>
+
+    <!-- Плавное появление блоков при скролле -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var reveals = document.querySelectorAll('.reveal');
+            if (!reveals.length) return;
+
+            // Проверяем поддержку IntersectionObserver
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+
+                reveals.forEach(function (el) {
+                    observer.observe(el);
+                });
+            } else {
+                // Фоллбек — показать всё сразу
+                reveals.forEach(function (el) {
+                    el.classList.add('visible');
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
