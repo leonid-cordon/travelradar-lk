@@ -119,6 +119,56 @@ body[data-theme="dark"] .btn-secondary {
     transform: translateX(5px);
 }
 
+/* Tips Grid — shared component (also used on egypt page) */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background-color: var(--bg-tertiary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+    transition: all var(--transition-base);
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.tip-card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+}
+
+.tip-card-link:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.tip-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     section {
         padding: 3rem 0;
@@ -136,5 +186,9 @@ body[data-theme="dark"] .btn-secondary {
     .btn-secondary {
         width: 100%;
         justify-content: center;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
     }
 }
