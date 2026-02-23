@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site-base" content="">
+    <title>Что проверить в отеле перед бронированием | Travel Radar LK</title>
+    <meta name="description"
+        content="Практический алгоритм: как проверить фотографии, расположение, площадь номера, скрытые платежи и тариф перед тем, как нажать «Забронировать».">
+    <link rel="canonical" href="https://travelradarlk.com/ru/content/hotel-check-before-booking">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Что проверить в отеле перед бронированием, чтобы не испортить отпуск">
+    <meta property="og:description"
+        content="Практический алгоритм проверки отеля до оплаты: фото гостей, Street View, площадь номера, финальная цена и гибкий тариф.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://travelradarlk.com/ru/content/hotel-check-before-booking">
+    <meta property="og:image"
+        content="https://travelradarlk.com/assets/images/content/hotel-check-before-booking/hero_1920x250.jpg">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Что проверить в отеле перед бронированием, чтобы не испортить отпуск",
+        "description": "Практический алгоритм: как проверить фотографии, расположение, площадь номера, скрытые платежи и тариф перед тем, как нажать «Забронировать».",
+        "image": "https://travelradarlk.com/assets/images/content/hotel-check-before-booking/hero_1920x250.jpg",
+        "datePublished": "2026-02-23",
+        "author": {
+            "@type": "Organization",
+            "name": "TravelRadar LK"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TravelRadar LK"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://travelradarlk.com/ru/content/hotel-check-before-booking"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+    <link rel="stylesheet" href="/theme.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/pages/article.css">
+    <link rel="stylesheet" href="/assets/css/pages/content.css">
+
+    <!-- Стили статьи — микро-акценты и премиальная подача -->
+    <style>
+        /* ============================
+           ЛИДОВАЯ ЧАСТЬ И МЕТА
+           ============================ */
+
+        /* Лид-подзаголовок */
+        .article-lead {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 0.01em;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Мета-строка автора */
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .article-meta .meta-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            display: inline-block;
+        }
+
+        /* Вступительные абзацы — крупнее */
+        .article-intro p {
+            font-size: 1.08rem;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        .article-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ============================
+           HERO СЕКЦИЯ
+           ============================ */
+
+        .article-hero {
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 20% center;
+            transition: transform 6s ease;
+        }
+
+        /* Псевдоэлемент поверх картинки */
+        .article-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(to right,
+                    rgba(0, 0, 0, 0.08) 0%,
+                    rgba(0, 0, 0, 0.12) 35%,
+                    rgba(0, 0, 0, 0.22) 100%),
+                linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.05) 0%,
+                    rgba(0, 0, 0, 0.12) 100%);
+        }
+
+        .article-hero:hover .article-hero-image {
+            transform: scale(1.03);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            max-width: 600px;
+            color: #ffffff;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroFade 0.8s ease-out forwards;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.35),
+                0 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        @keyframes heroFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================
+           КОНТЕНТНЫЕ БЛОКИ
+           ============================ */
+
+        .article-point {
+            margin: 70px 0;
+        }
+
+        .article-subpoint {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 24px;
+            border-radius: 14px;
+            margin-top: 20px;
+        }
+
+        /* Цитатный блок-акцент */
+        .article-quote {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1.5rem 1.75rem 1.5rem 2rem;
+            border-left: 3px solid #2563eb;
+            border-radius: 0 12px 12px 0;
+            background: linear-gradient(135deg,
+                    rgba(37, 99, 235, 0.06),
+                    rgba(37, 99, 235, 0.02));
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+
+        [data-theme="light"] .article-quote {
+            background: linear-gradient(135deg,
+                    rgba(37, 99, 235, 0.08),
+                    rgba(37, 99, 235, 0.03));
+        }
+
+        /* Тонкий декоративный разделитель */
+        .article-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    var(--border-color) 20%,
+                    var(--border-color) 80%,
+                    transparent);
+            margin: 3rem 0;
+        }
+
+        /* Изображения */
+        .article-image {
+            margin: 60px 0;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .article-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 12px;
+        }
+
+        /* ============================
+           МИНИ-КЕЙС (дополнительный визуальный блок)
+           ============================ */
+
+        .article-case {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+        }
+
+        [data-theme="light"] .article-case {
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .article-case .case-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        /* ============================
+           ЧЕК-ЛИСТ — ПРЕМИАЛЬНАЯ ВЕРСИЯ
+           ============================ */
+
+        .checklist-premium {
+            padding: 2rem !important;
+            border-left: 3px solid #2563eb;
+            border-radius: 0 16px 16px 0 !important;
+        }
+
+        .checklist-premium h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .checklist-premium .checklist-intro {
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: background 0.2s ease;
+        }
+
+        [data-theme="light"] .check-item {
+            border-bottom-color: rgba(0, 0, 0, 0.04);
+        }
+
+        .check-item:last-child {
+            border-bottom: none;
+        }
+
+        .check-item:hover {
+            background: rgba(37, 99, 235, 0.04);
+            border-radius: 8px;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .check-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .check-icon::after {
+            content: '✓';
+            color: #2563eb;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        /* ============================
+           ФИНАЛЬНЫЙ БЛОК И ИТОГ
+           ============================ */
+
+        .article-summary--note {
+            padding: 35px;
+            border-left: 4px solid #2563eb;
+            background: rgba(37, 99, 235, 0.06);
+            border-radius: 14px;
+        }
+
+        /* Финальный блок — более глубокий */
+        .article-finale {
+            padding: 2rem !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-finale::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #2563eb 50%, transparent);
+        }
+
+        .article-finale .finale-cta {
+            margin-top: 1.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .article-finale .finale-cta a {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* ============================
+           ССЫЛКИ И АНИМАЦИИ
+           ============================ */
+
+        /* Внутренние ссылки внутри статьи (акцентный стиль для контентных страниц) */
+        .article-content a {
+            transition: 0.3s ease;
+        }
+
+        .article-content a:hover {
+            opacity: 0.8;
+        }
+
+        .article-content a.internal-link {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+            transition: border-color 0.2s ease;
+        }
+
+        .article-content a.internal-link:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        /* Плавное появление блоков */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================
+           АДАПТИВНОСТЬ — МОБИЛЬНЫЕ
+           ============================ */
+
+        @media (max-width: 768px) {
+
+            /* Лид и мета */
+            .article-lead {
+                font-size: 1.05rem;
+                margin-bottom: 2rem;
+                padding-bottom: 1.5rem;
+            }
+
+            .article-meta {
+                flex-wrap: wrap;
+                font-size: 0.82rem;
+            }
+
+            /* Цитата */
+            .article-quote {
+                padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            /* Чек-лист */
+            .checklist-premium {
+                padding: 1.5rem !important;
+            }
+
+            /* Адаптация hero для мобильных устройств */
+            .article-hero-image {
+                height: 240px;
+            }
+
+            .hero-content {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                left: 20px;
+                max-width: 85%;
+                text-align: left;
+            }
+
+            .hero-content h1 {
+                font-size: 20px;
+                margin-bottom: 6px;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ============================
+           БЛОК СРАВНЕНИЯ ИЗОБРАЖЕНИЙ
+           ============================ */
+
+        .compare-section {
+            margin: 3rem 0 2rem;
+        }
+
+        .compare-section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .compare-item {
+            cursor: pointer;
+        }
+
+        .compare-item img {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .compare-item img:hover {
+            opacity: 0.88;
+            transform: scale(1.01);
+        }
+
+        .compare-item figcaption {
+            margin-top: 0.55rem;
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 600px) {
+            .compare-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================
+           ЛАЙТБОКС
+           ============================ */
+
+        .lb-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.88);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            cursor: zoom-out;
+        }
+
+        .lb-overlay.lb-visible {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lb-img-wrap {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            cursor: default;
+        }
+
+        .lb-img-wrap img {
+            display: block;
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .lb-close {
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .lb-close:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
+    </style>
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body data-page="article">
+
+    <div id="site-header"></div>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <img src="/assets/images/content/hotel-check-before-booking/hero_1920x350.jpg"
+            alt="Путешественница изучает варианты отелей на ноутбуке перед бронированием" class="article-hero-image">
+
+        <div class="hero-content">
+            <h1>Что проверить в отеле перед бронированием</h1>
+            <p class="hero-subtitle">
+                Практический алгоритм, чтобы отдых не превратился в разочарование
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Content Navigation -->
+    <nav class="article-nav">
+        <div class="quick-nav-list">
+            <a href="./" class="quick-nav-item">Все</a>
+            <a href="./countries/" class="quick-nav-item">Страны</a>
+            <a href="./flights/" class="quick-nav-item">Авиаперелёты</a>
+            <a href="./lifehacks/" class="quick-nav-item active">Лайфхаки</a>
+            <a href="./collections/" class="quick-nav-item">Подборки</a>
+            <a href="./news/" class="quick-nav-item">Новости</a>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <div class="article-container">
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <div class="article-meta">
+                <span>TravelRadar LK</span>
+                <span class="meta-dot"></span>
+                <span>23 февраля 2026</span>
+                <span class="meta-dot"></span>
+                <span>7 мин чтения</span>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <article class="article-content">
+
+            <!-- Вступление — крупный текст -->
+            <div class="article-intro">
+                <p>Большинство разочарований в отелях происходит не после заселения — а в момент бронирования.</p>
+
+                <p>Именно тогда формируются ожидания.
+                    Именно тогда вы принимаете решение, которое определит атмосферу всего отдыха.</p>
+
+                <p>Вы видите аккуратную цену, красивые фотографии, высокий рейтинг — и нажимаете «Забронировать».
+                    В этот момент кажется, что риск минимален.</p>
+
+                <p>Но сервисы бронирования продают не реальность. Они продают ожидания.</p>
+
+                <p>Если в предыдущем материале мы разбирали,
+                    <a href="/ru/content/hotel-rating-9-trap" class="internal-link">почему рейтинг 9.2 может вводить в
+                        заблуждение</a>,
+                    то следующий шаг — научиться проверять отель до оплаты.
+                    Потому что даже объект с отличной оценкой может не совпасть с вашим форматом поездки.
+                </p>
+
+                <p>Ниже — практический алгоритм проверки.</p>
+            </div>
+
+            <hr class="article-divider">
+
+            <!-- Раздел 1: Фотографии -->
+            <div class="article-point reveal">
+                <h2>Как проверить реальные условия номера, а не рекламные фотографии</h2>
+
+                <p>Официальные фотографии отеля — это маркетинговый инструмент.</p>
+
+                <p>Используются широкоугольные объективы, правильный свет, выгодные ракурсы.
+                    Номер выглядит просторнее, территория — тише, а вид из окна — лучше, чем в реальности.</p>
+
+                <p>Более 60% путешественников хотя бы раз отмечали, что реальный размер номера оказался меньше
+                    ожидаемого.
+                    Это не обязательно обман — чаще это эффект оптики и завышенных ожиданий.</p>
+
+                <div class="article-subpoint">
+                    <h3>Что проверять перед бронированием</h3>
+                    <p>Ваш главный источник правды — фотографии гостей.</p>
+                    <p>Откройте:</p>
+                    <ul>
+                        <li>TripAdvisor</li>
+                        <li>Google Maps (раздел «Фото от посетителей»)</li>
+                        <li>соцсети по геолокации отеля</li>
+                    </ul>
+                    <p>Обращайте внимание на:</p>
+                    <ul>
+                        <li>реальный масштаб комнаты</li>
+                        <li>высоту потолков</li>
+                        <li>расстояние между мебелью</li>
+                        <li>состояние ванной</li>
+                        <li>вид из стандартного номера</li>
+                    </ul>
+                </div>
+
+                <p>Если в официальной галерее показаны только люксы и отсутствуют стандартные номера — это тревожный
+                    сигнал.</p>
+
+                <p>Ориентируйтесь на гостевые фото. Они менее красивы — но более честны.</p>
+            </div>
+
+            <!-- Блок сравнения: Ожидание и реальность -->
+            <div class="compare-section reveal">
+                <h3>Ожидание и реальность</h3>
+                <div class="compare-grid">
+                    <figure class="compare-item"
+                        data-lb-src="/assets/images/content/hotel-check-before-booking/block-01_1200.jpg">
+                        <img src="/assets/images/content/hotel-check-before-booking/block-01_1200.jpg"
+                            alt="Официальные фотографии отеля — широкоугольный объектив, выгодный свет" loading="lazy">
+                        <figcaption>Официальные фотографии отеля</figcaption>
+                    </figure>
+                    <figure class="compare-item"
+                        data-lb-src="/assets/images/content/hotel-check-before-booking/block-02_1200.jpg">
+                        <img src="/assets/images/content/hotel-check-before-booking/block-02_1200.jpg"
+                            alt="Стандартный номер 14–16 м² — реальные условия для двух гостей" loading="lazy">
+                        <figcaption>Стандартный номер 14–16 м²</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Раздел 2: Расположение -->
+            <div class="article-point reveal">
+                <h2>Как проверить расположение отеля перед бронированием</h2>
+
+                <p>Формулировки «5 минут до моря» или «рядом с центром» не стандартизированы.</p>
+
+                <p>Пять минут для отеля — это:</p>
+
+                <ul>
+                    <li>быстрым шагом</li>
+                    <li>без чемоданов</li>
+                    <li>без жары</li>
+                    <li>без учёта уклона</li>
+                    <li>без светофоров</li>
+                </ul>
+
+                <p>Карта агрегатора показывает точку. Но она не показывает среду.</p>
+
+                <figure class="article-image reveal" style="margin: 2rem 0;"
+                    data-lb-src="/assets/images/content/hotel-check-before-booking/block-04_1200.jpg">
+                    <img src="/assets/images/content/hotel-check-before-booking/block-04_1200.jpg"
+                        alt="Отель у оживлённой дороги рядом с морем — карта агрегатора не отражает уровень шума"
+                        style="width: 100%; display: block; border-radius: 12px; cursor: zoom-in;" loading="lazy">
+                    <figcaption
+                        style="margin-top: 0.55rem; font-size: 0.83rem; color: var(--text-muted); text-align: center; letter-spacing: 0.02em;">
+                        Даже рядом с морем отель может находиться у оживлённой дороги. Карта агрегатора не показывает
+                        уровень шума.
+                    </figcaption>
+                </figure>
+
+                <div class="article-subpoint">
+                    <h3>Что делать</h3>
+                    <p>Откройте Google Street View и пройдитесь виртуально:</p>
+                    <ul>
+                        <li>от входа до пляжа</li>
+                        <li>до ближайшего супермаркета</li>
+                        <li>до остановки транспорта</li>
+                        <li>вокруг квартала</li>
+                    </ul>
+                </div>
+
+                <p>Иногда дорога проходит через оживлённую магистраль без пешеходного перехода.
+                    Иногда «вид на море» — это узкий просвет между зданиями.
+                    Иногда под окнами находится бар или стройка.</p>
+
+                <p>Проверка занимает 3–4 минуты. Но экономит дни раздражения.</p>
+            </div>
+
+            <!-- Раздел 3: Площадь номера -->
+            <div class="article-point reveal">
+                <h2>Как узнать реальный размер номера и какой метраж считать комфортным</h2>
+
+                <p>Площадь номера — один из самых недооценённых факторов комфорта.</p>
+
+                <p>Номер 14–16 м² для двоих на фото выглядит аккуратно. В реальности это:</p>
+
+                <ul>
+                    <li>негде открыть два чемодана</li>
+                    <li>нет зоны для отдыха</li>
+                    <li>вещи постоянно на виду</li>
+                    <li>ощущение тесноты уже на второй день</li>
+                </ul>
+
+                <figure class="article-image reveal" style="margin: 2rem 0;"
+                    data-lb-src="/assets/images/content/hotel-check-before-booking/block-03_1200.jpg">
+                    <img src="/assets/images/content/hotel-check-before-booking/block-03_1200.jpg"
+                        alt="Стандартный номер площадью около 15 м² — ограниченное пространство для двух человек"
+                        style="width: 100%; display: block; border-radius: 12px; cursor: zoom-in;" loading="lazy">
+                    <figcaption
+                        style="margin-top: 0.55rem; font-size: 0.83rem; color: var(--text-muted); text-align: center; letter-spacing: 0.02em;">
+                        Стандартный номер площадью около 15 м². Для двух человек пространство ограничено.
+                    </figcaption>
+                </figure>
+
+                <p>Комфортный минимум для двух взрослых — около 20 м².
+                    Для отдыха более 4–5 дней — лучше ориентироваться на 22–24 м².</p>
+
+                <div class="article-subpoint">
+                    <h3>Где проверить площадь номера</h3>
+                    <ul>
+                        <li>В карточке номера на Booking.com обычно указана строка «Площадь номера».</li>
+                        <li>Если метраж не указан — стоит насторожиться.</li>
+                        <li>Можно задать вопрос отелю напрямую через форму связи.</li>
+                        <li>Если указан диапазон (например, 14–18 м²), ориентируйтесь на минимальное значение.</li>
+                    </ul>
+                </div>
+
+                <div class="article-case">
+                    <p class="case-label">Мини-кейс</p>
+                    <p>Пара забронировала номер 15 м² в Риме на пять ночей.
+                        На фото комната выглядела светлой и просторной.
+                        В реальности два чемодана занимали половину пространства, и уже на второй день возникло ощущение
+                        сжатости.
+                        Отель соответствовал описанию — но формат номера не соответствовал ожиданиям.</p>
+                    <p>Формально всё было «правильно».
+                        Фактически отдых ощущался ограниченным.</p>
+                </div>
+            </div>
+
+            <hr class="article-divider">
+
+            <!-- Раздел 4: Скрытые платежи -->
+            <div class="article-point reveal">
+                <h2>Скрытые платежи в отелях: как проверить финальную стоимость</h2>
+
+                <p>Цена в результатах поиска почти никогда не равна итоговой сумме.</p>
+
+                <p>В популярных туристических городах дополнительные сборы могут увеличить стоимость проживания на
+                    10–25%.</p>
+
+                <p>Чаще всего добавляются:</p>
+
+                <ul>
+                    <li>городской налог</li>
+                    <li>курортный сбор (resort fee)</li>
+                    <li>плата за парковку</li>
+                    <li>платный Wi-Fi</li>
+                    <li>платный сейф</li>
+                    <li>инфраструктурный сбор</li>
+                </ul>
+
+                <p>Номер за 200 долларов легко превращается в 270–300 долларов за ночь.</p>
+
+                <div class="article-quote">
+                    Не принимайте решение на первой странице поиска.
+                    Всегда переходите к финальному шагу бронирования,
+                    где указана полная сумма с налогами и обязательными сборами.
+                    Только там видно реальную цену проживания.
+                </div>
+            </div>
+
+            <!-- Раздел 5: Возвратный тариф -->
+            <div class="article-point reveal">
+                <h2>Возвратный или невозвратный тариф: как использовать гибкость в свою пользу</h2>
+
+                <p>Невозвратный тариф обычно дешевле на 10–15%.
+                    На первый взгляд это разумная экономия.</p>
+
+                <p>Но цены на отели динамичны. За 2–3 недели до заезда объекты часто снижают стоимость,
+                    чтобы заполнить свободные номера.</p>
+
+                <div class="article-subpoint">
+                    <h3>Практический алгоритм</h3>
+                    <ol style="padding-left: 1.25rem; margin: 0;">
+                        <li style="margin: 0.6rem 0;">Бронируйте тариф с бесплатной отменой.</li>
+                        <li style="margin: 0.6rem 0;">Раз в неделю проверяйте цену.</li>
+                        <li style="margin: 0.6rem 0;">Если стоимость снизилась — отмените и перебронируйте дешевле.</li>
+                    </ol>
+                </div>
+
+                <p>Гибкий тариф — это не переплата.
+                    Это страховка и инструмент управления бюджетом.</p>
+            </div>
+
+            <!-- Чек-лист -->
+            <section class="article-checklist reveal">
+                <div class="article-summary checklist-premium">
+                    <h2>Чек-лист перед нажатием «Забронировать»</h2>
+                    <p class="checklist-intro">Перед оплатой задайте себе пять конкретных вопросов:</p>
+
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я посмотрел фотографии гостей, а не только официальную галерею?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я проверил окружение через Street View?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я знаю точную площадь номера?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я увидел финальную стоимость с налогами и сборами?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я выбрал тариф, который даёт гибкость?</span>
+                    </div>
+
+                    <p style="margin-top: 1.25rem;">Если на каждый вопрос ответ «да», вы снижаете риск разочарования.
+                        Вы покупаете не картинку. Вы покупаете прогнозируемый комфорт.</p>
+                </div>
+            </section>
+
+            <!-- Финальный блок -->
+            <footer class="article-footer reveal">
+                <div class="article-summary article-summary--note article-finale">
+                    <p><strong>Главное.</strong> Хороший отдых начинается не с самой высокой оценки
+                        и не с самых красивых фотографий.</p>
+
+                    <p>Он начинается с совпадения ожиданий и реальности.</p>
+
+                    <p>Бронирование — это не эмоция.
+                        Это управляемый риск.</p>
+
+                    <p>Потратить десять минут на проверку деталей — значит сохранить деньги, нервы и впечатления.</p>
+
+                    <p>Именно в этот момент отпуск перестаёт быть случайностью и становится осознанным выбором.</p>
+
+                    <div class="finale-cta">
+                        Больше практических советов — в разделе
+                        <a href="/ru/content/lifehacks/">лайфхаков для путешественников</a>.
+                    </div>
+                </div>
+            </footer>
+
+        </article>
+
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="/js/load-header.js"></script>
+
+    <!-- Лайтбокс -->
+    <div class="lb-overlay" id="lb-overlay" role="dialog" aria-modal="true">
+        <div class="lb-img-wrap" id="lb-img-wrap">
+            <button class="lb-close" id="lb-close" aria-label="Закрыть">&#x2715;</button>
+            <img src="" alt="" id="lb-img">
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var overlay = document.getElementById('lb-overlay');
+            var lbImg = document.getElementById('lb-img');
+            var lbClose = document.getElementById('lb-close');
+
+            function openLb(src, alt) {
+                lbImg.src = src;
+                lbImg.alt = alt || '';
+                overlay.style.display = 'flex';
+                // небольшая задержка для плавного появления
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        overlay.classList.add('lb-visible');
+                    });
+                });
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLb() {
+                overlay.classList.remove('lb-visible');
+                document.body.style.overflow = '';
+                setTimeout(function () {
+                    overlay.style.display = 'none';
+                    lbImg.src = '';
+                }, 260);
+            }
+
+            // Клик по элементам с data-lb-src
+            document.addEventListener('click', function (e) {
+                var item = e.target.closest('[data-lb-src]');
+                if (item) {
+                    e.preventDefault();
+                    var src = item.getAttribute('data-lb-src');
+                    var alt = item.querySelector('img') ? item.querySelector('img').alt : '';
+                    openLb(src, alt);
+                    return;
+                }
+                // Закрытие по клику вне картинки
+                if (e.target === overlay) {
+                    closeLb();
+                }
+            });
+
+            // Кнопка закрытия
+            lbClose.addEventListener('click', closeLb);
+
+            // Закрытие по Escape
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeLb();
+            });
+        })();
+    </script>
+
+
+    <!-- Плавное появление блоков при скролле -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var reveals = document.querySelectorAll('.reveal');
+            if (!reveals.length) return;
+
+            // Проверяем поддержку IntersectionObserver
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+
+                reveals.forEach(function (el) {
+                    observer.observe(el);
+                });
+            } else {
+                // Фоллбек — показать всё сразу
+                reveals.forEach(function (el) {
+                    el.classList.add('visible');
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

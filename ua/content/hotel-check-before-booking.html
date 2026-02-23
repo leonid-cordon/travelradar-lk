@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site-base" content="">
+    <title>Що перевірити в готелі перед бронюванням | Travel Radar LK</title>
+    <meta name="description"
+        content="Практичний алгоритм: як перевірити фотографії, розташування, площу номера, приховані платежі та тариф перед тим, як натиснути «Забронювати».">
+    <link rel="canonical" href="https://travelradarlk.com/ua/content/hotel-check-before-booking">
+    <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/content/hotel-check-before-booking">
+    <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/content/hotel-check-before-booking">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Що перевірити в готелі перед бронюванням, щоб не зіпсувати відпустку">
+    <meta property="og:description"
+        content="Практичний алгоритм перевірки готелю до оплати: фото гостей, Street View, площа номера, фінальна ціна та гнучкий тариф.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://travelradarlk.com/ua/content/hotel-check-before-booking">
+    <meta property="og:image"
+        content="https://travelradarlk.com/assets/images/content/hotel-check-before-booking/hero_1920x250.jpg">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Що перевірити в готелі перед бронюванням, щоб не зіпсувати відпустку",
+        "description": "Практичний алгоритм: як перевірити фотографії, розташування, площу номера, приховані платежі та тариф перед тим, як натиснути «Забронювати».",
+        "image": "https://travelradarlk.com/assets/images/content/hotel-check-before-booking/hero_1920x250.jpg",
+        "datePublished": "2026-02-23",
+        "inLanguage": "uk",
+        "author": {
+            "@type": "Organization",
+            "name": "TravelRadar LK"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TravelRadar LK"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://travelradarlk.com/ua/content/hotel-check-before-booking"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+    <link rel="stylesheet" href="/theme.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/pages/article.css">
+    <link rel="stylesheet" href="/assets/css/pages/content.css">
+
+    <!-- Стилі статті — мікро-акценти та преміальна подача -->
+    <style>
+        /* ============================
+           ЛІДОВА ЧАСТИНА ТА МЕТА
+           ============================ */
+
+        /* Лід-підзаголовок */
+        .article-lead {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 0.01em;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Мета-рядок автора */
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .article-meta .meta-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            display: inline-block;
+        }
+
+        /* Вступні абзаци — крупніше */
+        .article-intro p {
+            font-size: 1.08rem;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        .article-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ============================
+           HERO СЕКЦІЯ
+           ============================ */
+
+        .article-hero {
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 20% center;
+            transition: transform 6s ease;
+        }
+
+        /* Псевдоелемент поверх зображення */
+        .article-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(to right,
+                    rgba(0, 0, 0, 0.08) 0%,
+                    rgba(0, 0, 0, 0.12) 35%,
+                    rgba(0, 0, 0, 0.22) 100%),
+                linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.05) 0%,
+                    rgba(0, 0, 0, 0.12) 100%);
+        }
+
+        .article-hero:hover .article-hero-image {
+            transform: scale(1.03);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            max-width: 600px;
+            color: #ffffff;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroFade 0.8s ease-out forwards;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.35),
+                0 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        @keyframes heroFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================
+           КОНТЕНТНІ БЛОКИ
+           ============================ */
+
+        .article-point {
+            margin: 70px 0;
+        }
+
+        .article-subpoint {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 24px;
+            border-radius: 14px;
+            margin-top: 20px;
+        }
+
+        /* Цитатний блок-акцент */
+        .article-quote {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1.5rem 1.75rem 1.5rem 2rem;
+            border-left: 3px solid var(--accent-color, #5b8dee);
+            background: rgba(91, 141, 238, 0.06);
+            border-radius: 0 12px 12px 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Кейс-блок */
+        .article-case {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin: 2rem 0;
+        }
+
+        .case-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        /* ============================
+           НАВІГАЦІЯ ПО СТАТТІ
+           ============================ */
+
+        .article-nav {
+            background: var(--bg-secondary, rgba(255, 255, 255, 0.03));
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 0;
+        }
+
+        .article-nav .quick-nav-list {
+            display: flex;
+            gap: 0.25rem;
+            overflow-x: auto;
+            padding: 0 1.5rem;
+            justify-content: center;
+        }
+
+        /* ============================
+           КОНТЕЙНЕР СТАТТІ
+           ============================ */
+
+        .article-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .article-content h2 {
+            font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+        }
+
+        .article-content h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .article-content ul,
+        .article-content ol {
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content li {
+            line-height: 1.75;
+            margin-bottom: 0.4rem;
+            color: var(--text-secondary);
+        }
+
+        /* Роздільник */
+        .article-divider {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 3rem 0;
+            opacity: 0.4;
+        }
+
+        /* Чек-лист */
+        .checklist-premium {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+        }
+
+        .checklist-premium h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .checklist-intro {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .check-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color, #5b8dee);
+            flex-shrink: 0;
+            margin-top: 2px;
+            position: relative;
+        }
+
+        .check-icon::after {
+            content: "✓";
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--accent-color, #5b8dee);
+            font-weight: 700;
+        }
+
+        .check-item span {
+            font-size: 0.97rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        /* Фінальний блок */
+        .article-finale {
+            margin-top: 3rem;
+        }
+
+        .article-summary {
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+        }
+
+        .article-summary--note {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+        }
+
+        .finale-cta {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .finale-cta a {
+            color: var(--accent-color, #5b8dee);
+            text-decoration: none;
+        }
+
+        .finale-cta a:hover {
+            text-decoration: underline;
+        }
+
+        .internal-link {
+            color: var(--accent-color, #5b8dee);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .internal-link:hover {
+            border-bottom-color: var(--accent-color, #5b8dee);
+        }
+
+        /* ============================
+           АНІМАЦІЯ ПОЯВИ
+           ============================ */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition:
+                opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ============================
+           АДАПТИВ
+           ============================ */
+
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 2rem 1rem 3rem;
+            }
+
+            .hero-content {
+                left: 20px;
+                right: 20px;
+                bottom: 24px;
+            }
+
+            .article-point {
+                margin: 48px 0;
+            }
+
+            .checklist-premium {
+                padding: 1.5rem;
+            }
+
+            .article-summary {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-hero {
+                height: 260px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+                margin-bottom: 6px;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ============================
+           БЛОК ПОРІВНЯННЯ ЗОБРАЖЕНЬ
+           ============================ */
+
+        .compare-section {
+            margin: 3rem 0 2rem;
+        }
+
+        .compare-section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .compare-item {
+            cursor: pointer;
+        }
+
+        .compare-item img {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .compare-item img:hover {
+            opacity: 0.88;
+            transform: scale(1.01);
+        }
+
+        .compare-item figcaption {
+            margin-top: 0.55rem;
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 600px) {
+            .compare-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================
+           ЛАЙТБОКС
+           ============================ */
+
+        .lb-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.88);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            cursor: zoom-out;
+        }
+
+        .lb-overlay.lb-visible {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lb-img-wrap {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            cursor: default;
+        }
+
+        .lb-img-wrap img {
+            display: block;
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .lb-close {
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .lb-close:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
+    </style>
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body data-page="article">
+
+    <div id="site-header"></div>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <img src="/assets/images/content/hotel-check-before-booking/hero_1920x350.jpg"
+            alt="Мандрівниця вивчає варіанти готелів на ноутбуці перед бронюванням" class="article-hero-image">
+
+        <div class="hero-content">
+            <h1>Що перевірити в готелі перед бронюванням</h1>
+            <p class="hero-subtitle">
+                Практичний алгоритм, щоб відпочинок не перетворився на розчарування
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Content Navigation -->
+    <nav class="article-nav">
+        <div class="quick-nav-list">
+            <a href="./" class="quick-nav-item">Усе</a>
+            <a href="./countries/" class="quick-nav-item">Країни</a>
+            <a href="./flights/" class="quick-nav-item">Авіаперельоти</a>
+            <a href="./lifehacks/" class="quick-nav-item active">Лайфхаки</a>
+            <a href="./collections/" class="quick-nav-item">Добірки</a>
+            <a href="./news/" class="quick-nav-item">Новини</a>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <div class="article-container">
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <div class="article-meta">
+                <span>TravelRadar LK</span>
+                <span class="meta-dot"></span>
+                <span>23 лютого 2026</span>
+                <span class="meta-dot"></span>
+                <span>7 хв читання</span>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <article class="article-content">
+
+            <!-- Вступ — великий текст -->
+            <div class="article-intro">
+                <p>Більшість розчарувань у готелях трапляється не після заселення — а в момент бронювання.</p>
+
+                <p>Саме тоді формуються очікування.
+                    Саме тоді ви приймаєте рішення, яке визначить атмосферу всього відпочинку.</p>
+
+                <p>Ви бачите акуратну ціну, гарні фотографії, високий рейтинг — і натискаєте «Забронювати».
+                    У цей момент здається, що ризик мінімальний.</p>
+
+                <p>Але сервіси бронювання продають не реальність. Вони продають очікування.</p>
+
+                <p>Якщо в попередньому матеріалі ми розбирали,
+                    <a href="/ua/content/hotel-rating-9-trap" class="internal-link">чому рейтинг 9.2 може вводити в
+                        оману</a>,
+                    то наступний крок — навчитися перевіряти готель до оплати.
+                    Бо навіть об'єкт із відмінною оцінкою може не збігтися з вашим форматом поїздки.
+                </p>
+
+                <p>Нижче — практичний алгоритм перевірки.</p>
+            </div>
+
+            <hr class="article-divider">
+
+            <!-- Розділ 1: Фотографії -->
+            <div class="article-point reveal">
+                <h2>Як перевірити реальні умови номера, а не рекламні фотографії</h2>
+
+                <p>Офіційні фотографії готелю — це маркетинговий інструмент.</p>
+
+                <p>Використовуються широкоформатні об'єктиви, правильне світло, вигідні ракурси.
+                    Номер виглядає просторішим, територія — тихішою, а краєвид із вікна — кращим, ніж насправді.</p>
+
+                <p>Понад 60% мандрівників хоча б раз зазначали, що реальний розмір номера виявився меншим за очікуваний.
+                    Це не обов'язково обман — частіше це ефект оптики та завищених очікувань.</p>
+
+                <div class="article-subpoint">
+                    <h3>Що перевіряти перед бронюванням</h3>
+                    <p>Ваше головне джерело правди — фотографії гостей.</p>
+                    <p>Відкрийте:</p>
+                    <ul>
+                        <li>TripAdvisor</li>
+                        <li>Google Maps (розділ «Фото від відвідувачів»)</li>
+                        <li>соцмережі за геолокацією готелю</li>
+                    </ul>
+                    <p>Зверніть увагу на:</p>
+                    <ul>
+                        <li>реальний масштаб кімнати</li>
+                        <li>висоту стелі</li>
+                        <li>відстань між меблями</li>
+                        <li>стан ванної кімнати</li>
+                        <li>краєвид зі стандартного номера</li>
+                    </ul>
+                </div>
+
+                <p>Якщо в офіційній галереї показані лише люкси та відсутні стандартні номера — це тривожний
+                    сигнал.</p>
+
+                <p>Орієнтуйтеся на гостьові фото. Вони менш красиві — але більш чесні.</p>
+            </div>
+
+            <!-- Блок порівняння: Очікування і реальність -->
+            <div class="compare-section reveal">
+                <h3>Очікування і реальність</h3>
+                <div class="compare-grid">
+                    <figure class="compare-item"
+                        data-lb-src="/assets/images/content/hotel-check-before-booking/block-01_1200.jpg">
+                        <img src="/assets/images/content/hotel-check-before-booking/block-01_1200.jpg"
+                            alt="Офіційні фотографії готелю — широкоформатний об'єктив, вигідне світло" loading="lazy">
+                        <figcaption>Офіційні фотографії готелю</figcaption>
+                    </figure>
+                    <figure class="compare-item"
+                        data-lb-src="/assets/images/content/hotel-check-before-booking/block-02_1200.jpg">
+                        <img src="/assets/images/content/hotel-check-before-booking/block-02_1200.jpg"
+                            alt="Стандартний номер 14–16 м² — реальні умови для двох гостей" loading="lazy">
+                        <figcaption>Стандартний номер 14–16 м²</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Розділ 2: Розташування -->
+            <div class="article-point reveal">
+                <h2>Як перевірити розташування готелю перед бронюванням</h2>
+
+                <p>Формулювання «5 хвилин до моря» або «поруч із центром» не стандартизовані.</p>
+
+                <p>П'ять хвилин для готелю — це:</p>
+
+                <ul>
+                    <li>швидким кроком</li>
+                    <li>без валіз</li>
+                    <li>без спеки</li>
+                    <li>без урахування підйому</li>
+                    <li>без світлофорів</li>
+                </ul>
+
+                <p>Карта агрегатора показує точку. Але вона не показує середовище.</p>
+
+                <figure class="article-image reveal" style="margin: 2rem 0;"
+                    data-lb-src="/assets/images/content/hotel-check-before-booking/block-04_1200.jpg">
+                    <img src="/assets/images/content/hotel-check-before-booking/block-04_1200.jpg"
+                        alt="Готель біля жвавої дороги поруч із морем — карта агрегатора не відображає рівень шуму"
+                        style="width: 100%; display: block; border-radius: 12px; cursor: zoom-in;" loading="lazy">
+                    <figcaption
+                        style="margin-top: 0.55rem; font-size: 0.83rem; color: var(--text-muted); text-align: center; letter-spacing: 0.02em;">
+                        Навіть поряд із морем готель може знаходитися біля жвавої дороги. Карта агрегатора не показує
+                        рівень шуму.
+                    </figcaption>
+                </figure>
+
+                <div class="article-subpoint">
+                    <h3>Що робити</h3>
+                    <p>Відкрийте Google Street View і пройдіться віртуально:</p>
+                    <ul>
+                        <li>від входу до пляжу</li>
+                        <li>до найближчого супермаркету</li>
+                        <li>до зупинки транспорту</li>
+                        <li>навколо кварталу</li>
+                    </ul>
+                </div>
+
+                <p>Іноді дорога проходить через жваву магістраль без пішохідного переходу.
+                    Іноді «вид на море» — це вузький просвіт між будівлями.
+                    Іноді під вікнами знаходиться бар або будівництво.</p>
+
+                <p>Перевірка займає 3–4 хвилини. Але заощаджує дні роздратування.</p>
+            </div>
+
+            <!-- Розділ 3: Площа номера -->
+            <div class="article-point reveal">
+                <h2>Як дізнатися реальний розмір номера і який метраж вважати комфортним</h2>
+
+                <p>Площа номера — один із найнедооцінених факторів комфорту.</p>
+
+                <p>Номер 14–16 м² для двох на фото виглядає акуратно. Насправді це:</p>
+
+                <ul>
+                    <li>нема де відкрити дві валізи</li>
+                    <li>немає зони для відпочинку</li>
+                    <li>речі постійно на виду</li>
+                    <li>відчуття тісноти вже на другий день</li>
+                </ul>
+
+                <figure class="article-image reveal" style="margin: 2rem 0;"
+                    data-lb-src="/assets/images/content/hotel-check-before-booking/block-03_1200.jpg">
+                    <img src="/assets/images/content/hotel-check-before-booking/block-03_1200.jpg"
+                        alt="Стандартний номер площею близько 15 м² — обмежений простір для двох людей"
+                        style="width: 100%; display: block; border-radius: 12px; cursor: zoom-in;" loading="lazy">
+                    <figcaption
+                        style="margin-top: 0.55rem; font-size: 0.83rem; color: var(--text-muted); text-align: center; letter-spacing: 0.02em;">
+                        Стандартний номер площею близько 15 м². Для двох людей простір обмежений.
+                    </figcaption>
+                </figure>
+
+                <p>Комфортний мінімум для двох дорослих — близько 20 м².
+                    Для відпочинку понад 4–5 днів — краще орієнтуватися на 22–24 м².</p>
+
+                <div class="article-subpoint">
+                    <h3>Де перевірити площу номера</h3>
+                    <ul>
+                        <li>У картці номера на Booking.com зазвичай вказано рядок «Площа номера».</li>
+                        <li>Якщо метраж не вказано — варто насторожитися.</li>
+                        <li>Можна поставити запитання готелю напряму через форму зв'язку.</li>
+                        <li>Якщо зазначено діапазон (наприклад, 14–18 м²), орієнтуйтеся на мінімальне значення.</li>
+                    </ul>
+                </div>
+
+                <div class="article-case">
+                    <p class="case-label">Міні-кейс</p>
+                    <p>Пара забронювала номер 15 м² у Римі на п'ять ночей.
+                        На фото кімната виглядала світлою та просторою.
+                        Насправді дві валізи займали половину простору, і вже на другий день виникло відчуття
+                        тісноти.
+                        Готель відповідав опису — але формат номера не відповідав очікуванням.</p>
+                    <p>Формально все було «правильно».
+                        Фактично відпочинок відчувався обмеженим.</p>
+                </div>
+            </div>
+
+            <hr class="article-divider">
+
+            <!-- Розділ 4: Приховані платежі -->
+            <div class="article-point reveal">
+                <h2>Приховані платежі в готелях: як перевірити фінальну вартість</h2>
+
+                <p>Ціна в результатах пошуку майже ніколи не дорівнює підсумковій сумі.</p>
+
+                <p>У популярних туристичних містах додаткові збори можуть збільшити вартість проживання на
+                    10–25%.</p>
+
+                <p>Найчастіше додаються:</p>
+
+                <ul>
+                    <li>міський податок</li>
+                    <li>курортний збір (resort fee)</li>
+                    <li>плата за паркування</li>
+                    <li>платний Wi-Fi</li>
+                    <li>платний сейф</li>
+                    <li>інфраструктурний збір</li>
+                </ul>
+
+                <p>Номер за 200 доларів легко перетворюється на 270–300 доларів за ніч.</p>
+
+                <div class="article-quote">
+                    Не приймайте рішення на першій сторінці пошуку.
+                    Завжди переходьте до фінального кроку бронювання,
+                    де вказана повна сума з податками та обов'язковими зборами.
+                    Тільки там видно реальну ціну проживання.
+                </div>
+            </div>
+
+            <!-- Розділ 5: Тариф із поверненням -->
+            <div class="article-point reveal">
+                <h2>Тариф із поверненням або без: як використати гнучкість на свою користь</h2>
+
+                <p>Тариф без повернення зазвичай дешевший на 10–15%.
+                    На перший погляд це розумна економія.</p>
+
+                <p>Але ціни на готелі динамічні. За 2–3 тижні до заїзду об'єкти часто знижують вартість,
+                    щоб заповнити вільні номери.</p>
+
+                <div class="article-subpoint">
+                    <h3>Практичний алгоритм</h3>
+                    <ol style="padding-left: 1.25rem; margin: 0;">
+                        <li style="margin: 0.6rem 0;">Бронюйте тариф із безкоштовним скасуванням.</li>
+                        <li style="margin: 0.6rem 0;">Раз на тиждень перевіряйте ціну.</li>
+                        <li style="margin: 0.6rem 0;">Якщо вартість знизилася — скасуйте і перебронюйте дешевше.</li>
+                    </ol>
+                </div>
+
+                <p>Гнучкий тариф — це не переплата.
+                    Це страховка та інструмент управління бюджетом.</p>
+            </div>
+
+            <!-- Чек-лист -->
+            <section class="article-checklist reveal">
+                <div class="article-summary checklist-premium">
+                    <h2>Чек-лист перед натисканням «Забронювати»</h2>
+                    <p class="checklist-intro">Перед оплатою поставте собі п'ять конкретних запитань:</p>
+
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я подивився фотографії гостей, а не лише офіційну галерею?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я перевірив оточення через Street View?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я знаю точну площу номера?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я побачив фінальну вартість із податками та зборами?</span>
+                    </div>
+                    <div class="check-item">
+                        <div class="check-icon"></div>
+                        <span>Я обрав тариф, який надає гнучкість?</span>
+                    </div>
+
+                    <p style="margin-top: 1.25rem;">Якщо на кожне запитання відповідь «так», ви знижуєте ризик
+                        розчарування.
+                        Ви купуєте не картинку. Ви купуєте прогнозований комфорт.</p>
+                </div>
+            </section>
+
+            <!-- Фінальний блок -->
+            <footer class="article-footer reveal">
+                <div class="article-summary article-summary--note article-finale">
+                    <p><strong>Головне.</strong> Гарний відпочинок починається не з найвищої оцінки
+                        і не з найкрасивіших фотографій.</p>
+
+                    <p>Він починається зі збігу очікувань і реальності.</p>
+
+                    <p>Бронювання — це не емоція.
+                        Це керований ризик.</p>
+
+                    <p>Витратити десять хвилин на перевірку деталей — означає зберегти гроші, нерви та враження.</p>
+
+                    <p>Саме в цей момент відпустка перестає бути випадковістю і стає усвідомленим вибором.</p>
+
+                    <div class="finale-cta">
+                        Більше практичних порад — у розділі
+                        <a href="/ua/content/lifehacks/">лайфхаків для мандрівників</a>.
+                    </div>
+                </div>
+            </footer>
+
+        </article>
+
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="/js/load-header.js"></script>
+
+    <!-- Лайтбокс -->
+    <div class="lb-overlay" id="lb-overlay" role="dialog" aria-modal="true">
+        <div class="lb-img-wrap" id="lb-img-wrap">
+            <button class="lb-close" id="lb-close" aria-label="Закрити">&#x2715;</button>
+            <img src="" alt="" id="lb-img">
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var overlay = document.getElementById('lb-overlay');
+            var lbImg = document.getElementById('lb-img');
+            var lbClose = document.getElementById('lb-close');
+
+            function openLb(src, alt) {
+                lbImg.src = src;
+                lbImg.alt = alt || '';
+                overlay.style.display = 'flex';
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        overlay.classList.add('lb-visible');
+                    });
+                });
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLb() {
+                overlay.classList.remove('lb-visible');
+                document.body.style.overflow = '';
+                setTimeout(function () {
+                    overlay.style.display = 'none';
+                    lbImg.src = '';
+                }, 260);
+            }
+
+            document.addEventListener('click', function (e) {
+                var item = e.target.closest('[data-lb-src]');
+                if (item) {
+                    e.preventDefault();
+                    var src = item.getAttribute('data-lb-src');
+                    var alt = item.querySelector('img') ? item.querySelector('img').alt : '';
+                    openLb(src, alt);
+                    return;
+                }
+                if (e.target === overlay) {
+                    closeLb();
+                }
+            });
+
+            lbClose.addEventListener('click', closeLb);
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeLb();
+            });
+        })();
+    </script>
+
+
+    <!-- Плавна поява блоків при скролі -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var reveals = document.querySelectorAll('.reveal');
+            if (!reveals.length) return;
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+
+                reveals.forEach(function (el) {
+                    observer.observe(el);
+                });
+            } else {
+                reveals.forEach(function (el) {
+                    el.classList.add('visible');
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
