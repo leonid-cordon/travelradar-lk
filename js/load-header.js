@@ -159,9 +159,9 @@ function initActiveNav() {
         return;
     }
 
-    if (hash === '#about') {
+    if (pathname.includes('/about')) {
         document.querySelectorAll('.nav-link').forEach(link => {
-            if (link.href.includes('#about')) {
+            if (link.href.includes('/about')) {
                 link.classList.add('active');
             }
         });
