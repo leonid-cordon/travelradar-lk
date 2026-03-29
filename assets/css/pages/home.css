@@ -164,6 +164,10 @@ body[data-theme="dark"] .hero-background {
     background-image: url('../../images/countries/turkey-1200.jpg');
 }
 
+.destination-card[data-country="mexico"] .card-image {
+    background-image: url('../../images/countries/mexico-1200.jpg');
+}
+
 .destination-card[data-country="spain"] .card-image {
     background-image: url('../../images/countries/spain-1200.jpg');
 }
