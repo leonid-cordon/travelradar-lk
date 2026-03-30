@@ -1,25 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- RU -->
+  <!-- ===================== RU ===================== -->
+
+  <!-- Main -->
   <url><loc>https://travelradarlk.com/ru/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/ru/content/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/about.html</loc></url>
+
+  <!-- Countries -->
   <url><loc>https://travelradarlk.com/ru/egypt/index.html</loc></url>
   <url><loc>https://travelradarlk.com/ru/turkey/index.html</loc></url>
   <url><loc>https://travelradarlk.com/ru/mexico/index.html</loc></url>
 
-  <!-- EN -->
+  <!-- Content index -->
+  <url><loc>https://travelradarlk.com/ru/content/index.html</loc></url>
+
+  <!-- Categories -->
+  <url><loc>https://travelradarlk.com/ru/content/lifehacks/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/countries/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/flights/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/collections/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/news/</loc></url>
+
+  <!-- Articles -->
+  <url><loc>https://travelradarlk.com/ru/content/egypt-bez-obmana.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/entry-egypt-2026.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/flights-egypt.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/hotel-check-before-booking.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/hotel-rating-9-trap.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/kuda-poehat-bez-vizy.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/where-to-stay-in-cancun-hotel-zone-vs-downtown.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/where-to-stay-istanbul.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/where-to-stay-istanbul-best-areas.html</loc></url>
+
+  <!-- Legal -->
+  <url><loc>https://travelradarlk.com/ru/privacy.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/terms.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/disclaimer.html</loc></url>
+
+
+  <!-- ===================== EN ===================== -->
+
   <url><loc>https://travelradarlk.com/en/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/en/content/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/about.html</loc></url>
+
   <url><loc>https://travelradarlk.com/en/egypt/index.html</loc></url>
   <url><loc>https://travelradarlk.com/en/turkey/index.html</loc></url>
   <url><loc>https://travelradarlk.com/en/mexico/index.html</loc></url>
 
-  <!-- UA -->
+  <url><loc>https://travelradarlk.com/en/content/index.html</loc></url>
+
+  <url><loc>https://travelradarlk.com/en/content/lifehacks/</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/countries/</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/flights/</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/collections/</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/news/</loc></url>
+
+  <!-- Articles -->
+  <url><loc>https://travelradarlk.com/en/content/egypt-bez-obmana.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/entry-egypt-2026.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/flights-egypt.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/hotel-check-before-booking.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/hotel-rating-9-trap.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/kuda-poehat-bez-vizy.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/where-to-stay-in-cancun-hotel-zone-vs-downtown.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/where-to-stay-istanbul.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/where-to-stay-istanbul-best-areas.html</loc></url>
+
+  <url><loc>https://travelradarlk.com/en/privacy.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/terms.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/disclaimer.html</loc></url>
+
+
+  <!-- ===================== UA ===================== -->
+
   <url><loc>https://travelradarlk.com/ua/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/ua/content/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/about.html</loc></url>
+
   <url><loc>https://travelradarlk.com/ua/egypt/index.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/turkey/index.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/mexico/index.html</loc></url>
+
+  <url><loc>https://travelradarlk.com/ua/content/index.html</loc></url>
+
+  <url><loc>https://travelradarlk.com/ua/content/lifehacks/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/countries/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/flights/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/collections/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/news/</loc></url>
+
+  <!-- Articles -->
+  <url><loc>https://travelradarlk.com/ua/content/egypt-bez-obmana.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/entry-egypt-2026.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/flights-egypt.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/hotel-check-before-booking.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/hotel-rating-9-trap.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/kuda-poehat-bez-vizy.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/where-to-stay-in-cancun-hotel-zone-vs-downtown.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/where-to-stay-istanbul.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/where-to-stay-istanbul-best-areas.html</loc></url>
+
+  <url><loc>https://travelradarlk.com/ua/privacy.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/terms.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/disclaimer.html</loc></url>
 
 </urlset>
