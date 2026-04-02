@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- MAIN -->
+  <url><loc>https://travelradarlk.com/</loc></url>
+
   <!-- ===================== RU ===================== -->
 
   <!-- Main -->
-  <url><loc>https://travelradarlk.com/ru/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/</loc></url>
   <url><loc>https://travelradarlk.com/ru/about.html</loc></url>
 
   <!-- Countries -->
-  <url><loc>https://travelradarlk.com/ru/egypt/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/ru/turkey/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/ru/mexico/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/egypt/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/turkey/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/mexico/</loc></url>
 
   <!-- Content index -->
-  <url><loc>https://travelradarlk.com/ru/content/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/</loc></url>
 
   <!-- Categories -->
   <url><loc>https://travelradarlk.com/ru/content/lifehacks/</loc></url>
@@ -41,14 +44,14 @@
 
   <!-- ===================== EN ===================== -->
 
-  <url><loc>https://travelradarlk.com/en/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/</loc></url>
   <url><loc>https://travelradarlk.com/en/about.html</loc></url>
 
-  <url><loc>https://travelradarlk.com/en/egypt/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/en/turkey/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/en/mexico/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/egypt/</loc></url>
+  <url><loc>https://travelradarlk.com/en/turkey/</loc></url>
+  <url><loc>https://travelradarlk.com/en/mexico/</loc></url>
 
-  <url><loc>https://travelradarlk.com/en/content/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/</loc></url>
 
   <url><loc>https://travelradarlk.com/en/content/lifehacks/</loc></url>
   <url><loc>https://travelradarlk.com/en/content/countries/</loc></url>
@@ -74,14 +77,14 @@
 
   <!-- ===================== UA ===================== -->
 
-  <url><loc>https://travelradarlk.com/ua/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/</loc></url>
   <url><loc>https://travelradarlk.com/ua/about.html</loc></url>
 
-  <url><loc>https://travelradarlk.com/ua/egypt/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/ua/turkey/index.html</loc></url>
-  <url><loc>https://travelradarlk.com/ua/mexico/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/egypt/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/turkey/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/mexico/</loc></url>
 
-  <url><loc>https://travelradarlk.com/ua/content/index.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/</loc></url>
 
   <url><loc>https://travelradarlk.com/ua/content/lifehacks/</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/countries/</loc></url>

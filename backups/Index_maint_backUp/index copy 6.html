@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Radar LK</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --deep: #0d1f2d;
+            --gold: #c9a84c;
+            --turq: #3ab8c8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--deep);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* HERO */
+        .hero {
+            max-width: 900px;
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* EYEBROW */
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        /* TITLE */
+        .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 80px;
+            font-weight: 300;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .title em {
+            font-style: italic;
+            color: var(--turq);
+        }
+
+        /* SUBTITLE */
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.6;
+            margin-bottom: 60px;
+        }
+
+        /* LANG NAV */
+        .langs {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .lang {
+            font-size: 14px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 10px;
+            color: rgba(255, 255, 255, 0.6);
+            transition: 0.3s;
+        }
+
+        .lang::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: 0.3s;
+        }
+
+        .lang:hover {
+            color: white;
+        }
+
+        .lang:hover::after {
+            width: 100%;
+        }
+
+        .lang.active {
+            color: var(--turq);
+        }
+
+        .lang.active::after {
+            width: 100%;
+            background: var(--turq);
+        }
+
+        /* DETECTED */
+        .detected {
+            margin-top: 30px;
+            font-size: 13px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="eyebrow">Travel Radar LK</div>
+
+        <div class="title">
+            Smart travel<br><em>decisions</em>
+        </div>
+
+        <div class="subtitle" id="subtitle"></div>
+
+        <div class="langs">
+            <div class="lang" data-lang="en">EN</div>
+            <div class="lang" data-lang="ru">RU</div>
+            <div class="lang" data-lang="ua">UA</div>
+        </div>
+
+        <div class="detected" id="detected"></div>
+
+    </div>
+
+    <script>
+        const lang = (navigator.language || '').toLowerCase();
+
+        let detected = 'en';
+        if (lang.startsWith('ru')) detected = 'ru';
+        if (lang.startsWith('uk')) detected = 'ua';
+
+        const text = {
+            en: {
+                subtitle: "Where to stay. What it costs. What matters.",
+                detected: "Detected language: English"
+            },
+            ru: {
+                subtitle: "Где остановиться. Сколько это стоит. Что важно.",
+                detected: "Определён язык: Русский"
+            },
+            ua: {
+                subtitle: "Де зупинитися. Скільки це коштує. Що важливо.",
+                detected: "Визначено мову: Українська"
+            }
+        };
+
+        document.getElementById('subtitle').innerText = text[detected].subtitle;
+
+        setTimeout(() => {
+            document.querySelector(`[data-lang="${detected}"]`)?.classList.add('active');
+            document.getElementById('detected').innerText = text[detected].detected;
+        }, 500);
+
+        document.querySelectorAll('.lang').forEach(el => {
+            el.onclick = () => {
+                window.location.href = '/' + el.dataset.lang + '/';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Radar LK</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Cormorant+Garamond:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --deep: #0d1f2d;
+            --turq: #3ab8c8;
+            --gold: #c9a84c;
+        }
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: var(--deep);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* BACKGROUND */
+        .bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 70% 30%, rgba(58, 184, 200, 0.15), transparent 60%),
+                linear-gradient(160deg, #0d1f2d 0%, #08151f 100%);
+        }
+
+        /* CENTER */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* TITLE */
+        .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            opacity: 0.5;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+
+        /* LANG LIST */
+        .lang-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .lang {
+            font-size: 16px;
+            letter-spacing: 2px;
+            padding: 14px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lang:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* highlight */
+        .lang.active {
+            border-color: var(--turq);
+            color: var(--turq);
+        }
+
+        /* detected */
+        .detected {
+            margin-top: 20px;
+            font-size: 13px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg"></div>
+
+    <div class="wrapper">
+        <div>
+
+            <div class="title">Travel Radar LK</div>
+            <div class="subtitle">Practical travel decisions. No noise.</div>
+
+            <div class="lang-list">
+                <div class="lang" data-lang="en">ENGLISH →</div>
+                <div class="lang" data-lang="ru">РУССКИЙ →</div>
+                <div class="lang" data-lang="ua">УКРАЇНСЬКА →</div>
+            </div>
+
+            <div class="detected" id="detected"></div>
+
+        </div>
+    </div>
+
+    <script>
+        const lang = (navigator.language || '').toLowerCase();
+
+        let detected = 'en';
+        if (lang.startsWith('ru')) detected = 'ru';
+        if (lang.startsWith('uk')) detected = 'ua';
+
+        const names = {
+            en: "English",
+            ru: "Russian",
+            ua: "Ukrainian"
+        };
+
+        setTimeout(() => {
+            const el = document.querySelector(`[data-lang="${detected}"]`);
+            if (el) el.classList.add('active');
+
+            document.getElementById('detected').innerText =
+                "Detected: " + names[detected];
+        }, 800);
+
+        /* click */
+        document.querySelectorAll('.lang').forEach(el => {
+            el.onclick = () => {
+                const l = el.getAttribute('data-lang');
+                window.location.href = '/' + l + '/';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

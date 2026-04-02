@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Radar LK</title>
+    <script>
+        (function () {
+            var lang = navigator.language || navigator.userLanguage;
+
+            if (lang.startsWith('ru')) {
+                window.location.replace('/ru/');
+            } else if (lang.startsWith('uk')) {
+                window.location.replace('/ua/');
+            } else if (lang.startsWith('en')) {
+                window.location.replace('/en/');
+            } else {
+                window.location.replace('/en/');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <noscript>
+        <p>Please choose your language:</p>
+        <a href="/ru/">Русский</a> |
+        <a href="/ua/">Українська</a> |
+        <a href="/en/">English</a>
+    </noscript>
+</body>
+
+</html>

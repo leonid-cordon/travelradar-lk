@@ -1,33 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
-    <title>Travel Radar LK</title>
-    <script>
-        (function () {
-            var lang = navigator.language || navigator.userLanguage;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            if (lang.startsWith('ru')) {
-                window.location.replace('/ru/');
-            } else if (lang.startsWith('uk')) {
-                window.location.replace('/ua/');
-            } else if (lang.startsWith('en')) {
-                window.location.replace('/en/');
-            } else {
-                window.location.replace('/en/');
-            }
-        })();
+    <!-- SEO BASE -->
+    <title>Travel Radar LK — Где остановиться, сколько это стоит и что важно</title>
+
+    <meta name="description"
+        content="Практичные рекомендации по выбору жилья и планированию путешествий. Где остановиться, сколько это стоит и что важно при выборе отеля и поездки.">
+
+    <link rel="canonical" href="https://travelradarlk.com/">
+
+    <!-- HREFLANG -->
+    <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/">
+    <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/">
+    <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Travel Radar LK — Travel Guide">
+    <meta property="og:description"
+        content="Где остановиться, сколько это стоит и что важно. Практичные советы по выбору жилья и планированию поездок.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://travelradarlk.com/">
+    <meta property="og:image" content="https://travelradarlk.com/assets/images/og/cover.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Travel Radar LK">
+    <meta name="twitter:description" content="Практичные рекомендации по путешествиям и выбору отелей.">
+    <meta name="twitter:image" content="https://travelradarlk.com/assets/images/og/cover.jpg">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Travel Radar LK",
+      "url": "https://travelradarlk.com/",
+      "description": "Практичные рекомендации по выбору жилья и планированию путешествий.",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Travel Radar LK"
+      }
+    }
     </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --deep: #07121b;
+            --gold: #c9a84c;
+            --gold2: #ddb96a;
+            --gold3: #a8853a;
+            --accent: #c8a96e;
+            --white: #ffffff;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            background: var(--deep);
+            font-family: 'Inter', sans-serif;
+            color: var(--white);
+        }
+
+        /* ── BACKGROUND ── */
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .layer {
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            will-change: transform;
+            transition: transform 0.3s cubic-bezier(.22, .68, 0, 1);
+        }
+
+        .layer-base {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 90% 80% at 50% 55%,
+                    #0f2030 0%, #09161f 45%, #07121b 100%);
+        }
+
+        .layer-spot {
+            display: none;
+        }
+
+        .layer-warm {
+            background: radial-gradient(ellipse 70% 60% at 68% 25%,
+                    rgba(201, 168, 76, .07), transparent 65%);
+        }
+
+        .layer-cool {
+            background: radial-gradient(ellipse 60% 55% at 18% 80%,
+                    rgba(140, 160, 180, .04), transparent 65%);
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            opacity: .032;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+        }
+
+        #l1 {
+            background: radial-gradient(ellipse 50% 45% at 72% 28%, rgba(201, 168, 76, .06), transparent 70%);
+        }
+
+        #l2 {
+            background: radial-gradient(ellipse 50% 50% at 22% 76%, rgba(201, 168, 76, .05), transparent 70%);
+        }
+
+        /* ── WRAPPER ── */
+        .wrapper {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            text-align: center;
+            animation: fadeUp 1.6s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+                filter: blur(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        /* ── EYEBROW ── */
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 22px;
+            opacity: 0;
+            animation: fadeUp 1.6s .12s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .ey-line {
+            width: 38px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 178, 98, .55));
+        }
+
+        .ey-line.r {
+            background: linear-gradient(90deg, rgba(212, 178, 98, .55), transparent);
+        }
+
+        .ey-text {
+            font-size: 9px;
+            font-weight: 400;
+            letter-spacing: 4.5px;
+            color: rgba(212, 178, 98, .72);
+            text-transform: uppercase;
+        }
+
+        /* ── TITLE ── */
+        .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(54px, 6.5vw, 80px);
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: .5px;
+            margin-bottom: 14px;
+            background: linear-gradient(168deg,
+                    #e2c878 0%,
+                    #c9a84c 38%,
+                    #dbb85e 62%,
+                    #a8853a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 22px rgba(201, 168, 76, .18));
+            opacity: 0;
+            animation: fadeUp 1.6s .22s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        /* ── ORNAMENT ── */
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeUp 1.6s .32s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .orn-line {
+            width: 48px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 168, 76, .25));
+        }
+
+        .orn-line.r {
+            background: linear-gradient(90deg, rgba(201, 168, 76, .25), transparent);
+        }
+
+        .orn-dia {
+            width: 3px;
+            height: 3px;
+            background: rgba(201, 168, 76, .5);
+            transform: rotate(45deg);
+        }
+
+        /* ── SUBTITLE ── */
+        .subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0 8px;
+            margin-bottom: 68px;
+            opacity: 0;
+            animation: fadeUp 1.6s .42s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .sub-chunk {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .sub-accent {
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            color: rgba(210, 185, 130, .82);
+        }
+
+        .sub-plain {
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, .38);
+        }
+
+        .sub-sep {
+            display: inline-block;
+            width: 16px;
+            height: 1px;
+            background: rgba(255, 255, 255, .13);
+            flex-shrink: 0;
+            margin: 0 2px;
+        }
+
+        /* ── FLAGS ROW ── */
+        .flags-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 42px;
+            opacity: 0;
+            animation: fadeUp 1.6s .55s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        /* ── LANG BUTTON ── */
+        .lang-btn {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13px;
+            padding: 26px 38px 22px;
+            cursor: pointer;
+            transition: transform .35s cubic-bezier(.22, .68, 0, 1.3);
+            -webkit-tap-highlight-color: transparent;
+            overflow: hidden;
+        }
+
+        .lang-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 75% 55% at 50% 60%,
+                    rgba(255, 255, 255, .15) 0%,
+                    rgba(255, 255, 255, .06) 45%,
+                    transparent 72%);
+            opacity: 0;
+            transition: opacity .4s ease;
+            pointer-events: none;
+            border-radius: 0;
+        }
+
+        .lang-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .45), transparent);
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            transition: transform .4s cubic-bezier(.22, .68, 0, 1);
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .lang-btn:hover::before,
+        .lang-btn.active::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .lang-btn:hover::after {
+            opacity: 1;
+        }
+
+        .lang-btn.active::after {
+            opacity: .55;
+        }
+
+        .v-div {
+            width: 1px;
+            height: 28px;
+            background: rgba(255, 255, 255, .07);
+            flex-shrink: 0;
+        }
+
+        /* ── FLAG ── */
+        .flag {
+            width: 30px;
+            height: 22px;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, .5), 0 0 0 .5px rgba(255, 255, 255, .07);
+            flex-shrink: 0;
+            transition: box-shadow .35s, opacity .35s;
+            opacity: .82;
+        }
+
+        .lang-btn:hover .flag,
+        .lang-btn.active .flag {
+            opacity: 1;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 0 0 .5px rgba(255, 255, 255, .14);
+        }
+
+        .flag svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* ── LABEL ── */
+        .lang-label {
+            font-size: 9.5px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .38);
+            transition: color .35s;
+        }
+
+        .lang-btn:hover .lang-label {
+            color: rgba(255, 255, 255, .72);
+        }
+
+        .lang-btn.active .lang-label {
+            color: rgba(255, 255, 255, .92);
+        }
+
+        /* ── DETECTED ── */
+        .detected-wrap {
+            opacity: 0;
+            animation: fadeUp 1.6s .95s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .detected {
+            font-size: 10px;
+            font-weight: 300;
+            letter-spacing: 2.5px;
+            color: rgba(255, 255, 255, .42);
+            text-transform: uppercase;
+        }
+
+        /* ── BOTTOM ORNAMENT ── */
+        .bottom-mark {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+            opacity: 0;
+            animation: fadeUp 1.6s 1.15s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .bm-line {
+            width: 36px;
+            height: 1px;
+            background: rgba(255, 255, 255, .07);
+        }
+
+        .bm-dot {
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .13);
+        }
+    </style>
 </head>
 
 <body>
-    <noscript>
-        <p>Please choose your language:</p>
-        <a href="/ru/">Русский</a> |
-        <a href="/ua/">Українська</a> |
-        <a href="/en/">English</a>
-    </noscript>
+
+    <div class="bg">
+        <div class="layer-base"></div>
+        <div class="layer-spot"></div>
+        <div class="layer layer-warm" id="l2"></div>
+        <div class="layer layer-cool" id="l1"></div>
+    </div>
+    <div class="grain"></div>
+
+    <div class="wrapper">
+        <div class="content">
+
+            <div class="eyebrow">
+                <div class="ey-line"></div>
+                <span class="ey-text">Travel Guide</span>
+                <div class="ey-line r"></div>
+            </div>
+
+            <div class="title">Travel Radar LK</div>
+
+            <div class="ornament">
+                <div class="orn-line"></div>
+                <div class="orn-dia"></div>
+                <div class="orn-line r"></div>
+            </div>
+
+            <div class="subtitle" id="subtitle-line"></div>
+
+            <div class="flags-row">
+
+                <div class="lang-btn" data-lang="en">
+                    <div class="flag">
+                        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="60" height="40" fill="#012169" />
+                            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8" />
+                            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5" />
+                            <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12" />
+                            <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7" />
+                        </svg>
+                    </div>
+                    <div class="lang-label">English</div>
+                </div>
+
+                <div class="v-div"></div>
+
+                <div class="lang-btn" data-lang="ru">
+                    <div class="flag">
+                        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="60" height="13.4" fill="#fff" />
+                            <rect y="13.4" width="60" height="13.3" fill="#0039A6" />
+                            <rect y="26.7" width="60" height="13.3" fill="#D52B1E" />
+                        </svg>
+                    </div>
+                    <div class="lang-label">Русский</div>
+                </div>
+
+                <div class="v-div"></div>
+
+                <div class="lang-btn" data-lang="ua">
+                    <div class="flag">
+                        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="60" height="20" fill="#005BBB" />
+                            <rect y="20" width="60" height="20" fill="#FFD500" />
+                        </svg>
+                    </div>
+                    <div class="lang-label">Українська</div>
+                </div>
+
+            </div>
+
+            <div class="detected-wrap">
+                <div class="detected" id="detected-text"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bottom-mark">
+        <div class="bm-line"></div>
+        <div class="bm-dot"></div>
+        <div class="bm-dot"></div>
+        <div class="bm-dot"></div>
+        <div class="bm-line"></div>
+    </div>
+
+    <script>
+        const locales = {
+            en: {
+                s: ['Where', 'to stay', 'How much', 'it costs', 'What', 'matters'],
+                detected: 'Language detected · English'
+            },
+            ru: {
+                s: ['Где', 'остановиться', 'Сколько', 'это стоит', 'Что', 'важно'],
+                detected: 'Определён язык · Русский'
+            },
+            ua: {
+                s: ['Де', 'зупинитися', 'Скільки', 'це коштує', 'Що', 'важливо'],
+                detected: 'Визначено мову · Українська'
+            }
+        };
+
+        const nav = (navigator.language || '').toLowerCase();
+        let det = 'en';
+        if (nav.startsWith('ru')) det = 'ru';
+        if (nav.startsWith('uk')) det = 'ua';
+
+        function buildSubtitle(code) {
+            const w = locales[code].s;
+            return `
+                <span class="sub-chunk">
+                    <span class="sub-accent">${w[0]}</span>
+                    <span class="sub-plain">${w[1]}</span>
+                </span>
+                <span class="sub-sep"></span>
+                <span class="sub-chunk">
+                    <span class="sub-accent">${w[2]}</span>
+                    <span class="sub-plain">${w[3]}</span>
+                </span>
+                <span class="sub-sep"></span>
+                <span class="sub-chunk">
+                    <span class="sub-accent">${w[4]}</span>
+                    <span class="sub-plain">${w[5]}</span>
+                </span>`;
+        }
+
+        document.getElementById('subtitle-line').innerHTML = buildSubtitle(det);
+
+        setTimeout(() => {
+            document.querySelector(`[data-lang="${det}"]`)?.classList.add('active');
+            document.getElementById('detected-text').innerText = locales[det].detected;
+        }, 950);
+
+        document.querySelectorAll('.lang-btn').forEach(el => {
+            el.addEventListener('click', () => {
+                window.location.href = '/' + el.dataset.lang + '/';
+            });
+        });
+
+        document.addEventListener('mousemove', e => {
+            const x = e.clientX / window.innerWidth - .5;
+            const y = e.clientY / window.innerHeight - .5;
+            document.getElementById('l1').style.transform = `translate(${x * 24}px,${y * 24}px)`;
+            document.getElementById('l2').style.transform = `translate(${x * 46}px,${y * 46}px)`;
+        });
+    </script>
+
 </body>
 
 </html>

@@ -240,3 +240,21 @@ RU-аналог EN destination page — это `ru/egypt/index.html` (248 стр
 
 ### Нужно ли исправлять
 - **Нет** — всё правильно
+## 2026-03-31 — Google Search Console — Подключение
+
+### Сделано
+- Сайт добавлен в Google Search Console
+- Подтверждение через HTML-файл
+- Sitemap отправлен (sitemap.xml)
+- Отправлены на индексацию:
+  - /ru/index.html
+  - /en/index.html
+  - /ru/content/index.html
+  - /en/content/index.html
+
+### Статус
+- Sitemap: ожидает обработки
+- Индексация: в процессе
+
+### Следующий шаг
+- Проверить статус индексации через 2–3 дня

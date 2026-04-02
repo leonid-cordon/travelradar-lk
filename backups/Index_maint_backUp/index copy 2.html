@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Radar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* ЕСЛИ ЗАХОЧЕШЬ ФОН — ВСТАВИ URL */
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        /* Центральная карточка */
+        .card {
+            width: 90%;
+            max-width: 420px;
+            padding: 40px;
+
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+            text-align: center;
+            color: white;
+        }
+
+        /* Заголовок */
+        .title {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 30px;
+        }
+
+        /* Кнопки языков */
+        .lang-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .lang {
+            padding: 14px;
+            border-radius: 12px;
+
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Подсветка авто-языка */
+        .lang.highlight {
+            border: 1px solid #38bdf8;
+            background: rgba(56, 189, 248, 0.15);
+        }
+
+        /* Continue кнопка */
+        .continue {
+            margin-top: 25px;
+            padding: 14px;
+            border-radius: 12px;
+
+            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+            color: white;
+            font-weight: 600;
+
+            text-decoration: none;
+            display: block;
+
+            transition: 0.25s;
+        }
+
+        .continue:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
+        }
+
+        /* маленький текст */
+        .detected {
+            margin-top: 15px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="title">Travel Radar</div>
+        <div class="subtitle">Find best hotels worldwide</div>
+
+        <div class="lang-list">
+            <div class="lang" data-lang="en">🇬🇧 English</div>
+            <div class="lang" data-lang="ru">🇷🇺 Русский</div>
+            <div class="lang" data-lang="ua">🇺🇦 Українська</div>
+        </div>
+
+        <a id="continueBtn" class="continue" href="/en/">
+            Continue
+        </a>
+
+        <div id="detectedText" class="detected"></div>
+    </div>
+
+    <script>
+        const lang = (navigator.language || '').toLowerCase();
+
+        let detected = 'en';
+
+        if (lang.startsWith('ru')) detected = 'ru';
+        else if (lang.startsWith('uk')) detected = 'ua';
+
+        const labels = {
+            en: "Continue in English",
+            ru: "Продолжить на русском",
+            ua: "Продовжити українською"
+        };
+
+        const names = {
+            en: "English",
+            ru: "Русский",
+            ua: "Українська"
+        };
+
+        /* подсветка через небольшую задержку */
+        setTimeout(() => {
+            const el = document.querySelector(`[data-lang="${detected}"]`);
+            if (el) el.classList.add('highlight');
+
+            document.getElementById('continueBtn').innerText = labels[detected];
+            document.getElementById('continueBtn').href = '/' + detected + '/';
+
+            document.getElementById('detectedText').innerText =
+                "Detected language: " + names[detected];
+
+        }, 800);
+
+        /* клик по языку */
+        document.querySelectorAll('.lang').forEach(el => {
+            el.addEventListener('click', () => {
+                const l = el.getAttribute('data-lang');
+                window.location.href = '/' + l + '/';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
