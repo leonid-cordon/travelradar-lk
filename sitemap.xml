@@ -21,11 +21,16 @@
   <!-- Categories -->
   <url><loc>https://travelradarlk.com/ru/content/lifehacks/</loc></url>
   <url><loc>https://travelradarlk.com/ru/content/countries/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/countries/egypt/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/countries/turkey/</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/countries/mexico/</loc></url>
   <url><loc>https://travelradarlk.com/ru/content/flights/</loc></url>
   <url><loc>https://travelradarlk.com/ru/content/collections/</loc></url>
   <url><loc>https://travelradarlk.com/ru/content/news/</loc></url>
 
   <!-- Articles -->
+  <url><loc>https://travelradarlk.com/ru/content/best-hotels-cancun-2026.html</loc></url>
+  <url><loc>https://travelradarlk.com/ru/content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay.html</loc></url>
   <url><loc>https://travelradarlk.com/ru/content/egypt-bez-obmana.html</loc></url>
   <url><loc>https://travelradarlk.com/ru/content/entry-egypt-2026.html</loc></url>
   <url><loc>https://travelradarlk.com/ru/content/flights-egypt.html</loc></url>
@@ -44,22 +49,31 @@
 
   <!-- ===================== EN ===================== -->
 
+  <!-- Main -->
   <url><loc>https://travelradarlk.com/en/</loc></url>
   <url><loc>https://travelradarlk.com/en/about.html</loc></url>
 
+  <!-- Countries -->
   <url><loc>https://travelradarlk.com/en/egypt/</loc></url>
   <url><loc>https://travelradarlk.com/en/turkey/</loc></url>
   <url><loc>https://travelradarlk.com/en/mexico/</loc></url>
 
+  <!-- Content index -->
   <url><loc>https://travelradarlk.com/en/content/</loc></url>
 
+  <!-- Categories -->
   <url><loc>https://travelradarlk.com/en/content/lifehacks/</loc></url>
   <url><loc>https://travelradarlk.com/en/content/countries/</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/countries/egypt/</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/countries/turkey/</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/countries/mexico/</loc></url>
   <url><loc>https://travelradarlk.com/en/content/flights/</loc></url>
   <url><loc>https://travelradarlk.com/en/content/collections/</loc></url>
   <url><loc>https://travelradarlk.com/en/content/news/</loc></url>
 
   <!-- Articles -->
+  <url><loc>https://travelradarlk.com/en/content/best-hotels-cancun-2026.html</loc></url>
+  <url><loc>https://travelradarlk.com/en/content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay.html</loc></url>
   <url><loc>https://travelradarlk.com/en/content/egypt-bez-obmana.html</loc></url>
   <url><loc>https://travelradarlk.com/en/content/entry-egypt-2026.html</loc></url>
   <url><loc>https://travelradarlk.com/en/content/flights-egypt.html</loc></url>
@@ -70,6 +84,7 @@
   <url><loc>https://travelradarlk.com/en/content/where-to-stay-istanbul.html</loc></url>
   <url><loc>https://travelradarlk.com/en/content/where-to-stay-istanbul-best-areas.html</loc></url>
 
+  <!-- Legal -->
   <url><loc>https://travelradarlk.com/en/privacy.html</loc></url>
   <url><loc>https://travelradarlk.com/en/terms.html</loc></url>
   <url><loc>https://travelradarlk.com/en/disclaimer.html</loc></url>
@@ -77,22 +92,31 @@
 
   <!-- ===================== UA ===================== -->
 
+  <!-- Main -->
   <url><loc>https://travelradarlk.com/ua/</loc></url>
   <url><loc>https://travelradarlk.com/ua/about.html</loc></url>
 
+  <!-- Countries -->
   <url><loc>https://travelradarlk.com/ua/egypt/</loc></url>
   <url><loc>https://travelradarlk.com/ua/turkey/</loc></url>
   <url><loc>https://travelradarlk.com/ua/mexico/</loc></url>
 
+  <!-- Content index -->
   <url><loc>https://travelradarlk.com/ua/content/</loc></url>
 
+  <!-- Categories -->
   <url><loc>https://travelradarlk.com/ua/content/lifehacks/</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/countries/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/countries/egypt/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/countries/turkey/</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/countries/mexico/</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/flights/</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/collections/</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/news/</loc></url>
 
   <!-- Articles -->
+  <url><loc>https://travelradarlk.com/ua/content/best-hotels-cancun-2026.html</loc></url>
+  <url><loc>https://travelradarlk.com/ua/content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/egypt-bez-obmana.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/entry-egypt-2026.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/flights-egypt.html</loc></url>
@@ -103,6 +127,7 @@
   <url><loc>https://travelradarlk.com/ua/content/where-to-stay-istanbul.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/content/where-to-stay-istanbul-best-areas.html</loc></url>
 
+  <!-- Legal -->
   <url><loc>https://travelradarlk.com/ua/privacy.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/terms.html</loc></url>
   <url><loc>https://travelradarlk.com/ua/disclaimer.html</loc></url>
