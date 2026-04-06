@@ -1,0 +1,594 @@
+<!--
+=================================================================
+  ФАЙЛ С ТРЕМЯ БЛОКАМИ ДЛЯ ВСТАВКИ В cancun-budget-2026.html
+=================================================================
+
+  БЛОК 1 → заменяет весь <div class="article-point reveal"> с h2 ✈️ Перелёт
+  БЛОК 2 → заменяет весь <div class="article-point reveal"> с h2 🧮 Калькулятор
+  БЛОК 3 → CSS вставить в <style> в <head>
+
+  ПОРЯДОК ВСТАВКИ:
+  1. Скопируй CSS из БЛОКА 3 и вставь в конец <style> в <head>
+  2. Найди блок перелётов (✈️ Перелёт — база) → замени целиком на БЛОК 1
+  3. Найди блок калькулятора (🧮 Калькулятор бюджета) → замени целиком на БЛОК 2
+  4. Старый <script> калькулятора (id="calc-format" и т.д.) — удали
+  5. БЛОК 2 содержит свой <script> внутри — он самодостаточен
+=================================================================
+-->
+
+
+<!-- ============================================================
+     БЛОК 3 — CSS (вставить в <style> в <head>)
+     ============================================================ -->
+<style id="BLOCK_3_CSS_COPY_INTO_HEAD_STYLE">
+
+/* ── Таблица перелётов ── */
+.flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.92rem;
+}
+.flight-table thead tr {
+    border-bottom: 2px solid var(--border-color, rgba(255,255,255,.15));
+}
+.flight-table th {
+    text-align: left;
+    padding: 9px 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-weight: 500;
+}
+.flight-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color, rgba(255,255,255,.07));
+    vertical-align: middle;
+}
+.flight-table tr:last-child td { border-bottom: none; }
+.flight-table .ft-region {
+    font-size: 0.7rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    opacity: 0.4;
+    padding-top: 14px;
+    padding-bottom: 4px;
+    border-bottom: none;
+}
+.flight-table .ft-route { font-weight: 500; }
+.flight-table .ft-tip {
+    font-size: 0.78rem;
+    opacity: 0.5;
+    font-style: italic;
+}
+.flight-micro {
+    display: flex;
+    gap: 10px;
+    margin: 1.25rem 0 0;
+    flex-wrap: wrap;
+}
+.flight-micro-item {
+    flex: 1;
+    min-width: 160px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color, rgba(255,255,255,.1));
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+.flight-micro-item strong {
+    display: block;
+    color: var(--color-accent, #3ab8c8);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+/* ── Калькулятор v2 ── */
+.calc2-widget {
+    background: rgba(58, 184, 200, 0.05);
+    border: 1px solid var(--border-color, rgba(255,255,255,.1));
+    border-radius: 12px;
+    padding: 24px;
+    margin: 1.5rem 0;
+}
+.calc2-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+@media(max-width:580px) {
+    .calc2-fields { grid-template-columns: 1fr; }
+}
+.calc2-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.calc2-field label {
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-weight: 500;
+}
+.calc2-field select,
+.calc2-field input {
+    background: var(--bg-secondary, rgba(255,255,255,0.05));
+    border: 1px solid var(--border-color, rgba(255,255,255,.15));
+    border-radius: 6px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.92rem;
+    padding: 9px 12px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color .2s;
+}
+.calc2-field select:focus,
+.calc2-field input:focus {
+    outline: none;
+    border-color: var(--color-accent, #3ab8c8);
+}
+.calc2-result {
+    padding: 18px 20px;
+    border-radius: 8px;
+    background: rgba(58, 184, 200, 0.08);
+    border: 1px solid var(--color-accent, #3ab8c8);
+    margin-bottom: 0;
+}
+.calc2-result-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.45;
+    margin-bottom: 4px;
+}
+.calc2-result-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-accent, #3ab8c8);
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+.calc2-result-breakdown {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+/* ── Конверсионный блок после калькулятора ── */
+.calc2-cta {
+    border-top: 1px solid var(--border-color, rgba(255,255,255,.1));
+    padding-top: 16px;
+    margin-top: 4px;
+}
+.calc2-cta-text {
+    font-size: 0.88rem;
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+.calc2-cta-text strong {
+    color: var(--color-accent, #3ab8c8);
+    opacity: 1;
+}
+.calc2-hotel-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+@media(max-width:620px) {
+    .calc2-hotel-cards { grid-template-columns: 1fr; }
+}
+.calc2-hotel-card {
+    padding: 11px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color, rgba(255,255,255,.1));
+    font-size: 0.82rem;
+    line-height: 1.55;
+    transition: border-color .2s;
+}
+.calc2-hotel-card:hover {
+    border-color: var(--color-accent, #3ab8c8);
+}
+.calc2-hotel-card .chc-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-bottom: 2px;
+}
+.calc2-hotel-card .chc-price {
+    color: var(--color-accent, #3ab8c8);
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.calc2-hotel-card .chc-tag {
+    opacity: 0.45;
+    font-size: 0.75rem;
+}
+.calc2-cta-btn {
+    display: block;
+    width: 100%;
+    padding: 13px 20px;
+    background: var(--color-accent, #3ab8c8);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: opacity .2s;
+    box-sizing: border-box;
+}
+.calc2-cta-btn:hover { opacity: 0.88; }
+
+</style>
+<!-- /БЛОК 3 -->
+
+
+
+
+<!-- ============================================================
+     БЛОК 1 — ПЕРЕЛЁТЫ
+     Заменяет: <div class="article-point reveal"> с h2 ✈️ Перелёт — база...
+     ============================================================ -->
+<div class="article-point reveal">
+    <h2>✈️ Перелёт в Канкун — сколько закладывать</h2>
+    <p>Цена билета — первое, что ломает бюджет, если не знать ориентиры. Ниже — реальные диапазоны 2026 года для основных рынков.</p>
+
+    <div class="article-subpoint">
+        <table class="flight-table">
+            <thead>
+                <tr>
+                    <th>Маршрут</th>
+                    <th>Эконом (мин.)</th>
+                    <th>Оптимально</th>
+                    <th>Прямой / бизнес</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="ft-region" colspan="4">🌍 Европа</td>
+                </tr>
+                <tr>
+                    <td class="ft-route">Европа (в среднем)</td>
+                    <td><span class="cmp-good">600–800€</span></td>
+                    <td><span class="cmp-good">900–1100€</span></td>
+                    <td><span class="cmp-warn">1200–1500€</span></td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="ft-tip">↳ Мин. вариант = 20+ часов в пути, неудобные стыковки, без багажа</td>
+                </tr>
+
+                <tr>
+                    <td class="ft-region" colspan="4">🇺🇸 США</td>
+                </tr>
+                <tr>
+                    <td class="ft-route">Нью-Йорк → Канкун</td>
+                    <td><span class="cmp-good">$220–350</span></td>
+                    <td><span class="cmp-good">$350–500</span></td>
+                    <td><span class="cmp-warn">$600–900</span></td>
+                </tr>
+                <tr>
+                    <td class="ft-route">Майами → Канкун</td>
+                    <td><span class="cmp-good">$150–280</span></td>
+                    <td><span class="cmp-good">$280–420</span></td>
+                    <td><span class="cmp-warn">$500–800</span></td>
+                </tr>
+                <tr>
+                    <td class="ft-route">Лос-Анджелес → Канкун</td>
+                    <td><span class="cmp-good">$300–420</span></td>
+                    <td><span class="cmp-good">$420–600</span></td>
+                    <td><span class="cmp-warn">$700–1100</span></td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="ft-tip">↳ Из Майами — самый короткий перелёт (~1.5 ч), много прямых рейсов</td>
+                </tr>
+
+                <tr>
+                    <td class="ft-region" colspan="4">🇨🇦 Канада</td>
+                </tr>
+                <tr>
+                    <td class="ft-route">Торонто / Монреаль → Канкун</td>
+                    <td><span class="cmp-good">C$400–600</span></td>
+                    <td><span class="cmp-good">C$600–900</span></td>
+                    <td><span class="cmp-warn">C$1000–1400</span></td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="ft-tip">↳ Зимой из Канады — высокий сезон, цены растут в ноябре–феврале</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="flight-micro">
+        <div class="flight-micro-item">
+            <strong>~1000€</strong>
+            Из Европы — оптимальный ориентир на билет туда-обратно с багажом
+        </div>
+        <div class="flight-micro-item">
+            <strong>~$400–500</strong>
+            Из США — средний комфортный билет. Из Майами дешевле, из LA дороже
+        </div>
+        <div class="flight-micro-item">
+            <strong>Бронируй за 2–4 мес.</strong>
+            Хорошие цены разбирают быстро. Праздники и март — пик цен
+        </div>
+    </div>
+
+    <!-- Галерея перелёт -->
+    <div class="photo-row" data-gallery="gallery-flight" style="margin-top:1.5rem;">
+        <div class="photo-row-item" data-lb-group="gallery-flight" data-lb-src="/assets/images/content/cancun-budget-2026/gallery-flight-01_800.jpg" data-lb-caption="Аэропорт Канкуна — один из самых удобных в Латинской Америке">
+            <img src="/assets/images/content/cancun-budget-2026/gallery-flight-01_800.jpg" alt="Аэропорт Канкуна терминал 3" loading="lazy">
+            <div class="pr-overlay"><span class="pr-zoom">⊕</span></div>
+        </div>
+        <div class="photo-row-item" data-lb-group="gallery-flight" data-lb-src="/assets/images/content/cancun-budget-2026/gallery-flight-02_800.jpg" data-lb-caption="Трансфер из аэропорта занимает 20–30 минут до Hotel Zone">
+            <img src="/assets/images/content/cancun-budget-2026/gallery-flight-02_800.jpg" alt="Трансфер аэропорт Канкун Hotel Zone" loading="lazy">
+            <div class="pr-overlay"><span class="pr-zoom">⊕</span></div>
+        </div>
+        <div class="photo-row-item" data-lb-group="gallery-flight" data-lb-src="/assets/images/content/cancun-budget-2026/gallery-flight-03_800.jpg" data-lb-caption="Автобус ADO — бюджетный способ добраться до Hotel Zone за $9">
+            <img src="/assets/images/content/cancun-budget-2026/gallery-flight-03_800.jpg" alt="Автобус ADO из аэропорта Канкуна" loading="lazy">
+            <div class="pr-overlay"><span class="pr-zoom">⊕</span></div>
+        </div>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.5; margin-top:-0.5rem; margin-bottom:0;">↑ Нажми на фото, чтобы открыть галерею</p>
+</div>
+<!-- /БЛОК 1 -->
+
+
+
+
+<!-- ============================================================
+     БЛОК 2 — КАЛЬКУЛЯТОР v2 + КОНВЕРСИЯ
+     Заменяет: <div class="article-point reveal"> с h2 🧮 Калькулятор бюджета
+     Включает собственный <script> — старый скрипт калькулятора удалить
+     ============================================================ -->
+<div class="article-point reveal">
+    <h2>🧮 Калькулятор бюджета</h2>
+    <p>Укажи параметры — посчитаем реальную сумму и подберём варианты отелей под твой бюджет.</p>
+
+    <div class="calc2-widget">
+
+        <!-- Поля ввода -->
+        <div class="calc2-fields">
+
+            <div class="calc2-field">
+                <label>Откуда летите</label>
+                <select id="c2-origin">
+                    <option value="europe">Европа</option>
+                    <option value="usa-ny">США — Нью-Йорк</option>
+                    <option value="usa-miami">США — Майами</option>
+                    <option value="usa-la">США — Лос-Анджелес</option>
+                    <option value="canada">Канада</option>
+                    <option value="other">Другое (~$600)</option>
+                </select>
+            </div>
+
+            <div class="calc2-field">
+                <label>Формат отдыха</label>
+                <select id="c2-format">
+                    <option value="budget">Бюджетный</option>
+                    <option value="comfort" selected>Комфортный</option>
+                    <option value="ai">All Inclusive</option>
+                </select>
+            </div>
+
+            <div class="calc2-field">
+                <label>Район проживания</label>
+                <select id="c2-zone">
+                    <option value="north">Hotel Zone — север</option>
+                    <option value="center" selected>Hotel Zone — центр</option>
+                    <option value="downtown">Downtown</option>
+                </select>
+            </div>
+
+            <div class="calc2-field">
+                <label>Количество ночей</label>
+                <input type="number" id="c2-nights" value="7" min="3" max="30">
+            </div>
+
+            <div class="calc2-field">
+                <label>Количество человек</label>
+                <input type="number" id="c2-people" value="2" min="1" max="8">
+            </div>
+
+        </div>
+
+        <!-- Результат -->
+        <div class="calc2-result">
+            <div class="calc2-result-label">Ориентировочный бюджет на всех</div>
+            <div class="calc2-result-price" id="c2-price">≈ 5 000€</div>
+            <div class="calc2-result-breakdown" id="c2-breakdown">
+                Перелёт: ~1 000€ · Отель: ~1 400€ · Остальное: ~600€
+            </div>
+
+            <!-- Конверсионный блок -->
+            <div class="calc2-cta">
+                <div class="calc2-cta-text">
+                    👉 Под ваш бюджет подходят следующие варианты:
+                    <strong id="c2-cta-label">Комфортные отели Hotel Zone</strong>
+                </div>
+                <div class="calc2-hotel-cards" id="c2-hotel-cards">
+                    <!-- JS рендерит карточки -->
+                </div>
+                <a href="/ru/hotels/cancun/?budget=comfort&zone=center&nights=7"
+                   id="c2-cta-link"
+                   class="calc2-cta-btn">
+                    Смотреть все отели →
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Скрипт калькулятора v2 — заменяет старый -->
+<script>
+(function () {
+
+    /* ── Стоимость перелёта туда-обратно на человека (в €/$ приведены к €, ~1:1.07) ── */
+    var flights = {
+        'europe':    { cost: 1000, currency: '€', label: 'Европа' },
+        'usa-ny':    { cost: 480,  currency: '$', label: 'Нью-Йорк' },
+        'usa-miami': { cost: 360,  currency: '$', label: 'Майами' },
+        'usa-la':    { cost: 560,  currency: '$', label: 'Лос-Анджелес' },
+        'canada':    { cost: 680,  currency: 'C$', label: 'Канада' },
+        'other':     { cost: 600,  currency: '$', label: 'Другой город' }
+    };
+
+    /* ── Базовая суточная стоимость отеля ($/ночь на номер) по формату ── */
+    var hotelBase = {
+        budget:  70,
+        comfort: 150,
+        ai:      300
+    };
+
+    /* ── Корректировка по району (множитель) ── */
+    var zoneMultiplier = {
+        north:    1.20,
+        center:   1.00,
+        downtown: 0.55
+    };
+
+    var zoneLabel = {
+        north:    'Hotel Zone (север)',
+        center:   'Hotel Zone (центр)',
+        downtown: 'Downtown'
+    };
+
+    var formatLabel = {
+        budget:  'Бюджетный',
+        comfort: 'Комфортный',
+        ai:      'All Inclusive'
+    };
+
+    /* ── Суточные прочие расходы на человека ($) ── */
+    var daily = {
+        budget:  { food: 30, transport: 9,  activities: 20, hidden: 14 },
+        comfort: { food: 50, transport: 14, activities: 35, hidden: 20 },
+        ai:      { food: 12, transport: 14, activities: 28, hidden: 28 }
+    };
+
+    /* ── Карточки отелей по формату + зоне ── */
+    var hotelSuggestions = {
+        budget: {
+            north:    [{ name: 'Antillano Hotel',    price: '$55/ночь',  tag: 'Рядом с транспортом' },
+                       { name: 'Hostal Natura',      price: '$65/ночь',  tag: 'Чисто, хороший Wi-Fi' },
+                       { name: 'Casa Tukan',         price: '$70/ночь',  tag: 'До пляжа 15 мин' }],
+            center:   [{ name: 'Antillano Hotel',    price: '$55/ночь',  tag: 'Рядом с транспортом' },
+                       { name: 'Hostal Natura',      price: '$65/ночь',  tag: 'Чисто, хороший Wi-Fi' },
+                       { name: 'Casa Tukan',         price: '$70/ночь',  tag: 'До пляжа 15 мин' }],
+            downtown: [{ name: 'Antillano Hotel',    price: '$45/ночь',  tag: 'Центр города' },
+                       { name: 'Hostal Natura',      price: '$50/ночь',  tag: 'Бюджет без потерь' },
+                       { name: 'Hotel Plaza Kokai',  price: '$55/ночь',  tag: 'Рядом Mercado 28' }]
+        },
+        comfort: {
+            north:    [{ name: 'Grand Fiesta Americana', price: '$160/ночь', tag: 'Лучший пляж на севере' },
+                       { name: 'Krystal Grand Cancun',   price: '$145/ночь', tag: 'Спокойное море, семьи' },
+                       { name: 'Live Aqua Beach Resort', price: '$190/ночь', tag: 'Adults Only, уровень' }],
+            center:   [{ name: 'Riu Caribe',             price: '$140/ночь', tag: 'Близко к торговым центрам' },
+                       { name: 'Park Royal Beach',       price: '$130/ночь', tag: 'Отличный баланс' },
+                       { name: 'The Westin Cancun',      price: '$155/ночь', tag: 'Инфраструктура топ' }],
+            downtown: [{ name: 'Krystal Urban Cancun',   price: '$90/ночь',  tag: 'Деловой район' },
+                       { name: 'Hotel Kin Mayab',        price: '$80/ночь',  tag: 'Тихо, уютно' },
+                       { name: 'Hampton Inn Downtown',   price: '$95/ночь',  tag: 'Стандарт без сюрпризов' }]
+        },
+        ai: {
+            north:    [{ name: 'Hyatt Ziva Cancun',      price: '$310/ночь', tag: 'Лучший AI на севере' },
+                       { name: 'Excellence Playa Mujeres', price: '$350/ночь', tag: 'Adults Only, шик' },
+                       { name: 'Le Blanc Spa Resort',    price: '$420/ночь', tag: 'Ультра-премиум' }],
+            center:   [{ name: 'Riu Palace Las Americas', price: '$280/ночь', tag: 'Большой, насыщенный' },
+                       { name: 'Hard Rock Hotel Cancun', price: '$260/ночь', tag: 'Музыка, вечеринки, пляж' },
+                       { name: 'Moon Palace Cancun',     price: '$300/ночь', tag: 'Огромная территория' }],
+            downtown: [{ name: 'Oasis Palm',             price: '$190/ночь', tag: 'AI в доступной зоне' },
+                       { name: 'Crown Paradise Club',    price: '$180/ночь', tag: 'Семейный, бассейны' },
+                       { name: 'Gran Caribe Resort',     price: '$175/ночь', tag: 'Без излишеств, честно' }]
+        }
+    };
+
+    /* ── Элементы ── */
+    var elOrigin   = document.getElementById('c2-origin');
+    var elFormat   = document.getElementById('c2-format');
+    var elZone     = document.getElementById('c2-zone');
+    var elNights   = document.getElementById('c2-nights');
+    var elPeople   = document.getElementById('c2-people');
+    var elPrice    = document.getElementById('c2-price');
+    var elBreak    = document.getElementById('c2-breakdown');
+    var elCtaLabel = document.getElementById('c2-cta-label');
+    var elCards    = document.getElementById('c2-hotel-cards');
+    var elCtaLink  = document.getElementById('c2-cta-link');
+
+    function calc() {
+        var origin  = elOrigin.value;
+        var format  = elFormat.value;
+        var zone    = elZone.value;
+        var nights  = Math.max(1, parseInt(elNights.value) || 7);
+        var people  = Math.max(1, parseInt(elPeople.value) || 2);
+
+        var fl      = flights[origin];
+        var flTotal = fl.cost * people;                                          /* перелёт все */
+        var hNight  = hotelBase[format] * zoneMultiplier[zone];                 /* отель/ночь */
+        var hTotal  = hNight * nights;                                          /* отель все */
+        var d       = daily[format];
+        var dayTotal = (d.food + d.transport + d.activities + d.hidden) * nights * people;
+        var grand   = Math.round((flTotal + hTotal + dayTotal) / 100) * 100;
+
+        /* Символ валюты для итога */
+        var sym = fl.currency;
+
+        elPrice.textContent = '≈ ' + grand.toLocaleString('ru') + ' ' + sym;
+
+        elBreak.innerHTML =
+            'Перелёт: ~' + flTotal.toLocaleString('ru') + ' ' + sym +
+            ' &nbsp;·&nbsp; Отель: ~' + Math.round(hTotal).toLocaleString('ru') + '$' +
+            ' &nbsp;·&nbsp; Прочее: ~' + Math.round(dayTotal).toLocaleString('ru') + '$' +
+            '<br>' + formatLabel[format] + ' · ' + zoneLabel[zone] + ' · ' +
+            nights + ' ' + nightWord(nights) + ' · ' + people + ' ' + personWord(people);
+
+        /* Конверсионный блок */
+        elCtaLabel.textContent = formatLabel[format] + ' — ' + zoneLabel[zone];
+
+        var suggestions = hotelSuggestions[format][zone];
+        elCards.innerHTML = suggestions.map(function(h) {
+            return '<div class="calc2-hotel-card">' +
+                '<div class="chc-name">' + h.name + '</div>' +
+                '<div class="chc-price">' + h.price + '</div>' +
+                '<div class="chc-tag">' + h.tag + '</div>' +
+            '</div>';
+        }).join('');
+
+        /* Динамическая ссылка с параметрами */
+        elCtaLink.href = '/ru/hotels/cancun/?budget=' + format +
+            '&zone=' + zone +
+            '&nights=' + nights +
+            '&people=' + people +
+            '&origin=' + origin;
+    }
+
+    function nightWord(n) {
+        if (n % 10 === 1 && n % 100 !== 11) return 'ночь';
+        if ([2,3,4].indexOf(n % 10) > -1 && [12,13,14].indexOf(n % 100) === -1) return 'ночи';
+        return 'ночей';
+    }
+
+    function personWord(n) {
+        if (n === 1) return 'человек';
+        if ([2,3,4].indexOf(n) > -1) return 'человека';
+        return 'человек';
+    }
+
+    [elOrigin, elFormat, elZone, elNights, elPeople].forEach(function(el) {
+        el.addEventListener('change', calc);
+        el.addEventListener('input', calc);
+    });
+
+    calc();
+})();
+</script>
+<!-- /БЛОК 2 -->

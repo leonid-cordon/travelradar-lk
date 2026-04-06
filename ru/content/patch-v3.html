@@ -1,0 +1,372 @@
+<!--
+=================================================================
+  ПАТЧ v3 — три улучшения для blocks-update.html
+=================================================================
+
+  ПРАВКА 1 → CSS: добавить в конец <style> в <head>
+             (urgency-блок + hover на карточках отелей)
+
+  ПРАВКА 2 → HTML: заменить блок <!-- Результат --> внутри calc2-widget
+             (добавлен urgency-блок между breakdown и CTA)
+
+  ПРАВКА 3 → JS: заменить функцию calc() целиком
+             (единая валюта $, кликабельные карточки отелей)
+
+  ВСЁ ОСТАЛЬНОЕ в blocks-update.html — не трогать.
+=================================================================
+-->
+
+
+<!-- ============================================================
+     ПРАВКА 1 — CSS
+     Вставить в конец существующего <style> в <head>
+     ============================================================ -->
+<style id="PATCH_CSS_ADD_TO_HEAD_STYLE">
+
+/* ── Urgency-блок ── */
+.calc2-urgency {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 12px 0 16px;
+    padding: 11px 14px;
+    border-radius: 7px;
+    background: rgba(224, 122, 95, 0.08);
+    border-left: 3px solid #e07a5f;
+    font-size: 0.83rem;
+    line-height: 1.6;
+    color: inherit;
+}
+.calc2-urgency-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+.calc2-urgency strong {
+    display: block;
+    color: #e07a5f;
+    font-size: 0.88rem;
+    margin-bottom: 2px;
+}
+
+/* ── Категория бюджета (над urgency) ── */
+.calc2-category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.82rem;
+    opacity: 0.6;
+}
+.calc2-category-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+.badge-budget  { background: rgba(58,184,200,0.15); color: #3ab8c8; }
+.badge-comfort { background: rgba(240,165,0,0.15);  color: #f0a500; }
+.badge-ai      { background: rgba(224,122,95,0.15); color: #e07a5f; }
+
+/* ── Кликабельные карточки отелей ── */
+.calc2-hotel-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.calc2-hotel-card {
+    cursor: pointer;
+    transition: border-color .2s, transform .15s;
+}
+.calc2-hotel-card:hover {
+    border-color: var(--color-accent, #3ab8c8);
+    transform: translateY(-2px);
+}
+.chc-link-hint {
+    font-size: 0.72rem;
+    color: var(--color-accent, #3ab8c8);
+    opacity: 0;
+    transition: opacity .2s;
+    margin-top: 4px;
+}
+.calc2-hotel-card:hover .chc-link-hint { opacity: 1; }
+
+/* ── Двойная CTA-кнопка ── */
+.calc2-cta-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 14px;
+}
+@media(max-width:500px) {
+    .calc2-cta-buttons { grid-template-columns: 1fr; }
+}
+.calc2-cta-btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 13px 20px;
+    background: transparent;
+    color: var(--color-accent, #3ab8c8);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--color-accent, #3ab8c8);
+    cursor: pointer;
+    transition: background .2s;
+    box-sizing: border-box;
+}
+.calc2-cta-btn-secondary:hover {
+    background: rgba(58,184,200,0.08);
+}
+
+</style>
+<!-- /ПРАВКА 1 -->
+
+
+
+
+<!-- ============================================================
+     ПРАВКА 2 — HTML
+     Заменить блок "Результат" внутри calc2-widget:
+     ОТ:   <!-- Результат -->
+     ДО:   </div>  (конец calc2-result)
+     ============================================================ -->
+
+        <!-- Результат -->
+        <div class="calc2-result">
+            <div class="calc2-result-label">Ориентировочный бюджет на всех</div>
+            <div class="calc2-result-price" id="c2-price">≈ $5,000</div>
+
+            <!-- Категория + breakdown -->
+            <div class="calc2-category">
+                Вы в категории:
+                <span class="calc2-category-badge badge-comfort" id="c2-badge">Комфортный</span>
+            </div>
+            <div class="calc2-result-breakdown" id="c2-breakdown">
+                Перелёт: ~$1,000 · Отель: ~$1,400 · Прочее: ~$600
+            </div>
+
+            <!-- Urgency -->
+            <div class="calc2-urgency" id="c2-urgency">
+                <span class="calc2-urgency-icon">⏱</span>
+                <div>
+                    <strong id="c2-urgency-title">Комфортные отели разбирают за 2–3 недели</strong>
+                    <span id="c2-urgency-text">Чем ближе к дате — тем выше цена. Хорошие варианты в этом бюджете уходят первыми.</span>
+                </div>
+            </div>
+
+            <!-- Конверсионный блок -->
+            <div class="calc2-cta">
+                <div class="calc2-cta-text">
+                    👉 Под ваш бюджет подходят следующие варианты:
+                    <strong id="c2-cta-label">Комфортные отели Hotel Zone</strong>
+                </div>
+                <div class="calc2-hotel-cards" id="c2-hotel-cards">
+                    <!-- JS рендерит карточки -->
+                </div>
+
+                <!-- Двойная CTA -->
+                <div class="calc2-cta-buttons">
+                    <a href="/ru/hotels/cancun/?budget=comfort&zone=center&nights=7"
+                       id="c2-cta-link"
+                       class="calc2-cta-btn">
+                        Смотреть отели под мой бюджет →
+                    </a>
+                    <a href="/ru/content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay.html"
+                       id="c2-cta-compare"
+                       class="calc2-cta-btn-secondary">
+                        Сравнить курорты →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+<!-- /ПРАВКА 2 -->
+
+
+
+
+<!-- ============================================================
+     ПРАВКА 3 — JS
+     Заменить функцию calc() и данные flights целиком внутри <script>
+     ОТ:   (function () {
+     ДО:   })();
+     ============================================================ -->
+<script id="PATCH_JS_REPLACE_CALC_SCRIPT">
+(function () {
+
+    /* ── Перелёт: всё в $ (единая валюта) ── */
+    var flights = {
+        'europe':    { cost: 1080, label: 'Европа',        note: '~€1,000 / чел.' },
+        'usa-ny':    { cost: 480,  label: 'Нью-Йорк',      note: '~$480 / чел.' },
+        'usa-miami': { cost: 360,  label: 'Майами',         note: '~$360 / чел.' },
+        'usa-la':    { cost: 560,  label: 'Лос-Анджелес',  note: '~$560 / чел.' },
+        'canada':    { cost: 650,  label: 'Канада',         note: '~C$700 / чел.' },
+        'other':     { cost: 600,  label: 'Другой город',  note: '~$600 / чел.' }
+    };
+
+    /* ── Базовая стоимость отеля $/ночь на номер ── */
+    var hotelBase = { budget: 70, comfort: 150, ai: 300 };
+
+    /* ── Корректировка по району ── */
+    var zoneMultiplier = { north: 1.20, center: 1.00, downtown: 0.55 };
+
+    var zoneLabel   = { north: 'Hotel Zone (север)', center: 'Hotel Zone (центр)', downtown: 'Downtown' };
+    var formatLabel = { budget: 'Бюджетный', comfort: 'Комфортный', ai: 'All Inclusive' };
+
+    /* ── Urgency-тексты по формату ── */
+    var urgency = {
+        budget:  { title: 'Бюджетные варианты уходят быстро',
+                   text:  'Хорошие отели в Даунтауне в этом диапазоне разбирают за 3–4 недели до заезда.' },
+        comfort: { title: 'Комфортные отели разбирают за 2–3 недели',
+                   text:  'Чем ближе к дате — тем выше цена. Хорошие варианты в этом бюджете уходят первыми.' },
+        ai:      { title: 'All Inclusive в высокий сезон — дефицит',
+                   text:  'Популярные AI-отели бронируют за 1–3 месяца. После — только остатки по завышенной цене.' }
+    };
+
+    /* ── Суточные расходы на человека ($) ── */
+    var daily = {
+        budget:  { food: 30, transport: 9,  activities: 20, hidden: 14 },
+        comfort: { food: 50, transport: 14, activities: 35, hidden: 20 },
+        ai:      { food: 12, transport: 14, activities: 28, hidden: 28 }
+    };
+
+    /* ── Карточки отелей: name, price, tag, url ── */
+    var hotelSuggestions = {
+        budget: {
+            north:    [{ name: 'Antillano Hotel',   price: '$55/ночь', tag: 'Рядом с транспортом',  url: '/ru/hotels/cancun/antillano-hotel' },
+                       { name: 'Hostal Natura',     price: '$65/ночь', tag: 'Чисто, хороший Wi-Fi', url: '/ru/hotels/cancun/hostal-natura' },
+                       { name: 'Casa Tukan',        price: '$70/ночь', tag: 'До пляжа 15 мин',       url: '/ru/hotels/cancun/casa-tukan' }],
+            center:   [{ name: 'Antillano Hotel',   price: '$55/ночь', tag: 'Рядом с транспортом',  url: '/ru/hotels/cancun/antillano-hotel' },
+                       { name: 'Hostal Natura',     price: '$65/ночь', tag: 'Чисто, хороший Wi-Fi', url: '/ru/hotels/cancun/hostal-natura' },
+                       { name: 'Casa Tukan',        price: '$70/ночь', tag: 'До пляжа 15 мин',       url: '/ru/hotels/cancun/casa-tukan' }],
+            downtown: [{ name: 'Antillano Hotel',   price: '$45/ночь', tag: 'Центр города',          url: '/ru/hotels/cancun/antillano-hotel' },
+                       { name: 'Hostal Natura',     price: '$50/ночь', tag: 'Бюджет без потерь',     url: '/ru/hotels/cancun/hostal-natura' },
+                       { name: 'Hotel Plaza Kokai', price: '$55/ночь', tag: 'Рядом Mercado 28',      url: '/ru/hotels/cancun/hotel-plaza-kokai' }]
+        },
+        comfort: {
+            north:    [{ name: 'Grand Fiesta Americana', price: '$160/ночь', tag: 'Лучший пляж на севере',     url: '/ru/hotels/cancun/grand-fiesta-americana' },
+                       { name: 'Krystal Grand Cancun',   price: '$145/ночь', tag: 'Спокойное море, семьи',     url: '/ru/hotels/cancun/krystal-grand' },
+                       { name: 'Live Aqua Beach Resort', price: '$190/ночь', tag: 'Adults Only, уровень',      url: '/ru/hotels/cancun/live-aqua' }],
+            center:   [{ name: 'Riu Caribe',             price: '$140/ночь', tag: 'Близко к торговым центрам', url: '/ru/hotels/cancun/riu-caribe' },
+                       { name: 'Park Royal Beach',       price: '$130/ночь', tag: 'Отличный баланс',           url: '/ru/hotels/cancun/park-royal' },
+                       { name: 'The Westin Cancun',      price: '$155/ночь', tag: 'Инфраструктура топ',        url: '/ru/hotels/cancun/westin-cancun' }],
+            downtown: [{ name: 'Krystal Urban Cancun',   price: '$90/ночь',  tag: 'Деловой район',             url: '/ru/hotels/cancun/krystal-urban' },
+                       { name: 'Hotel Kin Mayab',        price: '$80/ночь',  tag: 'Тихо, уютно',               url: '/ru/hotels/cancun/hotel-kin-mayab' },
+                       { name: 'Hampton Inn Downtown',   price: '$95/ночь',  tag: 'Стандарт без сюрпризов',    url: '/ru/hotels/cancun/hampton-inn' }]
+        },
+        ai: {
+            north:    [{ name: 'Hyatt Ziva Cancun',        price: '$310/ночь', tag: 'Лучший AI на севере',   url: '/ru/hotels/cancun/hyatt-ziva' },
+                       { name: 'Excellence Playa Mujeres', price: '$350/ночь', tag: 'Adults Only, шик',      url: '/ru/hotels/cancun/excellence-playa-mujeres' },
+                       { name: 'Le Blanc Spa Resort',      price: '$420/ночь', tag: 'Ультра-премиум',        url: '/ru/hotels/cancun/le-blanc' }],
+            center:   [{ name: 'Riu Palace Las Americas',  price: '$280/ночь', tag: 'Большой, насыщенный',   url: '/ru/hotels/cancun/riu-palace' },
+                       { name: 'Hard Rock Hotel Cancun',   price: '$260/ночь', tag: 'Музыка, вечеринки, пляж', url: '/ru/hotels/cancun/hard-rock' },
+                       { name: 'Moon Palace Cancun',       price: '$300/ночь', tag: 'Огромная территория',   url: '/ru/hotels/cancun/moon-palace' }],
+            downtown: [{ name: 'Oasis Palm',               price: '$190/ночь', tag: 'AI в доступной зоне',  url: '/ru/hotels/cancun/oasis-palm' },
+                       { name: 'Crown Paradise Club',      price: '$180/ночь', tag: 'Семейный, бассейны',    url: '/ru/hotels/cancun/crown-paradise' },
+                       { name: 'Gran Caribe Resort',       price: '$175/ночь', tag: 'Без излишеств, честно', url: '/ru/hotels/cancun/gran-caribe' }]
+        }
+    };
+
+    /* ── Элементы ── */
+    var elOrigin   = document.getElementById('c2-origin');
+    var elFormat   = document.getElementById('c2-format');
+    var elZone     = document.getElementById('c2-zone');
+    var elNights   = document.getElementById('c2-nights');
+    var elPeople   = document.getElementById('c2-people');
+    var elPrice    = document.getElementById('c2-price');
+    var elBreak    = document.getElementById('c2-breakdown');
+    var elBadge    = document.getElementById('c2-badge');
+    var elUrgTitle = document.getElementById('c2-urgency-title');
+    var elUrgText  = document.getElementById('c2-urgency-text');
+    var elCtaLabel = document.getElementById('c2-cta-label');
+    var elCards    = document.getElementById('c2-hotel-cards');
+    var elCtaLink  = document.getElementById('c2-cta-link');
+
+    /* ── Формат числа в $ ── */
+    function usd(n) {
+        return '$' + Math.round(n).toLocaleString('en-US');
+    }
+
+    function calc() {
+        var origin  = elOrigin.value;
+        var format  = elFormat.value;
+        var zone    = elZone.value;
+        var nights  = Math.max(1, parseInt(elNights.value)  || 7);
+        var people  = Math.max(1, parseInt(elPeople.value)  || 2);
+
+        var fl       = flights[origin];
+        var flTotal  = fl.cost * people;
+        var hNight   = hotelBase[format] * zoneMultiplier[zone];
+        var hTotal   = hNight * nights;
+        var d        = daily[format];
+        var dayTotal = (d.food + d.transport + d.activities + d.hidden) * nights * people;
+        var grand    = Math.round((flTotal + hTotal + dayTotal) / 100) * 100;
+
+        /* Цена — всегда в $ */
+        elPrice.textContent = '≈ ' + usd(grand);
+
+        /* Разбивка с оригинальной валютой для перелёта */
+        elBreak.innerHTML =
+            'Перелёт: ' + usd(flTotal) + ' <span style="opacity:.45;font-size:.75em;">(' + fl.note + ')</span>' +
+            '&nbsp;·&nbsp;Отель: ' + usd(hTotal) +
+            '&nbsp;·&nbsp;Прочее: ' + usd(dayTotal) +
+            '<br>' + formatLabel[format] + ' · ' + zoneLabel[zone] + ' · ' +
+            nights + ' ' + nightWord(nights) + ' · ' + people + ' ' + personWord(people);
+
+        /* Бейдж категории */
+        elBadge.textContent = formatLabel[format];
+        elBadge.className = 'calc2-category-badge badge-' + format;
+
+        /* Urgency */
+        elUrgTitle.textContent = urgency[format].title;
+        elUrgText.textContent  = urgency[format].text;
+
+        /* CTA-лейбл */
+        elCtaLabel.textContent = formatLabel[format] + ' — ' + zoneLabel[zone];
+
+        /* Карточки отелей — кликабельные */
+        var suggestions = hotelSuggestions[format][zone];
+        elCards.innerHTML = suggestions.map(function(h) {
+            return '<div class="calc2-hotel-card">' +
+                '<a href="' + h.url + '?nights=' + nights + '&people=' + people + '" target="_blank">' +
+                    '<div class="chc-name">' + h.name + '</div>' +
+                    '<div class="chc-price">' + h.price + '</div>' +
+                    '<div class="chc-tag">' + h.tag + '</div>' +
+                    '<div class="chc-link-hint">Смотреть отель →</div>' +
+                '</a>' +
+            '</div>';
+        }).join('');
+
+        /* Динамическая ссылка главной кнопки */
+        elCtaLink.href = '/ru/hotels/cancun/?budget=' + format +
+            '&zone=' + zone +
+            '&nights=' + nights +
+            '&people=' + people +
+            '&origin=' + origin;
+    }
+
+    function nightWord(n) {
+        if (n % 10 === 1 && n % 100 !== 11) return 'ночь';
+        if ([2,3,4].indexOf(n % 10) > -1 && [12,13,14].indexOf(n % 100) === -1) return 'ночи';
+        return 'ночей';
+    }
+    function personWord(n) {
+        if (n === 1) return 'человек';
+        if ([2,3,4].indexOf(n) > -1) return 'человека';
+        return 'человек';
+    }
+
+    [elOrigin, elFormat, elZone, elNights, elPeople].forEach(function(el) {
+        el.addEventListener('change', calc);
+        el.addEventListener('input',  calc);
+    });
+
+    calc();
+})();
+</script>
+<!-- /ПРАВКА 3 -->

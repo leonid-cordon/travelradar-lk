@@ -48,6 +48,7 @@ Hi leonid-cordon! You've successfully authenticated, but GitHub does not provide
 
 ОБЫЧНЫЙ РАБОЧИЙ ЦИКЛ (КАЖДЫЙ ДЕНЬ)
 
+git config --global core.autocrlf true
 git status
 git add .
 git commit -m "ABOUT"
