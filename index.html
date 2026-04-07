@@ -6,52 +6,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
-    <!-- SEO BASE -->
-    <title>Travel Radar LK — Где остановиться, сколько это стоит и что важно</title>
+    <title>Travel Radar LK - Where to Stay, What It Costs, and What Matters</title>
 
     <meta name="description"
-        content="Практичные рекомендации по выбору жилья и планированию путешествий. Где остановиться, сколько это стоит и что важно при выборе отеля и поездки.">
+        content="Practical travel guides on where to stay, how to choose hotels, and how to plan trips to Mexico, Egypt, Turkey, and more.">
 
     <link rel="canonical" href="https://travelradarlk.com/">
 
-    <!-- HREFLANG -->
     <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/">
     <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/">
     <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/">
-    <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Travel Radar LK — Travel Guide">
+    <meta property="og:title" content="Travel Radar LK - Where to Stay, What It Costs, and What Matters">
     <meta property="og:description"
-        content="Где остановиться, сколько это стоит и что важно. Практичные советы по выбору жилья и планированию поездок.">
+        content="Practical travel guides on where to stay, how to choose hotels, and how to plan trips to Mexico, Egypt, Turkey, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://travelradarlk.com/">
     <meta property="og:image" content="https://travelradarlk.com/assets/images/og/cover.jpg">
+    <meta property="og:site_name" content="Travel Radar LK">
+    <meta property="og:locale" content="en_US">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Travel Radar LK">
-    <meta name="twitter:description" content="Практичные рекомендации по путешествиям и выбору отелей.">
+    <meta name="twitter:title" content="Travel Radar LK - Where to Stay, What It Costs, and What Matters">
+    <meta name="twitter:description"
+        content="Practical travel guides on where to stay, how to choose hotels, and how to plan trips to Mexico, Egypt, Turkey, and more.">
     <meta name="twitter:image" content="https://travelradarlk.com/assets/images/og/cover.jpg">
 
-    <!-- Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Travel Radar LK",
       "url": "https://travelradarlk.com/",
-      "description": "Практичные рекомендации по выбору жилья и планированию путешествий.",
+      "description": "Practical travel guides on where to stay, how to choose hotels, and how to plan trips to Mexico, Egypt, Turkey, and more.",
       "inLanguage": "en",
       "publisher": {
         "@type": "Organization",
         "name": "Travel Radar LK"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://travelradarlk.com/en/content/",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <style>
         :root {
@@ -71,13 +75,24 @@
             box-sizing: border-box;
         }
 
-        html,
         body {
-            height: 100%;
-            overflow: hidden;
             background: var(--deep);
             font-family: 'Inter', sans-serif;
             color: var(--white);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100%;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
         /* ── BACKGROUND ── */
@@ -138,16 +153,21 @@
         }
 
         /* ── WRAPPER ── */
-        .wrapper {
+        .page {
             position: relative;
             z-index: 10;
-            height: 100%;
+        }
+
+        .wrapper {
+            min-height: 100svh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 56px 20px 96px;
         }
 
         .content {
+            width: min(100%, 1180px);
             text-align: center;
             animation: fadeUp 1.6s cubic-bezier(.22, .68, 0, 1) forwards;
         }
@@ -251,9 +271,51 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 0 8px;
-            margin-bottom: 68px;
+            margin-bottom: 24px;
             opacity: 0;
             animation: fadeUp 1.6s .42s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .hero-copy {
+            max-width: 760px;
+            margin: 0 auto 28px;
+            font-size: 15px;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, .72);
+            opacity: 0;
+            animation: fadeUp 1.6s .5s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 52px;
+            opacity: 0;
+            animation: fadeUp 1.6s .54s cubic-bezier(.22, .68, 0, 1) forwards;
+        }
+
+        .cta-link {
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .03);
+            border-radius: 999px;
+            padding: 12px 18px;
+            font-size: 11px;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .8);
+            transition: transform .35s cubic-bezier(.22, .68, 0, 1.3), border-color .35s ease, color .35s ease, background .35s ease;
+        }
+
+        .cta-link:hover,
+        .cta-link:focus-visible {
+            transform: translateY(-2px);
+            border-color: rgba(212, 178, 98, .35);
+            color: #fff;
+            background: rgba(255, 255, 255, .05);
+            outline: none;
         }
 
         .sub-chunk {
@@ -294,7 +356,7 @@
             gap: 0;
             margin-bottom: 42px;
             opacity: 0;
-            animation: fadeUp 1.6s .55s cubic-bezier(.22, .68, 0, 1) forwards;
+            animation: fadeUp 1.6s .62s cubic-bezier(.22, .68, 0, 1) forwards;
         }
 
         /* ── LANG BUTTON ── */
@@ -309,6 +371,10 @@
             transition: transform .35s cubic-bezier(.22, .68, 0, 1.3);
             -webkit-tap-highlight-color: transparent;
             overflow: hidden;
+            background: transparent;
+            border: 0;
+            color: inherit;
+            font: inherit;
         }
 
         .lang-btn::after {
@@ -338,16 +404,20 @@
             transition: transform .4s cubic-bezier(.22, .68, 0, 1);
         }
 
-        .lang-btn:hover {
+        .lang-btn:hover,
+        .lang-btn:focus-visible {
             transform: translateY(-4px);
+            outline: none;
         }
 
         .lang-btn:hover::before,
-        .lang-btn.active::before {
+        .lang-btn.active::before,
+        .lang-btn:focus-visible::before {
             transform: translateX(-50%) scaleX(1);
         }
 
-        .lang-btn:hover::after {
+        .lang-btn:hover::after,
+        .lang-btn:focus-visible::after {
             opacity: 1;
         }
 
@@ -375,7 +445,8 @@
         }
 
         .lang-btn:hover .flag,
-        .lang-btn.active .flag {
+        .lang-btn.active .flag,
+        .lang-btn:focus-visible .flag {
             opacity: 1;
             box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 0 0 .5px rgba(255, 255, 255, .14);
         }
@@ -396,7 +467,8 @@
             transition: color .35s;
         }
 
-        .lang-btn:hover .lang-label {
+        .lang-btn:hover .lang-label,
+        .lang-btn:focus-visible .lang-label {
             color: rgba(255, 255, 255, .72);
         }
 
@@ -416,6 +488,16 @@
             letter-spacing: 2.5px;
             color: rgba(255, 255, 255, .42);
             text-transform: uppercase;
+        }
+
+        .scroll-hint {
+            margin-top: 28px;
+            font-size: 10px;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .36);
+            opacity: 0;
+            animation: fadeUp 1.6s 1.08s cubic-bezier(.22, .68, 0, 1) forwards;
         }
 
         /* ── BOTTOM ORNAMENT ── */
@@ -444,6 +526,193 @@
             border-radius: 50%;
             background: rgba(255, 255, 255, .13);
         }
+
+        .overview {
+            position: relative;
+            z-index: 10;
+            padding: 0 20px 96px;
+        }
+
+        .overview-inner {
+            width: min(100%, 1180px);
+            margin: 0 auto;
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, .09);
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(8, 18, 27, .74), rgba(8, 18, 27, .52));
+            backdrop-filter: blur(18px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, .22);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1.3fr .9fr;
+            gap: 26px;
+        }
+
+        .section-kicker {
+            display: inline-block;
+            margin-bottom: 14px;
+            font-size: 10px;
+            letter-spacing: 2.8px;
+            text-transform: uppercase;
+            color: rgba(212, 178, 98, .72);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(34px, 4vw, 48px);
+            font-weight: 400;
+            line-height: 1.05;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, .96);
+        }
+
+        .section-text {
+            color: rgba(255, 255, 255, .72);
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .lead p + p {
+            margin-top: 14px;
+        }
+
+        .side-panel,
+        .card {
+            padding: 22px 20px 20px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 22px;
+            background: rgba(255, 255, 255, .025);
+        }
+
+        .side-panel h2,
+        .card h2 {
+            font-size: 13px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .84);
+            margin-bottom: 12px;
+        }
+
+        .side-panel p,
+        .card p,
+        .language-link p,
+        .footer-note {
+            color: rgba(255, 255, 255, .72);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .language-link p {
+            overflow-wrap: anywhere;
+            word-break: normal;
+            hyphens: auto;
+        }
+
+        .feature-grid,
+        .language-row {
+            display: grid;
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .feature-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .link-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .link-list a,
+        .language-link {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 16px 16px 14px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(255, 255, 255, .06);
+            color: rgba(255, 255, 255, .86);
+            transition: transform .3s ease, border-color .3s ease, background .3s ease;
+        }
+
+        .link-list a:hover,
+        .link-list a:focus-visible,
+        .language-link:hover,
+        .language-link:focus-visible {
+            transform: translateY(-2px);
+            border-color: rgba(212, 178, 98, .24);
+            background: rgba(255, 255, 255, .045);
+            outline: none;
+        }
+
+        .link-list span {
+            color: rgba(255, 255, 255, .42);
+            font-size: 12px;
+        }
+
+        .language-row {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .language-link strong {
+            display: block;
+            font-size: 13px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .9);
+        }
+
+        .footer-note {
+            margin-top: 24px;
+            color: rgba(255, 255, 255, .5);
+            font-size: 13px;
+        }
+
+        @media (max-width: 980px) {
+            .overview-grid,
+            .feature-grid,
+            .language-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .hero-copy {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .flags-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .v-div {
+                width: 34px;
+                height: 1px;
+            }
+
+            .lang-btn {
+                width: min(280px, 100%);
+                padding: 20px 22px 18px;
+            }
+
+            .overview-inner {
+                padding: 24px 18px;
+                border-radius: 24px;
+            }
+
+            .bottom-mark {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -457,73 +726,176 @@
     </div>
     <div class="grain"></div>
 
-    <div class="wrapper">
-        <div class="content">
+    <main class="page">
+        <div class="wrapper">
+            <div class="content">
 
-            <div class="eyebrow">
-                <div class="ey-line"></div>
-                <span class="ey-text">Travel Guide</span>
-                <div class="ey-line r"></div>
-            </div>
-
-            <div class="title">Travel Radar LK</div>
-
-            <div class="ornament">
-                <div class="orn-line"></div>
-                <div class="orn-dia"></div>
-                <div class="orn-line r"></div>
-            </div>
-
-            <div class="subtitle" id="subtitle-line"></div>
-
-            <div class="flags-row">
-
-                <div class="lang-btn" data-lang="en">
-                    <div class="flag">
-                        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="60" height="40" fill="#012169" />
-                            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8" />
-                            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5" />
-                            <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12" />
-                            <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7" />
-                        </svg>
-                    </div>
-                    <div class="lang-label">English</div>
+                <div class="eyebrow">
+                    <div class="ey-line"></div>
+                    <span class="ey-text">Travel Guide</span>
+                    <div class="ey-line r"></div>
                 </div>
 
-                <div class="v-div"></div>
+                <h1 class="title">Travel Radar LK</h1>
 
-                <div class="lang-btn" data-lang="ru">
-                    <div class="flag">
-                        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="60" height="13.4" fill="#fff" />
-                            <rect y="13.4" width="60" height="13.3" fill="#0039A6" />
-                            <rect y="26.7" width="60" height="13.3" fill="#D52B1E" />
-                        </svg>
-                    </div>
-                    <div class="lang-label">Русский</div>
+                <div class="ornament">
+                    <div class="orn-line"></div>
+                    <div class="orn-dia"></div>
+                    <div class="orn-line r"></div>
                 </div>
 
-                <div class="v-div"></div>
+                <div class="subtitle" id="subtitle-line"></div>
 
-                <div class="lang-btn" data-lang="ua">
-                    <div class="flag">
-                        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="60" height="20" fill="#005BBB" />
-                            <rect y="20" width="60" height="20" fill="#FFD500" />
-                        </svg>
-                    </div>
-                    <div class="lang-label">Українська</div>
+                <p class="hero-copy" id="hero-copy">
+                    Practical travel guides for choosing the right destination, the right neighborhood, and the right hotel
+                    before you book. Explore Mexico, Egypt, Turkey, and more through focused articles on prices, flights,
+                    locations, and the details that change the whole trip.
+                </p>
+
+                <div class="hero-cta">
+                    <a class="cta-link" href="#overview" id="cta-overview">Explore the guide</a>
+                    <a class="cta-link" href="/en/content/" id="cta-content">Open all articles</a>
                 </div>
 
-            </div>
+                <div class="flags-row">
 
-            <div class="detected-wrap">
-                <div class="detected" id="detected-text"></div>
-            </div>
+                    <button class="lang-btn" data-lang="en" type="button" aria-label="Open English version">
+                        <div class="flag">
+                            <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="40" fill="#012169" />
+                                <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8" />
+                                <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5" />
+                                <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12" />
+                                <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7" />
+                            </svg>
+                        </div>
+                        <div class="lang-label">English</div>
+                    </button>
 
+                    <div class="v-div"></div>
+
+                    <button class="lang-btn" data-lang="ru" type="button" aria-label="Open Russian version">
+                        <div class="flag">
+                            <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="13.4" fill="#fff" />
+                                <rect y="13.4" width="60" height="13.3" fill="#0039A6" />
+                                <rect y="26.7" width="60" height="13.3" fill="#D52B1E" />
+                            </svg>
+                        </div>
+                        <div class="lang-label">Русский</div>
+                    </button>
+
+                    <div class="v-div"></div>
+
+                    <button class="lang-btn" data-lang="ua" type="button" aria-label="Open Ukrainian version">
+                        <div class="flag">
+                            <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="20" fill="#005BBB" />
+                                <rect y="20" width="60" height="20" fill="#FFD500" />
+                            </svg>
+                        </div>
+                        <div class="lang-label">Українська</div>
+                    </button>
+
+                </div>
+
+                <div class="detected-wrap">
+                    <div class="detected" id="detected-text"></div>
+                </div>
+
+                <div class="scroll-hint" id="scroll-hint">Scroll for destination and guide overview</div>
+            </div>
         </div>
-    </div>
+
+        <section class="overview" id="overview">
+            <div class="overview-inner">
+                <div class="overview-grid">
+                    <div class="lead">
+                        <span class="section-kicker" id="overview-kicker">International Hub</span>
+                        <h2 class="section-title" id="overview-title">Where to stay, how to compare, and what to check before you go</h2>
+                        <p class="section-text" id="overview-text-1">
+                            Travel Radar LK is built for travelers who want clarity before booking. Instead of generic
+                            destination lists, the site focuses on practical decisions: which area is better for your trip,
+                            which hotel signals matter, what hidden trade-offs affect price, and how to avoid the usual mistakes
+                            when planning flights, accommodation, and resort stays.
+                        </p>
+                        <p class="section-text" id="overview-text-2">
+                            The strongest coverage currently centers on Mexico, Egypt, and Turkey, with guides on Cancun hotel
+                            zones, Istanbul neighborhoods, Egypt entry rules, flight choices, hotel selection frameworks, and
+                            visa-free beach destinations. If you are comparing places to stay, estimating costs, or trying to
+                            understand whether a destination really fits your travel style, this homepage points you toward the
+                            most useful starting pages.
+                        </p>
+                    </div>
+
+                    <aside class="side-panel">
+                        <h2 id="how-title">How this homepage works</h2>
+                        <p id="how-text">
+                            The page detects your browser language and highlights the closest content version, while still
+                            keeping direct access to English, Russian, and Ukrainian sections. That preserves the current UX
+                            and makes the homepage a real international entry point instead of a thin transition screen.
+                        </p>
+                    </aside>
+                </div>
+
+                <div class="feature-grid">
+                    <section class="card">
+                        <h2 id="destinations-title">Popular Destinations</h2>
+                        <p id="destinations-text">
+                            Start with the markets the site covers most deeply: resorts and hotel zones in Mexico, Red Sea
+                            holidays in Egypt, and city-plus-coast travel in Turkey.
+                        </p>
+                        <div class="link-list">
+                            <a href="/en/mexico/" id="link-mexico">Mexico <span>Cancun, Tulum, Riviera Maya</span></a>
+                            <a href="/en/egypt/" id="link-egypt">Egypt <span>Red Sea resorts, flights, entry rules</span></a>
+                            <a href="/en/turkey/" id="link-turkey">Turkey <span>Istanbul, beach regions, hotel areas</span></a>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h2 id="guides-title">Travel Guides</h2>
+                        <p id="guides-text">
+                            Use the article hub for destination comparisons, neighborhood guides, flight explainers, hotel
+                            review logic, and travel planning pieces that help you book with fewer surprises.
+                        </p>
+                        <div class="link-list">
+                            <a href="/en/content/collections/" id="link-collections">Collections <span>curated picks and themed reading</span></a>
+                            <a href="/en/content/flights/" id="link-flights">Flights <span>routes, airports, booking trade-offs</span></a>
+                            <a href="/en/content/lifehacks/" id="link-lifehacks">Travel hacks <span>hotel checks and booking logic</span></a>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h2 id="language-title">Choose Your Language</h2>
+                        <p id="language-text">
+                            Open the version that fits your browser or reading preference. Each language section has its own
+                            localized homepage and content structure.
+                        </p>
+                        <div class="language-row">
+                            <a class="language-link" href="/en/" id="lang-card-en">
+                                <strong>English</strong>
+                                <p>International entry point with destination and hotel guides.</p>
+                            </a>
+                            <a class="language-link" href="/ru/" id="lang-card-ru">
+                                <strong>Русский</strong>
+                                <p>Русскоязычные разборы направлений, отелей и перелетов.</p>
+                            </a>
+                            <a class="language-link" href="/ua/" id="lang-card-ua">
+                                <strong>Українська</strong>
+                                <p>Україномовні гіди по курортах, районах і вибору проживання.</p>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+
+                <p class="footer-note" id="footer-note">
+                    Featured topics across the site include where to stay in Cancun, which areas work best in Istanbul,
+                    how to compare charter and scheduled flights to Egypt, what to check before booking a hotel, and which
+                    visa-free beach destinations are worth considering for the next trip.
+                </p>
+            </div>
+        </section>
+    </main>
 
     <div class="bottom-mark">
         <div class="bm-line"></div>
@@ -537,15 +909,111 @@
         const locales = {
             en: {
                 s: ['Where', 'to stay', 'How much', 'it costs', 'What', 'matters'],
-                detected: 'Language detected · English'
+                detected: 'Language detected - English',
+                heroCopy: 'Practical travel guides for choosing the right destination, the right neighborhood, and the right hotel before you book. Explore Mexico, Egypt, Turkey, and more through focused articles on prices, flights, locations, and the details that change the whole trip.',
+                ctaOverview: 'Explore the guide',
+                ctaContent: 'Open all articles',
+                scrollHint: 'Scroll for destination and guide overview',
+                overviewKicker: 'International Hub',
+                overviewTitle: 'Where to stay, how to compare, and what to check before you go',
+                overviewText1: 'Travel Radar LK is built for travelers who want clarity before booking. Instead of generic destination lists, the site focuses on practical decisions: which area is better for your trip, which hotel signals matter, what hidden trade-offs affect price, and how to avoid the usual mistakes when planning flights, accommodation, and resort stays.',
+                overviewText2: 'The strongest coverage currently centers on Mexico, Egypt, and Turkey, with guides on Cancun hotel zones, Istanbul neighborhoods, Egypt entry rules, flight choices, hotel selection frameworks, and visa-free beach destinations. If you are comparing places to stay, estimating costs, or trying to understand whether a destination really fits your travel style, this homepage points you toward the most useful starting pages.',
+                howTitle: 'How this homepage works',
+                howText: 'The page detects your browser language and highlights the closest content version, while still keeping direct access to English, Russian, and Ukrainian sections. That preserves the current UX and makes the homepage a real international entry point instead of a thin transition screen.',
+                destinationsTitle: 'Popular Destinations',
+                destinationsText: 'Start with the markets the site covers most deeply: resorts and hotel zones in Mexico, Red Sea holidays in Egypt, and city-plus-coast travel in Turkey.',
+                mexicoLabel: 'Mexico',
+                mexicoMeta: 'Cancun, Tulum, Riviera Maya',
+                egyptLabel: 'Egypt',
+                egyptMeta: 'Red Sea resorts, flights, entry rules',
+                turkeyLabel: 'Turkey',
+                turkeyMeta: 'Istanbul, beach regions, hotel areas',
+                guidesTitle: 'Travel Guides',
+                guidesText: 'Use the article hub for destination comparisons, neighborhood guides, flight explainers, hotel review logic, and travel planning pieces that help you book with fewer surprises.',
+                collectionsLabel: 'Collections',
+                collectionsMeta: 'curated picks and themed reading',
+                flightsLabel: 'Flights',
+                flightsMeta: 'routes, airports, booking trade-offs',
+                lifehacksLabel: 'Travel hacks',
+                lifehacksMeta: 'hotel checks and booking logic',
+                languageTitle: 'Choose Your Language',
+                languageText: 'Open the version that fits your browser or reading preference. Each language section has its own localized homepage and content structure.',
+                langCardEn: 'International entry point with destination and hotel guides.',
+                langCardRu: 'Russian-language breakdowns of destinations, hotels, and flights.',
+                langCardUa: 'Ukrainian-language guides to resorts, neighborhoods, and accommodation choices.',
+                footerNote: 'Featured topics across the site include where to stay in Cancun, which areas work best in Istanbul, how to compare charter and scheduled flights to Egypt, what to check before booking a hotel, and which visa-free beach destinations are worth considering for the next trip.'
             },
             ru: {
                 s: ['Где', 'остановиться', 'Сколько', 'это стоит', 'Что', 'важно'],
-                detected: 'Определён язык · Русский'
+                detected: 'Определён язык - Русский',
+                heroCopy: 'Практичные гайды для тех, кто хочет заранее понять, куда ехать, в каком районе жить и какой отель выбирать. Исследуйте Мексику, Египет, Турцию и другие направления через точечные материалы о ценах, перелётах, локациях и деталях, которые реально меняют поездку.',
+                ctaOverview: 'Смотреть обзор',
+                ctaContent: 'Открыть все статьи',
+                scrollHint: 'Прокрутите вниз для обзора направлений и гайдов',
+                overviewKicker: 'Международный хаб',
+                overviewTitle: 'Где остановиться, как сравнивать варианты и что проверить до поездки',
+                overviewText1: 'Travel Radar LK создан для путешественников, которым нужна ясность до бронирования. Вместо общих списков направлений сайт разбирает практичные решения: какой район лучше подойдёт именно вам, на какие сигналы отеля смотреть, какие скрытые компромиссы влияют на цену и как не совершать типичные ошибки при планировании перелётов, проживания и отдыха.',
+                overviewText2: 'Сейчас самая сильная глубина покрытия у Мексики, Египта и Турции: районы Канкуна, кварталы Стамбула, правила въезда в Египет, выбор рейсов, логика отбора отелей и безвизовые пляжные направления. Если вы сравниваете, где жить, сколько это стоит и подходит ли направление вашему стилю отдыха, главная быстро направит к самым полезным материалам.',
+                howTitle: 'Как работает главная',
+                howText: 'Страница определяет язык браузера и выделяет наиболее подходящую языковую версию, но при этом сохраняет прямой доступ к английскому, русскому и украинскому разделам. Это сохраняет текущий UX и делает главную полноценной международной точкой входа, а не просто переходным экраном.',
+                destinationsTitle: 'Популярные направления',
+                destinationsText: 'Начните с направлений, которые на сайте разобраны глубже всего: курорты и hotel zone в Мексике, отдых на Красном море в Египте и связка города с морем в Турции.',
+                mexicoLabel: 'Мексика',
+                mexicoMeta: 'Канкун, Тулум, Ривьера-Майя',
+                egyptLabel: 'Египет',
+                egyptMeta: 'курорты Красного моря, перелёты, правила въезда',
+                turkeyLabel: 'Турция',
+                turkeyMeta: 'Стамбул, пляжные регионы, районы для отеля',
+                guidesTitle: 'Гайды по поездкам',
+                guidesText: 'Используйте хаб статей для сравнений направлений, гайдов по районам, материалов по перелётам, логике выбора отелей и практичных разборов, которые помогают бронировать без неприятных сюрпризов.',
+                collectionsLabel: 'Подборки',
+                collectionsMeta: 'курированные материалы и тематические серии',
+                flightsLabel: 'Перелёты',
+                flightsMeta: 'маршруты, аэропорты, компромиссы при покупке',
+                lifehacksLabel: 'Лайфхаки',
+                lifehacksMeta: 'проверка отелей и логика бронирования',
+                languageTitle: 'Выберите язык',
+                languageText: 'Откройте версию, которая подходит вашему браузеру или привычному языку чтения. У каждого языкового раздела своя локализованная главная и структура контента.',
+                langCardEn: 'Международная точка входа с гидами по направлениям и отелям.',
+                langCardRu: 'Русскоязычные разборы направлений, отелей и перелётов.',
+                langCardUa: 'Украиноязычные гайды по курортам, районам и выбору проживания.',
+                footerNote: 'Среди ключевых тем на сайте: где жить в Канкуне, какие районы лучше подходят в Стамбуле, как сравнивать чартерные и регулярные рейсы в Египет, что проверять перед бронированием отеля и какие безвизовые пляжные направления стоит рассмотреть для следующей поездки.'
             },
             ua: {
                 s: ['Де', 'зупинитися', 'Скільки', 'це коштує', 'Що', 'важливо'],
-                detected: 'Визначено мову · Українська'
+                detected: 'Визначено мову - Українська',
+                heroCopy: 'Практичні гіди для тих, хто хоче заздалегідь зрозуміти, куди їхати, у якому районі жити та який готель обирати. Досліджуйте Мексику, Єгипет, Туреччину та інші напрямки через точкові матеріали про ціни, перельоти, локації та деталі, які реально змінюють поїздку.',
+                ctaOverview: 'Переглянути огляд',
+                ctaContent: 'Відкрити всі статті',
+                scrollHint: 'Прокрутіть вниз для огляду напрямків і гідів',
+                overviewKicker: 'Міжнародний хаб',
+                overviewTitle: 'Де зупинитися, як порівнювати варіанти і що перевірити до поїздки',
+                overviewText1: 'Travel Radar LK створений для мандрівників, яким потрібна ясність до бронювання. Замість загальних списків напрямків сайт розбирає практичні рішення: який район краще підійде саме вам, на які сигнали готелю дивитися, які приховані компроміси впливають на ціну та як не робити типових помилок під час планування перельотів, проживання і відпочинку.',
+                overviewText2: 'Найсильніше покриття зараз у Мексики, Єгипту та Туреччини: райони Канкуна, квартали Стамбула, правила в’їзду до Єгипту, вибір рейсів, логіка відбору готелів і безвізові пляжні напрямки. Якщо ви порівнюєте, де жити, скільки це коштує і чи підходить напрямок вашому стилю відпочинку, головна швидко направить до найкорисніших матеріалів.',
+                howTitle: 'Як працює головна',
+                howText: 'Сторінка визначає мову браузера і виділяє найбільш відповідну мовну версію, але водночас зберігає прямий доступ до англійського, російського та українського розділів. Це зберігає поточний UX і робить головну повноцінною міжнародною точкою входу, а не просто перехідним екраном.',
+                destinationsTitle: 'Популярні напрямки',
+                destinationsText: 'Почніть з напрямків, які на сайті розібрані найглибше: курорти та hotel zone у Мексиці, відпочинок на Червоному морі в Єгипті та поєднання міста з морем у Туреччині.',
+                mexicoLabel: 'Мексика',
+                mexicoMeta: 'Канкун, Тулум, Рівʼєра-Мая',
+                egyptLabel: 'Єгипет',
+                egyptMeta: 'курорти Червоного моря, перельоти, правила в’їзду',
+                turkeyLabel: 'Туреччина',
+                turkeyMeta: 'Стамбул, пляжні регіони, райони для готелю',
+                guidesTitle: 'Гіди по поїздках',
+                guidesText: 'Використовуйте хаб статей для порівнянь напрямків, гідів по районах, матеріалів про перельоти, логіку вибору готелів і практичних розборів, які допомагають бронювати без неприємних сюрпризів.',
+                collectionsLabel: 'Добірки',
+                collectionsMeta: 'куровані матеріали та тематичні серії',
+                flightsLabel: 'Перельоти',
+                flightsMeta: 'маршрути, аеропорти, компроміси під час купівлі',
+                lifehacksLabel: 'Лайфхаки',
+                lifehacksMeta: 'перевірка готелів і логіка бронювання',
+                languageTitle: 'Оберіть мову',
+                languageText: 'Відкрийте версію, яка підходить вашому браузеру або звичній мові читання. У кожного мовного розділу своя локалізована головна і структура контенту.',
+                langCardEn: 'Міжнародна точка входу з гідами по напрямках і готелях.',
+                langCardRu: 'Російськомовні розбори напрямків, готелів і перельотів.',
+                langCardUa: 'Україномовні гіди по курортах, районах і вибору проживання.',
+                footerNote: 'Серед ключових тем на сайті: де жити в Канкуні, які райони краще підходять у Стамбулі, як порівнювати чартерні та регулярні рейси до Єгипту, що перевіряти перед бронюванням готелю і які безвізові пляжні напрямки варто розглянути для наступної поїздки.'
             }
         };
 
@@ -573,11 +1041,68 @@
                 </span>`;
         }
 
-        document.getElementById('subtitle-line').innerHTML = buildSubtitle(det);
+        function setLinkContent(id, label, meta) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.innerHTML = `${label} <span>${meta}</span>`;
+        }
+
+        function setCardText(id, text) {
+            const card = document.getElementById(id);
+            if (!card) return;
+            const textNode = card.querySelector('p');
+            if (textNode) textNode.textContent = text;
+        }
+
+        function setHref(id, href) {
+            const el = document.getElementById(id);
+            if (el) el.setAttribute('href', href);
+        }
+
+        function applyLocale(code) {
+            const t = locales[code];
+            const section = code === 'en' ? 'en' : code;
+            document.getElementById('subtitle-line').innerHTML = buildSubtitle(code);
+            document.getElementById('detected-text').innerText = t.detected;
+            document.getElementById('hero-copy').textContent = t.heroCopy;
+            document.getElementById('cta-overview').textContent = t.ctaOverview;
+            document.getElementById('cta-content').textContent = t.ctaContent;
+            setHref('cta-content', `/${section}/content/`);
+            document.getElementById('scroll-hint').textContent = t.scrollHint;
+            document.getElementById('overview-kicker').textContent = t.overviewKicker;
+            document.getElementById('overview-title').textContent = t.overviewTitle;
+            document.getElementById('overview-text-1').textContent = t.overviewText1;
+            document.getElementById('overview-text-2').textContent = t.overviewText2;
+            document.getElementById('how-title').textContent = t.howTitle;
+            document.getElementById('how-text').textContent = t.howText;
+            document.getElementById('destinations-title').textContent = t.destinationsTitle;
+            document.getElementById('destinations-text').textContent = t.destinationsText;
+            setHref('link-mexico', `/${section}/mexico/`);
+            setHref('link-egypt', `/${section}/egypt/`);
+            setHref('link-turkey', `/${section}/turkey/`);
+            setLinkContent('link-mexico', t.mexicoLabel, t.mexicoMeta);
+            setLinkContent('link-egypt', t.egyptLabel, t.egyptMeta);
+            setLinkContent('link-turkey', t.turkeyLabel, t.turkeyMeta);
+            document.getElementById('guides-title').textContent = t.guidesTitle;
+            document.getElementById('guides-text').textContent = t.guidesText;
+            setHref('link-collections', `/${section}/content/collections/`);
+            setHref('link-flights', `/${section}/content/flights/`);
+            setHref('link-lifehacks', `/${section}/content/lifehacks/`);
+            setLinkContent('link-collections', t.collectionsLabel, t.collectionsMeta);
+            setLinkContent('link-flights', t.flightsLabel, t.flightsMeta);
+            setLinkContent('link-lifehacks', t.lifehacksLabel, t.lifehacksMeta);
+            document.getElementById('language-title').textContent = t.languageTitle;
+            document.getElementById('language-text').textContent = t.languageText;
+            setCardText('lang-card-en', t.langCardEn);
+            setCardText('lang-card-ru', t.langCardRu);
+            setCardText('lang-card-ua', t.langCardUa);
+            document.getElementById('footer-note').textContent = t.footerNote;
+        }
+
+        applyLocale(det);
 
         setTimeout(() => {
             document.querySelector(`[data-lang="${det}"]`)?.classList.add('active');
-            document.getElementById('detected-text').innerText = locales[det].detected;
         }, 950);
 
         document.querySelectorAll('.lang-btn').forEach(el => {

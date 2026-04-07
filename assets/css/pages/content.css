@@ -123,6 +123,11 @@ body[data-page="content"] .content-section .container {
     max-width: 1200px;
 }
 
+.content-intro-section {
+    padding-top: 2.5rem;
+    padding-bottom: 0;
+}
+
 
 .section-title {
     font-family: var(--font-display);
@@ -221,6 +226,10 @@ body[data-page="content"] .content-section .container {
 
     .content-section {
         padding: 3rem 0;
+    }
+
+    .content-intro-section {
+        padding-top: 2rem;
     }
 
     /* 
