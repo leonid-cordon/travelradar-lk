@@ -34,7 +34,7 @@
         "image": "https://travelradarlk.com/assets/images/content/cancun-budget-2026/hero_1920x250.jpg",
         "inLanguage": "ru",
         "datePublished": "2026-04-06",
-        "dateModified": "2026-04-07",
+        "dateModified": "2026-04-06",
         "author": { "@type": "Organization", "name": "TravelRadar LK" },
         "publisher": { "@type": "Organization", "name": "TravelRadar LK" },
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://travelradarlk.com/ru/content/cancun-budget-2026.html" }
@@ -1080,259 +1080,6 @@
         .calc2-cta-btn-secondary:hover {
             background: rgba(58, 184, 200, 0.08);
         }
-
-        /* ── Calculator Phase 1 overrides ── */
-        .calc2-widget {
-            background: linear-gradient(180deg, rgba(58, 184, 200, 0.08) 0%, rgba(8, 17, 24, 0.7) 100%);
-            border-color: rgba(58, 184, 200, 0.35);
-            border-radius: 8px;
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-        }
-
-        .calc2-topbar {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        @media(max-width:720px) {
-            .calc2-topbar {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .calc2-chip {
-            display: inline-flex;
-            align-items: center;
-            min-height: 35px;
-            padding: 8px 10px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.16));
-            background: rgba(255, 255, 255, 0.04);
-            font-size: 0.76rem;
-            line-height: 1.45;
-            opacity: 0.9;
-        }
-
-        .calc2-chip strong {
-            color: var(--color-accent, #3ab8c8);
-            margin-right: 6px;
-        }
-
-        .calc2-fields {
-            gap: 12px;
-            margin-bottom: 14px;
-        }
-
-        .calc2-field label {
-            font-size: 0.76rem;
-            opacity: 0.55;
-            font-weight: 600;
-        }
-
-        .calc2-field-hint {
-            opacity: 0.58;
-        }
-
-        .calc2-field select,
-        .calc2-field input {
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 8px;
-            padding: 10px 12px;
-            font-size: 0.94rem;
-        }
-
-        .calc2-field select:focus,
-        .calc2-field input:focus {
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .calc2-extras {
-            margin-bottom: 16px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.14));
-            background: rgba(255, 255, 255, 0.03);
-            overflow: hidden;
-        }
-
-        .calc2-extras>summary {
-            cursor: pointer;
-            padding: 12px 14px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            list-style: none;
-        }
-
-        .calc2-extras>summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .calc2-extras[open]>summary {
-            border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
-            background: rgba(58, 184, 200, 0.06);
-        }
-
-        .calc2-extras-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-            padding: 12px 14px 14px;
-        }
-
-        @media(max-width:640px) {
-            .calc2-extras-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .calc2-extra-item {
-            display: grid;
-            grid-template-columns: 18px 1fr auto;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.86rem;
-            line-height: 1.45;
-        }
-
-        .calc2-extra-item input {
-            margin: 0;
-        }
-
-        .calc2-help {
-            width: 18px;
-            height: 18px;
-            border: 1px solid rgba(58, 184, 200, 0.45);
-            border-radius: 999px;
-            background: transparent;
-            color: var(--color-accent, #3ab8c8);
-            font-size: 0.72rem;
-            font-weight: 700;
-            line-height: 1;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        .calc2-help-text {
-            grid-column: 2 / 4;
-            font-size: 0.74rem;
-            opacity: 0.7;
-            line-height: 1.45;
-            margin-top: -4px;
-        }
-
-        .calc2-result {
-            background: rgba(0, 0, 0, 0.2);
-            border-color: rgba(58, 184, 200, 0.3);
-        }
-
-        .calc2-range {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        @media(max-width:640px) {
-            .calc2-range {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .calc2-range-card {
-            padding: 10px 12px;
-            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .calc2-range-card.is-real {
-            border-color: var(--color-accent, #3ab8c8);
-            background: rgba(58, 184, 200, 0.1);
-        }
-
-        .calc2-range-label {
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 0.7px;
-            opacity: 0.55;
-            margin-bottom: 4px;
-        }
-
-        .calc2-range-value {
-            font-size: 1.05rem;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--color-accent, #3ab8c8);
-        }
-
-        .calc2-range-card.is-real .calc2-range-value {
-            font-size: 1.45rem;
-        }
-
-        .calc2-budget-options {
-            margin-bottom: 12px;
-        }
-
-        .calc2-section-title {
-            margin: 0 0 8px;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            opacity: 0.55;
-        }
-
-        .calc2-savings {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        @media(max-width:820px) {
-            .calc2-savings {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .calc2-saving-item {
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
-            background: rgba(255, 255, 255, 0.025);
-            font-size: 0.82rem;
-            line-height: 1.45;
-        }
-
-        .calc2-saving-item strong {
-            display: block;
-            margin-bottom: 3px;
-            font-size: 0.84rem;
-        }
-
-        .calc2-saving-amount {
-            color: #7fd38b;
-            font-weight: 700;
-            margin-top: 3px;
-        }
-
-        .calc2-explain {
-            margin-bottom: 12px;
-            padding: 10px 12px;
-            border-left: 3px solid var(--color-accent, #3ab8c8);
-            background: rgba(58, 184, 200, 0.08);
-            border-radius: 7px;
-            font-size: 0.84rem;
-            line-height: 1.6;
-            opacity: 0.92;
-        }
-
-        .calc2-hotel-cards a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
     </style>
 
     <link rel="stylesheet" href="/theme.css">
@@ -1360,7 +1107,7 @@
             alt="Канкун 2026 — белый песок, бирюзовое море и бюджет под контролем" class="article-hero-image">
         <div class="hero-content">
             <h1>Сколько стоит отдых в Канкуне в 2026 — честный бюджет без иллюзий</h1>
-            <p class="hero-subtitle">Travel Radar · обновлено 7 апреля 2026</p>
+            <p class="hero-subtitle">Travel Radar · 6 апреля 2026</p>
         </div>
     </section>
 
@@ -1913,13 +1660,9 @@
 
                 <div class="calc2-widget">
 
-                    <div class="calc2-topbar">
-                        <div class="calc2-chip" id="c2-today"><strong>Сегодня:</strong> 7 апреля 2026</div>
-                        <div class="calc2-chip" id="c2-rate"><strong>USD/EUR:</strong> 1 USD ≈ 0.92 EUR</div>
-                        <div class="calc2-chip">Цены ориентировочные и могут меняться по спросу</div>
-                    </div>
-
+                    <!-- Поля ввода -->
                     <div class="calc2-fields">
+
                         <div class="calc2-field">
                             <label for="c2-origin">Откуда летите</label>
                             <select id="c2-origin">
@@ -1928,30 +1671,8 @@
                                 <option value="usa-miami">США — Майами</option>
                                 <option value="usa-la">США — Лос-Анджелес</option>
                                 <option value="canada">Канада</option>
-                                <option value="other">Другое</option>
+                                <option value="other">Другое (~$600)</option>
                             </select>
-                        </div>
-
-                        <div class="calc2-field">
-                            <label for="c2-date">Дата поездки</label>
-                            <input type="date" id="c2-date">
-                            <div class="calc2-field-hint">Чем ближе дата, тем чаще дороже перелёт и проживание.</div>
-                        </div>
-
-                        <div class="calc2-field">
-                            <label for="c2-nights">Количество ночей</label>
-                            <input type="number" id="c2-nights" value="7" min="3" max="30" inputmode="numeric">
-                        </div>
-
-                        <div class="calc2-field">
-                            <label for="c2-people">Количество человек</label>
-                            <input type="number" id="c2-people" value="2" min="1" max="8" inputmode="numeric">
-                        </div>
-
-                        <div class="calc2-field">
-                            <label for="c2-budget">Ваш бюджет на поездку</label>
-                            <input type="number" id="c2-budget" value="5000" min="1200" max="30000" step="100"
-                                inputmode="numeric">
                         </div>
 
                         <div class="calc2-field">
@@ -1970,119 +1691,91 @@
                                 <option value="center" selected>Hotel Zone — центр</option>
                                 <option value="downtown">Downtown</option>
                             </select>
-                            <div class="calc2-field-hint">Количество номеров считается автоматически по правилу 2 человека
-                                на номер.</div>
                         </div>
+
+                        <div class="calc2-field">
+                            <label for="c2-nights">Количество ночей</label>
+                            <input type="number" id="c2-nights" value="7" min="3" max="30" inputmode="numeric">
+                        </div>
+
+                        <div class="calc2-field">
+                            <label for="c2-people">Количество человек</label>
+                            <input type="number" id="c2-people" value="2" min="1" max="8" inputmode="numeric">
+                        </div>
+
+                        <div class="calc2-field">
+                            <label for="c2-budget">Ваш бюджет на поездку</label>
+                            <input type="number" id="c2-budget" value="5000" min="1200" max="30000" step="100"
+                                inputmode="numeric">
+                            <div class="calc2-field-hint">Покажем, укладывается ли выбранный сценарий и что реально
+                                доступно за эту сумму.</div>
+                        </div>
+
                     </div>
 
-                    <details class="calc2-extras" id="c2-extras-toggle">
-                        <summary>Дополнительные расходы (по желанию)</summary>
-                        <div class="calc2-extras-grid">
-                            <label class="calc2-extra-item" for="c2-extra-baggage">
-                                <input type="checkbox" id="c2-extra-baggage">
-                                <span>Багаж</span>
-                                <button type="button" class="calc2-help" data-help-target="c2-help-baggage">?</button>
-                                <span class="calc2-help-text" id="c2-help-baggage" hidden>Обычный зарегистрированный багаж,
-                                    если тариф авиабилета его не включает.</span>
-                            </label>
-                            <label class="calc2-extra-item" for="c2-extra-insurance">
-                                <input type="checkbox" id="c2-extra-insurance">
-                                <span>Страховка</span>
-                                <button type="button" class="calc2-help" data-help-target="c2-help-insurance">?</button>
-                                <span class="calc2-help-text" id="c2-help-insurance" hidden>Базовая туристическая
-                                    страховка на время поездки.</span>
-                            </label>
-                            <label class="calc2-extra-item" for="c2-extra-transfer">
-                                <input type="checkbox" id="c2-extra-transfer">
-                                <span>Трансфер из аэропорта</span>
-                                <button type="button" class="calc2-help" data-help-target="c2-help-transfer">?</button>
-                                <span class="calc2-help-text" id="c2-help-transfer" hidden>Трансфер из аэропорта до отеля и
-                                    обратно.</span>
-                            </label>
-                            <label class="calc2-extra-item" for="c2-extra-resort">
-                                <input type="checkbox" id="c2-extra-resort">
-                                <span>Resort fee</span>
-                                <button type="button" class="calc2-help" data-help-target="c2-help-resort">?</button>
-                                <span class="calc2-help-text" id="c2-help-resort" hidden>Дополнительный сбор отеля, который
-                                    иногда не включен в базовую цену номера.</span>
-                            </label>
-                            <label class="calc2-extra-item" for="c2-extra-esim">
-                                <input type="checkbox" id="c2-extra-esim">
-                                <span>Интернет / eSIM</span>
-                                <button type="button" class="calc2-help" data-help-target="c2-help-esim">?</button>
-                                <span class="calc2-help-text" id="c2-help-esim" hidden>Цифровая SIM для интернета без
-                                    физической карточки.</span>
-                            </label>
-                        </div>
-                    </details>
-
+                    <!-- Результат -->
                     <div class="calc2-result">
-                        <div class="calc2-result-label">Ориентировочная стоимость на всех</div>
-                        <div class="calc2-range" aria-live="polite">
-                            <div class="calc2-range-card">
-                                <div class="calc2-range-label">Минимум</div>
-                                <div class="calc2-range-value" id="c2-price-min">$4,600</div>
-                            </div>
-                            <div class="calc2-range-card is-real">
-                                <div class="calc2-range-label">Реалистично</div>
-                                <div class="calc2-range-value" id="c2-price-real">$4,900</div>
-                            </div>
-                            <div class="calc2-range-card">
-                                <div class="calc2-range-label">В высокий спрос</div>
-                                <div class="calc2-range-value" id="c2-price-max">$5,300</div>
-                            </div>
-                        </div>
+                        <div class="calc2-result-label">Ориентировочный бюджет на всех</div>
+                        <div class="calc2-result-price" id="c2-price" aria-live="polite">≈ $4,900</div>
 
+                        <!-- Категория + breakdown -->
                         <div class="calc2-category">
+                            Вы выбрали:
                             <span class="calc2-category-badge badge-comfort" id="c2-badge">Комфортный</span>
                             <span class="calc2-category-text" id="c2-current-meta">Hotel Zone (центр) · 7 ночей · 2
                                 человека · 1 номер</span>
                         </div>
-
-                        <div class="calc2-result-breakdown" id="c2-breakdown">
-                            Перелёт: $2,160 · Отель: $1,050 · Прочие расходы: $1,666
+                        <div class="calc2-result-breakdown" id="c2-breakdown" aria-live="polite">
+                            Перелёт: $2,160 <span class="calc2-inline-note">(~€1,000 / чел.)</span> · Отель: $1,050 ·
+                            Прочее: $1,666<br>Комфортный · Hotel Zone (центр) · 7 ночей · 2 человека · 1 номер
                         </div>
 
-                        <div class="calc2-budget-box">
+                        <div class="calc2-budget-box" id="c2-budget-box" aria-live="polite">
                             <div class="calc2-budget-head">
-                                <div class="calc2-budget-title">Статус бюджета</div>
+                                <div class="calc2-budget-title">С бюджетом <span id="c2-budget-value">$5,000</span></div>
                                 <span class="calc2-budget-state state-tight" id="c2-budget-state">Впритык</span>
                             </div>
-                            <div class="calc2-budget-summary" id="c2-budget-summary">Текущий сценарий почти впритык к
-                                вашему бюджету.</div>
+                            <div class="calc2-budget-summary" id="c2-budget-summary">Текущий сценарий укладывается почти
+                                впритык: запас около $100.</div>
+                            <div class="calc2-budget-options" id="c2-budget-options">
+                                <div class="calc2-budget-option is-primary">
+                                    <div class="calc2-budget-option-title">Комфортный · Hotel Zone (центр)</div>
+                                    <div class="calc2-budget-option-price">≈ $4,900</div>
+                                    <div class="calc2-budget-option-meta">7 ночей · 2 человека · 1 номер</div>
+                                    <div class="calc2-budget-option-note">Запас около $100</div>
+                                </div>
+                            </div>
                         </div>
 
-                        <h3 class="calc2-section-title">Что реально доступно за ваш бюджет</h3>
-                        <div class="calc2-budget-options" id="c2-budget-options"></div>
-
-                        <h3 class="calc2-section-title">Как уложиться в бюджет</h3>
-                        <div class="calc2-savings" id="c2-savings"></div>
-
-                        <h3 class="calc2-section-title">Почему такая цена</h3>
-                        <div class="calc2-explain" id="c2-explain"></div>
-
+                        <!-- Urgency -->
                         <div class="calc2-urgency" id="c2-urgency">
                             <span class="calc2-urgency-icon">⏱</span>
                             <div>
-                                <strong id="c2-urgency-title">Лучшие варианты уходят заранее</strong>
-                                <span id="c2-urgency-text">Проверьте цены сразу на несколько отелей: ближе к дате чаще
-                                    дороже.</span>
+                                <strong id="c2-urgency-title">Комфортные отели разбирают за 2–3 недели</strong>
+                                <span id="c2-urgency-text">Чем ближе к дате — тем выше цена. Хорошие варианты в этом
+                                    бюджете уходят первыми.</span>
                             </div>
                         </div>
 
+                        <!-- Конверсионный блок -->
                         <div class="calc2-cta">
                             <div class="calc2-cta-text">
-                                <strong id="c2-cta-label">Подходящие отели под выбранный формат и район</strong>
+                                <span id="c2-cta-prefix">👉 Под ваш бюджет подходят следующие варианты:</span>
+                                <strong id="c2-cta-label">Комфортные отели — Hotel Zone (центр)</strong>
                             </div>
-                            <div class="calc2-hotel-cards" id="c2-hotel-cards"></div>
+                            <div class="calc2-hotel-cards" id="c2-hotel-cards">
+                                <!-- JS рендерит карточки -->
+                            </div>
+
+                            <!-- Двойная CTA -->
                             <div class="calc2-cta-buttons">
-                                <a href="https://www.booking.com/searchresults.html?ss=Cancun&selected_currency=USD"
-                                    id="c2-cta-link" class="calc2-cta-btn" target="_blank" rel="noopener noreferrer">
-                                    Смотреть варианты на Booking
+                                <a href="/ru/hotels/cancun/?budget=comfort&zone=center&nights=7" id="c2-cta-link"
+                                    class="calc2-cta-btn">
+                                    Смотреть отели под мой бюджет →
                                 </a>
                                 <a href="/ru/content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay.html"
                                     id="c2-cta-compare" class="calc2-cta-btn-secondary">
-                                    Сравнить курорты
+                                    Сравнить курорты →
                                 </a>
                             </div>
                         </div>
@@ -2092,7 +1785,6 @@
                 <!-- Скрипт калькулятора v2 — заменяет старый -->
                 <script>
                     (function () {
-                        return;
                         var formatKeys = ['budget', 'comfort', 'ai'];
                         var zoneKeys = ['north', 'center', 'downtown'];
 
@@ -2483,435 +2175,6 @@
                             el.addEventListener('input', calc);
                         });
 
-                        calc();
-                    })();
-                </script>
-                <script>
-                    (function () {
-                        var destinationConfig = { displayName: 'Канкун', defaultEurRate: 0.92 };
-                        var originConfig = {
-                            europe: { label: 'Европа', baseFlight: 1080, note: '~EUR 1,000 / чел.' },
-                            'usa-ny': { label: 'США — Нью-Йорк', baseFlight: 480, note: '~$480 / чел.' },
-                            'usa-miami': { label: 'США — Майами', baseFlight: 360, note: '~$360 / чел.' },
-                            'usa-la': { label: 'США — Лос-Анджелес', baseFlight: 560, note: '~$560 / чел.' },
-                            canada: { label: 'Канада', baseFlight: 650, note: '~C$700 / чел.' },
-                            other: { label: 'Другое', baseFlight: 600, note: '~$600 / чел.' }
-                        };
-                        var formatConfig = {
-                            budget: { label: 'Бюджетный', hotelBasePerNight: 70, daily: { food: 30, transport: 9, activities: 20, hidden: 14 } },
-                            comfort: { label: 'Комфортный', hotelBasePerNight: 150, daily: { food: 50, transport: 14, activities: 35, hidden: 20 } },
-                            ai: { label: 'All Inclusive', hotelBasePerNight: 300, daily: { food: 12, transport: 14, activities: 28, hidden: 28 } }
-                        };
-                        var zoneConfig = {
-                            north: { label: 'Hotel Zone (север)', multiplier: 1.20 },
-                            center: { label: 'Hotel Zone (центр)', multiplier: 1.00 },
-                            downtown: { label: 'Downtown', multiplier: 0.55 }
-                        };
-                        var seasonConfig = {
-                            0: { season: 'high', flight: 1.16, hotel: 1.15, daily: 1.04 }, 1: { season: 'high', flight: 1.18, hotel: 1.16, daily: 1.05 },
-                            2: { season: 'high', flight: 1.14, hotel: 1.12, daily: 1.03 }, 3: { season: 'mid', flight: 1.00, hotel: 1.00, daily: 1.00 },
-                            4: { season: 'mid', flight: 0.98, hotel: 0.98, daily: 0.99 }, 5: { season: 'mid', flight: 1.02, hotel: 1.00, daily: 1.01 },
-                            6: { season: 'mid', flight: 1.05, hotel: 1.03, daily: 1.02 }, 7: { season: 'mid', flight: 1.03, hotel: 1.02, daily: 1.01 },
-                            8: { season: 'low', flight: 0.90, hotel: 0.86, daily: 0.97 }, 9: { season: 'low', flight: 0.88, hotel: 0.84, daily: 0.96 },
-                            10: { season: 'mid', flight: 1.04, hotel: 1.05, daily: 1.01 }, 11: { season: 'high', flight: 1.17, hotel: 1.20, daily: 1.06 }
-                        };
-                        var leadTimeConfig = [
-                            { minDays: 0, maxDays: 14, flight: 1.35, hotel: 1.12, label: 'очень близко к дате' },
-                            { minDays: 15, maxDays: 45, flight: 1.15, hotel: 1.06, label: 'близкая дата' },
-                            { minDays: 46, maxDays: 90, flight: 1.00, hotel: 1.00, label: 'нормальное окно бронирования' },
-                            { minDays: 91, maxDays: 180, flight: 0.93, hotel: 0.97, label: 'раннее бронирование' },
-                            { minDays: 181, maxDays: 9999, flight: 0.96, hotel: 1.00, label: 'слишком ранняя оценка, точность ниже' }
-                        ];
-                        var monthPartConfig = { firstHalf: { flight: 1.00, hotel: 1.00 }, secondHalf: { flight: 1.03, hotel: 1.04 } };
-                        var extrasConfig = {
-                            baggage: { type: 'per_person_roundtrip', price: 70 },
-                            insurance: { type: 'per_person_trip', price: 35 },
-                            transfer: { type: 'per_booking_trip', price: 55 },
-                            resort: { type: 'per_night_per_room', price: 18 },
-                            esim: { type: 'per_person_trip', price: 18 }
-                        };
-                        var hotelCatalog = [
-                            { name: 'Antillano Hotel', zone: 'downtown', formats: ['budget'], priceMin: 45, priceMax: 72, directUrl: 'https://www.booking.com/searchresults.html?ss=Antillano%20Hotel%20Cancun', tags: ['бюджет', 'центр'] },
-                            { name: 'Hostal Natura', zone: 'downtown', formats: ['budget'], priceMin: 50, priceMax: 76, directUrl: 'https://www.booking.com/searchresults.html?ss=Hostal%20Natura%20Cancun', tags: ['wifi', 'чисто'] },
-                            { name: 'Hotel Plaza Kokai', zone: 'downtown', formats: ['budget', 'comfort'], priceMin: 58, priceMax: 86, directUrl: 'https://www.booking.com/searchresults.html?ss=Hotel%20Plaza%20Kokai%20Cancun', tags: ['рынок', 'транспорт'] },
-                            { name: 'Riu Caribe', zone: 'center', formats: ['comfort', 'ai'], priceMin: 140, priceMax: 235, directUrl: 'https://www.booking.com/searchresults.html?ss=Riu%20Caribe%20Cancun', tags: ['пляж', 'баланс'] },
-                            { name: 'Park Royal Beach', zone: 'center', formats: ['comfort'], priceMin: 130, priceMax: 185, directUrl: 'https://www.booking.com/searchresults.html?ss=Park%20Royal%20Beach%20Cancun', tags: ['семьи', 'центр'] },
-                            { name: 'The Westin Cancun', zone: 'center', formats: ['comfort'], priceMin: 150, priceMax: 210, directUrl: 'https://www.booking.com/searchresults.html?ss=The%20Westin%20Cancun', tags: ['сервис', 'пляж'] },
-                            { name: 'Grand Fiesta Americana', zone: 'north', formats: ['comfort', 'ai'], priceMin: 165, priceMax: 250, directUrl: 'https://www.booking.com/searchresults.html?ss=Grand%20Fiesta%20Americana%20Cancun', tags: ['север', 'топ пляж'] },
-                            { name: 'Krystal Grand Cancun', zone: 'north', formats: ['comfort'], priceMin: 145, priceMax: 205, directUrl: 'https://www.booking.com/searchresults.html?ss=Krystal%20Grand%20Cancun', tags: ['семьи'] },
-                            { name: 'Hyatt Ziva Cancun', zone: 'north', formats: ['ai'], priceMin: 310, priceMax: 440, directUrl: 'https://www.booking.com/searchresults.html?ss=Hyatt%20Ziva%20Cancun', tags: ['premium', 'AI'] },
-                            { name: 'Moon Palace Cancun', zone: 'center', formats: ['ai'], priceMin: 290, priceMax: 420, directUrl: 'https://www.booking.com/searchresults.html?ss=Moon%20Palace%20Cancun', tags: ['территория'] },
-                            { name: 'Hard Rock Hotel Cancun', zone: 'center', formats: ['ai'], priceMin: 260, priceMax: 390, directUrl: 'https://www.booking.com/searchresults.html?ss=Hard%20Rock%20Hotel%20Cancun', tags: ['активно'] },
-                            { name: 'Oasis Palm', zone: 'downtown', formats: ['ai', 'comfort'], priceMin: 180, priceMax: 280, directUrl: 'https://www.booking.com/searchresults.html?ss=Oasis%20Palm%20Cancun', tags: ['доступный AI'] }
-                        ];
-                        var el = {
-                            origin: document.getElementById('c2-origin'), date: document.getElementById('c2-date'), nights: document.getElementById('c2-nights'), people: document.getElementById('c2-people'),
-                            budget: document.getElementById('c2-budget'), format: document.getElementById('c2-format'), zone: document.getElementById('c2-zone'),
-                            today: document.getElementById('c2-today'), rate: document.getElementById('c2-rate'), min: document.getElementById('c2-price-min'),
-                            real: document.getElementById('c2-price-real'), max: document.getElementById('c2-price-max'), badge: document.getElementById('c2-badge'),
-                            meta: document.getElementById('c2-current-meta'), breakdown: document.getElementById('c2-breakdown'), budgetState: document.getElementById('c2-budget-state'),
-                            budgetSummary: document.getElementById('c2-budget-summary'), options: document.getElementById('c2-budget-options'),
-                            savings: document.getElementById('c2-savings'), explain: document.getElementById('c2-explain'),
-                            urgTitle: document.getElementById('c2-urgency-title'), urgText: document.getElementById('c2-urgency-text'),
-                            ctaLabel: document.getElementById('c2-cta-label'), hotelCards: document.getElementById('c2-hotel-cards'), ctaLink: document.getElementById('c2-cta-link'),
-                            legacyPrice: document.getElementById('c2-price'), baggage: document.getElementById('c2-extra-baggage'),
-                            insurance: document.getElementById('c2-extra-insurance'), transfer: document.getElementById('c2-extra-transfer'),
-                            resort: document.getElementById('c2-extra-resort'), esim: document.getElementById('c2-extra-esim')
-                        };
-                        if (!el.origin || !el.date || !el.nights || !el.people || !el.budget || !el.format || !el.zone) return;
-
-                        function clampInt(v, fb, min, max) { var n = parseInt(v, 10); if (isNaN(n)) n = fb; return Math.min(max, Math.max(min, n)); }
-                        function roundTo(n, step) { return Math.round(n / step) * step; }
-                        function usd(v) { return '$' + Math.round(v).toLocaleString('en-US'); }
-                        function eur(v) { return '€' + Math.round(v).toLocaleString('de-DE'); }
-                        function clearNode(n) { while (n && n.firstChild) n.removeChild(n.firstChild); }
-                        function dayStart(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
-                        function addDays(d, x) { var c = new Date(d.getTime()); c.setDate(c.getDate() + x); return c; }
-                        function formatDateInput(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
-                        function parseDateInput(v) {
-                            if (!v) return null;
-                            var p = v.split('-'); if (p.length !== 3) return null;
-                            var y = parseInt(p[0], 10), m = parseInt(p[1], 10) - 1, d = parseInt(p[2], 10);
-                            var dt = new Date(y, m, d); if (dt.getFullYear() !== y || dt.getMonth() !== m || dt.getDate() !== d) return null;
-                            return dt;
-                        }
-                        function diffDays(a, b) { return Math.max(0, Math.ceil((dayStart(b).getTime() - dayStart(a).getTime()) / 86400000)); }
-                        function dayWord(n) { if (n % 10 === 1 && n % 100 !== 11) return 'день'; if ([2, 3, 4].indexOf(n % 10) > -1 && [12, 13, 14].indexOf(n % 100) === -1) return 'дня'; return 'дней'; }
-                        function nightWord(n) { if (n % 10 === 1 && n % 100 !== 11) return 'ночь'; if ([2, 3, 4].indexOf(n % 10) > -1 && [12, 13, 14].indexOf(n % 100) === -1) return 'ночи'; return 'ночей'; }
-                        function personWord(n) { if (n === 1) return 'человек'; if ([2, 3, 4].indexOf(n) > -1) return 'человека'; return 'человек'; }
-                        function roomWord(n) { if (n % 10 === 1 && n % 100 !== 11) return 'номер'; if ([2, 3, 4].indexOf(n % 10) > -1 && [12, 13, 14].indexOf(n % 100) === -1) return 'номера'; return 'номеров'; }
-                        function formatRuDate(d) { var m = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']; return d.getDate() + ' ' + m[d.getMonth()] + ' ' + d.getFullYear(); }
-                        function seasonLabel(k) { return k === 'high' ? 'высокий сезон' : (k === 'low' ? 'низкий сезон' : 'средний сезон'); }
-                        function findLead(days) { for (var i = 0; i < leadTimeConfig.length; i++) if (days >= leadTimeConfig[i].minDays && days <= leadTimeConfig[i].maxDays) return leadTimeConfig[i]; return leadTimeConfig[2]; }
-                        function getContext(v) {
-                            var now = dayStart(new Date()), dep = parseDateInput(v);
-                            if (!dep) dep = addDays(now, 90);
-                            dep = dayStart(dep);
-                            if (dep.getTime() < now.getTime()) dep = now;
-                            var days = diffDays(now, dep);
-                            return { today: now, departureDate: dep, daysUntilDeparture: days, season: seasonConfig[dep.getMonth()] || seasonConfig[3], lead: findLead(days), monthPart: dep.getDate() <= 15 ? monthPartConfig.firstHalf : monthPartConfig.secondHalf };
-                        }
-                        function getExtrasState() {
-                            return {
-                                baggage: !!(el.baggage && el.baggage.checked),
-                                insurance: !!(el.insurance && el.insurance.checked),
-                                transfer: !!(el.transfer && el.transfer.checked),
-                                resort: !!(el.resort && el.resort.checked),
-                                esim: !!(el.esim && el.esim.checked)
-                            };
-                        }
-                        function extrasTotal(s, people, nights, rooms) {
-                            var t = 0;
-                            Object.keys(s).forEach(function (k) {
-                                if (!s[k]) return;
-                                var x = extrasConfig[k];
-                                if (!x) return;
-                                if (x.type === 'per_person_roundtrip' || x.type === 'per_person_trip') t += x.price * people;
-                                else if (x.type === 'per_booking_trip') t += x.price;
-                                else if (x.type === 'per_night_per_room') t += x.price * nights * rooms;
-                            });
-                            return t;
-                        }
-                        function buildScenario(input, ctx, extrasState) {
-                            var origin = originConfig[input.origin] || originConfig.other;
-                            var format = formatConfig[input.format] || formatConfig.comfort;
-                            var zone = zoneConfig[input.zone] || zoneConfig.center;
-                            var rooms = Math.max(1, Math.ceil(input.people / 2));
-                            var flightReal = origin.baseFlight * input.people * ctx.season.flight * ctx.lead.flight * ctx.monthPart.flight;
-                            var hotelReal = format.hotelBasePerNight * zone.multiplier * ctx.season.hotel * ctx.lead.hotel * ctx.monthPart.hotel * input.nights * rooms;
-                            var dailyBase = format.daily.food + format.daily.transport + format.daily.activities + format.daily.hidden;
-                            var dailyReal = dailyBase * ctx.season.daily * input.nights * input.people;
-                            var extrasReal = extrasTotal(extrasState, input.people, input.nights, rooms);
-                            var flight = { min: flightReal * 0.92, real: flightReal, max: flightReal * 1.12 };
-                            var hotel = { min: hotelReal * 0.95, real: hotelReal, max: hotelReal * 1.10 };
-                            var daily = { min: dailyReal * 0.93, real: dailyReal, max: dailyReal * 1.08 };
-                            var extras = { min: extrasReal, real: extrasReal, max: extrasReal };
-                            return {
-                                key: input.format + ':' + input.zone,
-                                originLabel: origin.label,
-                                originNote: origin.note,
-                                formatKey: input.format,
-                                formatLabel: format.label,
-                                zoneKey: input.zone,
-                                zoneLabel: zone.label,
-                                nights: input.nights,
-                                people: input.people,
-                                rooms: rooms,
-                                context: ctx,
-                                extrasState: extrasState,
-                                flight: flight,
-                                hotel: hotel,
-                                daily: daily,
-                                extras: extras,
-                                totalMin: roundTo(flight.min + hotel.min + daily.min + extras.min, 50),
-                                totalReal: roundTo(flight.real + hotel.real + daily.real + extras.real, 100),
-                                totalMax: roundTo(flight.max + hotel.max + daily.max + extras.max, 50)
-                            };
-                        }
-                        function listScenarios(input, ctx, extrasState) {
-                            var out = [];
-                            var formats = Object.keys(formatConfig);
-                            var zones = Object.keys(zoneConfig);
-                            formats.forEach(function (f) {
-                                zones.forEach(function (z) {
-                                    out.push(buildScenario({ origin: input.origin, format: f, zone: z, nights: input.nights, people: input.people }, ctx, extrasState));
-                                });
-                            });
-                            return out;
-                        }
-                        function scenarioLabel(s) { return s.formatLabel + ' · ' + s.zoneLabel; }
-                        function scenarioMeta(s) { return s.nights + ' ' + nightWord(s.nights) + ' · ' + s.people + ' ' + personWord(s.people) + ' · ' + s.rooms + ' ' + roomWord(s.rooms); }
-                        function statusForBudget(budget, s) {
-                            if (budget >= s.totalReal + 700) return { key: 'fit', label: 'С запасом' };
-                            if (budget >= s.totalReal) return { key: 'tight', label: 'Впритык' };
-                            if (budget >= s.totalMin) return { key: 'over', label: 'Выше бюджета' };
-                            return { key: 'low', label: 'Нужно больше бюджета' };
-                        }
-                        function sortByBudgetFit(arr, budget) {
-                            return arr.slice().sort(function (a, b) {
-                                var aw = a.totalReal <= budget ? 0 : 1;
-                                var bw = b.totalReal <= budget ? 0 : 1;
-                                if (aw !== bw) return aw - bw;
-                                if (aw === 0) return b.totalReal - a.totalReal;
-                                var ag = Math.abs(a.totalReal - budget);
-                                var bg = Math.abs(b.totalReal - budget);
-                                if (ag !== bg) return ag - bg;
-                                return a.totalMin - b.totalMin;
-                            });
-                        }
-                        function pickOptions(current, all, budget) {
-                            var sorted = sortByBudgetFit(all, budget);
-                            var res = [current];
-                            for (var i = 0; i < sorted.length && res.length < 3; i++) {
-                                if (sorted[i].key !== current.key) res.push(sorted[i]);
-                            }
-                            return res;
-                        }
-                        function renderOptions(options, budget, primaryKey) {
-                            clearNode(el.options);
-                            if (!el.options) return;
-                            options.forEach(function (s) {
-                                var card = document.createElement('div');
-                                card.className = 'calc2-budget-option' + (s.key === primaryKey ? ' is-primary' : '');
-                                var title = document.createElement('div');
-                                title.className = 'calc2-budget-option-title';
-                                title.textContent = scenarioLabel(s);
-                                var price = document.createElement('div');
-                                price.className = 'calc2-budget-option-price';
-                                price.textContent = 'Реалистично: ' + usd(s.totalReal);
-                                var meta = document.createElement('div');
-                                meta.className = 'calc2-budget-option-meta';
-                                meta.textContent = 'Диапазон: ' + usd(s.totalMin) + ' - ' + usd(s.totalMax) + ' · ' + scenarioMeta(s);
-                                var note = document.createElement('div');
-                                note.className = 'calc2-budget-option-note';
-                                note.textContent = budget >= s.totalReal ? 'Укладывается с запасом ' + usd(budget - s.totalReal) : 'Не хватает ' + usd(s.totalReal - budget);
-                                card.appendChild(title);
-                                card.appendChild(price);
-                                card.appendChild(meta);
-                                card.appendChild(note);
-                                el.options.appendChild(card);
-                            });
-                        }
-                        function getCheaperFormat(f) { if (f === 'ai') return 'comfort'; if (f === 'comfort') return 'budget'; return null; }
-                        function getCheaperZone(z) { if (z === 'north') return 'center'; if (z === 'center') return 'downtown'; return null; }
-                        function renderSavings(current, input, ctx, extrasState) {
-                            clearNode(el.savings);
-                            if (!el.savings) return;
-                            var tips = [];
-                            function pushTip(title, detail, candidate) {
-                                var save = current.totalReal - candidate.totalReal;
-                                if (save >= 70) tips.push({ title: title, detail: detail, saving: save });
-                            }
-                            if (input.nights >= 4) {
-                                pushTip('Минус 1 ночь', 'Снизить длительность поездки на 1 ночь.',
-                                    buildScenario({ origin: input.origin, format: input.format, zone: input.zone, nights: input.nights - 1, people: input.people }, ctx, extrasState));
-                            }
-                            if (input.nights >= 5) {
-                                pushTip('Минус 2 ночи', 'Самая частая экономия без смены формата.',
-                                    buildScenario({ origin: input.origin, format: input.format, zone: input.zone, nights: input.nights - 2, people: input.people }, ctx, extrasState));
-                            }
-                            var cheapZone = getCheaperZone(input.zone);
-                            if (cheapZone) {
-                                pushTip('Сменить район на ' + zoneConfig[cheapZone].label, 'Тот же формат, но более доступная зона.',
-                                    buildScenario({ origin: input.origin, format: input.format, zone: cheapZone, nights: input.nights, people: input.people }, ctx, extrasState));
-                            }
-                            var cheapFormat = getCheaperFormat(input.format);
-                            if (cheapFormat) {
-                                pushTip('Сменить формат на ' + formatConfig[cheapFormat].label, 'Чаще всего сильнее всего влияет на цену.',
-                                    buildScenario({ origin: input.origin, format: cheapFormat, zone: input.zone, nights: input.nights, people: input.people }, ctx, extrasState));
-                            }
-                            var selectedExtras = Object.keys(extrasState).filter(function (k) { return extrasState[k]; });
-                            if (selectedExtras.length) {
-                                pushTip('Отключить допрасходы', 'Добавляйте их потом точечно по важности.',
-                                    buildScenario({ origin: input.origin, format: input.format, zone: input.zone, nights: input.nights, people: input.people }, ctx, { baggage: false, insurance: false, transfer: false, resort: false, esim: false }));
-                            }
-                            if (ctx.season.season === 'high' || ctx.daysUntilDeparture <= 45) {
-                                var shiftedCtx = getContext(formatDateInput(addDays(ctx.departureDate, 42)));
-                                pushTip('Сдвинуть дату на 4-6 недель', 'Сезонный и срочный коэффициенты часто ниже.',
-                                    buildScenario({ origin: input.origin, format: input.format, zone: input.zone, nights: input.nights, people: input.people }, shiftedCtx, extrasState));
-                            }
-                            tips.sort(function (a, b) { return b.saving - a.saving; });
-                            if (!tips.length) tips.push({ title: 'Текущий сценарий близок к оптимальному', detail: 'Сохраните небольшой запас на колебания цен.', saving: 0 });
-                            tips.slice(0, 4).forEach(function (tip) {
-                                var card = document.createElement('div');
-                                card.className = 'calc2-saving-item';
-                                var ttl = document.createElement('strong');
-                                ttl.textContent = tip.title;
-                                var dtl = document.createElement('div');
-                                dtl.textContent = tip.detail;
-                                card.appendChild(ttl);
-                                card.appendChild(dtl);
-                                if (tip.saving > 0) {
-                                    var amt = document.createElement('div');
-                                    amt.className = 'calc2-saving-amount';
-                                    amt.textContent = 'Экономия около ' + usd(tip.saving);
-                                    card.appendChild(amt);
-                                }
-                                el.savings.appendChild(card);
-                            });
-                        }
-                        function buildExplainText(s) {
-                            var extrasCount = Object.keys(s.extrasState).filter(function (k) { return s.extrasState[k]; }).length;
-                            var text = 'Вы летите из ' + s.originLabel + '. До поездки осталось ' + s.context.daysUntilDeparture + ' ' + dayWord(s.context.daysUntilDeparture) +
-                                ' (' + s.context.lead.label + '), дата попадает в ' + seasonLabel(s.context.season.season) + '. ';
-                            text += 'Для ' + s.people + ' ' + personWord(s.people) + ' проживание считается на ' + s.rooms + ' ' + roomWord(s.rooms) + '. ';
-                            text += extrasCount > 0 ? 'В расчете включены допрасходы, поэтому итог выше базового.' : 'Дополнительные расходы не включены, это базовый ориентир.';
-                            return text;
-                        }
-                        function pickHotels(formatKey, zoneKey) {
-                            var exact = hotelCatalog.filter(function (h) { return h.zone === zoneKey && h.formats.indexOf(formatKey) > -1; });
-                            if (exact.length >= 3) return exact.slice(0, 3);
-                            var byFormat = hotelCatalog.filter(function (h) { return h.formats.indexOf(formatKey) > -1; });
-                            if (byFormat.length >= 3) return byFormat.slice(0, 3);
-                            return hotelCatalog.slice(0, 3);
-                        }
-                        function bookingSearchUrl(s) {
-                            var inDate = formatDateInput(s.context.departureDate);
-                            var outDate = formatDateInput(addDays(s.context.departureDate, s.nights));
-                            var phrase = destinationConfig.displayName + ' ' + s.zoneLabel;
-                            return 'https://www.booking.com/searchresults.html?ss=' + encodeURIComponent(phrase) +
-                                '&checkin=' + encodeURIComponent(inDate) + '&checkout=' + encodeURIComponent(outDate) +
-                                '&group_adults=' + encodeURIComponent(String(s.people)) + '&no_rooms=' + encodeURIComponent(String(s.rooms)) +
-                                '&selected_currency=USD';
-                        }
-                        function renderHotelCards(s) {
-                            clearNode(el.hotelCards);
-                            if (!el.hotelCards) return;
-                            pickHotels(s.formatKey, s.zoneKey).forEach(function (h) {
-                                var link = document.createElement('a');
-                                link.href = h.directUrl +
-                                    '&checkin=' + encodeURIComponent(formatDateInput(s.context.departureDate)) +
-                                    '&checkout=' + encodeURIComponent(formatDateInput(addDays(s.context.departureDate, s.nights))) +
-                                    '&group_adults=' + encodeURIComponent(String(s.people)) +
-                                    '&no_rooms=' + encodeURIComponent(String(s.rooms));
-                                link.target = '_blank';
-                                link.rel = 'noopener noreferrer';
-                                var card = document.createElement('div');
-                                card.className = 'calc2-hotel-card';
-                                var name = document.createElement('div');
-                                name.className = 'chc-name';
-                                name.textContent = h.name;
-                                var price = document.createElement('div');
-                                price.className = 'chc-price';
-                                price.textContent = usd(h.priceMin) + ' - ' + usd(h.priceMax) + ' / ночь';
-                                var tag = document.createElement('div');
-                                tag.className = 'chc-tag';
-                                tag.textContent = h.tags.join(' · ');
-                                var hint = document.createElement('div');
-                                hint.className = 'chc-link-hint';
-                                hint.textContent = 'Открыть на Booking';
-                                card.appendChild(name);
-                                card.appendChild(price);
-                                card.appendChild(tag);
-                                card.appendChild(hint);
-                                link.appendChild(card);
-                                el.hotelCards.appendChild(link);
-                            });
-                        }
-                        function renderUrgency(s) {
-                            if (!el.urgTitle || !el.urgText) return;
-                            if (s.context.daysUntilDeparture <= 14) {
-                                el.urgTitle.textContent = 'Поездка уже близко, цены могут расти ежедневно';
-                                el.urgText.textContent = 'При таком горизонте билеты и хорошие отели обычно дорожают быстрее.';
-                                return;
-                            }
-                            if (s.context.season.season === 'high') {
-                                el.urgTitle.textContent = 'Выбран высокий сезон по Канкуну';
-                                el.urgText.textContent = 'В пиковые месяцы лучше бронировать заранее: хорошие варианты уходят раньше.';
-                                return;
-                            }
-                            if (s.context.daysUntilDeparture >= 181) {
-                                el.urgTitle.textContent = 'Оценка сделана очень заранее';
-                                el.urgText.textContent = 'Сейчас это предварительный ориентир, ближе к дате точность будет выше.';
-                                return;
-                            }
-                            el.urgTitle.textContent = 'Сейчас окно для спокойного бронирования';
-                            el.urgText.textContent = 'В этом периоде обычно проще поймать баланс цены и качества.';
-                        }
-                        function renderScenario(current, options, budget) {
-                            if (el.min) el.min.textContent = usd(current.totalMin);
-                            if (el.real) el.real.textContent = usd(current.totalReal);
-                            if (el.max) el.max.textContent = usd(current.totalMax);
-                            if (el.legacyPrice) el.legacyPrice.textContent = '≈ ' + usd(current.totalReal);
-                            if (el.badge) {
-                                el.badge.textContent = current.formatLabel;
-                                el.badge.className = 'calc2-category-badge badge-' + current.formatKey;
-                            }
-                            if (el.meta) el.meta.textContent = current.zoneLabel + ' · ' + scenarioMeta(current) + ' · вылет ' + formatDateInput(current.context.departureDate);
-                            if (el.breakdown) {
-                                el.breakdown.innerHTML = 'Перелёт: ' + usd(current.flight.real) + ' <span class=\"calc2-inline-note\">(' + current.originNote + ')</span> · Отель: ' + usd(current.hotel.real) +
-                                    ' · Прочие расходы: ' + usd(current.daily.real) + (current.extras.real > 0 ? ' · Доп. расходы: ' + usd(current.extras.real) : '') +
-                                    '<br>EUR ориентир (реалистично): ' + eur(current.totalReal * destinationConfig.defaultEurRate);
-                            }
-                            var status = statusForBudget(budget, current);
-                            if (el.budgetState) {
-                                el.budgetState.className = 'calc2-budget-state state-' + status.key;
-                                el.budgetState.textContent = status.label;
-                            }
-                            if (el.budgetSummary) {
-                                if (status.key === 'fit') el.budgetSummary.textContent = 'У вас запас около ' + usd(budget - current.totalReal) + '. Можно сохранить сценарий и держать резерв.';
-                                else if (status.key === 'tight') el.budgetSummary.textContent = 'Сценарий укладывается почти впритык. Запас около ' + usd(budget - current.totalReal) + '.';
-                                else if (status.key === 'over') el.budgetSummary.textContent = 'Реалистичная оценка выше бюджета на ' + usd(current.totalReal - budget) + ', но минимальный сценарий еще достижим.';
-                                else el.budgetSummary.textContent = 'Даже минимальная оценка выше бюджета на ' + usd(current.totalMin - budget) + '. Нужен более экономный вариант.';
-                            }
-                            renderOptions(options, budget, current.key);
-                            if (el.explain) el.explain.textContent = buildExplainText(current);
-                            renderUrgency(current);
-                            renderHotelCards(current);
-                            if (el.ctaLabel) el.ctaLabel.textContent = scenarioLabel(current) + ' · ' + scenarioMeta(current);
-                            if (el.ctaLink) el.ctaLink.href = bookingSearchUrl(current);
-                        }
-                        function calc() {
-                            var ctx = getContext(el.date.value);
-                            el.date.value = formatDateInput(ctx.departureDate);
-                            if (el.today) el.today.innerHTML = '<strong>Сегодня:</strong> ' + formatRuDate(ctx.today);
-                            if (el.rate) el.rate.innerHTML = '<strong>USD/EUR:</strong> 1 USD ≈ ' + destinationConfig.defaultEurRate.toFixed(2) + ' EUR';
-                            var input = {
-                                origin: el.origin.value, format: el.format.value, zone: el.zone.value,
-                                nights: clampInt(el.nights.value, 7, 3, 30), people: clampInt(el.people.value, 2, 1, 8)
-                            };
-                            var budget = clampInt(el.budget.value, 5000, 1200, 30000);
-                            el.nights.value = input.nights;
-                            el.people.value = input.people;
-                            el.budget.value = budget;
-                            var extrasState = getExtrasState();
-                            var current = buildScenario(input, ctx, extrasState);
-                            var options = pickOptions(current, listScenarios(input, ctx, extrasState), budget);
-                            renderScenario(current, options, budget);
-                            renderSavings(current, input, ctx, extrasState);
-                        }
-                        [el.origin, el.date, el.nights, el.people, el.budget, el.format, el.zone, el.baggage, el.insurance, el.transfer, el.resort, el.esim].forEach(function (node) {
-                            if (!node) return;
-                            node.addEventListener('change', calc);
-                            node.addEventListener('input', calc);
-                        });
-                        Array.prototype.slice.call(document.querySelectorAll('.calc2-help')).forEach(function (btn) {
-                            btn.addEventListener('click', function (e) {
-                                e.preventDefault();
-                                var t = document.getElementById(btn.getAttribute('data-help-target'));
-                                if (t) t.hidden = !t.hidden;
-                            });
-                        });
                         calc();
                     })();
                 </script>
