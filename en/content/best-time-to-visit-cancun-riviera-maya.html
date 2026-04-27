@@ -45,7 +45,7 @@
         "image": "https://travelradarlk.com/assets/images/content/best-time-to-visit-cancun-riviera-maya/card_1200x600.jpg",
         "datePublished": "2026-04-13",
         "dateModified": "2026-04-13",
-        "inLanguage": "en",
+        "inLanguage": "en-US",
         "author": {
             "@type": "Organization",
             "name": "Travel Radar LK"
@@ -64,7 +64,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
@@ -73,47 +73,7 @@
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="/assets/css/pages/article.css">
-    <link rel="stylesheet" href="/assets/css/pages/article-v2.css">
-    <link rel="stylesheet" href="/assets/css/pages/article-rich.css">
-    <link rel="stylesheet" href="/assets/css/pages/content.css">
-
-    <style>
-        .quick-answer-grid, .traveler-grid, .mistake-grid, .priority-buttons { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:1.25rem; }
-        .quick-answer-card, .traveler-card, .mistake-card, .priority-result { border:1px solid var(--border-color,rgba(255,255,255,.12)); border-radius:20px; padding:18px 18px 16px; background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); }
-        .qa-label, .traveler-label, .mistake-label { display:inline-block; margin-bottom:10px; padding:5px 10px; border-radius:999px; font-size:.76rem; letter-spacing:.04em; text-transform:uppercase; background:rgba(255,255,255,.08); color:var(--text-muted,rgba(255,255,255,.75)); }
-        .qa-title, .traveler-title { font-size:1.08rem; font-weight:700; margin-bottom:8px; }
-        .qa-meta, .traveler-meta { margin-top:12px; font-size:.95rem; opacity:.82; line-height:1.65; }
-        .season-table-wrap, .month-table-wrap { overflow-x:auto; margin-top:1.2rem; }
-        .season-table, .month-table { width:100%; border-collapse:collapse; min-width:760px; }
-        .season-table th, .season-table td, .month-table th, .month-table td { text-align:left; padding:12px 14px; border-bottom:1px solid var(--border-color,rgba(255,255,255,.1)); vertical-align:top; }
-        .season-table thead tr, .month-table thead tr { background:rgba(255,255,255,.04); }
-        .score-tag { display:inline-block; padding:4px 10px; border-radius:999px; font-size:.78rem; font-weight:600; white-space:nowrap; }
-        .score-good { background:rgba(54,179,126,.18); color:#8de0b5; }
-        .score-mid { background:rgba(255,186,73,.18); color:#ffd68b; }
-        .score-risk { background:rgba(255,112,112,.16); color:#ff9e9e; }
-        .priority-widget { margin-top:1.25rem; padding:20px; border-radius:22px; border:1px solid var(--border-color,rgba(255,255,255,.12)); background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02)); }
-        .priority-buttons { grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); }
-        .priority-btn { width:100%; border:1px solid var(--border-color,rgba(255,255,255,.12)); background:rgba(255,255,255,.03); color:inherit; border-radius:16px; padding:14px 12px; text-align:left; cursor:pointer; transition:transform .2s ease,border-color .2s ease,background .2s ease; }
-        .priority-btn:hover, .priority-btn.is-active { transform:translateY(-2px); border-color:rgba(120,191,255,.55); background:rgba(120,191,255,.10); }
-        .priority-btn strong { display:block; margin-bottom:6px; font-size:.98rem; }
-        .priority-btn span { display:block; font-size:.9rem; line-height:1.5; opacity:.8; }
-        .priority-result { margin-top:16px; }
-        .priority-result h3 { margin-bottom:8px; font-size:1.12rem; }
-        .priority-result p { margin:0; line-height:1.75; }
-        .priority-result-meta { margin-top:12px; font-size:.95rem; opacity:.82; }
-        .faq-block details { border-bottom:1px solid var(--border-color,rgba(255,255,255,.1)); padding:14px 0; }
-        .faq-block summary { font-size:1.05rem; font-weight:500; cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:16px; }
-        .faq-block summary::after { content:'+'; font-size:1.2em; opacity:.5; flex-shrink:0; transition:transform .25s; }
-        .faq-block details[open] summary::after { transform:rotate(45deg); }
-        .faq-block details p { margin-top:10px; font-size:.95rem; opacity:.84; line-height:1.8; }
-        .inline-links { display:flex; flex-wrap:wrap; gap:12px; margin-top:1rem; }
-        .inline-links a { display:inline-flex; align-items:center; gap:10px; padding:11px 15px; border-radius:999px; border:1px solid rgba(120,191,255,.22); text-decoration:none; background:rgba(120,191,255,.07); box-shadow:0 0 0 1px rgba(255,255,255,.02) inset; transition:transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease; }
-        .inline-links a::after { content:'→'; font-size:.95rem; opacity:.78; }
-        .inline-links a:hover { transform:translateY(-2px); border-color:rgba(120,191,255,.5); background:rgba(120,191,255,.12); box-shadow:0 10px 24px rgba(0,0,0,.18); }
-        @media (max-width:720px) { .quick-answer-grid, .traveler-grid, .mistake-grid, .priority-buttons { grid-template-columns:1fr; } .priority-widget { padding:16px; } }
-    </style>
-
+    <link rel="stylesheet" href="/assets/css/article-content.css">
     <script>
         (function () {
             const theme = localStorage.getItem('theme') || 'dark';
@@ -126,124 +86,137 @@
     <div id="site-header"></div>
 
     <section class="article-hero">
-        <img src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/hero_1920x250.jpg"
-            alt="Cancun and Riviera Maya beaches across different seasons" class="article-hero-image">
+        <img src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/hero_1920x320.jpg"
+            alt="Cancun and Riviera Maya beaches across different seasons"
+            class="article-hero-image"
+            loading="eager"
+            fetchpriority="high">
         <div class="hero-content">
             <h1>When to Visit Cancun and Riviera Maya: Weather, Sargassum, and Prices</h1>
-            <p class="hero-subtitle">Travel Radar · updated April 13, 2026</p>
+            <p class="hero-deck">A practical guide to the best time to visit Cancun and Riviera Maya: dry season, prices, crowds, sargassum, and the best months for first-timers, families, and budget trips.</p>
+            <p class="hero-subtitle">Travel Radar LK &#8226; updated April 13, 2026 &#8226; 12-14 min read</p>
         </div>
     </section>
 
-    <nav class="article-nav">
-        <div class="quick-nav-list">
-            <a href="/en/content/" class="quick-nav-item">All</a>
-            <a href="/en/content/countries/" class="quick-nav-item">Countries</a>
-            <a href="/en/content/flights/" class="quick-nav-item">Flights</a>
-            <a href="/en/content/lifehacks/" class="quick-nav-item">Tips</a>
-            <a href="/en/content/collections/" class="quick-nav-item active">Collections</a>
-            <a href="/en/content/news/" class="quick-nav-item">News</a>
+    <div class="article-nav-wrap">
+    <nav class="site-nav">
+        <div class="site-nav-inner">
+            <a href="/en/content/" class="nav-link">All</a>
+            <a href="/en/content/countries/" class="nav-link">Countries</a>
+            <a href="/en/content/flights/" class="nav-link">Flights</a>
+            <a href="/en/content/lifehacks/" class="nav-link">Tips</a>
+            <a href="/en/content/collections/" class="nav-link active">Collections</a>
+            <a href="/en/content/news/" class="nav-link">News</a>
         </div>
     </nav>
+    </div>
 
-    <div class="article-container">
-        <header class="article-header">
-            <div class="article-meta">
-                <span>TravelRadar LK</span>
-                <span class="meta-dot"></span>
-                <span>April 13, 2026</span>
-                <span class="meta-dot"></span>
-                <span>12–14 min read</span>
-            </div>
-        </header>
+    <div class="toc-wrap reveal">
+        <div class="toc-box">
+            <div class="toc-title">In this article</div>
+            <ul class="toc-list">
+                <li><a href="#quick-answer" data-n="01">Quick Answer: When It Usually Makes the Most Sense to Go</a></li>
+                <li><a href="#decision-compass" data-n="02">How to Choose the Right Month Without Getting It Wrong</a></li>
+                <li><a href="#season-comparison" data-n="03">Seasons in Cancun and Riviera Maya: The Honest Comparison</a></li>
+                <li><a href="#month-by-month" data-n="04">Month by Month: What Each Month Actually Gives You</a></li>
+                <li><a href="#sargassum" data-n="05">Sargassum: What You Need to Understand Before You Book</a></li>
+                <li><a href="#trip-style-fit" data-n="06">Which Season Makes Sense for You Specifically</a></li>
+                <li><a href="#priority-tool" data-n="07">Interactive Choice: What Matters Most to You?</a></li>
+                <li><a href="#mistakes" data-n="08">4 Mistakes That Most Often Ruin the Timing Decision</a></li>
+                <li><a href="#faq" data-n="09">Frequently Asked Questions About Seasons in Cancun and Riviera Maya</a></li>
+            </ul>
+        </div>
+    </div>
 
-        <article class="article-content">
-            <div class="article-intro">
+    <div class="article-wrap">
+        <article>
+            <div class="intro reveal">
                 <p>Cancun and Riviera Maya do not have one perfect season for everyone. The same February can be the best month for a first trip, but too expensive for someone who wants maximum value. And September can bring great prices, but still be a weak choice if what you really want is predictable beach conditions and fewer weather surprises.</p>
                 <p>The biggest mistake people make here is simple: choosing only by the phrase <strong>"dry season"</strong> or only by the word <strong>"cheap"</strong>. In real life, you need to look at four things at once: <strong>weather, beach and water conditions, sargassum risk, and prices</strong>. What follows is not a calendar for the sake of a calendar. It is a practical decision tool built around the kind of trip you actually want.</p>
             </div>
 
-            <hr class="article-divider">
+            <hr class="divider">
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="quick-answer">
                 <h2>Quick Answer: When It Usually Makes the Most Sense to Go</h2>
 
-                <div class="quick-answer-grid">
-                    <div class="quick-answer-card">
+                <div class="qa-grid">
+                    <div class="qa-card beach">
                         <div class="qa-label">Best Overall Balance</div>
                         <div class="qa-title">November and late February through April</div>
-                        <p>This is usually the clearest balance of good weather, solid beach conditions, and an easy overall trip. Just remember that March and early April can feel noticeably busier because of spring break and holiday weeks.</p>
-                        <div class="qa-meta">If you want a "very likely to be a good first Cancun trip" window, this is one of the safest choices.</div>
+                        <p class="qa-body">This is usually the clearest balance of good weather, solid beach conditions, and an easy overall trip. Just remember that March and early April can feel noticeably busier because of spring break and holiday weeks.</p>
+                        <div class="qa-tradeoff">If you want a "very likely to be a good first Cancun trip" window, this is one of the safest choices.</div>
                     </div>
 
-                    <div class="quick-answer-card">
+                    <div class="qa-card town">
                         <div class="qa-label">Best for Value</div>
                         <div class="qa-title">Late April through June and late October through November</div>
-                        <p>It is usually easier to find more reasonable pricing here than in winter. The trade-off is more heat, more humidity, and a higher chance of running into sargassum, especially as you move toward summer.</p>
-                        <div class="qa-meta">A strong choice if price matters, but your whole trip is not built around getting a perfect postcard beach every single day.</div>
+                        <p class="qa-body">It is usually easier to find more reasonable pricing here than in winter. The trade-off is more heat, more humidity, and a higher chance of running into sargassum, especially as you move toward summer.</p>
+                        <div class="qa-tradeoff">A strong choice if price matters, but your whole trip is not built around getting a perfect postcard beach every single day.</div>
                     </div>
 
-                    <div class="quick-answer-card">
+                    <div class="qa-card aldea">
                         <div class="qa-label">Best Beach Conditions</div>
                         <div class="qa-title">November through March</div>
-                        <p>This is usually the window with the lowest sargassum risk and the strongest overall beach picture. It is not a guarantee of perfect water every day, but your odds are generally better than they are in late spring and summer.</p>
-                        <div class="qa-meta">If beach quality is the main priority, do not optimize the trip around a discount alone.</div>
+                        <p class="qa-body">This is usually the window with the lowest sargassum risk and the strongest overall beach picture. It is not a guarantee of perfect water every day, but your odds are generally better than they are in late spring and summer.</p>
+                        <div class="qa-tradeoff">If beach quality is the main priority, do not optimize the trip around a discount alone.</div>
                     </div>
 
-                    <div class="quick-answer-card">
+                    <div class="qa-card town">
                         <div class="qa-label">Cheapest Months</div>
                         <div class="qa-title">September through October</div>
-                        <p>Yes, this is often when prices are at their softest. It is also the period with the highest weather risk: humidity, rain, an active hurricane season, and less predictable beach conditions.</p>
-                        <div class="qa-meta">It only makes sense if you are genuinely comfortable trading predictability for lower pricing.</div>
+                        <p class="qa-body">Yes, this is often when prices are at their softest. It is also the period with the highest weather risk: humidity, rain, an active hurricane season, and less predictable beach conditions.</p>
+                        <div class="qa-tradeoff">It only makes sense if you are genuinely comfortable trading predictability for lower pricing.</div>
                     </div>
                 </div>
 
-                <div class="article-note-strong">
+                <div class="callout">
                     The core idea of this article is simple: <strong>the best time to visit Cancun depends less on one "best month" and more on what matters most to you - perfect beach visuals, price, peace of mind, or flexibility.</strong>
                 </div>
             </div>
 
-            <div class="article-point article-point--accent reveal">
+            <div class="section reveal" id="decision-compass">
                 <h2>How to Choose the Right Month Without Getting It Wrong</h2>
                 <p>The logic is straightforward. First decide what matters most to you, and only then look at the calendar.</p>
 
-                <div class="match-cards">
-                    <div class="match-card">
-                        <div class="match-card-num">1</div>
-                        <div class="match-card-text">
-                            <strong>How much perfect weather matters to you</strong>
-                            <span>If you do not want to gamble on rain and humidity, focus on late fall, winter, and early spring.</span>
+                <div class="scenario-grid is-numbered">
+                    <div class="scenario-card is-numbered">
+                        <div class="scenario-tag is-numbered">1</div>
+                        <div>
+                            <h3>How much perfect weather matters to you</h3>
+                            <p>If you do not want to gamble on rain and humidity, focus on late fall, winter, and early spring.</p>
                         </div>
                     </div>
-                    <div class="match-card">
-                        <div class="match-card-num">2</div>
-                        <div class="match-card-text">
-                            <strong>How critical the beach really is</strong>
-                            <span>If this trip is really about turquoise water, sargassum risk matters more than the nightly room rate.</span>
+                    <div class="scenario-card is-numbered">
+                        <div class="scenario-tag is-numbered">2</div>
+                        <div>
+                            <h3>How critical the beach really is</h3>
+                            <p>If this trip is really about turquoise water, sargassum risk matters more than the nightly room rate.</p>
                         </div>
                     </div>
-                    <div class="match-card">
-                        <div class="match-card-num">3</div>
-                        <div class="match-card-text">
-                            <strong>How much extra you are willing to pay for comfort</strong>
-                            <span>Peak season usually gives you more predictability, but it almost always costs more.</span>
+                    <div class="scenario-card is-numbered">
+                        <div class="scenario-tag is-numbered">3</div>
+                        <div>
+                            <h3>How much extra you are willing to pay for comfort</h3>
+                            <p>Peak season usually gives you more predictability, but it almost always costs more.</p>
                         </div>
                     </div>
-                    <div class="match-card">
-                        <div class="match-card-num">4</div>
-                        <div class="match-card-text">
-                            <strong>Whether you are optimizing for the trip or for the deal</strong>
-                            <span>In Cancun, savings are real, but they usually come with real trade-offs too.</span>
+                    <div class="scenario-card is-numbered">
+                        <div class="scenario-tag is-numbered">4</div>
+                        <div>
+                            <h3>Whether you are optimizing for the trip or for the deal</h3>
+                            <p>In Cancun, savings are real, but they usually come with real trade-offs too.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="season-comparison">
                 <h2>Seasons in Cancun and Riviera Maya: The Honest Comparison</h2>
                 <p>If you simplify it, the region really operates in a handful of clear seasonal modes. Those are what you should compare first.</p>
 
-                <div class="season-table-wrap">
-                    <table class="season-table">
+                <div class="table-wrap">
+                    <table>
                         <thead>
                             <tr>
                                 <th>Period</th>
@@ -256,68 +229,68 @@
                         <tbody>
                             <tr>
                                 <td><strong>December through February</strong></td>
-                                <td><span class="score-tag score-good">Best Overall</span><br>Dry, sunny, and comfortable for beach time, walking around, and day trips.</td>
-                                <td><span class="score-tag score-risk">Highest Prices</span><br>Pricing peaks around Christmas and New Year, then usually stays expensive.</td>
-                                <td><span class="score-tag score-good">Usually a Strong Window</span><br>One of the best chances for clear water and lower sargassum risk.</td>
+                                <td><span class="badge badge-green">Best Overall</span><br>Dry, sunny, and comfortable for beach time, walking around, and day trips.</td>
+                                <td><span class="badge badge-red">Highest Prices</span><br>Pricing peaks around Christmas and New Year, then usually stays expensive.</td>
+                                <td><span class="badge badge-green">Usually a Strong Window</span><br>One of the best chances for clear water and lower sargassum risk.</td>
                                 <td>First trips, families, couples, and anyone who wants the easiest choice with fewer surprises.</td>
                             </tr>
                             <tr>
                                 <td><strong>March through April</strong></td>
-                                <td><span class="score-tag score-good">Very Good</span><br>Warm, dry, and more beachy in feel than winter.</td>
-                                <td><span class="score-tag score-mid">Moderate to High</span><br>Spring break and Easter weeks can push prices up fast.</td>
-                                <td><span class="score-tag score-mid">Good, Not Perfect</span><br>Sargassum risk usually starts rising later in spring.</td>
+                                <td><span class="badge badge-green">Very Good</span><br>Warm, dry, and more beachy in feel than winter.</td>
+                                <td><span class="badge badge-yellow">Moderate to High</span><br>Spring break and Easter weeks can push prices up fast.</td>
+                                <td><span class="badge badge-yellow">Good, Not Perfect</span><br>Sargassum risk usually starts rising later in spring.</td>
                                 <td>Beach vacations, couples, first-timers, and people who want warmth without peak summer heaviness.</td>
                             </tr>
                             <tr>
                                 <td><strong>May through June</strong></td>
-                                <td><span class="score-tag score-mid">Hotter and More Humid</span><br>The weather is still workable, but it feels heavier if you do not handle heat well.</td>
-                                <td><span class="score-tag score-good">Softer Prices</span><br>Often a strong value window if you do not need a postcard-perfect beach every day.</td>
-                                <td><span class="score-tag score-risk">Higher Risk</span><br>Sargassum is more common, especially in Riviera Maya.</td>
+                                <td><span class="badge badge-yellow">Hotter and More Humid</span><br>The weather is still workable, but it feels heavier if you do not handle heat well.</td>
+                                <td><span class="badge badge-green">Softer Prices</span><br>Often a strong value window if you do not need a postcard-perfect beach every day.</td>
+                                <td><span class="badge badge-red">Higher Risk</span><br>Sargassum is more common, especially in Riviera Maya.</td>
                                 <td>Budget-conscious and flexible travelers who care more about value than perfect beach visuals.</td>
                             </tr>
                             <tr>
                                 <td><strong>July through August</strong></td>
-                                <td><span class="score-tag score-mid">Hot</span><br>Very warm and humid. Showers are often short, but the air feels heavier.</td>
-                                <td><span class="score-tag score-mid">Not Peak, Not Empty</span><br>School breaks and family travel keep demand up.</td>
-                                <td><span class="score-tag score-risk">Weaker Beach Picture</span><br>Sargassum odds are higher, especially in Playa del Carmen and Tulum.</td>
+                                <td><span class="badge badge-yellow">Hot</span><br>Very warm and humid. Showers are often short, but the air feels heavier.</td>
+                                <td><span class="badge badge-yellow">Not Peak, Not Empty</span><br>School breaks and family travel keep demand up.</td>
+                                <td><span class="badge badge-red">Weaker Beach Picture</span><br>Sargassum odds are higher, especially in Playa del Carmen and Tulum.</td>
                                 <td>Families tied to summer travel and people using the hotel as a base rather than building the trip entirely around the beach.</td>
                             </tr>
                             <tr>
                                 <td><strong>September through October</strong></td>
-                                <td><span class="score-tag score-risk">Riskiest Stretch</span><br>More humidity, more rain, and less weather predictability.</td>
-                                <td><span class="score-tag score-good">Softest Prices</span><br>The clearest window for travelers chasing discounts.</td>
-                                <td><span class="score-tag score-risk">Most Unstable</span><br>Beach conditions can look weaker, and hurricane season is still in play.</td>
+                                <td><span class="badge badge-red">Riskiest Stretch</span><br>More humidity, more rain, and less weather predictability.</td>
+                                <td><span class="badge badge-green">Softest Prices</span><br>The clearest window for travelers chasing discounts.</td>
+                                <td><span class="badge badge-red">Most Unstable</span><br>Beach conditions can look weaker, and hurricane season is still in play.</td>
                                 <td>Very flexible travelers, digital-nomad-style stays, and repeat visits with realistic expectations.</td>
                             </tr>
                             <tr>
                                 <td><strong>November</strong></td>
-                                <td><span class="score-tag score-good">One of the Best Compromises</span><br>The weather settles down and the region starts feeling "in season" again.</td>
-                                <td><span class="score-tag score-good">Usually More Reasonable Than Winter</span><br>Before the holiday peak, prices are often easier to justify.</td>
-                                <td><span class="score-tag score-good">Stronger Beach Conditions</span><br>Your odds of better water and lower sargassum risk are usually higher than in summer.</td>
+                                <td><span class="badge badge-green">One of the Best Compromises</span><br>The weather settles down and the region starts feeling "in season" again.</td>
+                                <td><span class="badge badge-green">Usually More Reasonable Than Winter</span><br>Before the holiday peak, prices are often easier to justify.</td>
+                                <td><span class="badge badge-green">Stronger Beach Conditions</span><br>Your odds of better water and lower sargassum risk are usually higher than in summer.</td>
                                 <td>Almost anyone who wants a strong balance without full winter pricing.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="article-summary article-summary--note">
+                <div class="callout">
                     <p><strong>If you want one short takeaway:</strong> for most trips, <strong>November</strong> and the window <strong>from late February through April</strong> work best. The weakest months for first-timers without much flexibility are usually <strong>September and October</strong>.</p>
                 </div>
 
                 <figure class="article-image reveal"
-                    data-lb-src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/block-01_1200.jpg">
+                    data-glb-src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/block-01_1200.jpg">
                     <img src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/block-01_1200.jpg"
                         alt="A calm, clean Cancun beach in a strong season, with white sand, turquoise water, and comfortable beach weather"
-                        style="width: 100%; display: block; border-radius: 18px; cursor: zoom-in;" loading="lazy">
+                        loading="lazy">
                 </figure>
             </div>
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="month-by-month">
                 <h2>Month by Month: What Each Month Actually Gives You</h2>
                 <p>Below is a quick month-by-month read without romanticizing the destination and without pretending every month is equally good in its own way.</p>
 
-                <div class="month-table-wrap">
-                    <table class="month-table">
+                <div class="table-wrap">
+                    <table>
                         <thead>
                             <tr>
                                 <th>Month</th>
@@ -333,95 +306,95 @@
                                 <td>Comfortable, dry, and free of summer's heavy humidity.</td>
                                 <td>High demand and expensive hotels.</td>
                                 <td>Usually one of the best months for the visual quality of the sea.</td>
-                                <td><span class="score-tag score-good">Excellent if the budget works</span></td>
+                                <td><span class="badge badge-green">Excellent if the budget works</span></td>
                             </tr>
                             <tr>
                                 <td><strong>February</strong></td>
                                 <td>One of the most pleasant months overall.</td>
                                 <td>Still not cheap, but calmer than the holiday peak.</td>
                                 <td>A strong month for a beach-first trip.</td>
-                                <td><span class="score-tag score-good">One of the best</span></td>
+                                <td><span class="badge badge-green">One of the best</span></td>
                             </tr>
                             <tr>
                                 <td><strong>March</strong></td>
                                 <td>Very good weather and lots of sun.</td>
                                 <td>Prices often rise because of spring break.</td>
                                 <td>The water can still look great, but there are more people around.</td>
-                                <td><span class="score-tag score-good">Strong, but busier</span></td>
+                                <td><span class="badge badge-green">Strong, but busier</span></td>
                             </tr>
                             <tr>
                                 <td><strong>April</strong></td>
                                 <td>Warm and comfortable, especially in the first half of the month.</td>
                                 <td>Prices can soften a little after holiday periods.</td>
                                 <td>Sargassum risk usually starts rising later in the month.</td>
-                                <td><span class="score-tag score-good">Very good</span></td>
+                                <td><span class="badge badge-green">Very good</span></td>
                             </tr>
                             <tr>
                                 <td><strong>May</strong></td>
                                 <td>Hotter, more humid, and less winter-light in feel.</td>
                                 <td>Prices are usually better than winter and early spring.</td>
                                 <td>Beach conditions start becoming more variable.</td>
-                                <td><span class="score-tag score-mid">Good for value</span></td>
+                                <td><span class="badge badge-yellow">Good for value</span></td>
                             </tr>
                             <tr>
                                 <td><strong>June</strong></td>
                                 <td>Hot, more humid, and hurricane season officially starts on June 1.</td>
                                 <td>You can often find good pricing.</td>
                                 <td>Sargassum can already affect some beaches in a significant way.</td>
-                                <td><span class="score-tag score-mid">Only with realistic expectations</span></td>
+                                <td><span class="badge badge-yellow">Only with realistic expectations</span></td>
                             </tr>
                             <tr>
                                 <td><strong>July</strong></td>
                                 <td>Hot and humid, but still workable for a resort-style trip.</td>
                                 <td>Family travel keeps demand fairly steady.</td>
                                 <td>The beach picture is often weaker than in winter.</td>
-                                <td><span class="score-tag score-mid">Fine for summer families</span></td>
+                                <td><span class="badge badge-yellow">Fine for summer families</span></td>
                             </tr>
                             <tr>
                                 <td><strong>August</strong></td>
                                 <td>Very warm, sticky, and prone to downpours.</td>
                                 <td>You can find discounts, but it is not truly dead season.</td>
                                 <td>Sargassum and weather variability make the beach less predictable.</td>
-                                <td><span class="score-tag score-mid">Manageable, not ideal</span></td>
+                                <td><span class="badge badge-yellow">Manageable, not ideal</span></td>
                             </tr>
                             <tr>
                                 <td><strong>September</strong></td>
                                 <td>The toughest month for weather stability.</td>
                                 <td>Often excellent pricing.</td>
                                 <td>The beach experience is at its least predictable.</td>
-                                <td><span class="score-tag score-risk">Weak for a first trip</span></td>
+                                <td><span class="badge badge-red">Weak for a first trip</span></td>
                             </tr>
                             <tr>
                                 <td><strong>October</strong></td>
                                 <td>Gradually better, but still not fully safe from seasonal risk.</td>
                                 <td>Prices are still softer than winter.</td>
                                 <td>Late October can be better than early October, but it is never guaranteed.</td>
-                                <td><span class="score-tag score-mid">Can work for value</span></td>
+                                <td><span class="badge badge-yellow">Can work for value</span></td>
                             </tr>
                             <tr>
                                 <td><strong>November</strong></td>
                                 <td>One of the nicest months of the year.</td>
                                 <td>Until late November, it is often more reasonable than winter.</td>
                                 <td>The sea usually looks stronger than it does in summer.</td>
-                                <td><span class="score-tag score-good">Best overall balance</span></td>
+                                <td><span class="badge badge-green">Best overall balance</span></td>
                             </tr>
                             <tr>
                                 <td><strong>December</strong></td>
                                 <td>A very strong weather month overall.</td>
                                 <td>Prices start climbing sharply in the second half.</td>
                                 <td>Usually a very strong month for beach visuals.</td>
-                                <td><span class="score-tag score-good">Excellent before holiday peak</span></td>
+                                <td><span class="badge badge-green">Excellent before holiday peak</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="sargassum">
                 <h2>Sargassum: What You Need to Understand Before You Book</h2>
                 <p>This is where the confusion is usually worst. Travelers often treat sargassum as either "it is always there" or "it is overblown and barely matters." Neither mindset is useful.</p>
 
-                <div class="article-subpoint">
+                <div class="callout callout-plain">
                     <h3>What Actually Happens</h3>
                     <ul>
                         <li><strong>Risk usually rises from late spring into early fall</strong>, while the calmest stretch is more often late fall, winter, and early spring.</li>
@@ -431,79 +404,79 @@
                     </ul>
                 </div>
 
-                <div class="article-subpoint">
+                <div class="callout callout-plain">
                     <h3>What Matters Specifically in 2026</h3>
                     <p>In spring 2026, sargassum arrived earlier than usual, so this season it is especially risky to assume "it definitely will not be an issue until summer." The month-by-month logic is still broadly the same, but if you are booking for May through August, it is smarter to check current local beach conditions separately.</p>
                 </div>
 
-                <div class="article-summary article-summary--note">
-                    <p><strong>If the sea is your top priority</strong>, do not build the trip around the cheapest months and do not choose the southern part of the region blindly. For first-time travelers, it is usually safer to look at <strong>November through March</strong> and choose the specific area carefully.</p>
+                <div class="callout">
+                    <p><strong>Rule of thumb:</strong> <strong>If the sea is your top priority</strong>, do not build the trip around the cheapest months and do not choose the southern part of the region blindly. For first-time travelers, it is usually safer to look at <strong>November through March</strong> and choose the specific area carefully.</p>
                 </div>
 
                 <figure class="article-image reveal"
-                    data-lb-src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/block-02_1200.jpg">
+                    data-glb-src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/block-02_1200.jpg">
                     <img src="/assets/images/content/best-time-to-visit-cancun-riviera-maya/block-02_1200.jpg"
                         alt="A Riviera Maya beach with a moderate amount of sargassum along the waterline, showing a realistic seasonal beach scene"
-                        style="width: 100%; display: block; border-radius: 18px; cursor: zoom-in;" loading="lazy">
+                        loading="lazy">
                 </figure>
 
-                <div class="inline-links">
-                    <a href="/en/content/where-to-stay-in-cancun-hotel-zone-vs-downtown.html">Where to Stay in Cancun</a>
-                    <a href="/en/content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay.html">Cancun vs Tulum vs Playa</a>
-                    <a href="/en/content/best-hotels-cancun-2026.html">Best Cancun Hotels</a>
+                <div class="related-links">
+                    <a href="/en/content/where-to-stay-in-cancun-hotel-zone-vs-downtown.html" class="related-link">Where to Stay in Cancun</a>
+                    <a href="/en/content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay.html" class="related-link">Cancun vs Tulum vs Playa</a>
+                    <a href="/en/content/best-hotels-cancun-2026.html" class="related-link">Best Cancun Hotels</a>
                 </div>
             </div>
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="trip-style-fit">
                 <h2>Which Season Makes Sense for You Specifically</h2>
                 <p>There is no universal winner here. There is only the right season for the kind of trip you are actually planning.</p>
 
-                <div class="traveler-grid">
-                    <div class="traveler-card">
-                        <div class="traveler-label">First Trip</div>
-                        <div class="traveler-title">February, March, November</div>
+                <div class="scenario-grid">
+                    <div class="scenario-card">
+                        <div class="scenario-tag">First Trip</div>
+                        <h3>February, March, November</h3>
                         <p>If you do not want to come home telling yourself "we just got unlucky with the weather, the beach, or the season," this is the more predictable window to choose.</p>
-                        <div class="traveler-meta">These are the months when Cancun is most likely to show the version of itself that first-time visitors are actually flying there for.</div>
+                        <p>These are the months when Cancun is most likely to show the version of itself that first-time visitors are actually flying there for.</p>
                     </div>
 
-                    <div class="traveler-card">
-                        <div class="traveler-label">Family with Kids</div>
-                        <div class="traveler-title">February through April and November</div>
+                    <div class="scenario-card">
+                        <div class="scenario-tag">Family with Kids</div>
+                        <h3>February through April and November</h3>
                         <p>There is usually less weather chaos, it is easier to move around, and day trips are less draining than they are in hotter months.</p>
-                        <div class="traveler-meta">If summer is your only option, make up for the season with a strong resort setup and realistic expectations for the beach.</div>
+                        <p>If summer is your only option, make up for the season with a strong resort setup and realistic expectations for the beach.</p>
                     </div>
 
-                    <div class="traveler-card">
-                        <div class="traveler-label">Couple / Honeymoon</div>
-                        <div class="traveler-title">Late November through March</div>
+                    <div class="scenario-card">
+                        <div class="scenario-tag">Couple / Honeymoon</div>
+                        <h3>Late November through March</h3>
                         <p>If the trip is built around beautiful water, that "wow" feeling, and a strong resort atmosphere, this is usually the window with the best odds.</p>
-                        <div class="traveler-meta">This is exactly the kind of trip where paying more for season often makes more sense than saving on the month.</div>
+                        <p>This is exactly the kind of trip where paying more for season often makes more sense than saving on the month.</p>
                     </div>
 
-                    <div class="traveler-card">
-                        <div class="traveler-label">Budget-Focused Trip</div>
-                        <div class="traveler-title">May, June, late October, November</div>
+                    <div class="scenario-card">
+                        <div class="scenario-tag">Budget-Focused Trip</div>
+                        <h3>May, June, late October, November</h3>
                         <p>If you care more about value than about chasing the absolute ideal version of the region, these are often the healthiest compromises.</p>
-                        <div class="traveler-meta">The smartest value play is usually shoulder season, not September.</div>
+                        <p>The smartest value play is usually shoulder season, not September.</p>
                     </div>
 
-                    <div class="traveler-card">
-                        <div class="traveler-label">Beach First</div>
-                        <div class="traveler-title">January through March and November</div>
+                    <div class="scenario-card">
+                        <div class="scenario-tag">Beach First</div>
+                        <h3>January through March and November</h3>
                         <p>When the trip is not really about "hotel plus excursions" but about the beach itself, season becomes a critical part of the decision.</p>
-                        <div class="traveler-meta">For this kind of trip, trying to save money on the month and then hoping tomorrow's beach will look better is usually the wrong trade.</div>
+                        <p>For this kind of trip, trying to save money on the month and then hoping tomorrow's beach will look better is usually the wrong trade.</p>
                     </div>
 
-                    <div class="traveler-card">
-                        <div class="traveler-label">Repeat Visit</div>
-                        <div class="traveler-title">May through June or October</div>
+                    <div class="scenario-card">
+                        <div class="scenario-tag">Repeat Visit</div>
+                        <h3>May through June or October</h3>
                         <p>If you have already been to the region and know what to expect, it is easier to take a more price-driven approach.</p>
-                        <div class="traveler-meta">On a second trip, it is usually easier to handle the trade-offs because your expectations are more realistic.</div>
+                        <p>On a second trip, it is usually easier to handle the trade-offs because your expectations are more realistic.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="priority-tool">
                 <h2>Interactive Choice: What Matters Most to You?</h2>
                 <p>Click your top priority and see which seasonal window makes the most sense to look at first.</p>
 
@@ -543,103 +516,104 @@
                 </div>
             </div>
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="mistakes">
                 <h2>4 Mistakes That Most Often Ruin the Timing Decision</h2>
 
                 <div class="mistake-grid">
                     <div class="mistake-card">
-                        <div class="mistake-label">Mistake 1</div>
+                        <div class="mistake-num">Mistake 1</div>
                         <p><strong>Looking only at price.</strong> The cheapest week in the region can still end up feeling expensive emotionally if you came for great beach conditions and instead get humidity, seaweed, and weaker beach days.</p>
                     </div>
                     <div class="mistake-card">
-                        <div class="mistake-label">Mistake 2</div>
+                        <div class="mistake-num">Mistake 2</div>
                         <p><strong>Treating Cancun and all of Riviera Maya as the same thing.</strong> In terms of sargassum and beach feel, north Cancun and Tulum are not interchangeable. People read "Cancun is fine" and then book a very different part of the coast.</p>
                     </div>
                     <div class="mistake-card">
-                        <div class="mistake-label">Mistake 3</div>
+                        <div class="mistake-num">Mistake 3</div>
                         <p><strong>Romanticizing shoulder season.</strong> May and June can be good value, but they are not "winter, just cheaper." The trade-off in beach conditions and humidity is real.</p>
                     </div>
                     <div class="mistake-card">
-                        <div class="mistake-label">Mistake 4</div>
+                        <div class="mistake-num">Mistake 4</div>
                         <p><strong>Not matching the season to the type of trip.</strong> The ideal months for a resort vacation and for an active trip built around day trips through the region may not be the same.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="article-point reveal">
+            <div class="section reveal" id="faq">
                 <h2>Frequently Asked Questions About Seasons in Cancun and Riviera Maya</h2>
-                <div class="faq-block">
+                <div class="faq">
                     <details>
-                        <summary>When is there usually the least sargassum in Cancun?</summary>
+                        <summary>When is there usually the least sargassum in Cancun? <span class="faq-icon">+</span></summary>
                         <p>Most often, your best odds are from November through March. It is never a hard guarantee, but that window is usually more predictable than late spring and summer.</p>
                     </details>
                     <details>
-                        <summary>When is the cheapest time to go?</summary>
+                        <summary>When is the cheapest time to go? <span class="faq-icon">+</span></summary>
                         <p>The softest prices usually show up in September and October. But those are also the weakest months for weather stability. If you want a healthy balance rather than the absolute lowest rate, look at May, June, late October, and November.</p>
                     </details>
                     <details>
-                        <summary>What is the best month for a first visit?</summary>
+                        <summary>What is the best month for a first visit? <span class="faq-icon">+</span></summary>
                         <p>If you want a safe first choice without extra stress, look at February, March, November, and the first half of April. Those are the months when the region is most likely to show up on its stronger side.</p>
                     </details>
                     <details>
-                        <summary>Is summer a bad time for Cancun?</summary>
+                        <summary>Is summer a bad time for Cancun? <span class="faq-icon">+</span></summary>
                         <p>Not bad, just more compromised. You can still have a good trip, especially in a strong resort, but heat, humidity, and sargassum risk are all higher. For a dream beach trip, it is not the strongest window.</p>
                     </details>
                     <details>
-                        <summary>When is the best time for families with kids?</summary>
+                        <summary>When is the best time for families with kids? <span class="faq-icon">+</span></summary>
                         <p>Most often, February through April and November work best. Those months are usually easier both in weather and in day-to-day logistics than peak summer.</p>
                     </details>
                     <details>
-                        <summary>If the goal is Tulum, do you need to be stricter about season?</summary>
+                        <summary>If the goal is Tulum, do you need to be stricter about season? <span class="faq-icon">+</span></summary>
                         <p>Yes. For a beach-focused Tulum trip, season and sargassum matter more than they do in many parts of north Cancun. If the look of the water is critical, Tulum needs more careful timing than the generic word "Mexico" suggests.</p>
                     </details>
                 </div>
             </div>
 
-            <hr class="article-divider">
+            <hr class="divider">
 
-            <section class="article-checklist reveal">
-                <div class="article-summary checklist-premium">
-                    <h2>How to Choose Your Month in 1 Minute</h2>
+            <div class="section reveal">
+                <div class="checklist">
+                    <h3>How to Choose Your Month in 1 Minute</h3>
                     <p class="checklist-intro">If you do not want to read the whole thing again, here is the short version.</p>
 
                     <div class="check-item">
-                        <div class="check-icon"></div>
+                        <div class="check-box"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg></div>
                         <span>If you want the safest first-trip choice, look at November, February, March, or the first half of April.</span>
                     </div>
                     <div class="check-item">
-                        <div class="check-icon"></div>
+                        <div class="check-box"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg></div>
                         <span>If beach quality is the main priority, do not optimize the trip around the cheapest months.</span>
                     </div>
                     <div class="check-item">
-                        <div class="check-icon"></div>
+                        <div class="check-box"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg></div>
                         <span>If you want to save money without a major drop in trip quality, look hardest at May, June, and November.</span>
                     </div>
                     <div class="check-item">
-                        <div class="check-icon"></div>
+                        <div class="check-box"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg></div>
                         <span>If you are considering Playa del Carmen, Akumal, or Tulum, pay especially close attention to sargassum seasonality.</span>
                     </div>
                     <div class="check-item">
-                        <div class="check-icon"></div>
+                        <div class="check-box"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg></div>
                         <span>If you are flying in September or October, do it only with a clear understanding of the weather risk, not because you expect "winter, just cheaper."</span>
                     </div>
 
-                    <p style="margin-top: 1.25rem;">Cancun works best when the month matches the kind of trip you are taking. Not the other way around.</p>
+                    <p>Cancun works best when the month matches the kind of trip you are taking. Not the other way around.</p>
                 </div>
-            </section>
+            </div>
 
-            <footer class="article-footer reveal">
-                <div class="article-summary article-summary--note article-finale">
-                    <p><strong>Final verdict.</strong> For most travelers, the best time to visit Cancun and Riviera Maya is <strong>November</strong> and the window <strong>from late February through April</strong>. That is where pleasant weather, stronger beach conditions, and better odds of the region meeting expectations most often come together.</p>
-                    <p>If you want to plan the trip well from here, the next step is not just choosing the month. It is matching that month to the right area, hotel, airport transfer, and budget. That is what separates a great trip from an expensive accident.</p>
+            <div class="verdict reveal">
+                <div class="verdict-label">FINAL VERDICT</div>
+                <p><strong>Final verdict.</strong> For most travelers, the best time to visit Cancun and Riviera Maya is <strong>November</strong> and the window <strong>from late February through April</strong>. That is where pleasant weather, stronger beach conditions, and better odds of the region meeting expectations most often come together.</p>
+                <p>If you want to plan the trip well from here, the next step is not just choosing the month. It is matching that month to the right area, hotel, airport transfer, and budget. That is what separates a great trip from an expensive accident.</p>
+            </div>
 
-                    <div class="inline-links">
-                        <a href="/en/content/cancun-budget-2026.html">Cancun Budget 2026</a>
-                        <a href="/en/content/cancun-airport-transfer-options.html">Airport Transfer Options</a>
-                        <a href="/en/content/best-hotels-cancun-2026.html">Best Cancun Hotels</a>
-                    </div>
+            <div class="section reveal">
+                <div class="related-links">
+                    <a href="/en/content/cancun-budget-2026.html" class="related-link">Cancun Budget 2026</a>
+                    <a href="/en/content/cancun-airport-transfer-options.html" class="related-link">Airport Transfer Options</a>
+                    <a href="/en/content/best-hotels-cancun-2026.html" class="related-link">Best Cancun Hotels</a>
                 </div>
-            </footer>
+            </div>
 
         </article>
     </div>
@@ -647,18 +621,18 @@
     <div id="site-footer"></div>
     <script src="/js/load-header.js"></script>
 
-    <div class="lb-overlay" id="lb-overlay" role="dialog" aria-modal="true">
-        <div class="lb-img-wrap" id="lb-img-wrap">
-            <button class="lb-close" id="lb-close" aria-label="Close">&#x2715;</button>
-            <img src="" alt="" id="lb-img">
+    <div class="glb-overlay" id="glb-overlay" role="dialog" aria-modal="true">
+        <div class="glb-wrap" id="glb-wrap">
+            <button class="glb-close" id="glb-close" aria-label="Close">&#x2715;</button>
+            <img class="glb-img" src="" alt="" id="glb-img">
         </div>
     </div>
 
     <script>
         (function () {
-            var overlay = document.getElementById('lb-overlay');
-            var lbImg = document.getElementById('lb-img');
-            var lbClose = document.getElementById('lb-close');
+            var overlay = document.getElementById('glb-overlay');
+            var lbImg = document.getElementById('glb-img');
+            var lbClose = document.getElementById('glb-close');
 
             function openLb(src, alt) {
                 lbImg.src = src;
@@ -666,14 +640,14 @@
                 overlay.style.display = 'flex';
                 requestAnimationFrame(function () {
                     requestAnimationFrame(function () {
-                        overlay.classList.add('lb-visible');
+                        overlay.classList.add('glb-visible');
                     });
                 });
                 document.body.style.overflow = 'hidden';
             }
 
             function closeLb() {
-                overlay.classList.remove('lb-visible');
+                overlay.classList.remove('glb-visible');
                 document.body.style.overflow = '';
                 setTimeout(function () {
                     overlay.style.display = 'none';
@@ -682,10 +656,10 @@
             }
 
             document.addEventListener('click', function (e) {
-                var item = e.target.closest('[data-lb-src]');
+                var item = e.target.closest('[data-glb-src]');
                 if (item) {
                     e.preventDefault();
-                    var src = item.getAttribute('data-lb-src');
+                    var src = item.getAttribute('data-glb-src');
                     var alt = item.querySelector('img') ? item.querySelector('img').alt : '';
                     openLb(src, alt);
                     return;

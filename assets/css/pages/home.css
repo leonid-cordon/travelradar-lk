@@ -452,114 +452,6 @@ body[data-theme="dark"] .card-badge {
 }
 
 
-.footer {
-    background-color: var(--bg-tertiary);
-    color: var(--text-primary);
-    padding: 3rem 0 1.5rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}
-
-.footer-tagline {
-    opacity: 0.7;
-    line-height: 1.6;
-    color: var(--text-secondary);
-}
-
-.footer-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.footer-heading {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.footer-list {
-    list-style: none;
-    display: grid;
-    gap: 0.75rem;
-}
-
-.footer-list a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-.footer-list a:hover {
-    color: var(--primary-color);
-}
-
-.coming-soon-text {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-.footer-bottom {
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-}
-
-.footer-copyright {
-    opacity: 0.6;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-/* Строка правовых ссылок внизу футера */
-.footer-legal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.75rem;
-    font-size: 0.8rem;
-}
-
-.footer-legal a {
-    color: var(--text-light);
-    text-decoration: none;
-    opacity: 0.6;
-    transition: opacity var(--transition-fast), color var(--transition-fast);
-}
-
-.footer-legal a:hover {
-    opacity: 1;
-    color: var(--primary-color);
-}
-
-.footer-legal-sep {
-    opacity: 0.35;
-    color: var(--text-light);
-}
-
-.logo-icon {
-    font-size: 1.3rem;
-}
-
 @media (max-width: 768px) {
     .hero {
         min-height: 80vh;
@@ -584,14 +476,6 @@ body[data-theme="dark"] .card-badge {
     gap: 1.5rem;
 }
 */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Убираем браузерные стили ссылок внутри карточек */

@@ -52,73 +52,6 @@
     opacity: 0.72;
 }
 
-.route-scale {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 1.5rem 0;
-}
-
-@media(max-width:760px) {
-    .route-scale {
-        grid-template-columns: 1fr;
-    }
-}
-
-.route-stop {
-    position: relative;
-    padding: 16px 18px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color, rgba(255, 255, 255, .1));
-    background: rgba(58, 184, 200, 0.04);
-}
-
-.route-stop::after {
-    content: '→';
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.1rem;
-    opacity: 0.35;
-}
-
-.route-stop:last-child::after {
-    display: none;
-}
-
-@media(max-width:760px) {
-    .route-stop::after {
-        content: '↓';
-        right: auto;
-        left: 50%;
-        top: auto;
-        bottom: -14px;
-        transform: translateX(-50%);
-    }
-}
-
-.route-stop-label {
-    font-size: 0.76rem;
-    letter-spacing: 0.9px;
-    text-transform: uppercase;
-    opacity: 0.52;
-    margin-bottom: 6px;
-}
-
-.route-stop-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.route-stop-note {
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.65;
-    opacity: 0.84;
-}
-
 .transfer-table {
     width: 100%;
     border-collapse: collapse;
@@ -146,6 +79,7 @@
     border-bottom: none;
 }
 
+/*
 @media(max-width:760px) {
     .transfer-table,
     .transfer-table tbody,
@@ -182,6 +116,7 @@
         margin-bottom: 4px;
     }
 }
+*/
 
 .transfer-chip {
     display: inline-block;
@@ -232,30 +167,6 @@
     font-size: 0.92rem;
     line-height: 1.7;
     opacity: 0.88;
-}
-
-.route-card ul {
-    margin: 0;
-    padding-left: 1.05rem;
-    line-height: 1.75;
-    font-size: 0.9rem;
-    opacity: 0.84;
-}
-
-.route-micro {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 0 12px;
-}
-
-.route-micro span {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 0.77rem;
-    background: rgba(58, 184, 200, 0.1);
-    color: var(--color-accent, #3ab8c8);
 }
 
 .mistake-grid {
