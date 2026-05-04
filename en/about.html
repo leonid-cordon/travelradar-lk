@@ -16,18 +16,17 @@
     <meta property="og:image" content="https://travelradarlk.com/assets/images/hero/hero_1920x300.jpg">
     <meta property="og:site_name" content="Travel Radar LK">
     <meta property="og:locale" content="en_US">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About — Travel Radar LK">
     <meta name="twitter:description" content="About Travel Radar LK — an independent Mexico-first travel project built around practical trip planning, hotel-area research, and travel experience in Turkey and the Dominican Republic.">
     <meta name="twitter:image" content="https://travelradarlk.com/assets/images/hero/hero_1920x300.jpg">
-
-<link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/about.html">
+    <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/about.html">
     <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/about.html">
     <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/about.html">
     <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/en/about.html">
+
     <script type="application/ld+json">
-{
+    {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "About",
@@ -35,19 +34,23 @@
       "description": "About Travel Radar LK — an independent Mexico-first travel project built around practical trip planning, hotel-area research, and travel experience in Turkey and the Dominican Republic.",
       "url": "https://travelradarlk.com/en/about.html",
       "inLanguage": "en-US",
+      "author": {
+        "@type": "Person",
+        "name": "Leonid K.",
+        "url": "https://travelradarlk.com/en/about.html"
+      },
       "publisher": {
-            "@type": "Organization",
-            "name": "Travel Radar LK"
+        "@type": "Organization",
+        "name": "Travel Radar LK",
+        "url": "https://travelradarlk.com"
       },
       "image": "https://travelradarlk.com/assets/images/hero/hero_1920x300.jpg"
-}
+    }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../favicon.ico?v=3">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?v=3">
     <link rel="stylesheet" href="../theme.css">
@@ -55,8 +58,481 @@
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/pages/home-index.css">
+
+    <style>
+        /* =============================================
+           ABOUT PAGE — PREMIUM INLINE STYLES
+           Supports [data-theme="dark"] and [data-theme="light"]
+           ============================================= */
+
+        /* ---- Tokens ---- */
+        [data-theme="dark"] {
+            --ab-bg:            #0f1117;
+            --ab-surface:       #181c27;
+            --ab-surface2:      #1e2333;
+            --ab-border:        rgba(255,255,255,0.08);
+            --ab-text:          #e4e6ef;
+            --ab-muted:         #7a8099;
+            --ab-accent:        #c8a96e;
+            --ab-accent-soft:   rgba(200,169,110,0.12);
+            --ab-accent2:       #5fa8d3;
+            --ab-divider:       rgba(255,255,255,0.07);
+            --ab-shadow:        0 8px 40px rgba(0,0,0,0.5);
+            --ab-card-shadow:   0 2px 16px rgba(0,0,0,0.35);
+        }
+        [data-theme="light"] {
+            --ab-bg:            #f7f8fc;
+            --ab-surface:       #ffffff;
+            --ab-surface2:      #f0f2f8;
+            --ab-border:        rgba(0,0,0,0.08);
+            --ab-text:          #1a1d2e;
+            --ab-muted:         #6b7280;
+            --ab-accent:        #b8942a;
+            --ab-accent-soft:   rgba(184,148,42,0.09);
+            --ab-accent2:       #2a7fa8;
+            --ab-divider:       rgba(0,0,0,0.06);
+            --ab-shadow:        0 8px 40px rgba(0,0,0,0.08);
+            --ab-card-shadow:   0 2px 16px rgba(0,0,0,0.08);
+        }
+
+        /* ---- Page wrapper ---- */
+        .about-page {
+            background: var(--ab-bg);
+            padding: 3rem 0 5rem;
+        }
+
+        .about-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* ---- Intro ---- */
+        .about-page-intro {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--ab-divider);
+            padding-bottom: 2rem;
+        }
+
+        .about-page-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--ab-text);
+            margin: 0 0 0.4rem;
+            line-height: 1.1;
+        }
+
+        .about-page-subtitle {
+            font-size: 1rem;
+            color: var(--ab-muted);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* ---- Body text ---- */
+        .about-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.0rem;
+            line-height: 1.78;
+            color: var(--ab-text);
+            margin: 0 0 1.2rem;
+        }
+
+        .about-list {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--ab-text);
+            margin: 0.5rem 0 1.4rem 1.2rem;
+            padding: 0;
+        }
+
+        .about-list li {
+            margin-bottom: 0.35rem;
+        }
+
+        .about-list li::marker {
+            color: var(--ab-accent);
+        }
+
+        /* ---- Section headings ---- */
+        .about-section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--ab-text);
+            margin: 2.8rem 0 1.2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--ab-divider);
+        }
+
+        /* ---- Affiliate note ---- */
+        .about-note {
+            background: var(--ab-surface2);
+            border-left: 3px solid var(--ab-accent);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .about-note .about-text {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--ab-muted);
+        }
+
+        /* ============================================
+           AUTHOR BLOCK
+           ============================================ */
+        .author-block {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2.2rem;
+            align-items: start;
+            margin: 1.5rem 0 2rem;
+            background: var(--ab-surface);
+            border: 1px solid var(--ab-border);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--ab-card-shadow);
+        }
+
+        /* ---- Photo ---- */
+        .author-photo-wrap {
+            position: relative;
+        }
+
+        .author-photo-btn {
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: zoom-in;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .author-photo-btn img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 10px;
+            transition: transform 0.35s ease, filter 0.35s ease;
+        }
+
+        .author-photo-btn:hover img {
+            transform: scale(1.03);
+            filter: brightness(1.05);
+        }
+
+        .photo-zoom-hint {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            letter-spacing: 0.04em;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            text-transform: uppercase;
+        }
+
+        .author-photo-btn:hover .photo-zoom-hint {
+            opacity: 1;
+        }
+
+        .author-photo-caption {
+            font-size: 0.72rem;
+            color: var(--ab-muted);
+            margin-top: 0.5rem;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* ---- Bio text ---- */
+        .author-bio {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .author-name {
+            font-family: 'Fraunces', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--ab-text);
+            margin: 0 0 0.2rem;
+            line-height: 1.1;
+        }
+
+        .author-tagline {
+            font-size: 0.78rem;
+            color: var(--ab-muted);
+            margin: 0 0 1.2rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .author-bio .about-text {
+            font-size: 0.96rem;
+            margin-bottom: 0.9rem;
+        }
+
+        /* ---- Resort badges ---- */
+        .resort-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.8rem 0 1.2rem;
+        }
+
+        .resort-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--ab-text);
+            border: 1px solid var(--ab-border);
+            background: var(--ab-surface2);
+            white-space: nowrap;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* ---- Stats row ---- */
+        .author-stats {
+            display: flex;
+            gap: 0;
+            border: 1px solid var(--ab-border);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .author-stat {
+            flex: 1;
+            text-align: center;
+            padding: 0.85rem 0.5rem;
+            border-right: 1px solid var(--ab-border);
+            background: var(--ab-surface2);
+        }
+
+        .author-stat:last-child {
+            border-right: none;
+        }
+
+        .author-stat-number {
+            display: block;
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--ab-accent);
+            line-height: 1;
+        }
+
+        .author-stat-label {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--ab-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.3rem;
+            line-height: 1.3;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* ============================================
+           WHAT THIS SITE COVERS — CARDS
+           ============================================ */
+        .focus-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .focus-card {
+            background: var(--ab-surface);
+            border: 1px solid var(--ab-border);
+            border-radius: 12px;
+            padding: 1.2rem 1.25rem;
+            box-shadow: var(--ab-card-shadow);
+        }
+
+        .focus-card-icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .focus-card-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--ab-text);
+            margin: 0 0 0.35rem;
+        }
+
+        .focus-card-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.84rem;
+            color: var(--ab-muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ============================================
+           DESTINATIONS COVERAGE ROW
+           ============================================ */
+        .destinations-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1rem 0 1.8rem;
+        }
+
+        .dest-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            border-radius: 24px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+            border: 1.5px solid var(--ab-border);
+            color: var(--ab-text);
+            background: var(--ab-surface);
+        }
+
+        .dest-pill.primary {
+            border-color: var(--ab-accent);
+            background: var(--ab-accent-soft);
+            color: var(--ab-accent);
+        }
+
+        /* ============================================
+           LIGHTBOX
+           ============================================ */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.88);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
+        .lightbox-overlay.open {
+            display: flex;
+            animation: lbFadeIn 0.22s ease;
+        }
+
+        @keyframes lbFadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .lightbox-img-wrap {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            cursor: default;
+            animation: lbScaleIn 0.25s cubic-bezier(0.34,1.56,0.64,1);
+        }
+
+        @keyframes lbScaleIn {
+            from { transform: scale(0.88); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        .lightbox-img-wrap img {
+            max-width: 90vw;
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.7);
+        }
+
+        .lightbox-caption {
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.8rem;
+            margin-top: 0.75rem;
+            font-family: 'DM Sans', sans-serif;
+            font-style: italic;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1rem;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 680px) {
+            .author-block {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+
+            .author-photo-btn img {
+                aspect-ratio: 4/3;
+                object-position: center 15%;
+            }
+
+            .focus-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .author-stats {
+                flex-direction: row;
+            }
+
+            .author-stat-number {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+
     <script>
-        // Early theme initialization
         (function () {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
@@ -73,62 +549,148 @@
         <img src="../assets/images/hero/hero_1920x300.jpg" alt="Banner" loading="eager">
     </section>
 
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox" role="dialog" aria-label="Photo enlarged">
+        <div class="lightbox-img-wrap">
+            <div class="lightbox-close" id="lightboxClose" title="Close">✕</div>
+            <img id="lightboxImg" src="" alt="Leonid K. — Punta Cana, Dominican Republic">
+            <div class="lightbox-caption">Leonid K. — Punta Cana, Dominican Republic</div>
+        </div>
+    </div>
+
     <!-- About Page Main Content -->
     <section class="about-page">
         <div class="container">
             <div class="about-content">
 
-                <!-- Title with animation -->
+                <!-- Title -->
                 <div class="about-page-intro">
                     <h1 class="about-page-title">About</h1>
                     <p class="about-page-subtitle">Travel Radar LK — an independent Mexico-first travel information project</p>
                 </div>
 
+                <!-- What the project is -->
                 <p class="about-text">
                     <strong>Travel Radar LK</strong> is an independent travel information project built around practical travel decisions: where to stay, how to compare areas, and what to check before booking.
                 </p>
 
-                <p class="about-text">
-                    The project was created as a practical guide for travelers who want to quickly figure out:
-                </p>
+                <p class="about-text">No surface-level reviews, generic inspiration, or unnecessary filler. Just structured, honest information you can actually use.</p>
 
-                <ul class="about-list">
-                    <li>where to stay in a city</li>
-                    <li>which neighborhoods suit different needs and budgets</li>
-                    <li>which hotels genuinely deliver on their price</li>
-                    <li>how much a vacation actually costs</li>
-                </ul>
+                <!-- What this site covers — cards -->
+                <h2 class="about-section-title">What This Site Covers</h2>
 
-                <p class="about-text">
-                    The main focus is on practical information: location, convenience, value for money, and the real pros and cons of each option. No surface-level reviews, generic inspiration, or unnecessary fluff.
-                </p>
+                <div class="focus-cards">
+                    <div class="focus-card">
+                        <span class="focus-card-icon">🏨</span>
+                        <p class="focus-card-title">Hotel zones &amp; areas</p>
+                        <p class="focus-card-text">Which zone fits your trip — not just which hotel looks nice in photos.</p>
+                    </div>
+                    <div class="focus-card">
+                        <span class="focus-card-icon">💰</span>
+                        <p class="focus-card-title">Real costs</p>
+                        <p class="focus-card-text">What a vacation actually costs — all-in, without surprises.</p>
+                    </div>
+                    <div class="focus-card">
+                        <span class="focus-card-icon">📍</span>
+                        <p class="focus-card-title">Neighborhood trade-offs</p>
+                        <p class="focus-card-text">Location, convenience, beach access, transport — laid out honestly.</p>
+                    </div>
+                    <div class="focus-card">
+                        <span class="focus-card-icon">✅</span>
+                        <p class="focus-card-title">Booking decisions</p>
+                        <p class="focus-card-text">Which hotels genuinely deliver on their price — and which ones don't.</p>
+                    </div>
+                </div>
 
-                <p class="about-text">
-                    The editorial focus now centers on Mexico and Caribbean trip planning, especially Cancun, Tulum, Playa del Carmen, and the Riviera Maya. Selected guides to Egypt and Turkey remain on the site as supporting coverage.
-                </p>
+                <!-- Destinations -->
+                <p class="about-text">Primary coverage is Mexico and the Caribbean. Supporting guides cover Egypt and Turkey.</p>
 
-                <p class="about-text">
-                    The content combines structured research with travel experience, accommodation analysis, and close attention to visual details. A professional background in photo and video helps notice nuances that often go unmentioned in standard reviews.
-                </p>
+                <div class="destinations-row">
+                    <span class="dest-pill primary">🇲🇽 Cancun</span>
+                    <span class="dest-pill primary">🌴 Riviera Maya</span>
+                    <span class="dest-pill primary">🏖️ Tulum</span>
+                    <span class="dest-pill primary">🌊 Playa del Carmen</span>
+                    <span class="dest-pill">🇩🇴 Dominican Republic</span>
+                    <span class="dest-pill">🇹🇷 Turkey</span>
+                    <span class="dest-pill">🇪🇬 Egypt</span>
+                </div>
 
+                <!-- About the Author -->
                 <h2 class="about-section-title">About the Author</h2>
 
+                <div class="author-block">
+
+                    <!-- Photo + lightbox trigger -->
+                    <div class="author-photo-wrap">
+                        <button
+                            class="author-photo-btn"
+                            id="photoBtn"
+                            aria-label="Click to enlarge photo"
+                            title="Click to enlarge"
+                        >
+                            <img
+                                src="../assets/images/about/leonid-k-punta-cana.jpg"
+                                alt="Leonid K. — Travel Radar LK founder, Punta Cana"
+                                width="200"
+                                height="267"
+                                loading="lazy"
+                            >
+                            <span class="photo-zoom-hint">enlarge</span>
+                        </button>
+                        <p class="author-photo-caption">Leonid K.<br>Punta Cana, Dominican Republic</p>
+                    </div>
+
+                    <!-- Bio -->
+                    <div class="author-bio">
+                        <h3 class="author-name">Leonid K.</h3>
+                        <p class="author-tagline">Lviv, Ukraine &nbsp;·&nbsp; Travel researcher &amp; photographer</p>
+
+                        <p class="about-text">
+                            I've spent over a decade shooting photo and video professionally — events, productions, and travel. That background changed how I look at resorts: I notice things that don't make it into standard reviews. Light, space, how a place actually feels versus how it photographs for a brochure.
+                        </p>
+
+                        <p class="about-text">
+                            I've stayed at premium all-inclusive resorts in Turkey and the Dominican Republic. That firsthand experience shapes the comparisons and breakdowns on this site and helps me recognize what a well-run resort should feel like from the inside.
+                        </p>
+
+                        <div class="resort-badges">
+                            <span class="resort-badge">🇹🇷 Utopia World, Turkey</span>
+                            <span class="resort-badge">🇩🇴 Majestic Colonial, Punta Cana</span>
+                        </div>
+
+                        <div class="author-stats">
+                            <div class="author-stat">
+                                <span class="author-stat-number">10+</span>
+                                <span class="author-stat-label">years photo &amp; video</span>
+                            </div>
+                            <div class="author-stat">
+                                <span class="author-stat-number">20+</span>
+                                <span class="author-stat-label">Mexico guides</span>
+                            </div>
+                            <div class="author-stat">
+                                <span class="author-stat-number">🇲🇽</span>
+                                <span class="author-stat-label">primary focus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <p class="about-text">
-                    The project is run by an author based in Lviv, Ukraine, with extensive travel experience in Turkey and the Dominican Republic and a strong long-term interest in Mexico and Caribbean travel.
+                    Mexico and the Riviera Maya are my primary research focus — built on deep study of hotel zones, booking patterns, area trade-offs, and the questions travelers consistently get wrong. Rather than relying on broad destination summaries, every guide here combines structured research with the attention to detail that comes from years behind a professional camera.
                 </p>
 
                 <p class="about-text">
-                    Rather than relying only on broad destination summaries, the project combines personal travel background with careful research into hotel areas, transport choices, pricing, neighborhood trade-offs, and the booking decisions that shape the whole trip.
+                    For Mexico and Caribbean guides, I cross-check official sources, resort pages, map locations, recent traveler reviews, booking-platform details, local fees, transfer logistics, and seasonal risks before publishing or updating recommendations.
                 </p>
 
                 <div class="about-note">
                     <p class="about-text">
-                        The site may include affiliate links to booking services. This does not affect the cost for the user, but helps support and sustain the project while keeping it independent.
+                        The site may include affiliate links to booking services. This does not affect the cost for you — it helps keep the project independent and running.
                     </p>
                 </div>
 
                 <p class="about-text">
-                    If you're planning a trip — here you'll find structured, clear, and genuinely useful information without the noise.
+                    If you're planning a trip to Mexico or the Caribbean — you'll find structured, clear, and genuinely useful information here. No noise, no filler.
                 </p>
 
             </div>
@@ -138,6 +700,39 @@
     <div id="site-footer" data-lang="en"></div>
 
     <script src="../js/load-header.js"></script>
-</body>
 
+    <script>
+        // Lightbox
+        (function () {
+            const overlay   = document.getElementById('lightbox');
+            const lbImg     = document.getElementById('lightboxImg');
+            const closeBtn  = document.getElementById('lightboxClose');
+            const photoBtn  = document.getElementById('photoBtn');
+            const srcImg    = photoBtn ? photoBtn.querySelector('img') : null;
+
+            function openLightbox() {
+                if (!srcImg) return;
+                // Use full-res path — swap thumbnail suffix if needed
+                lbImg.src = srcImg.src;
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            if (photoBtn) photoBtn.addEventListener('click', openLightbox);
+            if (closeBtn) closeBtn.addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
+            if (overlay)  overlay.addEventListener('click', closeLightbox);
+
+            // Close on Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+        })();
+    </script>
+
+</body>
 </html>
