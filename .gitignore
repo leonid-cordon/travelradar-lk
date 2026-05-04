@@ -1,3 +1,6 @@
-.dev/
 _dev/
-AFFILIATE_STRATEGY_2026.md
+.vscode/
+.wrangler/
+start-cloudflare-local.bat
+open-current-file-cloudflare-url.bat
+open-cloudflare-url.bat
