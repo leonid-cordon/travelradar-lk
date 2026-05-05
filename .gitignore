@@ -1,6 +1,15 @@
+# Рабочие черновики, заметки и служебные файлы проекта, не часть публичного сайта
 _dev/
+
+# Локальные настройки VS Code / Codex / Antigravity: tasks, локальные горячие клавиши, dev workflow
 .vscode/
+
+# Служебная папка Wrangler / Cloudflare Pages local dev
 .wrangler/
-start-cloudflare-local.bat
-open-current-file-cloudflare-url.bat
-open-cloudflare-url.bat
+
+# Локальный PowerShell-скрипт для открытия текущего HTML-файла как Cloudflare clean URL
+open-clean-url.ps1
+
+# Внутренние AI / SEO заметки, не часть публичного сайта
+AI_RULES.md
+auditSEO.md
