@@ -89,6 +89,30 @@
             text-shadow: 0 1px 8px rgba(0,0,0,.55);
         }
 
+        /* Article hero author link */
+        .hero-subtitle .author-link {
+            color: rgba(255, 255, 255, .96);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: rgba(212, 169, 106, .58);
+            text-decoration-thickness: .08em;
+            text-underline-offset: .22em;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, .62);
+            transition:
+                color .2s ease,
+                text-decoration-color .2s ease,
+                text-decoration-thickness .2s ease,
+                text-shadow .2s ease;
+        }
+
+        .hero-subtitle .author-link:hover,
+        .hero-subtitle .author-link:focus-visible {
+            color: #fff;
+            text-decoration-color: rgba(232, 190, 102, .98);
+            text-decoration-thickness: .12em;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, .7), 0 0 14px rgba(212, 169, 106, .22);
+        }
+
         /* ── NAV ──────────────────────────────────────── */
         .site-nav {
             position: sticky; top: 0; z-index: 50;
