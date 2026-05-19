@@ -947,6 +947,111 @@
         }
         .related-link::after { content: '→'; opacity: .7; flex-shrink: 0; }
 
+        .mobile-highlight-button {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-highlight-button,
+            .article-wrap article a.mobile-highlight-button,
+            .article-wrap article a.mobile-highlight-button:visited {
+                position: relative;
+                z-index: 0;
+                display: block;
+                width: 100%;
+                max-width: 360px;
+                margin: 1.1rem auto .15rem;
+                padding: 17px 20px;
+                border: 1px solid rgba(255,226,165,.78);
+                border-radius: 14px;
+                font-size: 1rem;
+                font-weight: 800;
+                line-height: 1.28;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                transform: translateY(0) scale(1);
+                transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+                box-shadow:
+                    0 0 0 2px rgba(255,210,124,.30),
+                    0 0 24px 6px rgba(255,200,100,.70),
+                    0 12px 26px rgba(0,0,0,.42),
+                    inset 0 1px 0 rgba(255,255,255,.62),
+                    inset 0 -12px 18px rgba(86,47,0,.20);
+                overflow: visible;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .mobile-highlight-button::before,
+            .article-wrap article a.mobile-highlight-button::before {
+                content: '';
+                position: absolute;
+                inset: 2px 3px auto;
+                height: 45%;
+                border-radius: 11px 11px 8px 8px;
+                background: linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,0));
+                pointer-events: none;
+            }
+
+            [data-theme="dark"] .mobile-highlight-button,
+            [data-theme="dark"] .article-wrap article a.mobile-highlight-button,
+            [data-theme="dark"] .article-wrap article a.mobile-highlight-button:visited {
+                background:
+                    linear-gradient(180deg, #f0cf94 0%, #d4a96a 52%, #b9853e 100%);
+                color: #0d0f14;
+                text-shadow: 0 1px 0 rgba(255,255,255,.18);
+            }
+
+            [data-theme="light"] .mobile-highlight-button,
+            [data-theme="light"] .article-wrap article a.mobile-highlight-button,
+            [data-theme="light"] .article-wrap article a.mobile-highlight-button:visited {
+                background:
+                    linear-gradient(180deg, #ffe0a4 0%, #f4c77c 48%, #e1a746 100%);
+                color: #0d0f14;
+                box-shadow:
+                    0 0 0 2px rgba(255,195,90,.34),
+                    0 0 22px 5px rgba(244,199,124,.76),
+                    0 12px 24px rgba(126,84,8,.24),
+                    inset 0 1px 0 rgba(255,255,255,.68),
+                    inset 0 -12px 18px rgba(104,62,0,.18);
+            }
+
+            .mobile-highlight-button:hover,
+            .mobile-highlight-button:focus-visible,
+            .article-wrap article a.mobile-highlight-button:hover,
+            .article-wrap article a.mobile-highlight-button:focus-visible {
+                color: #0d0f14;
+                text-decoration: none;
+                transform: translateY(-1px);
+                filter: saturate(1.08) brightness(1.02);
+            }
+
+            .mobile-highlight-button:focus-visible,
+            .article-wrap article a.mobile-highlight-button:focus-visible {
+                outline: 2px solid rgba(255,236,190,.90);
+                outline-offset: 4px;
+            }
+
+            .mobile-highlight-button:active,
+            .article-wrap article a.mobile-highlight-button:active {
+                transform: translateY(2px) scale(.97);
+                filter: saturate(1.06) brightness(.98);
+                box-shadow:
+                    0 0 0 1px rgba(255,220,150,.44),
+                    0 0 12px 3px rgba(255,200,100,.82),
+                    0 5px 12px rgba(0,0,0,.30),
+                    inset 0 8px 16px rgba(70,38,0,.20),
+                    inset 0 -1px 0 rgba(255,255,255,.20);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mobile-highlight-button,
+            .article-wrap article a.mobile-highlight-button {
+                display: none;
+            }
+        }
+
         /* ── ARTICLE IMAGE ────────────────────────────── */
         .article-image { margin: 1.5rem 0; }
         .article-image img {
