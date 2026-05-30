@@ -39,6 +39,11 @@ function getCurrentLang() {
 })();
 
 /* ========= LOAD PARTIALS ========= */
+/* Версия partials: меняйте вручную при правке header/footer,
+   чтобы сбросить кэш у пользователей. Не используем Date.now()/no-store,
+   иначе header и footer перекачиваются с сети на каждой навигации. */
+const PARTIALS_VERSION = '2026-05-30';
+
 async function loadPartials() {
     try {
         const lang = getCurrentLang();
@@ -55,8 +60,8 @@ async function loadPartials() {
         }
 
         const [headerRes, footerRes] = await Promise.all([
-            fetch(headerPath + '?v=' + Date.now(), { cache: 'no-store' }),
-            fetch(footerPath + '?v=' + Date.now(), { cache: 'no-store' })
+            fetch(headerPath + '?v=' + PARTIALS_VERSION),
+            fetch(footerPath + '?v=' + PARTIALS_VERSION)
         ]);
 
         if (!headerRes.ok || !footerRes.ok) {
