@@ -1955,6 +1955,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .scenario-grid.is-numbered {
+                grid-template-columns: 1fr;
+            }
+
             .article-hero {
                 height: 460px;
             }
