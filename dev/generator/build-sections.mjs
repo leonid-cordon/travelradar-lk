@@ -24,9 +24,34 @@ const GEO = {
   cancun: 'Cancun', tulum: 'Tulum', 'playa-del-carmen': 'Playa del Carmen', cozumel: 'Cozumel', 'isla-mujeres': 'Isla Mujeres',
 };
 
-// Per-section hard-coded config. Thematic sections only (weather + 5);
-// `all` (showcase) and `news` (0 records, legacy page) are handled separately.
+// Per-section hard-coded config: 6 thematic sections + the `all` showcase.
+// `news` (0 records) stays on its legacy page and is handled separately.
+// The showcase (`all`) lives at the content root /en/content/ (slug='') and,
+// unlike thematic sections, lists the whole corpus and carries hreflang.
 const SECTIONS = {
+  all: {
+    slug: '',
+    isShowcase: true,
+    label: 'Content',
+    titleTag: 'Travel Guides & Hotel Picks: Cancun, Tulum & the Riviera Maya | Travel Radar LK',
+    ogTitle: "Travel Guides & Hotel Picks for Mexico's Caribbean Coast",
+    description: 'Every Travel Radar LK guide in one place — where to stay, what to do, when to go and how to plan Cancun, Tulum and the Riviera Maya, with supporting coverage for Egypt and Turkey.',
+    h1: 'Content',
+    subtitle: 'Every guide on the site, in one place',
+    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
+    heroAlt: "Travel guides for Mexico's Caribbean coast and beyond",
+    hreflang: {
+      ru: 'https://travelradarlk.com/ru/content/',
+      en: 'https://travelradarlk.com/en/content/',
+      uk: 'https://travelradarlk.com/ua/content/',
+      'x-default': 'https://travelradarlk.com/en/content/',
+    },
+    intro: [
+      "Everything on Travel Radar LK in one place — destinations, where to stay, things to do, weather and seasons, planning and safety. The strongest coverage is Mexico's Caribbean coast, with supporting guides for Egypt and Turkey.",
+      'Browse the full library below.',
+    ],
+  },
+
   weather: {
     slug: 'weather',
     label: 'Weather & Seasons',
@@ -161,7 +186,7 @@ function renderPage(cfg, recs) {
   const [y, mo] = maxMod.split('-');
   const metaLine = `${count} ${count === 1 ? 'guide' : 'guides'} • Updated ${MONTHS[+mo - 1]} ${y}`;
 
-  const url = `${SITE}/en/content/${cfg.slug}/`;
+  const url = cfg.isShowcase ? `${SITE}/en/content/` : `${SITE}/en/content/${cfg.slug}/`;
   const heroImageAbs = `${SITE}${cfg.heroImage}`;
 
   const collectionLd = {
@@ -179,12 +204,40 @@ function renderPage(cfg, recs) {
   const breadcrumbLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/en/` },
-      { '@type': 'ListItem', position: 2, name: 'Content', item: `${SITE}/en/content/` },
-      { '@type': 'ListItem', position: 3, name: cfg.label, item: url },
-    ],
+    itemListElement: cfg.isShowcase
+      ? [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/en/` },
+          { '@type': 'ListItem', position: 2, name: cfg.label, item: url },
+        ]
+      : [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/en/` },
+          { '@type': 'ListItem', position: 2, name: 'Content', item: `${SITE}/en/content/` },
+          { '@type': 'ListItem', position: 3, name: cfg.label, item: url },
+        ],
   };
+
+  // hreflang block (showcase only); empty string keeps thematic sections byte-identical.
+  const hreflang = cfg.hreflang
+    ? Object.entries(cfg.hreflang).map(([k, v]) => `    <link rel="alternate" hreflang="${k}" href="${v}">`).join('\n') + '\n'
+    : '';
+
+  // Breadcrumb trail: showcase is 2-level (Home › Content); sections are 3-level.
+  const breadcrumbNav = cfg.isShowcase
+    ? `<a href="/en/" style="color:inherit;text-decoration:none;">Home</a>
+        <span aria-hidden="true"> › </span>
+        <span aria-current="page">${esc(cfg.label)}</span>`
+    : `<a href="/en/" style="color:inherit;text-decoration:none;">Home</a>
+        <span aria-hidden="true"> › </span>
+        <a href="/en/content/" style="color:inherit;text-decoration:none;">Content</a>
+        <span aria-hidden="true"> › </span>
+        <span aria-current="page">${esc(cfg.label)}</span>`;
+
+  // "← All content" back-link is omitted on the showcase (it is the all-content page).
+  const backLink = cfg.isShowcase ? '' : `
+
+            <p style="margin:1.8rem 0 0;">
+                <a href="/en/content/" style="color:var(--ci-accent);text-decoration:none;font-weight:500;">← All content</a>
+            </p>`;
 
   const cards = recs.map(renderCard).join('\n\n');
 
@@ -241,7 +294,7 @@ ${JSON.stringify(breadcrumbLd, null, 4)}
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
-</head>
+${hreflang}</head>
 
 <body data-page="content">
 
@@ -265,11 +318,7 @@ ${JSON.stringify(breadcrumbLd, null, 4)}
 
     <!-- Breadcrumb -->
     <nav class="container" aria-label="Breadcrumb" style="padding-top:1rem;font-size:.85rem;color:var(--ci-muted);">
-        <a href="/en/" style="color:inherit;text-decoration:none;">Home</a>
-        <span aria-hidden="true"> › </span>
-        <a href="/en/content/" style="color:inherit;text-decoration:none;">Content</a>
-        <span aria-hidden="true"> › </span>
-        <span aria-current="page">${esc(cfg.label)}</span>
+        ${breadcrumbNav}
     </nav>
 
     <!-- Intro -->
@@ -286,11 +335,7 @@ ${cfg.intro.map((p) => `                <p>${esc(p)}</p>`).join('\n')}
         <div class="container">
             <div class="destinations-grid">
 ${cards}
-            </div>
-
-            <p style="margin:1.8rem 0 0;">
-                <a href="/en/content/" style="color:var(--ci-accent);text-decoration:none;font-weight:500;">← All content</a>
-            </p>
+            </div>${backLink}
         </div>
     </section>
 
@@ -313,7 +358,9 @@ let index;
 try { index = JSON.parse(readFileSync(INDEX_PATH, 'utf8')); }
 catch (e) { console.error(`FATAL: cannot read content-index.en.json (run build-index first): ${e.message}`); process.exit(1); }
 
-const recs = index.records.filter((r) => r.primary_section === TARGET);
+const recs = cfg.isShowcase
+  ? index.records.slice()
+  : index.records.filter((r) => r.primary_section === TARGET);
 if (!recs.length) { console.error(`FATAL: 0 records for section "${TARGET}" in index`); process.exit(1); }
 
 const html = renderPage(cfg, recs);
@@ -326,16 +373,19 @@ writeFileSync(outPath, html, { encoding: 'utf8' });
 // ── self-check ──
 const back = readFileSync(outPath, 'utf8');
 const cardCount = (back.match(/class="content-card"/g) || []).length;
+const expectCanonical = cfg.isShowcase ? `${SITE}/en/content/` : `${SITE}/en/content/${cfg.slug}/`;
+const outRel = cfg.isShowcase ? 'en/content/index.html' : `en/content/${cfg.slug}/index.html`;
 const checks = [
   [cardCount === recs.length, `cards rendered: ${cardCount}/${recs.length}`],
-  [back.includes(`<link rel="canonical" href="${SITE}/en/content/${cfg.slug}/">`), 'canonical present'],
+  [back.includes(`<link rel="canonical" href="${expectCanonical}">`), 'canonical present'],
   [back.includes('id="site-header"') && back.includes('id="site-footer"'), 'header/footer placeholders present'],
   [back.includes('data-page="content"'), 'data-page="content" set'],
   [back.includes('/js/load-header.js'), 'partial loader linked'],
+  [!cfg.hreflang || (back.match(/rel="alternate" hreflang=/g) || []).length === Object.keys(cfg.hreflang).length, 'hreflang alternates present'],
 ];
 const failed = checks.filter(([ok]) => !ok);
 
-console.log(`OK: wrote en/content/${cfg.slug}/index.html`);
+console.log(`OK: wrote ${outRel}`);
 console.log(`  section: ${cfg.label}`);
 console.log(`  records: ${recs.length} (sorted featured→date)`);
 for (const [ok, msg] of checks) console.log(`  ${ok ? '✓' : '✗'} ${msg}`);
