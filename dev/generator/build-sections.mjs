@@ -24,6 +24,23 @@ const GEO = {
   cancun: 'Cancun', tulum: 'Tulum', 'playa-del-carmen': 'Playa del Carmen', cozumel: 'Cozumel', 'isla-mujeres': 'Isla Mujeres',
 };
 
+// Section switcher — fixed, language-invariant order shared by All + every section.
+// Adapts the existing `quick-nav` component (CSS already in content-index.css); no
+// new component, no JS. Labels are i18n-ready (mirror SECTION_LABELS in
+// build-index.mjs): for other languages only the labels and the /<lang>/ path
+// prefix change, not the order or structure. `news` points to its existing page.
+const LANG = 'en';
+const SWITCHER = [
+  { slug: '', label: 'All' },
+  { slug: 'destinations', label: 'Destinations' },
+  { slug: 'stay', label: 'Stay & Hotels' },
+  { slug: 'things-to-do', label: 'Things to Do' },
+  { slug: 'weather', label: 'Weather & Seasons' },
+  { slug: 'planning', label: 'Planning & Budget' },
+  { slug: 'safety', label: 'Safety' },
+  { slug: 'news', label: 'News' },
+];
+
 // Per-section hard-coded config: 6 thematic sections + the `all` showcase.
 // `news` (0 records) stays on its legacy page and is handled separately.
 // The showcase (`all`) lives at the content root /en/content/ (slug='') and,
@@ -175,6 +192,28 @@ ${badges}
                 </a>`;
 }
 
+// Section switcher markup (same `quick-nav` component as legacy, new v2 items).
+// `activeSlug` = cfg.slug ('' for the All showcase) → marks the current tab.
+function renderSwitcher(activeSlug) {
+  const items = SWITCHER.map((s) => {
+    const href = s.slug ? `/${LANG}/content/${s.slug}/` : `/${LANG}/content/`;
+    const isActive = s.slug === activeSlug;
+    const cls = `quick-nav-item${isActive ? ' active' : ''}`;
+    const cur = isActive ? ' aria-current="page"' : '';
+    return `                <a href="${href}" class="${cls}"${cur}>${esc(s.label)}</a>`;
+  }).join('\n');
+  return `    <!-- Section switcher -->
+    <section class="quick-nav">
+        <div class="container">
+            <nav class="quick-nav-list" aria-label="Sections">
+${items}
+            </nav>
+        </div>
+    </section>
+
+`;
+}
+
 function renderPage(cfg, recs) {
   // sort: featured desc, then date_published desc
   recs = [...recs].sort((a, b) =>
@@ -238,6 +277,8 @@ function renderPage(cfg, recs) {
             <p style="margin:1.8rem 0 0;">
                 <a href="/en/content/" style="color:var(--ci-accent);text-decoration:none;font-weight:500;">← All content</a>
             </p>`;
+
+  const switcher = renderSwitcher(cfg.slug);
 
   const cards = recs.map(renderCard).join('\n\n');
 
@@ -316,7 +357,7 @@ ${hreflang}</head>
         </div>
     </section>
 
-    <!-- Breadcrumb -->
+${switcher}    <!-- Breadcrumb -->
     <nav class="container" aria-label="Breadcrumb" style="padding-top:1rem;font-size:.85rem;color:var(--ci-muted);">
         ${breadcrumbNav}
     </nav>
@@ -382,6 +423,8 @@ const checks = [
   [back.includes('data-page="content"'), 'data-page="content" set'],
   [back.includes('/js/load-header.js'), 'partial loader linked'],
   [!cfg.hreflang || (back.match(/rel="alternate" hreflang=/g) || []).length === Object.keys(cfg.hreflang).length, 'hreflang alternates present'],
+  [(back.match(/class="quick-nav-item/g) || []).length === SWITCHER.length, `section switcher: ${SWITCHER.length} items`],
+  [(back.match(/quick-nav-item active"/g) || []).length === 1, 'section switcher: exactly one active'],
 ];
 const failed = checks.filter(([ok]) => !ok);
 
