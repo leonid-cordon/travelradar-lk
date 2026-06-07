@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "schema": "dev/docs/METADATA_SCHEMA_v1.md",
+  "source_of_truth": true,
+  "updated": "2026-06-07",
+  "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
+  "record_count": 57,
+  "records": {
+    "7-day-riviera-maya-itinerary": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
+    },
+    "adults-only-vs-family-resorts-cancun": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "comparison", "tags": ["adults-only", "family-resort"], "audience": ["couples", "family"], "featured": 0, "intent": null
+    },
+    "best-adults-only-resorts-cancun": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["adults-only"], "audience": ["couples"], "featured": 0, "intent": null
+    },
+    "best-all-inclusive-resorts-cancun-hotel-zone": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["all-inclusive"], "audience": [], "featured": 0, "intent": null
+    },
+    "best-day-trips-from-cancun": {
+      "primary_section": "things-to-do", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["day-trips"], "audience": [], "featured": 0, "intent": null
+    },
+    "best-family-resorts-cancun": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["family-resort"], "audience": ["family"], "featured": 0, "intent": null
+    },
+    "best-honeymoon-resorts-cancun-riviera-maya": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "listicle", "tags": ["honeymoon"], "audience": ["couples"], "featured": 0, "intent": null
+    },
+    "best-hotels-cancun-2026": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "best-hotels-playa-del-carmen": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "playa-del-carmen", "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "best-hotels-tulum-beach-zone-town-aldea-zama": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "best-resorts-riviera-maya": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "best-snorkeling-cancun-isla-mujeres-cozumel": {
+      "primary_section": "things-to-do", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "isla-mujeres", "cozumel"], "content_type": "listicle", "tags": ["snorkeling", "island-trip"], "audience": [], "featured": 0, "intent": null
+    },
+    "best-things-to-do-cancun-riviera-maya": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "best-time-to-visit-cancun-riviera-maya": {
+      "primary_section": "weather", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["best-time"], "audience": [], "featured": 0, "intent": null
+    },
+    "best-time-to-visit-tulum": {
+      "primary_section": "weather", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["best-time", "sargassum"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-airport-arrival-guide": {
+      "primary_section": "planning", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["airport-transfer"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-airport-transfer-options": {
+      "primary_section": "planning", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["airport-transfer"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-all-inclusive-resorts": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["all-inclusive"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-beach-guide": {
+      "primary_section": "destinations", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["beaches"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-budget-2026": {
+      "primary_section": "planning", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["budget"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-family-vacation-guide": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["family-resort"], "audience": ["family"], "featured": 0, "intent": null
+    },
+    "cancun-for-couples": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["honeymoon"], "audience": ["couples"], "featured": 0, "intent": null
+    },
+    "cancun-hotel-booking-checklist": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "advice", "tags": ["booking-checklist"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-hotel-mistakes": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "advice", "tags": ["hotel-mistakes", "booking-checklist"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-hurricane-season": {
+      "primary_section": "weather", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["hurricane-season"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-rainy-season": {
+      "primary_section": "weather", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["rainy-season"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-seaweed-season": {
+      "primary_section": "weather", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["sargassum"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-vs-riviera-maya-all-inclusive-resorts": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "comparison", "tags": ["all-inclusive"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-vs-tulum-vs-playa-del-carmen-where-to-stay": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "tulum", "playa-del-carmen"], "content_type": "comparison", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "cenotes-near-cancun-playa-tulum": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "listicle", "tags": ["cenotes"], "audience": [], "featured": 0, "intent": null
+    },
+    "chichen-itza-from-cancun": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["archaeology", "day-trips"], "audience": [], "featured": 0, "intent": null
+    },
+    "cozumel-day-trip-from-playa-del-carmen": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": "cozumel", "related_destinations": [], "content_type": "guide", "tags": ["day-trips", "island-trip"], "audience": [], "featured": 0, "intent": null
+    },
+    "cozumel-vs-isla-mujeres": {
+      "primary_section": "destinations", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cozumel", "isla-mujeres"], "content_type": "comparison", "tags": ["island-trip"], "audience": [], "featured": 0, "intent": null
+    },
+    "egypt-bez-obmana": {
+      "primary_section": "safety", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["scam-warning"], "audience": [], "featured": 0, "intent": null
+    },
+    "entry-egypt-2026": {
+      "primary_section": "planning", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["visa-entry"], "audience": [], "featured": 0, "intent": null
+    },
+    "flights-egypt": {
+      "primary_section": "planning", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["flights"], "audience": [], "featured": 0, "intent": null
+    },
+    "food-water-safety-mexico": {
+      "primary_section": "safety", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["food-safety"], "audience": [], "featured": 0, "intent": null
+    },
+    "hotel-check-before-booking": {
+      "primary_section": "stay", "country": "generic", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["booking-checklist"], "audience": [], "featured": 0, "intent": null
+    },
+    "hotel-rating-9-trap": {
+      "primary_section": "stay", "country": "generic", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["hotel-mistakes"], "audience": [], "featured": 0, "intent": null
+    },
+    "is-cancun-safe-for-families-2026": {
+      "primary_section": "safety", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["family-resort"], "audience": ["family"], "featured": 0, "intent": null
+    },
+    "isla-mujeres-day-trip-from-cancun": {
+      "primary_section": "things-to-do", "country": "mexico", "region": null, "destination": "isla-mujeres", "related_destinations": [], "content_type": "guide", "tags": ["day-trips", "island-trip"], "audience": [], "featured": 0, "intent": null
+    },
+    "istanbul-neighborhoods-guide": {
+      "primary_section": "destinations", "country": "turkey", "region": "istanbul", "destination": "istanbul", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "mexico-esim-for-us-travelers": {
+      "primary_section": "planning", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["esim"], "audience": [], "featured": 0, "intent": null
+    },
+    "money-in-mexico-for-travelers": {
+      "primary_section": "planning", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["money"], "audience": [], "featured": 0, "intent": null
+    },
+    "playa-del-carmen-travel-guide": {
+      "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": "playa-del-carmen", "related_destinations": [], "content_type": "guide", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "punta-cana-vs-cancun": {
+      "primary_section": "destinations", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "punta-cana"], "content_type": "comparison", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "riviera-maya-budget-guide": {
+      "primary_section": "planning", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["budget"], "audience": [], "featured": 0, "intent": null
+    },
+    "riviera-maya-explained": {
+      "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "travel-insurance-for-mexico": {
+      "primary_section": "planning", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["travel-insurance"], "audience": [], "featured": 0, "intent": null
+    },
+    "tulum-budget-2026": {
+      "primary_section": "planning", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["budget"], "audience": [], "featured": 0, "intent": null
+    },
+    "tulum-public-beaches": {
+      "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["beaches"], "audience": [], "featured": 0, "intent": null
+    },
+    "visa-free-travel-destinations": {
+      "primary_section": "planning", "country": "generic", "region": null, "destination": null, "related_destinations": [], "content_type": "listicle", "tags": ["visa-entry"], "audience": [], "featured": 0, "intent": null
+    },
+    "where-to-stay-in-cancun-hotel-zone-vs-downtown": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "comparison", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "where-to-stay-in-tulum-beach-zone-vs-town-vs-aldea-zama": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "where-to-stay-istanbul": {
+      "primary_section": "stay", "country": "turkey", "region": "istanbul", "destination": "istanbul", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "where-to-stay-playa-del-carmen": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "playa-del-carmen", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "xcaret-vs-xel-ha-vs-xplor": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "comparison", "tags": ["theme-parks"], "audience": [], "featured": 0, "intent": null
+    }
+  }
+}
