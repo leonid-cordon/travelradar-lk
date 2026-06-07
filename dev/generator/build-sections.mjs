@@ -24,7 +24,8 @@ const GEO = {
   cancun: 'Cancun', tulum: 'Tulum', 'playa-del-carmen': 'Playa del Carmen', cozumel: 'Cozumel', 'isla-mujeres': 'Isla Mujeres',
 };
 
-// Per-section hard-coded config (only weather built in this MVP step).
+// Per-section hard-coded config. Thematic sections only (weather + 5);
+// `all` (showcase) and `news` (0 records, legacy page) are handled separately.
 const SECTIONS = {
   weather: {
     slug: 'weather',
@@ -39,6 +40,86 @@ const SECTIONS = {
     intro: [
       'Mexico has no bad season — only trade-offs. These guides show when Cancun, Tulum and the Riviera Maya get the best weather, when prices spike, and when hurricanes and sargassum are most likely.',
       'Use them to pick the right month before you book.',
+    ],
+  },
+
+  destinations: {
+    slug: 'destinations',
+    label: 'Destinations',
+    titleTag: 'Mexico Destinations: Cancun, Tulum, Playa del Carmen & the Riviera Maya | Travel Radar LK',
+    ogTitle: 'Mexico Destinations: Cancun, Tulum & the Riviera Maya',
+    description: "Destination guides to Mexico's Caribbean coast — Cancun, Tulum, Playa del Carmen, Cozumel and the Riviera Maya: neighborhoods, beaches and what each place is really like.",
+    h1: 'Destinations',
+    subtitle: "Where to go on Mexico's Caribbean coast",
+    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
+    heroAlt: "Destinations across Mexico's Caribbean coast",
+    intro: [
+      'Guides to the places themselves — Cancun, Tulum, Playa del Carmen, Cozumel and the wider Riviera Maya. What each spot is known for, which neighborhoods and beaches matter, and how they differ.',
+      'Start here to decide where to base your trip.',
+    ],
+  },
+
+  stay: {
+    slug: 'stay',
+    label: 'Stay & Hotels',
+    titleTag: 'Where to Stay in Mexico: Best Areas, Resorts & Hotels in Cancun & the Riviera Maya | Travel Radar LK',
+    ogTitle: 'Where to Stay in Mexico: Best Areas, Resorts & Hotels',
+    description: 'Where to stay across Cancun, Tulum and the Riviera Maya — best areas, all-inclusive and adults-only resorts, and how to avoid the most common hotel-booking mistakes.',
+    h1: 'Stay & Hotels',
+    subtitle: 'Where to base yourself — and how to book it right',
+    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
+    heroAlt: 'Hotels and resort zones across the Riviera Maya',
+    intro: [
+      'Hotels and zones across Cancun, Tulum and the Riviera Maya: all-inclusive, adults-only and family resorts, the neighborhoods worth booking — and the booking traps to avoid.',
+      'The largest section on the site; use it to choose where to stay before you lock in a hotel.',
+    ],
+  },
+
+  'things-to-do': {
+    slug: 'things-to-do',
+    label: 'Things to Do',
+    titleTag: 'Things to Do in Mexico: Cenotes, Snorkeling, Day Trips & Itineraries | Travel Radar LK',
+    ogTitle: 'Things to Do in Mexico: Cenotes, Day Trips & Itineraries',
+    description: "What to do on Mexico's Caribbean coast — cenotes, snorkeling, Chichen Itza, theme parks and ready-made Riviera Maya itineraries and day trips.",
+    h1: 'Things to Do',
+    subtitle: 'Cenotes, ruins, day trips and ready-made itineraries',
+    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
+    heroAlt: 'Cenotes, ruins and day trips across the Riviera Maya',
+    intro: [
+      'Activities and excursions across the Riviera Maya — cenotes, snorkeling, archaeological sites, theme parks and day trips, plus full itineraries that string them together.',
+      'Use these to fill the days once you know where you are staying.',
+    ],
+  },
+
+  planning: {
+    slug: 'planning',
+    label: 'Planning & Budget',
+    titleTag: 'Mexico Travel Planning: Budget, Flights, Airport Transfers, eSIM & Visas | Travel Radar LK',
+    ogTitle: 'Mexico Travel Planning: Budget, Flights, eSIM & Transfers',
+    description: 'The practical side of a Mexico trip — budgets, flights, Cancun airport transfers, eSIM and connectivity, travel insurance and entry rules, in one place.',
+    h1: 'Planning & Budget',
+    subtitle: 'The logistics that make the trip actually work',
+    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
+    heroAlt: 'Trip planning, budgets and logistics for Mexico',
+    intro: [
+      'The practical layer of a trip: budgets, flights, Cancun airport transfers, eSIM and data, insurance and entry requirements.',
+      'Work through these once your dates and destination are set.',
+    ],
+  },
+
+  safety: {
+    slug: 'safety',
+    label: 'Safety',
+    titleTag: 'Mexico Travel Safety: Scams, Food & Water Safety and the Real Risks | Travel Radar LK',
+    ogTitle: 'Mexico Travel Safety: Scams, Food & Water and Real Risks',
+    description: 'Staying safe in Mexico — common tourist scams, food and water precautions, and an honest read on the real risks versus the overblown ones.',
+    h1: 'Safety',
+    subtitle: 'The real risks, minus the scaremongering',
+    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
+    heroAlt: "Travel safety on Mexico's Caribbean coast",
+    intro: [
+      'Straight talk on staying safe: common scams, food-and-water precautions and which risks actually deserve your attention on the Caribbean coast.',
+      'Short by design — read before you go, then stop worrying.',
     ],
   },
 };
