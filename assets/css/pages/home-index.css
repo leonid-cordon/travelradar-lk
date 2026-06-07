@@ -56,54 +56,58 @@ body[data-page="home"] section {
     padding: clamp(3.25rem, 6vw, 5rem) 0;
 }
 
-body[data-page="home"] .hero-strip {
-    width: 100%;
-    height: clamp(180px, 16vw, 300px);
+/* Hero v2 — Cinematic Immersive (full-bleed image + scrim + overlaid text) */
+body[data-page="home"] .hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: clamp(440px, 64vh, 720px);
+    padding: 0 0 56px;
     overflow: hidden;
-    margin: calc(-1 * var(--header-height)) 0 0;
-    padding: 0;
     background: #090b10;
-    border-bottom: 1px solid var(--home-border);
 }
 
-body[data-page="home"] .hero-strip img {
+body[data-page="home"] .hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    margin: 0;
+}
+
+body[data-page="home"] .hero-image {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 75% center;
+    object-position: 50% 42%;
     filter: saturate(1.04) contrast(1.02);
 }
 
-body[data-page="home"] .hero {
-    position: relative;
-    overflow: hidden;
-    padding: clamp(3rem, 6vw, 5.25rem) 0 clamp(3.8rem, 7vw, 6rem);
-    background: var(--home-bg);
-}
-
+/* Scrim: keeps overlaid text legible in both themes, over any photo */
 body[data-page="home"] .hero::after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: var(--home-border);
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to top,
+        rgba(8, 10, 16, .85) 0%,
+        rgba(8, 10, 16, .55) 28%,
+        rgba(8, 10, 16, 0) 60%);
 }
 
 body[data-page="home"] .hero-container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 body[data-page="home"] .hero-content {
-    max-width: 780px;
+    max-width: 640px;
 }
 
 body[data-page="home"] .hero-title {
     margin: 0 0 1rem;
-    color: var(--home-text);
+    color: #f4f1ea;
     font-family: 'Fraunces', Georgia, serif;
     font-size: clamp(2.35rem, 5vw, 4.15rem);
     font-weight: 700;
@@ -122,24 +126,12 @@ body[data-page="home"] .hero-plane {
 }
 
 body[data-page="home"] .hero-subtitle {
-    max-width: 740px;
-    margin: 0 0 1rem;
-    color: var(--home-copy);
+    max-width: 520px;
+    margin: 0 0 1.6rem;
+    color: rgba(244, 241, 234, .88);
     font-size: clamp(1.16rem, 2vw, 1.55rem);
     font-weight: 500;
     line-height: 1.45;
-}
-
-body[data-page="home"] .hero-description {
-    max-width: 680px;
-    margin: 0 0 1rem;
-    color: var(--home-muted);
-    font-size: 1.04rem;
-    line-height: 1.75;
-}
-
-body[data-page="home"] .hero-description + .hero-description {
-    margin-bottom: 1.8rem;
 }
 
 body[data-page="home"] .btn-primary,
@@ -571,14 +563,6 @@ body[data-page="home"] .about-text a:hover {
     --home-warm: #c05a38;
 }
 
-[data-theme="light"] body[data-page="home"] .hero-strip {
-    background: #d8d1c6;
-}
-
-[data-theme="light"] body[data-page="home"] .hero-strip img {
-    filter: saturate(1.06) brightness(1.05);
-}
-
 [data-theme="light"] body[data-page="home"] .tip-card,
 [data-theme="light"] body[data-page="home"] .destination-card,
 [data-theme="light"] body[data-page="home"] .content-card,
@@ -643,16 +627,12 @@ body[data-page="home"] .about-text a:hover {
     }
 
     body[data-page="home"] .hero {
-        padding: 2.75rem 0 3.4rem;
-        min-height: auto;
+        min-height: clamp(440px, 66svh, 620px);
+        padding: 0 0 32px;
     }
 
     body[data-page="home"] .hero-content {
         text-align: left;
-    }
-
-    body[data-page="home"] .hero-strip {
-        height: 190px;
     }
 
     body[data-page="home"] .destinations-grid,

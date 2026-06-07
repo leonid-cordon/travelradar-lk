@@ -13,14 +13,14 @@
     <meta property="og:description" content="Travel Radar LK — практичні гайди з вибору країн, готелів і курортів з головним фокусом на Мексиці, а також з додатковими розділами про Єгипет і Туреччину.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://travelradarlk.com/ua/">
-    <meta property="og:image" content="https://travelradarlk.com/assets/images/hero/hero_1920x300.jpg">
+    <meta property="og:image" content="https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg">
     <meta property="og:site_name" content="Travel Radar LK">
     <meta property="og:locale" content="uk_UA">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Travel Radar LK — Практичні розбори подорожей">
     <meta name="twitter:description" content="Travel Radar LK — практичні гайди з вибору країн, готелів і курортів з головним фокусом на Мексиці, а також з додатковими розділами про Єгипет і Туреччину.">
-    <meta name="twitter:image" content="https://travelradarlk.com/assets/images/hero/hero_1920x300.jpg">
+    <meta name="twitter:image" content="https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg">
 
 <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/">
     <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/">
@@ -39,7 +39,7 @@
             "@type": "Organization",
             "name": "Travel Radar LK"
       },
-      "image": "https://travelradarlk.com/assets/images/hero/hero_1920x300.jpg"
+      "image": "https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg"
 }
     </script>
 
@@ -68,14 +68,19 @@
 
     <div id="site-header" data-lang="ua"></div>
 
-    <!-- Hero Banner Strip -->
-    <section class="hero-strip" aria-label="Hero banner">
-        <img src="../assets/images/hero/hero_1920x300.jpg" width="1920" height="300" alt="Банер" loading="eager">
-    </section>
-
-    <!-- Hero секція -->
-    <section class="hero">
-        <!-- <div class="hero-background"></div> -->
+    <!-- Hero v2 — Cinematic Immersive -->
+    <section class="hero" aria-label="Hero">
+        <picture class="hero-media">
+            <source media="(max-width: 768px)"
+                srcset="../assets/images/hero/hero-mobile_1080x1350.jpg">
+            <source media="(min-width: 769px)"
+                srcset="../assets/images/hero/hero-desktop_2400x1350.jpg">
+            <img src="../assets/images/hero/hero-desktop_2400x1350.jpg"
+                alt="Розкішна тераса з інфініті-басейном і видом на карибський захід сонця"
+                class="hero-image"
+                width="2400" height="1350"
+                loading="eager" fetchpriority="high">
+        </picture>
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -83,14 +88,6 @@
                 </h1>
                 <p class="hero-subtitle">
                     Усвідомлений вибір напрямків, готелів і формату відпочинку — без помилок і переплат.
-                </p>
-                <p class="hero-description">
-                    Аналізуємо реальні відгуки, локації, формат пляжів і приховані збори, щоб ви розуміли, за що
-                    платите — і не розчаровувалися у відпустці.
-                </p>
-                <p class="hero-description">
-                    Відеорозбори і детальні статті про реальний бік подорожей — від вибору напрямку до фінальної
-                    вартості відпочинку.
                 </p>
                 <a href="#destinations" class="btn-primary">
                     Обрати країну
