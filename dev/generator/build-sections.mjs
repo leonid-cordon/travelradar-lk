@@ -1,172 +1,65 @@
-// Travel Radar LK — Content Hub v2 / Section Page Generator (Step 2, EN, weather)
+// Travel Radar LK — Content Hub v2 / Section Page Generator (Step 2, multilingual)
 //
-// Reads:  assets/data/content-index.en.json   (the public runtime artifact from Step 1)
-// Writes: en/content/<section>/index.html      (pre-rendered, static, no runtime JS)
+// Usage:  node build-sections.mjs <lang> <section>
+//           lang    ∈ keys of LANGS (en, ru, …)
+//           section ∈ all | destinations | stay | things-to-do | weather | planning | safety
+//
+// Reads:  assets/data/content-index.<code>.json   (the public runtime artifact from Step 1)
+// Writes: <folder>/content/<section>/index.html    (pre-rendered, static, no runtime JS)
 //
 // Articles are NEVER modified. Cards are baked into HTML (visible without JS).
 // Reuses existing conventions: body[data-page="content"] + content-index.css,
 // #site-header / #site-footer partials via /js/load-header.js. No new CSS file.
+// All display text comes from i18n.mjs; only GEO badges stay Latin (shared below).
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, join } from 'node:path';
+import { LANGS, pluralGuides } from './i18n.mjs';
 
 const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const INDEX_PATH = join(REPO_ROOT, 'assets', 'data', 'content-index.en.json');
 
 const SITE = 'https://travelradarlk.com';
-const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const HERO_IMAGE = '/assets/images/hero/hero-desktop_2400x1350.jpg';
 
-// Human labels for geo badges (closed vocab → display).
+// Human labels for geo badges (closed vocab → display). Intentionally Latin for
+// every language (deferred localization decision); shared across all languages.
 const GEO = {
   mexico: 'Mexico', egypt: 'Egypt', turkey: 'Turkey', 'dominican-republic': 'Dominican Republic', caribbean: 'Caribbean', generic: '',
   'riviera-maya': 'Riviera Maya', yucatan: 'Yucatán', istanbul: 'Istanbul', 'red-sea': 'Red Sea', 'punta-cana': 'Punta Cana',
   cancun: 'Cancun', tulum: 'Tulum', 'playa-del-carmen': 'Playa del Carmen', cozumel: 'Cozumel', 'isla-mujeres': 'Isla Mujeres',
 };
 
-// Section switcher — fixed, language-invariant order shared by All + every section.
-// Adapts the existing `quick-nav` component (CSS already in content-index.css); no
-// new component, no JS. Labels are i18n-ready (mirror SECTION_LABELS in
-// build-index.mjs): for other languages only the labels and the /<lang>/ path
-// prefix change, not the order or structure. `news` points to its existing page.
-const LANG = 'en';
-const SWITCHER = [
-  { slug: '', label: 'All' },
-  { slug: 'destinations', label: 'Destinations' },
-  { slug: 'stay', label: 'Stay & Hotels' },
-  { slug: 'things-to-do', label: 'Things to Do' },
-  { slug: 'weather', label: 'Weather & Seasons' },
-  { slug: 'planning', label: 'Planning & Budget' },
-  { slug: 'safety', label: 'Safety' },
-  { slug: 'news', label: 'News' },
-];
-
-// Per-section hard-coded config: 6 thematic sections + the `all` showcase.
+// Structural section metadata (language-invariant): slug + showcase flag.
+// All display copy lives in i18n.mjs (LANGS[lang].sections[<key>]).
 // `news` (0 records) stays on its legacy page and is handled separately.
-// The showcase (`all`) lives at the content root /en/content/ (slug='') and,
-// unlike thematic sections, lists the whole corpus and carries hreflang.
-const SECTIONS = {
-  all: {
-    slug: '',
-    isShowcase: true,
-    label: 'Content',
-    titleTag: 'Travel Guides & Hotel Picks: Cancun, Tulum & the Riviera Maya | Travel Radar LK',
-    ogTitle: "Travel Guides & Hotel Picks for Mexico's Caribbean Coast",
-    description: 'Every Travel Radar LK guide in one place — where to stay, what to do, when to go and how to plan Cancun, Tulum and the Riviera Maya, with supporting coverage for Egypt and Turkey.',
-    h1: 'Content',
-    subtitle: 'Every guide on the site, in one place',
-    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
-    heroAlt: "Travel guides for Mexico's Caribbean coast and beyond",
-    hreflang: {
-      ru: 'https://travelradarlk.com/ru/content/',
-      en: 'https://travelradarlk.com/en/content/',
-      uk: 'https://travelradarlk.com/ua/content/',
-      'x-default': 'https://travelradarlk.com/en/content/',
-    },
-    intro: [
-      "Everything on Travel Radar LK in one place — destinations, where to stay, things to do, weather and seasons, planning and safety. The strongest coverage is Mexico's Caribbean coast, with supporting guides for Egypt and Turkey.",
-      'Browse the full library below.',
-    ],
-  },
-
-  weather: {
-    slug: 'weather',
-    label: 'Weather & Seasons',
-    titleTag: 'Mexico Weather & Seasons: When to Visit Cancun, Tulum & the Riviera Maya | Travel Radar LK',
-    ogTitle: 'Mexico Weather & Seasons: When to Visit Cancun, Tulum & the Riviera Maya',
-    description: 'When to visit Cancun, Tulum and the Riviera Maya — dry vs rainy season, hurricane risk, sargassum timing and the best months to book.',
-    h1: 'Weather & Seasons',
-    subtitle: 'When to go to Mexico — and when to think twice',
-    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
-    heroAlt: "Weather and seasons across Mexico's Caribbean coast",
-    intro: [
-      'Mexico has no bad season — only trade-offs. These guides show when Cancun, Tulum and the Riviera Maya get the best weather, when prices spike, and when hurricanes and sargassum are most likely.',
-      'Use them to pick the right month before you book.',
-    ],
-  },
-
-  destinations: {
-    slug: 'destinations',
-    label: 'Destinations',
-    titleTag: 'Mexico Destinations: Cancun, Tulum, Playa del Carmen & the Riviera Maya | Travel Radar LK',
-    ogTitle: 'Mexico Destinations: Cancun, Tulum & the Riviera Maya',
-    description: "Destination guides to Mexico's Caribbean coast — Cancun, Tulum, Playa del Carmen, Cozumel and the Riviera Maya: neighborhoods, beaches and what each place is really like.",
-    h1: 'Destinations',
-    subtitle: "Where to go on Mexico's Caribbean coast",
-    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
-    heroAlt: "Destinations across Mexico's Caribbean coast",
-    intro: [
-      'Guides to the places themselves — Cancun, Tulum, Playa del Carmen, Cozumel and the wider Riviera Maya. What each spot is known for, which neighborhoods and beaches matter, and how they differ.',
-      'Start here to decide where to base your trip.',
-    ],
-  },
-
-  stay: {
-    slug: 'stay',
-    label: 'Stay & Hotels',
-    titleTag: 'Where to Stay in Mexico: Best Areas, Resorts & Hotels in Cancun & the Riviera Maya | Travel Radar LK',
-    ogTitle: 'Where to Stay in Mexico: Best Areas, Resorts & Hotels',
-    description: 'Where to stay across Cancun, Tulum and the Riviera Maya — best areas, all-inclusive and adults-only resorts, and how to avoid the most common hotel-booking mistakes.',
-    h1: 'Stay & Hotels',
-    subtitle: 'Where to base yourself — and how to book it right',
-    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
-    heroAlt: 'Hotels and resort zones across the Riviera Maya',
-    intro: [
-      'Hotels and zones across Cancun, Tulum and the Riviera Maya: all-inclusive, adults-only and family resorts, the neighborhoods worth booking — and the booking traps to avoid.',
-      'The largest section on the site; use it to choose where to stay before you lock in a hotel.',
-    ],
-  },
-
-  'things-to-do': {
-    slug: 'things-to-do',
-    label: 'Things to Do',
-    titleTag: 'Things to Do in Mexico: Cenotes, Snorkeling, Day Trips & Itineraries | Travel Radar LK',
-    ogTitle: 'Things to Do in Mexico: Cenotes, Day Trips & Itineraries',
-    description: "What to do on Mexico's Caribbean coast — cenotes, snorkeling, Chichen Itza, theme parks and ready-made Riviera Maya itineraries and day trips.",
-    h1: 'Things to Do',
-    subtitle: 'Cenotes, ruins, day trips and ready-made itineraries',
-    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
-    heroAlt: 'Cenotes, ruins and day trips across the Riviera Maya',
-    intro: [
-      'Activities and excursions across the Riviera Maya — cenotes, snorkeling, archaeological sites, theme parks and day trips, plus full itineraries that string them together.',
-      'Use these to fill the days once you know where you are staying.',
-    ],
-  },
-
-  planning: {
-    slug: 'planning',
-    label: 'Planning & Budget',
-    titleTag: 'Mexico Travel Planning: Budget, Flights, Airport Transfers, eSIM & Visas | Travel Radar LK',
-    ogTitle: 'Mexico Travel Planning: Budget, Flights, eSIM & Transfers',
-    description: 'The practical side of a Mexico trip — budgets, flights, Cancun airport transfers, eSIM and connectivity, travel insurance and entry rules, in one place.',
-    h1: 'Planning & Budget',
-    subtitle: 'The logistics that make the trip actually work',
-    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
-    heroAlt: 'Trip planning, budgets and logistics for Mexico',
-    intro: [
-      'The practical layer of a trip: budgets, flights, Cancun airport transfers, eSIM and data, insurance and entry requirements.',
-      'Work through these once your dates and destination are set.',
-    ],
-  },
-
-  safety: {
-    slug: 'safety',
-    label: 'Safety',
-    titleTag: 'Mexico Travel Safety: Scams, Food & Water Safety and the Real Risks | Travel Radar LK',
-    ogTitle: 'Mexico Travel Safety: Scams, Food & Water and Real Risks',
-    description: 'Staying safe in Mexico — common tourist scams, food and water precautions, and an honest read on the real risks versus the overblown ones.',
-    h1: 'Safety',
-    subtitle: 'The real risks, minus the scaremongering',
-    heroImage: '/assets/images/hero/hero-desktop_2400x1350.jpg',
-    heroAlt: "Travel safety on Mexico's Caribbean coast",
-    intro: [
-      'Straight talk on staying safe: common scams, food-and-water precautions and which risks actually deserve your attention on the Caribbean coast.',
-      'Short by design — read before you go, then stop worrying.',
-    ],
-  },
+const STRUCT = {
+  all: { slug: '', isShowcase: true },
+  destinations: { slug: 'destinations' },
+  stay: { slug: 'stay' },
+  'things-to-do': { slug: 'things-to-do' },
+  weather: { slug: 'weather' },
+  planning: { slug: 'planning' },
+  safety: { slug: 'safety' },
 };
 
-const TARGET = process.argv[2] || 'weather';
+// ── CLI args ──
+const LANG = process.argv[2] || 'en';
+const TARGET = process.argv[3] || 'weather';
+
+const lang = LANGS[LANG];
+if (!lang) {
+  console.error(`FATAL: unknown language "${LANG}" (known: ${Object.keys(LANGS).join(', ')})`);
+  process.exit(1);
+}
+const INDEX_PATH = join(REPO_ROOT, 'assets', 'data', `content-index.${lang.code}.json`);
+
+// Section switcher — fixed order shared by All + every section; labels from i18n.
+// For other languages only the labels and the /<folder>/ path prefix change, not
+// the order or structure. `news` is intentionally absent (0 records, no v2 page).
+const SWITCHER = lang.switcher;
+
+const MONTHS = lang.months;
 
 // ── helpers ──
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -174,7 +67,7 @@ const rootRel = (url) => url.replace(/^https?:\/\/[^/]+/, '');
 const geo = (key) => (key && GEO[key]) || '';
 
 function renderCard(r) {
-  const href = `/en/content/${r.slug}`;
+  const href = `/${lang.folder}/content/${r.slug}`;
   const img = rootRel(r.image);
   const c1 = geo(r.country);
   const c2 = geo(r.destination || r.region);
@@ -196,7 +89,7 @@ ${badges}
 // `activeSlug` = cfg.slug ('' for the All showcase) → marks the current tab.
 function renderSwitcher(activeSlug) {
   const items = SWITCHER.map((s) => {
-    const href = s.slug ? `/${LANG}/content/${s.slug}/` : `/${LANG}/content/`;
+    const href = s.slug ? `/${lang.folder}/content/${s.slug}/` : `/${lang.folder}/content/`;
     const isActive = s.slug === activeSlug;
     const cls = `quick-nav-item${isActive ? ' active' : ''}`;
     const cur = isActive ? ' aria-current="page"' : '';
@@ -205,7 +98,7 @@ function renderSwitcher(activeSlug) {
   return `    <!-- Section switcher -->
     <section class="quick-nav">
         <div class="container">
-            <nav class="quick-nav-list" aria-label="Sections">
+            <nav class="quick-nav-list" aria-label="${esc(lang.ui.sectionsAria)}">
 ${items}
             </nav>
         </div>
@@ -223,9 +116,9 @@ function renderPage(cfg, recs) {
   const count = recs.length;
   const maxMod = recs.reduce((m, r) => (r.date_modified > m ? r.date_modified : m), recs[0].date_modified);
   const [y, mo] = maxMod.split('-');
-  const metaLine = `${count} ${count === 1 ? 'guide' : 'guides'} • Updated ${MONTHS[+mo - 1]} ${y}`;
+  const metaLine = `${count} ${pluralGuides(lang.code, count)} • ${lang.ui.updated} ${MONTHS[+mo - 1]} ${y}`;
 
-  const url = cfg.isShowcase ? `${SITE}/en/content/` : `${SITE}/en/content/${cfg.slug}/`;
+  const url = cfg.isShowcase ? `${SITE}/${lang.folder}/content/` : `${SITE}/${lang.folder}/content/${cfg.slug}/`;
   const heroImageAbs = `${SITE}${cfg.heroImage}`;
 
   const collectionLd = {
@@ -235,7 +128,7 @@ function renderPage(cfg, recs) {
     headline: cfg.ogTitle,
     description: cfg.description,
     url,
-    inLanguage: 'en-US',
+    inLanguage: lang.inLanguage,
     isPartOf: { '@type': 'WebSite', name: 'Travel Radar LK', url: `${SITE}/` },
     publisher: { '@type': 'Organization', name: 'Travel Radar LK' },
     image: heroImageAbs,
@@ -245,12 +138,12 @@ function renderPage(cfg, recs) {
     '@type': 'BreadcrumbList',
     itemListElement: cfg.isShowcase
       ? [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/en/` },
+          { '@type': 'ListItem', position: 1, name: lang.ui.home, item: `${SITE}/${lang.folder}/` },
           { '@type': 'ListItem', position: 2, name: cfg.label, item: url },
         ]
       : [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/en/` },
-          { '@type': 'ListItem', position: 2, name: 'Content', item: `${SITE}/en/content/` },
+          { '@type': 'ListItem', position: 1, name: lang.ui.home, item: `${SITE}/${lang.folder}/` },
+          { '@type': 'ListItem', position: 2, name: lang.ui.contentRoot, item: `${SITE}/${lang.folder}/content/` },
           { '@type': 'ListItem', position: 3, name: cfg.label, item: url },
         ],
   };
@@ -262,20 +155,20 @@ function renderPage(cfg, recs) {
 
   // Breadcrumb trail: showcase is 2-level (Home › Content); sections are 3-level.
   const breadcrumbNav = cfg.isShowcase
-    ? `<a href="/en/" style="color:inherit;text-decoration:none;">Home</a>
+    ? `<a href="/${lang.folder}/" style="color:inherit;text-decoration:none;">${esc(lang.ui.home)}</a>
         <span aria-hidden="true"> › </span>
         <span aria-current="page">${esc(cfg.label)}</span>`
-    : `<a href="/en/" style="color:inherit;text-decoration:none;">Home</a>
+    : `<a href="/${lang.folder}/" style="color:inherit;text-decoration:none;">${esc(lang.ui.home)}</a>
         <span aria-hidden="true"> › </span>
-        <a href="/en/content/" style="color:inherit;text-decoration:none;">Content</a>
+        <a href="/${lang.folder}/content/" style="color:inherit;text-decoration:none;">${esc(lang.ui.contentRoot)}</a>
         <span aria-hidden="true"> › </span>
         <span aria-current="page">${esc(cfg.label)}</span>`;
 
-  // "← All content" back-link is omitted on the showcase (it is the all-content page).
+  // back-link is omitted on the showcase (it is the all-content page).
   const backLink = cfg.isShowcase ? '' : `
 
             <p style="margin:1.8rem 0 0;">
-                <a href="/en/content/" style="color:var(--ci-accent);text-decoration:none;font-weight:500;">← All content</a>
+                <a href="/${lang.folder}/content/" style="color:var(--ci-accent);text-decoration:none;font-weight:500;">${esc(lang.ui.backAll)}</a>
             </p>`;
 
   const switcher = renderSwitcher(cfg.slug);
@@ -283,7 +176,7 @@ function renderPage(cfg, recs) {
   const cards = recs.map(renderCard).join('\n\n');
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${lang.htmlLang}">
 
 <head>
     <meta charset="UTF-8">
@@ -301,7 +194,7 @@ function renderPage(cfg, recs) {
     <meta property="og:url" content="${url}">
     <meta property="og:image" content="${heroImageAbs}">
     <meta property="og:site_name" content="Travel Radar LK">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="${lang.ogLocale}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(cfg.ogTitle)}">
@@ -390,14 +283,16 @@ ${cards}
 }
 
 // ── main ──
-console.log('Travel Radar LK — section page generator (EN, MVP)\n');
+console.log(`Travel Radar LK — section page generator (lang=${lang.code}, section=${TARGET})\n`);
 
-const cfg = SECTIONS[TARGET];
-if (!cfg) { console.error(`FATAL: no section config for "${TARGET}"`); process.exit(1); }
+const struct = STRUCT[TARGET];
+const text = lang.sections[TARGET];
+if (!struct || !text) { console.error(`FATAL: no section config for "${TARGET}" in lang "${lang.code}"`); process.exit(1); }
+const cfg = { ...struct, ...text, heroImage: HERO_IMAGE };
 
 let index;
 try { index = JSON.parse(readFileSync(INDEX_PATH, 'utf8')); }
-catch (e) { console.error(`FATAL: cannot read content-index.en.json (run build-index first): ${e.message}`); process.exit(1); }
+catch (e) { console.error(`FATAL: cannot read content-index.${lang.code}.json (run build-index ${lang.code} first): ${e.message}`); process.exit(1); }
 
 const recs = cfg.isShowcase
   ? index.records.slice()
@@ -406,7 +301,7 @@ if (!recs.length) { console.error(`FATAL: 0 records for section "${TARGET}" in i
 
 const html = renderPage(cfg, recs);
 
-const outDir = join(REPO_ROOT, 'en', 'content', cfg.slug);
+const outDir = join(REPO_ROOT, lang.folder, 'content', cfg.slug);
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
 const outPath = join(outDir, 'index.html');
 writeFileSync(outPath, html, { encoding: 'utf8' });
@@ -414,8 +309,8 @@ writeFileSync(outPath, html, { encoding: 'utf8' });
 // ── self-check ──
 const back = readFileSync(outPath, 'utf8');
 const cardCount = (back.match(/class="content-card"/g) || []).length;
-const expectCanonical = cfg.isShowcase ? `${SITE}/en/content/` : `${SITE}/en/content/${cfg.slug}/`;
-const outRel = cfg.isShowcase ? 'en/content/index.html' : `en/content/${cfg.slug}/index.html`;
+const expectCanonical = cfg.isShowcase ? `${SITE}/${lang.folder}/content/` : `${SITE}/${lang.folder}/content/${cfg.slug}/`;
+const outRel = cfg.isShowcase ? `${lang.folder}/content/index.html` : `${lang.folder}/content/${cfg.slug}/index.html`;
 const checks = [
   [cardCount === recs.length, `cards rendered: ${cardCount}/${recs.length}`],
   [back.includes(`<link rel="canonical" href="${expectCanonical}">`), 'canonical present'],

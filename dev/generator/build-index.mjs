@@ -1,10 +1,13 @@
-// Travel Radar LK — Content Hub v2 / Generator MVP (Step 1, EN only)
+// Travel Radar LK — Content Hub v2 / content-index Generator (Step 1, multilingual)
 //
-// Reads:  dev/docs/metadata-registry.v1.json   (source of truth, taxonomy)
-//         en/content/<slug>.html                (read-only, <head> only)
-// Writes: assets/data/content-index.en.json     (public runtime artifact)
+// Usage:  node build-index.mjs <lang>     (lang ∈ keys of LANGS, default 'en')
 //
-// Articles are NEVER modified. No facets, no runtime JS, no other languages.
+// Reads:  dev/docs/metadata-registry.v1.json   (source of truth, language-independent taxonomy)
+//         <folder>/content/<slug>.html          (read-only, <head> only — per-language strings)
+// Writes: assets/data/content-index.<code>.json (public runtime artifact)
+//
+// Articles are NEVER modified. No facets, no runtime JS.
+// The Registry is language-independent; only <head> strings and labels differ per language.
 //
 // Confirmed extraction rules (Step 0 PASS):
 //   1. JSON-LD: pick the block with @type == "Article".
@@ -14,15 +17,22 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, join } from 'node:path';
+import { LANGS } from './i18n.mjs';
+
+const SITE = 'https://travelradarlk.com';
+
+const LANG = process.argv[2] || 'en';
+const langCfg = LANGS[LANG];
+if (!langCfg) {
+  console.error(`FATAL: unknown language "${LANG}" (known: ${Object.keys(LANGS).join(', ')})`);
+  process.exit(1);
+}
 
 const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const REGISTRY_PATH = join(REPO_ROOT, 'dev', 'docs', 'metadata-registry.v1.json');
-const ARTICLES_DIR = join(REPO_ROOT, 'en', 'content');
+const ARTICLES_DIR = join(REPO_ROOT, langCfg.folder, 'content');
 const OUT_DIR = join(REPO_ROOT, 'assets', 'data');
-const OUT_PATH = join(OUT_DIR, 'content-index.en.json');
-
-const LANG = 'en';
-const SITE = 'https://travelradarlk.com';
+const OUT_PATH = join(OUT_DIR, `content-index.${langCfg.code}.json`);
 
 // ── Closed dictionaries (mirror METADATA_SCHEMA_v1.md; not parsed from MD) ──
 const DICT = {
@@ -42,17 +52,12 @@ const DICT = {
   ],
 };
 
-const SECTION_LABELS_EN = {
-  destinations: 'Destinations',
-  stay: 'Stay & Hotels',
-  'things-to-do': 'Things to Do',
-  weather: 'Weather & Seasons',
-  planning: 'Planning & Budget',
-  safety: 'Safety',
-  news: 'News',
-};
+// Per-language display labels for primary_section (from i18n.mjs).
+const SECTION_LABELS = langCfg.sectionLabels;
 
 // Expected section distribution (Stage 2 / Audit) — sanity gate.
+// Language-independent: taxonomy lives in the shared Registry, so every language
+// must reproduce the same counts.
 const EXPECTED_SECTIONS = { stay: 22, planning: 11, 'things-to-do': 9, destinations: 7, weather: 5, safety: 3, news: 0 };
 
 // ── Diagnostics ──
@@ -124,7 +129,8 @@ function articleLd(head) {
 
 function buildSearchText({ title, description, destination, region, tags }) {
   const raw = [title, description, destination, region, ...(tags || [])].filter(Boolean).join(' ');
-  return raw.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
+  // Keep ASCII alphanumerics + Cyrillic (U+0400–U+04FF); drop other punctuation.
+  return raw.toLowerCase().replace(/[^a-z0-9Ѐ-ӿ\s-]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 // ── Validate one registry record against closed dictionaries ──
@@ -143,7 +149,7 @@ function validateTaxonomy(slug, r) {
 }
 
 // ── Main ──
-console.log('Travel Radar LK — content-index generator (EN, MVP)\n');
+console.log(`Travel Radar LK — content-index generator (lang=${langCfg.code})\n`);
 
 let registry;
 try {
@@ -183,7 +189,7 @@ for (const slug of slugs) {
   let dateModified = ld ? ld.dateModified : null;
   if (ld && !dateModified) { warn(slug, 'missing dateModified → = datePublished'); dateModified = ld.datePublished; }
 
-  const expectedUrl = `${SITE}/en/content/${slug}`;
+  const expectedUrl = `${SITE}/${langCfg.folder}/content/${slug}`;
   if (canonical && canonical !== expectedUrl) warn(slug, `canonical != expected (${canonical})`);
 
   if (errors.some((e) => e.startsWith(`[${slug}]`))) continue; // skip building broken record
@@ -193,9 +199,9 @@ for (const slug of slugs) {
 
   records.push({
     slug,
-    lang: LANG,
+    lang: langCfg.code,
     primary_section: r.primary_section,
-    section_label: SECTION_LABELS_EN[r.primary_section],
+    section_label: SECTION_LABELS[r.primary_section],
     country: r.country,
     region: r.region,
     destination: r.destination,
@@ -233,7 +239,7 @@ if (errors.length) {
 // ── Emit ──
 const index = {
   version: 1,
-  lang: LANG,
+  lang: langCfg.code,
   generated_from: 'metadata-registry.v1.json',
   generated_at: new Date().toISOString(),
   count: records.length,
@@ -243,7 +249,7 @@ const index = {
 if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 writeFileSync(OUT_PATH, JSON.stringify(index, null, 2) + '\n', { encoding: 'utf8' });
 
-console.log(`OK: wrote assets/data/content-index.en.json`);
+console.log(`OK: wrote assets/data/content-index.${langCfg.code}.json`);
 console.log(`  records: ${records.length}`);
 console.log(`  sections: ${Object.entries(dist).sort().map(([k, v]) => `${k}=${v}`).join(', ')}`);
 console.log(`  warnings: ${warnings.length}${warnings.length ? '\n   - ' + warnings.join('\n   - ') : ''}`);
