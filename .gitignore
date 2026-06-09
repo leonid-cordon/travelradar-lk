@@ -13,3 +13,7 @@ open-clean-url.ps1
 # Внутренние AI / SEO заметки, не часть публичного сайта
 AI_RULES.md
 auditSEO.md
+
+# Локальные разрешения Claude Code (машинно-специфичные, не для общего репозитория).
+# Папка .claude/skills/ — общая (навыки проекта, например /publish) и НЕ игнорируется.
+.claude/settings.local.json

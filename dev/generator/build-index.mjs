@@ -55,10 +55,12 @@ const DICT = {
 // Per-language display labels for primary_section (from i18n.mjs).
 const SECTION_LABELS = langCfg.sectionLabels;
 
-// Expected section distribution (Stage 2 / Audit) — sanity gate.
-// Language-independent: taxonomy lives in the shared Registry, so every language
-// must reproduce the same counts.
-const EXPECTED_SECTIONS = { stay: 22, planning: 11, 'things-to-do': 9, destinations: 7, weather: 5, safety: 3, news: 0 };
+// NOTE: corpus size is intentionally NOT frozen here. This generator validates the
+// integrity of ONE language (broken <head>, missing files, out-of-dict taxonomy,
+// duplicate slugs). The cross-language parity invariant — every language must
+// reproduce the SAME section distribution — is checked in build-all.mjs, which is
+// the only place that sees all three indexes. That keeps "add an article → run
+// build-all" working without editing this file as the corpus grows.
 
 // ── Diagnostics ──
 const errors = [];
@@ -222,12 +224,9 @@ for (const slug of slugs) {
 }
 
 // ── Self-check (output sanity) ──
+// Per-language only: duplicate slugs. Cross-language section parity lives in build-all.mjs.
 const dist = {};
 for (const rec of records) dist[rec.primary_section] = (dist[rec.primary_section] || 0) + 1;
-for (const [sec, n] of Object.entries(EXPECTED_SECTIONS)) {
-  const got = dist[sec] || 0;
-  if (got !== n) fail(null, `section distribution mismatch: ${sec} expected ${n}, got ${got}`);
-}
 const seen = new Set();
 for (const rec of records) { if (seen.has(rec.slug)) fail(null, `duplicate slug in output: ${rec.slug}`); seen.add(rec.slug); }
 
