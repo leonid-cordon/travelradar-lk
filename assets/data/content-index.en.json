@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-09T05:07:53.983Z",
-  "count": 57,
+  "generated_at": "2026-06-10T01:19:03.123Z",
+  "count": 58,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1063,6 +1063,31 @@
       "date_published": "2026-04-15",
       "date_modified": "2026-04-16",
       "search_text": "mexico esim for us travelers what to set up before you land the cleanest way to stay connected in mexico without wasting money on the wrong setup what to do before your flight what to avoid and which esim style fits your trip esim"
+    },
+    {
+      "slug": "mexico-sargassum-2026-hotel-geography",
+      "lang": "en",
+      "primary_section": "weather",
+      "section_label": "Weather & Seasons",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "sargassum",
+        "best-time"
+      ],
+      "audience": [],
+      "featured": 1,
+      "intent": null,
+      "title": "Record Sargassum 2026: Why Hotel Choice in Mexico Now Depends on Geography",
+      "description": "A record sargassum year changes the booking math: the coast a hotel faces now matters more than its rating. Which Mexican Caribbean shores stay cleaner, and how to book around it.",
+      "url": "https://travelradarlk.com/en/content/mexico-sargassum-2026-hotel-geography",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-sargassum-2026-hotel-geography/card_1200x600.jpg",
+      "date_published": "2026-06-10",
+      "date_modified": "2026-06-10",
+      "search_text": "record sargassum 2026 why hotel choice in mexico now depends on geography a record sargassum year changes the booking math the coast a hotel faces now matters more than its rating which mexican caribbean shores stay cleaner and how to book around it riviera-maya sargassum best-time"
     },
     {
       "slug": "money-in-mexico-for-travelers",

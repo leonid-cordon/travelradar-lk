@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-09T05:07:54.180Z",
-  "count": 57,
+  "generated_at": "2026-06-10T01:19:03.326Z",
+  "count": 58,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1063,6 +1063,31 @@
       "date_published": "2026-04-15",
       "date_modified": "2026-04-25",
       "search_text": "esim для мексики що налаштувати до прильоту як залишитися на зв язку в мексиці без переплати й хаосу в аеропорту що зробити до рейсу чого уникати і який формат esim обрати esim"
+    },
+    {
+      "slug": "mexico-sargassum-2026-hotel-geography",
+      "lang": "uk",
+      "primary_section": "weather",
+      "section_label": "Погода і сезони",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "sargassum",
+        "best-time"
+      ],
+      "audience": [],
+      "featured": 1,
+      "intent": null,
+      "title": "Рекордний саргасум 2026: чому вибір готелю в Мексиці тепер залежить від географії",
+      "description": "Рекордний рік за саргасумом змінює математику бронювання: берег, до якого виходить готель, тепер важливіший за його рейтинг. Які узбережжя мексиканської Карибики лишаються чистішими і як під це бронювати.",
+      "url": "https://travelradarlk.com/ua/content/mexico-sargassum-2026-hotel-geography",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-sargassum-2026-hotel-geography/card_1200x600.jpg",
+      "date_published": "2026-06-10",
+      "date_modified": "2026-06-10",
+      "search_text": "рекордний саргасум 2026 чому вибір готелю в мексиці тепер залежить від географії рекордний рік за саргасумом змінює математику бронювання берег до якого виходить готель тепер важливіший за його рейтинг які узбережжя мексиканської карибики лишаються чистішими і як під це бронювати riviera-maya sargassum best-time"
     },
     {
       "slug": "money-in-mexico-for-travelers",
