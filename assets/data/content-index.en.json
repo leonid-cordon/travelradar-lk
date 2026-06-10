@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T01:46:56.448Z",
-  "count": 58,
+  "generated_at": "2026-06-10T04:33:29.515Z",
+  "count": 59,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1088,6 +1088,43 @@
       "date_published": "2026-06-10",
       "date_modified": "2026-06-10",
       "search_text": "record sargassum 2026 why hotel choice in mexico now depends on geography a record sargassum year changes the booking math the coast a hotel faces now matters more than its rating which mexican caribbean shores stay cleaner and how to book around it riviera-maya sargassum best-time"
+    },
+    {
+      "slug": "mexico-travel-safety-guide",
+      "lang": "en",
+      "primary_section": "safety",
+      "section_label": "Safety",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "scam-warning",
+        "food-safety",
+        "travel-insurance",
+        "money",
+        "airport-transfer",
+        "neighborhoods"
+      ],
+      "audience": [
+        "solo",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Mexico Travel Safety Guide: Cancun, Riviera Maya and Tulum",
+      "description": "What the U.S. and Canada advisories really mean, which everyday risks matter most for tourists, and how to travel the Riviera Maya without the avoidable mistakes.",
+      "url": "https://travelradarlk.com/en/content/mexico-travel-safety-guide",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-travel-safety-guide/card_1200x600.jpg",
+      "date_published": "2026-06-10",
+      "date_modified": "2026-06-10",
+      "search_text": "mexico travel safety guide cancun riviera maya and tulum what the u s and canada advisories really mean which everyday risks matter most for tourists and how to travel the riviera maya without the avoidable mistakes cancun riviera-maya scam-warning food-safety travel-insurance money airport-transfer neighborhoods"
     },
     {
       "slug": "money-in-mexico-for-travelers",

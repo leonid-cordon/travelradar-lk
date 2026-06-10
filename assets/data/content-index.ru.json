@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T01:46:56.547Z",
-  "count": 58,
+  "generated_at": "2026-06-10T04:33:29.623Z",
+  "count": 59,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1088,6 +1088,43 @@
       "date_published": "2026-06-10",
       "date_modified": "2026-06-10",
       "search_text": "рекордный саргассум 2026 почему выбор отеля в мексике теперь зависит от географии рекордный год по саргассуму меняет математику бронирования берег к которому выходит отель теперь важнее его рейтинга какие побережья мексиканской карибики остаются чище и как под это бронировать riviera-maya sargassum best-time"
+    },
+    {
+      "slug": "mexico-travel-safety-guide",
+      "lang": "ru",
+      "primary_section": "safety",
+      "section_label": "Безопасность",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "scam-warning",
+        "food-safety",
+        "travel-insurance",
+        "money",
+        "airport-transfer",
+        "neighborhoods"
+      ],
+      "audience": [
+        "solo",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Гид по безопасности в Мексике: Канкун, Ривьера-Майя и Тулум",
+      "description": "Что на самом деле означают предупреждения США и Канады, какие повседневные риски важнее всего для туристов и как путешествовать по Ривьере-Майя без ошибок, которых легко избежать.",
+      "url": "https://travelradarlk.com/ru/content/mexico-travel-safety-guide",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-travel-safety-guide/card_1200x600.jpg",
+      "date_published": "2026-06-10",
+      "date_modified": "2026-06-10",
+      "search_text": "гид по безопасности в мексике канкун ривьера-майя и тулум что на самом деле означают предупреждения сша и канады какие повседневные риски важнее всего для туристов и как путешествовать по ривьере-майя без ошибок которых легко избежать cancun riviera-maya scam-warning food-safety travel-insurance money airport-transfer neighborhoods"
     },
     {
       "slug": "money-in-mexico-for-travelers",

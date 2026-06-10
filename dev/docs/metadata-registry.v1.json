@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 58,
+  "record_count": 59,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -137,6 +137,9 @@
     },
     "mexico-sargassum-2026-hotel-geography": {
       "primary_section": "news", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "news", "tags": ["sargassum", "best-time"], "audience": [], "featured": 1, "intent": null
+    },
+    "mexico-travel-safety-guide": {
+      "primary_section": "safety", "country": "mexico", "region": "riviera-maya", "destination": "cancun", "related_destinations": ["playa-del-carmen", "tulum", "cozumel"], "content_type": "guide", "tags": ["scam-warning", "food-safety", "travel-insurance", "money", "airport-transfer", "neighborhoods"], "audience": ["solo", "couples", "first-timer"], "featured": 0, "intent": "plan"
     },
     "money-in-mexico-for-travelers": {
       "primary_section": "planning", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["money"], "audience": [], "featured": 0, "intent": null
