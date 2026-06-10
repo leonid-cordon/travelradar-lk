@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T21:05:23.269Z",
-  "count": 60,
+  "generated_at": "2026-06-10T22:40:10.581Z",
+  "count": 61,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1229,6 +1229,33 @@
       "date_published": "2026-04-28",
       "date_modified": "2026-04-28",
       "search_text": "пунта-кана или канкун какое направление лучше подходит для вашей поездки честное сравнение пунта-каны и канкуна по формату резорта вариантам вне отеля бюджетной логике и тому кому что подходит лучше"
+    },
+    {
+      "slug": "renting-a-car-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "advice",
+      "tags": [
+        "airport-transfer",
+        "budget",
+        "money",
+        "day-trips"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Аренда авто в Канкуне и Ривьере-Майя: стоит ли оно того?",
+      "description": "Реальная стоимость аренды в Ривьере-Майя, обязательная страховка, о которой забывают, и понятный ответ: когда машина оправдана, а когда выигрывает трансфер.",
+      "url": "https://travelradarlk.com/ru/content/renting-a-car-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/renting-a-car-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-11",
+      "date_modified": "2026-06-11",
+      "search_text": "аренда авто в канкуне и ривьере-майя стоит ли оно того реальная стоимость аренды в ривьере-майя обязательная страховка о которой забывают и понятный ответ когда машина оправдана а когда выигрывает трансфер cancun riviera-maya airport-transfer budget money day-trips"
     },
     {
       "slug": "riviera-maya-budget-guide",

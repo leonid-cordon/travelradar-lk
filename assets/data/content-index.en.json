@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T21:05:23.112Z",
-  "count": 60,
+  "generated_at": "2026-06-10T22:40:10.402Z",
+  "count": 61,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1229,6 +1229,33 @@
       "date_published": "2026-04-28",
       "date_modified": "2026-04-28",
       "search_text": "punta cana vs cancun which destination fits your trip better an honest side-by-side guide to punta cana and cancun by resort style off-resort options budget logic and traveler fit"
+    },
+    {
+      "slug": "renting-a-car-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "advice",
+      "tags": [
+        "airport-transfer",
+        "budget",
+        "money",
+        "day-trips"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Renting a Car in Cancun and the Riviera Maya: Is It Worth It?",
+      "description": "The real cost of a Riviera Maya rental, the legal insurance most travelers miss, and a clear read on when a car is worth it and when a transfer wins.",
+      "url": "https://travelradarlk.com/en/content/renting-a-car-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/renting-a-car-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-11",
+      "date_modified": "2026-06-11",
+      "search_text": "renting a car in cancun and the riviera maya is it worth it the real cost of a riviera maya rental the legal insurance most travelers miss and a clear read on when a car is worth it and when a transfer wins cancun riviera-maya airport-transfer budget money day-trips"
     },
     {
       "slug": "riviera-maya-budget-guide",
