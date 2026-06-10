@@ -136,7 +136,7 @@
       "primary_section": "planning", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["esim"], "audience": [], "featured": 0, "intent": null
     },
     "mexico-sargassum-2026-hotel-geography": {
-      "primary_section": "weather", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["sargassum", "best-time"], "audience": [], "featured": 1, "intent": null
+      "primary_section": "news", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "news", "tags": ["sargassum", "best-time"], "audience": [], "featured": 1, "intent": null
     },
     "money-in-mexico-for-travelers": {
       "primary_section": "planning", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["money"], "audience": [], "featured": 0, "intent": null

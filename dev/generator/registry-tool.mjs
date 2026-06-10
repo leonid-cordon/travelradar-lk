@@ -94,7 +94,6 @@ function validateRecord(slug, r) {
   for (const k of FIELD_ORDER) need(k);
 
   if (r.primary_section !== undefined && !inDict(r.primary_section, 'primary_section')) errs.push(`primary_section out of dict: ${r.primary_section}`);
-  if (r.primary_section === 'news') errs.push(`primary_section "news" is not in use (no v2 page)`);
   if (r.country !== undefined && !inDict(r.country, 'country')) errs.push(`country out of dict: ${r.country}`);
   if (r.region !== undefined && r.region !== null && !inDict(r.region, 'region')) errs.push(`region out of dict: ${r.region}`);
   if (r.destination !== undefined && r.destination !== null && !inDict(r.destination, 'destination')) errs.push(`destination out of dict: ${r.destination}`);
@@ -206,4 +205,27 @@ if (cmd === 'insert') {
   process.exit(0);
 }
 
-die(`unknown command "${cmd || ''}". Use: detect | validate | insert`);
+if (cmd === 'update') {
+  const slug = process.argv[3];
+  const payload = process.argv[4];
+  if (!slug || !payload) die(`usage: update <slug> '<json-record>'`);
+
+  let r; try { r = JSON.parse(payload); } catch (e) { die(`record is not valid JSON: ${e.message}`); }
+  const errs = validateRecord(slug, r);
+  if (errs.length) die(`invalid record for "${slug}":\n - ${errs.join('\n - ')}`);
+
+  const reg = readRegistry();
+  if (!reg.records[slug]) die(`"${slug}" is not in the Registry — use insert for a new article`);
+
+  const before = reg.records[slug];
+  reg.records[slug] = normalize(r);
+  // record_count is unchanged on update, but recompute defensively.
+  reg.record_count = Object.keys(reg.records).length;
+
+  writeFileSync(REGISTRY_PATH, serializeRegistry(reg), { encoding: 'utf8' });
+  console.log(`OK: updated "${slug}" (primary_section ${before.primary_section} → ${reg.records[slug].primary_section}). Registry has ${reg.record_count} records.`);
+  console.log(`Next: node dev/generator/build-all.mjs`);
+  process.exit(0);
+}
+
+die(`unknown command "${cmd || ''}". Use: detect | validate | insert | update`);

@@ -7,8 +7,8 @@
 // suffix): the Ukrainian branch lives in ua/ but its language code is `uk`.
 //
 // GEO place-name badges are intentionally NOT translated (kept Latin) — see the
-// GEO map in build-sections.mjs. `news` is intentionally ABSENT from every
-// switcher: it has 0 records and no v2 page, and must not reappear via generation.
+// GEO map in build-sections.mjs. `news` is a first-class v2 section: it appears in
+// every switcher and is generated like the others (hero copy in sections.news).
 
 const MONTHS = {
   en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -57,6 +57,7 @@ export const LANGS = {
       { slug: 'weather', label: 'Weather & Seasons' },
       { slug: 'planning', label: 'Planning & Budget' },
       { slug: 'safety', label: 'Safety' },
+      { slug: 'news', label: 'News' },
     ],
     sectionLabels: {
       destinations: 'Destinations',
@@ -160,6 +161,19 @@ export const LANGS = {
           'Short by design — read before you go, then stop worrying.',
         ],
       },
+      news: {
+        label: 'News',
+        titleTag: 'Travel News: Mexico, Cancun & the Riviera Maya Updates | Travel Radar LK',
+        ogTitle: 'Travel News for Mexico and the Riviera Maya',
+        description: "Timely travel news for Mexico's Caribbean coast — sargassum, weather events, entry rules and other developments that change how you plan Cancun, Tulum and the Riviera Maya.",
+        h1: 'News',
+        subtitle: 'What changed, and what it means for your trip',
+        heroAlt: "Travel news for Mexico's Caribbean coast",
+        intro: [
+          "Timely updates that affect a Mexico trip — sargassum outlooks, weather events, entry-rule changes and other developments worth knowing before you book.",
+          'Dated reporting with a practical, decision-first read; check live conditions close to travel.',
+        ],
+      },
     },
   },
 
@@ -179,6 +193,7 @@ export const LANGS = {
       { slug: 'weather', label: 'Погода и сезоны' },
       { slug: 'planning', label: 'Планирование и бюджет' },
       { slug: 'safety', label: 'Безопасность' },
+      { slug: 'news', label: 'Новости' },
     ],
     sectionLabels: {
       destinations: 'Направления',
@@ -282,6 +297,19 @@ export const LANGS = {
           'Намеренно короткий раздел — прочитайте перед поездкой и перестаньте волноваться.',
         ],
       },
+      news: {
+        label: 'Новости',
+        titleTag: 'Новости путешествий: Мексика, Канкун и Ривьера-Майя | Travel Radar LK',
+        ogTitle: 'Новости путешествий по Мексике и Ривьере-Майе',
+        description: 'Актуальные новости для поездок на карибское побережье Мексики — саргассум, погодные события, правила въезда и другие изменения, влияющие на планирование Канкуна, Тулума и Ривьеры-Майя.',
+        h1: 'Новости',
+        subtitle: 'Что изменилось и что это значит для поездки',
+        heroAlt: 'Новости путешествий по карибскому побережью Мексики',
+        intro: [
+          'Актуальные изменения, которые влияют на поездку в Мексику, — прогнозы по саргассуму, погодные события, изменения правил въезда и другие новости, которые стоит знать до брони.',
+          'Датированные материалы с практическим, решающим взглядом; проверяйте обстановку в реальном времени ближе к поездке.',
+        ],
+      },
     },
   },
 
@@ -301,6 +329,7 @@ export const LANGS = {
       { slug: 'weather', label: 'Погода і сезони' },
       { slug: 'planning', label: 'Планування і бюджет' },
       { slug: 'safety', label: 'Безпека' },
+      { slug: 'news', label: 'Новини' },
     ],
     sectionLabels: {
       destinations: 'Напрямки',
@@ -402,6 +431,19 @@ export const LANGS = {
         intro: [
           'Пряма розмова про безпеку: типове шахрайство, запобіжні заходи з їжею та водою і які ризики справді заслуговують на увагу на карибському узбережжі.',
           'Навмисно короткий розділ — прочитайте перед поїздкою і перестаньте хвилюватися.',
+        ],
+      },
+      news: {
+        label: 'Новини',
+        titleTag: "Новини подорожей: Мексика, Канкун і Рив'єра-Майя | Travel Radar LK",
+        ogTitle: "Новини подорожей Мексикою та Рив'єрою-Майя",
+        description: "Актуальні новини для поїздок на карибське узбережжя Мексики — саргасум, погодні події, правила в'їзду та інші зміни, що впливають на планування Канкуна, Тулума і Рив'єри-Майя.",
+        h1: 'Новини',
+        subtitle: 'Що змінилося і що це означає для поїздки',
+        heroAlt: 'Новини подорожей карибським узбережжям Мексики',
+        intro: [
+          "Актуальні зміни, що впливають на поїздку в Мексику, — прогнози щодо саргасуму, погодні події, зміни правил в'їзду та інші новини, які варто знати до броні.",
+          'Датовані матеріали з практичним, рішучим поглядом; перевіряйте обстановку в реальному часі ближче до поїздки.',
         ],
       },
     },

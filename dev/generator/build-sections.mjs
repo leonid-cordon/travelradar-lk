@@ -2,7 +2,7 @@
 //
 // Usage:  node build-sections.mjs <lang> <section>
 //           lang    ∈ keys of LANGS (en, ru, …)
-//           section ∈ all | destinations | stay | things-to-do | weather | planning | safety
+//           section ∈ all | destinations | stay | things-to-do | weather | planning | safety | news
 //
 // Reads:  assets/data/content-index.<code>.json   (the public runtime artifact from Step 1)
 // Writes: <folder>/content/<section>/index.html    (pre-rendered, static, no runtime JS)
@@ -32,7 +32,6 @@ const GEO = {
 
 // Structural section metadata (language-invariant): slug + showcase flag.
 // All display copy lives in i18n.mjs (LANGS[lang].sections[<key>]).
-// `news` (0 records) stays on its legacy page and is handled separately.
 const STRUCT = {
   all: { slug: '', isShowcase: true },
   destinations: { slug: 'destinations' },
@@ -41,6 +40,7 @@ const STRUCT = {
   weather: { slug: 'weather' },
   planning: { slug: 'planning' },
   safety: { slug: 'safety' },
+  news: { slug: 'news' },
 };
 
 // ── CLI args ──
@@ -56,7 +56,7 @@ const INDEX_PATH = join(REPO_ROOT, 'assets', 'data', `content-index.${lang.code}
 
 // Section switcher — fixed order shared by All + every section; labels from i18n.
 // For other languages only the labels and the /<folder>/ path prefix change, not
-// the order or structure. `news` is intentionally absent (0 records, no v2 page).
+// the order or structure. `news` is part of the switcher like every other section.
 const SWITCHER = lang.switcher;
 
 const MONTHS = lang.months;
