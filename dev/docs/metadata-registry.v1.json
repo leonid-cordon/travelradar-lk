@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 59,
+  "record_count": 60,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -98,6 +98,9 @@
     },
     "chichen-itza-from-cancun": {
       "primary_section": "things-to-do", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["archaeology", "day-trips"], "audience": [], "featured": 0, "intent": null
+    },
+    "common-tourist-scams-cancun-riviera-maya": {
+      "primary_section": "safety", "country": "mexico", "region": "riviera-maya", "destination": "cancun", "related_destinations": ["playa-del-carmen", "tulum"], "content_type": "advice", "tags": ["scam-warning", "money", "airport-transfer"], "audience": ["first-timer", "couples", "solo"], "featured": 0, "intent": "plan"
     },
     "cozumel-day-trip-from-playa-del-carmen": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": "cozumel", "related_destinations": [], "content_type": "guide", "tags": ["day-trips", "island-trip"], "audience": [], "featured": 0, "intent": null

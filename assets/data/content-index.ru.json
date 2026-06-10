@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T04:33:29.623Z",
-  "count": 59,
+  "generated_at": "2026-06-10T21:05:23.269Z",
+  "count": 60,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -768,6 +768,39 @@
       "date_published": "2026-05-30",
       "date_modified": "2026-05-30",
       "search_text": "чичен-ица из канкуна или ривьеры-майя тур аренда авто или пропустить сколько реально занимает дорога тур против аренды авто и автобуса во сколько обходится каждый вариант и кому стоит пропустить чичен-ицу в коротком отпуске yucatan archaeology day-trips"
+    },
+    {
+      "slug": "common-tourist-scams-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "safety",
+      "section_label": "Безопасность",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "scam-warning",
+        "money",
+        "airport-transfer"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Частые схемы обмана туристов в Канкуне и на Ривьере-Майя",
+      "description": "Несколько схем, на которых здесь реально теряют деньги: как каждая работает, тревожный сигнал и простая привычка, которая её обезвреживает.",
+      "url": "https://travelradarlk.com/ru/content/common-tourist-scams-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/common-tourist-scams-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-10",
+      "date_modified": "2026-06-10",
+      "search_text": "частые схемы обмана туристов в канкуне и на ривьере-майя несколько схем на которых здесь реально теряют деньги как каждая работает тревожный сигнал и простая привычка которая её обезвреживает cancun riviera-maya scam-warning money airport-transfer"
     },
     {
       "slug": "cozumel-day-trip-from-playa-del-carmen",

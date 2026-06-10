@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T04:33:29.727Z",
-  "count": 59,
+  "generated_at": "2026-06-10T21:05:23.430Z",
+  "count": 60,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -768,6 +768,39 @@
       "date_published": "2026-05-30",
       "date_modified": "2026-05-30",
       "search_text": "чічен-іца з канкуна чи рів єри-майя тур оренда авто чи пропустити скільки насправді триває дорога тур проти оренди авто й автобуса у скільки обходиться кожен варіант і кому варто пропустити чічен-іцу в короткій відпустці yucatan archaeology day-trips"
+    },
+    {
+      "slug": "common-tourist-scams-cancun-riviera-maya",
+      "lang": "uk",
+      "primary_section": "safety",
+      "section_label": "Безпека",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "scam-warning",
+        "money",
+        "airport-transfer"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Поширені схеми обману туристів у Канкуні та на Рив'єрі-Майя",
+      "description": "Кілька схем, на яких тут реально втрачають гроші: як кожна працює, тривожний сигнал і проста звичка, що її знешкоджує.",
+      "url": "https://travelradarlk.com/ua/content/common-tourist-scams-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/common-tourist-scams-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-10",
+      "date_modified": "2026-06-10",
+      "search_text": "поширені схеми обману туристів у канкуні та на рив єрі-майя кілька схем на яких тут реально втрачають гроші як кожна працює тривожний сигнал і проста звичка що її знешкоджує cancun riviera-maya scam-warning money airport-transfer"
     },
     {
       "slug": "cozumel-day-trip-from-playa-del-carmen",
