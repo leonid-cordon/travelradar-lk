@@ -156,6 +156,18 @@
             display: none;
         }
 
+        /* Desktop: wrap section links onto centered rows instead of clipping the
+           last item past the 880px cap (RU labels are widest, so «Новости» fell
+           off-screen). Mobile keeps the horizontal swipe-scroll above. Delete this
+           whole block to revert. */
+        @media (min-width: 768px) {
+            .site-nav-inner {
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow-x: visible;
+            }
+        }
+
         .article-nav-wrap .site-nav .nav-link {
             display: inline-block;
             padding: .7rem .9rem;
