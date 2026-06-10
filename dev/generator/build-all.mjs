@@ -26,7 +26,7 @@ const run = (script, args = []) =>
 
 // Language codes (i18n keys) and the fixed section set, mirroring the generators.
 const LANGS = ['en', 'ru', 'uk'];
-const SECTIONS = ['all', 'destinations', 'stay', 'things-to-do', 'weather', 'planning', 'safety'];
+const SECTIONS = ['all', 'destinations', 'stay', 'things-to-do', 'weather', 'planning', 'safety', 'news'];
 
 // Cross-language parity: one Registry record must yield an article in EVERY
 // language, so all indexes must share the SAME section distribution. This replaces
@@ -67,7 +67,7 @@ for (const l of LANGS) run('build-index.mjs', [l]);
 // 1b) Verify every language reproduced the same distribution before building hubs.
 checkParity();
 
-// 2) Hub pages (All + 6 sections, per language).
+// 2) Hub pages (All + 7 sections, per language).
 for (const l of LANGS) for (const s of SECTIONS) run('build-sections.mjs', [l, s]);
 
 // 3) Article menu partials (all languages in one pass).

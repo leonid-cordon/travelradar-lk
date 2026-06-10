@@ -22,12 +22,13 @@ asking the owner to touch JSON, dictionaries, or generators.
 
 ## The closed dictionaries (you choose ONLY from these)
 
-- `primary_section`: destinations · stay · things-to-do · weather · planning · safety
-  (never `news` — it has no v2 page)
+- `primary_section`: destinations · stay · things-to-do · weather · planning · safety · news
+  (`news` is a live v2 section — use it for timely, dated news pieces; see the rule below)
 - `country`: mexico · egypt · turkey · dominican-republic · caribbean · generic
 - `region` or null: riviera-maya · yucatan · istanbul · red-sea · punta-cana
 - `destination` or null: cancun · tulum · playa-del-carmen · cozumel · isla-mujeres · riviera-maya · istanbul · punta-cana
-- `content_type`: guide · comparison · listicle · advice
+- `content_type`: guide · comparison · listicle · advice · news
+  (use `news` for a dated news dispatch; it usually pairs with `primary_section: news`)
 - `audience` (array, may be empty): family · couples · solo · first-timer
 - `intent` or null: inspire · plan · book
 - `tags` (array, from project vocab): all-inclusive, adults-only, family-resort, honeymoon,
@@ -44,6 +45,17 @@ Ask: which reader question does the article answer?
 - when to go (seasons, weather, hurricanes, sargassum, best month) → **weather**
 - logistics (budget, flights, transfers, eSIM, insurance, visas) → **planning**
 - staying safe (scams, food/water, real risks) → **safety**
+- a timely, dated development the reader should know *now* (a record sargassum
+  year, an entry-rule change, a weather event) → **news**
+
+**news vs an evergreen section** — decide by shelf life, not topic. If the piece is a
+*standing reference* a reader would consult any year (how the seasons work, how to pick a
+coast), use the evergreen section even if the hook is topical — e.g. a perennial sargassum
+explainer → **weather**. If it is a *dated dispatch* anchored to a specific moment ("record
+2026 season", "new rule from June") that loses relevance once the moment passes, use
+**news**. The article's own framing (breadcrumb/News nav, a year in the title, "this year"
+language) is a strong signal. When it's genuinely borderline, offer the owner news vs the
+evergreen section with one-line reasons and let them pick.
 
 ## Procedure
 

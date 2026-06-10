@@ -2,7 +2,7 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T01:19:03.123Z",
+  "generated_at": "2026-06-10T01:46:56.448Z",
   "count": 58,
   "records": [
     {
@@ -1067,13 +1067,13 @@
     {
       "slug": "mexico-sargassum-2026-hotel-geography",
       "lang": "en",
-      "primary_section": "weather",
-      "section_label": "Weather & Seasons",
+      "primary_section": "news",
+      "section_label": "News",
       "country": "mexico",
       "region": "riviera-maya",
       "destination": null,
       "related_destinations": [],
-      "content_type": "guide",
+      "content_type": "news",
       "tags": [
         "sargassum",
         "best-time"
