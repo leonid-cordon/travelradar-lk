@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T23:56:31.932Z",
-  "count": 62,
+  "generated_at": "2026-06-11T03:42:54.630Z",
+  "count": 63,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -29,6 +29,41 @@
       "date_published": "2026-06-02",
       "date_modified": "2026-06-02",
       "search_text": "7-day riviera maya itinerary cancun playa tulum and islands plan a 7-day riviera maya trip without overbooking it one smart base two big day trips protected rest and an honest day-by-day rhythm riviera-maya itinerary day-trips"
+    },
+    {
+      "slug": "add-cancun-to-world-cup-2026-trip",
+      "lang": "en",
+      "primary_section": "news",
+      "section_label": "News",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen",
+        "riviera-maya"
+      ],
+      "content_type": "news",
+      "tags": [
+        "best-time",
+        "sargassum",
+        "all-inclusive",
+        "airport-transfer",
+        "budget"
+      ],
+      "audience": [
+        "first-timer",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Adding Cancun to Your World Cup 2026 Trip: A Beach Leg for U.S. Fans",
+      "description": "The honest case for adding a short Cancun beach leg to a 2026 World Cup trip: which host cities make it a quick hop, the low-season trade-off, and where to start.",
+      "url": "https://travelradarlk.com/en/content/add-cancun-to-world-cup-2026-trip",
+      "image": "https://travelradarlk.com/assets/images/content/add-cancun-to-world-cup-2026-trip/card_1200x600.jpg",
+      "date_published": "2026-06-11",
+      "date_modified": "2026-06-11",
+      "search_text": "adding cancun to your world cup 2026 trip a beach leg for u s fans the honest case for adding a short cancun beach leg to a 2026 world cup trip which host cities make it a quick hop the low-season trade-off and where to start cancun riviera-maya best-time sargassum all-inclusive airport-transfer budget"
     },
     {
       "slug": "ado-bus-private-transfer-rental-car-cancun-riviera-maya",

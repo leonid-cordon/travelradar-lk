@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T23:56:32.091Z",
-  "count": 62,
+  "generated_at": "2026-06-11T03:42:54.736Z",
+  "count": 63,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -29,6 +29,41 @@
       "date_published": "2026-06-02",
       "date_modified": "2026-06-02",
       "search_text": "маршрут по ривьере майя на 7 дней канкун плая тулум и острова спланируйте неделю на ривьере майя без перегруза одна умная база две большие поездки защищённый отдых и честный ритм день за днём riviera-maya itinerary day-trips"
+    },
+    {
+      "slug": "add-cancun-to-world-cup-2026-trip",
+      "lang": "ru",
+      "primary_section": "news",
+      "section_label": "Новости",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen",
+        "riviera-maya"
+      ],
+      "content_type": "news",
+      "tags": [
+        "best-time",
+        "sargassum",
+        "all-inclusive",
+        "airport-transfer",
+        "budget"
+      ],
+      "audience": [
+        "first-timer",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун в дополнение к поездке на ЧМ-2026: пляжный отрезок для болельщиков из США",
+      "description": "Честный разбор, стоит ли добавить короткий пляжный отрезок в Канкуне к поездке на ЧМ-2026: из каких городов это быстрый перелёт, компромисс низкого сезона и с чего начать.",
+      "url": "https://travelradarlk.com/ru/content/add-cancun-to-world-cup-2026-trip",
+      "image": "https://travelradarlk.com/assets/images/content/add-cancun-to-world-cup-2026-trip/card_1200x600.jpg",
+      "date_published": "2026-06-11",
+      "date_modified": "2026-06-11",
+      "search_text": "канкун в дополнение к поездке на чм-2026 пляжный отрезок для болельщиков из сша честный разбор стоит ли добавить короткий пляжный отрезок в канкуне к поездке на чм-2026 из каких городов это быстрый перелёт компромисс низкого сезона и с чего начать cancun riviera-maya best-time sargassum all-inclusive airport-transfer budget"
     },
     {
       "slug": "ado-bus-private-transfer-rental-car-cancun-riviera-maya",
