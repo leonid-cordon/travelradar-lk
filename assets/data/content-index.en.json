@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T22:40:10.402Z",
-  "count": 61,
+  "generated_at": "2026-06-10T23:56:31.932Z",
+  "count": 62,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -29,6 +29,40 @@
       "date_published": "2026-06-02",
       "date_modified": "2026-06-02",
       "search_text": "7-day riviera maya itinerary cancun playa tulum and islands plan a 7-day riviera maya trip without overbooking it one smart base two big day trips protected rest and an honest day-by-day rhythm riviera-maya itinerary day-trips"
+    },
+    {
+      "slug": "ado-bus-private-transfer-rental-car-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "airport-transfer",
+        "budget",
+        "money",
+        "day-trips"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "ADO Bus vs Private Transfer vs Rental Car in Cancun and the Riviera Maya",
+      "description": "A route-by-route read on getting around the Riviera Maya: when the ADO bus quietly wins, when a private transfer earns its price, and when a rental car is worth the hassle.",
+      "url": "https://travelradarlk.com/en/content/ado-bus-private-transfer-rental-car-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/ado-bus-private-transfer-rental-car-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-11",
+      "date_modified": "2026-06-11",
+      "search_text": "ado bus vs private transfer vs rental car in cancun and the riviera maya a route-by-route read on getting around the riviera maya when the ado bus quietly wins when a private transfer earns its price and when a rental car is worth the hassle cancun riviera-maya airport-transfer budget money day-trips"
     },
     {
       "slug": "adults-only-vs-family-resorts-cancun",

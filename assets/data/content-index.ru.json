@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-10T22:40:10.581Z",
-  "count": 61,
+  "generated_at": "2026-06-10T23:56:32.091Z",
+  "count": 62,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -29,6 +29,40 @@
       "date_published": "2026-06-02",
       "date_modified": "2026-06-02",
       "search_text": "маршрут по ривьере майя на 7 дней канкун плая тулум и острова спланируйте неделю на ривьере майя без перегруза одна умная база две большие поездки защищённый отдых и честный ритм день за днём riviera-maya itinerary day-trips"
+    },
+    {
+      "slug": "ado-bus-private-transfer-rental-car-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "airport-transfer",
+        "budget",
+        "money",
+        "day-trips"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "ADO-автобус, частный трансфер или аренда авто в Канкуне и на Ривьере-Майя",
+      "description": "Разбор по маршрутам, как передвигаться по Ривьере-Майя: когда тихо выигрывает ADO-автобус, когда частный трансфер отрабатывает свою цену, а когда аренда машины стоит хлопот.",
+      "url": "https://travelradarlk.com/ru/content/ado-bus-private-transfer-rental-car-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/ado-bus-private-transfer-rental-car-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-11",
+      "date_modified": "2026-06-11",
+      "search_text": "ado-автобус частный трансфер или аренда авто в канкуне и на ривьере-майя разбор по маршрутам как передвигаться по ривьере-майя когда тихо выигрывает ado-автобус когда частный трансфер отрабатывает свою цену а когда аренда машины стоит хлопот cancun riviera-maya airport-transfer budget money day-trips"
     },
     {
       "slug": "adults-only-vs-family-resorts-cancun",
