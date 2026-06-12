@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-11T03:42:54.630Z",
-  "count": 63,
+  "generated_at": "2026-06-12T13:08:25.177Z",
+  "count": 64,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -970,6 +970,44 @@
       "date_published": "2026-02-05",
       "date_modified": "2026-04-25",
       "search_text": "entry to egypt in 2026 visa passport and airport rules a practical tourist guide to egypt entry rules in 2026 visa options passport checks sinai stamp airport process customs and official sources visa-entry"
+    },
+    {
+      "slug": "first-time-mexico-vacation-planner",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya",
+        "tulum",
+        "punta-cana"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "cenotes",
+        "day-trips",
+        "airport-transfer",
+        "best-time",
+        "sargassum",
+        "budget"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "First-Time Mexico Vacation Planner: Cancun, Riviera Maya, Tulum or Punta Cana?",
+      "description": "An honest, decision-first read on where to take your first Caribbean beach trip: Cancun, the Riviera Maya, Tulum or Punta Cana, and who each one actually suits.",
+      "url": "https://travelradarlk.com/en/content/first-time-mexico-vacation-planner",
+      "image": "https://travelradarlk.com/assets/images/content/first-time-mexico-vacation-planner/card_1200x600.jpg",
+      "date_published": "2026-06-12",
+      "date_modified": "2026-06-12",
+      "search_text": "first-time mexico vacation planner cancun riviera maya tulum or punta cana an honest decision-first read on where to take your first caribbean beach trip cancun the riviera maya tulum or punta cana and who each one actually suits all-inclusive beaches cenotes day-trips airport-transfer best-time sargassum budget"
     },
     {
       "slug": "flights-egypt",

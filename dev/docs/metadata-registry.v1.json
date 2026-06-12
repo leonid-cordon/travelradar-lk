@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 63,
+  "record_count": 64,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -119,6 +119,9 @@
     },
     "entry-egypt-2026": {
       "primary_section": "planning", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["visa-entry"], "audience": [], "featured": 0, "intent": null
+    },
+    "first-time-mexico-vacation-planner": {
+      "primary_section": "destinations", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "riviera-maya", "tulum", "punta-cana"], "content_type": "comparison", "tags": ["all-inclusive", "beaches", "cenotes", "day-trips", "airport-transfer", "best-time", "sargassum", "budget"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
     },
     "flights-egypt": {
       "primary_section": "planning", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["flights"], "audience": [], "featured": 0, "intent": null

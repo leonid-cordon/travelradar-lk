@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-11T03:42:54.736Z",
-  "count": 63,
+  "generated_at": "2026-06-12T13:08:25.329Z",
+  "count": 64,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -970,6 +970,44 @@
       "date_published": "2026-02-05",
       "date_modified": "2026-04-25",
       "search_text": "въезд в египет в 2026 виза паспорт и правила аэропорта практичный гид для туристов визы в египет паспорт синайский штамп аэропорт таможня и официальные источники перед вылетом visa-entry"
+    },
+    {
+      "slug": "first-time-mexico-vacation-planner",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya",
+        "tulum",
+        "punta-cana"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "cenotes",
+        "day-trips",
+        "airport-transfer",
+        "best-time",
+        "sargassum",
+        "budget"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Первая поездка в Мексику: Канкун, Ривьера-Майя, Тулум или Пунта-Кана?",
+      "description": "Честный разбор с упором на решение: куда поехать в первую карибскую пляжную поездку — Канкун, Ривьера-Майя, Тулум или Пунта-Кана, и кому каждое направление реально подходит.",
+      "url": "https://travelradarlk.com/ru/content/first-time-mexico-vacation-planner",
+      "image": "https://travelradarlk.com/assets/images/content/first-time-mexico-vacation-planner/card_1200x600.jpg",
+      "date_published": "2026-06-12",
+      "date_modified": "2026-06-12",
+      "search_text": "первая поездка в мексику канкун ривьера-майя тулум или пунта-кана честный разбор с упором на решение куда поехать в первую карибскую пляжную поездку канкун ривьера-майя тулум или пунта-кана и кому каждое направление реально подходит all-inclusive beaches cenotes day-trips airport-transfer best-time sargassum budget"
     },
     {
       "slug": "flights-egypt",
