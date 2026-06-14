@@ -96,13 +96,43 @@ if it fails, read the FATAL line, fix the cause, do not hand-edit the JSON file.
 Run: `node dev/generator/build-all.mjs`
 Watch for: `warnings: 0` (per language), `✓ cross-language parity OK`, `✓ Full rebuild complete`.
 
-### 7. Report
+### 7. Sitemap
+`sitemap.xml` is hand-maintained — `build-all` does NOT touch it — so the new article
+must be added here or it will never be indexed. Do this only after a clean build.
+- First check it isn't already there: `grep -c "<slug>" sitemap.xml`. If the count is
+  non-zero, the trio already exists — skip this step (idempotent, never duplicate).
+- If absent, append three `<url>` entries (en, then ru, then ua) immediately before the
+  closing `</urlset>`, matching the existing format exactly (same indentation, two-space).
+- `<lastmod>` = the article's `datePublished` (the same date you mirrored across all three
+  language files), in `YYYY-MM-DD` form — not today's date unless they coincide.
+- URLs are `https://travelradarlk.com/<lang>/content/<slug>` with `<lang>` = `en`/`ru`/`ua`
+  (note: the Ukrainian path segment is `ua`, matching the file tree, even though the
+  language code elsewhere is `uk`).
+
+Template to append:
+```
+  <url>
+    <loc>https://travelradarlk.com/en/content/<slug></loc>
+    <lastmod><datePublished></lastmod>
+  </url>
+  <url>
+    <loc>https://travelradarlk.com/ru/content/<slug></loc>
+    <lastmod><datePublished></lastmod>
+  </url>
+  <url>
+    <loc>https://travelradarlk.com/ua/content/<slug></loc>
+    <lastmod><datePublished></lastmod>
+  </url>
+```
+
+### 8. Report
 Give the owner a compact report:
 - Registry: +1 (now N records)
 - Parity: en/ru/uk identical (N each)
 - warnings count (call out any `missing og:image`)
 - Section page the article now appears on (e.g. `/content/weather/`) + new count
 - Present in All Hub (`/content/`)
+- Sitemap: +3 URLs (en/ru/ua) at `<datePublished>` — or "already present" if it was
 - Build status
 Then offer the commit (do NOT run it without a yes):
 `git add -A && git commit -m "Add article: <slug>"`

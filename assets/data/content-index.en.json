@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-14T01:28:25.482Z",
-  "count": 65,
+  "generated_at": "2026-06-14T14:07:20.945Z",
+  "count": 66,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -176,6 +176,39 @@
       "date_published": "2026-05-18",
       "date_modified": "2026-05-18",
       "search_text": "best all-inclusive resorts in cancun hotel zone north central or south hotel zone choose cancun all-inclusive resorts by beach vibe and trip style cancun all-inclusive"
+    },
+    {
+      "slug": "best-budget-mid-range-hotels-cancun-hotel-zone",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "listicle",
+      "tags": [
+        "budget",
+        "boutique-hotel",
+        "hotel-mistakes",
+        "booking-checklist",
+        "beaches"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Budget and Mid-Range Hotels in Cancun Hotel Zone",
+      "description": "Choose a budget or mid-range Cancun Hotel Zone hotel by zone, beach access, breakfast and hidden resort fees, not just nightly rate.",
+      "url": "https://travelradarlk.com/en/content/best-budget-mid-range-hotels-cancun-hotel-zone",
+      "image": "https://travelradarlk.com/assets/images/content/best-budget-mid-range-hotels-cancun-hotel-zone/card_1200x600.jpg",
+      "date_published": "2026-06-14",
+      "date_modified": "2026-06-14",
+      "search_text": "best budget and mid-range hotels in cancun hotel zone choose a budget or mid-range cancun hotel zone hotel by zone beach access breakfast and hidden resort fees not just nightly rate cancun budget boutique-hotel hotel-mistakes booking-checklist beaches"
     },
     {
       "slug": "best-day-trips-from-cancun",
