@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-12T13:08:25.329Z",
-  "count": 64,
+  "generated_at": "2026-06-14T01:28:25.639Z",
+  "count": 65,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1203,6 +1203,36 @@
       "date_published": "2026-04-15",
       "date_modified": "2026-04-25",
       "search_text": "esim для мексики что настроить до прилета как остаться на связи в мексике без лишних трат что сделать до рейса чего избегать и какой тип esim подходит вашей поездке esim"
+    },
+    {
+      "slug": "mexico-resort-fees-hidden-costs",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "money",
+        "budget"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Сборы, налоги и скрытые расходы на курортах Мексики: что проверить до оплаты",
+      "description": "Что не входит в цену номера в Канкуне и на Ривьере-Майе: НДС и налог штата на проживание, Visitax, экологический сбор наличными при заселении, депозиты и ловушка DCC.",
+      "url": "https://travelradarlk.com/ru/content/mexico-resort-fees-hidden-costs",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-resort-fees-hidden-costs/card_1200x600.jpg",
+      "date_published": "2026-06-13",
+      "date_modified": "2026-06-13",
+      "search_text": "сборы налоги и скрытые расходы на курортах мексики что проверить до оплаты что не входит в цену номера в канкуне и на ривьере-майе ндс и налог штата на проживание visitax экологический сбор наличными при заселении депозиты и ловушка dcc riviera-maya money budget"
     },
     {
       "slug": "mexico-sargassum-2026-hotel-geography",

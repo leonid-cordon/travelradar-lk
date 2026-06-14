@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-12T13:08:25.480Z",
-  "count": 64,
+  "generated_at": "2026-06-14T01:28:25.794Z",
+  "count": 65,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1203,6 +1203,36 @@
       "date_published": "2026-04-15",
       "date_modified": "2026-04-25",
       "search_text": "esim для мексики що налаштувати до прильоту як залишитися на зв язку в мексиці без переплати й хаосу в аеропорту що зробити до рейсу чого уникати і який формат esim обрати esim"
+    },
+    {
+      "slug": "mexico-resort-fees-hidden-costs",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "money",
+        "budget"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Збори, податки та приховані витрати на курортах Мексики: що перевірити до оплати",
+      "description": "Що не входить у ціну номера в Канкуні та на Рив'єрі-Майї: ПДВ і податок штату на проживання, Visitax, екологічний збір готівкою під час заселення, депозити та пастка DCC.",
+      "url": "https://travelradarlk.com/ua/content/mexico-resort-fees-hidden-costs",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-resort-fees-hidden-costs/card_1200x600.jpg",
+      "date_published": "2026-06-13",
+      "date_modified": "2026-06-13",
+      "search_text": "збори податки та приховані витрати на курортах мексики що перевірити до оплати що не входить у ціну номера в канкуні та на рив єрі-майї пдв і податок штату на проживання visitax екологічний збір готівкою під час заселення депозити та пастка dcc riviera-maya money budget"
     },
     {
       "slug": "mexico-sargassum-2026-hotel-geography",

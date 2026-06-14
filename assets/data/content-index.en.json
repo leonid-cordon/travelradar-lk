@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-12T13:08:25.177Z",
-  "count": 64,
+  "generated_at": "2026-06-14T01:28:25.482Z",
+  "count": 65,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1203,6 +1203,36 @@
       "date_published": "2026-04-15",
       "date_modified": "2026-04-16",
       "search_text": "mexico esim for us travelers what to set up before you land the cleanest way to stay connected in mexico without wasting money on the wrong setup what to do before your flight what to avoid and which esim style fits your trip esim"
+    },
+    {
+      "slug": "mexico-resort-fees-hidden-costs",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "money",
+        "budget"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Mexico Resort Fees, Taxes and Hidden Costs: What to Check Before You Pay",
+      "description": "What the room rate leaves out in Cancun and the Riviera Maya: IVA and state lodging tax, Visitax, the cash environmental fee at check-in, deposits, and the DCC trap.",
+      "url": "https://travelradarlk.com/en/content/mexico-resort-fees-hidden-costs",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-resort-fees-hidden-costs/card_1200x600.jpg",
+      "date_published": "2026-06-13",
+      "date_modified": "2026-06-13",
+      "search_text": "mexico resort fees taxes and hidden costs what to check before you pay what the room rate leaves out in cancun and the riviera maya iva and state lodging tax visitax the cash environmental fee at check-in deposits and the dcc trap riviera-maya money budget"
     },
     {
       "slug": "mexico-sargassum-2026-hotel-geography",
