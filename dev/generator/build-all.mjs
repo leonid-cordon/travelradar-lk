@@ -8,6 +8,7 @@
 //   1b) cross-language parity check (here, not in build-index — needs all 3 indexes)
 //   2) build-sections.mjs    <lang> <section>  → <folder>/content/<section>/index.html (Hub pages)
 //   3) build-content-menu.mjs                  → Partials/content-menu-<folder>.html (article menu)
+//   4) build-home.mjs                          → <folder>/index.html (homepage "Latest" block)
 //
 // Single source of truth stays i18n.mjs; this just guarantees every consumer of
 // it is rebuilt together. No package.json, no build-system — one command:
@@ -59,7 +60,7 @@ function checkParity() {
   console.log(`\n✓ cross-language parity OK (${LANGS.join('/')} identical; ${total} records each)\n`);
 }
 
-console.log('Travel Radar LK — full rebuild (index → hubs → article menu)\n');
+console.log('Travel Radar LK — full rebuild (index → hubs → article menu → homepage)\n');
 
 // 1) Indexes (sections depend on these).
 for (const l of LANGS) run('build-index.mjs', [l]);
@@ -72,5 +73,8 @@ for (const l of LANGS) for (const s of SECTIONS) run('build-sections.mjs', [l, s
 
 // 3) Article menu partials (all languages in one pass).
 run('build-content-menu.mjs');
+
+// 4) Homepage "Latest" block (all languages in one pass).
+run('build-home.mjs');
 
 console.log('\n✓ Full rebuild complete.');
