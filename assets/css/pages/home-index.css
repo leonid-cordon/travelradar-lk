@@ -175,6 +175,20 @@ body[data-page="home"] .latest-content {
     background: var(--home-bg);
 }
 
+/* Curated "Start Here" block — editor's-picks accent (manual block, #start-here) */
+body[data-page="home"] #start-here {
+    background: var(--home-bg2);
+    border-top: 3px solid var(--home-accent);
+}
+
+body[data-page="home"] #start-here .section-title::before {
+    content: "\2605"; /* ★ */
+    margin-right: .5rem;
+    color: var(--home-accent);
+    font-size: .82em;
+    vertical-align: middle;
+}
+
 body[data-page="home"] .destinations,
 body[data-page="home"] .about-section {
     background: var(--home-bg2);
