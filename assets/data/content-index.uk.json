@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-15T04:29:54.210Z",
-  "count": 66,
+  "generated_at": "2026-06-15T15:45:49.721Z",
+  "count": 67,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -351,6 +351,35 @@
       "date_published": "2026-05-27",
       "date_modified": "2026-05-27",
       "search_text": "найкращі готелі tulum beach zone town і aldea zama у порівнянні обирайте готелі tulum за пляжем ac залежністю від таксі ризиком саргасуму boutique-форматом і реальним fit tulum riviera-maya"
+    },
+    {
+      "slug": "best-resorts-playa-mujeres",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "listicle",
+      "tags": [
+        "all-inclusive",
+        "sargassum",
+        "beaches"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": null,
+      "title": "Найкращі курорти Playa Mujeres: тиха розкіш і кращі пляжі",
+      "description": "Обирайте курорт у Playa Mujeres за суттю поїздки: спокійні пляжі, менший ризик саргасуму й тихий тиждень на північ від Канкуна — з чесними компромісами проти Hotel Zone.",
+      "url": "https://travelradarlk.com/ua/content/best-resorts-playa-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-playa-mujeres/card_1200x600.jpg",
+      "date_published": "2026-06-15",
+      "date_modified": "2026-06-15",
+      "search_text": "найкращі курорти playa mujeres тиха розкіш і кращі пляжі обирайте курорт у playa mujeres за суттю поїздки спокійні пляжі менший ризик саргасуму й тихий тиждень на північ від канкуна з чесними компромісами проти hotel zone cancun all-inclusive sargassum beaches"
     },
     {
       "slug": "best-resorts-riviera-maya",

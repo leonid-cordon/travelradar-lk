@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-15T04:29:53.922Z",
-  "count": 66,
+  "generated_at": "2026-06-15T15:45:49.435Z",
+  "count": 67,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -351,6 +351,35 @@
       "date_published": "2026-05-27",
       "date_modified": "2026-05-27",
       "search_text": "best hotels in tulum beach zone town and aldea zama compared pick tulum hotels by beach access ac taxi dependency seaweed risk boutique style and real booking fit tulum riviera-maya"
+    },
+    {
+      "slug": "best-resorts-playa-mujeres",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "listicle",
+      "tags": [
+        "all-inclusive",
+        "sargassum",
+        "beaches"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": null,
+      "title": "Best Resorts in Playa Mujeres: Quiet Luxury and Better Beaches",
+      "description": "Pick a Playa Mujeres resort by fit: calmer beaches, lower sargassum risk and a quieter resort-first week north of Cancun, with honest trade-offs vs the Hotel Zone.",
+      "url": "https://travelradarlk.com/en/content/best-resorts-playa-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-playa-mujeres/card_1200x600.jpg",
+      "date_published": "2026-06-15",
+      "date_modified": "2026-06-15",
+      "search_text": "best resorts in playa mujeres quiet luxury and better beaches pick a playa mujeres resort by fit calmer beaches lower sargassum risk and a quieter resort-first week north of cancun with honest trade-offs vs the hotel zone cancun all-inclusive sargassum beaches"
     },
     {
       "slug": "best-resorts-riviera-maya",
