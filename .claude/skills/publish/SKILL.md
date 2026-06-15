@@ -97,33 +97,25 @@ Run: `node dev/generator/build-all.mjs`
 Watch for: `warnings: 0` (per language), `✓ cross-language parity OK`, `✓ Full rebuild complete`.
 
 ### 7. Sitemap
-`sitemap.xml` is hand-maintained — `build-all` does NOT touch it — so the new article
-must be added here or it will never be indexed. Do this only after a clean build.
-- First check it isn't already there: `grep -c "<slug>" sitemap.xml`. If the count is
-  non-zero, the trio already exists — skip this step (idempotent, never duplicate).
-- If absent, append three `<url>` entries (en, then ru, then ua) immediately before the
-  closing `</urlset>`, matching the existing format exactly (same indentation, two-space).
-- `<lastmod>` = the article's `datePublished` (the same date you mirrored across all three
-  language files), in `YYYY-MM-DD` form — not today's date unless they coincide.
-- URLs are `https://travelradarlk.com/<lang>/content/<slug>` with `<lang>` = `en`/`ru`/`ua`
-  (note: the Ukrainian path segment is `ua`, matching the file tree, even though the
-  language code elsewhere is `uk`).
+`sitemap.xml` is hand-maintained — `build-all` does NOT touch it — so a separate script
+adds the new article, or it would never be indexed. Run it AFTER a clean build (it reads
+the freshly built `content-index.en.json`):
 
-Template to append:
-```
-  <url>
-    <loc>https://travelradarlk.com/en/content/<slug></loc>
-    <lastmod><datePublished></lastmod>
-  </url>
-  <url>
-    <loc>https://travelradarlk.com/ru/content/<slug></loc>
-    <lastmod><datePublished></lastmod>
-  </url>
-  <url>
-    <loc>https://travelradarlk.com/ua/content/<slug></loc>
-    <lastmod><datePublished></lastmod>
-  </url>
-```
+`node dev/generator/update-sitemap.mjs`
+
+Do NOT hand-edit `sitemap.xml` yourself — the script owns this step. It is deterministic
+and safe by design:
+- It appends only articles whose slug is missing from the file, as a trio of `<url>`
+  entries (en/ru/ua) before `</urlset>`, sorted oldest→newest by `datePublished`.
+- It is idempotent: if every article is already present it changes nothing and prints
+  `✓ already up to date`. Re-running is harmless.
+- It never touches the ~70 structural URLs (home, /about, country pages, section hubs)
+  or their historical `<lastmod>`, reads dates from the index (no HTML parsing), and
+  preserves the file's CRLF line endings.
+
+Read its output: `✓ added N article(s)` (with the slugs listed) or `✓ already up to date`.
+If it prints a `FATAL` line, the usual cause is that `build-all` wasn't run first (stale
+or missing `content-index.en.json`) — run step 6, then retry.
 
 ### 8. Report
 Give the owner a compact report:
