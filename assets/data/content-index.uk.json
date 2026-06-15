@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-15T15:45:49.721Z",
-  "count": 67,
+  "generated_at": "2026-06-15T22:52:10.448Z",
+  "count": 68,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1118,6 +1118,36 @@
       "date_published": "2026-06-06",
       "date_modified": "2026-06-06",
       "search_text": "їжа і вода в мексиці канкун плая-дель-кармен і тулум вода з-під крана лід вулична їжа і буфети в готелях - чесно що справді ризиковано що ні і як уникнути розладу шлунка без паніки food-safety"
+    },
+    {
+      "slug": "holbox-island-guide",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "beaches",
+        "best-time",
+        "snorkeling"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "inspire",
+      "title": "Острів Холбокс: як дістатися і кому туди справді варто їхати",
+      "description": "Як дістатися острова без машин на півночі Юкатану з Канкуна, що робити, яка там вода насправді та чесна відповідь, кому варто їхати на Холбокс, а кому ні.",
+      "url": "https://travelradarlk.com/ua/content/holbox-island-guide",
+      "image": "https://travelradarlk.com/assets/images/content/holbox-island-guide/card_1200x600.jpg",
+      "date_published": "2026-06-15",
+      "date_modified": "2026-06-15",
+      "search_text": "острів холбокс як дістатися і кому туди справді варто їхати як дістатися острова без машин на півночі юкатану з канкуна що робити яка там вода насправді та чесна відповідь кому варто їхати на холбокс а кому ні yucatan island-trip beaches best-time snorkeling"
     },
     {
       "slug": "hotel-check-before-booking",

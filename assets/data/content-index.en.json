@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-15T15:45:49.435Z",
-  "count": 67,
+  "generated_at": "2026-06-15T22:52:10.171Z",
+  "count": 68,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1118,6 +1118,36 @@
       "date_published": "2026-06-05",
       "date_modified": "2026-06-05",
       "search_text": "food and water safety in mexico cancun playa del carmen and tulum tap water ice street food and resort buffets decided honestly what s actually risky what isn t and how to avoid traveler s stomach without fear food-safety"
+    },
+    {
+      "slug": "holbox-island-guide",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "beaches",
+        "best-time",
+        "snorkeling"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "inspire",
+      "title": "Holbox Island Guide: How to Get There and Who Should Actually Go",
+      "description": "How to reach the car-free Yucatan island from Cancun, what to do, the lagoon-water reality, and the honest answer to who should visit Holbox and who shouldn't.",
+      "url": "https://travelradarlk.com/en/content/holbox-island-guide",
+      "image": "https://travelradarlk.com/assets/images/content/holbox-island-guide/card_1200x600.jpg",
+      "date_published": "2026-06-15",
+      "date_modified": "2026-06-15",
+      "search_text": "holbox island guide how to get there and who should actually go how to reach the car-free yucatan island from cancun what to do the lagoon-water reality and the honest answer to who should visit holbox and who shouldn t yucatan island-trip beaches best-time snorkeling"
     },
     {
       "slug": "hotel-check-before-booking",

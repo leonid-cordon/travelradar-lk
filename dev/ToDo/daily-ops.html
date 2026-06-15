@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Ежедневные операции</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2315181c'/><path d='M7 11.5 L13.5 16 L7 20.5' stroke='%232dd4bf' stroke-width='2.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/><line x1='15.5' y1='21' x2='25' y2='21' stroke='%232dd4bf' stroke-width='2.8' stroke-linecap='round'/></svg>">
+<style>
+  /* ============================================================
+     ТОКЕНЫ ТЕМЫ — вся палитра и шрифты только здесь.
+     Тема НЕ зависит от настроек ОС/браузера (фиксирована).
+     ============================================================ */
+  :root{
+    --ink:        #15181c;   /* фон страницы */
+    --panel:      #1d2227;   /* карточки, строки, панель */
+    --panel-hi:   #242a30;   /* hover-поверхность */
+    --line:       #2e353c;   /* границы/разделители */
+    --paper:      #edf0f2;   /* основной текст */
+    --dim:        #828d94;   /* вторичный текст */
+    --faint:      #565f66;   /* приглушённый текст */
+
+    --signal:     #2dd4bf;   /* акцент: интерактивные элементы */
+    --signal-dim: rgba(45,212,191,.14);
+
+    --lt-none:    #54606b;   /* статус: не сегодня */
+    --lt-planned: #5b9bf2;   /* статус: запланировано */
+    --lt-soon:    #fbbf24;   /* статус: скоро дедлайн */
+    --lt-overdue: #f4566f;   /* статус: просрочено */
+    --lt-done:    #34d399;   /* статус: выполнено */
+
+    --font-ui:   -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "Cascadia Code", "Cascadia Mono", Consolas, "SF Mono", ui-monospace, Menlo, monospace;
+
+    --radius:    10px;
+    --radius-sm: 6px;
+  }
+
+  /* ============================================================
+     БАЗА
+     ============================================================ */
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--font-ui);
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  ::-webkit-scrollbar{ width:10px; height:10px; }
+  ::-webkit-scrollbar-track{ background:var(--ink); }
+  ::-webkit-scrollbar-thumb{ background:var(--line); border-radius:5px; }
+  ::-webkit-scrollbar-thumb:hover{ background:var(--faint); }
+  *{ scrollbar-color: var(--line) var(--ink); }
+
+  /* ============================================================
+     ШАПКА
+     ============================================================ */
+  .console{
+    max-width:920px;
+    margin:0 auto;
+    padding:28px clamp(16px,4vw,32px) 60px;
+  }
+  .header-row{
+    display:flex; justify-content:space-between; align-items:center;
+    gap:16px; flex-wrap:wrap;
+  }
+  .header-row.toolbar{ margin-top:18px; }
+
+  .brand{
+    display:flex; align-items:center; gap:12px; margin:0;
+    font-family:var(--font-mono); font-size:15px; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--paper);
+  }
+  .brand-bar{
+    display:inline-block; width:4px; height:20px; border-radius:2px;
+    background:var(--signal); box-shadow:0 0 8px rgba(45,212,191,.5);
+  }
+  .clock{
+    font-family:var(--font-mono); font-size:13px; color:var(--dim);
+    letter-spacing:.08em; font-variant-numeric:tabular-nums;
+  }
+
+  .progress-block{ display:flex; align-items:center; gap:10px; }
+  .progress-label{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--dim); white-space:nowrap;
+  }
+  .progress-track{
+    width:140px; height:4px; background:var(--line);
+    border-radius:2px; overflow:hidden;
+  }
+  .progress-fill{
+    height:100%; width:0%; background:var(--lt-done);
+    border-radius:2px; transition:width .5s ease;
+  }
+  .toolbar-actions{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+
+  /* ============================================================
+     КНОПКИ
+     ============================================================ */
+  .btn{
+    font-family:var(--font-mono); font-size:11.5px; font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase; line-height:1;
+    padding:10px 16px; border-radius:var(--radius-sm);
+    border:1px solid var(--line); background:transparent; color:var(--dim);
+    cursor:pointer; transition:.15s;
+  }
+  .btn-ghost:hover{ border-color:var(--signal); color:var(--paper); }
+  .btn-primary{
+    background:var(--signal); border-color:var(--signal);
+    color:#0c1416; font-weight:700;
+  }
+  .btn-primary:hover{ background:#54e0cd; }
+  .btn-secondary{ color:var(--paper); }
+  .btn-secondary:hover{ border-color:var(--signal); }
+  .btn-danger{ border-color:var(--lt-overdue); color:var(--lt-overdue); }
+  .btn-danger:hover{ background:rgba(244,86,111,.1); }
+  .btn-icon{
+    width:32px; height:32px; flex-shrink:0; display:flex;
+    align-items:center; justify-content:center;
+    font-size:18px; line-height:1; border-radius:var(--radius-sm);
+    border:1px solid var(--line); background:transparent; color:var(--dim);
+    cursor:pointer; transition:.15s;
+  }
+  .btn-icon:hover{ border-color:var(--signal); color:var(--paper); }
+
+  /* ============================================================
+     СПИСОК ЗАДАЧ
+     ============================================================ */
+  .task-list{
+    display:flex; flex-direction:column; gap:8px; margin-top:24px;
+  }
+  .task-row{
+    display:flex; align-items:center; gap:14px;
+    padding:13px 16px; background:var(--panel);
+    border:1px solid var(--line); border-radius:var(--radius);
+    cursor:pointer; transition:background .15s, border-color .15s, opacity .3s;
+  }
+  .task-row:hover{ background:var(--panel-hi); border-color:rgba(45,212,191,.35); }
+  .task-row:focus-visible{ outline:2px solid var(--signal); outline-offset:2px; }
+
+  /* статус-индикатор: "лампочка" с лёгким свечением */
+  .status-light{
+    width:11px; height:11px; border-radius:50%; flex-shrink:0;
+    background:var(--lt-none);
+    box-shadow:0 0 0 4px rgba(255,255,255,.03);
+  }
+  .task-row.status-planned .status-light{
+    background:var(--lt-planned);
+    box-shadow:0 0 8px 1px rgba(91,155,242,.55), 0 0 0 4px rgba(255,255,255,.03);
+  }
+  .task-row.status-soon .status-light{
+    background:var(--lt-soon);
+    box-shadow:0 0 8px 1px rgba(251,191,36,.6), 0 0 0 4px rgba(255,255,255,.03);
+  }
+  .task-row.status-overdue .status-light{
+    background:var(--lt-overdue);
+    box-shadow:0 0 9px 2px rgba(244,86,111,.65), 0 0 0 4px rgba(255,255,255,.03);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  .task-row.status-done .status-light{
+    background:var(--lt-done);
+    box-shadow:0 0 8px 1px rgba(52,211,153,.5), 0 0 0 4px rgba(255,255,255,.03);
+  }
+  @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.45; } }
+
+  .checkbox-wrap{ display:flex; padding:4px; margin:-4px; cursor:pointer; }
+  .checkbox-wrap input{
+    width:18px; height:18px; accent-color:var(--lt-done); cursor:pointer;
+  }
+
+  .task-name{
+    flex:1 1 220px; min-width:0; font-size:14.5px; font-weight:500;
+    color:var(--paper); letter-spacing:.01em;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  }
+  .task-row.status-done .task-name{
+    color:var(--faint); text-decoration:line-through;
+  }
+  .task-row.status-done{ opacity:.5; }
+  .task-row.status-done:hover{ opacity:.8; }
+  .task-row.status-none{ opacity:.7; }
+  .task-row.status-none .task-name{ color:var(--dim); }
+
+  .badges{
+    display:flex; gap:6px; align-items:center; flex-shrink:0;
+    flex-wrap:wrap; justify-content:flex-end;
+  }
+  .badge{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.05em;
+    text-transform:uppercase; padding:4px 8px; border-radius:var(--radius-sm);
+    background:rgba(255,255,255,.03); color:var(--dim);
+    border:1px solid transparent; white-space:nowrap;
+  }
+  .badge-device{
+    font-family:var(--font-ui); font-size:13px; letter-spacing:3px; padding:4px 7px;
+  }
+  .badge-deadline{
+    color:var(--paper); background:rgba(255,255,255,.05);
+    font-weight:700; letter-spacing:.08em;
+  }
+  .badge-repeat.weekly{ border-color:var(--line); background:transparent; }
+
+  /* Streak-бейдж в строке задачи */
+  .badge-streak{
+    font-family:var(--font-mono); font-size:11px; font-weight:700;
+    letter-spacing:.02em; padding:4px 8px; border-radius:var(--radius-sm);
+    color:#f97316; background:rgba(249,115,22,.1);
+    border:1px solid rgba(249,115,22,.2); white-space:nowrap;
+  }
+
+  /* Countdown-бейдж — цвет зависит от статуса */
+  .badge-countdown{
+    font-family:var(--font-mono); font-size:11px; font-weight:600;
+    letter-spacing:.04em; padding:4px 8px; border-radius:var(--radius-sm);
+    border:1px solid transparent; white-space:nowrap;
+  }
+  .badge-countdown.status-planned{ color:var(--lt-planned); background:rgba(91,155,242,.1); }
+  .badge-countdown.status-soon{    color:var(--lt-soon);    background:rgba(251,191,36,.1); }
+  .badge-countdown.status-overdue{ color:var(--lt-overdue); background:rgba(244,86,111,.1); }
+
+  /* Секция «Не сегодня» */
+  .none-toggle{ cursor:default; }
+  .none-toggle-btn{
+    display:inline-flex; align-items:center; gap:6px;
+    background:none; border:1px solid var(--line); border-radius:var(--radius-sm);
+    padding:4px 10px; cursor:pointer; color:var(--faint);
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.15em;
+    text-transform:uppercase; transition:.15s;
+  }
+  .none-toggle-btn:hover{ border-color:var(--signal); color:var(--dim); }
+  .none-count{
+    background:var(--line); color:var(--dim);
+    font-size:10px; padding:1px 6px; border-radius:999px; font-weight:700;
+  }
+  .none-arrow{ font-size:9px; }
+
+  /* История выполнений в боковой панели */
+  .history-list{ display:flex; flex-direction:column; gap:6px; }
+  .history-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:8px 12px; background:var(--ink);
+    border:1px solid var(--line); border-radius:var(--radius-sm);
+  }
+  .history-date{ font-size:13px; color:var(--dim); }
+  .history-time{
+    font-family:var(--font-mono); font-size:12px; color:var(--faint);
+    letter-spacing:.06em;
+  }
+  .history-empty{
+    font-size:13px; color:var(--faint); font-style:italic; padding:8px 0;
+  }
+  .streak-hero{
+    display:flex; align-items:center; gap:10px;
+    padding:12px 14px; background:rgba(249,115,22,.06);
+    border:1px solid rgba(249,115,22,.2); border-radius:var(--radius);
+    margin-bottom:16px;
+  }
+  .streak-fire{ font-size:24px; line-height:1; }
+  .streak-num{
+    font-family:var(--font-mono); font-size:22px; font-weight:800; color:#f97316;
+    line-height:1;
+  }
+  .streak-label{ font-size:12px; color:var(--faint); line-height:1.4; margin-top:2px; }
+
+  /* Журнал — модальное окно */
+  .journal-overlay{
+    position:fixed; inset:0; background:rgba(10,12,14,.7);
+    backdrop-filter:blur(3px);
+    opacity:0; pointer-events:none;
+    transition:opacity .25s ease; z-index:60;
+    display:flex; align-items:center; justify-content:center;
+    padding:20px;
+  }
+  .journal-overlay.open{ opacity:1; pointer-events:auto; }
+  .journal-modal{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:14px; box-shadow:0 24px 60px rgba(0,0,0,.5);
+    width:100%; max-width:680px; max-height:88vh;
+    display:flex; flex-direction:column;
+    transform:translateY(12px) scale(.98); transition:transform .25s ease;
+  }
+  .journal-overlay.open .journal-modal{ transform:translateY(0) scale(1); }
+  .journal-modal-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 26px 18px; border-bottom:1px solid var(--line); flex-shrink:0;
+  }
+  .journal-modal-header h2{
+    margin:0; font-size:17px; font-weight:700; color:var(--paper);
+    display:flex; align-items:center; gap:10px;
+  }
+  .journal-body{ flex:1; overflow-y:auto; padding:20px 26px; }
+  .journal-day-header{
+    display:flex; align-items:center; gap:10px; margin:20px 0 8px;
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--faint);
+  }
+  .journal-day-header:first-child{ margin-top:0; }
+  .journal-day-header i{ flex:1; height:1px; background:var(--line); display:block; }
+  .journal-day-date{ white-space:nowrap; }
+  .journal-entry{
+    display:flex; align-items:center; gap:12px;
+    padding:9px 14px; background:var(--ink);
+    border:1px solid var(--line); border-radius:var(--radius-sm);
+    margin-bottom:6px;
+  }
+  .journal-check{
+    width:16px; height:16px; border-radius:50%; flex-shrink:0;
+    background:var(--lt-done); display:flex; align-items:center;
+    justify-content:center; font-size:9px; color:#0c1416; font-weight:800;
+  }
+  .journal-task-name{ flex:1; font-size:13.5px; color:var(--paper); }
+  .journal-time{
+    font-family:var(--font-mono); font-size:12px; color:var(--faint);
+    letter-spacing:.06em; white-space:nowrap;
+  }
+  .journal-summary{
+    display:flex; gap:16px; padding:14px 16px;
+    background:var(--ink); border:1px solid var(--line);
+    border-radius:var(--radius); margin-bottom:20px; flex-wrap:wrap;
+  }
+  .journal-stat{ text-align:center; }
+  .journal-stat-num{
+    font-family:var(--font-mono); font-size:20px; font-weight:800; color:var(--signal);
+    display:block;
+  }
+  .journal-stat-label{ font-size:11px; color:var(--faint); margin-top:2px; }
+  .journal-empty{
+    padding:50px 20px; text-align:center;
+    font-family:var(--font-mono); font-size:12px; letter-spacing:.15em;
+    text-transform:uppercase; color:var(--faint);
+    border:1px dashed var(--line); border-radius:var(--radius);
+  }
+  .badge-countdown{
+    font-family:var(--font-mono); font-size:11px; font-weight:600;
+    letter-spacing:.04em; padding:4px 8px; border-radius:var(--radius-sm);
+    border:1px solid transparent; white-space:nowrap;
+  }
+  .badge-countdown.status-planned{ color:var(--lt-planned); background:rgba(91,155,242,.1); }
+  .badge-countdown.status-soon{    color:var(--lt-soon);    background:rgba(251,191,36,.1); }
+  .badge-countdown.status-overdue{ color:var(--lt-overdue); background:rgba(244,86,111,.1); }
+
+  /* Секция «Не сегодня» */
+  .none-toggle{ cursor:default; }
+  .none-toggle-btn{
+    display:inline-flex; align-items:center; gap:6px;
+    background:none; border:1px solid var(--line); border-radius:var(--radius-sm);
+    padding:4px 10px; cursor:pointer; color:var(--faint);
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.15em;
+    text-transform:uppercase; transition:.15s;
+  }
+  .none-toggle-btn:hover{ border-color:var(--signal); color:var(--dim); }
+  .none-count{
+    background:var(--line); color:var(--dim);
+    font-size:10px; padding:1px 6px; border-radius:999px; font-weight:700;
+  }
+  .none-arrow{ font-size:9px; }
+
+  .list-divider{
+    display:flex; align-items:center; gap:10px; margin:18px 2px 2px;
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--faint);
+  }
+  .list-divider i{ flex:1; height:1px; background:var(--line); display:block; }
+
+  .empty-hint{
+    margin-top:24px; padding:50px 20px; text-align:center;
+    border:1px dashed var(--line); border-radius:var(--radius);
+    font-family:var(--font-mono); font-size:12px; letter-spacing:.15em;
+    text-transform:uppercase; color:var(--faint);
+  }
+
+  /* ============================================================
+     БОКОВАЯ ПАНЕЛЬ + OVERLAY
+     ============================================================ */
+  .overlay{
+    position:fixed; inset:0; background:rgba(10,12,14,.6);
+    backdrop-filter:blur(2px);
+    opacity:0; pointer-events:none; transition:opacity .25s ease; z-index:40;
+  }
+  .overlay.open{ opacity:1; pointer-events:auto; }
+
+  .panel{
+    position:fixed; top:0; right:0; height:100%;
+    width:460px; max-width:92vw;
+    background:var(--panel); border-left:1px solid var(--line);
+    box-shadow:-20px 0 40px rgba(0,0,0,.35);
+    transform:translateX(100%); transition:transform .3s ease;
+    z-index:50; display:flex; flex-direction:column;
+  }
+  .panel.open{ transform:translateX(0); }
+
+  .panel-inner{ display:flex; flex-direction:column; height:100%; }
+  .panel-header{
+    padding:22px 24px 16px; border-bottom:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:12px;
+  }
+  .panel-header h2{
+    margin:0; font-size:17px; font-weight:600; line-height:1.35; color:var(--paper);
+  }
+
+  .panel-meta{
+    display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+    padding:14px 24px; border-bottom:1px solid var(--line);
+    font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; color:var(--dim);
+  }
+  .panel-meta .sep{ color:var(--faint); }
+
+  .panel-body{ flex:1; overflow-y:auto; padding:22px 24px; }
+  .section-label{
+    display:flex; align-items:center; gap:10px; margin-bottom:12px;
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--faint);
+  }
+  .section-label i{ flex:1; height:1px; background:var(--line); display:block; }
+
+  .runbook-text{
+    font-size:14.5px; line-height:1.7; color:var(--paper);
+    white-space:pre-wrap; word-break:break-word;
+  }
+  .rb-link{
+    font-family:var(--font-mono); font-size:.92em; color:var(--signal);
+    text-decoration:none; border-bottom:1px solid rgba(45,212,191,.35);
+  }
+  .rb-link:hover{ border-bottom-color:var(--signal); }
+  .rb-handle{
+    font-family:var(--font-mono); font-size:.9em; color:var(--lt-planned);
+    background:rgba(91,155,242,.1); padding:1px 5px; border-radius:4px;
+  }
+
+  .panel-footer{
+    padding:16px 24px; border-top:1px solid var(--line);
+    display:flex; gap:10px; justify-content:flex-end;
+  }
+  .panel-footer.edit{ justify-content:space-between; }
+  .spacer{ flex:1; }
+
+  /* ============================================================
+     ФОРМА РЕДАКТИРОВАНИЯ
+     ============================================================ */
+  .edit-form{ display:flex; flex-direction:column; gap:18px; }
+  .field label{
+    display:block; margin-bottom:8px;
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.15em;
+    text-transform:uppercase; color:var(--faint);
+  }
+  .field input[type="text"], .field textarea{
+    width:100%; background:var(--ink); border:1px solid var(--line);
+    border-radius:var(--radius-sm); padding:10px 12px; color:var(--paper);
+    font-family:var(--font-ui); font-size:14px; transition:border-color .15s;
+  }
+  .field input[type="text"]:focus, .field textarea:focus{
+    outline:none; border-color:var(--signal);
+  }
+  .field input#fDeadline{ font-family:var(--font-mono); letter-spacing:.1em; }
+  .field textarea#fRunbook{
+    font-family:var(--font-mono); font-size:13px; line-height:1.6;
+    min-height:240px; resize:vertical;
+  }
+  .field-row{ display:flex; gap:14px; }
+  .field-row .field{ flex:1; }
+  .field-hint{ margin-top:6px; font-size:11.5px; color:var(--faint); line-height:1.4; }
+
+  .device-chips{ display:flex; gap:8px; flex-wrap:wrap; }
+  .chip{
+    position:relative; display:flex; align-items:center; gap:6px;
+    padding:7px 12px; border:1px solid var(--line); border-radius:999px;
+    cursor:pointer; font-size:12.5px; color:var(--dim); transition:.15s;
+    user-select:none;
+  }
+  .chip input{ position:absolute; opacity:0; width:0; height:0; }
+  .chip.active{ border-color:var(--signal); color:var(--paper); background:var(--signal-dim); }
+  .chip:has(input:focus-visible){ outline:2px solid var(--signal); outline-offset:2px; }
+
+  /* ============================================================
+     АДАПТИВНОСТЬ
+     ============================================================ */
+  @media (max-width:640px){
+    .panel{ width:100%; }
+    .task-row{ flex-wrap:wrap; }
+    .task-name{ flex-basis:100%; order:1; }
+    .badges{ width:100%; justify-content:flex-start; order:2; margin-top:2px; }
+    .progress-track{ width:90px; }
+  }
+
+  /* ============================================================
+     ДОСТУПНОСТЬ
+     ============================================================ */
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
+  :focus-visible{ outline:2px solid var(--signal); outline-offset:2px; }
+
+  /* ============================================================
+     МОДАЛЬНОЕ ОКНО ХЕЛПА
+     ============================================================ */
+  .help-overlay{
+    position:fixed; inset:0; background:rgba(10,12,14,.7);
+    backdrop-filter:blur(3px);
+    opacity:0; pointer-events:none;
+    transition:opacity .25s ease; z-index:60;
+    display:flex; align-items:center; justify-content:center;
+    padding:20px;
+  }
+  .help-overlay.open{ opacity:1; pointer-events:auto; }
+
+  .help-modal{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:14px; box-shadow:0 24px 60px rgba(0,0,0,.5);
+    width:100%; max-width:680px; max-height:88vh;
+    display:flex; flex-direction:column;
+    transform:translateY(12px) scale(.98);
+    transition:transform .25s ease;
+  }
+  .help-overlay.open .help-modal{
+    transform:translateY(0) scale(1);
+  }
+
+  .help-modal-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 26px 18px; border-bottom:1px solid var(--line); flex-shrink:0;
+  }
+  .help-modal-header h2{
+    margin:0; font-size:17px; font-weight:700; color:var(--paper);
+    display:flex; align-items:center; gap:10px;
+  }
+  .help-modal-header h2 .help-icon{
+    width:28px; height:28px; border-radius:50%;
+    background:var(--signal-dim); border:1px solid rgba(45,212,191,.3);
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; color:var(--signal); font-weight:800; flex-shrink:0;
+  }
+
+  /* Вкладки */
+  .help-tabs{
+    display:flex; gap:2px; padding:14px 26px 0; border-bottom:1px solid var(--line);
+    flex-shrink:0; overflow-x:auto;
+  }
+  .help-tab-btn{
+    font-family:var(--font-mono); font-size:11px; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase;
+    padding:8px 14px; border:none; background:transparent;
+    color:var(--faint); cursor:pointer; border-bottom:2px solid transparent;
+    margin-bottom:-1px; transition:.15s; white-space:nowrap; border-radius:6px 6px 0 0;
+  }
+  .help-tab-btn:hover{ color:var(--dim); }
+  .help-tab-btn.active{
+    color:var(--signal); border-bottom-color:var(--signal);
+    background:rgba(45,212,191,.05);
+  }
+
+  /* Контент */
+  .help-body{ flex:1; overflow-y:auto; padding:24px 26px; }
+  .help-section{ display:none; }
+  .help-section.active{ display:block; }
+
+  .help-h3{
+    margin:0 0 16px; font-size:13px; font-weight:700;
+    font-family:var(--font-mono); letter-spacing:.12em; text-transform:uppercase;
+    color:var(--signal);
+  }
+  .help-p{
+    margin:0 0 14px; font-size:14px; line-height:1.7; color:var(--dim);
+  }
+  .help-p:last-child{ margin-bottom:0; }
+  .help-sep{
+    height:1px; background:var(--line); margin:20px 0;
+  }
+
+  /* Демо статусов */
+  .status-demo-list{ display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
+  .status-demo-row{
+    display:flex; align-items:flex-start; gap:14px;
+    padding:12px 14px; background:var(--ink);
+    border:1px solid var(--line); border-radius:var(--radius);
+  }
+  .sdot{
+    width:11px; height:11px; border-radius:50%; flex-shrink:0; margin-top:3px;
+  }
+  .sdot.planned{ background:var(--lt-planned); box-shadow:0 0 8px 1px rgba(91,155,242,.55); }
+  .sdot.soon{    background:var(--lt-soon);    box-shadow:0 0 8px 1px rgba(251,191,36,.6); }
+  .sdot.overdue{ background:var(--lt-overdue); box-shadow:0 0 9px 2px rgba(244,86,111,.65); }
+  .sdot.done{    background:var(--lt-done);    box-shadow:0 0 8px 1px rgba(52,211,153,.5); }
+  .sdot.none{    background:var(--lt-none); }
+  .sdot-label{ font-size:13.5px; font-weight:600; color:var(--paper); }
+  .sdot-desc{ font-size:12.5px; color:var(--faint); margin-top:2px; line-height:1.5; }
+
+  /* Демо Device */
+  .device-table{ width:100%; border-collapse:collapse; margin-bottom:14px; }
+  .device-table td{
+    padding:9px 12px; border:1px solid var(--line); font-size:13.5px;
+  }
+  .device-table tr:first-child td{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--faint); background:rgba(255,255,255,.02);
+  }
+  .device-table .icon-cell{ font-size:17px; letter-spacing:3px; }
+  .device-table td:last-child{ color:var(--dim); font-size:12.5px; }
+
+  /* Repeat-примеры */
+  .repeat-examples{ display:flex; flex-direction:column; gap:8px; }
+  .repeat-ex{
+    display:flex; align-items:baseline; gap:12px;
+    padding:10px 14px; background:var(--ink);
+    border:1px solid var(--line); border-radius:var(--radius-sm);
+  }
+  .repeat-ex .rb{
+    font-family:var(--font-mono); font-size:12px; color:var(--signal);
+    white-space:nowrap; flex-shrink:0;
+  }
+  .repeat-ex .rd{ font-size:13px; color:var(--dim); line-height:1.5; }
+
+  /* Шаги (нумерованный список) */
+  .help-steps{ display:flex; flex-direction:column; gap:10px; margin-bottom:14px; }
+  .help-step{
+    display:flex; gap:14px; align-items:flex-start;
+    padding:12px 14px; background:var(--ink);
+    border:1px solid var(--line); border-radius:var(--radius);
+  }
+  .step-num{
+    width:24px; height:24px; border-radius:50%; flex-shrink:0;
+    background:var(--signal-dim); border:1px solid rgba(45,212,191,.3);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-size:11px; font-weight:800;
+    color:var(--signal);
+  }
+  .step-text{ font-size:13.5px; color:var(--dim); line-height:1.6; padding-top:2px; }
+  .step-text strong{ color:var(--paper); font-weight:600; }
+
+  /* Инфо-блок (tip) */
+  .help-tip{
+    display:flex; gap:12px; padding:12px 14px;
+    background:rgba(45,212,191,.06); border:1px solid rgba(45,212,191,.2);
+    border-radius:var(--radius); margin-bottom:14px;
+  }
+  .help-tip .tip-icon{ font-size:16px; flex-shrink:0; margin-top:1px; }
+  .help-tip .tip-text{ font-size:13px; color:var(--dim); line-height:1.6; }
+  .help-tip .tip-text strong{ color:var(--paper); }
+</style>
+</head>
+<body>
+  <div class="console">
+    <header>
+      <div class="header-row">
+        <h1 class="brand"><span class="brand-bar" aria-hidden="true"></span>Ежедневные операции</h1>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span id="syncIndicator" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;transition:color .3s;"></span>
+          <div class="clock" id="clock"></div>
+        </div>
+      </div>
+      <div class="header-row toolbar">
+        <div class="progress-block">
+          <span class="progress-label" id="progressText">0 / 0 выполнено</span>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <div class="toolbar-actions">
+          <button class="btn btn-ghost" id="exportBtn" title="Скачать резервную копию данных (JSON)">Экспорт</button>
+          <button class="btn btn-ghost" id="importBtn" title="Загрузить данные из JSON-файла">Импорт</button>
+          <input type="file" id="importFile" accept="application/json" hidden>
+          <button class="btn btn-ghost" id="journalBtn" title="Журнал выполнений">Журнал</button>
+          <button class="btn btn-ghost" id="helpBtn" title="Справка по системе" style="font-size:14px;font-weight:700;">?</button>
+          <button class="btn btn-primary" id="addBtn">+ Задача</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="task-list" id="taskList"></main>
+    <div class="empty-hint" id="emptyHint" hidden>Операций нет — нажмите «+ Задача», чтобы добавить первую</div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="panel" id="panel"></aside>
+
+  <div class="journal-overlay" id="journalOverlay">
+    <div class="journal-modal" role="dialog" aria-modal="true" aria-label="Журнал выполнений">
+      <div class="journal-modal-header">
+        <h2>📅 Журнал выполнений</h2>
+        <button class="btn-icon" id="journalCloseBtn" aria-label="Закрыть журнал">×</button>
+      </div>
+      <div class="journal-body" id="journalBody"></div>
+    </div>
+  </div>
+
+  <div class="help-overlay" id="helpOverlay">
+    <div class="help-modal" role="dialog" aria-modal="true" aria-label="Справка">
+      <div class="help-modal-header">
+        <h2><span class="help-icon">?</span>Как работает система</h2>
+        <button class="btn-icon" id="helpCloseBtn" aria-label="Закрыть справку">×</button>
+      </div>
+      <div class="help-tabs" id="helpTabs">
+        <button class="help-tab-btn active" data-tab="interface">Интерфейс</button>
+        <button class="help-tab-btn" data-tab="statuses">Статусы</button>
+        <button class="help-tab-btn" data-tab="tasks">Задачи и Runbook</button>
+        <button class="help-tab-btn" data-tab="data">Данные и история</button>
+      </div>
+      <div class="help-body" id="helpBody"></div>
+    </div>
+  </div>
+
+  <datalist id="repeatPresets">
+    <option value="Ежедневно">
+    <option value="Ежедневно кроме Пн">
+    <option value="Ежедневно кроме Вт">
+    <option value="Ежедневно кроме Ср">
+    <option value="Ежедневно кроме Чт">
+    <option value="Ежедневно кроме Пт">
+    <option value="Ежедневно кроме Сб">
+    <option value="Ежедневно кроме Вс">
+    <option value="Каждый понедельник">
+    <option value="Каждый вторник">
+    <option value="Каждую среду">
+    <option value="Каждый четверг">
+    <option value="Каждую пятницу">
+    <option value="Каждую субботу">
+    <option value="Каждое воскресенье">
+  </datalist>
+
+<script>
+'use strict';
+/* ======================================================================
+   ФАЙЛ СОСТОИТ ИЗ 5 БЛОКОВ — для удобства последующих правок:
+   1. ДАННЫЕ И ХРАНЕНИЕ (SEED_TASKS, localStorage)
+   2. РАЗБОР И СТАТУС (Device/Repeat/Deadline -> статус задачи)
+   3. ОТРИСОВКА СПИСКА
+   4. ОТРИСОВКА БОКОВОЙ ПАНЕЛИ (просмотр / редактирование)
+   5. СОБЫТИЯ И ИНИЦИАЛИЗАЦИЯ
+   ====================================================================== */
+
+/* ===================== 1. ДАННЫЕ И ХРАНЕНИЕ ===================== */
+
+// Исходные данные — взяты из Daily_Operations_Runbooks_v3.xlsx
+const SEED_TASKS = [
+  { id: "001", task: "Lord Mobile статистика и рейтинги", device: "PC", deadline: "10:00", repeat: "Каждый понедельник", runbook: "1) Загрузить статистику по LordMobile: GUILD_LIST HL(Kills), GIFT_STATS HL(hunting), GUILD_FESTIVAL HL на ВМ VPS1.\n2) На домашнем ПК выгрузить файлы на G:\\Мій диск\\Lords.\n3) Загрузить файлы на Google Disk (huaweiruw020).\n4) Отредактировать файлы согласно рейтингу и отправить @Darya_Belyx.\n5) Создать пост по GUILD_LIST HL(Kills)." },
+  { id: "016", task: "GoIT обучение", device: "PC/Ноут", deadline: "11:00", repeat: "Ежедневно", runbook: "Заниматься учёбой на GoIT минимум 2 часа в день." },
+  { id: "013", task: "Новая статья TravelRadarLK", device: "PC", deadline: "12:00", repeat: "Ежедневно", runbook: "Написать новую статью для сайта https://travelradarlk.com/en/content/ . VSS" },
+  { id: "014", task: "Telegram-пост по статье", device: "PC", deadline: "13:00", repeat: "Ежедневно", runbook: "Создание поста в канал TravelRadar_LK для каждой статьи сайта." },
+  { id: "008", task: "Pinterest Pins", device: "PC/Ноут", deadline: "17:00", repeat: "Ежедневно", runbook: "Создать ПИНы на английскую статью и загрузить в Pinterest." },
+  { id: "002", task: "Shorts RU", device: "PC", deadline: "18:00", repeat: "Ежедневно кроме Пн", runbook: "Создать видео, если Лена не делала, или получить новый шотс от Лены на ПК NIKITA через FAR, отрендерить и загрузить на leonid.cordon@gmail.com в ограниченном просмотре. Travel Radar LK @TravelRadar_LK" },
+  { id: "017", task: "Семейное обучение", device: "Any", deadline: "18:00", repeat: "Ежедневно", runbook: "Обучаться с семьёй словацкому или английскому, или заниматься математикой с Никитой. Минимум 50 минут." },
+  { id: "003", task: "Shorts USA", device: "PC", deadline: "18:30", repeat: "Ежедневно кроме Пн", runbook: "На базе полученного шортса от Лены создать Американскую версию в CapCut на ПК NIKITA и загрузить на travelradarlk@gmail.com. Загрузить видео на Google Drive G:\\Мій диск\\_Affiliates\\TRAVELRADAR_CONTENT\\02_UPLOAD" },
+  { id: "004", task: "Обложка Shorts RU", device: "Phone", deadline: "19:00", repeat: "Ежедневно", runbook: "На телефоне сделать обложку шотсу и изменить размещение на ОТКРЫТЫЙ ДОСТУП на leonid.cordon@gmail.com (RU YouTube)." },
+  { id: "005", task: "Обложка Shorts USA", device: "Phone", deadline: "23:00", repeat: "Ежедневно", runbook: "На телефоне сделать обложку шотсу и изменить размещение на ОТКРЫТЫЙ ДОСТУП на travelradarlk@gmail.com (USA YouTube)." },
+  { id: "006", task: "Duolingo", device: "PC/Ноут/Phone", deadline: "23:00", repeat: "Ежедневно", runbook: "Пройти обучение на Duolingo." },
+  { id: "009", task: "TikTok", device: "PC", deadline: "23:30", repeat: "Ежедневно", runbook: "Загрузить последнее видео из шорста в TikTok. Делать на PC NIKITA." },
+  { id: "010", task: "Instagram", device: "Phone", deadline: "23:30", repeat: "Ежедневно", runbook: "Загрузить последнее видео из шорста в Instagram." },
+  { id: "011", task: "Reddit", device: "PC/Ноут", deadline: "23:45", repeat: "Ежедневно", runbook: "Участие на Reddit." },
+  { id: "012", task: "Щиты Lord Mobile", device: "PC/Phone", deadline: "23:50", repeat: "Ежедневно", runbook: "Одеть щиты на фермботе на ВСЕ аккаунты в Lord's Mobile." },
+];
+
+// ============================================================
+// НАСТРОЙКИ СИНХРОНИЗАЦИИ — только эти две строки менять
+// если переедете на другой Worker или смените токен
+// ============================================================
+const WORKER_URL   = 'https://daily-ops-api.leonid-cordon.workers.dev/tasks';
+const WORKER_TOKEN = 'leonid-daily-ops-2026';
+// ============================================================
+
+const STORAGE_KEY = 'dailyOpsRunbooks_v1';
+let tasks = [];
+let syncStatus = 'idle'; // 'idle' | 'syncing' | 'ok' | 'error'
+
+function migrateTask(t){
+  if (!('completions' in t)){
+    t.completions = [];
+    if (t.lastDone){
+      t.completions.push({ date: t.lastDone, time: '00:00' });
+    }
+    delete t.lastDone;
+  }
+  return t;
+}
+
+// Загружает из localStorage (мгновенно, для первого рендера)
+function loadLocal(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw){
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return parsed.map(migrateTask);
+    }
+  }catch(e){ console.warn('localStorage read error:', e); }
+  return SEED_TASKS.map(t => ({ ...t, completions: [] }));
+}
+
+// Сохраняет в localStorage (кеш)
+function saveLocal(data){
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }catch(e){ console.error('localStorage write error:', e); }
+}
+
+// Отправляет данные на Worker (в фоне, не блокирует UI)
+async function pushToWorker(data){
+  setSyncStatus('syncing');
+  try{
+    const r = await fetch(WORKER_URL, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${WORKER_TOKEN}`,
+      },
+      body: JSON.stringify(data),
+    });
+    setSyncStatus(r.ok ? 'ok' : 'error');
+  }catch(e){
+    console.warn('Worker push failed:', e);
+    setSyncStatus('error');
+  }
+}
+
+// Загружает данные с Worker-а
+async function pullFromWorker(){
+  try{
+    const r = await fetch(WORKER_URL, {
+      headers: { 'Authorization': `Bearer ${WORKER_TOKEN}` }
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    if (Array.isArray(data) && data.length > 0){
+      return data.map(migrateTask);
+    }
+  }catch(e){
+    console.warn('Worker pull failed:', e);
+  }
+  return null;
+}
+
+// Сохраняет: сначала локально (мгновенно), потом на сервер (в фоне)
+function saveTasks(data){
+  saveLocal(data);
+  pushToWorker(data); // не await — не блокируем UI
+}
+
+// Индикатор синхронизации в шапке
+function setSyncStatus(status){
+  syncStatus = status;
+  const el = document.getElementById('syncIndicator');
+  if (!el) return;
+  const states = {
+    idle:    { text:'', color:'transparent' },
+    syncing: { text:'⟳ синхронизация...', color:'var(--dim)' },
+    ok:      { text:'✓ сохранено', color:'var(--lt-done)' },
+    error:   { text:'⚠ офлайн', color:'var(--lt-soon)' },
+  };
+  const s = states[status] || states.idle;
+  el.textContent  = s.text;
+  el.style.color  = s.color;
+  if (status === 'ok'){
+    setTimeout(() => {
+      if (syncStatus === 'ok') setSyncStatus('idle');
+    }, 3000);
+  }
+}
+
+// Инициализация: сначала показываем локальный кеш,
+// потом тихо подтягиваем актуальные данные с сервера
+async function initTasks(){
+  tasks = loadLocal();
+  renderList(); // мгновенный первый рендер из кеша
+
+  setSyncStatus('syncing');
+  const remote = await pullFromWorker();
+  if (remote){
+    tasks = remote;
+    saveLocal(tasks);
+    setSyncStatus('ok');
+    renderList(); // перерисовываем с актуальными данными
+  } else {
+    setSyncStatus('error');
+  }
+}
+
+/* ===================== 2. РАЗБОР И СТАТУС ===================== */
+
+function pad2(n){ return n.toString().padStart(2,'0'); }
+
+function todayISO(){
+  const d = new Date();
+  return `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
+}
+
+// "ЧЧ:ММ" -> минуты от начала суток. "24:00" -> 1440 (конец суток).
+function parseDeadlineMinutes(str){
+  const m = /^(\d{1,2}):(\d{2})$/.exec((str||'').trim());
+  if (!m) return 0;
+  return parseInt(m[1],10)*60 + parseInt(m[2],10);
+}
+
+// --- Разбор поля Repeat ---
+// 0=Пн .. 6=Вс. Поддерживаем и краткие, и полные формы дней недели,
+// чтобы парсер не "ломался" от ручных правок пользователя.
+const DAY_NAMES = ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+const DAY_MAP = {
+  'пн':0, 'понедельник':0, 'понедельника':0,
+  'вт':1, 'вторник':1, 'вторника':1,
+  'ср':2, 'среда':2, 'среды':2, 'среду':2,
+  'чт':3, 'четверг':3, 'четверга':3,
+  'пт':4, 'пятница':4, 'пятницы':4, 'пятницу':4,
+  'сб':5, 'суббота':5, 'субботы':5, 'субботу':5,
+  'вс':6, 'воскресенье':6, 'воскресенья':6,
+};
+
+function todayIndex(){
+  const js = new Date().getDay(); // 0=Вс..6=Сб
+  return (js + 6) % 7;            // 0=Пн..6=Вс
+}
+
+// Ищет день недели после ключевого слова ("кроме"/"каждый"/...).
+function extractDayIndex(lowerText, keyword){
+  const re = new RegExp(keyword + '\\s+([а-яё]+)', 'i');
+  const m = re.exec(lowerText);
+  if (!m) return null;
+  const word = m[1].toLowerCase();
+  return (word in DAY_MAP) ? DAY_MAP[word] : null;
+}
+
+// Относится ли задача к сегодняшнему дню (по Repeat)?
+// Нераспознанные форматы по умолчанию считаются "активными каждый день" —
+// лучше лишний раз показать задачу, чем незаметно её скрыть.
+function isRelevantToday(repeat){
+  const lower = (repeat||'').toLowerCase();
+  const tIdx = todayIndex();
+
+  if (lower.includes('ежедневно')){
+    if (lower.includes('кроме')){
+      const d = extractDayIndex(lower, 'кроме');
+      if (d === null) return true;
+      return d !== tIdx;
+    }
+    return true;
+  }
+  for (const kw of ['каждый','каждую','каждое']){
+    if (lower.includes(kw)){
+      const d = extractDayIndex(lower, kw);
+      if (d === null) return true;
+      return d === tIdx;
+    }
+  }
+  return true;
+}
+
+// Короткий бейдж для Repeat. CSS приводит к верхнему регистру.
+function repeatBadge(repeat){
+  const lower = (repeat||'').toLowerCase();
+  if (lower.includes('ежедневно') && lower.includes('кроме')){
+    const d = extractDayIndex(lower,'кроме');
+    return { text: d!==null ? `кроме ${DAY_NAMES[d]}` : repeat, weekly:false };
+  }
+  if (lower.includes('ежедневно')) return { text:'ежедн.', weekly:false };
+  for (const kw of ['каждый','каждую','каждое']){
+    if (lower.includes(kw)){
+      const d = extractDayIndex(lower, kw);
+      return { text: d!==null ? DAY_NAMES[d] : repeat, weekly:true };
+    }
+  }
+  const short = repeat && repeat.length > 14 ? repeat.slice(0,13)+'…' : (repeat||'');
+  return { text: short, weekly:false };
+}
+
+// --- Разбор поля Device ---
+const DEVICE_ICONS = { 'PC':'🖥', 'Ноут':'💻', 'Phone':'📱', 'Any':'🌐' };
+function deviceIcons(device){
+  return (device||'').split('/').map(p => DEVICE_ICONS[p.trim()] || p.trim()).join('');
+}
+
+// --- Хелперы для completions ---
+function isTaskDoneToday(task){
+  const today = todayISO();
+  return (task.completions || []).some(c => c.date === today);
+}
+
+// --- Статус задачи на текущий момент ---
+const SOON_THRESHOLD_MIN = 60;
+const STATUS_LABELS = {
+  none:    'Не сегодня по графику',
+  planned: 'Запланировано',
+  soon:    'Дедлайн приближается',
+  overdue: 'Дедлайн просрочен',
+  done:    'Выполнено сегодня',
+};
+
+function getStatus(task){
+  if (isTaskDoneToday(task)) return 'done';
+  if (!isRelevantToday(task.repeat)) return 'none';
+
+  const now = new Date();
+  const nowMin = now.getHours()*60 + now.getMinutes();
+  const dl = parseDeadlineMinutes(task.deadline);
+
+  if (nowMin >= dl) return 'overdue';
+  if (dl - nowMin <= SOON_THRESHOLD_MIN) return 'soon';
+  return 'planned';
+}
+
+// Countdown-текст для бейджа рядом с дедлайном.
+// Показываем только для активных (не done, не none).
+function countdownText(deadlineStr, status){
+  if (status === 'done' || status === 'none') return '';
+  const now = new Date();
+  const nowMin = now.getHours()*60 + now.getMinutes();
+  const dl = parseDeadlineMinutes(deadlineStr);
+  const diff = dl - nowMin; // отрицательный если просрочено
+
+  if (status === 'overdue'){
+    const abs = Math.abs(diff);
+    if (abs < 60) return `+${abs} мин`;
+    const h = Math.floor(abs/60), m = abs%60;
+    return m ? `+${h} ч ${m} м` : `+${h} ч`;
+  }
+  // planned / soon
+  if (diff < 60) return `${diff} мин`;
+  const h = Math.floor(diff/60), m = diff%60;
+  return m ? `${h} ч ${m} м` : `${h} ч`;
+}
+
+// Сортировка: невыполненные сегодня (по возрастанию Deadline),
+// затем выполненные сегодня (тоже по Deadline).
+function sortedTasks(){
+  return [...tasks].sort((a,b) => {
+    const ad = isTaskDoneToday(a) ? 1 : 0;
+    const bd = isTaskDoneToday(b) ? 1 : 0;
+    if (ad !== bd) return ad - bd;
+    return parseDeadlineMinutes(a.deadline) - parseDeadlineMinutes(b.deadline);
+  });
+}
+
+// --- Текст Runbook: экранирование + автоссылки/handles ---
+function escapeHtml(str){
+  return str.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// isRelevantOnDate — как isRelevantToday, но для произвольной даты (Date-объект)
+function isRelevantOnDate(repeat, date){
+  const lower = (repeat||'').toLowerCase();
+  const jsDay = date.getDay();
+  const dIdx  = (jsDay + 6) % 7; // 0=Пн..6=Вс
+
+  if (lower.includes('ежедневно')){
+    if (lower.includes('кроме')){
+      const d = extractDayIndex(lower, 'кроме');
+      if (d === null) return true;
+      return d !== dIdx;
+    }
+    return true;
+  }
+  for (const kw of ['каждый','каждую','каждое']){
+    if (lower.includes(kw)){
+      const d = extractDayIndex(lower, kw);
+      if (d === null) return true;
+      return d === dIdx;
+    }
+  }
+  return true; // неизвестный паттерн — считаем активным
+}
+
+// Форматирует ISO-дату в читаемый вид: «Сегодня», «Вчера», «12 июн», «5 янв 2025»
+const MONTHS_SHORT = ['янв','фев','мар','апр','май','июн','июл','авг','сен','окт','ноя','дек'];
+function formatRelativeDate(dateStr){
+  const today = todayISO();
+  if (dateStr === today) return 'Сегодня';
+  const yest = new Date(); yest.setDate(yest.getDate()-1);
+  const yesterdayStr = `${yest.getFullYear()}-${pad2(yest.getMonth()+1)}-${pad2(yest.getDate())}`;
+  if (dateStr === yesterdayStr) return 'Вчера';
+  const d = new Date(dateStr + 'T00:00:00');
+  const label = `${d.getDate()} ${MONTHS_SHORT[d.getMonth()]}`;
+  return d.getFullYear() !== new Date().getFullYear() ? label + ' ' + d.getFullYear() : label;
+}
+
+// Вычисляет streak (серию выполнений) для задачи.
+// Алгоритм: идём назад от вчера; если день «релевантный» и задача была выполнена — +1;
+// если релевантный, но НЕ выполнена — стоп. Сегодня не ломает streak (день ещё идёт).
+function calcStreak(task){
+  const doneSet = new Set((task.completions||[]).map(c => c.date));
+  const today   = todayISO();
+  let streak    = 0;
+
+  // Сегодня: если выполнено — учитываем
+  if (doneSet.has(today) && isRelevantOnDate(task.repeat, new Date())){
+    streak++;
+  }
+
+  // Идём назад от вчера
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+
+  for (let i = 0; i < 365; i++){
+    const iso = `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
+    if (isRelevantOnDate(task.repeat, d)){
+      if (doneSet.has(iso)) streak++;
+      else break; // пропуск — серия прервана
+    }
+    d.setDate(d.getDate() - 1);
+  }
+  return streak;
+}
+
+function linkify(text){
+  let html = escapeHtml(text);
+  // URL
+  html = html.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener" class="rb-link">$1</a>');
+  // E-mail
+  html = html.replace(/([\w.+-]+@[\w-]+\.[\w.-]+)/g, '<a href="mailto:$1" class="rb-link">$1</a>');
+  // @handle (аккаунты/каналы) — после email, чтобы не задвоить совпадения
+  html = html.replace(/(^|[\s(])(@[A-Za-zА-Яа-яЁё0-9_]+)/g, '$1<span class="rb-handle">$2</span>');
+  return html;
+}
+
+/* ===================== 3. ОТРИСОВКА СПИСКА ===================== */
+
+const listEl       = document.getElementById('taskList');
+const emptyHintEl  = document.getElementById('emptyHint');
+const progressText = document.getElementById('progressText');
+const progressFill = document.getElementById('progressFill');
+
+let noneExpanded = false; // секция «Не сегодня» свёрнута по умолчанию
+
+function renderList(){
+  const items = sortedTasks();
+  listEl.innerHTML = '';
+
+  if (items.length === 0){
+    emptyHintEl.hidden = false;
+    updateProgress(0,0);
+    return;
+  }
+  emptyHintEl.hidden = true;
+
+  // Разбиваем на три группы
+  const active  = items.filter(t => { const s = getStatus(t); return s !== 'done' && s !== 'none'; });
+  const done    = items.filter(t => isTaskDoneToday(t));
+  const none    = items.filter(t => { const s = getStatus(t); return s === 'none'; });
+
+  // Активные задачи
+  active.forEach(t => listEl.appendChild(renderRow(t, getStatus(t))));
+
+  // Выполненные сегодня
+  if (done.length){
+    const div = document.createElement('div');
+    div.className = 'list-divider';
+    div.innerHTML = '<i></i><span>Выполнено сегодня</span><i></i>';
+    listEl.appendChild(div);
+    done.forEach(t => listEl.appendChild(renderRow(t, 'done')));
+  }
+
+  // «Не сегодня» — сворачиваемая секция
+  if (none.length){
+    const toggleWrap = document.createElement('div');
+    toggleWrap.className = 'list-divider none-toggle';
+    toggleWrap.innerHTML = `<i></i>
+      <button class="none-toggle-btn" aria-expanded="${noneExpanded}">
+        <span>Не сегодня</span>
+        <span class="none-count">${none.length}</span>
+        <span class="none-arrow">${noneExpanded ? '▲' : '▼'}</span>
+      </button>
+      <i></i>`;
+    toggleWrap.querySelector('.none-toggle-btn').addEventListener('click', () => {
+      noneExpanded = !noneExpanded;
+      renderList();
+    });
+    listEl.appendChild(toggleWrap);
+
+    if (noneExpanded){
+      none.forEach(t => listEl.appendChild(renderRow(t, 'none')));
+    }
+  }
+
+  updateProgress(done.length, active.length + done.length);
+}
+
+function renderRow(task, status){
+  const row = document.createElement('div');
+  row.className = 'task-row status-' + status;
+  row.tabIndex = 0;
+  row.setAttribute('role','button');
+  row.setAttribute('aria-label', `${task.task}. ${STATUS_LABELS[status]}. Дедлайн ${task.deadline}.`);
+
+  // статус-индикатор
+  const light = document.createElement('span');
+  light.className = 'status-light';
+  light.title = STATUS_LABELS[status];
+
+  // чекбокс выполнения
+  const checkWrap = document.createElement('label');
+  checkWrap.className = 'checkbox-wrap';
+  checkWrap.title = 'Отметить выполненным сегодня';
+  checkWrap.addEventListener('click', e => e.stopPropagation());
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.checked = status === 'done';
+  checkbox.addEventListener('change', () => toggleDone(task.id));
+  checkWrap.appendChild(checkbox);
+
+  // название задачи
+  const name = document.createElement('span');
+  name.className = 'task-name';
+  name.textContent = task.task;
+
+  // бейджи: устройство, дедлайн, повтор
+  const badges = document.createElement('div');
+  badges.className = 'badges';
+
+  const deviceB = document.createElement('span');
+  deviceB.className = 'badge badge-device';
+  deviceB.textContent = deviceIcons(task.device);
+  deviceB.title = task.device;
+
+  const deadlineB = document.createElement('span');
+  deadlineB.className = 'badge badge-deadline';
+  deadlineB.textContent = task.deadline;
+
+  // Countdown — только для активных задач
+  const cdText = countdownText(task.deadline, status);
+  if (cdText){
+    const cdB = document.createElement('span');
+    cdB.className = 'badge badge-countdown status-' + status;
+    cdB.textContent = cdText;
+    badges.append(deviceB, deadlineB, cdB);
+  } else {
+    badges.append(deviceB, deadlineB);
+  }
+
+  const rep = repeatBadge(task.repeat);
+  const repeatB = document.createElement('span');
+  repeatB.className = 'badge badge-repeat' + (rep.weekly ? ' weekly' : '');
+  repeatB.textContent = rep.text;
+  repeatB.title = task.repeat;
+  badges.appendChild(repeatB);
+
+  // Streak — показываем если ≥ 2
+  const streak = calcStreak(task);
+  if (streak >= 2){
+    const streakB = document.createElement('span');
+    streakB.className = 'badge badge-streak';
+    streakB.textContent = `🔥 ${streak}`;
+    streakB.title = `Серия: ${streak} ${streak===1?'день':streak<5?'дня':'дней'} подряд`;
+    badges.appendChild(streakB);
+  }
+
+  row.append(light, checkWrap, name, badges);
+
+  row.addEventListener('click', () => openPanel(task.id, 'view'));
+  row.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      openPanel(task.id, 'view');
+    }
+  });
+
+  return row;
+}
+
+function updateProgress(done, total){
+  progressText.textContent = total
+    ? `Сегодня выполнено: ${done} / ${total}`
+    : 'Сегодня выполнено: 0 / 0';
+  const pct = total ? Math.round(done/total*100) : 0;
+  progressFill.style.width = pct + '%';
+}
+
+function toggleDone(id){
+  const t = tasks.find(x => x.id === id);
+  if (!t) return;
+  const today = todayISO();
+  const now = new Date();
+  if (isTaskDoneToday(t)){
+    // Снимаем отметку — убираем сегодняшние записи
+    t.completions = (t.completions || []).filter(c => c.date !== today);
+  } else {
+    // Ставим отметку — записываем дату и точное время
+    if (!t.completions) t.completions = [];
+    t.completions.push({ date: today, time: `${pad2(now.getHours())}:${pad2(now.getMinutes())}` });
+  }
+  saveTasks(tasks);
+  renderList();
+}
+
+/* ===================== 4. БОКОВАЯ ПАНЕЛЬ ===================== */
+
+const panelEl   = document.getElementById('panel');
+const overlayEl = document.getElementById('overlay');
+
+let currentTaskId = null;
+let currentMode   = null; // 'view' | 'edit' | 'create'
+
+function openPanel(id, mode){
+  currentTaskId = id;
+  currentMode = mode;
+  renderPanel();
+  panelEl.classList.add('open');
+  overlayEl.classList.add('open');
+}
+
+function closePanel(){
+  panelEl.classList.remove('open');
+  overlayEl.classList.remove('open');
+  currentTaskId = null;
+  currentMode = null;
+}
+
+function renderPanel(){
+  panelEl.innerHTML = '';
+  if (currentMode === 'create'){
+    panelEl.appendChild(buildEditForm(null));
+    return;
+  }
+  const task = tasks.find(t => t.id === currentTaskId);
+  if (!task){ closePanel(); return; }
+  panelEl.appendChild(currentMode === 'edit' ? buildEditForm(task) : buildViewPanel(task));
+}
+
+overlayEl.addEventListener('click', closePanel);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && panelEl.classList.contains('open')) closePanel();
+});
+
+function makeCloseButton(){
+  const btn = document.createElement('button');
+  btn.className = 'btn-icon';
+  btn.textContent = '×';
+  btn.title = 'Закрыть';
+  btn.setAttribute('aria-label','Закрыть панель');
+  btn.addEventListener('click', closePanel);
+  return btn;
+}
+
+// --- Режим просмотра Runbook ---
+function buildViewPanel(task){
+  const wrap = document.createElement('div');
+  wrap.className = 'panel-inner';
+
+  const header = document.createElement('div');
+  header.className = 'panel-header';
+  const h2 = document.createElement('h2');
+  h2.textContent = task.task;
+  header.append(h2, makeCloseButton());
+
+  const meta = document.createElement('div');
+  meta.className = 'panel-meta';
+  meta.innerHTML =
+    `<span>${deviceIcons(task.device)} ${escapeHtml(task.device)}</span>` +
+    `<span class="sep">·</span><span>${escapeHtml(task.deadline)}</span>` +
+    `<span class="sep">·</span><span>${escapeHtml(task.repeat)}</span>`;
+
+  const body = document.createElement('div');
+  body.className = 'panel-body';
+
+  // Runbook
+  const rbLabel = document.createElement('div');
+  rbLabel.className = 'section-label';
+  rbLabel.innerHTML = '<span>Runbook</span><i></i>';
+  const text = document.createElement('div');
+  text.className = 'runbook-text';
+  text.innerHTML = linkify(task.runbook);
+
+  // История выполнений
+  const histLabel = document.createElement('div');
+  histLabel.className = 'section-label';
+  histLabel.style.marginTop = '24px';
+  histLabel.innerHTML = '<span>История</span><i></i>';
+
+  const histContainer = document.createElement('div');
+
+  const streak = calcStreak(task);
+  if (streak >= 1){
+    const days = streak === 1 ? 'день' : streak < 5 ? 'дня' : 'дней';
+    const hero = document.createElement('div');
+    hero.className = 'streak-hero';
+    hero.innerHTML = `
+      <span class="streak-fire">🔥</span>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:6px;">
+          <span class="streak-num">${streak}</span>
+          <span class="streak-label">${days} подряд</span>
+        </div>
+        <div class="streak-label">Серия не прервана${streak>=7?' — отличный результат!':''}</div>
+      </div>`;
+    histContainer.appendChild(hero);
+  }
+
+  const comps = [...(task.completions||[])].reverse().slice(0,10);
+  const histList = document.createElement('div');
+  histList.className = 'history-list';
+
+  if (comps.length === 0){
+    const empty = document.createElement('div');
+    empty.className = 'history-empty';
+    empty.textContent = 'Ещё нет записей — отметьте задачу выполненной';
+    histList.appendChild(empty);
+  } else {
+    comps.forEach(c => {
+      const row = document.createElement('div');
+      row.className = 'history-row';
+      const dateEl = document.createElement('span');
+      dateEl.className = 'history-date';
+      dateEl.textContent = formatRelativeDate(c.date);
+      const timeEl = document.createElement('span');
+      timeEl.className = 'history-time';
+      timeEl.textContent = c.time && c.time !== '00:00' ? c.time : '—';
+      row.append(dateEl, timeEl);
+      histList.appendChild(row);
+    });
+  }
+  histContainer.appendChild(histList);
+
+  body.append(rbLabel, text, histLabel, histContainer);
+
+  const footer = document.createElement('div');
+  footer.className = 'panel-footer';
+  const editBtn = document.createElement('button');
+  editBtn.className = 'btn btn-secondary';
+  editBtn.textContent = '✏ Редактировать';
+  editBtn.addEventListener('click', () => openPanel(task.id, 'edit'));
+  footer.appendChild(editBtn);
+
+  wrap.append(header, meta, body, footer);
+  return wrap;
+}
+
+// --- Режим редактирования / создания ---
+const DEVICE_OPTIONS = ['PC','Ноут','Phone','Any'];
+
+function buildEditForm(task){
+  const isCreate = !task;
+  const wrap = document.createElement('div');
+  wrap.className = 'panel-inner';
+
+  const header = document.createElement('div');
+  header.className = 'panel-header';
+  const h2 = document.createElement('h2');
+  h2.textContent = isCreate ? 'Новая задача' : 'Редактирование задачи';
+  header.append(h2, makeCloseButton());
+
+  const body = document.createElement('div');
+  body.className = 'panel-body edit-form';
+
+  // Задача
+  const taskField = document.createElement('div');
+  taskField.className = 'field';
+  taskField.innerHTML = '<label for="fTask">Задача</label>';
+  const taskInput = document.createElement('input');
+  taskInput.type = 'text';
+  taskInput.id = 'fTask';
+  taskInput.value = task ? task.task : '';
+  taskField.appendChild(taskInput);
+
+  // Device — чипы-чекбоксы, можно несколько
+  const deviceField = document.createElement('div');
+  deviceField.className = 'field';
+  deviceField.innerHTML = '<label>Device</label>';
+  const chips = document.createElement('div');
+  chips.className = 'device-chips';
+  const selected = task ? task.device.split('/').map(s => s.trim()) : ['Any'];
+  DEVICE_OPTIONS.forEach(d => {
+    const chip = document.createElement('label');
+    chip.className = 'chip' + (selected.includes(d) ? ' active' : '');
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.id = 'fDevice_' + d;
+    cb.checked = selected.includes(d);
+    cb.addEventListener('change', () => chip.classList.toggle('active', cb.checked));
+    const span = document.createElement('span');
+    span.textContent = `${DEVICE_ICONS[d]} ${d}`;
+    chip.append(cb, span);
+    chips.appendChild(chip);
+  });
+  deviceField.appendChild(chips);
+  const deviceHint = document.createElement('div');
+  deviceHint.className = 'field-hint';
+  deviceHint.textContent = 'Можно отметить несколько. «Any» = любое устройство (исключает остальные).';
+  deviceField.appendChild(deviceHint);
+
+  // Deadline + Repeat в одну строку
+  const row = document.createElement('div');
+  row.className = 'field-row';
+
+  const deadlineField = document.createElement('div');
+  deadlineField.className = 'field';
+  deadlineField.innerHTML = '<label for="fDeadline">Deadline</label>';
+  const deadlineInput = document.createElement('input');
+  deadlineInput.type = 'text';
+  deadlineInput.id = 'fDeadline';
+  deadlineInput.placeholder = '18:00';
+  deadlineInput.value = task ? task.deadline : '';
+  deadlineField.appendChild(deadlineInput);
+  const deadlineHint = document.createElement('div');
+  deadlineHint.className = 'field-hint';
+  deadlineHint.textContent = 'ЧЧ:ММ, от 00:00 до 24:00.';
+  deadlineField.appendChild(deadlineHint);
+
+  const repeatField = document.createElement('div');
+  repeatField.className = 'field';
+  repeatField.innerHTML = '<label for="fRepeat">Repeat</label>';
+  const repeatInput = document.createElement('input');
+  repeatInput.type = 'text';
+  repeatInput.id = 'fRepeat';
+  repeatInput.setAttribute('list', 'repeatPresets');
+  repeatInput.value = task ? task.repeat : 'Ежедневно';
+  repeatField.appendChild(repeatInput);
+
+  row.append(deadlineField, repeatField);
+
+  // Runbook
+  const runbookField = document.createElement('div');
+  runbookField.className = 'field';
+  runbookField.innerHTML = '<label for="fRunbook">Runbook (полностью, переводы строк сохраняются)</label>';
+  const runbookArea = document.createElement('textarea');
+  runbookArea.id = 'fRunbook';
+  runbookArea.value = task ? task.runbook : '';
+  runbookField.appendChild(runbookArea);
+
+  body.append(taskField, deviceField, row, runbookField);
+
+  // Футер
+  const footer = document.createElement('div');
+  footer.className = 'panel-footer edit';
+
+  if (!isCreate){
+    const delBtn = document.createElement('button');
+    delBtn.className = 'btn btn-danger';
+    delBtn.textContent = 'Удалить задачу';
+    delBtn.addEventListener('click', () => deleteTask(task.id));
+    footer.appendChild(delBtn);
+  } else {
+    footer.appendChild(document.createElement('span'));
+  }
+
+  const rightGroup = document.createElement('div');
+  rightGroup.style.display = 'flex';
+  rightGroup.style.gap = '10px';
+
+  const cancelBtn = document.createElement('button');
+  cancelBtn.className = 'btn btn-secondary';
+  cancelBtn.textContent = 'Отмена';
+  cancelBtn.addEventListener('click', () => {
+    if (isCreate) closePanel();
+    else openPanel(task.id, 'view');
+  });
+
+  const saveBtn = document.createElement('button');
+  saveBtn.className = 'btn btn-primary';
+  saveBtn.textContent = 'Сохранить';
+  saveBtn.addEventListener('click', () => saveForm(task));
+
+  rightGroup.append(cancelBtn, saveBtn);
+  footer.appendChild(rightGroup);
+
+  wrap.append(header, body, footer);
+  return wrap;
+}
+
+function saveForm(existingTask){
+  const taskName = document.getElementById('fTask').value.trim();
+  const deadline = document.getElementById('fDeadline').value.trim();
+  const repeat   = document.getElementById('fRepeat').value.trim() || 'Ежедневно';
+  const runbook  = document.getElementById('fRunbook').value;
+
+  if (!taskName){
+    alert('Укажите название задачи.');
+    return;
+  }
+  if (!/^([01]\d|2[0-4]):[0-5]\d$/.test(deadline)){
+    alert('Deadline должен быть в формате ЧЧ:ММ (от 00:00 до 24:00).');
+    return;
+  }
+
+  const checked = DEVICE_OPTIONS.filter(d => document.getElementById('fDevice_'+d).checked);
+  const device = (checked.length === 0 || checked.includes('Any')) ? 'Any' : checked.join('/');
+
+  if (existingTask){
+    existingTask.task = taskName;
+    existingTask.device = device;
+    existingTask.deadline = deadline;
+    existingTask.repeat = repeat;
+    existingTask.runbook = runbook;
+  } else {
+    tasks.push({
+      id: 'task_' + Date.now().toString(36) + Math.random().toString(36).slice(2,5),
+      task: taskName, device, deadline, repeat, runbook, completions: [],
+    });
+  }
+
+  saveTasks(tasks);
+  renderList();
+  closePanel();
+}
+
+function deleteTask(id){
+  if (!confirm('Удалить эту задачу без возможности восстановления?')) return;
+  tasks = tasks.filter(t => t.id !== id);
+  saveTasks(tasks);
+  renderList();
+  closePanel();
+}
+
+/* ===================== 5. СОБЫТИЯ И ИНИЦИАЛИЗАЦИЯ ===================== */
+
+// Живые часы в шапке (день недели + время)
+const CLOCK_DAYS = ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'];
+const clockEl = document.getElementById('clock');
+function updateClock(){
+  const d = new Date();
+  clockEl.textContent = `${CLOCK_DAYS[d.getDay()]} · ${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+}
+
+// Кнопка "+ Задача"
+document.getElementById('addBtn').addEventListener('click', () => openPanel(null, 'create'));
+
+// Экспорт текущих данных в JSON-файл (резервная копия / перенос на другой ПК)
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(tasks, null, 2)], { type:'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `daily-ops-backup-${todayISO()}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+});
+
+// Импорт данных из ранее экспортированного JSON-файла
+const importFileEl = document.getElementById('importFile');
+document.getElementById('importBtn').addEventListener('click', () => importFileEl.click());
+importFileEl.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try{
+      const data = JSON.parse(reader.result);
+      if (!Array.isArray(data)) throw new Error('Ожидался массив задач');
+      if (!confirm(`Загрузить ${data.length} задач из файла?\nТекущие данные на этой странице будут заменены.`)) return;
+      tasks = data;
+      saveTasks(tasks);
+      renderList();
+    }catch(err){
+      alert('Не удалось прочитать файл. Убедитесь, что это корректный JSON-экспорт этой страницы.');
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+});
+
+// Запуск
+updateClock();
+setInterval(updateClock, 1000);
+setInterval(renderList, 60000);
+initTasks(); // загружает кеш → рендерит → подтягивает с сервера → перерендерит
+
+/* ===================== 7. ЖУРНАЛ ===================== */
+
+const journalOverlayEl = document.getElementById('journalOverlay');
+const journalBodyEl    = document.getElementById('journalBody');
+
+function openJournal(){
+  renderJournal();
+  journalOverlayEl.classList.add('open');
+  document.getElementById('journalCloseBtn').focus();
+}
+function closeJournal(){
+  journalOverlayEl.classList.remove('open');
+}
+
+document.getElementById('journalBtn').addEventListener('click', openJournal);
+document.getElementById('journalCloseBtn').addEventListener('click', closeJournal);
+journalOverlayEl.addEventListener('click', e => { if (e.target === journalOverlayEl) closeJournal(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && journalOverlayEl.classList.contains('open')) closeJournal();
+});
+
+function renderJournal(){
+  journalBodyEl.innerHTML = '';
+
+  // Собираем все записи: { date, time, taskId, taskName }
+  const allEntries = [];
+  tasks.forEach(t => {
+    (t.completions||[]).forEach(c => {
+      allEntries.push({ date: c.date, time: c.time||'—', taskId: t.id, taskName: t.task });
+    });
+  });
+
+  if (allEntries.length === 0){
+    journalBodyEl.innerHTML = '<div class="journal-empty">История пуста — начните отмечать выполненные задачи</div>';
+    return;
+  }
+
+  // Группируем по дате, сортируем внутри по времени
+  const byDate = {};
+  allEntries.forEach(e => {
+    if (!byDate[e.date]) byDate[e.date] = [];
+    byDate[e.date].push(e);
+  });
+  const sortedDates = Object.keys(byDate).sort((a,b) => b.localeCompare(a)); // новые сверху
+
+  // Сводная статистика
+  const totalDays      = sortedDates.length;
+  const totalEntries   = allEntries.length;
+  const todayCount     = (byDate[todayISO()]||[]).length;
+
+  const summary = document.createElement('div');
+  summary.className = 'journal-summary';
+  summary.innerHTML = `
+    <div class="journal-stat">
+      <span class="journal-stat-num">${totalEntries}</span>
+      <div class="journal-stat-label">всего выполнений</div>
+    </div>
+    <div class="journal-stat">
+      <span class="journal-stat-num">${totalDays}</span>
+      <div class="journal-stat-label">активных дней</div>
+    </div>
+    <div class="journal-stat">
+      <span class="journal-stat-num">${todayCount}</span>
+      <div class="journal-stat-label">сегодня</div>
+    </div>
+    <div class="journal-stat">
+      <span class="journal-stat-num">${tasks.length}</span>
+      <div class="journal-stat-label">задач в системе</div>
+    </div>`;
+  journalBodyEl.appendChild(summary);
+
+  // Список по датам
+  sortedDates.forEach(date => {
+    const header = document.createElement('div');
+    header.className = 'journal-day-header';
+    // Полная дата для заголовка
+    const d = new Date(date + 'T00:00:00');
+    const DAYS_FULL = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
+    const dayName   = DAYS_FULL[d.getDay()];
+    const label     = formatRelativeDate(date);
+    header.innerHTML = `<i></i><span class="journal-day-date">${label} · ${dayName}</span><i></i>`;
+    journalBodyEl.appendChild(header);
+
+    // Записи за этот день — сортируем по времени
+    const dayEntries = byDate[date].sort((a,b) => (a.time||'').localeCompare(b.time||''));
+    dayEntries.forEach(e => {
+      const row = document.createElement('div');
+      row.className = 'journal-entry';
+      row.innerHTML = `
+        <span class="journal-check">✓</span>
+        <span class="journal-task-name">${escapeHtml(e.taskName)}</span>
+        <span class="journal-time">${e.time && e.time !== '00:00' ? e.time : '—'}</span>`;
+      journalBodyEl.appendChild(row);
+    });
+  });
+}
+
+const HELP_CONTENT = {
+
+  interface: `
+    <p class="help-p">Страница — это персональная операционная панель повторяющихся задач. Всё, что нужно делать каждый день, находится здесь вместе с инструкцией выполнения.</p>
+
+    <h3 class="help-h3">Основные действия</h3>
+    <div class="help-steps">
+      <div class="help-step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Отметить выполненным</strong> — нажмите на чекбокс ☐ слева от названия задачи. Задача зачеркнётся, потускнеет и уйдёт в секцию «Выполнено сегодня» внизу списка. Повторный клик — снимает отметку.</div>
+      </div>
+      <div class="help-step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Открыть Runbook</strong> — кликните по любому месту строки (кроме чекбокса). Справа откроется панель с полной инструкцией выполнения задачи.</div>
+      </div>
+      <div class="help-step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Закрыть панель</strong> — кнопка × в панели, клик по затемнённой области слева, или клавиша Esc.</div>
+      </div>
+      <div class="help-step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>Секция «Не сегодня»</strong> — задачи, которые по расписанию не актуальны сегодня (например, «каждый понедельник» в среду), свёрнуты в отдельный блок внизу. Нажмите на него, чтобы раскрыть.</div>
+      </div>
+    </div>
+
+    <div class="help-tip">
+      <span class="tip-icon">💡</span>
+      <span class="tip-text">Список <strong>автоматически пересортировывается</strong> по дедлайну каждую минуту. Галочки <strong>автоматически сбрасываются</strong> на следующий день — не нужно ничего сбрасывать вручную.</span>
+    </div>
+  `,
+
+  statuses: `
+    <h3 class="help-h3">Цветные индикаторы статуса</h3>
+    <p class="help-p">Лампочка слева от задачи показывает её текущее состояние. Статус пересчитывается автоматически каждую минуту.</p>
+    <div class="status-demo-list">
+      <div class="status-demo-row">
+        <span class="sdot planned"></span>
+        <div><div class="sdot-label">Запланировано</div><div class="sdot-desc">Задача актуальна сегодня. До дедлайна больше 60 минут.</div></div>
+      </div>
+      <div class="status-demo-row">
+        <span class="sdot soon"></span>
+        <div><div class="sdot-label">Скоро дедлайн</div><div class="sdot-desc">До дедлайна 60 минут или меньше. Рядом с временем появляется countdown: «через 45 мин».</div></div>
+      </div>
+      <div class="status-demo-row">
+        <span class="sdot overdue"></span>
+        <div><div class="sdot-label">Просрочено</div><div class="sdot-desc">Дедлайн прошёл, задача не выполнена. Индикатор пульсирует. Countdown показывает «+30 мин» — насколько просрочено.</div></div>
+      </div>
+      <div class="status-demo-row">
+        <span class="sdot done"></span>
+        <div><div class="sdot-label">Выполнено сегодня</div><div class="sdot-desc">Задача отмечена выполненной. Текст зачёркнут. Завтра статус сбросится автоматически.</div></div>
+      </div>
+      <div class="status-demo-row">
+        <span class="sdot none"></span>
+        <div><div class="sdot-label">Не сегодня</div><div class="sdot-desc">Задача по расписанию не актуальна в этот день недели. Например, «Каждый понедельник» во вторник. Скрыта в секцию «Не сегодня» внизу списка.</div></div>
+      </div>
+    </div>
+
+    <div class="help-sep"></div>
+    <h3 class="help-h3">Countdown — обратный отсчёт</h3>
+    <p class="help-p">Рядом с дедлайном у активных задач отображается сколько времени осталось (или сколько просрочено). Обновляется раз в минуту вместе со страницей.</p>
+    <div class="help-tip">
+      <span class="tip-icon">⏱</span>
+      <span class="tip-text">Примеры: <strong>«через 2 ч 15 м»</strong> — до дедлайна, <strong>«через 45 мин»</strong> — последний час, <strong>«+30 мин»</strong> — просрочено на 30 минут.</span>
+    </div>
+  `,
+
+  tasks: `
+    <h3 class="help-h3">Управление задачами</h3>
+    <div class="help-steps">
+      <div class="help-step">
+        <div class="step-num">+</div>
+        <div class="step-text"><strong>Новая задача</strong> — кнопка «+ Задача» в правом верхнем углу. Откроется панель с полями для заполнения.</div>
+      </div>
+      <div class="help-step">
+        <div class="step-num">✏</div>
+        <div class="step-text"><strong>Редактировать</strong> — откройте Runbook задачи (кликните по строке), затем нажмите «✏ Редактировать» внизу панели.</div>
+      </div>
+      <div class="help-step">
+        <div class="step-num">🗑</div>
+        <div class="step-text"><strong>Удалить</strong> — в режиме редактирования, кнопка «Удалить задачу» слева внизу. Требует подтверждения.</div>
+      </div>
+    </div>
+
+    <div class="help-sep"></div>
+    <h3 class="help-h3">Устройства (Device)</h3>
+    <p class="help-p">Иконка показывает, на каком устройстве выполняется задача. Можно выбрать несколько.</p>
+    <table class="device-table">
+      <tr><td>Иконка</td><td>Значение</td><td>Когда использовать</td></tr>
+      <tr><td class="icon-cell">🖥</td><td>PC</td><td>Только стационарный компьютер</td></tr>
+      <tr><td class="icon-cell">💻</td><td>Ноут</td><td>Только ноутбук</td></tr>
+      <tr><td class="icon-cell">📱</td><td>Phone</td><td>Только смартфон</td></tr>
+      <tr><td class="icon-cell">🌐</td><td>Any</td><td>Любое устройство</td></tr>
+      <tr><td class="icon-cell">🖥💻</td><td>PC/Ноут</td><td>ПК или ноутбук</td></tr>
+      <tr><td class="icon-cell">🖥📱</td><td>PC/Phone</td><td>ПК или телефон</td></tr>
+    </table>
+
+    <div class="help-sep"></div>
+    <h3 class="help-h3">Расписание (Repeat)</h3>
+    <p class="help-p">Определяет, в какие дни задача актуальна. Влияет на цвет индикатора и сортировку.</p>
+    <div class="repeat-examples">
+      <div class="repeat-ex"><span class="rb">Ежедневно</span><span class="rd">Задача актуальна каждый день</span></div>
+      <div class="repeat-ex"><span class="rb">Ежедневно кроме Пн</span><span class="rd">Каждый день, кроме понедельника</span></div>
+      <div class="repeat-ex"><span class="rb">Каждый понедельник</span><span class="rd">Только по понедельникам</span></div>
+      <div class="repeat-ex"><span class="rb">Каждую пятницу</span><span class="rd">Только по пятницам</span></div>
+    </div>
+
+    <div class="help-sep"></div>
+    <h3 class="help-h3">Runbook</h3>
+    <p class="help-p">Runbook — это полная инструкция выполнения задачи. Здесь хранится всё, что нужно знать: последовательность шагов, пути к файлам, аккаунты, ссылки. Цель — не держать процессы в голове.</p>
+    <div class="help-tip">
+      <span class="tip-icon">🔗</span>
+      <span class="tip-text">Ссылки <strong>https://...</strong> и адреса почты кликабельны прямо в тексте Runbook. Аккаунты вида <strong>@username</strong> подсвечиваются синим. Пути к файлам отображаются моноширинным шрифтом.</span>
+    </div>
+  `,
+
+  data: `
+    <h3 class="help-h3">Где хранятся данные</h3>
+    <p class="help-p">Все данные — задачи, расписание, Runbook, история выполнений — хранятся в <strong>localStorage</strong> вашего браузера. Это встроенное хранилище, которое не зависит от интернета и работает полностью офлайн.</p>
+    <div class="help-tip">
+      <span class="tip-icon">⚠️</span>
+      <span class="tip-text">Данные привязаны к <strong>конкретному браузеру на конкретном устройстве</strong>. Если открыть файл в другом браузере или очистить кэш — данные не сохранятся. Делайте экспорт раз в неделю.</span>
+    </div>
+
+    <div class="help-sep"></div>
+    <h3 class="help-h3">Экспорт и Импорт</h3>
+    <div class="help-steps">
+      <div class="help-step">
+        <div class="step-num">↓</div>
+        <div class="step-text"><strong>Экспорт</strong> — кнопка в шапке. Скачивает файл <code>daily-ops-backup-ДАТА.json</code> с полным снимком всех задач и истории. Храните в надёжном месте — это ваша резервная копия.</div>
+      </div>
+      <div class="help-step">
+        <div class="step-num">↑</div>
+        <div class="step-text"><strong>Импорт</strong> — кнопка в шапке. Загружает ранее экспортированный JSON и заменяет текущие данные. Используется для восстановления или переноса на другой ПК.</div>
+      </div>
+    </div>
+
+    <div class="help-sep"></div>
+    <h3 class="help-h3">История выполнений</h3>
+    <p class="help-p">Каждый раз когда вы ставите галочку — система записывает дату и точное время выполнения. Эти данные накапливаются и уже сохраняются в вашем экспорте.</p>
+    <div class="help-tip">
+      <span class="tip-icon">📅</span>
+      <span class="tip-text">Просмотр истории — ближайшая запланированная функция. Вы сможете видеть когда и во сколько выполнялась каждая задача. Данные уже собираются — UI для их просмотра появится в следующем обновлении.</span>
+    </div>
+  `
+};
+
+const helpOverlayEl = document.getElementById('helpOverlay');
+const helpBodyEl    = document.getElementById('helpBody');
+const helpTabsEl    = document.getElementById('helpTabs');
+let activeHelpTab   = 'interface';
+
+function openHelp(){
+  renderHelpTab(activeHelpTab);
+  helpOverlayEl.classList.add('open');
+  document.getElementById('helpCloseBtn').focus();
+}
+
+function closeHelp(){
+  helpOverlayEl.classList.remove('open');
+}
+
+function renderHelpTab(tab){
+  activeHelpTab = tab;
+  helpBodyEl.innerHTML = `<div class="help-section active">${HELP_CONTENT[tab]}</div>`;
+  helpTabsEl.querySelectorAll('.help-tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tab);
+  });
+}
+
+document.getElementById('helpBtn').addEventListener('click', openHelp);
+document.getElementById('helpCloseBtn').addEventListener('click', closeHelp);
+helpOverlayEl.addEventListener('click', e => { if (e.target === helpOverlayEl) closeHelp(); });
+helpTabsEl.addEventListener('click', e => {
+  const btn = e.target.closest('.help-tab-btn');
+  if (btn) renderHelpTab(btn.dataset.tab);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && helpOverlayEl.classList.contains('open')) closeHelp();
+});
+
+</script>
+</body>
+</html>

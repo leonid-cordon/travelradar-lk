@@ -1,0 +1,224 @@
+[
+  {
+    "id": "001",
+    "task": "Lord Mobile статистика и рейтинги",
+    "device": "PC",
+    "deadline": "10:00",
+    "repeat": "Каждый понедельник",
+    "runbook": "1) Загрузить статистику по LordMobile: GUILD_LIST HL(Kills), GIFT_STATS HL(hunting), GUILD_FESTIVAL HL на ВМ VPS1.\n2) На домашнем ПК выгрузить файлы на G:\\Мій диск\\Lords.\n3) Загрузить файлы на Google Disk (huaweiruw020).\n4) Отредактировать файлы согласно рейтингу и отправить @Darya_Belyx.\n5) Создать пост по GUILD_LIST HL(Kills).",
+    "completions": [
+      {
+        "date": "2026-06-15",
+        "time": "08:53"
+      }
+    ]
+  },
+  {
+    "id": "016",
+    "task": "GoIT обучение",
+    "device": "PC/Ноут",
+    "deadline": "23:00",
+    "repeat": "Ежедневно",
+    "runbook": "Заниматься учёбой на GoIT минимум 2 часа в день.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:23"
+      }
+    ]
+  },
+  {
+    "id": "013",
+    "task": "Новая статья TravelRadarLK",
+    "device": "PC",
+    "deadline": "19:00",
+    "repeat": "Ежедневно",
+    "runbook": "Написать новую статью для сайта https://travelradarlk.com/en/content/ . VSS",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "07:12"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "18:57"
+      }
+    ]
+  },
+  {
+    "id": "014",
+    "task": "Telegram-пост по статье",
+    "device": "PC/Ноут",
+    "deadline": "23:50",
+    "repeat": "Ежедневно",
+    "runbook": "Создание поста в телеграм канал TravelRadar_LK для каждой статьи сайта.\n\n1) в эксплорере копирую файл и даю ЧАТу\nG:\\Мій диск\\Projects\\ToDo\nПишу\nИзучи и используй как основной регламент.\nзагружаю\n- Telegram Content Operating System v2.0.md\n2)\nИзучи и используй для борьбы с повторениями, каннибализацией контента и шаблонными заходами.\n3)\nДаю ссылку на статью. Например:\nhttps://travelradarlk.com/ru/content/\n",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:51"
+      }
+    ]
+  },
+  {
+    "id": "008",
+    "task": "Pinterest Pins",
+    "device": "PC/Ноут",
+    "deadline": "23:55",
+    "repeat": "Ежедневно",
+    "runbook": "Создать ПИНы на английскую статью и загрузить в Pinterest.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:51"
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "task": "Shorts RU",
+    "device": "PC",
+    "deadline": "18:30",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "Создать видео, если Лена не делала, или получить новый шотс от Лены на ПК NIKITA через FAR, отрендерить и загрузить на leonid.cordon@gmail.com в ограниченном просмотре \n\nhttps://studio.youtube.com/channel/UCPjpMffyk4pkCoIzxrb_nPw/videos/short?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D \n\nотсюда берем шортс:\nD:\\CapCut\\_MX  \n\nотсюда берём описание к шорсту:\nhttps://drive.google.com/drive/folders/19HlTdiB6UCaWLvfdJjGrA9ueReIgcV2e\n\nTravel Radar LK @TravelRadar_LK",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "18:34"
+      }
+    ]
+  },
+  {
+    "id": "017",
+    "task": "Семейное обучение",
+    "device": "Any",
+    "deadline": "21:00",
+    "repeat": "Ежедневно",
+    "runbook": "Обучаться с семьёй словацкому или английскому, или заниматься математикой с Никитой. Минимум 50 минут.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "20:56"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "20:25"
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "task": "Shorts USA",
+    "device": "PC",
+    "deadline": "19:00",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "1) На базе полученного шортса от Лены создать Американскую версию в CapCut на ПК NIKITA и загрузить на travelradarlk@gmail.com. \n\n2) Загрузить видео D:\\CapCut\\_MX\\ на Google Drive для того чтобы была возможность в 23:00 сделать тикток и загрузить в инстаграм\nG:\\Мой диск\\_Affiliates\\TRAVELRADAR_CONTENT\\02_UPLOAD\n\n3) Отсюда берём описание для американского ролика https://drive.google.com/drive/folders/19HlTdiB6UCaWLvfdJjGrA9ueReIgcV2e\nи оформляем видеоролик на канале USA",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "18:59"
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "task": "Обложка Shorts RU",
+    "device": "Phone",
+    "deadline": "19:00",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "На телефоне сделать обложку шотсу и изменить размещение на ОТКРЫТЫЙ ДОСТУП на leonid.cordon@gmail.com (RU YouTube).",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "18:34"
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "task": "Обложка Shorts USA",
+    "device": "Phone",
+    "deadline": "23:35",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "На телефоне сделать обложку шотсу и изменить размещение на ОТКРЫТЫЙ ДОСТУП на travelradarlk@gmail.com (USA YouTube).",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:29"
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "task": "Duolingo",
+    "device": "PC/Ноут/Phone",
+    "deadline": "23:45",
+    "repeat": "Ежедневно",
+    "runbook": "Пройти обучение на Duolingo.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:29"
+      }
+    ]
+  },
+  {
+    "id": "009",
+    "task": "TikTok",
+    "device": "PC",
+    "deadline": "23:55",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "Загрузить последнее видео из шорста в TikTok. Делать на PC NIKITA.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:55"
+      }
+    ]
+  },
+  {
+    "id": "010",
+    "task": "Instagram",
+    "device": "Phone",
+    "deadline": "23:55",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "Загрузить последнее видео из шорста в Instagram.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:55"
+      }
+    ]
+  },
+  {
+    "id": "011",
+    "task": "Reddit",
+    "device": "PC/Ноут",
+    "deadline": "23:55",
+    "repeat": "Ежедневно",
+    "runbook": "Участие на Reddit.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:52"
+      }
+    ]
+  },
+  {
+    "id": "012",
+    "task": "Щиты Lord Mobile",
+    "device": "PC/Phone",
+    "deadline": "03:55",
+    "repeat": "Ежедневно",
+    "runbook": "Одеть щиты на фермботе на ВСЕ аккаунты в Lord's Mobile.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:51"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "03:32"
+      }
+    ]
+  }
+]

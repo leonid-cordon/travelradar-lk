@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-15T15:45:49.577Z",
-  "count": 67,
+  "generated_at": "2026-06-15T22:52:10.308Z",
+  "count": 68,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1118,6 +1118,36 @@
       "date_published": "2026-06-06",
       "date_modified": "2026-06-06",
       "search_text": "еда и вода в мексике канкун плая-дель-кармен и тулум вода из-под крана лед уличная еда и буфеты в отелях - честно что действительно рискованно что нет и как избежать расстройства желудка без паники food-safety"
+    },
+    {
+      "slug": "holbox-island-guide",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "beaches",
+        "best-time",
+        "snorkeling"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "inspire",
+      "title": "Остров Холбокс: как добраться и кому туда действительно стоит ехать",
+      "description": "Как добраться до острова без машин на севере Юкатана из Канкуна, что делать, какая там вода на самом деле и честный ответ, кому стоит ехать на Холбокс, а кому нет.",
+      "url": "https://travelradarlk.com/ru/content/holbox-island-guide",
+      "image": "https://travelradarlk.com/assets/images/content/holbox-island-guide/card_1200x600.jpg",
+      "date_published": "2026-06-15",
+      "date_modified": "2026-06-15",
+      "search_text": "остров холбокс как добраться и кому туда действительно стоит ехать как добраться до острова без машин на севере юкатана из канкуна что делать какая там вода на самом деле и честный ответ кому стоит ехать на холбокс а кому нет yucatan island-trip beaches best-time snorkeling"
     },
     {
       "slug": "hotel-check-before-booking",
