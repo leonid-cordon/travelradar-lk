@@ -33,7 +33,7 @@
     "device": "PC",
     "deadline": "19:00",
     "repeat": "Ежедневно",
-    "runbook": "Написать новую статью для сайта https://travelradarlk.com/en/content/ . VSS",
+    "runbook": "Создания ФОТО - ПРОМТ:\nhttps://docs.google.com/document/d/1dR8nTHHLnsQZOnPo2o9GEXl645nonuua0gipXlkyP64/edit?usp=sharing",
     "completions": [
       {
         "date": "2026-06-14",
@@ -42,6 +42,10 @@
       {
         "date": "2026-06-15",
         "time": "18:57"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "04:35"
       }
     ]
   },
@@ -51,11 +55,15 @@
     "device": "PC/Ноут",
     "deadline": "23:50",
     "repeat": "Ежедневно",
-    "runbook": "Создание поста в телеграм канал TravelRadar_LK для каждой статьи сайта.\n\n1) в эксплорере копирую файл и даю ЧАТу\nG:\\Мій диск\\Projects\\ToDo\nПишу\nИзучи и используй как основной регламент.\nзагружаю\n- Telegram Content Operating System v2.0.md\n2)\nИзучи и используй для борьбы с повторениями, каннибализацией контента и шаблонными заходами.\n3)\nДаю ссылку на статью. Например:\nhttps://travelradarlk.com/ru/content/\n",
+    "runbook": "Создание поста в телеграм канал TravelRadar_LK для каждой статьи сайта.\n\n1) в эксплорере копирую файл и даю ЧАТу\nG:\\Мій диск\\Projects\\ToDo или\nhttps://drive.google.com/drive/folders/1-ZHNL5_vdGNGXze-Vq34i9X-rNHBZLCE?usp=sharing\n\nПишу\nИзучи и используй как основной регламент.\nзагружаю\n- Telegram Content Operating System v2.0.md\n2)\nИзучи и используй для борьбы с повторениями, каннибализацией контента и шаблонными заходами.\n3)\nДаю ссылку на статью. Например:\nhttps://travelradarlk.com/ru/content/\n",
     "completions": [
       {
         "date": "2026-06-14",
         "time": "23:51"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "08:34"
       }
     ]
   },
@@ -65,11 +73,15 @@
     "device": "PC/Ноут",
     "deadline": "23:55",
     "repeat": "Ежедневно",
-    "runbook": "Создать ПИНы на английскую статью и загрузить в Pinterest.",
+    "runbook": "https://docs.google.com/document/d/158LYwzwKhqSdyha52ChFHZmRYGEifVhcTfs3gdfDbXY/edit?usp=sharing",
     "completions": [
       {
         "date": "2026-06-14",
         "time": "23:51"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "07:07"
       }
     ]
   },
@@ -195,11 +207,15 @@
     "device": "PC/Ноут",
     "deadline": "23:55",
     "repeat": "Ежедневно",
-    "runbook": "Участие на Reddit.",
+    "runbook": "ПОИСК!\nCancun\nTulum\nPlaya del Carmen\nRiviera Maya\nIsla Mujeres\nCozumel\nPuerto Morelos\nChichen Itza\nXcaret",
     "completions": [
       {
         "date": "2026-06-14",
         "time": "23:52"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "05:20"
       }
     ]
   },
@@ -218,6 +234,10 @@
       {
         "date": "2026-06-15",
         "time": "03:32"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "02:55"
       }
     ]
   }

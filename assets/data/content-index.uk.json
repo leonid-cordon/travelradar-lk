@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-16T05:40:48.939Z",
-  "count": 69,
+  "generated_at": "2026-06-16T21:38:50.795Z",
+  "count": 70,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -805,6 +805,42 @@
       "date_published": "2026-05-16",
       "date_modified": "2026-05-16",
       "search_text": "сезон дощів у канкуні чи варто їхати як вирішити чи варто бронювати канкун у сезон дощів погода пляжі тури готель і гнучкість поїздки cancun rainy-season"
+    },
+    {
+      "slug": "cancun-riviera-maya-punta-cana-all-inclusive",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya",
+        "punta-cana"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "airport-transfer",
+        "sargassum",
+        "budget"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "«Все включено» в Канкуні, Рив'єра-Майя чи Пунта-Кані: що підійде вам",
+      "description": "Обирайте «все включено» за пляжем, спокоєм, розвагами, логістикою й ціною, а не за зірками. Зручність Канкуна, розмаїття Рив'єра-Майя чи ціна Пунта-Кани.",
+      "url": "https://travelradarlk.com/ua/content/cancun-riviera-maya-punta-cana-all-inclusive",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-riviera-maya-punta-cana-all-inclusive/card_1200x600.jpg",
+      "date_published": "2026-06-16",
+      "date_modified": "2026-06-16",
+      "search_text": "все включено в канкуні рив єра-майя чи пунта-кані що підійде вам обирайте все включено за пляжем спокоєм розвагами логістикою й ціною а не за зірками зручність канкуна розмаїття рив єра-майя чи ціна пунта-кани all-inclusive beaches airport-transfer sargassum budget"
     },
     {
       "slug": "cancun-seaweed-season",

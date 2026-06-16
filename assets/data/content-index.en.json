@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-16T05:40:48.656Z",
-  "count": 69,
+  "generated_at": "2026-06-16T21:38:50.561Z",
+  "count": 70,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -805,6 +805,42 @@
       "date_published": "2026-05-16",
       "date_modified": "2026-05-16",
       "search_text": "cancun rainy season should you still go decide if cancun rainy season is worth booking by weather risk beach expectations tours and trip flexibility cancun rainy-season"
+    },
+    {
+      "slug": "cancun-riviera-maya-punta-cana-all-inclusive",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya",
+        "punta-cana"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "airport-transfer",
+        "sargassum",
+        "budget"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Cancun, Riviera Maya or Punta Cana All-Inclusive: Which Fits You",
+      "description": "Choose your all-inclusive by beach, calm, activities, logistics and value, not by star rating. Cancun convenience, Riviera Maya variety or Punta Cana value.",
+      "url": "https://travelradarlk.com/en/content/cancun-riviera-maya-punta-cana-all-inclusive",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-riviera-maya-punta-cana-all-inclusive/card_1200x600.jpg",
+      "date_published": "2026-06-16",
+      "date_modified": "2026-06-16",
+      "search_text": "cancun riviera maya or punta cana all-inclusive which fits you choose your all-inclusive by beach calm activities logistics and value not by star rating cancun convenience riviera maya variety or punta cana value all-inclusive beaches airport-transfer sargassum budget"
     },
     {
       "slug": "cancun-seaweed-season",

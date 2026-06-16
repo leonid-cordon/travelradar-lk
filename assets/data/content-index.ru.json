@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-16T05:40:48.797Z",
-  "count": 69,
+  "generated_at": "2026-06-16T21:38:50.679Z",
+  "count": 70,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -805,6 +805,42 @@
       "date_published": "2026-05-16",
       "date_modified": "2026-05-16",
       "search_text": "сезон дождей в канкуне стоит ли ехать как решить стоит ли бронировать канкун в сезон дождей погода пляжи туры отель и гибкость поездки cancun rainy-season"
+    },
+    {
+      "slug": "cancun-riviera-maya-punta-cana-all-inclusive",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya",
+        "punta-cana"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "airport-transfer",
+        "sargassum",
+        "budget"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "«Всё включено» в Канкуне, Ривьера-Майя или Пунта-Кане: что подойдёт вам",
+      "description": "Выбирайте «всё включено» по пляжу, спокойствию, развлечениям, логистике и цене, а не по звёздам. Удобство Канкуна, разнообразие Ривьера-Майя или цена Пунта-Каны.",
+      "url": "https://travelradarlk.com/ru/content/cancun-riviera-maya-punta-cana-all-inclusive",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-riviera-maya-punta-cana-all-inclusive/card_1200x600.jpg",
+      "date_published": "2026-06-16",
+      "date_modified": "2026-06-16",
+      "search_text": "всё включено в канкуне ривьера-майя или пунта-кане что подойдёт вам выбирайте всё включено по пляжу спокойствию развлечениям логистике и цене а не по звёздам удобство канкуна разнообразие ривьера-майя или цена пунта-каны all-inclusive beaches airport-transfer sargassum budget"
     },
     {
       "slug": "cancun-seaweed-season",
