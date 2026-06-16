@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-15T22:52:10.448Z",
-  "count": 68,
+  "generated_at": "2026-06-16T05:40:48.939Z",
+  "count": 69,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -176,6 +176,40 @@
       "date_published": "2026-05-18",
       "date_modified": "2026-05-18",
       "search_text": "найкращі all-inclusive готелі в hotel zone канкуна північ центр чи південь hotel zone оберіть all-inclusive у канкуні за пляжем атмосферою і стилем подорожі cancun all-inclusive"
+    },
+    {
+      "slug": "best-beach-clubs-tulum-playa-del-carmen",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "tulum",
+      "related_destinations": [
+        "playa-del-carmen"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "beaches",
+        "day-trips",
+        "money",
+        "budget",
+        "sargassum"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Пляжні клуби Тулума та Плая-дель-Кармен: чи варті вони грошей?",
+      "description": "Як працюють мінімальне замовлення і day pass, скільки коштує день на пляжі, ризик саргасуму та моменти, коли розумніше обрати громадський пляж.",
+      "url": "https://travelradarlk.com/ua/content/best-beach-clubs-tulum-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/best-beach-clubs-tulum-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-06-16",
+      "date_modified": "2026-06-16",
+      "search_text": "пляжні клуби тулума та плая-дель-кармен чи варті вони грошей як працюють мінімальне замовлення і day pass скільки коштує день на пляжі ризик саргасуму та моменти коли розумніше обрати громадський пляж tulum riviera-maya beaches day-trips money budget sargassum"
     },
     {
       "slug": "best-budget-mid-range-hotels-cancun-hotel-zone",
