@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T15:56:22.595Z",
-  "count": 74,
+  "generated_at": "2026-06-17T19:35:48.845Z",
+  "count": 75,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1697,6 +1697,38 @@
       "date_published": "2026-05-05",
       "date_modified": "2026-05-05",
       "search_text": "рив єра-мая простими словами практична карта канкуна плая-дель-кармен тулума пуерто-морелоса акумаля і resort-зон перед бронюванням riviera-maya"
+    },
+    {
+      "slug": "staying-overnight-isla-mujeres-worth-it",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "mexico",
+      "region": null,
+      "destination": "isla-mujeres",
+      "related_destinations": [
+        "cozumel"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "island-trip",
+        "day-trips",
+        "beaches"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Ночівля на Isla Mujeres: чи варта вона більше за поїздку на день?",
+      "description": "Що ночівля на Isla Mujeres насправді дає порівняно з поїздкою на день, скільки ночей має сенс, логістика порома і гольф-кара та кому достатньо одного дня.",
+      "url": "https://travelradarlk.com/ua/content/staying-overnight-isla-mujeres-worth-it",
+      "image": "https://travelradarlk.com/assets/images/content/staying-overnight-isla-mujeres-worth-it/card_1200x600.jpg",
+      "date_published": "2026-06-17",
+      "date_modified": "2026-06-17",
+      "search_text": "ночівля на isla mujeres чи варта вона більше за поїздку на день що ночівля на isla mujeres насправді дає порівняно з поїздкою на день скільки ночей має сенс логістика порома і гольф-кара та кому достатньо одного дня isla-mujeres island-trip day-trips beaches"
     },
     {
       "slug": "travel-insurance-for-mexico",

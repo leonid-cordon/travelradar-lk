@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T15:56:22.411Z",
-  "count": 74,
+  "generated_at": "2026-06-17T19:35:48.651Z",
+  "count": 75,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1697,6 +1697,38 @@
       "date_published": "2026-05-05",
       "date_modified": "2026-05-05",
       "search_text": "riviera maya explained a practical map of cancun playa del carmen tulum puerto morelos akumal and resort areas before you book riviera-maya"
+    },
+    {
+      "slug": "staying-overnight-isla-mujeres-worth-it",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": null,
+      "destination": "isla-mujeres",
+      "related_destinations": [
+        "cozumel"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "island-trip",
+        "day-trips",
+        "beaches"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Staying Overnight on Isla Mujeres: Is It Worth More Than a Day Trip?",
+      "description": "What an overnight on Isla Mujeres actually buys you over a day trip, how many nights make sense, the ferry-and-cart logistics, and who should just go for the day.",
+      "url": "https://travelradarlk.com/en/content/staying-overnight-isla-mujeres-worth-it",
+      "image": "https://travelradarlk.com/assets/images/content/staying-overnight-isla-mujeres-worth-it/card_1200x600.jpg",
+      "date_published": "2026-06-17",
+      "date_modified": "2026-06-17",
+      "search_text": "staying overnight on isla mujeres is it worth more than a day trip what an overnight on isla mujeres actually buys you over a day trip how many nights make sense the ferry-and-cart logistics and who should just go for the day isla-mujeres island-trip day-trips beaches"
     },
     {
       "slug": "travel-insurance-for-mexico",
