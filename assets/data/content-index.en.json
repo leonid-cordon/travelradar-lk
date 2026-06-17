@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T04:21:02.207Z",
-  "count": 73,
+  "generated_at": "2026-06-17T15:56:22.411Z",
+  "count": 74,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -160,6 +160,33 @@
       "date_published": "2026-06-17",
       "date_modified": "2026-06-17",
       "search_text": "akumal sea turtles how to swim with them and what to expect where the turtles really are self-guided beach vs guided circuit the morning timing that makes or breaks the day real costs the rules and why yal-ku is not the turtle spot people think riviera-maya snorkeling day-trips best-time scam-warning"
+    },
+    {
+      "slug": "bacalar-lagoon-from-cancun-worth-it",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "cancun"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "day-trips",
+        "itinerary"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Bacalar, Mexico's Lagoon of Seven Colors: Is It Worth the Trip from Cancun?",
+      "description": "How far Bacalar really is from Cancun, why it works as an overnight rather than a day trip, who the lagoon suits, and how to plan the journey.",
+      "url": "https://travelradarlk.com/en/content/bacalar-lagoon-from-cancun-worth-it",
+      "image": "https://travelradarlk.com/assets/images/content/bacalar-lagoon-from-cancun-worth-it/card_1200x600.jpg",
+      "date_published": "2026-06-17",
+      "date_modified": "2026-06-17",
+      "search_text": "bacalar mexico s lagoon of seven colors is it worth the trip from cancun how far bacalar really is from cancun why it works as an overnight rather than a day trip who the lagoon suits and how to plan the journey day-trips itinerary"
     },
     {
       "slug": "best-adults-only-resorts-cancun",
