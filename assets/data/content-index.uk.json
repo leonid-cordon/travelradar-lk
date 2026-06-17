@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T03:03:51.790Z",
-  "count": 72,
+  "generated_at": "2026-06-17T04:21:02.434Z",
+  "count": 73,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1742,6 +1742,39 @@
       "date_published": "2026-04-29",
       "date_modified": "2026-04-29",
       "search_text": "найкращі громадські пляжі tulum що знати перед поїздкою практичний гід по громадських пляжах tulum безкоштовні маршрути доступу платний комфорт пляжні клуби саргасум і найкращий пляж під ваш день tulum riviera-maya beaches"
+    },
+    {
+      "slug": "valladolid-day-trip-overnight-or-skip",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "day-trips",
+        "archaeology",
+        "cenotes",
+        "itinerary"
+      ],
+      "audience": [
+        "first-timer",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Вальядолід: на день, з ночівлею чи повз? Чесна відповідь",
+      "description": "Колоніальне містечко поряд із Чичен-Іцою — без прикрас: що вписується у 2–3 години, коли ночівля виправдана, а кому краще одразу повернутися на курорт.",
+      "url": "https://travelradarlk.com/ua/content/valladolid-day-trip-overnight-or-skip",
+      "image": "https://travelradarlk.com/assets/images/content/valladolid-day-trip-overnight-or-skip/card_1200x600.jpg",
+      "date_published": "2026-06-17",
+      "date_modified": "2026-06-17",
+      "search_text": "вальядолід на день з ночівлею чи повз чесна відповідь колоніальне містечко поряд із чичен-іцою без прикрас що вписується у 2 3 години коли ночівля виправдана а кому краще одразу повернутися на курорт yucatan day-trips archaeology cenotes itinerary"
     },
     {
       "slug": "visa-free-travel-destinations",

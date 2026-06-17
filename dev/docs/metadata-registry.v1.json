@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 72,
+  "record_count": 73,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -203,6 +203,9 @@
     },
     "tulum-public-beaches": {
       "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["beaches"], "audience": [], "featured": 0, "intent": null
+    },
+    "valladolid-day-trip-overnight-or-skip": {
+      "primary_section": "destinations", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "comparison", "tags": ["day-trips", "archaeology", "cenotes", "itinerary"], "audience": ["first-timer", "couples"], "featured": 0, "intent": "plan"
     },
     "visa-free-travel-destinations": {
       "primary_section": "planning", "country": "generic", "region": null, "destination": null, "related_destinations": [], "content_type": "listicle", "tags": ["visa-entry"], "audience": [], "featured": 0, "intent": null

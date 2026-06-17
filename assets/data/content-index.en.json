@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T03:03:51.508Z",
-  "count": 72,
+  "generated_at": "2026-06-17T04:21:02.207Z",
+  "count": 73,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1742,6 +1742,39 @@
       "date_published": "2026-04-29",
       "date_modified": "2026-04-29",
       "search_text": "tulum public beaches what to know before you go a practical tulum public beach guide covering free access routes paid comfort beach clubs sargassum season and the best beach for each type of day tulum riviera-maya beaches"
+    },
+    {
+      "slug": "valladolid-day-trip-overnight-or-skip",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "day-trips",
+        "archaeology",
+        "cenotes",
+        "itinerary"
+      ],
+      "audience": [
+        "first-timer",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Valladolid: Day Trip, Overnight or Skip? The Honest Call",
+      "description": "The colonial town next to Chichen Itza, decided honestly: what fits a 2-3 hour stop, when an overnight is worth it, and who should just head back to the resort.",
+      "url": "https://travelradarlk.com/en/content/valladolid-day-trip-overnight-or-skip",
+      "image": "https://travelradarlk.com/assets/images/content/valladolid-day-trip-overnight-or-skip/card_1200x600.jpg",
+      "date_published": "2026-06-17",
+      "date_modified": "2026-06-17",
+      "search_text": "valladolid day trip overnight or skip the honest call the colonial town next to chichen itza decided honestly what fits a 2-3 hour stop when an overnight is worth it and who should just head back to the resort yucatan day-trips archaeology cenotes itinerary"
     },
     {
       "slug": "visa-free-travel-destinations",
