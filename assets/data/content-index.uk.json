@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T00:54:40.818Z",
-  "count": 71,
+  "generated_at": "2026-06-17T03:03:51.790Z",
+  "count": 72,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -126,6 +126,40 @@
       "date_published": "2026-05-04",
       "date_modified": "2026-05-04",
       "search_text": "adults-only чи сімейний курорт у канкуні оберіть правильну атмосферу курорту в канкуні до порівняння цін adults-only family-friendly або гібридний формат cancun adults-only family-resort"
+    },
+    {
+      "slug": "akumal-swim-with-sea-turtles",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "day-trips",
+        "best-time",
+        "scam-warning"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Черепахи Акумаля: як з ними поплавати і чого чекати",
+      "description": "Де черепахи насправді, самостійний заплив чи маршрут із гідом, ранковий тайминг, який вирішує все, реальні ціни, правила і чому Yal-Ku — не те місце з черепахами, яким його вважають.",
+      "url": "https://travelradarlk.com/ua/content/akumal-swim-with-sea-turtles",
+      "image": "https://travelradarlk.com/assets/images/content/akumal-swim-with-sea-turtles/card_1200x600.jpg",
+      "date_published": "2026-06-17",
+      "date_modified": "2026-06-17",
+      "search_text": "черепахи акумаля як з ними поплавати і чого чекати де черепахи насправді самостійний заплив чи маршрут із гідом ранковий тайминг який вирішує все реальні ціни правила і чому yal-ku не те місце з черепахами яким його вважають riviera-maya snorkeling day-trips best-time scam-warning"
     },
     {
       "slug": "best-adults-only-resorts-cancun",

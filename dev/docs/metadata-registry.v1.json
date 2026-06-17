@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 71,
+  "record_count": 72,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -17,6 +17,9 @@
     },
     "adults-only-vs-family-resorts-cancun": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "comparison", "tags": ["adults-only", "family-resort"], "audience": ["couples", "family"], "featured": 0, "intent": null
+    },
+    "akumal-swim-with-sea-turtles": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": ["tulum", "playa-del-carmen"], "content_type": "guide", "tags": ["snorkeling", "day-trips", "best-time", "scam-warning"], "audience": ["family", "couples", "solo"], "featured": 0, "intent": "plan"
     },
     "best-adults-only-resorts-cancun": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["adults-only"], "audience": ["couples"], "featured": 0, "intent": null
