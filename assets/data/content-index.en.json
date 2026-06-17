@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-16T21:38:50.561Z",
-  "count": 70,
+  "generated_at": "2026-06-17T00:54:40.550Z",
+  "count": 71,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1503,6 +1503,41 @@
       "date_published": "2026-05-08",
       "date_modified": "2026-05-08",
       "search_text": "playa del carmen travel guide for first-time visitors a practical first-time guide to playa del carmen walkability beaches ferry day trips safety and what to check before booking playa-del-carmen riviera-maya"
+    },
+    {
+      "slug": "puerto-morelos-quiet-village-guide",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "beaches",
+        "cenotes",
+        "airport-transfer",
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Puerto Morelos Guide: The Quiet Reef Village Near Cancun",
+      "description": "Reef snorkeling minutes from a sleepy fishing village, no resort wall, and an easy airport transfer. Who Puerto Morelos suits, who should skip it, and how to get there.",
+      "url": "https://travelradarlk.com/en/content/puerto-morelos-quiet-village-guide",
+      "image": "https://travelradarlk.com/assets/images/content/puerto-morelos-quiet-village-guide/card_1200x600.jpg",
+      "date_published": "2026-06-16",
+      "date_modified": "2026-06-16",
+      "search_text": "puerto morelos guide the quiet reef village near cancun reef snorkeling minutes from a sleepy fishing village no resort wall and an easy airport transfer who puerto morelos suits who should skip it and how to get there riviera-maya snorkeling beaches cenotes airport-transfer boutique-hotel"
     },
     {
       "slug": "punta-cana-vs-cancun",

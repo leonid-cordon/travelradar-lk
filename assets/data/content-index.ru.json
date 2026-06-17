@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-16T21:38:50.679Z",
-  "count": 70,
+  "generated_at": "2026-06-17T00:54:40.684Z",
+  "count": 71,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1503,6 +1503,41 @@
       "date_published": "2026-05-08",
       "date_modified": "2026-05-08",
       "search_text": "плая-дель-кармен для первого визита где жить практичный гид по плая-дель-кармен прогулки пляжи паром поездки на день безопасность и что проверить до бронирования playa-del-carmen riviera-maya"
+    },
+    {
+      "slug": "puerto-morelos-quiet-village-guide",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "beaches",
+        "cenotes",
+        "airport-transfer",
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Гид по Пуэрто-Морелосу: тихая деревня у рифа рядом с Канкуном",
+      "description": "Риф в нескольких минутах от сонной рыбацкой деревни, никакой курортной стены и простой трансфер из аэропорта. Кому Пуэрто-Морелос подходит, кому нет и как добраться.",
+      "url": "https://travelradarlk.com/ru/content/puerto-morelos-quiet-village-guide",
+      "image": "https://travelradarlk.com/assets/images/content/puerto-morelos-quiet-village-guide/card_1200x600.jpg",
+      "date_published": "2026-06-16",
+      "date_modified": "2026-06-16",
+      "search_text": "гид по пуэрто-морелосу тихая деревня у рифа рядом с канкуном риф в нескольких минутах от сонной рыбацкой деревни никакой курортной стены и простой трансфер из аэропорта кому пуэрто-морелос подходит кому нет и как добраться riviera-maya snorkeling beaches cenotes airport-transfer boutique-hotel"
     },
     {
       "slug": "punta-cana-vs-cancun",
