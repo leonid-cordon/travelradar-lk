@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-18T01:04:30.584Z",
-  "count": 76,
+  "generated_at": "2026-06-18T05:40:31.126Z",
+  "count": 77,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1888,6 +1888,37 @@
       "date_published": "2026-01-18",
       "date_modified": "2026-05-28",
       "search_text": "пляжні поїздки без візи які справді відчуваються легкими у 2026 практичне порівняння пляжних поїздок без візи для мандрівників із паспортом сша мексика азія та кариби через реальний комфорт подорожі visa-entry"
+    },
+    {
+      "slug": "whale-shark-swimming-cancun-holbox",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": "cancun",
+      "related_destinations": [
+        "isla-mujeres"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "day-trips",
+        "best-time",
+        "island-trip"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Плавання з китовими акулами біля Канкуна і Холбокса: сезон, тури і реальність",
+      "description": "Реальний сезон китових акул біля Канкуна, чим відрізняються виходи з Isla Mujeres і Холбокса, яким насправді виходить заплив і кому варто пропустити.",
+      "url": "https://travelradarlk.com/ua/content/whale-shark-swimming-cancun-holbox",
+      "image": "https://travelradarlk.com/assets/images/content/whale-shark-swimming-cancun-holbox/card_1200x600.jpg",
+      "date_published": "2026-06-18",
+      "date_modified": "2026-06-18",
+      "search_text": "плавання з китовими акулами біля канкуна і холбокса сезон тури і реальність реальний сезон китових акул біля канкуна чим відрізняються виходи з isla mujeres і холбокса яким насправді виходить заплив і кому варто пропустити cancun yucatan snorkeling day-trips best-time island-trip"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",
