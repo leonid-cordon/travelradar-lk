@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T19:35:48.845Z",
-  "count": 75,
+  "generated_at": "2026-06-18T01:04:30.584Z",
+  "count": 76,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -842,6 +842,36 @@
       "date_published": "2026-05-17",
       "date_modified": "2026-05-17",
       "search_text": "сезон ураганів у канкуні безпечні місяці ризики й бронювання найкращі й найгірші місяці сезону ураганів у канкуні пік ризику страхування та гнучке бронювання cancun hurricane-season"
+    },
+    {
+      "slug": "cancun-nightlife-guide",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "neighborhoods",
+        "money"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Гід по нічному життю Канкуна: що працює, чого уникати і кому це потрібно",
+      "description": "Клубна смуга — лише одна з чотирьох нічних сцен Канкуна. Що працює, що пропустити, скільки реально коштує вечір, як безпечно дістатися додому і кому клубна смуга не підходить.",
+      "url": "https://travelradarlk.com/ua/content/cancun-nightlife-guide",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-nightlife-guide/card_1200x600.jpg",
+      "date_published": "2026-06-18",
+      "date_modified": "2026-06-18",
+      "search_text": "гід по нічному життю канкуна що працює чого уникати і кому це потрібно клубна смуга лише одна з чотирьох нічних сцен канкуна що працює що пропустити скільки реально коштує вечір як безпечно дістатися додому і кому клубна смуга не підходить cancun neighborhoods money"
     },
     {
       "slug": "cancun-rainy-season",

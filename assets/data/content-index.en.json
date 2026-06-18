@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-17T19:35:48.651Z",
-  "count": 75,
+  "generated_at": "2026-06-18T01:04:30.325Z",
+  "count": 76,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -842,6 +842,36 @@
       "date_published": "2026-05-17",
       "date_modified": "2026-05-17",
       "search_text": "cancun hurricane season safest months risks booking tips best and worst months for cancun hurricane season plus insurance peak risk and flexible booking tips cancun hurricane-season"
+    },
+    {
+      "slug": "cancun-nightlife-guide",
+      "lang": "en",
+      "primary_section": "things-to-do",
+      "section_label": "Things to Do",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "neighborhoods",
+        "money"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Cancun Nightlife Guide: What Works, What to Avoid and Who Should Care",
+      "description": "The club strip is only one of Cancun's four night scenes. What works, what to skip, what a night really costs, how to get home safe, and who the party strip is not for.",
+      "url": "https://travelradarlk.com/en/content/cancun-nightlife-guide",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-nightlife-guide/card_1200x600.jpg",
+      "date_published": "2026-06-18",
+      "date_modified": "2026-06-18",
+      "search_text": "cancun nightlife guide what works what to avoid and who should care the club strip is only one of cancun s four night scenes what works what to skip what a night really costs how to get home safe and who the party strip is not for cancun neighborhoods money"
     },
     {
       "slug": "cancun-rainy-season",
