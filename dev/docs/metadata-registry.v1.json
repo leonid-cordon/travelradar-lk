@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 77,
+  "record_count": 78,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -134,6 +134,9 @@
     },
     "cozumel-vs-isla-mujeres": {
       "primary_section": "destinations", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cozumel", "isla-mujeres"], "content_type": "comparison", "tags": ["island-trip"], "audience": [], "featured": 0, "intent": null
+    },
+    "diving-in-cozumel-first-timers-certified-divers": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": "cozumel", "related_destinations": ["playa-del-carmen"], "content_type": "guide", "tags": ["snorkeling", "island-trip", "day-trips", "best-time"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
     },
     "egypt-bez-obmana": {
       "primary_section": "safety", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["scam-warning"], "audience": [], "featured": 0, "intent": null

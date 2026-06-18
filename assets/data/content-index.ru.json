@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-18T05:40:31.004Z",
-  "count": 77,
+  "generated_at": "2026-06-18T18:21:14.482Z",
+  "count": 78,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1145,6 +1145,37 @@
       "date_published": "2026-04-27",
       "date_modified": "2026-04-27",
       "search_text": "косумель или isla mujeres какой остров выбрать честное сравнение косумеля и isla mujeres по пляжам воде рифам логистике и тому кому какой остров подходит лучше island-trip"
+    },
+    {
+      "slug": "diving-in-cozumel-first-timers-certified-divers",
+      "lang": "ru",
+      "primary_section": "things-to-do",
+      "section_label": "Чем заняться",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cozumel",
+      "related_destinations": [
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "island-trip",
+        "day-trips",
+        "best-time"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Дайвинг на Косумеле: что знать новичкам и сертифицированным дайверам",
+      "description": "Чем дрифт-дайвинг Косумеля мирового уровня, какой формат подходит вашему уровню, как выбрать оператора, лучший сезон и каких ошибок избегать.",
+      "url": "https://travelradarlk.com/ru/content/diving-in-cozumel-first-timers-certified-divers",
+      "image": "https://travelradarlk.com/assets/images/content/diving-in-cozumel-first-timers-certified-divers/card_1200x600.jpg",
+      "date_published": "2026-06-18",
+      "date_modified": "2026-06-18",
+      "search_text": "дайвинг на косумеле что знать новичкам и сертифицированным дайверам чем дрифт-дайвинг косумеля мирового уровня какой формат подходит вашему уровню как выбрать оператора лучший сезон и каких ошибок избегать cozumel riviera-maya snorkeling island-trip day-trips best-time"
     },
     {
       "slug": "egypt-bez-obmana",
