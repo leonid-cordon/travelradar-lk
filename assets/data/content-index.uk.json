@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-19T04:38:08.099Z",
-  "count": 79,
+  "generated_at": "2026-06-19T17:01:26.016Z",
+  "count": 80,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1060,6 +1060,36 @@
       "date_published": "2026-05-30",
       "date_modified": "2026-05-30",
       "search_text": "чічен-іца з канкуна чи рів єри-майя тур оренда авто чи пропустити скільки насправді триває дорога тур проти оренди авто й автобуса у скільки обходиться кожен варіант і кому варто пропустити чічен-іцу в короткій відпустці yucatan archaeology day-trips"
+    },
+    {
+      "slug": "coba-ruins-jungle-pyramids-guide",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "tulum",
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "archaeology",
+        "day-trips"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Руїни Коба: піраміди в джунглях, як дістатися і що варто знати",
+      "description": "Як дістатися до Коба з Тулума, Канкуна і Плаї, чому на Нохоч-Муль знову можна піднятися 2026 року і чи варта вона вашого дня більше, ніж Чічен-Іца або Тулум.",
+      "url": "https://travelradarlk.com/ua/content/coba-ruins-jungle-pyramids-guide",
+      "image": "https://travelradarlk.com/assets/images/content/coba-ruins-jungle-pyramids-guide/card_1200x600.jpg",
+      "date_published": "2026-06-19",
+      "date_modified": "2026-06-19",
+      "search_text": "руїни коба піраміди в джунглях як дістатися і що варто знати як дістатися до коба з тулума канкуна і плаї чому на нохоч-муль знову можна піднятися 2026 року і чи варта вона вашого дня більше ніж чічен-іца або тулум tulum riviera-maya archaeology day-trips"
     },
     {
       "slug": "common-tourist-scams-cancun-riviera-maya",
