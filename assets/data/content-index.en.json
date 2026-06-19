@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-19T17:01:25.725Z",
-  "count": 80,
+  "generated_at": "2026-06-19T22:46:05.645Z",
+  "count": 81,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1493,6 +1493,39 @@
       "date_published": "2026-03-25",
       "date_modified": "2026-04-25",
       "search_text": "best neighborhoods in istanbul sultanahmet taksim beyoglu and kadikoy compared a practical istanbul neighborhood guide sultanahmet taksim beyoglu and kadikoy with transport logic hotel tips and mistakes to avoid istanbul istanbul neighborhoods"
+    },
+    {
+      "slug": "mayan-ruins-near-cancun-compared",
+      "lang": "en",
+      "primary_section": "things-to-do",
+      "section_label": "Things to Do",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "tulum",
+        "riviera-maya"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "archaeology",
+        "day-trips",
+        "itinerary"
+      ],
+      "audience": [
+        "first-timer",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Mayan Ruins Near Cancun Compared: Tulum, Cobá, Chichen Itza, Ek Balam",
+      "description": "Which of the four big Mayan sites near Cancun is actually worth your time: crowds, climbable pyramids in 2026, travel times, and the best two-in-a-day pairings.",
+      "url": "https://travelradarlk.com/en/content/mayan-ruins-near-cancun-compared",
+      "image": "https://travelradarlk.com/assets/images/content/mayan-ruins-near-cancun-compared/card_1200x600.jpg",
+      "date_published": "2026-06-20",
+      "date_modified": "2026-06-20",
+      "search_text": "mayan ruins near cancun compared tulum cob chichen itza ek balam which of the four big mayan sites near cancun is actually worth your time crowds climbable pyramids in 2026 travel times and the best two-in-a-day pairings yucatan archaeology day-trips itinerary"
     },
     {
       "slug": "mexico-esim-for-us-travelers",

@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-19T17:01:25.870Z",
-  "count": 80,
+  "generated_at": "2026-06-19T22:46:05.796Z",
+  "count": 81,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1493,6 +1493,39 @@
       "date_published": "2026-03-25",
       "date_modified": "2026-04-25",
       "search_text": "лучшие районы стамбула султанахмет таксим бейоглу кадыкёй практичный гид по районам стамбула султанахмет таксим бейоглу и кадыкей транспорт отели атмосфера и ошибки которых лучше избежать istanbul istanbul neighborhoods"
+    },
+    {
+      "slug": "mayan-ruins-near-cancun-compared",
+      "lang": "ru",
+      "primary_section": "things-to-do",
+      "section_label": "Чем заняться",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "tulum",
+        "riviera-maya"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "archaeology",
+        "day-trips",
+        "itinerary"
+      ],
+      "audience": [
+        "first-timer",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Руины майя рядом с Канкуном: Тулум, Коба, Чичен-Ица, Эк-Балам — сравнение",
+      "description": "Какие из четырёх главных руин майя рядом с Канкуном действительно стоят времени: толпы, на какие пирамиды можно залезть в 2026, время в пути и лучшие комбинации «две за день».",
+      "url": "https://travelradarlk.com/ru/content/mayan-ruins-near-cancun-compared",
+      "image": "https://travelradarlk.com/assets/images/content/mayan-ruins-near-cancun-compared/card_1200x600.jpg",
+      "date_published": "2026-06-20",
+      "date_modified": "2026-06-20",
+      "search_text": "руины майя рядом с канкуном тулум коба чичен-ица эк-балам сравнение какие из четырёх главных руин майя рядом с канкуном действительно стоят времени толпы на какие пирамиды можно залезть в 2026 время в пути и лучшие комбинации две за день yucatan archaeology day-trips itinerary"
     },
     {
       "slug": "mexico-esim-for-us-travelers",
