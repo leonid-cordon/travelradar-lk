@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-18T18:21:14.482Z",
-  "count": 78,
+  "generated_at": "2026-06-19T04:38:07.931Z",
+  "count": 79,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1862,6 +1862,36 @@
       "date_published": "2026-04-29",
       "date_modified": "2026-04-29",
       "search_text": "лучшие общественные пляжи тулума что знать перед поездкой практичный гид по общественным пляжам тулума бесплатные маршруты доступа платный комфорт пляжные клубы саргассум и лучший пляж под ваш день tulum riviera-maya beaches"
+    },
+    {
+      "slug": "tulum-ruins-what-to-expect-worth-it",
+      "lang": "ru",
+      "primary_section": "things-to-do",
+      "section_label": "Чем заняться",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "tulum",
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "archaeology",
+        "day-trips"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Руины Тулума: что вас ждёт, как доехать и стоит ли оно того?",
+      "description": "Что вы реально увидите на руинах Тулума, изменения 2026 года с Parque del Jaguar, настоящие цены и часы, когда приезжать и кому лучше пропустить.",
+      "url": "https://travelradarlk.com/ru/content/tulum-ruins-what-to-expect-worth-it",
+      "image": "https://travelradarlk.com/assets/images/content/tulum-ruins-what-to-expect-worth-it/card_1200x600.jpg",
+      "date_published": "2026-06-19",
+      "date_modified": "2026-06-19",
+      "search_text": "руины тулума что вас ждёт как доехать и стоит ли оно того что вы реально увидите на руинах тулума изменения 2026 года с parque del jaguar настоящие цены и часы когда приезжать и кому лучше пропустить tulum riviera-maya archaeology day-trips"
     },
     {
       "slug": "valladolid-day-trip-overnight-or-skip",

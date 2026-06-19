@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-18T18:21:14.632Z",
-  "count": 78,
+  "generated_at": "2026-06-19T04:38:08.099Z",
+  "count": 79,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1862,6 +1862,36 @@
       "date_published": "2026-04-29",
       "date_modified": "2026-04-29",
       "search_text": "найкращі громадські пляжі tulum що знати перед поїздкою практичний гід по громадських пляжах tulum безкоштовні маршрути доступу платний комфорт пляжні клуби саргасум і найкращий пляж під ваш день tulum riviera-maya beaches"
+    },
+    {
+      "slug": "tulum-ruins-what-to-expect-worth-it",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "tulum",
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "archaeology",
+        "day-trips"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Руїни Тулума: що на вас чекає, як дістатися та чи варто воно того?",
+      "description": "Що ви реально побачите на руїнах Тулума, зміни 2026 року з Parque del Jaguar, справжні ціни й години, коли приїжджати та кому краще пропустити.",
+      "url": "https://travelradarlk.com/ua/content/tulum-ruins-what-to-expect-worth-it",
+      "image": "https://travelradarlk.com/assets/images/content/tulum-ruins-what-to-expect-worth-it/card_1200x600.jpg",
+      "date_published": "2026-06-19",
+      "date_modified": "2026-06-19",
+      "search_text": "руїни тулума що на вас чекає як дістатися та чи варто воно того що ви реально побачите на руїнах тулума зміни 2026 року з parque del jaguar справжні ціни й години коли приїжджати та кому краще пропустити tulum riviera-maya archaeology day-trips"
     },
     {
       "slug": "valladolid-day-trip-overnight-or-skip",
