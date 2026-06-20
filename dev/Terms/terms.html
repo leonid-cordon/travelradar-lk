@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Terms</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.14.0/dist/tabler-icons.min.css">
+<style>
+:root {
+  --bg:          #0C1520;
+  --bg-sidebar:  #091018;
+  --bg-card:     #111D2E;
+  --bg-hover:    #152030;
+  --bg-modal:    #0E1A28;
+  --border:      #1A2D40;
+  --border-mid:  #22364E;
+
+  --text:        #C2D8EC;
+  --text-sec:    #6888A2;
+  --text-muted:  #3C5570;
+
+  --blue:        #4298FF;
+  --blue-dim:    rgba(66,152,255,.11);
+  --blue-hover:  #2A7EF0;
+
+  --amber:       #F0A030;
+  --amber-dim:   rgba(240,160,48,.10);
+
+  --teal:        #1EC8A8;
+  --teal-dim:    rgba(30,200,168,.10);
+
+  --red:         #FF5050;
+  --red-dim:     rgba(255,80,80,.10);
+
+  --green:       #2EC880;
+  --green-dim:   rgba(46,200,128,.10);
+
+  --mono: 'JetBrains Mono','Consolas','Courier New',monospace;
+  --sans: 'Inter',-apple-system,'Segoe UI',sans-serif;
+
+  --r-sm: 4px; --r-md: 7px; --r-lg: 11px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:var(--sans);font-size:14px;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font-family:var(--sans);cursor:pointer;border:none;background:none}
+textarea,input{font-family:var(--sans)}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border-mid);border-radius:2px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* ─── APP SHELL ─── */
+#app{display:flex;flex-direction:column;height:100vh}
+
+/* ─── HEADER ─── */
+.app-header{
+  height:50px;min-height:50px;
+  display:flex;align-items:center;gap:10px;
+  padding:0 14px;
+  background:var(--bg-sidebar);
+  border-bottom:1px solid var(--border);
+  z-index:20;
+}
+.logo{display:flex;align-items:center;gap:8px;flex-shrink:0;user-select:none}
+.logo-icon{
+  width:30px;height:30px;border-radius:8px;
+  background:linear-gradient(135deg,#1A5BC8,#4298FF);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;letter-spacing:-.05em
+}
+.logo-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.2}
+.logo-sub{font-size:9px;color:var(--text-muted);letter-spacing:.07em}
+.h-div{width:1px;height:20px;background:var(--border);flex-shrink:0}
+
+.nav-btn{
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--border);border-radius:var(--r-sm);
+  color:var(--text-sec);transition:all .15s;flex-shrink:0
+}
+.nav-btn:hover:not(:disabled){border-color:var(--blue);color:var(--blue);background:var(--blue-dim)}
+.nav-btn:disabled{opacity:.22;cursor:not-allowed}
+
+.breadcrumbs{display:flex;align-items:center;flex:1;min-width:0;overflow:hidden;gap:0}
+.bc-item{
+  font-family:var(--mono);font-size:12px;color:var(--text-sec);
+  white-space:nowrap;cursor:pointer;padding:2px 5px;border-radius:var(--r-sm);transition:color .1s
+}
+.bc-item:hover{color:var(--blue)}
+.bc-current{color:var(--text)!important;cursor:default}
+.bc-sep{font-size:11px;color:var(--text-muted);padding:0 1px;flex-shrink:0}
+.bc-ell{font-size:11px;color:var(--text-muted);padding:0 3px}
+
+.menu-btn{
+  width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+  border-radius:var(--r-md);color:var(--text-sec);transition:all .15s;flex-shrink:0
+}
+.menu-btn:hover{background:var(--bg-hover);color:var(--text)}
+
+/* ─── CONTENT ─── */
+.content{display:flex;flex:1;min-height:0;overflow:hidden}
+
+/* ─── SIDEBAR ─── */
+.sidebar{
+  width:220px;min-width:220px;
+  background:var(--bg-sidebar);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;overflow:hidden
+}
+.sb-top{padding:11px 11px 8px;border-bottom:1px solid var(--border)}
+.srch-wrap{position:relative;margin-bottom:7px}
+.srch-wrap .ti{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--text-muted);pointer-events:none}
+.srch{
+  width:100%;padding:7px 8px 7px 28px;
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);
+  font-size:12px;color:var(--text);transition:border-color .15s
+}
+.srch:focus{border-color:var(--blue);outline:none}
+.srch::placeholder{color:var(--text-muted)}
+.quick-btn{
+  width:100%;display:flex;align-items:center;gap:7px;
+  padding:7px 10px;border:1px dashed var(--border-mid);border-radius:var(--r-md);
+  color:var(--blue);font-size:12px;transition:all .15s;text-align:left
+}
+.quick-btn:hover{background:var(--blue-dim);border-color:var(--blue)}
+
+.terms-list{flex:1;overflow-y:auto;padding:4px 0}
+.l-row{display:flex;justify-content:space-between;padding:3px 13px}
+.l-lbl{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--text-muted)}
+.l-cnt{font-family:var(--mono);font-size:10px;color:var(--text-muted)}
+.l-row.mt{opacity:.2}
+.t-row{
+  display:flex;align-items:center;gap:6px;
+  padding:5px 13px 5px 22px;cursor:pointer;
+  border-left:2px solid transparent;transition:background .1s
+}
+.t-row:hover{background:var(--bg-hover)}
+.t-row.active{background:var(--blue-dim);border-left-color:var(--blue)}
+.t-name{font-family:var(--mono);font-size:12px;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.t-row.active .t-name{color:var(--blue)}
+.t-badge{font-size:10px;color:var(--amber);flex-shrink:0}
+
+.sb-foot{padding:7px 13px;border-top:1px solid var(--border);font-size:11px;color:var(--text-muted)}
+
+/* ─── MAIN ─── */
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--bg);min-width:0}
+.act-bar{
+  display:flex;align-items:center;justify-content:flex-end;gap:8px;
+  padding:8px 22px;border-bottom:1px solid var(--border);flex-shrink:0
+}
+.btn-edit{
+  display:flex;align-items:center;gap:5px;
+  padding:5px 12px;border:1px solid var(--border);border-radius:var(--r-md);
+  color:var(--text-sec);font-size:12px;transition:all .15s
+}
+.btn-edit:hover{border-color:var(--text-sec);color:var(--text)}
+.btn-new{
+  display:flex;align-items:center;gap:5px;
+  padding:5px 13px;background:var(--blue);border-radius:var(--r-md);
+  color:#fff;font-size:12px;font-weight:500;transition:background .15s
+}
+.btn-new:hover{background:var(--blue-hover)}
+.card-scroll{flex:1;overflow-y:auto;padding:26px 28px 44px}
+
+/* ─── CARD ─── */
+.card{max-width:580px}
+.card-term{
+  font-family:var(--mono);font-size:44px;font-weight:700;
+  background:linear-gradient(130deg,#4298FF 0%,#56DEFF 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;margin-bottom:5px;letter-spacing:-.02em
+}
+.card-read{font-family:var(--mono);font-size:11px;color:var(--text-muted);margin-bottom:14px}
+.card-full{font-size:16px;font-weight:600;color:var(--text);margin-bottom:3px}
+.card-pron{font-size:13px;color:var(--text-sec);font-style:italic;margin-bottom:3px}
+
+.term-row{display:flex;align-items:center;gap:10px}
+.full-row{display:flex;align-items:center;gap:7px}
+.spk-btn{
+  display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+  width:30px;height:30px;border-radius:50%;
+  border:1px solid var(--border-mid);color:var(--blue);
+  background:var(--bg-card);transition:all .15s
+}
+.spk-btn:hover{background:var(--blue-dim);border-color:var(--blue)}
+.spk-btn.sm{width:22px;height:22px;font-size:11px}
+.spk-btn.playing{background:var(--blue);color:#fff;border-color:var(--blue)}
+.spk-btn .ti{font-size:14px}
+.spk-btn.sm .ti{font-size:11px}
+.card-tr{font-family:var(--mono);font-size:12px;color:var(--text-muted);margin-bottom:8px}
+.card-translate{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;color:var(--teal);background:var(--teal-dim);
+  border-radius:var(--r-sm);padding:4px 10px;margin-bottom:16px
+}
+.card-translate .ti{font-size:13px;opacity:.75}
+.card-div{border:none;border-top:1px solid var(--border);margin:18px 0}
+
+.short-blk{
+  background:linear-gradient(135deg,rgba(240,160,48,.13),rgba(240,120,30,.07));
+  border-left:3px solid var(--amber);padding:14px 16px;margin-bottom:22px
+}
+.short-lbl{font-size:10px;font-weight:700;color:var(--amber);opacity:.7;letter-spacing:.06em;margin-bottom:5px}
+.short-txt{font-size:15px;font-weight:500;color:var(--amber);line-height:1.5}
+
+.sec{margin-bottom:20px}
+.sec-lbl{
+  font-size:10px;font-weight:700;color:var(--text-muted);letter-spacing:.06em;
+  margin-bottom:7px;display:flex;align-items:center;gap:6px
+}
+.sec-lbl::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--blue);opacity:.6;flex-shrink:0}
+.sec-txt{font-size:13px;color:var(--text);line-height:1.75}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  font-family:var(--mono);font-size:12px;padding:4px 11px;
+  border-radius:var(--r-md);border:1px solid;cursor:pointer;
+  transition:all .15s;display:inline-flex;align-items:center;gap:4px
+}
+.chip-ok{border-color:var(--border-mid);color:var(--blue);background:none}
+.chip-ok:hover{background:var(--blue-dim);border-color:var(--blue)}
+.chip-no{border:1px dashed var(--border);color:var(--text-muted);background:none}
+.chip-no:hover{border-color:var(--amber);color:var(--amber)}
+
+.notes-area{
+  width:100%;min-height:70px;padding:10px 12px;
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);
+  font-size:13px;line-height:1.65;resize:vertical;display:block;color:var(--text);
+  transition:border-color .15s;margin-bottom:5px
+}
+.notes-area:focus{border-color:var(--blue);outline:none}
+.notes-area::placeholder{color:var(--text-muted)}
+.notes-hint{font-size:11px;color:var(--text-muted)}
+
+/* empty state */
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:40px;gap:14px}
+.empty-ico{font-size:52px;color:var(--text-muted);opacity:.3}
+.empty-title{font-size:18px;font-weight:600;color:var(--text)}
+.empty-desc{font-size:13px;color:var(--text-sec);max-width:360px;line-height:1.75}
+
+/* ─── PREVIEW ─── */
+.preview{
+  width:248px;min-width:248px;
+  background:var(--bg-sidebar);border-left:1px solid var(--border);
+  display:flex;flex-direction:column;overflow:hidden
+}
+.preview.hidden{display:none}
+.pv-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 14px;border-bottom:1px solid var(--border);flex-shrink:0
+}
+.pv-lbl{font-size:10px;color:var(--text-muted);letter-spacing:.07em;font-weight:700}
+.pv-close{
+  width:24px;height:24px;display:flex;align-items:center;justify-content:center;
+  border-radius:var(--r-sm);color:var(--text-muted);transition:all .1s
+}
+.pv-close:hover{background:var(--bg-hover);color:var(--text)}
+.pv-body{flex:1;overflow-y:auto;padding:15px 14px}
+.pv-term{
+  font-family:var(--mono);font-size:24px;font-weight:700;
+  background:linear-gradient(135deg,#1EC8A8,#40E8C8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:3px
+}
+.pv-full{font-size:12px;color:var(--text-sec);margin-bottom:12px}
+.pv-short{background:var(--teal-dim);border-left:2px solid var(--teal);padding:10px 12px;margin-bottom:13px}
+.pv-short-txt{font-size:12px;color:var(--teal);line-height:1.55;font-weight:500}
+.pv-sec{margin-bottom:11px}
+.pv-sec-lbl{font-size:10px;font-weight:700;color:var(--text-muted);letter-spacing:.06em;margin-bottom:4px}
+.pv-sec-txt{font-size:12px;color:var(--text-sec);line-height:1.65}
+.pv-foot{padding:11px 14px;border-top:1px solid var(--border);flex-shrink:0}
+.btn-open-full{
+  width:100%;padding:9px;background:var(--teal);border-radius:var(--r-md);
+  color:#fff;font-size:13px;font-weight:600;transition:opacity .15s
+}
+.btn-open-full:hover{opacity:.82}
+
+/* ─── QUICK CAPTURE ─── */
+.cap-panel{background:var(--bg-sidebar);border-top:1px solid var(--border);padding:13px 16px;display:none}
+.cap-panel.open{display:block}
+.cap-inner{max-width:420px;background:var(--bg-card);border:1px solid var(--border-mid);border-radius:var(--r-lg);padding:16px}
+.cap-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px}
+.cap-desc{font-size:12px;color:var(--text-sec);line-height:1.65;margin-bottom:11px}
+.cap-ta{
+  width:100%;height:88px;padding:9px 11px;
+  background:var(--bg-sidebar);border:1px solid var(--border);border-radius:var(--r-md);
+  font-family:var(--mono);font-size:12px;color:var(--text);resize:none;display:block;margin-bottom:11px;
+  transition:border-color .15s
+}
+.cap-ta:focus{border-color:var(--blue);outline:none}
+.cap-ta::placeholder{color:var(--text-muted)}
+.cap-acts{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.cap-cnt{font-size:11px;color:var(--text-muted);flex:1}
+
+/* ─── BUTTONS ─── */
+.btn-ghost{padding:6px 14px;border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-sec);font-size:12px;transition:all .1s}
+.btn-ghost:hover{color:var(--text);border-color:var(--text-muted)}
+.btn-primary{padding:6px 14px;background:var(--blue);border-radius:var(--r-md);color:#fff;font-size:12px;font-weight:500;transition:background .15s}
+.btn-primary:hover{background:var(--blue-hover)}
+.btn-danger{padding:6px 14px;background:var(--red);border-radius:var(--r-md);color:#fff;font-size:12px;font-weight:500}
+.btn-danger:hover{opacity:.88}
+
+/* ─── MODAL ─── */
+.backdrop{
+  position:fixed;inset:0;background:rgba(4,9,18,.82);backdrop-filter:blur(3px);
+  z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;pointer-events:none;transition:opacity .2s
+}
+.backdrop.open{opacity:1;pointer-events:all}
+.modal{
+  background:var(--bg-modal);border:1px solid var(--border-mid);border-radius:var(--r-lg);
+  width:100%;max-width:520px;max-height:88vh;display:flex;flex-direction:column;
+  transform:scale(.97);transition:transform .2s
+}
+.backdrop.open .modal{transform:scale(1)}
+.modal.wide{max-width:640px}
+.modal.narrow{max-width:400px}
+.modal.menu-modal{max-width:250px;align-self:flex-end;height:100%;max-height:100vh;border-radius:var(--r-lg) 0 0 var(--r-lg);margin:0}
+.m-head{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
+.m-title{font-size:15px;font-weight:600;color:var(--text)}
+.m-close{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-sm);color:var(--text-sec);transition:all .1s}
+.m-close:hover{background:var(--bg-hover);color:var(--text)}
+.m-body{flex:1;overflow-y:auto;padding:20px}
+.m-foot{display:flex;align-items:center;gap:10px;padding:13px 20px;border-top:1px solid var(--border);flex-shrink:0}
+.m-foot-left{flex:1}
+
+/* form */
+.fg{margin-bottom:15px}
+.fl{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:.06em;margin-bottom:5px;display:block}
+.fl span{color:var(--red);margin-left:2px}
+.fi{width:100%;padding:8px 11px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);font-size:13px;color:var(--text);transition:border-color .15s}
+.fi:focus{border-color:var(--blue);outline:none}
+.fi::placeholder{color:var(--text-muted)}
+.fta{width:100%;padding:8px 11px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);font-size:13px;color:var(--text);resize:vertical;display:block;font-family:var(--sans);transition:border-color .15s}
+.fta:focus{border-color:var(--blue);outline:none}
+.fta::placeholder{color:var(--text-muted)}
+.fhint{font-size:11px;color:var(--text-muted);margin-top:4px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsep{border:none;border-top:1px solid var(--border);margin:18px 0}
+.imp-status{margin-top:10px;padding:9px 12px;border-radius:var(--r-md);font-size:13px;display:none}
+.imp-ok{background:var(--green-dim);color:var(--green);display:block}
+.imp-err{background:var(--red-dim);color:var(--red);display:block}
+
+.imp-hint{background:var(--blue-dim);border:1px solid var(--border-mid);border-radius:var(--r-md);padding:13px 15px;margin-bottom:18px}
+.imp-hint-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.imp-hint-lbl{font-size:10px;color:var(--text-muted);letter-spacing:.06em;margin-bottom:3px}
+.imp-hint-term{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--blue)}
+.imp-hint-desc{font-size:12px;color:var(--text-sec);line-height:1.6}
+
+/* conflict */
+.cf-item{display:flex;align-items:center;justify-content:space-between;padding:10px 13px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:8px}
+.cf-name{font-family:var(--mono);font-size:13px;color:var(--amber)}
+.cf-msg{font-size:11px;color:var(--text-muted)}
+.cf-acts{display:flex;gap:6px}
+.bsm{padding:4px 10px;font-size:11px;border-radius:var(--r-sm);border:1px solid;cursor:pointer;font-family:var(--sans);transition:all .1s}
+.bsm-ok{background:none;border-color:var(--blue);color:var(--blue)}
+.bsm-ok:hover{background:var(--blue-dim)}
+.bsm-sk{background:none;border-color:var(--border);color:var(--text-muted)}
+.bsm-sk:hover{border-color:var(--text-muted);color:var(--text)}
+
+/* prompt */
+.prompt-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);padding:14px;font-family:var(--mono);font-size:12px;color:var(--text);line-height:1.7;white-space:pre-wrap;word-break:break-word;max-height:380px;overflow-y:auto}
+
+/* history */
+.h-group{margin-bottom:20px}
+.h-glbl{font-size:10px;font-weight:700;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.h-item{display:flex;align-items:center;justify-content:space-between;padding:8px 11px;border-radius:var(--r-md);cursor:pointer;transition:background .1s}
+.h-item:hover{background:var(--bg-hover)}
+.h-term{font-family:var(--mono);font-size:13px;color:var(--blue)}
+.h-full{font-size:11px;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:140px}
+.h-time{font-size:11px;color:var(--text-muted);flex-shrink:0}
+
+/* menu */
+.mi{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 18px;color:var(--text);font-size:14px;
+  transition:background .1s;width:100%;text-align:left;border-radius:var(--r-sm);margin:0 6px;width:calc(100% - 12px)
+}
+.mi:hover{background:var(--bg-hover)}
+.mi .ti{font-size:16px;color:var(--text-sec)}
+.m-sep{border:none;border-top:1px solid var(--border);margin:7px 18px}
+
+/* toast */
+.toast{position:fixed;bottom:22px;right:22px;padding:9px 16px;border-radius:var(--r-md);font-size:13px;font-weight:500;z-index:999;opacity:0;transform:translateY(6px);transition:all .2s;pointer-events:none}
+.toast.show{opacity:1;transform:translateY(0)}
+.t-ok{background:var(--green);color:#fff}
+.t-err{background:var(--red);color:#fff}
+.t-inf{background:var(--blue);color:#fff}
+
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fi .18s ease}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="app-header">
+    <div class="logo">
+      <div class="logo-icon">AI</div>
+      <div><div class="logo-title">AI Terms</div><div class="logo-sub">Справочник</div></div>
+    </div>
+    <div class="h-div"></div>
+    <button class="nav-btn" id="btnBack" onclick="A.back()" disabled title="Назад (Ctrl+←)"><i class="ti ti-arrow-left"></i></button>
+    <button class="nav-btn" id="btnFwd"  onclick="A.fwd()"  disabled title="Вперёд (Ctrl+→)"><i class="ti ti-arrow-right"></i></button>
+    <nav class="breadcrumbs" id="bc" aria-label="История переходов"></nav>
+    <span id="syncIndicator" style="font-family:var(--mono);font-size:10px;letter-spacing:.04em;white-space:nowrap;flex-shrink:0;transition:color .3s"></span>
+    <button class="menu-btn" onclick="A.openMenu()" title="Меню"><i class="ti ti-menu-2" style="font-size:18px"></i></button>
+  </header>
+
+  <!-- ═══ CONTENT ═══ -->
+  <div class="content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-top">
+        <div class="srch-wrap">
+          <i class="ti ti-search"></i>
+          <input type="text" class="srch" id="srch" placeholder="Поиск… (* для маски)" oninput="A.search(this.value)">
+        </div>
+        <button class="quick-btn" onclick="A.toggleCap()">
+          <i class="ti ti-plus" style="font-size:14px"></i>Быстро добавить
+        </button>
+      </div>
+      <div class="terms-list" id="tlist"></div>
+      <div class="sb-foot" id="tcnt"></div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="act-bar">
+        <button class="btn-edit hidden" id="btnEd" onclick="A.openEdit()">
+          <i class="ti ti-edit" style="font-size:13px"></i>Редактировать
+        </button>
+        <button class="btn-new" onclick="A.openImport()">
+          <i class="ti ti-plus" style="font-size:13px"></i>Новый термин
+        </button>
+      </div>
+      <div class="card-scroll" id="cardWrap"></div>
+    </main>
+
+    <!-- PREVIEW -->
+    <aside class="preview hidden" id="pvPanel">
+      <div class="pv-head">
+        <span class="pv-lbl">Предпросмотр</span>
+        <button class="pv-close" onclick="A.closePv()" title="Закрыть"><i class="ti ti-x"></i></button>
+      </div>
+      <div class="pv-body" id="pvBody"></div>
+      <div class="pv-foot">
+        <button class="btn-open-full" onclick="A.openFull()">Открыть полностью →</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- QUICK CAPTURE -->
+  <div class="cap-panel" id="capPanel">
+    <div class="cap-inner">
+      <div class="cap-title">Быстрое добавление</div>
+      <div class="cap-desc">Пиши термины по одному на строке. Потом нажми «Скопировать для ИИ» → вставь в ChatGPT → получи JSON → импортируй всё одним блоком.</div>
+      <textarea class="cap-ta" id="capTA" placeholder="RCA&#10;KYC&#10;Backlog&#10;5 Why" oninput="A.updCapCnt()"></textarea>
+      <div class="cap-acts">
+        <span class="cap-cnt" id="capCnt"></span>
+        <button class="btn-ghost" onclick="A.copyCap()"><i class="ti ti-copy" style="font-size:12px;vertical-align:-1px"></i> Скопировать для ИИ</button>
+        <button class="btn-primary" onclick="A.saveDrafts()">Сохранить черновики</button>
+        <button class="btn-ghost" onclick="A.toggleCap()">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODALS ═══ -->
+<div class="backdrop" id="bd" onclick="A.closeBd(event)">
+
+  <!-- IMPORT -->
+  <div class="modal" id="mImport" style="display:none">
+    <div class="m-head"><span class="m-title" id="impTitle">Импорт термина</span><button class="m-close" onclick="A.closeM()"><i class="ti ti-x"></i></button></div>
+    <div class="m-body">
+      <div class="imp-hint" id="impHint" style="display:none">
+        <div class="imp-hint-row">
+          <div><div class="imp-hint-lbl">Создаём термин</div><div class="imp-hint-term" id="impHintTerm"></div></div>
+          <button class="btn-ghost" onclick="A.copyImportPrompt()"><i class="ti ti-copy" style="font-size:12px;vertical-align:-1px"></i> Скопировать промпт</button>
+        </div>
+        <div class="imp-hint-desc">Вставь в ChatGPT, получи JSON, вернись сюда и вставь его ниже.</div>
+      </div>
+      <div class="fg">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+          <label class="fl" style="margin-bottom:0">Вставь JSON от ИИ<span>*</span></label>
+          <button class="btn-ghost" onclick="document.getElementById('impFile').click()" style="padding:4px 10px;font-size:11px">
+            <i class="ti ti-folder-open" style="font-size:12px;vertical-align:-1px"></i> Загрузить файл
+          </button>
+          <input type="file" id="impFile" accept="application/json,.json" style="display:none" onchange="A.loadImportFile(this)">
+        </div>
+        <textarea class="fta" id="impJSON" rows="11" placeholder='{"term":"RCA","fullName":"Root Cause Analysis",...}' oninput="A.validateImp()"></textarea>
+        <div class="imp-status" id="impSt"></div>
+      </div>
+      <div id="cfList"></div>
+    </div>
+    <div class="m-foot">
+      <div class="m-foot-left">
+        <span id="impSum" style="font-size:12px;color:var(--text-muted)"></span>
+        <button class="btn-ghost hidden" id="btnManual" style="margin-left:8px" onclick="A.switchToManual()">Заполнить вручную</button>
+      </div>
+      <button class="btn-ghost" onclick="A.closeM()">Отмена</button>
+      <button class="btn-primary" id="btnImp" onclick="A.doImport()" disabled>Импортировать</button>
+    </div>
+  </div>
+
+  <!-- EDIT -->
+  <div class="modal wide" id="mEdit" style="display:none">
+    <div class="m-head"><span class="m-title" id="edTitle">Редактировать</span><button class="m-close" onclick="A.closeM()"><i class="ti ti-x"></i></button></div>
+    <div class="m-body">
+      <div class="frow">
+        <div class="fg"><label class="fl">Термин<span>*</span></label><input type="text" class="fi" id="edTerm" placeholder="RCA"></div>
+        <div class="fg"><label class="fl">Полное название</label><input type="text" class="fi" id="edFull" placeholder="Root Cause Analysis"></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Как читать</label><input type="text" class="fi" id="edRead" placeholder="Эр — Си — Эй"></div>
+        <div class="fg"><label class="fl">Произношение</label><input type="text" class="fi" id="edPron" placeholder="рут коуз аналэсис"></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Транскрипция</label><input type="text" class="fi" id="edTr" placeholder="/ruːt kɔːz ˈænəlɪsɪs/"></div>
+        <div class="fg"><label class="fl">Дословный перевод</label><input type="text" class="fi" id="edTrans" placeholder="Анализ первопричины"></div>
+      </div>
+      <hr class="fsep">
+      <div class="fg"><label class="fl">Коротко<span>*</span></label><input type="text" class="fi" id="edShort" placeholder="Одно предложение — суть для автоматизатора"></div>
+      <div class="fg"><label class="fl">Что это<span>*</span></label><textarea class="fta" id="edWhat" rows="3" placeholder="Определение. 2-3 предложения."></textarea></div>
+      <div class="fg"><label class="fl">Зачем автоматизатору<span>*</span></label><textarea class="fta" id="edWhy" rows="3"></textarea></div>
+      <div class="fg"><label class="fl">Пример</label><textarea class="fta" id="edEx" rows="3"></textarea></div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Связанные термины</label><input type="text" class="fi" id="edRel" placeholder="KYC, API, Backlog"><div class="fhint">Через запятую</div></div>
+        <div class="fg"><label class="fl">Ссылка на урок</label><input type="url" class="fi" id="edLink" placeholder="https://..."></div>
+      </div>
+      <div class="fg"><label class="fl">Мои заметки</label><textarea class="fta" id="edNotes" rows="3"></textarea><div class="fhint">Не перезаписывается при обновлении через импорт</div></div>
+    </div>
+    <div class="m-foot">
+      <div class="m-foot-left"><button class="btn-danger hidden" id="btnDel" onclick="A.confirmDel()"><i class="ti ti-trash" style="font-size:13px;vertical-align:-1px"></i> Удалить</button></div>
+      <button class="btn-ghost" onclick="A.closeM()">Отмена</button>
+      <button class="btn-primary" onclick="A.saveEdit()">Сохранить</button>
+    </div>
+  </div>
+
+  <!-- PROMPT -->
+  <div class="modal wide" id="mPrompt" style="display:none">
+    <div class="m-head"><span class="m-title">Промпт для ИИ</span><button class="m-close" onclick="A.closeM()"><i class="ti ti-x"></i></button></div>
+    <div class="m-body">
+      <p style="font-size:13px;color:var(--text-sec);margin-bottom:12px;line-height:1.7">Используй как системную инструкцию в ChatGPT, Claude или другой модели. Один термин или список через запятую.</p>
+      <div class="prompt-box" id="promptBox"></div>
+    </div>
+    <div class="m-foot">
+      <div class="m-foot-left"><button class="btn-ghost" onclick="A.resetPrompt()">Сбросить</button></div>
+      <button class="btn-ghost" onclick="A.closeM()">Закрыть</button>
+      <button class="btn-primary" onclick="A.copyPrompt()"><i class="ti ti-copy" style="font-size:13px;vertical-align:-1px"></i> Копировать</button>
+    </div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="modal" id="mHist" style="display:none">
+    <div class="m-head"><span class="m-title">История просмотров</span><button class="m-close" onclick="A.closeM()"><i class="ti ti-x"></i></button></div>
+    <div class="m-body" id="histBody"></div>
+    <div class="m-foot">
+      <div class="m-foot-left"><button class="btn-ghost" style="color:var(--red);border-color:var(--red-dim)" onclick="A.clearHist()">Очистить</button></div>
+      <button class="btn-ghost" onclick="A.closeM()">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- CONFIRM -->
+  <div class="modal narrow" id="mConfirm" style="display:none">
+    <div class="m-head"><span class="m-title" id="cfTitle">Подтверждение</span><button class="m-close" onclick="A.closeM()"><i class="ti ti-x"></i></button></div>
+    <div class="m-body"><p id="cfText" style="font-size:14px;color:var(--text-sec);line-height:1.7"></p></div>
+    <div class="m-foot">
+      <div class="m-foot-left"></div>
+      <button class="btn-ghost" onclick="A.closeM()">Отмена</button>
+      <button class="btn-danger" id="cfBtn">Удалить</button>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <div class="modal menu-modal" id="mMenu" style="display:none">
+    <div class="m-body" style="padding:10px 0">
+      <div style="padding:15px 18px 12px"><div style="font-size:15px;font-weight:700;color:var(--text)">Меню</div></div>
+      <button class="mi" onclick="A.closeM()"><i class="ti ti-home"></i>Главная</button>
+      <button class="mi" onclick="A.closeM();A.openPromptModal()"><i class="ti ti-messages"></i>Промпт для ИИ</button>
+      <div class="m-sep"></div>
+      <button class="mi" onclick="A.closeM();A.openImport()"><i class="ti ti-upload"></i>Импорт JSON</button>
+      <button class="mi" onclick="A.closeM();A.exportData()"><i class="ti ti-download"></i>Экспорт JSON</button>
+      <div class="m-sep"></div>
+      <button class="mi" onclick="A.closeM();A.openHist()"><i class="ti ti-history"></i>История</button>
+      <div class="m-sep"></div>
+      <button class="mi" onclick="A.closeM();A.openHelp()"><i class="ti ti-help-circle"></i>Справка</button>
+      <button class="mi" onclick="A.closeM();A.about()"><i class="ti ti-info-circle"></i>О программе</button>
+    </div>
+  </div>
+
+  <!-- HELP -->
+  <div class="modal wide" id="mHelp" style="display:none">
+    <div class="m-head"><span class="m-title">Как это работает</span><button class="m-close" onclick="A.closeM()"><i class="ti ti-x"></i></button></div>
+    <div class="m-body">
+      <div class="sec">
+        <div class="sec-lbl">Идея</div>
+        <div class="sec-txt">Это не энциклопедия и не общая база заметок. Когда термин встречается повторно через несколько уроков или дней — приложение помогает за пару секунд вспомнить его смысл и продолжить учёбу, не теряя контекст.</div>
+      </div>
+      <div class="sec">
+        <div class="sec-lbl">Как добавить термин — три способа</div>
+        <div class="sec-txt">
+          <b style="color:var(--text)">1. Кнопка «+ Новый термин».</b> Меню → «Промпт для ИИ» → копируешь шаблон → вставляешь в ChatGPT вместе с названием термина → получаешь готовый JSON → вставляешь его в окно импорта → готово.<br><br>
+          <b style="color:var(--text)">2. «⚡ Быстро добавить».</b> Во время урока, не отвлекаясь на ChatGPT, просто построчно записываешь названия терминов. После урока копируешь весь список одной кнопкой, отправляешь в ChatGPT — он вернёт JSON сразу для всех. Импортируешь одним блоком.<br><br>
+          <b style="color:var(--text)">3. Клик по связанному термину.</b> Серый пунктирный чип в карточке значит, что термина ещё нет в базе. Клик по нему сразу открывает импорт с подсказкой какой термин нужен и кнопкой скопировать промпт под него.
+        </div>
+      </div>
+      <div class="sec">
+        <div class="sec-lbl">Карточка термина</div>
+        <div class="sec-txt">Блок «Коротко» — самое важное, одно предложение для мгновенного понимания. Дальше — подробности: что это, зачем автоматизатору, пример. Кнопка с динамиком озвучивает термин и полное название вслух. «Мои заметки» — личное пространство, его никогда не перезаписывает повторный импорт.</div>
+      </div>
+      <div class="sec">
+        <div class="sec-lbl">Навигация и поиск</div>
+        <div class="sec-txt">Слева — алфавит и поиск, можно с маской: <span style="font-family:var(--mono);background:var(--bg-card);padding:1px 6px;border-radius:4px;font-size:12px">R*A</span> найдёт RCA. Сверху — стрелки назад/вперёд и хлебные крошки текущего маршрута, по ним можно вернуться на любой шаг. В меню «История» хранится полный список всех просмотров за всё время.</div>
+      </div>
+      <div class="sec" style="margin-bottom:4px">
+        <div class="sec-lbl">Где хранятся данные</div>
+        <div class="sec-txt">Всё хранится локально в этом браузере, без сервера. Если очистишь данные браузера или откроешь приложение на другом устройстве — термины сами не перенесутся. Делай резервную копию через «Экспорт JSON» время от времени, особенно после добавления новых терминов.</div>
+      </div>
+    </div>
+    <div class="m-foot">
+      <div class="m-foot-left"></div>
+      <button class="btn-primary" onclick="A.closeM()">Понятно</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ═══ SCRIPT ═══ -->
+<script>
+// ─── CONSTANTS ───
+const SK = 'ai-terms-v1';
+const MAX_HIST = 50;
+const MAX_NAV  = 10;
+
+// ============================================================
+// НАСТРОЙКИ СИНХРОНИЗАЦИИ — только эти две строки менять
+// после деплоя своего Worker'а (см. инструкцию)
+// ============================================================
+const WORKER_URL   = 'https://ai-terms-api.leonid-cordon.workers.dev/terms';
+const WORKER_TOKEN = '!Capric0rnTerm';
+// ============================================================
+
+function genId(){return 'term_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+
+const DEFAULT_PROMPT =
+`Ты помощник для создания карточек терминов. Пользователь изучает AI Automation — автоматизацию бизнес-процессов с помощью ИИ (инструменты: n8n, Make, Zapier, GPT API и другие).
+
+Твоя задача: принять термин и вернуть ТОЛЬКО JSON в блоке кода.
+Без вступлений. Без объяснений. Только блок \`\`\`json.
+
+ПРАВИЛО: если контекст не дан — объясняй в контексте AI Automation.
+ПРАВИЛО: если контекст дан — используй его как основу и призму.
+ЗАПРЕЩЕНО: добавлять поля которых нет в структуре.
+
+СТРУКТУРА (один термин):
+{
+  "term": "...",
+  "fullName": "...",
+  "howToRead": "...",
+  "pronunciation": "...",
+  "transcription": "...",
+  "translation": "Дословный перевод термина на русский. Для аббревиатур — перевод расшифровки. Для фразовых терминов — перевод самой фразы.",
+  "short": "Одно предложение. Суть для автоматизатора. Без воды.",
+  "what": "Определение. 2-3 предложения.",
+  "why": "Зачем автоматизатору. 2-3 предложения.",
+  "example": "Конкретный пример из автоматизации.",
+  "relatedTerms": ["термин1", "термин2"]
+}
+
+НЕСКОЛЬКО ТЕРМИНОВ — вернуть массив [ {...}, {...} ]
+
+ПРИМЕР ГОТОВОГО РЕЗУЛЬТАТА:
+\`\`\`json
+{
+  "term": "RCA",
+  "fullName": "Root Cause Analysis",
+  "howToRead": "Эр — Си — Эй (аббревиатура, по буквам)",
+  "pronunciation": "рут коуз аналэсис",
+  "transcription": "/ruːt kɔːz ˈænəlɪsɪs/",
+  "translation": "Анализ первопричины",
+  "short": "Найди причину проблемы до того, как начнёшь автоматизировать.",
+  "what": "Метод поиска корневой причины. Не устраняет симптомы — находит почему проблема вообще возникает.",
+  "why": "Перед автоматизацией важно понять истинную причину. Автоматизировать неправильный процесс — значит быстрее делать ошибку.",
+  "example": "Большой backlog KYC-заявок. Корневая причина — ручная проверка документов. Решение — автоматизировать проверку, а не нанимать людей.",
+  "relatedTerms": ["KYC", "Backlog", "5 Why"]
+}
+\`\`\`
+
+---
+ЗАПРОС:
+
+Термин: [впиши один или несколько через запятую]
+Контекст (необязательно): [вставь абзац из урока или удали эту строку]`;
+
+const SEED = [
+  {term:'RCA',fullName:'Root Cause Analysis',howToRead:'Эр — Си — Эй (аббревиатура, по буквам)',pronunciation:'рут коуз аналэсис',transcription:'/ruːt kɔːz ˈænəlɪsɪs/',translation:'Анализ первопричины',short:'Найди причину проблемы до того, как начнёшь автоматизировать.',what:'Метод поиска корневой причины проблемы — не устранения симптомов, а нахождения того, почему проблема вообще возникает.',why:'Перед автоматизацией важно понять истинную причину. Автоматизировать неправильный процесс — значит быстрее делать ошибку.',example:'Большой backlog KYC-заявок. Корневая причина — ручная проверка документов. Решение — автоматизировать её, а не нанимать людей.',relatedTerms:['KYC','API','Backlog'],lessonLink:'',notes:''},
+  {term:'KYC',fullName:'Know Your Customer',howToRead:'Кей — Вай — Си (аббревиатура, по буквам)',pronunciation:'ноу ёр кастомэр',transcription:'/nəʊ jɔː ˈkʌstəmə/',translation:'Знай своего клиента',short:'Обязательная проверка личности клиента перед работой с ним.',what:'Процедура верификации личности клиента, которую обязаны проводить финансовые и другие регулируемые компании.',why:'KYC-процессы медленные и дорогие вручную — один из главных кандидатов на автоматизацию в fintech и юридических компаниях.',example:'Банк автоматически проверяет паспорт через API сервиса распознавания документов вместо ручной проверки менеджером.',relatedTerms:['RCA','API'],lessonLink:'',notes:'Часто упоминается вместе с AML (Anti-Money Laundering).'},
+  {term:'API',fullName:'Application Programming Interface',howToRead:'Эй — Пи — Ай (аббревиатура, по буквам)',pronunciation:'эпликэйшн программинг интэрфэйс',transcription:'/ˌæplɪˈkeɪʃən ˈprəʊɡræmɪŋ ˈɪntəfeɪs/',translation:'Интерфейс программирования приложений',short:'Мост между программами — позволяет им общаться без участия человека.',what:'Набор правил для взаимодействия между разными программными системами. Одна система вызывает функцию другой и получает ответ.',why:'Основа большинства автоматизаций. Через API системы обмениваются данными без ручного участия — сценарии в n8n или Make работают именно через API.',example:'CRM через API автоматически создаёт задачу в Trello, когда приходит новая заявка. Человек ничего не делает — всё происходит мгновенно.',relatedTerms:['KYC','RCA'],lessonLink:'',notes:''}
+];
+
+// ─── STATE ───
+const S = {
+  terms:[],
+  nav:[],ni:-1,
+  viewHist:[],drafts:[],
+  pvId:null,edId:null,
+  q:'',curModal:null,
+  prompt:DEFAULT_PROMPT,
+  _cf:{},_imp:null,_cfItems:[],_toAdd:[],
+  _notesTimer:null,_pendingNotes:null
+};
+
+// ─── DATA ───
+const D = {
+  load(){
+    try{
+      const r=localStorage.getItem(SK);
+      if(!r){D.seed();return}
+      const d=JSON.parse(r);
+      S.terms=d.terms||[];
+      S.viewHist=d.viewHist||[];S.drafts=d.drafts||[];
+      S.prompt=d.prompt||DEFAULT_PROMPT;
+      if(d.lastId){const t=D.byId(d.lastId);if(t){S.nav=[d.lastId];S.ni=0}}
+    }catch(e){console.error(e)}
+  },
+  seed(){
+    SEED.forEach(item=>D.add(item));
+    if(S.terms.length>0){S.nav=[S.terms[0].id];S.ni=0}
+    D.save();
+  },
+  saveLocal(){
+    try{
+      localStorage.setItem(SK,JSON.stringify({
+        terms:S.terms,
+        viewHist:S.viewHist.slice(0,MAX_HIST),
+        drafts:S.drafts,prompt:S.prompt,
+        lastId:S.nav[S.ni]||null
+      }));
+    }catch(e){console.error(e)}
+  },
+  save(){
+    D.saveLocal();
+    Sync.push(S.terms);
+  },
+  byId(id){return S.terms.find(t=>t.id===id)},
+  byName(n){return S.terms.find(t=>t.term.toLowerCase()===n.toLowerCase())},
+  cur(){return D.byId(S.nav[S.ni])},
+  add(data){
+    const now=new Date().toISOString();
+    const t={
+      id:genId(),
+      term:data.term||'',fullName:data.fullName||'',
+      howToRead:data.howToRead||'',pronunciation:data.pronunciation||'',
+      transcription:data.transcription||'',translation:data.translation||'',
+      short:data.short||'',what:data.what||'',why:data.why||'',example:data.example||'',
+      relatedTerms:Array.isArray(data.relatedTerms)?data.relatedTerms:[],
+      lessonLink:data.lessonLink||'',notes:data.notes||'',
+      isDraft:!!data.isDraft,createdAt:now,updatedAt:now
+    };
+    S.terms.push(t);D.save();return t;
+  },
+  upd(id,ch){
+    const i=S.terms.findIndex(t=>t.id===id);if(i<0)return;
+    if(ch._fromImport){delete ch.notes;delete ch.lessonLink}
+    delete ch._fromImport;
+    S.terms[i]={...S.terms[i],...ch,updatedAt:new Date().toISOString()};
+    D.save();
+  },
+  del(id){
+    S.terms=S.terms.filter(t=>t.id!==id);
+    S.nav=S.nav.filter(h=>h!==id);
+    if(S.ni>=S.nav.length)S.ni=S.nav.length-1;
+    D.save();
+  }
+};
+
+// ─── CLOUD SYNC (Cloudflare Worker + KV — тот же принцип, что в daily-ops) ───
+const Sync = {
+  status:'idle',_t:null,
+  setStatus(s){
+    Sync.status=s;
+    const el=document.getElementById('syncIndicator');
+    if(!el)return;
+    const states={
+      idle:{text:'',color:'var(--text-muted)'},
+      syncing:{text:'⟳ синхронизация…',color:'var(--text-muted)'},
+      ok:{text:'✓ сохранено',color:'var(--green)'},
+      error:{text:'⚠ офлайн',color:'var(--amber)'}
+    };
+    const st=states[s]||states.idle;
+    el.textContent=st.text;el.style.color=st.color;
+    if(s==='ok'){clearTimeout(Sync._t);Sync._t=setTimeout(()=>{if(Sync.status==='ok')Sync.setStatus('idle')},3000)}
+  },
+  async push(terms){
+    Sync.setStatus('syncing');
+    try{
+      const r=await fetch(WORKER_URL,{
+        method:'PUT',
+        headers:{'Content-Type':'application/json','Authorization':`Bearer ${WORKER_TOKEN}`},
+        body:JSON.stringify(terms)
+      });
+      Sync.setStatus(r.ok?'ok':'error');
+    }catch(e){console.warn('Sync push failed:',e);Sync.setStatus('error')}
+  },
+  async pull(){
+    try{
+      const r=await fetch(WORKER_URL,{headers:{'Authorization':`Bearer ${WORKER_TOKEN}`}});
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      const data=await r.json();
+      if(Array.isArray(data))return data;
+    }catch(e){console.warn('Sync pull failed:',e)}
+    return null;
+  },
+  // Вызывается один раз при старте: подтягивает облако поверх локального кеша
+  async init(){
+    Sync.setStatus('syncing');
+    const remote=await Sync.pull();
+    if(remote===null){
+      Sync.setStatus('error');
+      return;
+    }
+    if(remote.length>0){
+      S.terms=remote;
+      D.saveLocal();
+      R.all();
+    }else if(S.terms.length>0){
+      // Облако ещё пустое (первый запуск Worker'а) — заливаем то, что уже накопилось локально
+      Sync.push(S.terms);
+    }
+    Sync.setStatus('ok');
+  }
+};
+
+// ─── APP ───
+const A = {
+  // NAV
+  go(id){
+    if(!D.byId(id))return;
+    S.nav=S.nav.slice(0,S.ni+1);
+    if(S.nav[S.nav.length-1]!==id){
+      S.nav.push(id);
+      if(S.nav.length>MAX_NAV)S.nav.shift();
+    }
+    S.ni=S.nav.length-1;
+    S.viewHist.unshift({id,time:Date.now()});
+    if(S.viewHist.length>MAX_HIST)S.viewHist.pop();
+    D.save();R.all();
+  },
+  back(){if(S.ni>0){S.ni--;R.all()}},
+  fwd(){if(S.ni<S.nav.length-1){S.ni++;R.all()}},
+  goBc(i){if(i>=0&&i<S.nav.length){S.ni=i;R.all()}},
+
+  // SEARCH
+  search(q){S.q=q;R.sidebar()},
+
+  // NOTES AUTOSAVE (debounced — saves ~1.2s after typing pauses, no need to click away)
+  notesInput(el){
+    const id=Number(el.dataset.termId);
+    const val=el.value;
+    S._pendingNotes={id,val};
+    clearTimeout(S._notesTimer);
+    S._notesTimer=setTimeout(()=>{
+      D.upd(id,{notes:val});
+      S._pendingNotes=null;
+      const ind=document.getElementById('notesSaved');
+      if(ind){ind.style.opacity='1';clearTimeout(A._notesIndTimer);A._notesIndTimer=setTimeout(()=>{ind.style.opacity='0'},1500)}
+    },1200);
+  },
+
+  // PREVIEW
+  openPv(id){S.pvId=id;const p=document.getElementById('pvPanel');p.classList.remove('hidden');R.preview()},
+  closePv(){S.pvId=null;document.getElementById('pvPanel').classList.add('hidden')},
+  openFull(){if(S.pvId){A.closePv();A.go(S.pvId)}},
+
+  // CAPTURE
+  toggleCap(){const p=document.getElementById('capPanel');const o=p.classList.contains('open');p.classList.toggle('open',!o);if(!o)document.getElementById('capTA').focus()},
+  updCapCnt(){const v=document.getElementById('capTA').value.trim();const n=v?v.split('\n').filter(l=>l.trim()).length:0;document.getElementById('capCnt').textContent=n?`${n} ${n===1?'термин':n<5?'термина':'терминов'}`:''},
+  copyCap(){
+    const v=document.getElementById('capTA').value.trim();
+    if(!v){U.toast('Список пуст','err');return}
+    const terms=v.split('\n').filter(l=>l.trim()).join(', ');
+    const txt=S.prompt+`\n\nТермины: ${terms}`;
+    navigator.clipboard.writeText(txt).then(()=>U.toast('Скопировано','ok'));
+  },
+  saveDrafts(){
+    const v=document.getElementById('capTA').value.trim();
+    if(!v){U.toast('Список пуст','err');return}
+    const names=v.split('\n').filter(l=>l.trim());
+    let n=0;
+    names.forEach(name=>{if(!D.byName(name)&&!S.drafts.includes(name.trim())){S.drafts.push(name.trim());n++}});
+    document.getElementById('capTA').value='';A.updCapCnt();A.toggleCap();D.save();R.sidebar();
+    U.toast(`${n} черновик${n===1?'':n<5?'а':'ов'} сохранено`,'ok');
+  },
+
+  // IMPORT
+  openImport(prefillName){
+    S._imp=null;S._cfItems=[];S._toAdd=[];S._cf={};S._missingName=prefillName||null;
+    document.getElementById('impJSON').value='';
+    document.getElementById('impSt').className='imp-status';
+    document.getElementById('cfList').innerHTML='';
+    document.getElementById('impSum').textContent='';
+    document.getElementById('btnImp').disabled=true;
+    const hint=document.getElementById('impHint');
+    const btnManual=document.getElementById('btnManual');
+    if(prefillName){
+      document.getElementById('impTitle').textContent='Создать термин';
+      document.getElementById('impHintTerm').textContent=prefillName;
+      hint.style.display='block';
+      btnManual.classList.remove('hidden');
+    }else{
+      document.getElementById('impTitle').textContent='Импорт термина';
+      hint.style.display='none';
+      btnManual.classList.add('hidden');
+    }
+    A.openM('mImport');
+  },
+  copyImportPrompt(){
+    const name=S._missingName||'';
+    const txt=S.prompt+`\n\nТермин: ${name}`;
+    navigator.clipboard.writeText(txt).then(()=>U.toast('Промпт скопирован — вставь в ChatGPT','ok'));
+  },
+  switchToManual(){
+    const name=S._missingName;
+    A.closeM();
+    setTimeout(()=>A.openForMissing(name),210);
+  },
+  loadImportFile(input){
+    const file=input.files[0];
+    if(!file)return;
+    const reader=new FileReader();
+    reader.onload=e=>{
+      document.getElementById('impJSON').value=e.target.result;
+      A.validateImp();
+      U.toast(`Файл загружен: ${file.name}`,'ok');
+    };
+    reader.onerror=()=>U.toast('Не удалось прочитать файл','err');
+    reader.readAsText(file);
+    input.value='';
+  },
+  validateImp(){
+    const raw=document.getElementById('impJSON').value.trim();
+    const st=document.getElementById('impSt');
+    const su=document.getElementById('impSum');
+    const bi=document.getElementById('btnImp');
+    if(!raw){st.className='imp-status';su.textContent='';bi.disabled=true;S._imp=null;return}
+    try{
+      const clean=raw.replace(/^```json\s*/i,'').replace(/```\s*$/,'').trim();
+      const parsed=JSON.parse(clean);
+      const items=Array.isArray(parsed)?parsed:[parsed];
+      const bad=items.filter(x=>!x.term||!x.short||!x.what||!x.why);
+      if(bad.length){st.className='imp-status imp-err';st.textContent=`Ошибка: у ${bad.length} ${bad.length===1?'термина':'терминов'} нет обязательных полей`;bi.disabled=true;return}
+      S._imp=items;
+      S._cfItems=items.filter(x=>{const ex=D.byName(x.term);return ex&&!ex.isDraft});
+      S._toAdd=items.filter(x=>{const ex=D.byName(x.term);return !ex||ex.isDraft});
+      const cf=document.getElementById('cfList');
+      cf.innerHTML='';
+      if(S._cfItems.length>1){
+        cf.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;padding:2px 2px 10px">
+          <span style="font-size:11px;color:var(--text-muted)">${S._cfItems.length} терминов уже есть в базе</span>
+          <div style="display:flex;gap:6px">
+            <button class="bsm bsm-ok" onclick="A.resolveAllCf('ow')">Перезаписать все</button>
+            <button class="bsm bsm-sk" onclick="A.resolveAllCf('sk')">Пропустить все</button>
+          </div>
+        </div>`;
+      }
+      S._cfItems.forEach(x=>{
+        const d=document.createElement('div');d.className='cf-item';d.dataset.name=x.term;
+        d.innerHTML=`<div><div class="cf-name">${esc(x.term)}</div><div class="cf-msg">Уже существует</div></div>
+        <div class="cf-acts">
+          <button class="bsm bsm-ok" onclick="A.resCf('${x.term}','ow',this)">Перезаписать</button>
+          <button class="bsm bsm-sk" onclick="A.resCf('${x.term}','sk',this)">Пропустить</button>
+        </div>`;
+        cf.appendChild(d);
+      });
+      st.className='imp-status imp-ok';
+      st.textContent=`✓ JSON верный — ${items.length} ${items.length===1?'термин':items.length<5?'термина':'терминов'}`;
+      const nc=S._toAdd.length,cc=S._cfItems.length;
+      let sum=cc?`${nc} новых, ${cc} конфликт${cc===1?'':cc<5?'а':'ов'} — укажи что делать`:`${nc} ${nc===1?'новый термин':'новых терминов'} готово`;
+      if(S._missingName&&items.length===1&&items[0].term.toLowerCase()!==S._missingName.toLowerCase()){
+        sum+=` · название отличается от «${S._missingName}» — это ок, если ИИ его уточнил`;
+      }
+      su.textContent=sum;
+      bi.disabled=false;
+    }catch(e){
+      st.className='imp-status imp-err';st.textContent='Ошибка разбора JSON. Проверь формат.';bi.disabled=true;S._imp=null;
+    }
+  },
+  resCf(name,action,btn){
+    S._cf[name]=action;
+    const item=btn.closest('.cf-item');
+    item.style.opacity=action==='sk'?'0.4':'1';
+    item.querySelector('.cf-name').style.color=action==='ow'?'var(--green)':'var(--text-muted)';
+    item.querySelectorAll('.bsm').forEach(b=>{b.style.fontWeight='normal'});
+    btn.style.fontWeight='700';
+  },
+  resolveAllCf(action){
+    document.querySelectorAll('#cfList .cf-item').forEach(item=>{
+      const name=item.dataset.name;
+      S._cf[name]=action;
+      item.style.opacity=action==='sk'?'0.4':'1';
+      item.querySelector('.cf-name').style.color=action==='ow'?'var(--green)':'var(--text-muted)';
+      item.querySelectorAll('.bsm').forEach(b=>{
+        const isMatch=(action==='ow'&&b.classList.contains('bsm-ok'))||(action==='sk'&&b.classList.contains('bsm-sk'));
+        b.style.fontWeight=isMatch?'700':'normal';
+      });
+    });
+  },
+  doImport(){
+    if(!S._imp)return;
+    let added=0,updated=0,firstId=null;
+    S._imp.forEach(item=>{
+      const ex=D.byName(item.term);
+      if(ex&&!ex.isDraft){
+        if((S._cf[item.term]||'sk')==='ow'){
+          D.upd(ex.id,{...item,isDraft:false,_fromImport:true});updated++;
+          S.drafts=S.drafts.filter(d=>d.toLowerCase()!==item.term.toLowerCase());
+        }
+      }else if(ex&&ex.isDraft){
+        D.upd(ex.id,{...item,isDraft:false,_fromImport:true});added++;
+        S.drafts=S.drafts.filter(d=>d.toLowerCase()!==item.term.toLowerCase());
+        if(firstId===null)firstId=ex.id;
+      }else{
+        const nt=D.add({...item,isDraft:false});added++;
+        S.drafts=S.drafts.filter(d=>d.toLowerCase()!==item.term.toLowerCase());
+        if(firstId===null)firstId=nt.id;
+      }
+    });
+    if(firstId!==null)setTimeout(()=>A.go(firstId),120);
+    S._cf={};D.save();A.closeM();R.all();
+    U.toast(`Добавлено: ${added}, обновлено: ${updated}`,'ok');
+  },
+
+  // EDIT
+  openEdit(){
+    const t=D.cur();if(!t)return;
+    S.edId=t.id;
+    document.getElementById('edTitle').textContent=`Редактировать — ${t.term}`;
+    document.getElementById('edTerm').value=t.term;
+    document.getElementById('edFull').value=t.fullName;
+    document.getElementById('edRead').value=t.howToRead;
+    document.getElementById('edPron').value=t.pronunciation;
+    document.getElementById('edTr').value=t.transcription;
+    document.getElementById('edTrans').value=t.translation;
+    document.getElementById('edShort').value=t.short;
+    document.getElementById('edWhat').value=t.what;
+    document.getElementById('edWhy').value=t.why;
+    document.getElementById('edEx').value=t.example;
+    document.getElementById('edRel').value=(t.relatedTerms||[]).join(', ');
+    document.getElementById('edLink').value=t.lessonLink;
+    document.getElementById('edNotes').value=t.notes;
+    document.getElementById('btnDel').classList.remove('hidden');
+    A.openM('mEdit');
+  },
+  saveEdit(){
+    const name=document.getElementById('edTerm').value.trim();
+    if(!name){U.toast('Термин не может быть пустым','err');return}
+    const rel=document.getElementById('edRel').value.split(',').map(s=>s.trim()).filter(Boolean);
+    D.upd(S.edId,{
+      term:name,fullName:document.getElementById('edFull').value.trim(),
+      howToRead:document.getElementById('edRead').value.trim(),
+      pronunciation:document.getElementById('edPron').value.trim(),
+      transcription:document.getElementById('edTr').value.trim(),
+      translation:document.getElementById('edTrans').value.trim(),
+      short:document.getElementById('edShort').value.trim(),
+      what:document.getElementById('edWhat').value.trim(),
+      why:document.getElementById('edWhy').value.trim(),
+      example:document.getElementById('edEx').value.trim(),
+      relatedTerms:rel,
+      lessonLink:document.getElementById('edLink').value.trim(),
+      notes:document.getElementById('edNotes').value.trim(),
+      isDraft:false
+    });
+    A.closeM();R.all();U.toast('Сохранено','ok');
+  },
+  confirmDel(){
+    const t=D.byId(S.edId);if(!t)return;
+    document.getElementById('cfTitle').textContent='Удалить термин';
+    document.getElementById('cfText').textContent=`Удалить «${t.term}»? Это действие нельзя отменить.`;
+    document.getElementById('cfBtn').onclick=()=>{D.del(S.edId);S.edId=null;A.closeM();R.all();U.toast('Термин удалён','inf')};
+    A.openM('mConfirm');
+  },
+  openForMissing(name){
+    let t=D.byName(name);
+    if(!t)t=D.add({term:name,isDraft:true,short:'',what:'',why:''});
+    S.edId=t.id;
+    document.getElementById('edTitle').textContent=`Создать — ${name}`;
+    ['edFull','edRead','edPron','edTr','edTrans','edShort','edWhat','edWhy','edEx','edRel','edLink','edNotes'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('edTerm').value=name;
+    document.getElementById('btnDel').classList.remove('hidden');
+    A.openM('mEdit');
+  },
+
+  // PROMPT
+  openPromptModal(){document.getElementById('promptBox').textContent=S.prompt;A.openM('mPrompt')},
+  copyPrompt(){navigator.clipboard.writeText(S.prompt).then(()=>U.toast('Промпт скопирован','ok'))},
+  resetPrompt(){if(confirm('Сбросить промпт до стандартного?')){S.prompt=DEFAULT_PROMPT;D.save();document.getElementById('promptBox').textContent=S.prompt;U.toast('Промпт сброшен','inf')}},
+
+  // HISTORY
+  openHist(){
+    const body=document.getElementById('histBody');
+    if(!S.viewHist.length){body.innerHTML='<p style="color:var(--text-muted);font-size:13px">История пуста.</p>';A.openM('mHist');return}
+    const groups={};
+    S.viewHist.forEach(e=>{
+      const t=D.byId(e.id);if(!t)return;
+      const d=new Date(e.time);const key=fmtDate(d);
+      if(!groups[key])groups[key]=[];
+      groups[key].push({t,d});
+    });
+    body.innerHTML=Object.entries(groups).map(([lbl,items])=>`
+      <div class="h-group">
+        <div class="h-glbl">${lbl}</div>
+        ${items.map(({t,d})=>`
+          <div class="h-item" onclick="A.closeM();A.go(${t.id})">
+            <span class="h-term">${esc(t.term)}</span>
+            <span class="h-full">${esc(t.fullName)}</span>
+            <span class="h-time">${d.toLocaleTimeString('ru',{hour:'2-digit',minute:'2-digit'})}</span>
+          </div>`).join('')}
+      </div>`).join('');
+    A.openM('mHist');
+  },
+  clearHist(){if(confirm('Очистить всю историю?')){S.viewHist=[];D.save();A.closeM();U.toast('История очищена','inf')}},
+
+  // EXPORT
+  exportData(){
+    const out=S.terms.filter(t=>!t.isDraft).map(({id,isDraft,createdAt,updatedAt,...rest})=>rest);
+    const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=url;a.download='terms.json';a.click();
+    URL.revokeObjectURL(url);
+    U.toast(`Экспортировано ${out.length} терминов`,'ok');
+  },
+
+  // MODALS
+  openMenu(){A.openM('mMenu')},
+  openHelp(){A.openM('mHelp')},
+  about(){alert('AI Terms v1.0\n\nЛичный справочник терминов для быстрого восстановления контекста во время обучения AI Automation.\n\nДанные хранятся в localStorage браузера.\nЭкспортируй через меню → Экспорт JSON для резервной копии.')},
+  openM(id){
+    clearTimeout(A._closeTimer);
+    document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+    document.getElementById(id).style.display='flex';
+    document.getElementById('bd').classList.add('open');
+    S.curModal=id;
+  },
+  closeM(){
+    document.getElementById('bd').classList.remove('open');
+    A._closeTimer=setTimeout(()=>document.querySelectorAll('.modal').forEach(m=>m.style.display='none'),200);
+    S.curModal=null;
+  },
+  closeBd(e){if(e.target===document.getElementById('bd'))A.closeM()}
+};
+
+// ─── RENDER ───
+const R = {
+  all(){R.sidebar();R.card();R.bc();R.navBtns();R.preview();document.getElementById('btnEd').classList.toggle('hidden',!D.cur())},
+  sidebar(){
+    const q=S.q.toLowerCase();
+    const wc=q.includes('*');
+    const flt=S.terms.filter(t=>{
+      if(!q)return true;
+      if(wc){const p=new RegExp(q.replace(/\*/g,'.*'),'i');return p.test(t.term)||p.test(t.fullName||'')||p.test(t.short||'')}
+      return t.term.toLowerCase().includes(q)||(t.fullName||'').toLowerCase().includes(q)||(t.short||'').toLowerCase().includes(q)||(t.what||'').toLowerCase().includes(q);
+    });
+    const draftNames=S.drafts.filter(n=>!q||n.toLowerCase().includes(q.replace(/\*/g,'')));
+    const grp={};
+    flt.forEach(t=>{const L=t.term[0].toUpperCase();if(!grp[L])grp[L]=[];grp[L].push(t)});
+    draftNames.forEach(n=>{const L=n[0].toUpperCase();if(!grp[L])grp[L]=[];grp[L].push({_dn:true,term:n})});
+    const cur=S.nav[S.ni];
+    let h='';
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(L=>{
+      const items=(grp[L]||[]).sort((a,b)=>a.term.localeCompare(b.term));
+      h+=`<div class="l-row${items.length?'':' mt'}"><span class="l-lbl">${L}</span><span class="l-cnt">${items.length}</span></div>`;
+      items.forEach(t=>{
+        if(t._dn){
+          h+=`<div class="t-row" onclick="A.openImport('${escA(t.term)}')"><span class="t-name">${esc(t.term)}</span><span class="t-badge" title="Черновик">✎</span></div>`;
+        }else{
+          const act=t.id===cur;
+          h+=`<div class="t-row${act?' active':''}" onclick="A.go(${t.id})"><span class="t-name">${esc(t.term)}</span>${t.isDraft?'<span class="t-badge" title="Черновик">✎</span>':''}</div>`;
+        }
+      });
+    });
+    document.getElementById('tlist').innerHTML=h;
+    const tot=S.terms.filter(t=>!t.isDraft).length;
+    const dr=S.terms.filter(t=>t.isDraft).length+S.drafts.length;
+    document.getElementById('tcnt').textContent=`${tot} ${tot===1?'термин':tot<5?'термина':'терминов'}${dr?` · ${dr} черновик${dr===1?'':dr<5?'а':'ов'}`.trim():''}`;
+  },
+  card(){
+    const w=document.getElementById('cardWrap');
+    const t=D.cur();
+    if(!t&&S.terms.length===0){
+      w.innerHTML=`<div class="empty">
+        <div class="empty-ico"><i class="ti ti-notebook" style="font-size:52px"></i></div>
+        <div class="empty-title">Справочник пуст</div>
+        <div class="empty-desc">Личный справочник терминов для быстрого восстановления контекста во время обучения AI Automation.<br><br>Добавь первый термин — сгенерируй JSON через ChatGPT и вставь сюда.</div>
+        <button class="btn-new" style="margin-top:8px" onclick="A.openImport()"><i class="ti ti-plus" style="font-size:14px"></i>Добавить первый термин</button>
+      </div>`;return;
+    }
+    if(!t){w.innerHTML='<div style="padding:40px;color:var(--text-muted)">Выбери термин слева</div>';return}
+    const chips=(t.relatedTerms||[]).map(n=>{
+      const f=D.byName(n);
+      return f?`<button class="chip chip-ok" onclick="A.openPv(${f.id})">${esc(n)}</button>`
+               :`<button class="chip chip-no" onclick="A.openImport('${escA(n)}')" title="Нет в базе — нажми чтобы создать через ИИ">${esc(n)} <i class="ti ti-plus" style="font-size:10px"></i></button>`;
+    }).join('');
+    const lnk=t.lessonLink
+      ?`<a href="${esc(t.lessonLink)}" target="_blank" style="color:var(--blue);font-size:13px;display:inline-flex;align-items:center;gap:5px"><i class="ti ti-external-link" style="font-size:13px"></i>${esc(t.lessonLink.replace(/^https?:\/\//,''))}</a>`
+      :`<span style="font-size:13px;color:var(--text-muted)">Не указана</span>`;
+    w.innerHTML=`<div class="card anim">
+      <div class="term-row">
+        <div class="card-term">${esc(t.term)}</div>
+        <button class="spk-btn" onclick="TTS.speak(this,'${escA(t.term)}')" title="Озвучить «${esc(t.term)}»" aria-label="Озвучить термин"><i class="ti ti-volume"></i></button>
+      </div>
+      ${t.howToRead?`<div class="card-read">${esc(t.howToRead)}</div>`:''}
+      ${t.fullName?`<div class="full-row"><div class="card-full">${esc(t.fullName)}</div><button class="spk-btn sm" onclick="TTS.speak(this,'${escA(t.fullName)}')" title="Озвучить полное название" aria-label="Озвучить полное название"><i class="ti ti-volume"></i></button></div>`:''}
+      ${t.pronunciation?`<div class="card-pron">${esc(t.pronunciation)}</div>`:''}
+      ${t.transcription?`<div class="card-tr">${esc(t.transcription)}</div>`:''}
+      ${t.translation?`<div class="card-translate"><i class="ti ti-language"></i>${esc(t.translation)}</div>`:''}
+      <hr class="card-div">
+      ${t.short?`<div class="short-blk"><div class="short-lbl">Коротко</div><div class="short-txt">${esc(t.short)}</div></div>`:''}
+      ${t.what?`<div class="sec"><div class="sec-lbl">Что это</div><div class="sec-txt">${esc(t.what)}</div></div>`:''}
+      ${t.why?`<div class="sec"><div class="sec-lbl">Зачем автоматизатору</div><div class="sec-txt">${esc(t.why)}</div></div>`:''}
+      ${t.example?`<div class="sec"><div class="sec-lbl">Пример</div><div class="sec-txt">${esc(t.example)}</div></div>`:''}
+      ${chips?`<div class="sec"><div class="sec-lbl">Связанные термины</div><div class="chips">${chips}</div></div>`:''}
+      <div class="sec"><div class="sec-lbl">Ссылка на урок</div>${lnk}</div>
+      <div class="sec">
+        <div class="sec-lbl">Мои заметки</div>
+        <textarea class="notes-area" id="notesArea" data-term-id="${t.id}" placeholder="Добавь свои мысли, наблюдения, примеры…" oninput="A.notesInput(this)" onchange="D.upd(${t.id},{notes:this.value})">${esc(t.notes)}</textarea>
+        <div class="notes-hint">Не перезаписывается при обновлении через импорт <span id="notesSaved" style="color:var(--green);opacity:0;transition:opacity .3s">· сохранено</span></div>
+      </div>
+    </div>`;
+  },
+  bc(){
+    const el=document.getElementById('bc');
+    const items=S.nav.slice(0,S.ni+1);
+    if(!items.length){el.innerHTML='';return}
+    let shown;
+    if(items.length<=5){shown=items.map((id,i)=>({id,oi:i}))}
+    else{shown=[{id:items[0],oi:0},{id:null,oi:-1},...items.slice(-3).map((id,i)=>({id,oi:items.length-3+i}))]}
+    el.innerHTML=shown.map(({id,oi},i)=>{
+      if(!id)return`<span class="bc-ell">…</span>`;
+      const t=D.byId(id);const n=t?t.term:'?';const isc=oi===S.ni;
+      return`${i>0?'<span class="bc-sep">›</span>':''}<span class="bc-item${isc?' bc-current':''}"${isc?'':` onclick="A.goBc(${oi})"`}>${esc(n)}</span>`;
+    }).join('');
+  },
+  navBtns(){
+    document.getElementById('btnBack').disabled=S.ni<=0;
+    document.getElementById('btnFwd').disabled=S.ni>=S.nav.length-1;
+  },
+  preview(){
+    if(!S.pvId)return;
+    const t=D.byId(S.pvId);if(!t){A.closePv();return}
+    document.getElementById('pvBody').innerHTML=`
+      <div class="term-row" style="margin-bottom:3px">
+        <div class="pv-term" style="margin-bottom:0">${esc(t.term)}</div>
+        <button class="spk-btn sm" onclick="TTS.speak(this,'${escA(t.term)}')" title="Озвучить" aria-label="Озвучить термин"><i class="ti ti-volume"></i></button>
+      </div>
+      <div class="full-row" style="margin-bottom:8px">
+        <div class="pv-full" style="margin-bottom:0">${esc(t.fullName)}</div>
+        ${t.fullName?`<button class="spk-btn sm" onclick="TTS.speak(this,'${escA(t.fullName)}')" title="Озвучить" aria-label="Озвучить полное название"><i class="ti ti-volume"></i></button>`:''}
+      </div>
+      ${t.translation?`<div style="font-size:11px;color:var(--teal);margin-bottom:10px">${esc(t.translation)}</div>`:''}
+      ${t.short?`<div class="pv-short"><div class="pv-short-txt">${esc(t.short)}</div></div>`:''}
+      ${t.what?`<div class="pv-sec"><div class="pv-sec-lbl">Что это</div><div class="pv-sec-txt">${esc(t.what)}</div></div>`:''}
+      ${t.why?`<div class="pv-sec"><div class="pv-sec-lbl">Зачем автоматизатору</div><div class="pv-sec-txt">${esc(t.why)}</div></div>`:''}`;
+  }
+};
+
+// ─── TTS (озвучка через браузер, без интернета и API) ───
+const TTS = {
+  ok:'speechSynthesis' in window,
+  voice:null,
+  init(){
+    if(!TTS.ok)return;
+    const pick=()=>{
+      const vs=speechSynthesis.getVoices();
+      TTS.voice=vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang&&v.lang.startsWith('en'))||vs[0]||null;
+    };
+    pick();
+    speechSynthesis.onvoiceschanged=pick;
+  },
+  speak(btn,text){
+    if(!TTS.ok){U.toast('Браузер не поддерживает озвучку','err');return}
+    if(!text)return;
+    speechSynthesis.cancel();
+    document.querySelectorAll('.spk-btn.playing').forEach(b=>b.classList.remove('playing'));
+    const u=new SpeechSynthesisUtterance(text);
+    if(TTS.voice)u.voice=TTS.voice;
+    u.lang='en-US';u.rate=0.9;u.pitch=1;
+    if(btn){
+      btn.classList.add('playing');
+      u.onend=()=>btn.classList.remove('playing');
+      u.onerror=()=>btn.classList.remove('playing');
+    }
+    speechSynthesis.speak(u);
+  }
+};
+TTS.init();
+
+// ─── UTILS ───
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;')}
+function escA(s){return esc(String(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"))}
+function fmtDate(d){
+  const now=new Date();const td=new Date(now.getFullYear(),now.getMonth(),now.getDate());const yd=new Date(td-864e5);
+  const dd=new Date(d.getFullYear(),d.getMonth(),d.getDate());
+  if(dd.getTime()===td.getTime())return'Сегодня';if(dd.getTime()===yd.getTime())return'Вчера';
+  return d.toLocaleDateString('ru',{day:'numeric',month:'long'});
+}
+const U={toast(msg,type){const e=document.getElementById('toast');e.textContent=msg;e.className=`toast show t-${type}`;clearTimeout(U._t);U._t=setTimeout(()=>e.classList.remove('show'),2600)}};
+
+// ─── KEYBOARD ───
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){if(S.curModal)A.closeM();else A.closePv()}
+  if((e.metaKey||e.ctrlKey)&&e.key==='ArrowLeft'){e.preventDefault();A.back()}
+  if((e.metaKey||e.ctrlKey)&&e.key==='ArrowRight'){e.preventDefault();A.fwd()}
+});
+
+// ─── SAFETY NET: flush unsaved notes if tab closes mid-typing ───
+window.addEventListener('beforeunload',()=>{
+  if(S._pendingNotes){
+    clearTimeout(S._notesTimer);
+    D.upd(S._pendingNotes.id,{notes:S._pendingNotes.val});
+  }
+});
+
+// ─── INIT ───
+D.load();R.all();
+Sync.init(); // тихо подтягивает облако поверх локального кеша, в фоне
+</script>
+</body>
+</html>

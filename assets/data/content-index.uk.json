@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-20T15:58:01.084Z",
-  "count": 82,
+  "generated_at": "2026-06-20T23:24:54.768Z",
+  "count": 83,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1493,6 +1493,35 @@
       "date_published": "2026-03-25",
       "date_modified": "2026-04-25",
       "search_text": "найкращі райони стамбула султанахмет таксим бейоглу кадикьой практичний гід по районах стамбула sultanahmet taksim beyoglu і kadikoy з логікою транспорту порадами щодо готелів і типових помилок istanbul istanbul neighborhoods"
+    },
+    {
+      "slug": "las-coloradas-pink-lake-day-trip",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "riviera-maya"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "day-trips",
+        "best-time",
+        "itinerary"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Рожеве озеро Las Coloradas: чи варта поїздка на день із Канкуна?",
+      "description": "Ні, купатися в ньому не можна, і ні, воно не завжди яскраво-рожеве. Чесний розбір довгої дороги на північ, кому поїздка підійде і як краще зробити її частиною road trip Юкатаном.",
+      "url": "https://travelradarlk.com/ua/content/las-coloradas-pink-lake-day-trip",
+      "image": "https://travelradarlk.com/assets/images/content/las-coloradas-pink-lake-day-trip/card_1200x600.jpg",
+      "date_published": "2026-06-20",
+      "date_modified": "2026-06-20",
+      "search_text": "рожеве озеро las coloradas чи варта поїздка на день із канкуна ні купатися в ньому не можна і ні воно не завжди яскраво-рожеве чесний розбір довгої дороги на північ кому поїздка підійде і як краще зробити її частиною road trip юкатаном yucatan day-trips best-time itinerary"
     },
     {
       "slug": "mayan-ruins-near-cancun-compared",

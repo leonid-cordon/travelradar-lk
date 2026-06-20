@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 82,
+  "record_count": 83,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -173,6 +173,9 @@
     },
     "istanbul-neighborhoods-guide": {
       "primary_section": "destinations", "country": "turkey", "region": "istanbul", "destination": "istanbul", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "las-coloradas-pink-lake-day-trip": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "advice", "tags": ["day-trips", "best-time", "itinerary"], "audience": [], "featured": 0, "intent": "plan"
     },
     "mayan-ruins-near-cancun-compared": {
       "primary_section": "things-to-do", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": ["cancun", "tulum", "riviera-maya"], "content_type": "comparison", "tags": ["archaeology", "day-trips", "itinerary"], "audience": ["first-timer", "family"], "featured": 0, "intent": "plan"
