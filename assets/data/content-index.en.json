@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-19T22:46:05.645Z",
-  "count": 81,
+  "generated_at": "2026-06-20T15:58:00.706Z",
+  "count": 82,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1853,6 +1853,39 @@
       "date_published": "2026-06-17",
       "date_modified": "2026-06-17",
       "search_text": "staying overnight on isla mujeres is it worth more than a day trip what an overnight on isla mujeres actually buys you over a day trip how many nights make sense the ferry-and-cart logistics and who should just go for the day isla-mujeres island-trip day-trips beaches"
+    },
+    {
+      "slug": "swimming-with-dolphins-cancun",
+      "lang": "en",
+      "primary_section": "things-to-do",
+      "section_label": "Things to Do",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": "cancun",
+      "related_destinations": [
+        "riviera-maya",
+        "cozumel",
+        "isla-mujeres"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "snorkeling",
+        "day-trips",
+        "theme-parks",
+        "money"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Swimming with Dolphins in Cancun: Is It Worth It, and What Are the Alternatives?",
+      "description": "What Mexico's 2025 dolphin law really changed, what the swim programs are like, who they suit, and the wild-marine alternatives that are now the better trip.",
+      "url": "https://travelradarlk.com/en/content/swimming-with-dolphins-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/swimming-with-dolphins-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-20",
+      "date_modified": "2026-06-20",
+      "search_text": "swimming with dolphins in cancun is it worth it and what are the alternatives what mexico s 2025 dolphin law really changed what the swim programs are like who they suit and the wild-marine alternatives that are now the better trip cancun yucatan snorkeling day-trips theme-parks money"
     },
     {
       "slug": "travel-insurance-for-mexico",

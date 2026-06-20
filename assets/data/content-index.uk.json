@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-19T22:46:05.948Z",
-  "count": 81,
+  "generated_at": "2026-06-20T15:58:01.084Z",
+  "count": 82,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1853,6 +1853,39 @@
       "date_published": "2026-06-17",
       "date_modified": "2026-06-17",
       "search_text": "ночівля на isla mujeres чи варта вона більше за поїздку на день що ночівля на isla mujeres насправді дає порівняно з поїздкою на день скільки ночей має сенс логістика порома і гольф-кара та кому достатньо одного дня isla-mujeres island-trip day-trips beaches"
+    },
+    {
+      "slug": "swimming-with-dolphins-cancun",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": "cancun",
+      "related_destinations": [
+        "riviera-maya",
+        "cozumel",
+        "isla-mujeres"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "snorkeling",
+        "day-trips",
+        "theme-parks",
+        "money"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Плавання з дельфінами в Канкуні: чи варто і які є альтернативи?",
+      "description": "Що насправді змінив мексиканський закон 2025 року, які пропонують програми, кому вони підходять і які дикі морські альтернативи тепер цікавіші.",
+      "url": "https://travelradarlk.com/ua/content/swimming-with-dolphins-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/swimming-with-dolphins-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-20",
+      "date_modified": "2026-06-20",
+      "search_text": "плавання з дельфінами в канкуні чи варто і які є альтернативи що насправді змінив мексиканський закон 2025 року які пропонують програми кому вони підходять і які дикі морські альтернативи тепер цікавіші cancun yucatan snorkeling day-trips theme-parks money"
     },
     {
       "slug": "travel-insurance-for-mexico",
