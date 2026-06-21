@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T10:40:42.447Z",
-  "count": 84,
+  "generated_at": "2026-06-21T14:44:07.262Z",
+  "count": 85,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1555,6 +1555,31 @@
       "date_published": "2026-06-20",
       "date_modified": "2026-06-20",
       "search_text": "mayan ruins near cancun compared tulum cob chichen itza ek balam which of the four big mayan sites near cancun is actually worth your time crowds climbable pyramids in 2026 travel times and the best two-in-a-day pairings yucatan archaeology day-trips itinerary"
+    },
+    {
+      "slug": "mexico-entry-requirements-us-canada",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "visa-entry",
+        "money"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Mexico Entry Requirements for US and Canadian Travelers: Passport, Visa and What's Changed",
+      "description": "No tourist visa under 180 days, no six-month passport rule, the paper FMM gone, what you must declare — and why the full 180-day stay is no longer automatic.",
+      "url": "https://travelradarlk.com/en/content/mexico-entry-requirements-us-canada",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-entry-requirements-us-canada/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-21",
+      "search_text": "mexico entry requirements for us and canadian travelers passport visa and what s changed no tourist visa under 180 days no six-month passport rule the paper fmm gone what you must declare and why the full 180-day stay is no longer automatic visa-entry money"
     },
     {
       "slug": "mexico-esim-for-us-travelers",

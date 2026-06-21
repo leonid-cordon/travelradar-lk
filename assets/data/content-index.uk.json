@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T10:40:42.747Z",
-  "count": 84,
+  "generated_at": "2026-06-21T14:44:07.552Z",
+  "count": 85,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1555,6 +1555,31 @@
       "date_published": "2026-06-20",
       "date_modified": "2026-06-20",
       "search_text": "руїни майя поряд із канкуном тулум коба чічен-іца ек-балам порівняння які з чотирьох головних руїн майя поряд із канкуном справді варті часу натовпи на які піраміди можна піднятися у 2026 час у дорозі та найкращі комбінації дві за день yucatan archaeology day-trips itinerary"
+    },
+    {
+      "slug": "mexico-entry-requirements-us-canada",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "visa-entry",
+        "money"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Правила в’їзду до Мексики для туристів зі США та Канади: паспорт, віза і що змінилося",
+      "description": "Без візи до 180 днів, без правила шести місяців на паспорт, паперовий FMM скасовано, що треба декларувати — і чому повні 180 днів більше не дають автоматично.",
+      "url": "https://travelradarlk.com/ua/content/mexico-entry-requirements-us-canada",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-entry-requirements-us-canada/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-21",
+      "search_text": "правила в їзду до мексики для туристів зі сша та канади паспорт віза і що змінилося без візи до 180 днів без правила шести місяців на паспорт паперовий fmm скасовано що треба декларувати і чому повні 180 днів більше не дають автоматично visa-entry money"
     },
     {
       "slug": "mexico-esim-for-us-travelers",

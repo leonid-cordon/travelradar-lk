@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T10:40:42.596Z",
-  "count": 84,
+  "generated_at": "2026-06-21T14:44:07.407Z",
+  "count": 85,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1555,6 +1555,31 @@
       "date_published": "2026-06-20",
       "date_modified": "2026-06-20",
       "search_text": "руины майя рядом с канкуном тулум коба чичен-ица эк-балам сравнение какие из четырёх главных руин майя рядом с канкуном действительно стоят времени толпы на какие пирамиды можно залезть в 2026 время в пути и лучшие комбинации две за день yucatan archaeology day-trips itinerary"
+    },
+    {
+      "slug": "mexico-entry-requirements-us-canada",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "visa-entry",
+        "money"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Правила въезда в Мексику для туристов из США и Канады: паспорт, виза и что изменилось",
+      "description": "Без визы до 180 дней, без правила шести месяцев на паспорт, бумажный FMM упразднён, что нужно декларировать — и почему полные 180 дней больше не дают автоматически.",
+      "url": "https://travelradarlk.com/ru/content/mexico-entry-requirements-us-canada",
+      "image": "https://travelradarlk.com/assets/images/content/mexico-entry-requirements-us-canada/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-21",
+      "search_text": "правила въезда в мексику для туристов из сша и канады паспорт виза и что изменилось без визы до 180 дней без правила шести месяцев на паспорт бумажный fmm упразднён что нужно декларировать и почему полные 180 дней больше не дают автоматически visa-entry money"
     },
     {
       "slug": "mexico-esim-for-us-travelers",
