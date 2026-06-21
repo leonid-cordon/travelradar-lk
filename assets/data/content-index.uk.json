@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T14:44:07.552Z",
-  "count": 85,
+  "generated_at": "2026-06-21T23:23:44.850Z",
+  "count": 86,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -597,6 +597,33 @@
       "date_published": "2026-06-05",
       "date_modified": "2026-06-05",
       "search_text": "найкращий час для поїздки в тулум погода саргасум і ціни чесний розбір тулума по сезонах сухі та дощові місяці реальність саргасуму 2026 стрибки цін і вікно що пасує саме вашій поїздці tulum riviera-maya best-time sargassum"
+    },
+    {
+      "slug": "best-travel-cards-credit-cards-mexico",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "money",
+        "budget"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Найкращі картки для подорожі до Мексики: без закордонних комісій, доступ до банкоматів і на що дивитися",
+      "description": "Не платіть 3% комісії за закордонні операції, обійдіть пастку DCC, знімайте песо в банкоматах без зайвих зборів і беріть дві правильні картки до Мексики.",
+      "url": "https://travelradarlk.com/ua/content/best-travel-cards-credit-cards-mexico",
+      "image": "https://travelradarlk.com/assets/images/content/best-travel-cards-credit-cards-mexico/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-22",
+      "search_text": "найкращі картки для подорожі до мексики без закордонних комісій доступ до банкоматів і на що дивитися не платіть 3 комісії за закордонні операції обійдіть пастку dcc знімайте песо в банкоматах без зайвих зборів і беріть дві правильні картки до мексики money budget"
     },
     {
       "slug": "cancun-airport-arrival-guide",

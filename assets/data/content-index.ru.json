@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T14:44:07.407Z",
-  "count": 85,
+  "generated_at": "2026-06-21T23:23:44.661Z",
+  "count": 86,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -597,6 +597,33 @@
       "date_published": "2026-06-05",
       "date_modified": "2026-06-05",
       "search_text": "лучшее время для поездки в тулум погода саргассум и цены честный разбор тулума по сезонам сухие и дождливые месяцы реальность саргассума 2026 скачки цен и окно которое подходит именно вашей поездке tulum riviera-maya best-time sargassum"
+    },
+    {
+      "slug": "best-travel-cards-credit-cards-mexico",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "money",
+        "budget"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие карты для поездки в Мексику: без зарубежных комиссий, доступ к банкоматам и на что смотреть",
+      "description": "Не платите 3% комиссии за зарубежные операции, обойдите ловушку DCC, снимайте песо в банкоматах без лишних сборов и берите две правильные карты в Мексику.",
+      "url": "https://travelradarlk.com/ru/content/best-travel-cards-credit-cards-mexico",
+      "image": "https://travelradarlk.com/assets/images/content/best-travel-cards-credit-cards-mexico/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-22",
+      "search_text": "лучшие карты для поездки в мексику без зарубежных комиссий доступ к банкоматам и на что смотреть не платите 3 комиссии за зарубежные операции обойдите ловушку dcc снимайте песо в банкоматах без лишних сборов и берите две правильные карты в мексику money budget"
     },
     {
       "slug": "cancun-airport-arrival-guide",

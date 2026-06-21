@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T14:44:07.262Z",
-  "count": 85,
+  "generated_at": "2026-06-21T23:23:44.475Z",
+  "count": 86,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -597,6 +597,33 @@
       "date_published": "2026-06-05",
       "date_modified": "2026-06-05",
       "search_text": "best time to visit tulum weather seaweed and prices an honest season-by-season read on tulum dry vs rainy months the 2026 sargassum reality price spikes and which window fits your trip tulum riviera-maya best-time sargassum"
+    },
+    {
+      "slug": "best-travel-cards-credit-cards-mexico",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "money",
+        "budget"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Travel Cards and Credit Cards for Mexico: No Foreign Fees, ATM Access and What to Look For",
+      "description": "Skip the 3% foreign transaction fee, dodge the dynamic currency conversion trap, get fee-free pesos at the ATM, and carry the right two cards in Mexico.",
+      "url": "https://travelradarlk.com/en/content/best-travel-cards-credit-cards-mexico",
+      "image": "https://travelradarlk.com/assets/images/content/best-travel-cards-credit-cards-mexico/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-22",
+      "search_text": "best travel cards and credit cards for mexico no foreign fees atm access and what to look for skip the 3 foreign transaction fee dodge the dynamic currency conversion trap get fee-free pesos at the atm and carry the right two cards in mexico money budget"
     },
     {
       "slug": "cancun-airport-arrival-guide",
