@@ -192,3 +192,77 @@ body[data-theme="dark"] .btn-secondary {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Back to Top button =====
+   Injected site-wide by js/load-header.js. Colors use base.css :root tokens
+   (--primary-color) + fallbacks, so it resolves on every page type even where
+   theme.css is not linked (e.g. article pages). */
+.back-to-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-color, #2563eb);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity var(--transition-base, 0.3s ease),
+                transform var(--transition-base, 0.3s ease),
+                visibility var(--transition-base, 0.3s ease),
+                background-color var(--transition-fast, 0.15s ease);
+    z-index: 990;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark, #1e40af);
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.back-to-top svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        right: 1rem;
+        bottom: 1rem;
+        bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .back-to-top {
+        transform: none;
+        transition: opacity 0.01ms linear, visibility 0.01ms linear;
+    }
+
+    .back-to-top.is-visible {
+        transform: none;
+    }
+}

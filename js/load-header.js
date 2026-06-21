@@ -256,5 +256,45 @@ function initMobileMenu() {
     });
 }
 
+/* ========= BACK TO TOP =========
+   Small circular button that appears after a noticeable scroll and smoothly
+   returns to the top. Site-wide: appended to <body> on every page, independent
+   of the partials fetch (works even if header/footer fail to load). Icon-only,
+   language-neutral. Styles live in assets/css/base.css (.back-to-top). */
+function initBackToTop() {
+    if (document.querySelector('.back-to-top')) return; // avoid double init
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    document.body.appendChild(btn);
+
+    const SHOW_AFTER = 600; // px scrolled before the button appears
+    let ticking = false;
+
+    function update() {
+        const y = window.pageYOffset || document.documentElement.scrollTop || 0;
+        btn.classList.toggle('is-visible', y > SHOW_AFTER);
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+
+    update(); // set initial state (handles pages loaded already scrolled)
+}
+
 /* ========= INIT ========= */
 document.addEventListener('DOMContentLoaded', loadPartials);
+document.addEventListener('DOMContentLoaded', initBackToTop);
