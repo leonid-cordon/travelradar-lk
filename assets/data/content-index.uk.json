@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-20T23:24:54.768Z",
-  "count": 83,
+  "generated_at": "2026-06-21T10:40:42.747Z",
+  "count": 84,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2105,6 +2105,41 @@
       "date_published": "2026-06-18",
       "date_modified": "2026-06-18",
       "search_text": "плавання з китовими акулами біля канкуна і холбокса сезон тури і реальність реальний сезон китових акул біля канкуна чим відрізняються виходи з isla mujeres і холбокса яким насправді виходить заплив і кому варто пропустити cancun yucatan snorkeling day-trips best-time island-trip"
+    },
+    {
+      "slug": "what-to-pack-cancun-riviera-maya",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "booking-checklist",
+        "cenotes",
+        "budget",
+        "island-trip"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Що взяти із собою в Канкун і Рив'єру-Майя: за типом поїздки",
+      "description": "Універсальна база, правила рифобезпечного крему, що купити після прильоту та що залишити вдома — список речей у Канкун і Рив'єру-Майя під вашу реальну поїздку.",
+      "url": "https://travelradarlk.com/ua/content/what-to-pack-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/what-to-pack-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-21",
+      "search_text": "що взяти із собою в канкун і рив єру-майя за типом поїздки універсальна база правила рифобезпечного крему що купити після прильоту та що залишити вдома список речей у канкун і рив єру-майя під вашу реальну поїздку cancun riviera-maya booking-checklist cenotes budget island-trip"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",

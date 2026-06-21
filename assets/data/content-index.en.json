@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-20T23:24:54.483Z",
-  "count": 83,
+  "generated_at": "2026-06-21T10:40:42.447Z",
+  "count": 84,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2105,6 +2105,41 @@
       "date_published": "2026-06-18",
       "date_modified": "2026-06-18",
       "search_text": "swimming with whale sharks near cancun and holbox season tours and reality the real whale shark season near cancun how isla mujeres and holbox departures differ what the in-water experience is actually like and who should skip it cancun yucatan snorkeling day-trips best-time island-trip"
+    },
+    {
+      "slug": "what-to-pack-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "booking-checklist",
+        "cenotes",
+        "budget",
+        "island-trip"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "What to Pack for Cancun and the Riviera Maya: By Trip Type",
+      "description": "The universal base, reef-safe sunscreen rules, what to buy on arrival, and what to leave home — a Cancun and Riviera Maya packing list that fits your actual trip.",
+      "url": "https://travelradarlk.com/en/content/what-to-pack-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/what-to-pack-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-21",
+      "date_modified": "2026-06-21",
+      "search_text": "what to pack for cancun and the riviera maya by trip type the universal base reef-safe sunscreen rules what to buy on arrival and what to leave home a cancun and riviera maya packing list that fits your actual trip cancun riviera-maya booking-checklist cenotes budget island-trip"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",
