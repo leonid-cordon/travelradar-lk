@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Terms</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='32' y2='32'><stop offset='0' stop-color='%231A5BC8'/><stop offset='1' stop-color='%234298FF'/></linearGradient></defs><rect width='32' height='32' rx='7' fill='url(%23g)'/><text x='16' y='23.5' font-family='monospace' font-size='19' font-weight='700' fill='white' text-anchor='middle' letter-spacing='-1.8'>AI</text></svg>">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.14.0/dist/tabler-icons.min.css">
 <style>
 :root {
@@ -643,8 +644,8 @@ const MAX_NAV  = 10;
 // НАСТРОЙКИ СИНХРОНИЗАЦИИ — только эти две строки менять
 // после деплоя своего Worker'а (см. инструкцию)
 // ============================================================
-const WORKER_URL   = 'https://ai-terms-api.leonid-cordon.workers.dev/terms';
-const WORKER_TOKEN = '!Capric0rnTerm';
+const WORKER_URL   = 'https://ai-terms-api.ТВОЙ-ЛОГИН.workers.dev/terms';
+const WORKER_TOKEN = 'ai-terms-secret-2026-change-me';
 // ============================================================
 
 function genId(){return 'term_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
@@ -862,7 +863,7 @@ const A = {
 
   // NOTES AUTOSAVE (debounced — saves ~1.2s after typing pauses, no need to click away)
   notesInput(el){
-    const id=Number(el.dataset.termId);
+    const id=el.dataset.termId;
     const val=el.value;
     S._pendingNotes={id,val};
     clearTimeout(S._notesTimer);
@@ -1117,7 +1118,7 @@ const A = {
       <div class="h-group">
         <div class="h-glbl">${lbl}</div>
         ${items.map(({t,d})=>`
-          <div class="h-item" onclick="A.closeM();A.go(${t.id})">
+          <div class="h-item" onclick="A.closeM();A.go('${t.id}')">
             <span class="h-term">${esc(t.term)}</span>
             <span class="h-full">${esc(t.fullName)}</span>
             <span class="h-time">${d.toLocaleTimeString('ru',{hour:'2-digit',minute:'2-digit'})}</span>
@@ -1181,7 +1182,7 @@ const R = {
           h+=`<div class="t-row" onclick="A.openImport('${escA(t.term)}')"><span class="t-name">${esc(t.term)}</span><span class="t-badge" title="Черновик">✎</span></div>`;
         }else{
           const act=t.id===cur;
-          h+=`<div class="t-row${act?' active':''}" onclick="A.go(${t.id})"><span class="t-name">${esc(t.term)}</span>${t.isDraft?'<span class="t-badge" title="Черновик">✎</span>':''}</div>`;
+          h+=`<div class="t-row${act?' active':''}" onclick="A.go('${t.id}')"><span class="t-name">${esc(t.term)}</span>${t.isDraft?'<span class="t-badge" title="Черновик">✎</span>':''}</div>`;
         }
       });
     });
@@ -1204,7 +1205,7 @@ const R = {
     if(!t){w.innerHTML='<div style="padding:40px;color:var(--text-muted)">Выбери термин слева</div>';return}
     const chips=(t.relatedTerms||[]).map(n=>{
       const f=D.byName(n);
-      return f?`<button class="chip chip-ok" onclick="A.openPv(${f.id})">${esc(n)}</button>`
+      return f?`<button class="chip chip-ok" onclick="A.openPv('${f.id}')">${esc(n)}</button>`
                :`<button class="chip chip-no" onclick="A.openImport('${escA(n)}')" title="Нет в базе — нажми чтобы создать через ИИ">${esc(n)} <i class="ti ti-plus" style="font-size:10px"></i></button>`;
     }).join('');
     const lnk=t.lessonLink
@@ -1229,7 +1230,7 @@ const R = {
       <div class="sec"><div class="sec-lbl">Ссылка на урок</div>${lnk}</div>
       <div class="sec">
         <div class="sec-lbl">Мои заметки</div>
-        <textarea class="notes-area" id="notesArea" data-term-id="${t.id}" placeholder="Добавь свои мысли, наблюдения, примеры…" oninput="A.notesInput(this)" onchange="D.upd(${t.id},{notes:this.value})">${esc(t.notes)}</textarea>
+        <textarea class="notes-area" id="notesArea" data-term-id="${t.id}" placeholder="Добавь свои мысли, наблюдения, примеры…" oninput="A.notesInput(this)" onchange="D.upd('${t.id}',{notes:this.value})">${esc(t.notes)}</textarea>
         <div class="notes-hint">Не перезаписывается при обновлении через импорт <span id="notesSaved" style="color:var(--green);opacity:0;transition:opacity .3s">· сохранено</span></div>
       </div>
     </div>`;
