@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-23T07:58:24.640Z",
-  "count": 87,
+  "generated_at": "2026-06-23T14:56:21.007Z",
+  "count": 88,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1936,6 +1936,37 @@
       "date_published": "2026-05-05",
       "date_modified": "2026-05-05",
       "search_text": "ривьера-майя простым языком практичная карта канкуна плая-дель-кармен тулума пуэрто-морелоса акумаля и resort-зон перед бронированием riviera-maya"
+    },
+    {
+      "slug": "solo-travel-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "neighborhoods"
+      ],
+      "audience": [
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Одиночное путешествие в Канкун и на Ривьеру-Майя: стоит ли ехать и как всё спланировать",
+      "description": "Где лучше остановиться, как знакомиться с людьми, честно о безопасности и сколько на самом деле стоит поездка в одиночку на Ривьеру-Майя.",
+      "url": "https://travelradarlk.com/ru/content/solo-travel-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/solo-travel-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-23",
+      "date_modified": "2026-06-23",
+      "search_text": "одиночное путешествие в канкун и на ривьеру-майя стоит ли ехать и как всё спланировать где лучше остановиться как знакомиться с людьми честно о безопасности и сколько на самом деле стоит поездка в одиночку на ривьеру-майя riviera-maya riviera-maya budget neighborhoods"
     },
     {
       "slug": "staying-overnight-isla-mujeres-worth-it",

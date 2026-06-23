@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-23T07:58:24.495Z",
-  "count": 87,
+  "generated_at": "2026-06-23T14:56:20.879Z",
+  "count": 88,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1936,6 +1936,37 @@
       "date_published": "2026-05-05",
       "date_modified": "2026-05-05",
       "search_text": "riviera maya explained a practical map of cancun playa del carmen tulum puerto morelos akumal and resort areas before you book riviera-maya"
+    },
+    {
+      "slug": "solo-travel-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "neighborhoods"
+      ],
+      "audience": [
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Solo Travel in Cancun and the Riviera Maya: Is It Good and How to Do It",
+      "description": "Where to base yourself, how to meet people, solo safety done honestly, and what a trip alone really costs in Cancun and the Riviera Maya.",
+      "url": "https://travelradarlk.com/en/content/solo-travel-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/solo-travel-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-23",
+      "date_modified": "2026-06-23",
+      "search_text": "solo travel in cancun and the riviera maya is it good and how to do it where to base yourself how to meet people solo safety done honestly and what a trip alone really costs in cancun and the riviera maya riviera-maya riviera-maya budget neighborhoods"
     },
     {
       "slug": "staying-overnight-isla-mujeres-worth-it",

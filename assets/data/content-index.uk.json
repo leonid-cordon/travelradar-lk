@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-23T07:58:24.783Z",
-  "count": 87,
+  "generated_at": "2026-06-23T14:56:21.138Z",
+  "count": 88,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1936,6 +1936,37 @@
       "date_published": "2026-05-05",
       "date_modified": "2026-05-05",
       "search_text": "рив єра-мая простими словами практична карта канкуна плая-дель-кармен тулума пуерто-морелоса акумаля і resort-зон перед бронюванням riviera-maya"
+    },
+    {
+      "slug": "solo-travel-cancun-riviera-maya",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "neighborhoods"
+      ],
+      "audience": [
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Самостійна подорож до Канкуна та на Рив'єру-Майя: чи варто їхати і як все спланувати",
+      "description": "Де краще зупинитися, як знайомитися з людьми, чесно про безпеку та скільки насправді коштує поїздка наодинці на Рив'єру-Майя.",
+      "url": "https://travelradarlk.com/ua/content/solo-travel-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/solo-travel-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-23",
+      "date_modified": "2026-06-23",
+      "search_text": "самостійна подорож до канкуна та на рив єру-майя чи варто їхати і як все спланувати де краще зупинитися як знайомитися з людьми чесно про безпеку та скільки насправді коштує поїздка наодинці на рив єру-майя riviera-maya riviera-maya budget neighborhoods"
     },
     {
       "slug": "staying-overnight-isla-mujeres-worth-it",
