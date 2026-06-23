@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T23:23:44.850Z",
-  "count": 86,
+  "generated_at": "2026-06-23T07:58:24.783Z",
+  "count": 87,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -959,6 +959,40 @@
       "date_published": "2026-06-16",
       "date_modified": "2026-06-16",
       "search_text": "все включено в канкуні рив єра-майя чи пунта-кані що підійде вам обирайте все включено за пляжем спокоєм розвагами логістикою й ціною а не за зірками зручність канкуна розмаїття рив єра-майя чи ціна пунта-кани all-inclusive beaches airport-transfer sargassum budget"
+    },
+    {
+      "slug": "cancun-riviera-maya-with-baby-toddler",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "family-resort",
+        "beaches",
+        "food-safety",
+        "airport-transfer",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун і Рів'єра-Майя з немовлям або малюком: що треба знати сім'ям із дуже малими дітьми",
+      "description": "Чесна відповідь, чи підходить Канкун для немовляти: спокійні райони з мілкою водою, перевірки готелю, вода й суміш, автокрісло для трансферу, сонце, спека і педіатрична допомога.",
+      "url": "https://travelradarlk.com/ua/content/cancun-riviera-maya-with-baby-toddler",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-riviera-maya-with-baby-toddler/card_1200x600.jpg",
+      "date_published": "2026-06-22",
+      "date_modified": "2026-06-22",
+      "search_text": "канкун і рів єра-майя з немовлям або малюком що треба знати сім ям із дуже малими дітьми чесна відповідь чи підходить канкун для немовляти спокійні райони з мілкою водою перевірки готелю вода й суміш автокрісло для трансферу сонце спека і педіатрична допомога cancun riviera-maya family-resort beaches food-safety airport-transfer hotel-mistakes"
     },
     {
       "slug": "cancun-seaweed-season",

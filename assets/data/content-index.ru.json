@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-21T23:23:44.661Z",
-  "count": 86,
+  "generated_at": "2026-06-23T07:58:24.640Z",
+  "count": 87,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -959,6 +959,40 @@
       "date_published": "2026-06-16",
       "date_modified": "2026-06-16",
       "search_text": "всё включено в канкуне ривьера-майя или пунта-кане что подойдёт вам выбирайте всё включено по пляжу спокойствию развлечениям логистике и цене а не по звёздам удобство канкуна разнообразие ривьера-майя или цена пунта-каны all-inclusive beaches airport-transfer sargassum budget"
+    },
+    {
+      "slug": "cancun-riviera-maya-with-baby-toddler",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "family-resort",
+        "beaches",
+        "food-safety",
+        "airport-transfer",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун и Ривьера-Майя с младенцем или малышом: что нужно знать семьям с совсем маленькими детьми",
+      "description": "Честный ответ, работает ли Канкун с младенцем — базы со спокойной водой, проверка отеля, безопасность воды и смесей, автокресло для трансфера, солнце, жара и педиатрическая помощь.",
+      "url": "https://travelradarlk.com/ru/content/cancun-riviera-maya-with-baby-toddler",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-riviera-maya-with-baby-toddler/card_1200x600.jpg",
+      "date_published": "2026-06-22",
+      "date_modified": "2026-06-22",
+      "search_text": "канкун и ривьера-майя с младенцем или малышом что нужно знать семьям с совсем маленькими детьми честный ответ работает ли канкун с младенцем базы со спокойной водой проверка отеля безопасность воды и смесей автокресло для трансфера солнце жара и педиатрическая помощь cancun riviera-maya family-resort beaches food-safety airport-transfer hotel-mistakes"
     },
     {
       "slug": "cancun-seaweed-season",
