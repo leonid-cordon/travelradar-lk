@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T01:27:08.959Z",
-  "count": 90,
+  "generated_at": "2026-06-24T02:51:31.849Z",
+  "count": 91,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2033,6 +2033,37 @@
       "date_published": "2026-06-23",
       "date_modified": "2026-06-23",
       "search_text": "одиночное путешествие в канкун и на ривьеру-майя стоит ли ехать и как всё спланировать где лучше остановиться как знакомиться с людьми честно о безопасности и сколько на самом деле стоит поездка в одиночку на ривьеру-майя riviera-maya riviera-maya budget neighborhoods"
+    },
+    {
+      "slug": "spring-break-cancun",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum",
+        "isla-mujeres"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "best-time",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Спринг-брейк в Канкуне: Как это на самом деле и как планировать (или избежать)",
+      "description": "Когда они проходят, где на самом деле вечеринки, как это влияет на цены, и как избежать толп, не отказываясь от Канкуна.",
+      "url": "https://travelradarlk.com/ru/content/spring-break-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/spring-break-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "спринг-брейк в канкуне как это на самом деле и как планировать или избежать когда они проходят где на самом деле вечеринки как это влияет на цены и как избежать толп не отказываясь от канкуна cancun riviera-maya best-time hotel-mistakes"
     },
     {
       "slug": "staying-overnight-isla-mujeres-worth-it",

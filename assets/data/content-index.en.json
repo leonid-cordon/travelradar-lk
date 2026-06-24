@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T01:27:08.814Z",
-  "count": 90,
+  "generated_at": "2026-06-24T02:51:31.694Z",
+  "count": 91,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2033,6 +2033,37 @@
       "date_published": "2026-06-23",
       "date_modified": "2026-06-23",
       "search_text": "solo travel in cancun and the riviera maya is it good and how to do it where to base yourself how to meet people solo safety done honestly and what a trip alone really costs in cancun and the riviera maya riviera-maya riviera-maya budget neighborhoods"
+    },
+    {
+      "slug": "spring-break-cancun",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum",
+        "isla-mujeres"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "best-time",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Spring Break in Cancun: What It's Really Like and How to Plan (or Avoid It)",
+      "description": "When it happens, where the party actually is, what it does to prices, and how families and quiet travelers can dodge the crowd without skipping Cancun.",
+      "url": "https://travelradarlk.com/en/content/spring-break-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/spring-break-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "spring break in cancun what it s really like and how to plan or avoid it when it happens where the party actually is what it does to prices and how families and quiet travelers can dodge the crowd without skipping cancun cancun riviera-maya best-time hotel-mistakes"
     },
     {
       "slug": "staying-overnight-isla-mujeres-worth-it",

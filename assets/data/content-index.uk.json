@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T01:27:09.126Z",
-  "count": 90,
+  "generated_at": "2026-06-24T02:51:31.998Z",
+  "count": 91,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2033,6 +2033,37 @@
       "date_published": "2026-06-23",
       "date_modified": "2026-06-23",
       "search_text": "самостійна подорож до канкуна та на рив єру-майя чи варто їхати і як все спланувати де краще зупинитися як знайомитися з людьми чесно про безпеку та скільки насправді коштує поїздка наодинці на рив єру-майя riviera-maya riviera-maya budget neighborhoods"
+    },
+    {
+      "slug": "spring-break-cancun",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum",
+        "isla-mujeres"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "best-time",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Спрінг-брейк у Канкуні: Як це насправді та як планувати (або уникнути)",
+      "description": "Коли вони проходять, де насправді вечірки, як це впливає на ціни, і як уникнути натовпів, не відмовляючись від Канкуна.",
+      "url": "https://travelradarlk.com/ua/content/spring-break-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/spring-break-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "спрінг-брейк у канкуні як це насправді та як планувати або уникнути коли вони проходять де насправді вечірки як це впливає на ціни і як уникнути натовпів не відмовляючись від канкуна cancun riviera-maya best-time hotel-mistakes"
     },
     {
       "slug": "staying-overnight-isla-mujeres-worth-it",
