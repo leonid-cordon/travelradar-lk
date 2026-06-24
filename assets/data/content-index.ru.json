@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T00:09:36.866Z",
-  "count": 89,
+  "generated_at": "2026-06-24T01:27:08.959Z",
+  "count": 90,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -902,6 +902,39 @@
       "date_published": "2026-05-17",
       "date_modified": "2026-05-17",
       "search_text": "сезон ураганов в канкуне безопасные месяцы риски и бронирование лучшие и худшие месяцы сезона ураганов в канкуне пик риска страховка и гибкое бронирование cancun hurricane-season"
+    },
+    {
+      "slug": "cancun-in-summer-june-july-august",
+      "lang": "ru",
+      "primary_section": "weather",
+      "section_label": "Погода и сезоны",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "sargassum",
+        "hurricane-season",
+        "rainy-season",
+        "best-time",
+        "budget"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун летом: Что на самом деле представляют собой июнь, июль и август",
+      "description": "Настоящая летняя жара, ежедневные послеобеденные грозы, контекст по саргассуму 2026 года, ураганы и низкие цены, которые оправдывают летнюю поездку.",
+      "url": "https://travelradarlk.com/ru/content/cancun-in-summer-june-july-august",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-in-summer-june-july-august/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "канкун летом что на самом деле представляют собой июнь июль и август настоящая летняя жара ежедневные послеобеденные грозы контекст по саргассуму 2026 года ураганы и низкие цены которые оправдывают летнюю поездку cancun riviera-maya sargassum hurricane-season rainy-season best-time budget"
     },
     {
       "slug": "cancun-nightlife-guide",

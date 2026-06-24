@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T00:09:37.013Z",
-  "count": 89,
+  "generated_at": "2026-06-24T01:27:09.126Z",
+  "count": 90,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -902,6 +902,39 @@
       "date_published": "2026-05-17",
       "date_modified": "2026-05-17",
       "search_text": "сезон ураганів у канкуні безпечні місяці ризики й бронювання найкращі й найгірші місяці сезону ураганів у канкуні пік ризику страхування та гнучке бронювання cancun hurricane-season"
+    },
+    {
+      "slug": "cancun-in-summer-june-july-august",
+      "lang": "uk",
+      "primary_section": "weather",
+      "section_label": "Погода і сезони",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "sargassum",
+        "hurricane-season",
+        "rainy-season",
+        "best-time",
+        "budget"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун влітку: Чим насправді є червень, липень та серпень",
+      "description": "Справжня літня спека, щоденні післяобідні грози, літній саргасум 2026 року, сезон ураганів та низькі ціни, які виправдовують літню поїздку.",
+      "url": "https://travelradarlk.com/ua/content/cancun-in-summer-june-july-august",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-in-summer-june-july-august/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "канкун влітку чим насправді є червень липень та серпень справжня літня спека щоденні післяобідні грози літній саргасум 2026 року сезон ураганів та низькі ціни які виправдовують літню поїздку cancun riviera-maya sargassum hurricane-season rainy-season best-time budget"
     },
     {
       "slug": "cancun-nightlife-guide",
