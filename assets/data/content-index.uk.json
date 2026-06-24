@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T02:51:31.998Z",
-  "count": 91,
+  "generated_at": "2026-06-24T12:06:32.132Z",
+  "count": 92,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1187,6 +1187,39 @@
       "date_published": "2026-05-30",
       "date_modified": "2026-05-30",
       "search_text": "чічен-іца з канкуна чи рів єри-майя тур оренда авто чи пропустити скільки насправді триває дорога тур проти оренди авто й автобуса у скільки обходиться кожен варіант і кому варто пропустити чічен-іцу в короткій відпустці yucatan archaeology day-trips"
+    },
+    {
+      "slug": "christmas-new-year-cancun-tulum",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "best-time",
+        "budget",
+        "money",
+        "all-inclusive"
+      ],
+      "audience": [
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Новий рік і Різдво в Канкуні та Тулумі: ціни, атмосфера і як спланувати",
+      "description": "Гала-вечері та феєрверки в Канкуні проти вечірок у джунглях і вогнищ на пляжі в Тулумі. Наскільки сильно зростають ціни і що бронювати заздалегідь.",
+      "url": "https://travelradarlk.com/ua/content/christmas-new-year-cancun-tulum",
+      "image": "https://travelradarlk.com/assets/images/content/christmas-new-year-cancun-tulum/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "новий рік і різдво в канкуні та тулумі ціни атмосфера і як спланувати гала-вечері та феєрверки в канкуні проти вечірок у джунглях і вогнищ на пляжі в тулумі наскільки сильно зростають ціни і що бронювати заздалегідь riviera-maya best-time budget money all-inclusive"
     },
     {
       "slug": "coba-ruins-jungle-pyramids-guide",

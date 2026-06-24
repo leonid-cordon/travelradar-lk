@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T02:51:31.694Z",
-  "count": 91,
+  "generated_at": "2026-06-24T12:06:31.750Z",
+  "count": 92,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1187,6 +1187,39 @@
       "date_published": "2026-05-30",
       "date_modified": "2026-05-30",
       "search_text": "chichen itza from cancun or riviera maya tour rental car or skip it how long the drive really is tour vs rental car vs bus what each option costs and who should skip chichen itza on a short trip yucatan archaeology day-trips"
+    },
+    {
+      "slug": "christmas-new-year-cancun-tulum",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "best-time",
+        "budget",
+        "money",
+        "all-inclusive"
+      ],
+      "audience": [
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Christmas and New Year's Eve in Cancun and Tulum: Prices, Atmosphere and How to Plan",
+      "description": "Resort galas and fireworks in Cancun, jungle venues and beach bonfires in Tulum. How big the holiday price premium gets, and what to book how far ahead.",
+      "url": "https://travelradarlk.com/en/content/christmas-new-year-cancun-tulum",
+      "image": "https://travelradarlk.com/assets/images/content/christmas-new-year-cancun-tulum/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "christmas and new year s eve in cancun and tulum prices atmosphere and how to plan resort galas and fireworks in cancun jungle venues and beach bonfires in tulum how big the holiday price premium gets and what to book how far ahead riviera-maya best-time budget money all-inclusive"
     },
     {
       "slug": "coba-ruins-jungle-pyramids-guide",
