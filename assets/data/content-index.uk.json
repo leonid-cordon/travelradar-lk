@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T12:06:32.132Z",
-  "count": 92,
+  "generated_at": "2026-06-24T21:20:33.893Z",
+  "count": 93,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2387,6 +2387,33 @@
       "date_published": "2026-06-21",
       "date_modified": "2026-06-21",
       "search_text": "що взяти із собою в канкун і рив єру-майя за типом поїздки універсальна база правила рифобезпечного крему що купити після прильоту та що залишити вдома список речей у канкун і рив єру-майя під вашу реальну поїздку cancun riviera-maya booking-checklist cenotes budget island-trip"
+    },
+    {
+      "slug": "where-to-eat-in-cancun",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "neighborhoods",
+        "budget"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Де поїсти в Канкуні: Hotel Zone проти Даунтауна і що не можна пропустити",
+      "description": "Зручність Hotel Zone проти цін даунтауна, юкатанські страви, які варто пошукати, реальні ціни та як уникнути поганих ресторанів.",
+      "url": "https://travelradarlk.com/ua/content/where-to-eat-in-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-eat-in-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "де поїсти в канкуні hotel zone проти даунтауна і що не можна пропустити зручність hotel zone проти цін даунтауна юкатанські страви які варто пошукати реальні ціни та як уникнути поганих ресторанів cancun neighborhoods budget"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",

@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T12:06:31.750Z",
-  "count": 92,
+  "generated_at": "2026-06-24T21:20:33.477Z",
+  "count": 93,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2387,6 +2387,33 @@
       "date_published": "2026-06-21",
       "date_modified": "2026-06-21",
       "search_text": "what to pack for cancun and the riviera maya by trip type the universal base reef-safe sunscreen rules what to buy on arrival and what to leave home a cancun and riviera maya packing list that fits your actual trip cancun riviera-maya booking-checklist cenotes budget island-trip"
+    },
+    {
+      "slug": "where-to-eat-in-cancun",
+      "lang": "en",
+      "primary_section": "things-to-do",
+      "section_label": "Things to Do",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "neighborhoods",
+        "budget"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Where to Eat in Cancun: Hotel Zone vs Downtown and What Not to Miss",
+      "description": "Hotel Zone convenience vs downtown value, the Yucatecan dishes worth seeking out, real prices by level, and how to avoid the tourist-trap meal.",
+      "url": "https://travelradarlk.com/en/content/where-to-eat-in-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-eat-in-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "where to eat in cancun hotel zone vs downtown and what not to miss hotel zone convenience vs downtown value the yucatecan dishes worth seeking out real prices by level and how to avoid the tourist-trap meal cancun neighborhoods budget"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",
