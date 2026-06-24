@@ -1,0 +1,492 @@
+[
+  {
+    "id": "001",
+    "task": "Lord Mobile статистика и рейтинги",
+    "device": "PC",
+    "deadline": "10:00",
+    "repeat": "Каждый понедельник",
+    "runbook": "1) Загрузить статистику по LordMobile: GUILD_LIST HL(Kills), GIFT_STATS HL(hunting), GUILD_FESTIVAL HL на ВМ VPS1.\n2) На домашнем ПК выгрузить файлы на G:\\Мій диск\\Lords.\n3) Загрузить файлы на Google Disk (huaweiruw020).\n4) Отредактировать файлы согласно рейтингу и отправить @Darya_Belyx.\n5) Создать пост по GUILD_LIST HL(Kills).",
+    "completions": [
+      {
+        "date": "2026-06-15",
+        "time": "08:53"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "08:25"
+      }
+    ]
+  },
+  {
+    "id": "016",
+    "task": "GoIT обучение",
+    "device": "PC/Ноут",
+    "deadline": "23:00",
+    "repeat": "Ежедневно",
+    "runbook": "Заниматься учёбой на GoIT минимум 2 часа в день.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:23"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "22:46"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "14:15"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "23:55"
+      }
+    ]
+  },
+  {
+    "id": "013",
+    "task": "Новая статья TravelRadarLK",
+    "device": "PC",
+    "deadline": "19:00",
+    "repeat": "Ежедневно",
+    "runbook": "PROMT - оценка новой статьи EN статьи:\nhttps://docs.google.com/document/d/1B4fahoTvv133YniptkaeSxCwsIgXulWDekf5KTMy7gw/edit?usp=sharing\n\n2) Для gemini:\n_dev\\en-article-system\\translation-system\\00_TRANSLATION_PROMPT.md\n\n\"ВНИМАНИЕ: При переводе запрещаю генерировать техническую разметку! Скопируй <head> и всю нижнюю часть (футер и скрипты) из английского файла СТРОГО буква-в-букву (copy-paste). Переводи ТОЛЬКО мета-теги и контент внутри тега <article>. Любое изменение или додумывание скриптов внизу страницы будет считаться критическим провалом.\"\n\n\n3) Создания ФОТО - ПРОМТ:\nhttps://docs.google.com/document/d/1GDPadizasLiEy6CNKJfqxtl8KkzXzYHjdoTw3aEytPk/edit?usp=drive_link\n\nТехническое ТЗ для hero:\nГенерация: 4096×512 или шире.\nИдеально: 6144×768.\nГлавные объекты строго в центральных 35–40% ширины.\nЛевый и правый край — только атмосфера, вода, песок, свет и глубина.\nПосле этого можно безболезненно вырезать 1920×320, 1600×267, 6:1 и любые hero-баннеры.\n\n\n4) Создание карточек на главное и в контектах\n\"/publish (выполняй строго по инструкции .claude\\skills\\publish\\SKILL.md)\"\n\n\n",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "07:12"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "18:57"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "04:35"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "06:46"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "04:23"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "01:53"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "14:15"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "02:44"
+      }
+    ]
+  },
+  {
+    "id": "014",
+    "task": "Telegram-пост по статье",
+    "device": "PC/Ноут",
+    "deadline": "23:50",
+    "repeat": "Ежедневно",
+    "runbook": "Создание поста в телеграм канал TravelRadar_LK для каждой статьи сайта.\n\n1) в эксплорере копирую файл и даю ЧАТу\nG:\\Мій диск\\Projects\\ToDo или\nhttps://drive.google.com/drive/folders/1-ZHNL5_vdGNGXze-Vq34i9X-rNHBZLCE?usp=sharing\n\nПишу\nИзучи и используй как основной регламент.\nзагружаю\n- Telegram Content Operating System v2.0.md\n2)\nИзучи и используй для борьбы с повторениями, каннибализацией контента и шаблонными заходами.\n3)\nДаю ссылку на статью. Например:\nhttps://travelradarlk.com/ru/content/\n",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:51"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "08:34"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "21:27"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "22:54"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "20:52"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "02:57"
+      }
+    ]
+  },
+  {
+    "id": "008",
+    "task": "Pinterest Pins",
+    "device": "PC/Ноут",
+    "deadline": "23:55",
+    "repeat": "Ежедневно",
+    "runbook": "https://docs.google.com/document/d/158LYwzwKhqSdyha52ChFHZmRYGEifVhcTfs3gdfDbXY/edit?usp=sharing",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:51"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "07:07"
+      },
+      {
+        "date": "2026-06-19",
+        "time": "00:05"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "03:32"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "14:15"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "06:04"
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "task": "Shorts RU",
+    "device": "PC",
+    "deadline": "21:30",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "Создать видео, если Лена не делала, или получить новый шотс от Лены на ПК NIKITA через FAR, отрендерить и загрузить на leonid.cordon@gmail.com в ограниченном просмотре \n\nhttps://studio.youtube.com/channel/UCPjpMffyk4pkCoIzxrb_nPw/videos/short?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D \n\nотсюда берем шортс:\nD:\\CapCut\\_MX  \n\nотсюда берём описание к шорсту:\nhttps://drive.google.com/drive/folders/19HlTdiB6UCaWLvfdJjGrA9ueReIgcV2e\n\nTravel Radar LK @TravelRadar_LK",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "18:34"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "18:17"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "21:05"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "21:20"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "18:13"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "17:39"
+      },
+      {
+        "date": "2026-06-23",
+        "time": "08:29"
+      }
+    ]
+  },
+  {
+    "id": "017",
+    "task": "Семейное обучение",
+    "device": "Any",
+    "deadline": "23:00",
+    "repeat": "Ежедневно",
+    "runbook": "Обучаться с семьёй словацкому или английскому, или заниматься математикой с Никитой. Минимум 50 минут.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "20:56"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "20:25"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "20:09"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "21:05"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "12:36"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "19:17"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "18:45"
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "task": "Shorts USA",
+    "device": "PC",
+    "deadline": "22:00",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "1) На базе полученного шортса от Лены создать Американскую версию в CapCut на ПК NIKITA и загрузить на travelradarlk@gmail.com. \n\n2) Загрузить видео D:\\CapCut\\_MX\\ на Google Drive для того чтобы была возможность в 23:00 сделать тикток и загрузить в инстаграм\nG:\\Мой диск\\_Affiliates\\TRAVELRADAR_CONTENT\\02_UPLOAD\n\n3) Отсюда берём описание для американского ролика https://drive.google.com/drive/folders/19HlTdiB6UCaWLvfdJjGrA9ueReIgcV2e\nи оформляем видеоролик на канале USA",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "18:59"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "18:17"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "21:05"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "21:20"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "18:13"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "17:39"
+      },
+      {
+        "date": "2026-06-23",
+        "time": "08:29"
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "task": "Обложка Shorts RU",
+    "device": "Phone",
+    "deadline": "21:45",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "На телефоне сделать обложку шотсу и изменить размещение на ОТКРЫТЫЙ ДОСТУП на leonid.cordon@gmail.com (RU YouTube).",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "18:34"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "18:17"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "21:05"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "18:13"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "18:45"
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "task": "Обложка Shorts USA",
+    "device": "Phone",
+    "deadline": "23:30",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "На телефоне сделать обложку шотсу и изменить размещение на ОТКРЫТЫЙ ДОСТУП на travelradarlk@gmail.com (USA YouTube).",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:29"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "23:16"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "23:10"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "18:13"
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "task": "Duolingo",
+    "device": "PC/Ноут/Phone",
+    "deadline": "23:45",
+    "repeat": "Ежедневно",
+    "runbook": "Пройти обучение на Duolingo.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:29"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "21:36"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "22:39"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "22:57"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "22:49"
+      }
+    ]
+  },
+  {
+    "id": "009",
+    "task": "TikTok",
+    "device": "PC",
+    "deadline": "23:55",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "Загрузить последнее видео из шорста в TikTok. Делать на PC NIKITA.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:55"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "23:41"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "23:10"
+      }
+    ]
+  },
+  {
+    "id": "010",
+    "task": "Instagram",
+    "device": "Phone",
+    "deadline": "23:55",
+    "repeat": "Ежедневно кроме Пн",
+    "runbook": "Загрузить последнее видео из шорста в Instagram.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:55"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "23:41"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "23:10"
+      }
+    ]
+  },
+  {
+    "id": "011",
+    "task": "Reddit",
+    "device": "PC/Ноут",
+    "deadline": "23:55",
+    "repeat": "Ежедневно",
+    "runbook": "ПОИСК!\nCancun\nTulum\nPlaya del Carmen\nRiviera Maya\nIsla Mujeres\nCozumel\nPuerto Morelos\nChichen Itza\nXcaret",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:52"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "05:20"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "22:09"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "23:06"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "11:50"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "06:04"
+      },
+      {
+        "date": "2026-06-23",
+        "time": "08:29"
+      }
+    ]
+  },
+  {
+    "id": "012",
+    "task": "Щиты Lord Mobile",
+    "device": "PC/Phone",
+    "deadline": "07:15",
+    "repeat": "Ежедневно",
+    "runbook": "Одеть щиты на фермботе на ВСЕ аккаунты в Lord's Mobile.",
+    "completions": [
+      {
+        "date": "2026-06-14",
+        "time": "23:51"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "03:32"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "02:55"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "03:23"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "02:09"
+      },
+      {
+        "date": "2026-06-19",
+        "time": "04:36"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "01:53"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "04:34"
+      },
+      {
+        "date": "2026-06-22",
+        "time": "01:22"
+      },
+      {
+        "date": "2026-06-23",
+        "time": "03:03"
+      },
+      {
+        "date": "2026-06-24",
+        "time": "01:04"
+      }
+    ]
+  }
+]

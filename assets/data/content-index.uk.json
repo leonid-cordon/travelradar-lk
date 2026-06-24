@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-23T14:56:21.138Z",
-  "count": 88,
+  "generated_at": "2026-06-24T00:09:37.013Z",
+  "count": 89,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -744,6 +744,39 @@
       "date_published": "2026-04-06",
       "date_modified": "2026-04-25",
       "search_text": "скільки коштує поїздка в канкун у 2026 реалістичний бюджет три формати бюджету канкуна budget comfort і all inclusive плюс калькулятор поїздки та приховані витрати cancun budget"
+    },
+    {
+      "slug": "cancun-december-january-peak-season",
+      "lang": "uk",
+      "primary_section": "weather",
+      "section_label": "Погода і сезони",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "advice",
+      "tags": [
+        "best-time",
+        "budget",
+        "all-inclusive"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун у грудні та січні: Чого очікувати в високий сезон",
+      "description": "Майже ідеальна пляжна погода, рідкісні вітряні дні через «норте», святкові натовпи туристів, пікові ціни та як грамотно бронювати відпочинок у високий сезон.",
+      "url": "https://travelradarlk.com/ua/content/cancun-december-january-peak-season",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-december-january-peak-season/card_1200x600.jpg",
+      "date_published": "2026-06-24",
+      "date_modified": "2026-06-24",
+      "search_text": "канкун у грудні та січні чого очікувати в високий сезон майже ідеальна пляжна погода рідкісні вітряні дні через норте святкові натовпи туристів пікові ціни та як грамотно бронювати відпочинок у високий сезон cancun riviera-maya best-time budget all-inclusive"
     },
     {
       "slug": "cancun-family-vacation-guide",
