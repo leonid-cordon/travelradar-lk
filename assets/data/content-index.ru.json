@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T21:20:33.685Z",
-  "count": 93,
+  "generated_at": "2026-06-26T05:32:03.326Z",
+  "count": 94,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2414,6 +2414,31 @@
       "date_published": "2026-06-24",
       "date_modified": "2026-06-24",
       "search_text": "где поесть в канкуне hotel zone против даунтауна и что нельзя пропустить удобство hotel zone против цен даунтауна юкатанские блюда которые стоит поискать реальные цены и как избежать плохих ресторанов cancun neighborhoods budget"
+    },
+    {
+      "slug": "where-to-eat-in-tulum",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "mexico",
+      "region": null,
+      "destination": "tulum",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "food-safety"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Где поесть в Тулуме: пляжные клубы, рестораны и реальность за красивыми фото",
+      "description": "Навигация по ресторанам Тулума без шока от цен: дорогие пляжные клубы, настоящая еда в городе, скрытые чаевые и реальные бюджеты.",
+      "url": "https://travelradarlk.com/ru/content/where-to-eat-in-tulum",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-eat-in-tulum/card_1200x600.jpg",
+      "date_published": "2026-06-26",
+      "date_modified": "2026-06-26",
+      "search_text": "где поесть в тулуме пляжные клубы рестораны и реальность за красивыми фото навигация по ресторанам тулума без шока от цен дорогие пляжные клубы настоящая еда в городе скрытые чаевые и реальные бюджеты tulum budget food-safety"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",

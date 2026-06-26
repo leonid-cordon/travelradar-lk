@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-24T21:20:33.477Z",
-  "count": 93,
+  "generated_at": "2026-06-26T05:32:03.116Z",
+  "count": 94,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2414,6 +2414,31 @@
       "date_published": "2026-06-24",
       "date_modified": "2026-06-24",
       "search_text": "where to eat in cancun hotel zone vs downtown and what not to miss hotel zone convenience vs downtown value the yucatecan dishes worth seeking out real prices by level and how to avoid the tourist-trap meal cancun neighborhoods budget"
+    },
+    {
+      "slug": "where-to-eat-in-tulum",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": null,
+      "destination": "tulum",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "food-safety"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Where to Eat in Tulum: Beach Clubs, Restaurants and the Reality Behind the Photos",
+      "description": "Navigate Tulum's food scene without the shock: overpriced beach clubs, authentic food in Town, avoiding hidden tips, and real meal budgets.",
+      "url": "https://travelradarlk.com/en/content/where-to-eat-in-tulum",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-eat-in-tulum/card_1200x600.jpg",
+      "date_published": "2026-06-26",
+      "date_modified": "2026-06-26",
+      "search_text": "where to eat in tulum beach clubs restaurants and the reality behind the photos navigate tulum s food scene without the shock overpriced beach clubs authentic food in town avoiding hidden tips and real meal budgets tulum budget food-safety"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",
