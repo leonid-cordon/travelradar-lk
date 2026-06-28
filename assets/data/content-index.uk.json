@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-26T05:32:03.533Z",
-  "count": 94,
+  "generated_at": "2026-06-28T00:09:48.128Z",
+  "count": 96,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1083,6 +1083,40 @@
       "date_published": "2026-06-04",
       "date_modified": "2026-06-04",
       "search_text": "сезон саргасуму в канкуні чого чекати і як обрати пляж краще коли саргасум приходить у канкун які пляжі лишаються чистішими і як знизити ризик до бронювання готелю cancun sargassum"
+    },
+    {
+      "slug": "cancun-vs-cabo-san-lucas",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "flights",
+        "budget",
+        "sargassum",
+        "best-time",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун чи Кабо-Сан-Лукас: який мексиканський курорт обрати?",
+      "description": "Канкун чи Кабо-Сан-Лукас? Чесне порівняння за якістю води, пейзажами, готелями, перельотами та бюджетом, щоб ви обрали ідеальний мексиканський відпочинок.",
+      "url": "https://travelradarlk.com/uk/content/cancun-vs-cabo-san-lucas",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-vs-cabo-san-lucas/card_1200x600.jpg",
+      "date_published": "2026-06-28",
+      "date_modified": "2026-06-28",
+      "search_text": "канкун чи кабо-сан-лукас який мексиканський курорт обрати канкун чи кабо-сан-лукас чесне порівняння за якістю води пейзажами готелями перельотами та бюджетом щоб ви обрали ідеальний мексиканський відпочинок cancun all-inclusive beaches flights budget sargassum best-time hotel-mistakes"
     },
     {
       "slug": "cancun-vs-riviera-maya-all-inclusive-resorts",
@@ -2414,6 +2448,32 @@
       "date_published": "2026-06-24",
       "date_modified": "2026-06-24",
       "search_text": "де поїсти в канкуні hotel zone проти даунтауна і що не можна пропустити зручність hotel zone проти цін даунтауна юкатанські страви які варто пошукати реальні ціни та як уникнути поганих ресторанів cancun neighborhoods budget"
+    },
+    {
+      "slug": "where-to-eat-in-playa-del-carmen",
+      "lang": "uk",
+      "primary_section": "things-to-do",
+      "section_label": "Чим зайнятися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "playa-del-carmen",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "food-safety",
+        "money"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Де поїсти в Плая-дель-Кармен: П'ята авеню, місцеві вулиці та реальний бюджет",
+      "description": "Що варто куштувати на П'ятій авеню, де їдять місцеві жителі в одному кварталі від неї, реальний бюджет на харчування та туристичні пастки, яких слід уникати в Плая-дель-Кармен.",
+      "url": "https://travelradarlk.com/ua/content/where-to-eat-in-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-eat-in-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-06-28",
+      "date_modified": "2026-06-28",
+      "search_text": "де поїсти в плая-дель-кармен п ята авеню місцеві вулиці та реальний бюджет що варто куштувати на п ятій авеню де їдять місцеві жителі в одному кварталі від неї реальний бюджет на харчування та туристичні пастки яких слід уникати в плая-дель-кармен playa-del-carmen riviera-maya budget food-safety money"
     },
     {
       "slug": "where-to-eat-in-tulum",

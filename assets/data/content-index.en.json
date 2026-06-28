@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-26T05:32:03.116Z",
-  "count": 94,
+  "generated_at": "2026-06-28T00:09:47.790Z",
+  "count": 96,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1083,6 +1083,40 @@
       "date_published": "2026-06-04",
       "date_modified": "2026-06-04",
       "search_text": "cancun seaweed season what to expect and how to pick better beaches when sargassum hits cancun which beaches stay cleaner and how to lower the risk before you book a hotel cancun sargassum"
+    },
+    {
+      "slug": "cancun-vs-cabo-san-lucas",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "flights",
+        "budget",
+        "sargassum",
+        "best-time",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Cancun vs Cabo San Lucas: Which Mexican Beach Vacation Is Right for You?",
+      "description": "Caribbean calm or Pacific drama? A practical side-by-side on swimming, scenery, resorts, flights, and budget to choose between Cancun and Cabo.",
+      "url": "https://travelradarlk.com/en/content/cancun-vs-cabo-san-lucas",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-vs-cabo-san-lucas/card_1200x600.jpg",
+      "date_published": "2026-06-28",
+      "date_modified": "2026-06-28",
+      "search_text": "cancun vs cabo san lucas which mexican beach vacation is right for you caribbean calm or pacific drama a practical side-by-side on swimming scenery resorts flights and budget to choose between cancun and cabo cancun all-inclusive beaches flights budget sargassum best-time hotel-mistakes"
     },
     {
       "slug": "cancun-vs-riviera-maya-all-inclusive-resorts",
@@ -2414,6 +2448,32 @@
       "date_published": "2026-06-24",
       "date_modified": "2026-06-24",
       "search_text": "where to eat in cancun hotel zone vs downtown and what not to miss hotel zone convenience vs downtown value the yucatecan dishes worth seeking out real prices by level and how to avoid the tourist-trap meal cancun neighborhoods budget"
+    },
+    {
+      "slug": "where-to-eat-in-playa-del-carmen",
+      "lang": "en",
+      "primary_section": "things-to-do",
+      "section_label": "Things to Do",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "playa-del-carmen",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "food-safety",
+        "money"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Where to Eat in Playa del Carmen: Quinta Avenida, Local Streets and Budget Reality",
+      "description": "What works on Quinta Avenida, where locals eat one block off the strip, real meal budgets, and the tourist traps to skip in Playa del Carmen.",
+      "url": "https://travelradarlk.com/en/content/where-to-eat-in-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-eat-in-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-06-28",
+      "date_modified": "2026-06-28",
+      "search_text": "where to eat in playa del carmen quinta avenida local streets and budget reality what works on quinta avenida where locals eat one block off the strip real meal budgets and the tourist traps to skip in playa del carmen playa-del-carmen riviera-maya budget food-safety money"
     },
     {
       "slug": "where-to-eat-in-tulum",

@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 94,
+  "record_count": 96,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -125,6 +125,9 @@
     },
     "cancun-seaweed-season": {
       "primary_section": "weather", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["sargassum"], "audience": [], "featured": 0, "intent": null
+    },
+    "cancun-vs-cabo-san-lucas": {
+      "primary_section": "destinations", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "comparison", "tags": ["all-inclusive", "beaches", "flights", "budget", "sargassum", "best-time", "hotel-mistakes"], "audience": ["family", "couples", "first-timer"], "featured": 0, "intent": "plan"
     },
     "cancun-vs-riviera-maya-all-inclusive-resorts": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "comparison", "tags": ["all-inclusive"], "audience": [], "featured": 0, "intent": null
@@ -269,6 +272,9 @@
     },
     "where-to-eat-in-cancun": {
       "primary_section": "things-to-do", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods", "budget"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
+    },
+    "where-to-eat-in-playa-del-carmen": {
+      "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": "playa-del-carmen", "related_destinations": [], "content_type": "guide", "tags": ["budget", "food-safety", "money"], "audience": [], "featured": 0, "intent": "plan"
     },
     "where-to-eat-in-tulum": {
       "primary_section": "planning", "country": "mexico", "region": null, "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["budget", "food-safety"], "audience": [], "featured": 0, "intent": "plan"
