@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-28T00:09:47.790Z",
-  "count": 96,
+  "generated_at": "2026-06-29T01:05:15.954Z",
+  "count": 99,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1119,6 +1119,37 @@
       "search_text": "cancun vs cabo san lucas which mexican beach vacation is right for you caribbean calm or pacific drama a practical side-by-side on swimming scenery resorts flights and budget to choose between cancun and cabo cancun all-inclusive beaches flights budget sargassum best-time hotel-mistakes"
     },
     {
+      "slug": "cancun-vs-jamaica",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "sargassum",
+        "budget"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Cancun vs Jamaica: Caribbean All-Inclusive Vacation Compared",
+      "description": "Resort-centric ease or cultural immersion? A practical side-by-side on beaches, safety, all-inclusive style, food, flights, and budget to choose between Cancun and Jamaica.",
+      "url": "https://travelradarlk.com/en/content/cancun-vs-jamaica",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-vs-jamaica/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "cancun vs jamaica caribbean all-inclusive vacation compared resort-centric ease or cultural immersion a practical side-by-side on beaches safety all-inclusive style food flights and budget to choose between cancun and jamaica all-inclusive beaches sargassum budget"
+    },
+    {
       "slug": "cancun-vs-riviera-maya-all-inclusive-resorts",
       "lang": "en",
       "primary_section": "stay",
@@ -1564,6 +1595,32 @@
       "date_published": "2026-06-15",
       "date_modified": "2026-06-15",
       "search_text": "holbox island guide how to get there and who should actually go how to reach the car-free yucatan island from cancun what to do the lagoon-water reality and the honest answer to who should visit holbox and who shouldn t yucatan island-trip beaches best-time snorkeling"
+    },
+    {
+      "slug": "holbox-vs-isla-mujeres",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "isla-mujeres",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "island-trip",
+        "beaches",
+        "day-trips"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Holbox vs Isla Mujeres: Which Mexican Island Is Right for Your Trip?",
+      "description": "Clear Caribbean water and a 15-minute ferry, or a car-free island and whale sharks? A practical side-by-side to pick the right island for your trip.",
+      "url": "https://travelradarlk.com/en/content/holbox-vs-isla-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/holbox-vs-isla-mujeres/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "holbox vs isla mujeres which mexican island is right for your trip clear caribbean water and a 15-minute ferry or a car-free island and whale sharks a practical side-by-side to pick the right island for your trip isla-mujeres riviera-maya island-trip beaches day-trips"
     },
     {
       "slug": "hotel-check-before-booking",
@@ -2298,6 +2355,31 @@
       "date_published": "2026-06-19",
       "date_modified": "2026-06-19",
       "search_text": "tulum ruins what to expect how to visit and is it worth your time what you really see at the tulum ruins the 2026 parque del jaguar changes real fees and hours when to arrive and who should skip it tulum riviera-maya archaeology day-trips"
+    },
+    {
+      "slug": "tulum-vs-playa-del-carmen",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "beaches",
+        "budget"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Tulum vs Playa del Carmen: Which One Should You Choose?",
+      "description": "Bohemian eco-chic or walkable beach town? A practical side-by-side on beaches, logistics, food, and budget to choose your Riviera Maya base.",
+      "url": "https://travelradarlk.com/en/content/tulum-vs-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/tulum-vs-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "tulum vs playa del carmen which one should you choose bohemian eco-chic or walkable beach town a practical side-by-side on beaches logistics food and budget to choose your riviera maya base riviera-maya riviera-maya beaches budget"
     },
     {
       "slug": "valladolid-day-trip-overnight-or-skip",

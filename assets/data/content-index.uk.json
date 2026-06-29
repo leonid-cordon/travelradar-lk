@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-28T00:09:48.128Z",
-  "count": 96,
+  "generated_at": "2026-06-29T01:05:16.329Z",
+  "count": 99,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1119,6 +1119,37 @@
       "search_text": "канкун чи кабо-сан-лукас який мексиканський курорт обрати канкун чи кабо-сан-лукас чесне порівняння за якістю води пейзажами готелями перельотами та бюджетом щоб ви обрали ідеальний мексиканський відпочинок cancun all-inclusive beaches flights budget sargassum best-time hotel-mistakes"
     },
     {
+      "slug": "cancun-vs-jamaica",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "sargassum",
+        "budget"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун проти Ямайки: порівняння відпочинку «все включено» на Карибах",
+      "description": "Зручний курорт чи занурення в культуру? Практичне порівняння пляжів, безпеки, «все включено», їжі, авіаперельотів та бюджету для вибору між Канкуном та Ямайкою.",
+      "url": "https://travelradarlk.com/ua/content/cancun-vs-jamaica",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-vs-jamaica/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "канкун проти ямайки порівняння відпочинку все включено на карибах зручний курорт чи занурення в культуру практичне порівняння пляжів безпеки все включено їжі авіаперельотів та бюджету для вибору між канкуном та ямайкою all-inclusive beaches sargassum budget"
+    },
+    {
       "slug": "cancun-vs-riviera-maya-all-inclusive-resorts",
       "lang": "uk",
       "primary_section": "stay",
@@ -1564,6 +1595,32 @@
       "date_published": "2026-06-15",
       "date_modified": "2026-06-15",
       "search_text": "острів холбокс як дістатися і кому туди справді варто їхати як дістатися острова без машин на півночі юкатану з канкуна що робити яка там вода насправді та чесна відповідь кому варто їхати на холбокс а кому ні yucatan island-trip beaches best-time snorkeling"
+    },
+    {
+      "slug": "holbox-vs-isla-mujeres",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "isla-mujeres",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "island-trip",
+        "beaches",
+        "day-trips"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Ольбокс чи Ісла-Мухерес: який мексиканський острів обрати?",
+      "description": "Прозора карибська вода і 15 хвилин на поромі чи острів без автомобілів і китові акули? Практичне порівняння для вибору правильного острова.",
+      "url": "https://travelradarlk.com/ua/content/holbox-vs-isla-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/holbox-vs-isla-mujeres/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "ольбокс чи ісла-мухерес який мексиканський острів обрати прозора карибська вода і 15 хвилин на поромі чи острів без автомобілів і китові акули практичне порівняння для вибору правильного острова isla-mujeres riviera-maya island-trip beaches day-trips"
     },
     {
       "slug": "hotel-check-before-booking",
@@ -2298,6 +2355,31 @@
       "date_published": "2026-06-19",
       "date_modified": "2026-06-19",
       "search_text": "руїни тулума що на вас чекає як дістатися та чи варто воно того що ви реально побачите на руїнах тулума зміни 2026 року з parque del jaguar справжні ціни й години коли приїжджати та кому краще пропустити tulum riviera-maya archaeology day-trips"
+    },
+    {
+      "slug": "tulum-vs-playa-del-carmen",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "beaches",
+        "budget"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Тулум чи Плайя-дель-Кармен: що вибрати?",
+      "description": "Богемний еко-шик чи пішохідне пляжне місто? Практичне порівняння пляжів, логістики, їжі та бюджету для вибору бази на Рив'єрі-Майя.",
+      "url": "https://travelradarlk.com/ua/content/tulum-vs-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/tulum-vs-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "тулум чи плайя-дель-кармен що вибрати богемний еко-шик чи пішохідне пляжне місто практичне порівняння пляжів логістики їжі та бюджету для вибору бази на рив єрі-майя riviera-maya riviera-maya beaches budget"
     },
     {
       "slug": "valladolid-day-trip-overnight-or-skip",

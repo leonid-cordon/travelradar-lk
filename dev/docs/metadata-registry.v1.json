@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 96,
+  "record_count": 99,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -129,6 +129,9 @@
     "cancun-vs-cabo-san-lucas": {
       "primary_section": "destinations", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "comparison", "tags": ["all-inclusive", "beaches", "flights", "budget", "sargassum", "best-time", "hotel-mistakes"], "audience": ["family", "couples", "first-timer"], "featured": 0, "intent": "plan"
     },
+    "cancun-vs-jamaica": {
+      "primary_section": "destinations", "country": "caribbean", "region": null, "destination": null, "related_destinations": [], "content_type": "comparison", "tags": ["all-inclusive", "beaches", "sargassum", "budget"], "audience": ["couples", "family", "first-timer"], "featured": 0, "intent": "plan"
+    },
     "cancun-vs-riviera-maya-all-inclusive-resorts": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "comparison", "tags": ["all-inclusive"], "audience": [], "featured": 0, "intent": null
     },
@@ -176,6 +179,9 @@
     },
     "holbox-island-guide": {
       "primary_section": "destinations", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["island-trip", "beaches", "best-time", "snorkeling"], "audience": ["couples", "family"], "featured": 0, "intent": "inspire"
+    },
+    "holbox-vs-isla-mujeres": {
+      "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": "isla-mujeres", "related_destinations": [], "content_type": "comparison", "tags": ["island-trip", "beaches", "day-trips"], "audience": [], "featured": 0, "intent": "plan"
     },
     "hotel-check-before-booking": {
       "primary_section": "stay", "country": "generic", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["booking-checklist"], "audience": [], "featured": 0, "intent": null
@@ -257,6 +263,9 @@
     },
     "tulum-ruins-what-to-expect-worth-it": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": ["cancun", "playa-del-carmen"], "content_type": "guide", "tags": ["archaeology", "day-trips"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
+    },
+    "tulum-vs-playa-del-carmen": {
+      "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": [], "content_type": "comparison", "tags": ["beaches", "budget"], "audience": [], "featured": 0, "intent": "plan"
     },
     "valladolid-day-trip-overnight-or-skip": {
       "primary_section": "destinations", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "comparison", "tags": ["day-trips", "archaeology", "cenotes", "itinerary"], "audience": ["first-timer", "couples"], "featured": 0, "intent": "plan"
