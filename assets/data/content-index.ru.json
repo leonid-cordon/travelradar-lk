@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-29T01:05:16.131Z",
-  "count": 99,
+  "generated_at": "2026-06-29T16:13:49.564Z",
+  "count": 101,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -446,6 +446,39 @@
       "date_published": "2026-05-27",
       "date_modified": "2026-05-27",
       "search_text": "лучшие отели тулума beach zone town и aldea zama в сравнении выбирайте отели тулума по пляжу ac зависимости от такси риску саргассума boutique-формату и реальному fit tulum riviera-maya"
+    },
+    {
+      "slug": "best-lgbtq-friendly-resorts-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "listicle",
+      "tags": [
+        "adults-only",
+        "all-inclusive",
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие ЛГБТК+ френдли курорты в Канкуне и на Ривьере Майя",
+      "description": "Тусовочная Плайя-дель-Кармен, тихий романтичный Канкун только для взрослых или бутиковый Тулум: выберите курорт по атмосфере, району и гостеприимству.",
+      "url": "https://travelradarlk.com/ru/content/best-lgbtq-friendly-resorts-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-lgbtq-friendly-resorts-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "лучшие лгбтк френдли курорты в канкуне и на ривьере майя тусовочная плайя-дель-кармен тихий романтичный канкун только для взрослых или бутиковый тулум выберите курорт по атмосфере району и гостеприимству riviera-maya adults-only all-inclusive boutique-hotel"
     },
     {
       "slug": "best-resorts-playa-mujeres",
@@ -1083,6 +1116,37 @@
       "date_published": "2026-06-04",
       "date_modified": "2026-06-04",
       "search_text": "сезон саргассума в канкуне чего ждать и как выбрать пляж получше когда саргассум приходит в канкун какие пляжи остаются чище и как снизить риск до бронирования отеля cancun sargassum"
+    },
+    {
+      "slug": "cancun-vs-bahamas",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "flights",
+        "beaches",
+        "budget"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Канкун или Багамы: что лучше для туристов с Восточного побережья США?",
+      "description": "Лететь ближе или получить больше за свои деньги? Практическое сравнение времени в пути, пляжей, «все включено» и общих затрат для выбора идеальной карибской поездки.",
+      "url": "https://travelradarlk.com/ru/content/cancun-vs-bahamas",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-vs-bahamas/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "канкун или багамы что лучше для туристов с восточного побережья сша лететь ближе или получить больше за свои деньги практическое сравнение времени в пути пляжей все включено и общих затрат для выбора идеальной карибской поездки cancun all-inclusive flights beaches budget"
     },
     {
       "slug": "cancun-vs-cabo-san-lucas",

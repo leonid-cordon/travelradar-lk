@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-29T01:05:15.954Z",
-  "count": 99,
+  "generated_at": "2026-06-29T16:13:49.383Z",
+  "count": 101,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -446,6 +446,39 @@
       "date_published": "2026-05-27",
       "date_modified": "2026-05-27",
       "search_text": "best hotels in tulum beach zone town and aldea zama compared pick tulum hotels by beach access ac taxi dependency seaweed risk boutique style and real booking fit tulum riviera-maya"
+    },
+    {
+      "slug": "best-lgbtq-friendly-resorts-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "listicle",
+      "tags": [
+        "adults-only",
+        "all-inclusive",
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best LGBTQ+ Friendly Resorts in Cancun and Riviera Maya",
+      "description": "Social Playa del Carmen, quiet-romantic Cancun adults-only or boutique Tulum: pick an LGBTQ+ welcoming resort by atmosphere, zone and couple-friendly policy.",
+      "url": "https://travelradarlk.com/en/content/best-lgbtq-friendly-resorts-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-lgbtq-friendly-resorts-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "best lgbtq friendly resorts in cancun and riviera maya social playa del carmen quiet-romantic cancun adults-only or boutique tulum pick an lgbtq welcoming resort by atmosphere zone and couple-friendly policy riviera-maya adults-only all-inclusive boutique-hotel"
     },
     {
       "slug": "best-resorts-playa-mujeres",
@@ -1083,6 +1116,37 @@
       "date_published": "2026-06-04",
       "date_modified": "2026-06-04",
       "search_text": "cancun seaweed season what to expect and how to pick better beaches when sargassum hits cancun which beaches stay cleaner and how to lower the risk before you book a hotel cancun sargassum"
+    },
+    {
+      "slug": "cancun-vs-bahamas",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "flights",
+        "beaches",
+        "budget"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Cancun vs Bahamas: Which Is Better for East Coast US Travelers?",
+      "description": "Closer flight or better value? A practical side-by-side on flight time, beaches, all-inclusive coverage, and total cost to pick your Caribbean trip.",
+      "url": "https://travelradarlk.com/en/content/cancun-vs-bahamas",
+      "image": "https://travelradarlk.com/assets/images/content/cancun-vs-bahamas/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "cancun vs bahamas which is better for east coast us travelers closer flight or better value a practical side-by-side on flight time beaches all-inclusive coverage and total cost to pick your caribbean trip cancun all-inclusive flights beaches budget"
     },
     {
       "slug": "cancun-vs-cabo-san-lucas",
