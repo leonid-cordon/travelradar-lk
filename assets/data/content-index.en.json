@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-29T16:13:49.383Z",
-  "count": 101,
+  "generated_at": "2026-06-30T06:20:02.986Z",
+  "count": 103,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1466,6 +1466,39 @@
       "search_text": "cozumel vs isla mujeres which island should you choose an honest side-by-side comparison of cozumel and isla mujeres by beaches water reefs logistics and who each island fits best island-trip"
     },
     {
+      "slug": "destination-wedding-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "cancun"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "honeymoon",
+        "budget",
+        "all-inclusive",
+        "adults-only",
+        "family-resort"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Destination Wedding in Cancun and Riviera Maya: Resorts, Planning and What to Budget",
+      "description": "Wedding formats, resort zones, realistic 2026 budgets for 20 vs 50 guests, what packages include, and legal vs symbolic ceremonies in Mexico.",
+      "url": "https://travelradarlk.com/en/content/destination-wedding-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/destination-wedding-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "destination wedding in cancun and riviera maya resorts planning and what to budget wedding formats resort zones realistic 2026 budgets for 20 vs 50 guests what packages include and legal vs symbolic ceremonies in mexico cancun riviera-maya honeymoon budget all-inclusive adults-only family-resort"
+    },
+    {
       "slug": "diving-in-cozumel-first-timers-certified-divers",
       "lang": "en",
       "primary_section": "things-to-do",
@@ -2035,6 +2068,32 @@
       "date_published": "2026-05-12",
       "date_modified": "2026-05-12",
       "search_text": "money in mexico for travelers pesos cards atms and tipping know when to use pesos cards atms and dollars in mexico before small fees become a daily leak money"
+    },
+    {
+      "slug": "planning-group-trip-cancun",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "money",
+        "booking-checklist"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Planning a Group Trip to Cancun: Bachelorette, Birthday and Friend Vacations",
+      "description": "A practical playbook for group trips to Cancun: choose the right format, base the group well, split the money cleanly, and avoid the mistakes that ruin friend vacations.",
+      "url": "https://travelradarlk.com/en/content/planning-group-trip-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/planning-group-trip-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "planning a group trip to cancun bachelorette birthday and friend vacations a practical playbook for group trips to cancun choose the right format base the group well split the money cleanly and avoid the mistakes that ruin friend vacations cancun budget money booking-checklist"
     },
     {
       "slug": "playa-del-carmen-travel-guide",

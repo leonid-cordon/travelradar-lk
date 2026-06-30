@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-29T16:13:49.745Z",
-  "count": 101,
+  "generated_at": "2026-06-30T06:20:03.364Z",
+  "count": 103,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1466,6 +1466,39 @@
       "search_text": "козумель чи isla mujeres який острів обрати чесне порівняння козумеля та isla mujeres за пляжами водою рифами логістикою і тим кому який острів підходить краще island-trip"
     },
     {
+      "slug": "destination-wedding-cancun-riviera-maya",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [
+        "cancun"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "honeymoon",
+        "budget",
+        "all-inclusive",
+        "adults-only",
+        "family-resort"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Весілля за кордоном у Канкуні та Рив'єра-Майя: курорти, планування та бюджет",
+      "description": "Весільні формати, курортні зони, реальні бюджети 2026 року на 20 і 50 гостей, що входить у пакети, легальна vs символічна церемонія в Мексиці.",
+      "url": "https://travelradarlk.com/ua/content/destination-wedding-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/destination-wedding-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "весілля за кордоном у канкуні та рив єра-майя курорти планування та бюджет весільні формати курортні зони реальні бюджети 2026 року на 20 і 50 гостей що входить у пакети легальна vs символічна церемонія в мексиці cancun riviera-maya honeymoon budget all-inclusive adults-only family-resort"
+    },
+    {
       "slug": "diving-in-cozumel-first-timers-certified-divers",
       "lang": "uk",
       "primary_section": "things-to-do",
@@ -2035,6 +2068,32 @@
       "date_published": "2026-05-12",
       "date_modified": "2026-05-12",
       "search_text": "гроші в мексиці для туристів песо картки банкомати й чайові коли платити песо карткою доларами і як не втрачати гроші на дрібних комісіях у мексиці money"
+    },
+    {
+      "slug": "planning-group-trip-cancun",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "budget",
+        "money",
+        "booking-checklist"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Планування групової поїздки в Канкун: дівич-вечори, дні народження та відпочинок з друзями",
+      "description": "Практичний посібник для групових поїздок у Канкун: виберіть правильний формат, вдало розмістіть групу, чесно розділіть витрати та уникайте помилок, що руйнують спільний відпочинок.",
+      "url": "https://travelradarlk.com/ua/content/planning-group-trip-cancun",
+      "image": "https://travelradarlk.com/assets/images/content/planning-group-trip-cancun/card_1200x600.jpg",
+      "date_published": "2026-06-29",
+      "date_modified": "2026-06-29",
+      "search_text": "планування групової поїздки в канкун дівич-вечори дні народження та відпочинок з друзями практичний посібник для групових поїздок у канкун виберіть правильний формат вдало розмістіть групу чесно розділіть витрати та уникайте помилок що руйнують спільний відпочинок cancun budget money booking-checklist"
     },
     {
       "slug": "playa-del-carmen-travel-guide",
