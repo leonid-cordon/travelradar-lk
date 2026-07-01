@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-30T06:20:03.364Z",
-  "count": 103,
+  "generated_at": "2026-07-01T09:39:30.124Z",
+  "count": 104,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2560,6 +2560,38 @@
       "date_published": "2026-01-18",
       "date_modified": "2026-05-28",
       "search_text": "пляжні поїздки без візи які справді відчуваються легкими у 2026 практичне порівняння пляжних поїздок без візи для мандрівників із паспортом сша мексика азія та кариби через реальний комфорт подорожі visa-entry"
+    },
+    {
+      "slug": "wellness-spa-travel-cancun-riviera-maya",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "adults-only",
+        "cenotes",
+        "money"
+      ],
+      "audience": [
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Спа-абонементи та велнес-ретрити на Рив'єра-Майя: Ціни 2026",
+      "description": "Реальні ціни на day pass у спа-готелях Канкуна та йога-ретрити в Тулумі (2026). Дізнайтеся про приховані витрати та як обрати велнес-формат у Мексиці.",
+      "url": "https://travelradarlk.com/ua/content/wellness-spa-travel-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/wellness-spa-travel-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-01T08:00:00+00:00",
+      "date_modified": "2026-07-01T08:00:00+00:00",
+      "search_text": "спа-абонементи та велнес-ретрити на рив єра-майя ціни 2026 реальні ціни на day pass у спа-готелях канкуна та йога-ретрити в тулумі 2026 дізнайтеся про приховані витрати та як обрати велнес-формат у мексиці riviera-maya riviera-maya adults-only cenotes money"
     },
     {
       "slug": "whale-shark-swimming-cancun-holbox",

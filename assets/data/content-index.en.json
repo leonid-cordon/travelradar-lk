@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-30T06:20:02.986Z",
-  "count": 103,
+  "generated_at": "2026-07-01T09:39:29.838Z",
+  "count": 104,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2560,6 +2560,38 @@
       "date_published": "2026-01-18",
       "date_modified": "2026-05-28",
       "search_text": "visa-free beach trips that actually feel easy in 2026 a practical comparison of visa-free beach trips for u s travelers with mexico asia and the caribbean judged by real-world travel comfort visa-entry"
+    },
+    {
+      "slug": "wellness-spa-travel-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "adults-only",
+        "cenotes",
+        "money"
+      ],
+      "audience": [
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Spa Day Passes and Wellness Retreats in Riviera Maya: Prices & Reality 2026",
+      "description": "Actual 2026 prices for Cancun spa day passes and Tulum jungle retreats. Learn how much a Riviera Maya wellness vacation really costs and how to avoid the tourist traps.",
+      "url": "https://travelradarlk.com/en/content/wellness-spa-travel-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/wellness-spa-travel-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-01T08:00:00+00:00",
+      "date_modified": "2026-07-01T08:00:00+00:00",
+      "search_text": "spa day passes and wellness retreats in riviera maya prices reality 2026 actual 2026 prices for cancun spa day passes and tulum jungle retreats learn how much a riviera maya wellness vacation really costs and how to avoid the tourist traps riviera-maya riviera-maya adults-only cenotes money"
     },
     {
       "slug": "whale-shark-swimming-cancun-holbox",

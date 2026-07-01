@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-06-30T06:20:03.165Z",
-  "count": 103,
+  "generated_at": "2026-07-01T09:39:29.973Z",
+  "count": 104,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2560,6 +2560,38 @@
       "date_published": "2026-01-18",
       "date_modified": "2026-05-28",
       "search_text": "пляжные поездки без визы которые правда ощущаются легкими в 2026 практичное сравнение пляжных поездок без визы для путешественников с паспортом сша мексика азия и карибы через реальный комфорт поездки visa-entry"
+    },
+    {
+      "slug": "wellness-spa-travel-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "adults-only",
+        "cenotes",
+        "money"
+      ],
+      "audience": [
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Day Pass в спа Канкуна и ретриты на Ривьера-Майя: Цены и реальность 2026",
+      "description": "Реальные цены 2026 года на spa day pass в Канкуне и ретриты в джунглях Тулума. Узнайте, сколько на самом деле стоит велнес-отпуск на Ривьера-Майя и как избежать туристических ловушек.",
+      "url": "https://travelradarlk.com/ru/content/wellness-spa-travel-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/wellness-spa-travel-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-01T08:00:00+00:00",
+      "date_modified": "2026-07-01T08:00:00+00:00",
+      "search_text": "day pass в спа канкуна и ретриты на ривьера-майя цены и реальность 2026 реальные цены 2026 года на spa day pass в канкуне и ретриты в джунглях тулума узнайте сколько на самом деле стоит велнес-отпуск на ривьера-майя и как избежать туристических ловушек riviera-maya riviera-maya adults-only cenotes money"
     },
     {
       "slug": "whale-shark-swimming-cancun-holbox",

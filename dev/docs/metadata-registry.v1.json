@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 103,
+  "record_count": 104,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -284,6 +284,9 @@
     },
     "visa-free-travel-destinations": {
       "primary_section": "planning", "country": "generic", "region": null, "destination": null, "related_destinations": [], "content_type": "listicle", "tags": ["visa-entry"], "audience": [], "featured": 0, "intent": null
+    },
+    "wellness-spa-travel-cancun-riviera-maya": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": ["cancun", "tulum"], "content_type": "comparison", "tags": ["adults-only", "cenotes", "money"], "audience": ["couples", "solo"], "featured": 0, "intent": "plan"
     },
     "whale-shark-swimming-cancun-holbox": {
       "primary_section": "things-to-do", "country": "mexico", "region": "yucatan", "destination": "cancun", "related_destinations": ["isla-mujeres"], "content_type": "guide", "tags": ["snorkeling", "day-trips", "best-time", "island-trip"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
