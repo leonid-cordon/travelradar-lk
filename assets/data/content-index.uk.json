@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-01T09:39:30.124Z",
-  "count": 104,
+  "generated_at": "2026-07-02T01:46:35.335Z",
+  "count": 105,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2249,6 +2249,32 @@
       "date_published": "2026-05-05",
       "date_modified": "2026-05-05",
       "search_text": "рив єра-мая простими словами практична карта канкуна плая-дель-кармен тулума пуерто-морелоса акумаля і resort-зон перед бронюванням riviera-maya"
+    },
+    {
+      "slug": "riviera-maya-travel-hub",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [],
+      "audience": [],
+      "featured": 1,
+      "intent": "plan",
+      "title": "Хаб «Рив'єра-Мая»: усі гайди, розкладені за тим, що важливо знати",
+      "description": "Почніть звідси. Усі гайди про Канкун і Рив'єру-Мая, відсортовані за рішенням, яке ви ухвалюєте, — де зупинитися, скільки коштує, коли їхати і що пропустити.",
+      "url": "https://travelradarlk.com/ua/content/riviera-maya-travel-hub",
+      "image": "https://travelradarlk.com/assets/images/content/riviera-maya-travel-hub/card_1200x600.jpg",
+      "date_published": "2026-07-01",
+      "date_modified": "2026-07-01",
+      "search_text": "хаб рив єра-мая усі гайди розкладені за тим що важливо знати почніть звідси усі гайди про канкун і рив єру-мая відсортовані за рішенням яке ви ухвалюєте де зупинитися скільки коштує коли їхати і що пропустити riviera-maya"
     },
     {
       "slug": "solo-travel-cancun-riviera-maya",

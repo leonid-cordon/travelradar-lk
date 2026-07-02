@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-01T09:39:29.838Z",
-  "count": 104,
+  "generated_at": "2026-07-02T01:46:34.400Z",
+  "count": 105,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2249,6 +2249,32 @@
       "date_published": "2026-05-05",
       "date_modified": "2026-05-05",
       "search_text": "riviera maya explained a practical map of cancun playa del carmen tulum puerto morelos akumal and resort areas before you book riviera-maya"
+    },
+    {
+      "slug": "riviera-maya-travel-hub",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [],
+      "audience": [],
+      "featured": 1,
+      "intent": "plan",
+      "title": "Riviera Maya Travel Hub: All Our Guides, Organized by What You Need to Know",
+      "description": "Start here. Every Cancun and Riviera Maya guide sorted by the decision you're making — where to stay, how much it costs, when to go, and what to skip.",
+      "url": "https://travelradarlk.com/en/content/riviera-maya-travel-hub",
+      "image": "https://travelradarlk.com/assets/images/content/riviera-maya-travel-hub/card_1200x600.jpg",
+      "date_published": "2026-07-01",
+      "date_modified": "2026-07-01",
+      "search_text": "riviera maya travel hub all our guides organized by what you need to know start here every cancun and riviera maya guide sorted by the decision you re making where to stay how much it costs when to go and what to skip riviera-maya"
     },
     {
       "slug": "solo-travel-cancun-riviera-maya",

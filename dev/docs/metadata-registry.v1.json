@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 104,
+  "record_count": 105,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -251,6 +251,9 @@
     },
     "riviera-maya-explained": {
       "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "riviera-maya-travel-hub": {
+      "primary_section": "planning", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": ["cancun", "playa-del-carmen", "tulum"], "content_type": "guide", "tags": [], "audience": [], "featured": 1, "intent": "plan"
     },
     "solo-travel-cancun-riviera-maya": {
       "primary_section": "planning", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": ["cancun", "playa-del-carmen", "tulum"], "content_type": "guide", "tags": ["budget", "neighborhoods"], "audience": ["solo"], "featured": 0, "intent": "plan"
