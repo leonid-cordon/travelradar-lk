@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-02T01:46:34.400Z",
-  "count": 105,
+  "generated_at": "2026-07-02T23:20:36.866Z",
+  "count": 106,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -508,6 +508,36 @@
       "date_published": "2026-06-15",
       "date_modified": "2026-06-15",
       "search_text": "best resorts in playa mujeres quiet luxury and better beaches pick a playa mujeres resort by fit calmer beaches lower sargassum risk and a quieter resort-first week north of cancun with honest trade-offs vs the hotel zone cancun all-inclusive sargassum beaches"
+    },
+    {
+      "slug": "best-resorts-protected-beaches-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "sargassum",
+        "beaches",
+        "all-inclusive",
+        "family-resort"
+      ],
+      "audience": [
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Resorts with Protected Beaches and Low Seaweed Risk in Cancun and Riviera Maya",
+      "description": "Lower your sargassum odds by zone: Playa Mujeres, the sheltered north Hotel Zone and reef-buffered Puerto Morelos, with the resorts that manage their beaches best.",
+      "url": "https://travelradarlk.com/en/content/best-resorts-protected-beaches-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-protected-beaches-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-03",
+      "date_modified": "2026-07-03",
+      "search_text": "best resorts with protected beaches and low seaweed risk in cancun and riviera maya lower your sargassum odds by zone playa mujeres the sheltered north hotel zone and reef-buffered puerto morelos with the resorts that manage their beaches best cancun riviera-maya sargassum beaches all-inclusive family-resort"
     },
     {
       "slug": "best-resorts-riviera-maya",

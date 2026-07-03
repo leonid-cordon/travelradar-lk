@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-02T01:46:34.786Z",
-  "count": 105,
+  "generated_at": "2026-07-02T23:20:37.093Z",
+  "count": 106,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -508,6 +508,36 @@
       "date_published": "2026-06-15",
       "date_modified": "2026-06-15",
       "search_text": "лучшие курорты playa mujeres тихая роскошь и лучшие пляжи выбирайте курорт в playa mujeres по сути поездки спокойные пляжи меньший риск саргассума и тихая неделя к северу от канкуна с честными компромиссами против hotel zone cancun all-inclusive sargassum beaches"
+    },
+    {
+      "slug": "best-resorts-protected-beaches-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "sargassum",
+        "beaches",
+        "all-inclusive",
+        "family-resort"
+      ],
+      "audience": [
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие курорты с защищёнными пляжами и низким риском саргассума в Канкуне и Ривьере-Майя",
+      "description": "Снижаем риск саргассума выбором зоны: Playa Mujeres, защищённый север Hotel Zone и прикрытый рифом Пуэрто-Морелос — и отели, которые лучше всех следят за своим пляжем.",
+      "url": "https://travelradarlk.com/ru/content/best-resorts-protected-beaches-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-protected-beaches-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-03",
+      "date_modified": "2026-07-03",
+      "search_text": "лучшие курорты с защищёнными пляжами и низким риском саргассума в канкуне и ривьере-майя снижаем риск саргассума выбором зоны playa mujeres защищённый север hotel zone и прикрытый рифом пуэрто-морелос и отели которые лучше всех следят за своим пляжем cancun riviera-maya sargassum beaches all-inclusive family-resort"
     },
     {
       "slug": "best-resorts-riviera-maya",
