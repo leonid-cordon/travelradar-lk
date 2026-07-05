@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-05T00:08:53.737Z",
-  "count": 108,
+  "generated_at": "2026-07-05T16:52:35.701Z",
+  "count": 109,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -213,6 +213,37 @@
       "date_published": "2026-05-20",
       "date_modified": "2026-05-20",
       "search_text": "лучшие adults-only курорты в канкуне выбирайте adults-only курорты канкуна по тишине романтике пляжу еде локации и реальной атмосфере cancun adults-only"
+    },
+    {
+      "slug": "best-adults-only-resorts-playa-del-carmen",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "playa-del-carmen",
+      "related_destinations": [
+        "cancun",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "adults-only",
+        "boutique-hotel",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Лучшие отели Плая-дель-Кармен только для взрослых: тишина, романтика и всё рядом",
+      "description": "Выберите отель только для взрослых в Плая-дель-Кармен по зоне, уровню шума, пляжу и расположению: центральные варианты, тихий Playacar или уединенный бутик-отель на севере.",
+      "url": "https://travelradarlk.com/ru/content/best-adults-only-resorts-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/best-adults-only-resorts-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-07-05",
+      "date_modified": "2026-07-05",
+      "search_text": "лучшие отели плая-дель-кармен только для взрослых тишина романтика и всё рядом выберите отель только для взрослых в плая-дель-кармен по зоне уровню шума пляжу и расположению центральные варианты тихий playacar или уединенный бутик-отель на севере playa-del-carmen riviera-maya adults-only boutique-hotel hotel-mistakes"
     },
     {
       "slug": "best-adults-only-resorts-playa-mujeres-costa-mujeres",
