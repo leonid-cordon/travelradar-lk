@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-02T23:20:36.866Z",
-  "count": 106,
+  "generated_at": "2026-07-05T00:08:53.524Z",
+  "count": 108,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -215,6 +215,36 @@
       "search_text": "best adults-only resorts in cancun pick cancun adults-only resorts by quiet luxury romance beach food nightlife distance and booking risks cancun adults-only"
     },
     {
+      "slug": "best-adults-only-resorts-playa-mujeres-costa-mujeres",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "adults-only",
+        "all-inclusive",
+        "honeymoon",
+        "beaches",
+        "airport-transfer"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Adults-Only Resorts in Playa Mujeres and Costa Mujeres",
+      "description": "Pick an adults-only resort north of Cancun by calm, beach quality, transfer time and isolation: Playa Mujeres, Costa Mujeres or the livelier Hotel Zone.",
+      "url": "https://travelradarlk.com/en/content/best-adults-only-resorts-playa-mujeres-costa-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-adults-only-resorts-playa-mujeres-costa-mujeres/card_1200x600.jpg",
+      "date_published": "2026-07-04",
+      "date_modified": "2026-07-04",
+      "search_text": "best adults-only resorts in playa mujeres and costa mujeres pick an adults-only resort north of cancun by calm beach quality transfer time and isolation playa mujeres costa mujeres or the livelier hotel zone cancun adults-only all-inclusive honeymoon beaches airport-transfer"
+    },
+    {
       "slug": "best-all-inclusive-resorts-cancun-hotel-zone",
       "lang": "en",
       "primary_section": "stay",
@@ -271,6 +301,36 @@
       "date_published": "2026-06-16",
       "date_modified": "2026-06-16",
       "search_text": "beach clubs in tulum vs playa del carmen are they worth it how beach-club minimum spend and day passes really work what a beach day costs seaweed risk and the moments when the public beach is the smarter call tulum riviera-maya beaches day-trips money budget sargassum"
+    },
+    {
+      "slug": "best-boutique-hotels-tulum-town",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "tulum",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "budget",
+        "booking-checklist"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Boutique Hotels in Tulum Town: Walkable, No Car Needed and Under the Radar",
+      "description": "Pick a Tulum Town boutique stay by walkability, AC, avenida noise, cenote access and honest no-car trade-offs instead of Beach Zone prices.",
+      "url": "https://travelradarlk.com/en/content/best-boutique-hotels-tulum-town",
+      "image": "https://travelradarlk.com/assets/images/content/best-boutique-hotels-tulum-town/card_1200x600.jpg",
+      "date_published": "2026-07-05",
+      "date_modified": "2026-07-05",
+      "search_text": "best boutique hotels in tulum town walkable no car needed and under the radar pick a tulum town boutique stay by walkability ac avenida noise cenote access and honest no-car trade-offs instead of beach zone prices tulum riviera-maya boutique-hotel budget booking-checklist"
     },
     {
       "slug": "best-budget-mid-range-hotels-cancun-hotel-zone",

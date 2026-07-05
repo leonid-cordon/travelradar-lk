@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-02T23:20:37.093Z",
-  "count": 106,
+  "generated_at": "2026-07-05T00:08:53.737Z",
+  "count": 108,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -215,6 +215,36 @@
       "search_text": "лучшие adults-only курорты в канкуне выбирайте adults-only курорты канкуна по тишине романтике пляжу еде локации и реальной атмосфере cancun adults-only"
     },
     {
+      "slug": "best-adults-only-resorts-playa-mujeres-costa-mujeres",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "adults-only",
+        "all-inclusive",
+        "honeymoon",
+        "beaches",
+        "airport-transfer"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Лучшие отели «только для взрослых» в Playa Mujeres и Costa Mujeres",
+      "description": "Как выбрать тихий отель «только для взрослых» к северу от Канкуна по уровню спокойствия, пляжу, трансферу и уединенности: Playa Mujeres, Costa Mujeres или более оживленная Hotel Zone.",
+      "url": "https://travelradarlk.com/ru/content/best-adults-only-resorts-playa-mujeres-costa-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-adults-only-resorts-playa-mujeres-costa-mujeres/card_1200x600.jpg",
+      "date_published": "2026-07-04",
+      "date_modified": "2026-07-04",
+      "search_text": "лучшие отели только для взрослых в playa mujeres и costa mujeres как выбрать тихий отель только для взрослых к северу от канкуна по уровню спокойствия пляжу трансферу и уединенности playa mujeres costa mujeres или более оживленная hotel zone cancun adults-only all-inclusive honeymoon beaches airport-transfer"
+    },
+    {
       "slug": "best-all-inclusive-resorts-cancun-hotel-zone",
       "lang": "ru",
       "primary_section": "stay",
@@ -271,6 +301,36 @@
       "date_published": "2026-06-16",
       "date_modified": "2026-06-16",
       "search_text": "пляжные клубы тулума и плая-дель-кармен стоят ли они денег как работают минимальный заказ и day pass сколько стоит день на пляже риск саргассума и моменты когда умнее выбрать общественный пляж tulum riviera-maya beaches day-trips money budget sargassum"
+    },
+    {
+      "slug": "best-boutique-hotels-tulum-town",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "tulum",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "budget",
+        "booking-checklist"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие бутик-отели в Тулуме (Tulum Town): пешком, без машины и вне радаров",
+      "description": "Выбирайте бутик-отель в Тулуме по пешей доступности, кондиционерам, шуму от авениды, доступу к сенотам и честным компромиссам без машины вместо цен Beach Zone.",
+      "url": "https://travelradarlk.com/ru/content/best-boutique-hotels-tulum-town",
+      "image": "https://travelradarlk.com/assets/images/content/best-boutique-hotels-tulum-town/card_1200x600.jpg",
+      "date_published": "2026-07-05",
+      "date_modified": "2026-07-05",
+      "search_text": "лучшие бутик-отели в тулуме tulum town пешком без машины и вне радаров выбирайте бутик-отель в тулуме по пешей доступности кондиционерам шуму от авениды доступу к сенотам и честным компромиссам без машины вместо цен beach zone tulum riviera-maya boutique-hotel budget booking-checklist"
     },
     {
       "slug": "best-budget-mid-range-hotels-cancun-hotel-zone",

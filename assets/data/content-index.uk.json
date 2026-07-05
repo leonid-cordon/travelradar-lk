@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-02T23:20:37.305Z",
-  "count": 106,
+  "generated_at": "2026-07-05T00:08:53.954Z",
+  "count": 108,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -215,6 +215,36 @@
       "search_text": "найкращі adults-only курорти в канкуні обирайте adults-only курорти канкуна за тишею романтикою пляжем їжею локацією і реальною атмосферою cancun adults-only"
     },
     {
+      "slug": "best-adults-only-resorts-playa-mujeres-costa-mujeres",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "adults-only",
+        "all-inclusive",
+        "honeymoon",
+        "beaches",
+        "airport-transfer"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Найкращі готелі «лише для дорослих» у Playa Mujeres та Costa Mujeres",
+      "description": "Обираємо тихий готель «лише для дорослих» на північ від Канкуна за рівнем спокою, пляжем, трансфером та усамітненістю: Playa Mujeres, Costa Mujeres або більш жвава Hotel Zone.",
+      "url": "https://travelradarlk.com/ua/content/best-adults-only-resorts-playa-mujeres-costa-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-adults-only-resorts-playa-mujeres-costa-mujeres/card_1200x600.jpg",
+      "date_published": "2026-07-04",
+      "date_modified": "2026-07-04",
+      "search_text": "найкращі готелі лише для дорослих у playa mujeres та costa mujeres обираємо тихий готель лише для дорослих на північ від канкуна за рівнем спокою пляжем трансфером та усамітненістю playa mujeres costa mujeres або більш жвава hotel zone cancun adults-only all-inclusive honeymoon beaches airport-transfer"
+    },
+    {
       "slug": "best-all-inclusive-resorts-cancun-hotel-zone",
       "lang": "uk",
       "primary_section": "stay",
@@ -271,6 +301,36 @@
       "date_published": "2026-06-16",
       "date_modified": "2026-06-16",
       "search_text": "пляжні клуби тулума та плая-дель-кармен чи варті вони грошей як працюють мінімальне замовлення і day pass скільки коштує день на пляжі ризик саргасуму та моменти коли розумніше обрати громадський пляж tulum riviera-maya beaches day-trips money budget sargassum"
+    },
+    {
+      "slug": "best-boutique-hotels-tulum-town",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "tulum",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "budget",
+        "booking-checklist"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Найкращі бутик-готелі в Тулумі (Tulum Town): пішки, без машини та поза радарами",
+      "description": "Обирайте бутик-готель у Тулумі з урахуванням пішої доступності, кондиціонерів, шуму від авеніди, доступу до сенотів та чесних компромісів без машини замість завищених цін Beach Zone.",
+      "url": "https://travelradarlk.com/ua/content/best-boutique-hotels-tulum-town",
+      "image": "https://travelradarlk.com/assets/images/content/best-boutique-hotels-tulum-town/card_1200x600.jpg",
+      "date_published": "2026-07-05",
+      "date_modified": "2026-07-05",
+      "search_text": "найкращі бутик-готелі в тулумі tulum town пішки без машини та поза радарами обирайте бутик-готель у тулумі з урахуванням пішої доступності кондиціонерів шуму від авеніди доступу до сенотів та чесних компромісів без машини замість завищених цін beach zone tulum riviera-maya boutique-hotel budget booking-checklist"
     },
     {
       "slug": "best-budget-mid-range-hotels-cancun-hotel-zone",
