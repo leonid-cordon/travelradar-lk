@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-05T17:08:48.514Z",
-  "count": 109,
+  "generated_at": "2026-07-06T15:34:07.634Z",
+  "count": 110,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -493,6 +493,37 @@
       "date_published": "2026-04-01",
       "date_modified": "2026-04-25",
       "search_text": "лучшие отели канкуна 2026 где остановиться по районам практичный гид по отелям канкуна север центр и юг hotel zone downtown лучшие варианты цены и ошибки которых стоит избежать cancun"
+    },
+    {
+      "slug": "best-hotels-isla-mujeres",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": null,
+      "destination": "isla-mujeres",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "boutique-hotel",
+        "beaches",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "first-timer",
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Где жить на Исла-Мухерес: отели у Плайя-Норте, тихая сторона и что нужно знать",
+      "description": "Выбирайте, где остановиться на Исла-Мухерес, по расстоянию до Плайя-Норте, транспорту и цене: бутик-отели у пляжа, Эль-Сентро для прогулок или тихая западная сторона.",
+      "url": "https://travelradarlk.com/ru/content/best-hotels-isla-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-isla-mujeres/card_1200x600.jpg",
+      "date_published": "2026-07-06",
+      "date_modified": "2026-07-06",
+      "search_text": "где жить на исла-мухерес отели у плайя-норте тихая сторона и что нужно знать выбирайте где остановиться на исла-мухерес по расстоянию до плайя-норте транспорту и цене бутик-отели у пляжа эль-сентро для прогулок или тихая западная сторона isla-mujeres island-trip boutique-hotel beaches hotel-mistakes"
     },
     {
       "slug": "best-hotels-playa-del-carmen",

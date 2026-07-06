@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-05T17:08:48.672Z",
-  "count": 109,
+  "generated_at": "2026-07-06T15:34:07.865Z",
+  "count": 110,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -493,6 +493,37 @@
       "date_published": "2026-04-01",
       "date_modified": "2026-04-25",
       "search_text": "найкращі готелі канкуна 2026 де зупинитися за районами практичний гід по готелях канкуна північ центр і південь hotel zone downtown ціни добірки та типові помилки cancun"
+    },
+    {
+      "slug": "best-hotels-isla-mujeres",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": null,
+      "destination": "isla-mujeres",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "boutique-hotel",
+        "beaches",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "first-timer",
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Де зупинитися на Ісла-Мухерес: готелі біля Плайя-Норте, тиха сторона і що потрібно знати",
+      "description": "Вибирайте, де зупинитися на Ісла-Мухерес, за відстанню до Плайя-Норте, транспортом і ціною: бутик-готелі біля пляжу, Ель-Сентро для прогулянок або тиха західна сторона.",
+      "url": "https://travelradarlk.com/ua/content/best-hotels-isla-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-isla-mujeres/card_1200x600.jpg",
+      "date_published": "2026-07-06",
+      "date_modified": "2026-07-06",
+      "search_text": "де зупинитися на ісла-мухерес готелі біля плайя-норте тиха сторона і що потрібно знати вибирайте де зупинитися на ісла-мухерес за відстанню до плайя-норте транспортом і ціною бутик-готелі біля пляжу ель-сентро для прогулянок або тиха західна сторона isla-mujeres island-trip boutique-hotel beaches hotel-mistakes"
     },
     {
       "slug": "best-hotels-playa-del-carmen",

@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-05T17:08:48.349Z",
-  "count": 109,
+  "generated_at": "2026-07-06T15:34:07.398Z",
+  "count": 110,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -493,6 +493,37 @@
       "date_published": "2026-04-01",
       "date_modified": "2026-04-25",
       "search_text": "best hotels in cancun 2026 where to stay by area a practical cancun hotel guide north center and south hotel zone downtown best hotel picks prices and mistakes to avoid cancun"
+    },
+    {
+      "slug": "best-hotels-isla-mujeres",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": "isla-mujeres",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "boutique-hotel",
+        "beaches",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "first-timer",
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Hotels on Isla Mujeres: Near Playa Norte, the Quiet Side and What to Know",
+      "description": "Choose where to stay on Isla Mujeres by distance to Playa Norte, transport and price: beach-tip boutiques, walkable El Centro value, or the quiet west side.",
+      "url": "https://travelradarlk.com/en/content/best-hotels-isla-mujeres",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-isla-mujeres/card_1200x600.jpg",
+      "date_published": "2026-07-06",
+      "date_modified": "2026-07-06",
+      "search_text": "best hotels on isla mujeres near playa norte the quiet side and what to know choose where to stay on isla mujeres by distance to playa norte transport and price beach-tip boutiques walkable el centro value or the quiet west side isla-mujeres island-trip boutique-hotel beaches hotel-mistakes"
     },
     {
       "slug": "best-hotels-playa-del-carmen",
