@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-06T15:34:07.634Z",
-  "count": 110,
+  "generated_at": "2026-07-07T16:20:31.664Z",
+  "count": 112,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -364,6 +364,38 @@
       "search_text": "лучшие бутик-отели в тулуме tulum town пешком без машины и вне радаров выбирайте бутик-отель в тулуме по пешей доступности кондиционерам шуму от авениды доступу к сенотам и честным компромиссам без машины вместо цен beach zone tulum riviera-maya boutique-hotel budget booking-checklist"
     },
     {
+      "slug": "best-budget-all-inclusive-resorts-cancun-hotel-zone",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "all-inclusive",
+        "budget",
+        "beaches",
+        "family-resort",
+        "adults-only"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие бюджетные отели «всё включено» в Hotel Zone Канкуна",
+      "description": "Выберите бюджетный all-inclusive в Канкуне по уровню цен и пляжной зоне: чем вы жертвуете, что сохраняете, и когда самая низкая цена — это ловушка.",
+      "url": "https://travelradarlk.com/ru/content/best-budget-all-inclusive-resorts-cancun-hotel-zone",
+      "image": "https://travelradarlk.com/assets/images/content/best-budget-all-inclusive-resorts-cancun-hotel-zone/card_1200x600.jpg",
+      "date_published": "2026-07-07",
+      "date_modified": "2026-07-07",
+      "search_text": "лучшие бюджетные отели всё включено в hotel zone канкуна выберите бюджетный all-inclusive в канкуне по уровню цен и пляжной зоне чем вы жертвуете что сохраняете и когда самая низкая цена это ловушка cancun all-inclusive budget beaches family-resort adults-only"
+    },
+    {
       "slug": "best-budget-mid-range-hotels-cancun-hotel-zone",
       "lang": "ru",
       "primary_section": "stay",
@@ -682,6 +714,34 @@
       "date_published": "2026-05-21",
       "date_modified": "2026-05-21",
       "search_text": "лучшие курорты ривьера-майя коста-мухерес пуэрто-морелос и не только сравните курортные зоны за пределами гостиничной зоны канкуна по пляжу атмосфере времени трансфера питанию и рискам бронирования riviera-maya"
+    },
+    {
+      "slug": "best-resorts-snorkeling-access-riviera-maya",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cozumel",
+        "playa-del-carmen"
+      ],
+      "content_type": "listicle",
+      "tags": [
+        "snorkeling",
+        "beaches"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие курорты со снорклингом в Ривьере-Майя: купание с пляжа или причала",
+      "description": "Выберите курорт в Ривьере-Майе, где снорклинг на рифе — в нескольких шагах от номера: Пуэрто-Морелос, Косумель или Акумаль, а не Hotel Zone Канкуна.",
+      "url": "https://travelradarlk.com/ru/content/best-resorts-snorkeling-access-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-snorkeling-access-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-07",
+      "date_modified": "2026-07-07",
+      "search_text": "лучшие курорты со снорклингом в ривьере-майя купание с пляжа или причала выберите курорт в ривьере-майе где снорклинг на рифе в нескольких шагах от номера пуэрто-морелос косумель или акумаль а не hotel zone канкуна riviera-maya riviera-maya snorkeling beaches"
     },
     {
       "slug": "best-snorkeling-cancun-isla-mujeres-cozumel",

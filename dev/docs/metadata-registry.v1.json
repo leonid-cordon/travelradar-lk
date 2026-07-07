@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 110,
+  "record_count": 112,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -42,6 +42,9 @@
     "best-boutique-hotels-tulum-town": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["boutique-hotel", "budget", "booking-checklist"], "audience": ["couples", "solo", "first-timer"], "featured": 0, "intent": "plan"
     },
+    "best-budget-all-inclusive-resorts-cancun-hotel-zone": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["all-inclusive", "budget", "beaches", "family-resort", "adults-only"], "audience": ["family", "couples", "first-timer"], "featured": 0, "intent": "plan"
+    },
     "best-budget-mid-range-hotels-cancun-hotel-zone": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["budget", "boutique-hotel", "hotel-mistakes", "booking-checklist", "beaches"], "audience": ["family", "couples", "solo", "first-timer"], "featured": 0, "intent": "book"
     },
@@ -77,6 +80,9 @@
     },
     "best-resorts-riviera-maya": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "best-resorts-snorkeling-access-riviera-maya": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": ["cozumel", "playa-del-carmen"], "content_type": "listicle", "tags": ["snorkeling", "beaches"], "audience": [], "featured": 0, "intent": "plan"
     },
     "best-snorkeling-cancun-isla-mujeres-cozumel": {
       "primary_section": "things-to-do", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "isla-mujeres", "cozumel"], "content_type": "listicle", "tags": ["snorkeling", "island-trip"], "audience": [], "featured": 0, "intent": null
