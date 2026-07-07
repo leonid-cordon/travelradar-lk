@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-07T16:20:31.484Z",
-  "count": 112,
+  "generated_at": "2026-07-07T16:59:26.340Z",
+  "count": 113,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -869,6 +869,37 @@
       "date_published": "2026-06-21",
       "date_modified": "2026-06-22",
       "search_text": "best travel cards and credit cards for mexico no foreign fees atm access and what to look for skip the 3 foreign transaction fee dodge the dynamic currency conversion trap get fee-free pesos at the atm and carry the right two cards in mexico money budget"
+    },
+    {
+      "slug": "best-wellness-spa-resorts-cancun-tulum-riviera-maya",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "adults-only",
+        "boutique-hotel",
+        "budget"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Wellness and Spa Resorts in Cancun, Tulum and Riviera Maya",
+      "description": "Pick a wellness resort by retreat style, zone, beach, budget and what is actually included — not just a spa menu on the website.",
+      "url": "https://travelradarlk.com/en/content/best-wellness-spa-resorts-cancun-tulum-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-wellness-spa-resorts-cancun-tulum-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-07",
+      "date_modified": "2026-07-07",
+      "search_text": "best wellness and spa resorts in cancun tulum and riviera maya pick a wellness resort by retreat style zone beach budget and what is actually included not just a spa menu on the website riviera-maya adults-only boutique-hotel budget"
     },
     {
       "slug": "cancun-airport-arrival-guide",

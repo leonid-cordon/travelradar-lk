@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-07T16:20:31.832Z",
-  "count": 112,
+  "generated_at": "2026-07-07T16:59:26.717Z",
+  "count": 113,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -869,6 +869,37 @@
       "date_published": "2026-06-21",
       "date_modified": "2026-06-22",
       "search_text": "найкращі картки для подорожі до мексики без закордонних комісій доступ до банкоматів і на що дивитися не платіть 3 комісії за закордонні операції обійдіть пастку dcc знімайте песо в банкоматах без зайвих зборів і беріть дві правильні картки до мексики money budget"
+    },
+    {
+      "slug": "best-wellness-spa-resorts-cancun-tulum-riviera-maya",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "adults-only",
+        "boutique-hotel",
+        "budget"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Найкращі велнес- і спа-готелі в Канкуні, Тулумі та на Рив'єрі-Майя",
+      "description": "Вибирайте велнес-курорт за форматом ретриту, районом, пляжем, бюджетом і тим, що дійсно включено у вартість, а не просто за наявністю спа-меню на сайті.",
+      "url": "https://travelradarlk.com/ua/content/best-wellness-spa-resorts-cancun-tulum-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-wellness-spa-resorts-cancun-tulum-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-07",
+      "date_modified": "2026-07-07",
+      "search_text": "найкращі велнес- і спа-готелі в канкуні тулумі та на рив єрі-майя вибирайте велнес-курорт за форматом ретриту районом пляжем бюджетом і тим що дійсно включено у вартість а не просто за наявністю спа-меню на сайті riviera-maya adults-only boutique-hotel budget"
     },
     {
       "slug": "cancun-airport-arrival-guide",
