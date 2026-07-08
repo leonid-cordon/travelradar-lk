@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-07T23:10:19.262Z",
-  "count": 114,
+  "generated_at": "2026-07-08T13:56:41.735Z",
+  "count": 115,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -803,6 +803,40 @@
       "date_published": "2026-05-14",
       "date_modified": "2026-05-14",
       "search_text": "лучший снорклинг рядом с канкуном isla mujeres vs cozumel как выбрать снорклинг по качеству рифа удобству для новичков погодным рискам туру и логистике snorkeling island-trip"
+    },
+    {
+      "slug": "best-swim-up-private-pool-resorts-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "adults-only",
+        "honeymoon",
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие отели с номерами swim-up и частными бассейнами в Канкуне и на Ривьере-Майя",
+      "description": "Номер swim-up, частный plunge-бассейн или вилла? Выбирайте по уровню приватности, стоимости и расположению, а не по красивым фото.",
+      "url": "https://travelradarlk.com/ru/content/best-swim-up-private-pool-resorts-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-swim-up-private-pool-resorts-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-08",
+      "date_modified": "2026-07-08",
+      "search_text": "лучшие отели с номерами swim-up и частными бассейнами в канкуне и на ривьере-майя номер swim-up частный plunge-бассейн или вилла выбирайте по уровню приватности стоимости и расположению а не по красивым фото riviera-maya all-inclusive adults-only honeymoon boutique-hotel"
     },
     {
       "slug": "best-things-to-do-cancun-riviera-maya",

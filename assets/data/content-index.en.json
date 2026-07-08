@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-07T23:10:19.029Z",
-  "count": 114,
+  "generated_at": "2026-07-08T13:56:41.482Z",
+  "count": 115,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -803,6 +803,40 @@
       "date_published": "2026-05-14",
       "date_modified": "2026-05-14",
       "search_text": "best snorkeling in cancun isla mujeres and cozumel choose where to snorkel by reef payoff beginner comfort boat time weather risk and whether you should book a tour snorkeling island-trip"
+    },
+    {
+      "slug": "best-swim-up-private-pool-resorts-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "adults-only",
+        "honeymoon",
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Swim-Up Suites and Private Pool Resorts in Cancun and Riviera Maya",
+      "description": "Swim-up suite, private plunge pool or a full private-pool villa? Compare the options by privacy, price premium and zone before you book.",
+      "url": "https://travelradarlk.com/en/content/best-swim-up-private-pool-resorts-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-swim-up-private-pool-resorts-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-08",
+      "date_modified": "2026-07-08",
+      "search_text": "best swim-up suites and private pool resorts in cancun and riviera maya swim-up suite private plunge pool or a full private-pool villa compare the options by privacy price premium and zone before you book riviera-maya all-inclusive adults-only honeymoon boutique-hotel"
     },
     {
       "slug": "best-things-to-do-cancun-riviera-maya",
