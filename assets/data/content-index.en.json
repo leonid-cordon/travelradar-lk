@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-07T16:59:26.340Z",
-  "count": 113,
+  "generated_at": "2026-07-07T23:10:19.029Z",
+  "count": 114,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -578,6 +578,38 @@
       "date_published": "2026-05-25",
       "date_modified": "2026-05-25",
       "search_text": "best hotels in playa del carmen areas styles and what to avoid pick playa del carmen hotels by beach access fifth avenue noise playacar calm and resort style playa-del-carmen riviera-maya"
+    },
+    {
+      "slug": "best-hotels-playa-del-carmen-couples",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "playa-del-carmen",
+      "related_destinations": [
+        "cancun",
+        "cozumel"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "honeymoon",
+        "boutique-hotel",
+        "adults-only",
+        "beaches"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Hotels in Playa del Carmen for Couples: Romance, Beach and Walkable Nights",
+      "description": "Pick a Playa del Carmen couples hotel by zone, noise, beach and walkability: Playacar calm, beach-strip balance or downtown boutique romance.",
+      "url": "https://travelradarlk.com/en/content/best-hotels-playa-del-carmen-couples",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-playa-del-carmen-couples/card_1200x600.jpg",
+      "date_published": "2026-07-08",
+      "date_modified": "2026-07-08",
+      "search_text": "best hotels in playa del carmen for couples romance beach and walkable nights pick a playa del carmen couples hotel by zone noise beach and walkability playacar calm beach-strip balance or downtown boutique romance playa-del-carmen riviera-maya honeymoon boutique-hotel adults-only beaches"
     },
     {
       "slug": "best-hotels-tulum-beach-zone-town-aldea-zama",

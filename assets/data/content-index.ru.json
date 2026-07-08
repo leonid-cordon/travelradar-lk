@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-07T16:59:26.517Z",
-  "count": 113,
+  "generated_at": "2026-07-07T23:10:19.262Z",
+  "count": 114,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -578,6 +578,38 @@
       "date_published": "2026-05-25",
       "date_modified": "2026-05-25",
       "search_text": "лучшие отели плая-дель-кармен районы форматы и чего избегать выбирайте отели плая-дель-кармен по доступу к пляжу шуму пятой авеню спокойствию playacar и формату отдыха playa-del-carmen riviera-maya"
+    },
+    {
+      "slug": "best-hotels-playa-del-carmen-couples",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "playa-del-carmen",
+      "related_destinations": [
+        "cancun",
+        "cozumel"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "honeymoon",
+        "boutique-hotel",
+        "adults-only",
+        "beaches"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Лучшие отели в Плая-дель-Кармен для пар: романтика, пляжи и вечерние прогулки",
+      "description": "Выберите отель для пар в Плая-дель-Кармен по зоне, уровню шума, пляжу и доступности: спокойствие в Playacar, баланс у пляжа или романтика бутик-отелей в центре.",
+      "url": "https://travelradarlk.com/ru/content/best-hotels-playa-del-carmen-couples",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-playa-del-carmen-couples/card_1200x600.jpg",
+      "date_published": "2026-07-08",
+      "date_modified": "2026-07-08",
+      "search_text": "лучшие отели в плая-дель-кармен для пар романтика пляжи и вечерние прогулки выберите отель для пар в плая-дель-кармен по зоне уровню шума пляжу и доступности спокойствие в playacar баланс у пляжа или романтика бутик-отелей в центре playa-del-carmen riviera-maya honeymoon boutique-hotel adults-only beaches"
     },
     {
       "slug": "best-hotels-tulum-beach-zone-town-aldea-zama",
