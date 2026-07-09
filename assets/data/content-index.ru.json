@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-08T13:56:41.735Z",
-  "count": 115,
+  "generated_at": "2026-07-09T00:02:38.315Z",
+  "count": 116,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -935,6 +935,38 @@
       "date_published": "2026-06-21",
       "date_modified": "2026-06-22",
       "search_text": "лучшие карты для поездки в мексику без зарубежных комиссий доступ к банкоматам и на что смотреть не платите 3 комиссии за зарубежные операции обойдите ловушку dcc снимайте песо в банкоматах без лишних сборов и берите две правильные карты в мексику money budget"
+    },
+    {
+      "slug": "best-water-park-resorts-cancun-riviera-maya",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "family-resort",
+        "all-inclusive",
+        "theme-parks",
+        "airport-transfer"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие отели с аквапарками в Канкуне и на Ривьера-Майя",
+      "description": "Выбирайте отель с настоящим аквапарком по размеру, ленивой реке, ограничениям по росту и цене, от Seadust в Канкуне до All-Fun Inclusive в Xcaret.",
+      "url": "https://travelradarlk.com/ru/content/best-water-park-resorts-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-water-park-resorts-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-08",
+      "date_modified": "2026-07-08",
+      "search_text": "лучшие отели с аквапарками в канкуне и на ривьера-майя выбирайте отель с настоящим аквапарком по размеру ленивой реке ограничениям по росту и цене от seadust в канкуне до all-fun inclusive в xcaret riviera-maya family-resort all-inclusive theme-parks airport-transfer"
     },
     {
       "slug": "best-wellness-spa-resorts-cancun-tulum-riviera-maya",

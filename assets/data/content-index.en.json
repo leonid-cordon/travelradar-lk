@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-08T13:56:41.482Z",
-  "count": 115,
+  "generated_at": "2026-07-09T00:02:38.034Z",
+  "count": 116,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -935,6 +935,38 @@
       "date_published": "2026-06-21",
       "date_modified": "2026-06-22",
       "search_text": "best travel cards and credit cards for mexico no foreign fees atm access and what to look for skip the 3 foreign transaction fee dodge the dynamic currency conversion trap get fee-free pesos at the atm and carry the right two cards in mexico money budget"
+    },
+    {
+      "slug": "best-water-park-resorts-cancun-riviera-maya",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "playa-del-carmen"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "family-resort",
+        "all-inclusive",
+        "theme-parks",
+        "airport-transfer"
+      ],
+      "audience": [
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Resorts with Water Parks in Cancun and Riviera Maya",
+      "description": "Pick a real water-park resort by park size, lazy river, minimum-height rules, airport distance and price, from Seadust in the Hotel Zone to Hotel Xcaret's All-Fun Inclusive.",
+      "url": "https://travelradarlk.com/en/content/best-water-park-resorts-cancun-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-water-park-resorts-cancun-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-08",
+      "date_modified": "2026-07-08",
+      "search_text": "best resorts with water parks in cancun and riviera maya pick a real water-park resort by park size lazy river minimum-height rules airport distance and price from seadust in the hotel zone to hotel xcaret s all-fun inclusive riviera-maya family-resort all-inclusive theme-parks airport-transfer"
     },
     {
       "slug": "best-wellness-spa-resorts-cancun-tulum-riviera-maya",

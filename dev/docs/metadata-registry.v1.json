@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 115,
+  "record_count": 116,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -104,6 +104,9 @@
     },
     "best-travel-cards-credit-cards-mexico": {
       "primary_section": "planning", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["money", "budget"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
+    },
+    "best-water-park-resorts-cancun-riviera-maya": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": ["cancun", "playa-del-carmen"], "content_type": "comparison", "tags": ["family-resort", "all-inclusive", "theme-parks", "airport-transfer"], "audience": ["family"], "featured": 0, "intent": "plan"
     },
     "best-wellness-spa-resorts-cancun-tulum-riviera-maya": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": ["cancun", "tulum"], "content_type": "guide", "tags": ["adults-only", "boutique-hotel", "budget"], "audience": ["couples"], "featured": 0, "intent": "plan"
