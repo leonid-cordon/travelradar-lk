@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-09T00:02:38.315Z",
-  "count": 116,
+  "generated_at": "2026-07-10T00:12:26.095Z",
+  "count": 117,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -451,6 +451,33 @@
       "date_published": "2026-05-13",
       "date_modified": "2026-05-13",
       "search_text": "лучшие поездки на день из канкуна для первого раза как выбрать day trip из канкуна по времени в дороге сложности сезону и тому ехать самому или брать тур cancun day-trips"
+    },
+    {
+      "slug": "best-eco-resorts-tulum-sustainable-luxury",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": null,
+      "destination": "tulum",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Лучшие эко-курорты Тулума: осознанная роскошь и чего ожидать",
+      "description": "Какие эко-курорты Тулума предлагают настоящий кондиционер, а какие — полный детокс при свечах и на солнечной энергии, и кому лучше их пропустить. Честный гид по выбору.",
+      "url": "https://travelradarlk.com/ru/content/best-eco-resorts-tulum-sustainable-luxury",
+      "image": "https://travelradarlk.com/assets/images/content/best-eco-resorts-tulum-sustainable-luxury/card_1200x600.jpg",
+      "date_published": "2026-07-10",
+      "date_modified": "2026-07-10",
+      "search_text": "лучшие эко-курорты тулума осознанная роскошь и чего ожидать какие эко-курорты тулума предлагают настоящий кондиционер а какие полный детокс при свечах и на солнечной энергии и кому лучше их пропустить честный гид по выбору tulum boutique-hotel"
     },
     {
       "slug": "best-family-resorts-cancun",

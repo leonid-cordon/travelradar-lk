@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-09T00:02:38.034Z",
-  "count": 116,
+  "generated_at": "2026-07-10T00:12:25.814Z",
+  "count": 117,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -451,6 +451,33 @@
       "date_published": "2026-05-13",
       "date_modified": "2026-05-13",
       "search_text": "best day trips from cancun for first-time travelers choose cancun day trips by travel time effort season risk and whether you should go alone or book a tour cancun day-trips"
+    },
+    {
+      "slug": "best-eco-resorts-tulum-sustainable-luxury",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": "tulum",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel"
+      ],
+      "audience": [
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Eco-Resorts in Tulum: Sustainable Luxury and What to Expect",
+      "description": "Which Tulum eco-resorts have real AC, which are full solar-and-candlelight detox, and who should skip them. An honest booking guide by fit.",
+      "url": "https://travelradarlk.com/en/content/best-eco-resorts-tulum-sustainable-luxury",
+      "image": "https://travelradarlk.com/assets/images/content/best-eco-resorts-tulum-sustainable-luxury/card_1200x600.jpg",
+      "date_published": "2026-07-10",
+      "date_modified": "2026-07-10",
+      "search_text": "best eco-resorts in tulum sustainable luxury and what to expect which tulum eco-resorts have real ac which are full solar-and-candlelight detox and who should skip them an honest booking guide by fit tulum boutique-hotel"
     },
     {
       "slug": "best-family-resorts-cancun",
