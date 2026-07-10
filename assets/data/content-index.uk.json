@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-10T00:12:26.356Z",
-  "count": 117,
+  "generated_at": "2026-07-10T23:23:55.235Z",
+  "count": 118,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -692,6 +692,36 @@
       "date_published": "2026-06-29",
       "date_modified": "2026-06-29",
       "search_text": "найкращі лгбтк френдлі курорти в канкуні та на рів єрі майя тусовочна плайя-дель-кармен тихий романтичний канкун тільки для дорослих або бутиковий тулум виберіть курорт за атмосферою районом і гостинністю riviera-maya adults-only all-inclusive boutique-hotel"
+    },
+    {
+      "slug": "best-luxury-resorts-riviera-maya",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "playa-del-carmen"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "boutique-hotel",
+        "honeymoon",
+        "beaches"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Найкращі розкішні курорти Рив'єра-Майя: Mayakoba, Belmond та справжній люкс",
+      "description": "Обирайте справжній розкішний курорт за тим, що він реально пропонує: приватність Mayakoba, пляж Belmond Maroma або спа та лагуна Nizuc, а не просто за високою ціною за ніч.",
+      "url": "https://travelradarlk.com/ua/content/best-luxury-resorts-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-luxury-resorts-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-10",
+      "date_modified": "2026-07-10",
+      "search_text": "найкращі розкішні курорти рив єра-майя mayakoba belmond та справжній люкс обирайте справжній розкішний курорт за тим що він реально пропонує приватність mayakoba пляж belmond maroma або спа та лагуна nizuc а не просто за високою ціною за ніч riviera-maya riviera-maya boutique-hotel honeymoon beaches"
     },
     {
       "slug": "best-resorts-playa-mujeres",

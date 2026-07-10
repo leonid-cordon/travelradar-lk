@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-10T00:12:25.814Z",
-  "count": 117,
+  "generated_at": "2026-07-10T23:23:54.706Z",
+  "count": 118,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -692,6 +692,36 @@
       "date_published": "2026-06-29",
       "date_modified": "2026-06-29",
       "search_text": "best lgbtq friendly resorts in cancun and riviera maya social playa del carmen quiet-romantic cancun adults-only or boutique tulum pick an lgbtq welcoming resort by atmosphere zone and couple-friendly policy riviera-maya adults-only all-inclusive boutique-hotel"
+    },
+    {
+      "slug": "best-luxury-resorts-riviera-maya",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "playa-del-carmen"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "boutique-hotel",
+        "honeymoon",
+        "beaches"
+      ],
+      "audience": [
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Luxury Resorts in Riviera Maya: Mayakoba, Belmond and Real Five-Star",
+      "description": "Pick a true luxury resort by what it actually delivers: Mayakoba privacy, Belmond Maroma's beach or Nizuc's spa and lagoon, not just a high nightly rate.",
+      "url": "https://travelradarlk.com/en/content/best-luxury-resorts-riviera-maya",
+      "image": "https://travelradarlk.com/assets/images/content/best-luxury-resorts-riviera-maya/card_1200x600.jpg",
+      "date_published": "2026-07-10",
+      "date_modified": "2026-07-10",
+      "search_text": "best luxury resorts in riviera maya mayakoba belmond and real five-star pick a true luxury resort by what it actually delivers mayakoba privacy belmond maroma s beach or nizuc s spa and lagoon not just a high nightly rate riviera-maya riviera-maya boutique-hotel honeymoon beaches"
     },
     {
       "slug": "best-resorts-playa-mujeres",

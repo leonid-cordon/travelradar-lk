@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 117,
+  "record_count": 118,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -77,6 +77,9 @@
     },
     "best-lgbtq-friendly-resorts-cancun-riviera-maya": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": ["cancun", "playa-del-carmen", "tulum"], "content_type": "listicle", "tags": ["adults-only", "all-inclusive", "boutique-hotel"], "audience": ["couples", "solo"], "featured": 0, "intent": "plan"
+    },
+    "best-luxury-resorts-riviera-maya": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": ["playa-del-carmen"], "content_type": "comparison", "tags": ["boutique-hotel", "honeymoon", "beaches"], "audience": ["couples"], "featured": 0, "intent": "book"
     },
     "best-resorts-playa-mujeres": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["all-inclusive", "sargassum", "beaches"], "audience": ["couples", "family"], "featured": 0, "intent": null
