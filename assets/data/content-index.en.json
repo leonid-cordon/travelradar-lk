@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-10T23:23:54.706Z",
-  "count": 118,
+  "generated_at": "2026-07-11T08:11:31.062Z",
+  "count": 119,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -722,6 +722,35 @@
       "date_published": "2026-07-10",
       "date_modified": "2026-07-10",
       "search_text": "best luxury resorts in riviera maya mayakoba belmond and real five-star pick a true luxury resort by what it actually delivers mayakoba privacy belmond maroma s beach or nizuc s spa and lagoon not just a high nightly rate riviera-maya riviera-maya boutique-hotel honeymoon beaches"
+    },
+    {
+      "slug": "best-pet-friendly-hotels-cancun-tulum-playa-del-carmen",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "booking-checklist"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Pet-Friendly Hotels in Cancun, Tulum and Playa del Carmen",
+      "description": "Not every hotel that says 'pet-friendly' actually is. Compare real pet policies, fees, beach access and heat reality across Cancun, Tulum and Playa del Carmen before booking.",
+      "url": "https://travelradarlk.com/en/content/best-pet-friendly-hotels-cancun-tulum-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/best-pet-friendly-hotels-cancun-tulum-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-07-10",
+      "date_modified": "2026-07-10",
+      "search_text": "best pet-friendly hotels in cancun tulum and playa del carmen not every hotel that says pet-friendly actually is compare real pet policies fees beach access and heat reality across cancun tulum and playa del carmen before booking riviera-maya riviera-maya boutique-hotel booking-checklist"
     },
     {
       "slug": "best-resorts-playa-mujeres",

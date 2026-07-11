@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-10T23:23:54.965Z",
-  "count": 118,
+  "generated_at": "2026-07-11T08:11:31.305Z",
+  "count": 119,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -722,6 +722,35 @@
       "date_published": "2026-07-10",
       "date_modified": "2026-07-10",
       "search_text": "лучшие роскошные курорты ривьера-майя mayakoba belmond и настоящий люкс выбирайте настоящий роскошный курорт по тому что он реально предлагает приватность mayakoba пляж belmond maroma или спа и лагуна nizuc а не просто по высокой цене за ночь riviera-maya riviera-maya boutique-hotel honeymoon beaches"
+    },
+    {
+      "slug": "best-pet-friendly-hotels-cancun-tulum-playa-del-carmen",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "cancun",
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "booking-checklist"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "book",
+      "title": "Лучшие pet-friendly отели в Канкуне, Тулуме и Плая-дель-Кармен",
+      "description": "Не каждый отель, названный «pet-friendly», является таковым. Сравните реальные правила, сборы, доступ к пляжу и реалии жаркого климата в Канкуне, Тулуме и Плая-дель-Кармен перед бронированием.",
+      "url": "https://travelradarlk.com/ru/content/best-pet-friendly-hotels-cancun-tulum-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/best-pet-friendly-hotels-cancun-tulum-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-07-10",
+      "date_modified": "2026-07-10",
+      "search_text": "лучшие pet-friendly отели в канкуне тулуме и плая-дель-кармен не каждый отель названный pet-friendly является таковым сравните реальные правила сборы доступ к пляжу и реалии жаркого климата в канкуне тулуме и плая-дель-кармен перед бронированием riviera-maya riviera-maya boutique-hotel booking-checklist"
     },
     {
       "slug": "best-resorts-playa-mujeres",
