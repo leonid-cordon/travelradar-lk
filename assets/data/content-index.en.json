@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-11T08:11:31.062Z",
-  "count": 119,
+  "generated_at": "2026-07-11T22:24:17.735Z",
+  "count": 120,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -362,6 +362,38 @@
       "date_published": "2026-07-05",
       "date_modified": "2026-07-05",
       "search_text": "best boutique hotels in tulum town walkable no car needed and under the radar pick a tulum town boutique stay by walkability ac avenida noise cenote access and honest no-car trade-offs instead of beach zone prices tulum riviera-maya boutique-hotel budget booking-checklist"
+    },
+    {
+      "slug": "best-budget-all-inclusive-playa-del-carmen",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "playa-del-carmen",
+      "related_destinations": [
+        "cancun",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "all-inclusive",
+        "budget",
+        "beaches"
+      ],
+      "audience": [
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Budget All-Inclusive Resorts in Playa del Carmen: Value and Walkable Town",
+      "description": "Pick a budget all-inclusive in Playa del Carmen by fit: quiet Playacar cluster, walkable-to-Fifth-Avenue value, and the honest limits on beach, room age and dining.",
+      "url": "https://travelradarlk.com/en/content/best-budget-all-inclusive-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/best-budget-all-inclusive-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-07-11",
+      "date_modified": "2026-07-11",
+      "search_text": "best budget all-inclusive resorts in playa del carmen value and walkable town pick a budget all-inclusive in playa del carmen by fit quiet playacar cluster walkable-to-fifth-avenue value and the honest limits on beach room age and dining playa-del-carmen riviera-maya all-inclusive budget beaches"
     },
     {
       "slug": "best-budget-all-inclusive-resorts-cancun-hotel-zone",

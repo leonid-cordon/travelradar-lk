@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-11T08:11:31.305Z",
-  "count": 119,
+  "generated_at": "2026-07-11T22:24:17.989Z",
+  "count": 120,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -362,6 +362,38 @@
       "date_published": "2026-07-05",
       "date_modified": "2026-07-05",
       "search_text": "лучшие бутик-отели в тулуме tulum town пешком без машины и вне радаров выбирайте бутик-отель в тулуме по пешей доступности кондиционерам шуму от авениды доступу к сенотам и честным компромиссам без машины вместо цен beach zone tulum riviera-maya boutique-hotel budget booking-checklist"
+    },
+    {
+      "slug": "best-budget-all-inclusive-playa-del-carmen",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "playa-del-carmen",
+      "related_destinations": [
+        "cancun",
+        "cozumel"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "all-inclusive",
+        "budget",
+        "beaches"
+      ],
+      "audience": [
+        "family",
+        "couples"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие бюджетные курорты «всё включено» в Плая-дель-Кармен: выгода и пешая доступность до города",
+      "description": "Выбирайте недорогой курорт «всё включено» в Плая-дель-Кармен по формату отдыха: тихий кластер Playacar, удобный доступ к Пятой авеню и честные компромиссы по пляжу, свежести номеров и питанию.",
+      "url": "https://travelradarlk.com/ru/content/best-budget-all-inclusive-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/best-budget-all-inclusive-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-07-11",
+      "date_modified": "2026-07-11",
+      "search_text": "лучшие бюджетные курорты всё включено в плая-дель-кармен выгода и пешая доступность до города выбирайте недорогой курорт всё включено в плая-дель-кармен по формату отдыха тихий кластер playacar удобный доступ к пятой авеню и честные компромиссы по пляжу свежести номеров и питанию playa-del-carmen riviera-maya all-inclusive budget beaches"
     },
     {
       "slug": "best-budget-all-inclusive-resorts-cancun-hotel-zone",
