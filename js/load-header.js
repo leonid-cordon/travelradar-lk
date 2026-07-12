@@ -122,6 +122,9 @@ function fixNavigationLinks() {
             href.startsWith('tel:')
         ) return;
 
+        // Пустой якорь используется как триггер dropdown, его не превращаем в /lang/#
+        if (href === '#') return;
+
         // Якоря (#about)
         if (href.startsWith('#')) {
             link.setAttribute('href', `/${lang}/${href}`);
@@ -239,6 +242,13 @@ function initMobileMenu() {
     const navMenu = document.getElementById('navMenu');
 
     if (!mobileToggle || !navMenu) return;
+
+    document.querySelectorAll('#site-header .nav-link.has-dropdown').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            link.closest('.nav-item')?.classList.toggle('dropdown-open');
+        });
+    });
 
     mobileToggle.addEventListener('click', () => {
         const isActive = navMenu.classList.toggle('active');
