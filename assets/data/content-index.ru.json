@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-11T22:24:17.989Z",
-  "count": 120,
+  "generated_at": "2026-07-12T22:20:15.031Z",
+  "count": 121,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -298,6 +298,36 @@
       "date_published": "2026-05-18",
       "date_modified": "2026-05-18",
       "search_text": "лучшие all-inclusive отели в hotel zone канкуна север центр или юг hotel zone выберите all-inclusive в канкуне по пляжу атмосфере и стилю поездки cancun all-inclusive"
+    },
+    {
+      "slug": "best-all-inclusive-resorts-cozumel",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": null,
+      "destination": "cozumel",
+      "related_destinations": [],
+      "content_type": "listicle",
+      "tags": [
+        "all-inclusive",
+        "adults-only",
+        "family-resort",
+        "beaches"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Лучшие курорты «всё включено» на Косумеле: дайвинг, пляж и проживание на острове",
+      "description": "Выбирайте курорт на Косумеле по доступу к рифу, типу пляжа и стилю отдыха, а не по звёздному рейтингу: правда о коралловых берегах, собственные дайв-центры и расстояние до Сан-Мигеля.",
+      "url": "https://travelradarlk.com/ru/content/best-all-inclusive-resorts-cozumel",
+      "image": "https://travelradarlk.com/assets/images/content/best-all-inclusive-resorts-cozumel/card_1200x600.jpg",
+      "date_published": "2026-07-12",
+      "date_modified": "2026-07-12",
+      "search_text": "лучшие курорты всё включено на косумеле дайвинг пляж и проживание на острове выбирайте курорт на косумеле по доступу к рифу типу пляжа и стилю отдыха а не по звёздному рейтингу правда о коралловых берегах собственные дайв-центры и расстояние до сан-мигеля cozumel all-inclusive adults-only family-resort beaches"
     },
     {
       "slug": "best-beach-clubs-tulum-playa-del-carmen",

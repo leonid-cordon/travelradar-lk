@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-11T22:24:17.735Z",
-  "count": 120,
+  "generated_at": "2026-07-12T22:20:14.711Z",
+  "count": 121,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -298,6 +298,36 @@
       "date_published": "2026-05-18",
       "date_modified": "2026-05-18",
       "search_text": "best all-inclusive resorts in cancun hotel zone north central or south hotel zone choose cancun all-inclusive resorts by beach vibe and trip style cancun all-inclusive"
+    },
+    {
+      "slug": "best-all-inclusive-resorts-cozumel",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": "cozumel",
+      "related_destinations": [],
+      "content_type": "listicle",
+      "tags": [
+        "all-inclusive",
+        "adults-only",
+        "family-resort",
+        "beaches"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best All-Inclusive Resorts in Cozumel: Diving, Beach and Staying on the Island",
+      "description": "Pick a Cozumel all-inclusive by dive access, beach type and traveler style, not star rating: coral-shore reality, on-site dive shops and San Miguel distance explained.",
+      "url": "https://travelradarlk.com/en/content/best-all-inclusive-resorts-cozumel",
+      "image": "https://travelradarlk.com/assets/images/content/best-all-inclusive-resorts-cozumel/card_1200x600.jpg",
+      "date_published": "2026-07-12",
+      "date_modified": "2026-07-12",
+      "search_text": "best all-inclusive resorts in cozumel diving beach and staying on the island pick a cozumel all-inclusive by dive access beach type and traveler style not star rating coral-shore reality on-site dive shops and san miguel distance explained cozumel all-inclusive adults-only family-resort beaches"
     },
     {
       "slug": "best-beach-clubs-tulum-playa-del-carmen",

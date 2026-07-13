@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 120,
+  "record_count": 121,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -35,6 +35,9 @@
     },
     "best-all-inclusive-resorts-cancun-hotel-zone": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": ["all-inclusive"], "audience": [], "featured": 0, "intent": null
+    },
+    "best-all-inclusive-resorts-cozumel": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cozumel", "related_destinations": [], "content_type": "listicle", "tags": ["all-inclusive", "adults-only", "family-resort", "beaches"], "audience": ["couples", "family"], "featured": 0, "intent": "book"
     },
     "best-beach-clubs-tulum-playa-del-carmen": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": ["playa-del-carmen"], "content_type": "comparison", "tags": ["beaches", "day-trips", "money", "budget", "sargassum"], "audience": ["couples", "family", "first-timer"], "featured": 0, "intent": "plan"
