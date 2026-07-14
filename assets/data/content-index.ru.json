@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-12T22:20:15.031Z",
-  "count": 121,
+  "generated_at": "2026-07-14T01:54:42.335Z",
+  "count": 122,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -813,6 +813,38 @@
       "date_published": "2026-07-10",
       "date_modified": "2026-07-10",
       "search_text": "лучшие pet-friendly отели в канкуне тулуме и плая-дель-кармен не каждый отель названный pet-friendly является таковым сравните реальные правила сборы доступ к пляжу и реалии жаркого климата в канкуне тулуме и плая-дель-кармен перед бронированием riviera-maya riviera-maya boutique-hotel booking-checklist"
+    },
+    {
+      "slug": "best-resorts-akumal-snorkeling-turtles",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "beaches",
+        "all-inclusive",
+        "adults-only",
+        "family-resort"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие отели в Акумале для снорклинга с морскими черепахами: где остановиться",
+      "description": "Проживание в бухте Акумаль дает главное: возможность поплавать с черепахами рано утром, до прибытия туристических автобусов. Лучшие отели на пляже, выбор между семейным и «только для взрослых», и когда хватит однодневной поездки.",
+      "url": "https://travelradarlk.com/ru/content/best-resorts-akumal-snorkeling-turtles",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-akumal-snorkeling-turtles/card_1200x600.jpg",
+      "date_published": "2026-07-13",
+      "date_modified": "2026-07-13",
+      "search_text": "лучшие отели в акумале для снорклинга с морскими черепахами где остановиться проживание в бухте акумаль дает главное возможность поплавать с черепахами рано утром до прибытия туристических автобусов лучшие отели на пляже выбор между семейным и только для взрослых и когда хватит однодневной поездки riviera-maya riviera-maya snorkeling beaches all-inclusive adults-only family-resort"
     },
     {
       "slug": "best-resorts-playa-mujeres",

@@ -1,0 +1,627 @@
+/* ============================================================
+   Travel Radar LK — Stories landing (Phase 1)
+   Own component styles for body[data-page="stories"].
+   Uses project fonts (Fraunces / Inter / DM Sans) and mirrors the
+   dark/light token approach used elsewhere on the site. No inline styles,
+   no edits to existing CSS. Scoped under .stories-landing / st- prefix.
+   ============================================================ */
+
+/* ---- Theme tokens (page-scoped, follow [data-theme]) ---- */
+[data-theme="dark"] .stories-landing {
+    --st-bg:          #0f1117;
+    --st-surface:     #181c27;
+    --st-surface2:    #1e2333;
+    --st-border:      rgba(255,255,255,0.08);
+    --st-text:        #e4e6ef;
+    --st-muted:       #7a8099;
+    --st-accent:      #c8a96e;
+    --st-accent-soft: rgba(200,169,110,0.12);
+    --st-accent2:     #5fa8d3;
+    --st-divider:     rgba(255,255,255,0.07);
+    --st-card-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+[data-theme="light"] .stories-landing {
+    --st-bg:          #f7f8fc;
+    --st-surface:     #ffffff;
+    --st-surface2:    #f0f2f8;
+    --st-border:      rgba(0,0,0,0.08);
+    --st-text:        #1a1d2e;
+    --st-muted:       #6b7280;
+    --st-accent:      #b8942a;
+    --st-accent-soft: rgba(184,148,42,0.09);
+    --st-accent2:     #2a7fa8;
+    --st-divider:     rgba(0,0,0,0.06);
+    --st-card-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+/* ---- Landing wrapper ---- */
+.stories-landing {
+    background: var(--st-bg);
+    color: var(--st-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.stories-landing .st-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.stories-landing section {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--st-divider);
+}
+
+.stories-landing section:last-child {
+    border-bottom: none;
+}
+
+/* ---- Shared type ---- */
+.stories-landing h1,
+.stories-landing h2,
+.stories-landing h3 {
+    font-family: 'Fraunces', serif;
+    color: var(--st-text);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.st-eyebrow {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--st-accent);
+    margin-bottom: 0.9rem;
+}
+
+.st-section-title {
+    font-size: clamp(1.5rem, 3.4vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+}
+
+.stories-landing p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--st-text);
+    margin: 0 0 1.1rem;
+}
+
+.stories-landing p.st-lead {
+    font-size: 1.12rem;
+    color: var(--st-muted);
+}
+
+.stories-landing a {
+    color: var(--st-accent2);
+}
+
+/* ============================================================
+   1. HERO
+   ============================================================ */
+.st-hero {
+    padding: 5rem 0 4rem;
+    text-align: center;
+    background:
+        radial-gradient(1200px 400px at 50% -10%, var(--st-accent-soft), transparent 70%);
+}
+
+.st-hero-title {
+    font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+    font-weight: 700;
+    margin: 0 auto 1.1rem;
+    max-width: 16ch;
+}
+
+.st-hero-sub {
+    font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+    color: var(--st-muted);
+    max-width: 52ch;
+    margin: 0 auto 2rem;
+    line-height: 1.65;
+}
+
+.st-hero-brandline {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--st-muted);
+    margin-bottom: 2rem;
+}
+
+.st-hero-actions {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---- Buttons ---- */
+.st-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.st-btn-primary {
+    background: var(--st-accent);
+    color: #1a1408;
+    border: 1px solid var(--st-accent);
+}
+
+.st-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--st-accent-soft);
+    color: #1a1408;
+}
+
+.st-btn-ghost {
+    background: transparent;
+    color: var(--st-text);
+    border: 1px solid var(--st-border);
+}
+
+.st-btn-ghost:hover {
+    border-color: var(--st-accent);
+    color: var(--st-accent);
+}
+
+/* ============================================================
+   2. WHY
+   ============================================================ */
+.st-why .st-lead {
+    font-size: 1.16rem;
+    color: var(--st-text);
+}
+
+.st-why-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.8rem;
+}
+
+.st-why-card {
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+    box-shadow: var(--st-card-shadow);
+}
+
+.st-why-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.st-why-card p {
+    font-size: 0.94rem;
+    color: var(--st-muted);
+    margin: 0;
+}
+
+/* ============================================================
+   3. EXAMPLE SLOT (anatomy mode by default)
+   ============================================================ */
+.st-example-frame {
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: var(--st-card-shadow);
+    margin-top: 1.6rem;
+}
+
+.st-example-note {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--st-muted);
+    border: 1px dashed var(--st-border);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    margin-bottom: 1.4rem;
+}
+
+.st-anatomy {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.st-anatomy li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 0.9rem 1rem;
+    background: var(--st-surface2);
+    border-radius: 10px;
+}
+
+.st-anatomy-icon {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
+
+.st-anatomy b {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 0.98rem;
+    margin-bottom: 0.15rem;
+    color: var(--st-text);
+}
+
+.st-anatomy span {
+    font-size: 0.88rem;
+    color: var(--st-muted);
+    line-height: 1.55;
+}
+
+/* ============================================================
+   4. TRUST / editorial model
+   ============================================================ */
+.st-trust-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin: 1.6rem 0;
+}
+
+.st-trust-col {
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: var(--st-card-shadow);
+}
+
+.st-trust-col h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.9rem;
+}
+
+.st-trust-col.you    { border-top: 3px solid var(--st-accent2); }
+.st-trust-col.editor { border-top: 3px solid var(--st-accent); }
+
+.st-check {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+}
+
+.st-check li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.94rem;
+    color: var(--st-text);
+    line-height: 1.5;
+}
+
+.st-check li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--st-accent);
+    font-weight: 700;
+}
+
+.st-reassure {
+    background: var(--st-accent-soft);
+    border-left: 3px solid var(--st-accent);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: var(--st-text);
+    margin: 1.4rem 0 0;
+}
+
+.st-privacy-note {
+    font-size: 0.86rem;
+    color: var(--st-muted);
+    margin-top: 1rem;
+}
+
+/* ============================================================
+   5. HOW IT WORKS — steps
+   ============================================================ */
+.st-steps {
+    list-style: none;
+    counter-reset: st-step;
+    margin: 1.6rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.st-steps li {
+    counter-increment: st-step;
+    position: relative;
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 12px;
+    padding: 1.2rem 1.3rem 1.2rem 3.7rem;
+    box-shadow: var(--st-card-shadow);
+}
+
+.st-steps li::before {
+    content: counter(st-step);
+    position: absolute;
+    left: 1.1rem;
+    top: 1.1rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: var(--st-accent);
+    color: #1a1408;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.st-steps b {
+    font-family: 'Fraunces', serif;
+    font-size: 1.02rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.st-steps span {
+    font-size: 0.92rem;
+    color: var(--st-muted);
+    line-height: 1.55;
+}
+
+/* ============================================================
+   6. EXCHANGE — give / get
+   ============================================================ */
+.st-exchange-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 1.6rem;
+}
+
+.st-exchange-card {
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: var(--st-card-shadow);
+}
+
+.st-exchange-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.9rem;
+}
+
+.st-exchange-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.st-exchange-card li {
+    font-size: 0.94rem;
+    color: var(--st-text);
+    padding-left: 1.4rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.st-exchange-card.give li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--st-accent2);
+}
+
+.st-exchange-card.get li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: var(--st-accent);
+    font-size: 0.8rem;
+    top: 0.15rem;
+}
+
+/* ============================================================
+   7. LEVELS
+   ============================================================ */
+.st-levels-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.6rem;
+}
+
+.st-level {
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: var(--st-card-shadow);
+}
+
+.st-level-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--st-accent);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+.st-level h3 {
+    font-size: 1.08rem;
+    margin-bottom: 0.5rem;
+}
+
+.st-level p {
+    font-size: 0.9rem;
+    color: var(--st-muted);
+    margin: 0;
+}
+
+/* ============================================================
+   8. BE AMONG THE FIRST
+   ============================================================ */
+.st-first {
+    text-align: center;
+    background:
+        radial-gradient(900px 300px at 50% 120%, var(--st-accent-soft), transparent 70%);
+}
+
+.st-first .st-section-title {
+    max-width: 24ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.st-first p {
+    max-width: 52ch;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--st-muted);
+}
+
+/* ============================================================
+   9. FAQ
+   ============================================================ */
+.st-faq-list {
+    margin-top: 1.6rem;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.st-faq-item {
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    box-shadow: var(--st-card-shadow);
+}
+
+.st-faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--st-text);
+}
+
+.st-faq-item p {
+    font-size: 0.93rem;
+    color: var(--st-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   10. START / contact slot
+   ============================================================ */
+.st-start {
+    text-align: center;
+    background: var(--st-surface2);
+}
+
+.st-start .st-section-title {
+    margin-bottom: 1rem;
+}
+
+.st-start p {
+    max-width: 50ch;
+    margin: 0 auto 1.8rem;
+    color: var(--st-muted);
+}
+
+.st-contact-slot {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.st-contact-placeholder {
+    font-size: 0.82rem;
+    color: var(--st-muted);
+    border: 1px dashed var(--st-border);
+    border-radius: 10px;
+    padding: 0.9rem 1.2rem;
+    margin-top: 1rem;
+}
+
+/* ============================================================
+   Secondary — AGENCIES
+   ============================================================ */
+.st-agencies {
+    background: var(--st-bg);
+}
+
+.st-agencies-box {
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 14px;
+    padding: 1.8rem 2rem;
+    box-shadow: var(--st-card-shadow);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.st-agencies-box h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+}
+
+.st-agencies-box p {
+    color: var(--st-muted);
+    max-width: 56ch;
+    margin: 0 auto 1.2rem;
+    font-size: 0.96rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 720px) {
+    .st-why-split,
+    .st-trust-cols,
+    .st-exchange-grid,
+    .st-levels-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stories-landing section {
+        padding: 2.8rem 0;
+    }
+
+    .st-hero {
+        padding: 3.5rem 0 3rem;
+    }
+
+    .st-example-frame,
+    .st-agencies-box {
+        padding: 1.4rem;
+    }
+}

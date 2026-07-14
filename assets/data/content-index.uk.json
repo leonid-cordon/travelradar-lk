@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-12T22:20:15.445Z",
-  "count": 121,
+  "generated_at": "2026-07-14T01:54:42.676Z",
+  "count": 122,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -813,6 +813,38 @@
       "date_published": "2026-07-10",
       "date_modified": "2026-07-10",
       "search_text": "найкращі pet-friendly готелі в канкуні тулумі та плая-дель-кармен не кожен готель названий pet-friendly є таким насправді порівняйте реальні правила розміщення з тваринами збори доступ до пляжу та реалії спекотного клімату в канкуні тулумі та плая-дель-кармен перед бронюванням riviera-maya riviera-maya boutique-hotel booking-checklist"
+    },
+    {
+      "slug": "best-resorts-akumal-snorkeling-turtles",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "beaches",
+        "all-inclusive",
+        "adults-only",
+        "family-resort"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Найкращі готелі в Акумалі для снорклінгу з морськими черепахами: де зупинитися",
+      "description": "Проживання в бухті Акумаль дає головне: можливість поплавати з черепахами рано вранці, до прибуття туристичних автобусів. Найкращі готелі на пляжі, вибір між сімейним та «лише для дорослих», і коли вистачить одноденної поїздки.",
+      "url": "https://travelradarlk.com/ua/content/best-resorts-akumal-snorkeling-turtles",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-akumal-snorkeling-turtles/card_1200x600.jpg",
+      "date_published": "2026-07-13",
+      "date_modified": "2026-07-13",
+      "search_text": "найкращі готелі в акумалі для снорклінгу з морськими черепахами де зупинитися проживання в бухті акумаль дає головне можливість поплавати з черепахами рано вранці до прибуття туристичних автобусів найкращі готелі на пляжі вибір між сімейним та лише для дорослих і коли вистачить одноденної поїздки riviera-maya riviera-maya snorkeling beaches all-inclusive adults-only family-resort"
     },
     {
       "slug": "best-resorts-playa-mujeres",

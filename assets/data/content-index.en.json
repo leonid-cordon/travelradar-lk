@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-12T22:20:14.711Z",
-  "count": 121,
+  "generated_at": "2026-07-14T01:54:41.977Z",
+  "count": 122,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -813,6 +813,38 @@
       "date_published": "2026-07-10",
       "date_modified": "2026-07-10",
       "search_text": "best pet-friendly hotels in cancun tulum and playa del carmen not every hotel that says pet-friendly actually is compare real pet policies fees beach access and heat reality across cancun tulum and playa del carmen before booking riviera-maya riviera-maya boutique-hotel booking-checklist"
+    },
+    {
+      "slug": "best-resorts-akumal-snorkeling-turtles",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "snorkeling",
+        "beaches",
+        "all-inclusive",
+        "adults-only",
+        "family-resort"
+      ],
+      "audience": [
+        "family",
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Resorts in Akumal for Snorkeling with Sea Turtles: Where to Stay on the Bay",
+      "description": "Staying on Akumal Bay buys one real thing: early-morning snorkeling with turtles before the tour buses. Beachfront picks, adults-only vs family, and when a day trip is enough.",
+      "url": "https://travelradarlk.com/en/content/best-resorts-akumal-snorkeling-turtles",
+      "image": "https://travelradarlk.com/assets/images/content/best-resorts-akumal-snorkeling-turtles/card_1200x600.jpg",
+      "date_published": "2026-07-13",
+      "date_modified": "2026-07-13",
+      "search_text": "best resorts in akumal for snorkeling with sea turtles where to stay on the bay staying on akumal bay buys one real thing early-morning snorkeling with turtles before the tour buses beachfront picks adults-only vs family and when a day trip is enough riviera-maya riviera-maya snorkeling beaches all-inclusive adults-only family-resort"
     },
     {
       "slug": "best-resorts-playa-mujeres",
