@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-14T16:31:58.139Z",
-  "count": 123,
+  "generated_at": "2026-07-15T14:11:29.817Z",
+  "count": 124,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -3405,6 +3405,37 @@
       "date_published": "2026-05-08",
       "date_modified": "2026-05-08",
       "search_text": "where to stay in playa del carmen beach downtown or playacar a practical area guide to playa del carmen central beach downtown fifth avenue playacar noise ferry access and booking mistakes playa-del-carmen riviera-maya neighborhoods"
+    },
+    {
+      "slug": "where-to-stay-puerto-morelos-hotels",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "boutique-hotel",
+        "beaches",
+        "hotel-mistakes",
+        "budget"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Where to Stay in Puerto Morelos: Quiet Beach Town vs Mega-Resorts",
+      "description": "Two very different Puerto Morelos vacations: a boutique room a block from the town square, or a luxury all-inclusive north of town. How to pick the right one.",
+      "url": "https://travelradarlk.com/en/content/where-to-stay-puerto-morelos-hotels",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-stay-puerto-morelos-hotels/card_1200x600.jpg",
+      "date_published": "2026-07-14",
+      "date_modified": "2026-07-15",
+      "search_text": "where to stay in puerto morelos quiet beach town vs mega-resorts two very different puerto morelos vacations a boutique room a block from the town square or a luxury all-inclusive north of town how to pick the right one riviera-maya riviera-maya all-inclusive boutique-hotel beaches hotel-mistakes budget"
     },
     {
       "slug": "xcaret-vs-xel-ha-vs-xplor",

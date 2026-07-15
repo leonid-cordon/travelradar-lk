@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 123,
+  "record_count": 124,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -371,6 +371,9 @@
     },
     "where-to-stay-playa-del-carmen": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "playa-del-carmen", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
+    },
+    "where-to-stay-puerto-morelos-hotels": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": [], "content_type": "comparison", "tags": ["all-inclusive", "boutique-hotel", "beaches", "hotel-mistakes", "budget"], "audience": ["couples", "family"], "featured": 0, "intent": "plan"
     },
     "xcaret-vs-xel-ha-vs-xplor": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "comparison", "tags": ["theme-parks"], "audience": [], "featured": 0, "intent": null

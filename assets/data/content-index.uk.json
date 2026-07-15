@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-14T16:31:58.665Z",
-  "count": 123,
+  "generated_at": "2026-07-15T14:11:30.510Z",
+  "count": 124,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -3405,6 +3405,37 @@
       "date_published": "2026-05-08",
       "date_modified": "2026-05-08",
       "search_text": "де зупинитися в плая-дель-кармен пляж центр чи playacar практичний гід по районах плая-дель-кармен пляж downtown п ята авеню playacar шум пором і помилки бронювання playa-del-carmen riviera-maya neighborhoods"
+    },
+    {
+      "slug": "where-to-stay-puerto-morelos-hotels",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "boutique-hotel",
+        "beaches",
+        "hotel-mistakes",
+        "budget"
+      ],
+      "audience": [
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Де зупинитися в Пуерто-Морелос: Тихе пляжне містечко чи мега-курорти",
+      "description": "Два абсолютно різні варіанти відпочинку в Пуерто-Морелос: номер у бутик-готелі в кварталі від площі або розкішний курорт «все включено» на північ від міста. Як зробити правильний вибір.",
+      "url": "https://travelradarlk.com/ua/content/where-to-stay-puerto-morelos-hotels",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-stay-puerto-morelos-hotels/card_1200x600.jpg",
+      "date_published": "2026-07-14",
+      "date_modified": "2026-07-15",
+      "search_text": "де зупинитися в пуерто-морелос тихе пляжне містечко чи мега-курорти два абсолютно різні варіанти відпочинку в пуерто-морелос номер у бутик-готелі в кварталі від площі або розкішний курорт все включено на північ від міста як зробити правильний вибір riviera-maya riviera-maya all-inclusive boutique-hotel beaches hotel-mistakes budget"
     },
     {
       "slug": "xcaret-vs-xel-ha-vs-xplor",
