@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-14T01:54:42.676Z",
-  "count": 122,
+  "generated_at": "2026-07-14T16:31:58.665Z",
+  "count": 123,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -645,6 +645,32 @@
       "date_published": "2026-07-06",
       "date_modified": "2026-07-06",
       "search_text": "де зупинитися на ісла-мухерес готелі біля плайя-норте тиха сторона і що потрібно знати вибирайте де зупинитися на ісла-мухерес за відстанню до плайя-норте транспортом і ціною бутик-готелі біля пляжу ель-сентро для прогулянок або тиха західна сторона isla-mujeres island-trip boutique-hotel beaches hotel-mistakes"
+    },
+    {
+      "slug": "best-hotels-near-cancun-airport",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "airport-transfer",
+        "hotel-mistakes",
+        "flights"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "book",
+      "title": "Найкращі готелі біля аеропорту Канкуна: для пізніх прильотів і ранніх вильотів",
+      "description": "Приліт опівночі або виліт о 5 ранку — це логістичне завдання, а не відпустка. Розповідаємо, в якому готелі біля аеропорту Канкуна краще зупинитися, до якого можна дійти пішки, а на чий шатл варто покладатися.",
+      "url": "https://travelradarlk.com/ua/content/best-hotels-near-cancun-airport",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-near-cancun-airport/card_1200x600.jpg",
+      "date_published": "2026-07-13",
+      "date_modified": "2026-07-13",
+      "search_text": "найкращі готелі біля аеропорту канкуна для пізніх прильотів і ранніх вильотів приліт опівночі або виліт о 5 ранку це логістичне завдання а не відпустка розповідаємо в якому готелі біля аеропорту канкуна краще зупинитися до якого можна дійти пішки а на чий шатл варто покладатися cancun airport-transfer hotel-mistakes flights"
     },
     {
       "slug": "best-hotels-playa-del-carmen",

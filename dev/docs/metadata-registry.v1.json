@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 122,
+  "record_count": 123,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -71,6 +71,9 @@
     },
     "best-hotels-isla-mujeres": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": "isla-mujeres", "related_destinations": [], "content_type": "guide", "tags": ["island-trip", "boutique-hotel", "beaches", "hotel-mistakes"], "audience": ["first-timer", "family", "couples"], "featured": 0, "intent": "book"
+    },
+    "best-hotels-near-cancun-airport": {
+      "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "guide", "tags": ["airport-transfer", "hotel-mistakes", "flights"], "audience": [], "featured": 0, "intent": "book"
     },
     "best-hotels-playa-del-carmen": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "playa-del-carmen", "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null

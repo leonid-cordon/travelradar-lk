@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-14T01:54:41.977Z",
-  "count": 122,
+  "generated_at": "2026-07-14T16:31:58.139Z",
+  "count": 123,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -645,6 +645,32 @@
       "date_published": "2026-07-06",
       "date_modified": "2026-07-06",
       "search_text": "best hotels on isla mujeres near playa norte the quiet side and what to know choose where to stay on isla mujeres by distance to playa norte transport and price beach-tip boutiques walkable el centro value or the quiet west side isla-mujeres island-trip boutique-hotel beaches hotel-mistakes"
+    },
+    {
+      "slug": "best-hotels-near-cancun-airport",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": null,
+      "destination": "cancun",
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "airport-transfer",
+        "hotel-mistakes",
+        "flights"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Hotels Near Cancun Airport: For Late Arrivals and Early Departures",
+      "description": "A midnight landing or a 5am flight is a logistics problem, not a vacation. Here is which hotel to sleep in near Cancun airport, which to walk to, and which shuttle to trust.",
+      "url": "https://travelradarlk.com/en/content/best-hotels-near-cancun-airport",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-near-cancun-airport/card_1200x600.jpg",
+      "date_published": "2026-07-13",
+      "date_modified": "2026-07-13",
+      "search_text": "best hotels near cancun airport for late arrivals and early departures a midnight landing or a 5am flight is a logistics problem not a vacation here is which hotel to sleep in near cancun airport which to walk to and which shuttle to trust cancun airport-transfer hotel-mistakes flights"
     },
     {
       "slug": "best-hotels-playa-del-carmen",
