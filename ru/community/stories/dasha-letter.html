@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Письмо — Travel Radar LK</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:        #0f1117;
+            --surface:   #181c27;
+            --surface2:  #1e2333;
+            --border:    rgba(255,255,255,0.08);
+            --text:      #e4e6ef;
+            --muted:     #7a8099;
+            --accent:    #c8a96e;
+            --accent-soft: rgba(200,169,110,0.12);
+            --accent2:   #5fa8d3;
+            --warm:      #d4a053;
+            --warm-soft: rgba(212,160,83,0.10);
+            --rose:      #c97b7b;
+            --rose-soft: rgba(201,123,123,0.10);
+        }
+
+        [data-theme="light"] {
+            --bg:        #f7f8fc;
+            --surface:   #ffffff;
+            --surface2:  #f0f2f8;
+            --border:    rgba(0,0,0,0.08);
+            --text:      #1a1d2e;
+            --muted:     #6b7280;
+            --accent:    #b8942a;
+            --accent-soft: rgba(184,148,42,0.09);
+            --accent2:   #2a7fa8;
+            --warm:      #b8942a;
+            --warm-soft: rgba(184,148,42,0.08);
+            --rose:      #a85c5c;
+            --rose-soft: rgba(168,92,92,0.08);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Page wrapper --- */
+        .letter-page {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        /* --- Top accent line --- */
+        .letter-page::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin-bottom: 2.5rem;
+        }
+
+        /* --- Header --- */
+        .letter-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .letter-brand {
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .letter-date {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+
+        /* --- Greeting --- */
+        .letter-greeting {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        /* --- Body paragraphs --- */
+        .letter-body p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.2rem;
+        }
+
+        .letter-body p.muted {
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .letter-body p.emphasis {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--accent);
+            line-height: 1.6;
+            margin: 1.8rem 0;
+            padding-left: 1.2rem;
+            border-left: 2px solid var(--accent);
+        }
+
+        /* --- Photo request card --- */
+        .photo-request {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.8rem 1.6rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .photo-request-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .photo-request h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .photo-request ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .photo-request li {
+            position: relative;
+            padding-left: 1.6rem;
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .photo-request li::before {
+            content: attr(data-icon);
+            position: absolute;
+            left: 0;
+            font-size: 0.85rem;
+        }
+
+        .photo-request .note {
+            margin-top: 1.2rem;
+            font-size: 0.88rem;
+            color: var(--muted);
+            font-style: italic;
+            padding: 0.8rem 1rem;
+            background: var(--warm-soft);
+            border-radius: 8px;
+            border-left: 2px solid var(--warm);
+        }
+
+        /* --- Highlight box --- */
+        .letter-highlight {
+            background: var(--rose-soft);
+            border: 1px solid rgba(201,123,123,0.15);
+            border-radius: 12px;
+            padding: 1.4rem 1.5rem;
+            margin: 1.8rem 0;
+        }
+
+        .letter-highlight p {
+            font-size: 0.98rem;
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .letter-highlight strong {
+            color: var(--rose);
+        }
+
+        /* --- Sign-off --- */
+        .letter-signoff {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .letter-signoff .name {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.3rem;
+        }
+
+        .letter-signoff .role {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .letter-signoff .contacts {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .letter-signoff .contacts a {
+            color: var(--accent2);
+            text-decoration: none;
+        }
+
+        .letter-signoff .contacts a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Footer link --- */
+        .letter-footer {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .letter-footer a {
+            display: inline-block;
+            font-size: 0.88rem;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 0.6rem 1.4rem;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .letter-footer a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            .letter-page { padding: 2rem 1.2rem 3rem; }
+            .letter-greeting { font-size: 1.35rem; }
+            .photo-request { padding: 1.3rem; }
+        }
+    </style>
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+    <article class="letter-page">
+
+        <header class="letter-header">
+            <span class="letter-brand">Travel Radar LK · Stories</span>
+            <p class="letter-date">Июль 2026</p>
+        </header>
+
+        <h1 class="letter-greeting">Даша, привет!</h1>
+
+        <div class="letter-body">
+            <p>
+                Пишу тебе, потому что твоя поездка в Мексику — это именно то, из чего рождается настоящая история. Не блогерский пост, не строрис на день, а полноценная история путешествия, которая останется с тобой навсегда.
+            </p>
+
+            <p>
+                Мы запустили проект <strong>Stories</strong> — это когда обычные путешественники делятся своими материалами, а наша редакция собирает из них красивую, живую историю. С фотографиями, картой, впечатлениями — всем.
+            </p>
+
+            <p>
+                И мне бы очень хотелось, чтобы первой такой историей стала твоя.
+            </p>
+
+            <p class="emphasis">
+                Вот что я прошу: не стесняйся. Присылай всё. Серьёзно — всё.
+            </p>
+
+            <div class="photo-request">
+                <span class="photo-request-label">Что нужно от тебя</span>
+                <h3>Вот что было бы идеально получить:</h3>
+                <ul>
+                    <li data-icon="📸">Фотографии — любые. Аэропорт, отель, пляж, еда, улицы, закаты, лица, мелочи. Не сортируй, не удаляй — просто скинь</li>
+                    <li data-icon="🎬">Видео — горизонтально или вертикально, любая длина. Даже 5-секундный кадр может стать ключевым</li>
+                    <li data-icon="💬">Голосовые сообщения — расскажи, как всё было. Что запомнилось, что удивило, что стало лучшим моментом. Прямо в голос, как будто рассказываешь подруге</li>
+                    <li data-icon="📝">Комментарии — напиши даты, когда вы были в каждом месте. Какие рестораны зашли, какие экскурсии посетили, что стоит того, а что — нет</li>
+                    <li data-icon="🗺️">Маршрут — где были, что видели, в каком порядке. Хоть тезисно</li>
+                </ul>
+                <p class="note">
+                    Не переживай за качество фото. Не нужно профессионального оборудования. Обычные снимки с телефона — это самое ценное, потому что они настоящие.
+                </p>
+            </div>
+
+            <div class="letter-highlight">
+                <p>
+                    <strong>Важно:</strong> мы всё сделаем сами. Отберём лучшие кадры, напишем текст, оформим, сделаем карту. Твоя задача — только поделиться тем, что уже есть. А потом мы вместе посмотрим на результат и решим, всё ли устроило.
+                </p>
+            </div>
+
+            <p>
+                Я знаю, что иногда мы думаем: «Да ну, мои фото обычные, ничего особенного». Но именно в этих обычных кадрах — живая эмоция. Не стоковая картинка, а твои глаза, твой ракурс, твои воспоминания. Это то, чего не купишь и не сгенерируешь.
+            </p>
+
+            <p>
+                Когда всё будет готово, у тебя появится своя страница на Travel Radar LK — с твоей историей, твоими фотографиями, твоим именем. Ссылку можно будет отправить друзьям, родственникам, детям. Через десять лет откроешь — и всё будет как будто вчера.
+            </p>
+
+            <p>
+                Если что-то непонятно или есть вопросы — пиши, звони, отвечу на всё. Мы можем созвониться и обсудить подробнее, если удобнее.
+            </p>
+
+            <p>
+                Буду рад, если ты согласишься. Но если пока не готова — это тоже нормально. Просто знай, что дверь открыта.
+            </p>
+        </div>
+
+        <footer class="letter-signoff">
+            <p class="name">Леонид</p>
+            <p class="role">Редакция Travel Radar LK</p>
+            <div class="contacts">
+                <p>Telegram: <a href="https://t.me/XXXLNT">@XXXLNT</a></p>
+                <p>E-mail: <a href="mailto:leonid.cordon@gmail.com">leonid.cordon@gmail.com</a></p>
+                <p>Телефон: <a href="tel:+380504783277">+380 50 478 32 77</a></p>
+            </div>
+        </footer>
+
+        <div class="letter-footer">
+            <a href="index.html">← Назад к Stories</a>
+        </div>
+
+    </article>
+</body>
+
+</html>

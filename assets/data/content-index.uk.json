@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-15T14:11:30.510Z",
-  "count": 124,
+  "generated_at": "2026-07-15T23:16:55.001Z",
+  "count": 125,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -592,6 +592,36 @@
       "date_published": "2026-06-01",
       "date_modified": "2026-06-01",
       "search_text": "найкращі готелі для медового місяця в канкуні та рів єра-майя обирайте готель для медового місяця за стилем романтики зоною пляжем приватністю та ціною люкс все включено тиша плайя-мухерес або еко-шик тулума riviera-maya honeymoon"
+    },
+    {
+      "slug": "best-hostels-cancun-tulum-solo-travelers",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": null,
+      "related_destinations": [
+        "cancun",
+        "tulum"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "budget",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Найкращі хостели Канкуна і Тулума: для вечірок, відпочинку та роботи",
+      "description": "Тусовочний хостел, тиха база біля автовокзалу чи місце для цифрових кочівників з басейном: як вибрати хостел у Канкуні та Тулумі і не пошкодувати.",
+      "url": "https://travelradarlk.com/ua/content/best-hostels-cancun-tulum-solo-travelers",
+      "image": "https://travelradarlk.com/assets/images/content/best-hostels-cancun-tulum-solo-travelers/card_1200x600.jpg",
+      "date_published": "2026-07-15",
+      "date_modified": "2026-07-15",
+      "search_text": "найкращі хостели канкуна і тулума для вечірок відпочинку та роботи тусовочний хостел тиха база біля автовокзалу чи місце для цифрових кочівників з басейном як вибрати хостел у канкуні та тулумі і не пошкодувати riviera-maya budget hotel-mistakes"
     },
     {
       "slug": "best-hotels-cancun-2026",

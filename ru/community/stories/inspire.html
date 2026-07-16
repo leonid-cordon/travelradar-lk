@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Путешествие заканчивается. История остаётся. · Travel Radar LK</title>
+    <meta name="description" content="Хорошие путешествия заслуживают лучшей судьбы, чем папка с фотографиями. Travel Radar LK — коллекция настоящих историй путешествий.">
+    <meta property="og:title" content="Путешествие заканчивается. История остаётся.">
+    <meta property="og:description" content="Travel Radar LK — коллекция настоящих историй путешествий.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico?v=3">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:        #0f1117;
+            --bg2:       #0a0c12;
+            --surface:   #181c27;
+            --surface2:  #1e2333;
+            --border:    rgba(255,255,255,0.08);
+            --text:      #e4e6ef;
+            --muted:     #7a8099;
+            --accent:    #c8a96e;
+            --accent-soft: rgba(200,169,110,0.12);
+            --accent2:   #5fa8d3;
+            --coral:     #c97b7b;
+            --coral-soft: rgba(201,123,123,0.08);
+            --shadow:    0 4px 24px rgba(0,0,0,0.3);
+        }
+
+        [data-theme="light"] {
+            --bg:        #f7f8fc;
+            --bg2:       #eef0f6;
+            --surface:   #ffffff;
+            --surface2:  #f0f2f8;
+            --border:    rgba(0,0,0,0.08);
+            --text:      #1a1d2e;
+            --muted:     #6b7280;
+            --accent:    #b8942a;
+            --accent-soft: rgba(184,148,42,0.08);
+            --accent2:   #2a7fa8;
+            --coral:     #a85c5c;
+            --coral-soft: rgba(168,92,92,0.06);
+            --shadow:    0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============================================================
+           GLOBAL
+           ============================================================ */
+        .insp-section { padding: 4.5rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        [data-theme="light"] .insp-section { border-bottom-color: rgba(0,0,0,0.04); }
+        .insp-inner { max-width: 780px; margin: 0 auto; }
+
+        .insp-eyebrow {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .insp-section h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+        }
+
+        .insp-section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .insp-section p.muted { color: var(--muted); }
+
+        /* ============================================================
+           HERO — two-column desktop, stacked mobile
+           ============================================================ */
+        .insp-hero {
+            position: relative;
+            overflow: hidden;
+            background: var(--bg);
+            min-height: 100vh;
+        }
+        .insp-hero::before {
+            content: '';
+            position: absolute;
+            top: -1px; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent));
+            z-index: 10;
+        }
+
+        /* Two-column layout */
+        .insp-hero-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+        .insp-hero-text {
+            flex: 0 0 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 3rem 4rem 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        .insp-hero-image {
+            flex: 0 0 45%;
+            position: relative;
+            overflow: hidden;
+        }
+        .insp-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+            display: block;
+        }
+        .insp-hero-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(15,17,23,0.08) 0%,
+                rgba(200,169,110,0.06) 50%,
+                rgba(15,17,23,0.12) 100%
+            );
+            pointer-events: none;
+        }
+
+        /* Hero text elements */
+        .insp-hero-brand {
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .insp-story-open { max-width: 520px; margin-bottom: 2.5rem; }
+        .insp-story-open p { font-size: 1.05rem; line-height: 1.85; margin-bottom: 0.9rem; }
+        .insp-story-open p.faded { color: var(--muted); }
+        .insp-story-open .punchline {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--accent);
+            margin-top: 1.2rem;
+            line-height: 1.5;
+        }
+        .insp-story-open .hero-subtext {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-top: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .insp-hero-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            max-width: 18ch;
+            margin-bottom: 1rem;
+        }
+        .insp-hero-title em { font-style: italic; color: var(--accent); }
+
+        .insp-hero-sub {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 40ch;
+            margin-bottom: 2rem;
+            line-height: 1.65;
+        }
+
+        .insp-hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            background: var(--accent);
+            color: #1a1408;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .insp-hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px var(--accent-soft); }
+        .insp-hero-actions { }
+
+        /* ============================================================
+           PHILOSOPHY
+           ============================================================ */
+        .insp-philosophy {
+            text-align: center;
+            background: radial-gradient(ellipse 60% 40% at 50% 50%, var(--accent-soft), transparent 70%), var(--bg2);
+            padding: 5.5rem 1.5rem;
+        }
+        .insp-philosophy .insp-inner { max-width: 600px; }
+        .insp-philosophy-lines { margin: 0; padding: 0; }
+        .insp-philosophy-lines p {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            line-height: 1.7;
+            color: var(--muted);
+            margin-bottom: 0.6rem;
+            opacity: 0.7;
+        }
+        .insp-philosophy-lines p.strike { text-decoration: line-through; opacity: 0.4; }
+        .insp-philosophy-lines p.real {
+            font-size: clamp(1.3rem, 3.2vw, 1.7rem);
+            font-weight: 600;
+            color: var(--accent);
+            opacity: 1;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+        .insp-philosophy-sub {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: var(--muted);
+            font-style: italic;
+            max-width: 42ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============================================================
+           NEAR-EMPTY PAGE — "Самые ценные истории"
+           ============================================================ */
+        .insp-manifesto {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 1.5rem;
+            background: var(--bg);
+        }
+        .insp-manifesto .insp-inner { max-width: 520px; }
+        .insp-manifesto p {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            line-height: 1.65;
+            color: var(--text);
+            margin-bottom: 0.8rem;
+        }
+        .insp-manifesto p.accent { color: var(--accent); font-weight: 600; }
+        .insp-manifesto p.muted { color: var(--muted); font-size: clamp(0.95rem, 2vw, 1.1rem); }
+
+        /* ============================================================
+           QUOTE BLOCK
+           ============================================================ */
+        .insp-quote-block {
+            text-align: center;
+            padding: 4rem 1.5rem;
+            background: var(--bg2);
+        }
+        .insp-quote-block .insp-inner { max-width: 560px; }
+        .insp-quote-block blockquote {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            font-style: italic;
+            line-height: 1.65;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .insp-quote-block cite {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* ============================================================
+           EDITOR TIPS
+           ============================================================ */
+        .insp-tip {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 12px 12px 0;
+            padding: 1.2rem 1.4rem;
+            margin: 1.8rem 0;
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+        }
+        .insp-tip-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .insp-tip-text { font-size: 0.94rem; line-height: 1.65; margin: 0; }
+        .insp-tip-text strong { color: var(--accent); }
+
+        /* ============================================================
+           NOT ONLY BEAUTIFUL
+           ============================================================ */
+        .insp-notbeautiful {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-top: 1.8rem;
+        }
+        .insp-notbeautiful h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .insp-notbeautiful .items { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+        .insp-notbeautiful .tag {
+            background: var(--accent-soft);
+            border: 1px solid rgba(200,169,110,0.15);
+            border-radius: 20px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.88rem;
+        }
+        .insp-notbeautiful p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin: 0; font-style: italic; }
+
+        /* ============================================================
+           WHAT NOT TO DO
+           ============================================================ */
+        .insp-donts {
+            background: var(--coral-soft);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-top: 1.8rem;
+        }
+        .insp-donts h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--coral);
+            margin-bottom: 1rem;
+        }
+        .insp-donts ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+        .insp-donts li { font-size: 0.95rem; padding-left: 1.6rem; position: relative; line-height: 1.55; }
+        .insp-donts li::before { content: '✕'; position: absolute; left: 0; color: var(--coral); font-weight: 700; font-size: 0.85rem; }
+
+        /* ============================================================
+           WE WILL NEVER
+           ============================================================ */
+        .insp-never {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-top: 1.8rem;
+        }
+        .insp-never h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .insp-never ul { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.55rem; }
+        .insp-never li { font-size: 0.95rem; padding-left: 1.6rem; position: relative; line-height: 1.55; }
+        .insp-never li::before { content: '—'; position: absolute; left: 0; color: var(--muted); font-weight: 700; }
+        .insp-never .promise {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* ============================================================
+           PRINCIPLES
+           ============================================================ */
+        .insp-principles { display: grid; gap: 0.5rem; margin-top: 1.5rem; }
+        .insp-principle {
+            font-size: 0.95rem;
+            padding-left: 1.6rem;
+            position: relative;
+            line-height: 1.55;
+        }
+        .insp-principle::before { content: '✔'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+        /* ============================================================
+           SEND LIST — "Что можно прислать"
+           ============================================================ */
+        .insp-sendlist {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-top: 1.8rem;
+        }
+        .insp-sendlist h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .insp-sendlist .items { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .insp-sendlist .tag {
+            background: var(--accent-soft);
+            border: 1px solid rgba(200,169,110,0.15);
+            border-radius: 20px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.88rem;
+        }
+
+        /* ============================================================
+           HONESTY BLOCK
+           ============================================================ */
+        .insp-honesty {
+            background: var(--green-soft, rgba(123,201,160,0.08));
+            border: 1px solid rgba(123,201,160,0.15);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-top: 1.8rem;
+        }
+        .insp-honesty h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--green, #7bc9a0);
+            margin-bottom: 1rem;
+        }
+        .insp-honesty p { font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.6rem; }
+        .insp-honesty p:last-child { margin-bottom: 0; }
+
+        /* ============================================================
+           PIPELINE
+           ============================================================ */
+        .insp-pipeline { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 2.5rem auto; max-width: 400px; }
+        .insp-pipe-step {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            width: 100%;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+        .insp-pipe-step:hover { transform: scale(1.02); }
+        .insp-pipe-step .pipe-emoji { font-size: 1.2rem; margin-right: 0.4rem; }
+        .insp-pipe-step b { font-family: 'Fraunces', serif; font-size: 0.95rem; }
+        .insp-pipe-arrow { font-size: 1.1rem; color: var(--accent); line-height: 1; padding: 0.2rem 0; }
+        .insp-pipe-step.final { background: var(--accent); border-color: var(--accent); }
+        .insp-pipe-step.final b { color: #1a1408; }
+
+        /* ============================================================
+           LEVELS
+           ============================================================ */
+        .insp-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.8rem; }
+        .insp-level {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .insp-level.open { border-color: var(--accent); box-shadow: 0 4px 32px rgba(200,169,110,0.15); }
+        .insp-level-toggle {
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            padding: 1.5rem 1.3rem; cursor: pointer; background: none; border: none;
+            width: 100%; font: inherit; color: inherit; transition: background 0.2s;
+        }
+        .insp-level-toggle:hover { background: var(--accent-soft); }
+        .insp-level .level-icon { font-size: 2rem; margin-bottom: 0.6rem; display: block; transition: transform 0.3s; }
+        .insp-level.open .level-icon { transform: scale(1.15); }
+        .insp-level .level-tag { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; display: block; }
+        .insp-level h3 { font-family: 'Fraunces', serif; font-size: 1.08rem; font-weight: 600; margin-bottom: 0.4rem; }
+        .insp-level .level-short { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.55; }
+        .insp-level .level-hint { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; color: var(--accent); margin-top: 0.7rem; font-weight: 500; }
+        .insp-level.open .level-hint { color: var(--muted); }
+        .insp-level .level-hint-arrow { display: inline-block; transition: transform 0.3s; font-size: 0.85rem; }
+        .insp-level.open .level-hint-arrow { transform: rotate(180deg); }
+        .insp-level-detail {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 1.3rem; background: var(--surface2); border-top: 1px solid var(--border);
+        }
+        .insp-level.open .insp-level-detail { max-height: 500px; padding: 1.2rem 1.3rem 1.4rem; }
+        .insp-level-detail h4 { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.7rem; }
+        .insp-level-detail ul { list-style: none; padding: 0; margin: 0 0 0.9rem; display: grid; gap: 0.45rem; }
+        .insp-level-detail li { font-size: 0.88rem; padding-left: 1.3rem; position: relative; line-height: 1.5; }
+        .insp-level-detail li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.8rem; }
+        .insp-level-detail .level-example {
+            font-size: 0.84rem; color: var(--muted); font-style: italic;
+            padding: 0.7rem 0.9rem; background: var(--accent-soft); border-radius: 8px;
+            border-left: 2px solid var(--accent); line-height: 1.55; margin: 0;
+        }
+
+        /* ============================================================
+           AFTER PUBLICATION
+           ============================================================ */
+        .insp-after-list { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: 0.6rem; }
+        .insp-after-list li { font-size: 1rem; padding-left: 1.6rem; position: relative; line-height: 1.55; }
+        .insp-after-list li::before { content: '✔'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+        /* ============================================================
+           VISION
+           ============================================================ */
+        .insp-vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1.8rem 0; }
+        .insp-vision-card {
+            background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+            padding: 1.1rem 1.2rem; box-shadow: var(--shadow); text-align: center;
+        }
+        .insp-vision-card .v-icon { font-size: 1.5rem; display: block; margin-bottom: 0.3rem; }
+        .insp-vision-card b { font-family: 'Fraunces', serif; font-size: 0.95rem; display: block; }
+        .insp-vision-card span { font-size: 0.82rem; color: var(--muted); }
+
+        /* ============================================================
+           FINALE
+           ============================================================ */
+        .insp-finale {
+            text-align: center;
+            padding: 5.5rem 1.5rem;
+            background: radial-gradient(ellipse 50% 60% at 50% 50%, var(--accent-soft), transparent 70%), var(--bg2);
+        }
+        .insp-finale .finale-quote {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.15rem, 2.8vw, 1.5rem);
+            font-style: italic;
+            line-height: 1.65;
+            max-width: 50ch;
+            margin: 0 auto 1.2rem;
+        }
+        .insp-finale .finale-sub {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 46ch;
+            margin: 0 auto 2rem;
+            line-height: 1.65;
+        }
+
+        /* ============================================================
+           CONTACTS — last page, minimal
+           ============================================================ */
+        .insp-contacts {
+            text-align: center;
+            padding: 6rem 1.5rem;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+        }
+        .insp-contacts .brand-big {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .insp-contacts .tagline {
+            font-size: 1.05rem;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 0.6rem;
+            max-width: 36ch;
+        }
+        .insp-contacts .tagline2 {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 3rem;
+            max-width: 40ch;
+        }
+        .insp-contacts .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            align-items: center;
+        }
+        .insp-contacts .contact-item { font-size: 0.95rem; }
+        .insp-contacts .contact-item a { color: var(--accent2); text-decoration: none; transition: color 0.2s; }
+        .insp-contacts .contact-item a:hover { color: var(--accent); }
+        .insp-contacts .contact-label {
+            font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--muted); font-weight: 600; margin-bottom: 0.2rem; display: block;
+        }
+        .insp-contacts .invite {
+            margin-top: 2.5rem;
+            font-size: 0.95rem;
+            color: var(--muted);
+            max-width: 44ch;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .insp-footer {
+            text-align: center; padding: 1.5rem; font-size: 0.78rem;
+            color: var(--muted); border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        [data-theme="light"] .insp-footer { border-top-color: rgba(0,0,0,0.04); }
+        .insp-footer a { color: var(--accent2); text-decoration: none; }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        /* ============================================================
+           V7 ENHANCEMENTS — Typography, Rhythm, Atmosphere, Motion
+           ============================================================ */
+
+        /* --- Scroll Reveal System --- */
+        .insp-section,
+        .insp-philosophy,
+        .insp-quote-block,
+        .insp-manifesto,
+        .insp-finale,
+        .insp-contacts {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .insp-section.revealed,
+        .insp-philosophy.revealed,
+        .insp-quote-block.revealed,
+        .insp-manifesto.revealed,
+        .insp-finale.revealed,
+        .insp-contacts.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Staggered children reveal --- */
+        .insp-section.revealed .insp-eyebrow,
+        .insp-section.revealed h2,
+        .insp-section.revealed > .insp-inner > p,
+        .insp-section.revealed > .insp-inner > .insp-tip,
+        .insp-section.revealed > .insp-inner > .insp-notbeautiful,
+        .insp-section.revealed > .insp-inner > .insp-donts,
+        .insp-section.revealed > .insp-inner > .insp-never,
+        .insp-section.revealed > .insp-inner > .insp-honesty,
+        .insp-section.revealed > .insp-inner > .insp-sendlist,
+        .insp-section.revealed > .insp-inner > .insp-principles {
+            opacity: 0;
+            transform: translateY(16px);
+            animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .insp-section.revealed .insp-eyebrow { animation-delay: 0.05s; }
+        .insp-section.revealed h2 { animation-delay: 0.12s; }
+        .insp-section.revealed > .insp-inner > p:nth-of-type(1) { animation-delay: 0.2s; }
+        .insp-section.revealed > .insp-inner > p:nth-of-type(2) { animation-delay: 0.28s; }
+        .insp-section.revealed > .insp-inner > p:nth-of-type(3) { animation-delay: 0.36s; }
+        .insp-section.revealed > .insp-inner > .insp-tip { animation-delay: 0.44s; }
+        .insp-section.revealed > .insp-inner > .insp-notbeautiful,
+        .insp-section.revealed > .insp-inner > .insp-donts,
+        .insp-section.revealed > .insp-inner > .insp-never,
+        .insp-section.revealed > .insp-inner > .insp-honesty,
+        .insp-section.revealed > .insp-inner > .insp-sendlist { animation-delay: 0.3s; }
+        .insp-section.revealed > .insp-inner > .insp-principles { animation-delay: 0.38s; }
+
+        @keyframes fadeSlideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Hero entrance --- */
+        .insp-hero {
+            opacity: 0;
+            animation: heroReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+        }
+        @keyframes heroReveal {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .insp-hero-image {
+            opacity: 0;
+            animation: heroImageReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+        }
+        @keyframes heroImageReveal {
+            from { opacity: 0; transform: scale(1.05); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .insp-hero .insp-story-open p {
+            opacity: 0;
+            animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .insp-hero .insp-story-open p:nth-child(1) { animation-delay: 0.5s; }
+        .insp-hero .insp-story-open p:nth-child(2) { animation-delay: 0.7s; }
+        .insp-hero .insp-story-open p:nth-child(3) { animation-delay: 0.95s; }
+        .insp-hero .insp-story-open p:nth-child(4) { animation-delay: 1.15s; }
+        .insp-hero-title {
+            opacity: 0;
+            animation: fadeSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.3s forwards;
+        }
+        .insp-hero-sub {
+            opacity: 0;
+            animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.5s forwards;
+        }
+        .insp-hero-actions {
+            opacity: 0;
+            animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.7s forwards;
+        }
+
+        /* --- Typography refinements --- */
+        .insp-section h2 {
+            letter-spacing: -0.02em;
+        }
+        .insp-eyebrow {
+            position: relative;
+            padding-left: 1.4rem;
+        }
+        .insp-eyebrow::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.8rem;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 1px;
+        }
+
+        /* --- Decorative section dividers --- */
+        .insp-section {
+            position: relative;
+        }
+        .insp-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        /* --- Enhanced quote block --- */
+        .insp-quote-block {
+            position: relative;
+        }
+        .insp-quote-block::before {
+            content: '\201C';
+            position: absolute;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Fraunces', serif;
+            font-size: 6rem;
+            line-height: 1;
+            color: var(--accent);
+            opacity: 0.12;
+            pointer-events: none;
+        }
+        .insp-quote-block blockquote {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- Philosophy section atmospheric glow --- */
+        .insp-philosophy {
+            position: relative;
+        }
+        .insp-philosophy::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            opacity: 0.04;
+            pointer-events: none;
+            animation: pulseGlow 6s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.04; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.07; transform: translate(-50%, -50%) scale(1.15); }
+        }
+
+        /* --- Manifesto atmospheric --- */
+        .insp-manifesto {
+            position: relative;
+        }
+        .insp-manifesto::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse 40% 30% at 20% 30%, var(--accent-soft), transparent),
+                radial-gradient(ellipse 40% 30% at 80% 70%, rgba(95,168,211,0.05), transparent);
+            pointer-events: none;
+        }
+        .insp-manifesto .accent {
+            position: relative;
+        }
+        .insp-manifesto .accent::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0.5;
+        }
+
+        /* --- Enhanced cards hover --- */
+        .insp-notbeautiful,
+        .insp-donts,
+        .insp-never,
+        .insp-honesty,
+        .insp-sendlist {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+        .insp-notbeautiful:hover,
+        .insp-donts:hover,
+        .insp-never:hover,
+        .insp-honesty:hover,
+        .insp-sendlist:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        }
+        [data-theme="light"] .insp-notbeautiful:hover,
+        [data-theme="light"] .insp-donts:hover,
+        [data-theme="light"] .insp-never:hover,
+        [data-theme="light"] .insp-honesty:hover,
+        [data-theme="light"] .insp-sendlist:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+        }
+
+        /* --- Tags shimmer --- */
+        .insp-sendlist .tag,
+        .insp-notbeautiful .tag {
+            transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+        }
+        .insp-sendlist .tag:hover,
+        .insp-notbeautiful .tag:hover {
+            background: rgba(200,169,110,0.2);
+            border-color: rgba(200,169,110,0.3);
+            transform: translateY(-1px);
+        }
+
+        /* --- Tip blocks glow on hover --- */
+        .insp-tip {
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .insp-tip:hover {
+            border-left-color: var(--accent2);
+            box-shadow: 0 4px 20px rgba(200,169,110,0.08);
+            transform: translateX(2px);
+        }
+
+        /* --- Pipeline redesign --- */
+        .insp-pipeline {
+            position: relative;
+        }
+        .insp-pipeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            background: linear-gradient(180deg, var(--border), var(--accent), var(--accent));
+            z-index: 0;
+            opacity: 0.4;
+        }
+        .insp-pipe-step {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+        .insp-pipe-step:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 24px rgba(200,169,110,0.12);
+            border-color: var(--accent);
+        }
+        .insp-pipe-step.final {
+            box-shadow: 0 4px 20px rgba(200,169,110,0.2);
+        }
+        .insp-pipe-step.final:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px rgba(200,169,110,0.3);
+        }
+        .insp-pipe-arrow {
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+        .insp-pipeline:hover .insp-pipe-arrow {
+            color: var(--accent2);
+        }
+
+        /* --- Levels enhanced --- */
+        .insp-level {
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .insp-level:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+        }
+        [data-theme="light"] .insp-level:hover {
+            box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+        }
+        .insp-level.open {
+            transform: translateY(-2px);
+        }
+        .insp-level-toggle {
+            transition: background 0.2s ease;
+        }
+
+        /* --- Vision grid enhanced --- */
+        .insp-vision-card {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+        .insp-vision-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+        .insp-vision-card:hover .v-icon {
+            transform: scale(1.2);
+        }
+        .insp-vision-card .v-icon {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* --- After-list items enhanced --- */
+        .insp-after-list li {
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .insp-after-list li:hover {
+            transform: translateX(4px);
+            color: var(--accent);
+        }
+
+        /* --- Finale section enhanced --- */
+        .insp-finale {
+            position: relative;
+            overflow: hidden;
+        }
+        .insp-finale::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            opacity: 0.03;
+            pointer-events: none;
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+        .insp-finale .finale-quote {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- Contacts page elevated --- */
+        .insp-contacts {
+            position: relative;
+        }
+        .insp-contacts::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 10%, var(--accent) 50%, transparent 90%);
+            opacity: 0.3;
+        }
+        .insp-contacts .brand-big {
+            letter-spacing: -0.02em;
+            transition: color 0.3s ease;
+        }
+        .insp-contacts .brand-big:hover {
+            color: var(--accent2);
+        }
+        .insp-contacts .contact-item {
+            transition: transform 0.2s ease;
+        }
+        .insp-contacts .contact-item:hover {
+            transform: translateY(-1px);
+        }
+
+        /* --- Philosophy lines enhanced --- */
+        .insp-philosophy-lines p.strike {
+            transition: opacity 0.4s ease;
+        }
+        .insp-philosophy:hover .insp-philosophy-lines p.strike {
+            opacity: 0.25;
+        }
+        .insp-philosophy-lines p.real {
+            transition: text-shadow 0.4s ease;
+        }
+        .insp-philosophy:hover .insp-philosophy-lines p.real {
+            text-shadow: 0 0 30px rgba(200,169,110,0.2);
+        }
+
+        /* --- CTA button enhanced --- */
+        .insp-hero-cta {
+            position: relative;
+            overflow: hidden;
+        }
+        .insp-hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.5s ease;
+        }
+        .insp-hero-cta:hover::before {
+            left: 100%;
+        }
+
+        /* --- Decorative floating particles (CSS only) --- */
+        .insp-hero-image::after {
+            content: '';
+            position: absolute;
+            bottom: 25%;
+            left: 15%;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+            z-index: 3;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            50% { transform: translateY(-20px) translateX(10px); opacity: 0.6; }
+        }
+
+        /* --- Section numbering accent --- */
+        .insp-section.revealed .insp-eyebrow::before {
+            animation: expandLine 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+        }
+        @keyframes expandLine {
+            from { width: 0; }
+            to { width: 0.8rem; }
+        }
+
+        /* --- Consent block trust glow --- */
+        .insp-never[style*="border-left"] {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .insp-never[style*="border-left"]:hover {
+            box-shadow: 0 4px 24px rgba(200,169,110,0.1);
+            transform: translateY(-1px);
+        }
+
+        /* --- Smooth scroll --- */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* --- Focus visible for accessibility --- */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        /* --- Reduced motion --- */
+        @media (prefers-reduced-motion: reduce) {
+            .insp-section,
+            .insp-philosophy,
+            .insp-quote-block,
+            .insp-manifesto,
+            .insp-finale,
+            .insp-contacts,
+            .insp-hero,
+            .insp-hero-image,
+            .insp-hero .insp-story-open p,
+            .insp-hero-title,
+            .insp-hero-sub,
+            .insp-hero-actions,
+            .insp-section.revealed .insp-eyebrow,
+            .insp-section.revealed h2,
+            .insp-section.revealed > .insp-inner > p,
+            .insp-section.revealed > .insp-inner > .insp-tip,
+            .insp-section.revealed > .insp-inner > .insp-notbeautiful,
+            .insp-section.revealed > .insp-inner > .insp-donts,
+            .insp-section.revealed > .insp-inner > .insp-never,
+            .insp-section.revealed > .insp-inner > .insp-honesty,
+            .insp-section.revealed > .insp-inner > .insp-sendlist,
+            .insp-section.revealed > .insp-inner > .insp-principles,
+            .insp-section.revealed .insp-eyebrow::before {
+                animation: none !important;
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .insp-philosophy::before,
+            .insp-finale::before,
+            .insp-hero-image::after {
+                animation: none !important;
+            }
+        }
+
+        /* ============================================================
+           RESPONSIVE (V7)
+           ============================================================ */
+        @media (max-width: 900px) {
+            /* Tablet: hero stacks vertically */
+            .insp-hero-layout {
+                flex-direction: column;
+            }
+            .insp-hero-text {
+                flex: none;
+                padding: 3rem 2rem 2rem;
+                order: 2;
+            }
+            .insp-hero-image {
+                flex: none;
+                height: 70vh;
+                min-height: 420px;
+                order: 1;
+            }
+            .insp-hero-title {
+                max-width: none;
+                text-align: center;
+            }
+            .insp-hero-sub {
+                max-width: none;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .insp-hero-actions {
+                text-align: center;
+            }
+            .insp-story-open {
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .insp-levels, .insp-vision-grid { grid-template-columns: 1fr; }
+            .insp-section { padding: 3rem 1.2rem; }
+            .insp-philosophy { padding: 3.5rem 1.2rem; }
+            .insp-finale { padding: 3.5rem 1.2rem; }
+            .insp-donts, .insp-notbeautiful, .insp-never { padding: 1.4rem; }
+            .insp-contacts { padding: 3rem 1.2rem; min-height: auto; }
+            .insp-manifesto { min-height: 40vh; }
+            .insp-levels { gap: 0.8rem; }
+            .insp-vision-grid { gap: 0.6rem; }
+            .insp-pipeline { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            /* Mobile: photo first, large, near-full-width */
+            .insp-hero-text {
+                padding: 2rem 1.2rem 3rem;
+            }
+            .insp-hero-image {
+                height: 80vh;
+                min-height: 480px;
+            }
+            .insp-hero-img {
+                object-position: center 40%;
+            }
+            .insp-hero-title {
+                font-size: 1.6rem;
+            }
+            .insp-story-open p { font-size: 0.95rem; }
+            .insp-section { padding: 2.2rem 1rem; }
+            .insp-philosophy { padding: 2.5rem 1rem; }
+            .insp-finale { padding: 2.5rem 1rem; }
+            .insp-contacts { padding: 2rem 1rem; }
+            .insp-manifesto { min-height: 30vh; }
+        }
+    </style>
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+         1. HERO — two-column desktop, stacked mobile
+         ============================================================ -->
+    <section class="insp-hero">
+        <div class="insp-hero-layout">
+            <div class="insp-hero-text">
+                <span class="insp-hero-brand">Travel Radar LK · Stories</span>
+                <div class="insp-story-open">
+                    <p class="faded">После отпуска большинство фотографий остаётся в телефоне.</p>
+                    <p class="faded">Со временем появляются новые снимки, старые уходят всё дальше, а вместе с ними постепенно стираются детали поездки.</p>
+                    <p class="punchline">Хорошие путешествия заслуживают лучшей судьбы, чем папка с фотографиями.</p>
+                    <p class="hero-subtext">TravelRadarLK помогает сохранить их как историю, к которой захочется возвращаться снова и снова.</p>
+                </div>
+                <h1 class="insp-hero-title">Путешествие заканчивается. <em>История остаётся.</em></h1>
+                <p class="insp-hero-sub">Ваша поездка — не просто отпуск.<br>Это история, к которой хочется возвращаться.</p>
+                <div class="insp-hero-actions">
+                    <a href="#how-anchor" class="insp-hero-cta">Как это работает →</a>
+                </div>
+            </div>
+            <div class="insp-hero-image">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="../../../assets/images/community/stories/hero-desktop.webp" type="image/webp">
+                    <source media="(min-width: 500px)" srcset="../../../assets/images/community/stories/hero-tablet.webp" type="image/webp">
+                    <source srcset="../../../assets/images/community/stories/hero-mobile.webp" type="image/webp">
+                    <source media="(min-width: 900px)" srcset="../../../assets/images/community/stories/photo_01.jpg">
+                    <source srcset="../../../assets/images/community/stories/photo_01.jpg">
+                    <img src="../../../assets/images/community/stories/photo_01.jpg"
+                         alt="Путешественник на пляже на закате — тёплая атмосфера воспоминаний"
+                         class="insp-hero-img"
+                         width="1400" height="1749"
+                         fetchpriority="high">
+                </picture>
+                <div class="insp-hero-img-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         2. PHILOSOPHY
+         ============================================================ -->
+    <section class="insp-philosophy">
+        <div class="insp-inner">
+            <p class="insp-philosophy-lines">
+                <span class="strike">Мы не создаём контент.</span>
+                <span class="strike">Мы не собираем фотографии.</span>
+                <span class="strike">Мы не пишем статьи.</span>
+                <span class="real">Мы сохраняем человеческие истории.</span>
+            </p>
+            <p class="insp-philosophy-sub">Потому что путешествия заканчиваются.<br>А воспоминания — нет.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         3. QUOTE
+         ============================================================ -->
+    <section class="insp-quote-block">
+        <div class="insp-inner">
+            <blockquote>Иногда одна случайная фотография рассказывает о путешествии больше, чем сто идеальных кадров.</blockquote>
+            <cite>Travel Radar LK</cite>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         4. MANIFESTO — near-empty page
+         ============================================================ -->
+    <section class="insp-manifesto">
+        <div class="insp-inner">
+            <p>Самые ценные истории</p>
+            <p>никогда не планируются заранее.</p>
+            <p class="accent">Они происходят сами.</p>
+            <p class="muted">Наша задача — помочь сохранить их.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         5. WHY WE DO IT
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Почему мы это делаем</span>
+            <h2>Самые ценные путешествия</h2>
+            <p>Мы верим, что самые ценные путешествия состоят не из достопримечательностей.</p>
+            <p>Они состоят из разговоров, случайных встреч, запаха кофе утром, первых впечатлений после прилёта, закатов, смешных ситуаций и маленьких деталей.</p>
+            <p>Именно они остаются в памяти. Именно их мы хотим сохранить.</p>
+            <div class="insp-tip">
+                <span class="insp-tip-icon">💬</span>
+                <p class="insp-tip-text"><strong>Небольшой совет:</strong> Запишите голосовое сообщение прямо сейчас — о том, что вы чувствуете, когда думаете о своей последней поездке. Даже одно предложение. Это уже начало истории.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         6. WHAT YOU GET
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Что у вас появится</span>
+            <h2>Одна ссылка — и всё готово</h2>
+            <p>Интерактивная карта вашего маршрута. Фотографии — ваши, не стоковые. Текст, который читается как рассказ друга. И ссылка, которую вы отправите одним сообщением.</p>
+            <p>Никаких презентаций. Никаких слайдов. Одна страница — и путешествие живёт.</p>
+            <div class="insp-tip">
+                <span class="insp-tip-icon">📍</span>
+                <p class="insp-tip-text"><strong>Из нашего опыта:</strong> Не сортируйте фотографии после поездки. Просто скиньте нам всё — даже те, которые кажутся неудачными. Мы знаем, что из них выбрать.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         6b. WHAT YOU CAN SEND
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Что можно прислать</span>
+            <h2>Всё, что поможет восстановить историю</h2>
+
+            <div class="insp-sendlist">
+                <div class="items">
+                    <span class="tag">📸 Фотографии</span>
+                    <span class="tag">🎬 Видеоролики</span>
+                    <span class="tag">💬 Голосовые сообщения</span>
+                    <span class="tag">🗺️ Маршрут</span>
+                    <span class="tag">📝 Заметки</span>
+                    <span class="tag">💬 Переписка из путешествия</span>
+                    <span class="tag">📱 Скриншоты карт</span>
+                    <span class="tag">🧾 Чеки и цены</span>
+                    <span class="tag">🏨 Бронирования</span>
+                    <span class="tag">🍽️ Фотографии меню</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 1.2rem;">Не думайте, что это «много». Мы разберёмся. Просто скиньте всё, что есть — а мы отберём нужное.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         6c. CONSENT BLOCK
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <div class="insp-never" style="border-left: 3px solid var(--accent);">
+                <h3>Важно: всё по согласованию</h3>
+                <p>До публикации вы обязательно увидите готовую историю целиком.</p>
+                <p>Вы сможете предложить любые изменения, дополнения или отказаться от публикации.</p>
+                <p class="promise">Без вашего согласия материалы опубликованы не будут.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         7. NOT ONLY BEAUTIFUL
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Не только красивые моменты</span>
+            <h2>Именно эти фотографии — самые дорогие</h2>
+            <div class="insp-notbeautiful">
+                <h3>Фотографируйте не только красивое</h3>
+                <div class="items">
+                    <span class="tag">Сломанный чемодан</span>
+                    <span class="tag">Потерянная панама</span>
+                    <span class="tag">Смешной официант</span>
+                    <span class="tag">Автобус не туда</span>
+                    <span class="tag">Ливень</span>
+                    <span class="tag">Детский смех</span>
+                    <span class="tag">Чайка, укравшая картошку</span>
+                    <span class="tag">Очередь в аэропорту</span>
+                    <span class="tag">Мокрые кроссовки</span>
+                </div>
+                <p>Через несколько лет именно эти фотографии вызывают самую искреннюю улыбку.</p>
+            </div>
+            <div class="insp-tip">
+                <span class="insp-tip-icon">✈️</span>
+                <p class="insp-tip-text"><strong>Маленькая рекомендация:</strong> Лучшая фотография — та, которую вы сделали, не думая о ней. Та, что случайно получилась.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         8. WHAT NOT TO DO
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Снимите с себя давление</span>
+            <h2>Чего не нужно делать</h2>
+            <div class="insp-donts">
+                <h3>Не переживайте</h3>
+                <ul>
+                    <li>Не пытайтесь снять идеальное путешествие</li>
+                    <li>Не переживайте из-за качества камеры</li>
+                    <li>Не удаляйте фотографии сразу</li>
+                    <li>Не сортируйте материалы</li>
+                    <li>Не думайте, что этого мало</li>
+                    <li>Не пытайтесь быть блогером</li>
+                </ul>
+            </div>
+            <p style="margin-top: 1.2rem;">Обычные снимки с телефона — самое ценное, потому что они настоящие.</p>
+
+            <div class="insp-honesty">
+                <h3>Мы ценим честность</h3>
+                <p>Нам не нужны идеальные путешествия.</p>
+                <p>Нам интересны настоящие впечатления.</p>
+                <p>Если что-то разочаровало, удивило или пошло не по плану — расскажите об этом.</p>
+                <p>Именно такие моменты делают историю живой.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         9. WHAT WE WILL NEVER DO
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Доверие</span>
+            <h2>Что мы никогда не изменим</h2>
+            <div class="insp-never">
+                <ul>
+                    <li>Мы никогда не будем придумывать события</li>
+                    <li>Мы никогда не будем менять смысл ваших слов</li>
+                    <li>Мы никогда не будем публиковать материалы без согласования</li>
+                </ul>
+                <p class="promise">История всегда остаётся вашей.</p>
+            </div>
+            <h2 style="margin-top: 2rem;">Наши принципы</h2>
+            <div class="insp-principles">
+                <p class="insp-principle">Настоящие фотографии</p>
+                <p class="insp-principle">Настоящие люди</p>
+                <p class="insp-principle">Настоящие впечатления</p>
+                <p class="insp-principle">Только по взаимному согласию</p>
+                <p class="insp-principle">Без искусственного украшательства</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         10. PIPELINE
+         ============================================================ -->
+    <section class="insp-section" id="how-anchor">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Процесс</span>
+            <h2>Как ваша поездка превращается в историю</h2>
+            <div class="insp-pipeline">
+                <div class="insp-pipe-step"><span class="pipe-emoji">✈️</span><b>Путешествие</b></div>
+                <span class="insp-pipe-arrow">↓</span>
+                <div class="insp-pipe-step"><span class="pipe-emoji">📸</span><b>Фото и видео</b></div>
+                <span class="insp-pipe-arrow">↓</span>
+                <div class="insp-pipe-step"><span class="pipe-emoji">💬</span><b>Ваши воспоминания</b></div>
+                <span class="insp-pipe-arrow">↓</span>
+                <div class="insp-pipe-step"><span class="pipe-emoji">✍️</span><b>Мы бережно собираем вашу историю</b></div>
+                <span class="insp-pipe-arrow">↓</span>
+                <div class="insp-pipe-step"><span class="pipe-emoji">🗺️</span><b>Интерактивная карта</b></div>
+                <span class="insp-pipe-arrow">↓</span>
+                <div class="insp-pipe-step"><span class="pipe-emoji">🔗</span><b>Одна ссылка</b></div>
+                <span class="insp-pipe-arrow">↓</span>
+                <div class="insp-pipe-step final"><b>Память на всю жизнь</b></div>
+            </div>
+            <div class="insp-tip">
+                <span class="insp-tip-icon">💬</span>
+                <p class="insp-tip-text"><strong>Небольшой совет:</strong> Просто путешествуйте. Снимайте то, что нравится. А после — скиньте нам всё. Мы разберёмся.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         10b. WHAT HAPPENS AFTER YOU SEND
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Процесс</span>
+            <h2>Что происходит после того, как вы отправили материалы</h2>
+
+            <p>После получения материалов мы:</p>
+
+            <ul class="insp-after-list">
+                <li>Создаём резервную копию всех материалов</li>
+                <li>Сортируем фотографии и видео</li>
+                <li>Выбираем лучшие кадры</li>
+                <li>Готовим текст истории</li>
+                <li>Оформляем интерактивную карту</li>
+                <li>Согласовываем статью с вами</li>
+                <li>Публикуем только после вашего подтверждения</li>
+            </ul>
+
+            <div class="insp-tip">
+                <span class="insp-tip-icon">📍</span>
+                <p class="insp-tip-text"><strong>Из нашего опыта:</strong> Обычно от момента отправки материалов до готовой истории проходит от двух до четырёх недель. Мы не торопимся — каждая заслуживает внимания.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         11. THREE LEVELS
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Насколько глубоко — решаете вы</span>
+            <h2>Три формата участия</h2>
+            <div class="insp-levels">
+                <div class="insp-level" data-level>
+                    <button class="insp-level-toggle" type="button" aria-expanded="false">
+                        <span class="level-icon">📷</span>
+                        <span class="level-tag">Базовый</span>
+                        <h3>Просто поделиться</h3>
+                        <p class="level-short">Фото, видео и голосовые — после возвращения.</p>
+                        <span class="level-hint">Подробнее <span class="level-hint-arrow">▾</span></span>
+                    </button>
+                    <div class="insp-level-detail">
+                        <h4>Что входит</h4>
+                        <ul>
+                            <li>Любые фотографии с телефона</li>
+                            <li>Короткие видео, даже по 5 секунд</li>
+                            <li>Голосовые сообщения с впечатлениями</li>
+                            <li>Комментарии: где были, что запомнилось</li>
+                        </ul>
+                        <p class="level-example">Вы вернулись из Мексики. Отправляете 50 фото, 5 видео и голосовое — и мы собираем готовую историю.</p>
+                    </div>
+                </div>
+                <div class="insp-level" data-level>
+                    <button class="insp-level-toggle" type="button" aria-expanded="false">
+                        <span class="level-icon">📔</span>
+                        <span class="level-tag">Расширенный</span>
+                        <h3>Дневник поездки</h3>
+                        <p class="level-short">Заметки по дням — почти готовая история.</p>
+                        <span class="level-hint">Подробнее <span class="level-hint-arrow">▾</span></span>
+                    </button>
+                    <div class="insp-level-detail">
+                        <h4>Что входит</h4>
+                        <ul>
+                            <li>Всё из базового формата</li>
+                            <li>Маршрут по дням</li>
+                            <li>Впечатления от еды, отелей, экскурсий</li>
+                            <li>Цены и советы</li>
+                        </ul>
+                        <p class="level-example">«День 1 — Канкун. День 2 — Тулум...» Мы превращаем это в красивую историю.</p>
+                    </div>
+                </div>
+                <div class="insp-level" data-level>
+                    <button class="insp-level-toggle" type="button" aria-expanded="false">
+                        <span class="level-icon">🤝</span>
+                        <span class="level-tag">Совместный</span>
+                        <h3>Вместе с нами</h3>
+                        <p class="level-short">Обсуждаем заранее и сопровождаем.</p>
+                        <span class="level-hint">Подробнее <span class="level-hint-arrow">▾</span></span>
+                    </button>
+                    <div class="insp-level-detail">
+                        <h4>Что входит</h4>
+                        <ul>
+                            <li>Всё из расширенного формата</li>
+                            <li>Созвон перед поездкой</li>
+                            <li>Советы по съёмке</li>
+                            <li>Поддержка во время поездки</li>
+                            <li>Совместная работа в Google Drive</li>
+                        </ul>
+                        <p class="level-example">Перед поездкой в Доминикану мы созваниваемся. Во время — вы скидываете фото на ходу.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         12. COMMUNITY
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Сообщество</span>
+            <h2>Ваша история поможет другим</h2>
+            <p>Через некоторое время кто-то будет читать именно ваш рассказ, выбирая место для своего отпуска.</p>
+            <p>Возможно, благодаря вам кто-то найдёт свой любимый пляж или уютное кафе. Возможно, чей-то ребёнок увидит фотографию и скажет: «Мама, я хочу туда».</p>
+            <p>Именно так рождается сообщество людей, которые путешествуют осознанно — и помнят свои поездки.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         13. AFTER PUBLICATION
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Жизнь истории</span>
+            <h2>После публикации история продолжает жить</h2>
+            <ul class="insp-after-list">
+                <li>Постоянная ссылка — делитесь одним сообщением</li>
+                <li>Место на интерактивной карте маршрута</li>
+                <li>При необходимости — перевод на английский язык для друзей и путешественников из других стран</li>
+                <li>Шанс появиться на YouTube-канале</li>
+                <li>Готовая статья, которую можно использовать для себя</li>
+                <li>Персональная страница автора — по желанию</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         14. VISION
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Через несколько лет</span>
+            <h2>Сегодня — одна история. Завтра — целый мир.</h2>
+            <p>Сейчас проект только начинается. Но мы уже видим, куда он идёт.</p>
+            <div class="insp-vision-grid">
+                <div class="insp-vision-card"><span class="v-icon">🌎</span><b>Десятки стран</b><span>Мексика, Доминикана, Карибы — и дальше</span></div>
+                <div class="insp-vision-card"><span class="v-icon">✍️</span><b>Сотни авторов</b><span>Обычные путешественники со всего мира</span></div>
+                <div class="insp-vision-card"><span class="v-icon">📸</span><b>Тысячи фотографий</b><span>Настоящие кадры реальных людей</span></div>
+                <div class="insp-vision-card"><span class="v-icon">🗺️</span><b>Интерактивная карта</b><span>Поиск по странам и курортам</span></div>
+                <div class="insp-vision-card"><span class="v-icon">👤</span><b>Персональные страницы</b><span>Каждый автор — часть истории</span></div>
+                <div class="insp-vision-card"><span class="v-icon">🎬</span><b>Видео и субтитры</b><span>Истории на разных языках</span></div>
+            </div>
+            <p>И где-то среди них будет именно ваша история.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         14b. WHY NOW
+         ============================================================ -->
+    <section class="insp-section">
+        <div class="insp-inner">
+            <span class="insp-eyebrow">Почему именно сейчас</span>
+            <h2>Первые истории — особенные</h2>
+
+            <p>TravelRadarLK только начинает свою историю.</p>
+            <p>Первые публикации всегда становятся особенными. Именно они формируют стиль проекта, задают его атмосферу и остаются частью его истории с самого начала.</p>
+            <p>Поэтому сейчас мы уделяем каждой поездке максимум внимания. Для нас важнее качество, чем количество.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         15. FINALE — strong emotional close
+         ============================================================ -->
+    <section class="insp-finale">
+        <div class="insp-inner">
+            <p class="finale-quote">Возможно, через несколько лет</p>
+            <p class="finale-quote">ваши дети, друзья</p>
+            <p class="finale-quote">или вы сами</p>
+            <p class="finale-quote">случайно откроете эту страницу.</p>
+            <p class="finale-quote" style="color: var(--accent); margin-top: 1.5rem;">И снова окажетесь</p>
+            <p class="finale-quote" style="color: var(--accent);">в том самом путешествии.</p>
+            <p class="finale-sub" style="margin-top: 2rem;">Именно ради этого существует Travel Radar LK.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         16. CONTACTS — last page, human
+         ============================================================ -->
+    <section class="insp-contacts">
+        <div class="brand-big">Travel Radar LK</div>
+        <p class="tagline">Путешествие заканчивается.<br>История остаётся.</p>
+        <p class="tagline2">Это не сайт о путешествиях.<br>Это место, где путешествия продолжаются даже после возвращения домой.</p>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <span class="contact-label">Telegram</span>
+                <a href="https://t.me/XXXLNT">@XXXLNT</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">E-mail</span>
+                <a href="mailto:leonid.cordon@gmail.com">leonid.cordon@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Телефон</span>
+                <a href="tel:+380504783277">+380 50 478 32 77</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Сайт</span>
+                <a href="https://travelradarlk.com">travelradarlk.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Stories</span>
+                <a href="index.html">travelradarlk.com/ru/community/stories</a>
+            </div>
+        </div>
+
+        <p class="invite">Давайте познакомимся.<br>Если вам близка идея проекта,<br>если вы хотите сохранить своё путешествие<br>или просто хотите задать вопрос —<br>напишите мне.<br>Я всегда рад новым историям.</p>
+    </section>
+
+    <footer class="insp-footer">
+        <p>© 2026 <a href="../../../index.html">Travel Radar LK</a> · Путешествие заканчивается. История остаётся.</p>
+    </footer>
+
+    <script>
+        /* Level toggles */
+        document.querySelectorAll('[data-level] .insp-level-toggle').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var card = btn.closest('[data-level]');
+                var wasOpen = card.classList.contains('open');
+                document.querySelectorAll('[data-level]').forEach(function (c) {
+                    c.classList.remove('open');
+                    c.querySelector('.insp-level-toggle').setAttribute('aria-expanded', 'false');
+                });
+                if (!wasOpen) {
+                    card.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        /* Scroll reveal — IntersectionObserver */
+        (function () {
+            var sections = document.querySelectorAll(
+                '.insp-section, .insp-philosophy, .insp-quote-block, .insp-manifesto, .insp-finale, .insp-contacts'
+            );
+            if (!('IntersectionObserver' in window)) {
+                sections.forEach(function (s) { s.classList.add('revealed'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+            sections.forEach(function (s) { observer.observe(s); });
+        })();
+    </script>
+
+</body>
+
+</html>
