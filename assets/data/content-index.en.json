@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-15T23:16:54.633Z",
-  "count": 125,
+  "generated_at": "2026-07-20T23:14:49.050Z",
+  "count": 126,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -644,6 +644,36 @@
       "date_published": "2026-04-01",
       "date_modified": "2026-04-25",
       "search_text": "best hotels in cancun 2026 where to stay by area a practical cancun hotel guide north center and south hotel zone downtown best hotel picks prices and mistakes to avoid cancun"
+    },
+    {
+      "slug": "best-hotels-holbox",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "island-trip",
+        "booking-checklist",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best Hotels in Holbox: Eco-Stays, Boutique Casitas and What to Check Before Booking",
+      "description": "Pick a Holbox hotel by zone and stay type: eco-casitas, boutiques or luxury lodges. AC, power, mosquito screens and the booking checks that matter on a car-free island.",
+      "url": "https://travelradarlk.com/en/content/best-hotels-holbox",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-holbox/card_1200x600.jpg",
+      "date_published": "2026-07-20",
+      "date_modified": "2026-07-20",
+      "search_text": "best hotels in holbox eco-stays boutique casitas and what to check before booking pick a holbox hotel by zone and stay type eco-casitas boutiques or luxury lodges ac power mosquito screens and the booking checks that matter on a car-free island yucatan boutique-hotel island-trip booking-checklist hotel-mistakes"
     },
     {
       "slug": "best-hotels-isla-mujeres",

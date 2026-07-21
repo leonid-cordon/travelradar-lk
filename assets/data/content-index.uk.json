@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-15T23:16:55.001Z",
-  "count": 125,
+  "generated_at": "2026-07-20T23:14:49.519Z",
+  "count": 126,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -644,6 +644,36 @@
       "date_published": "2026-04-01",
       "date_modified": "2026-04-25",
       "search_text": "найкращі готелі канкуна 2026 де зупинитися за районами практичний гід по готелях канкуна північ центр і південь hotel zone downtown ціни добірки та типові помилки cancun"
+    },
+    {
+      "slug": "best-hotels-holbox",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "yucatan",
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "island-trip",
+        "booking-checklist",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "couples",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Найкращі готелі на Холбоксі: еко-касіти, бутик-готелі та що перевірити перед бронюванням",
+      "description": "Обирайте готель на Холбоксі за зоною та рівнем комфорту: еко-касіти, бутик-готелі або розкішні лоджі. Кондиціонери, електрика, москітні сітки та нюанси бронювання на острові без машин.",
+      "url": "https://travelradarlk.com/ua/content/best-hotels-holbox",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-holbox/card_1200x600.jpg",
+      "date_published": "2026-07-20",
+      "date_modified": "2026-07-20",
+      "search_text": "найкращі готелі на холбоксі еко-касіти бутик-готелі та що перевірити перед бронюванням обирайте готель на холбоксі за зоною та рівнем комфорту еко-касіти бутик-готелі або розкішні лоджі кондиціонери електрика москітні сітки та нюанси бронювання на острові без машин yucatan boutique-hotel island-trip booking-checklist hotel-mistakes"
     },
     {
       "slug": "best-hotels-isla-mujeres",
