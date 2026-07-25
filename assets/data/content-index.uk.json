@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-22T02:38:46.111Z",
-  "count": 127,
+  "generated_at": "2026-07-25T19:19:26.164Z",
+  "count": 128,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -3169,6 +3169,35 @@
       "date_published": "2026-06-29",
       "date_modified": "2026-06-29",
       "search_text": "тулум чи плайя-дель-кармен що вибрати богемний еко-шик чи пішохідне пляжне місто практичне порівняння пляжів логістики їжі та бюджету для вибору бази на рив єрі-майя riviera-maya riviera-maya beaches budget"
+    },
+    {
+      "slug": "vacation-rentals-vs-hotels-tulum-playa-del-carmen",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "hotel-mistakes",
+        "scam-warning",
+        "budget"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "book",
+      "title": "Оренда житла чи готелі в Тулумі та Плая-дель-Кармен: Коли Airbnb дійсно має сенс",
+      "description": "Кондо виглядає дешевшим, поки ви не додасте збір за прибирання, комісію сервісу, податок на проживання та чотири поїздки на таксі щодня. Ось де оренда дійсно виграє, а де непомітно перемагають готелі.",
+      "url": "https://travelradarlk.com/ua/content/vacation-rentals-vs-hotels-tulum-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/vacation-rentals-vs-hotels-tulum-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-07-25",
+      "date_modified": "2026-07-25",
+      "search_text": "оренда житла чи готелі в тулумі та плая-дель-кармен коли airbnb дійсно має сенс кондо виглядає дешевшим поки ви не додасте збір за прибирання комісію сервісу податок на проживання та чотири поїздки на таксі щодня ось де оренда дійсно виграє а де непомітно перемагають готелі riviera-maya riviera-maya hotel-mistakes scam-warning budget"
     },
     {
       "slug": "valladolid-day-trip-overnight-or-skip",

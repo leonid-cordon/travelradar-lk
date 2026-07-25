@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-22T02:38:45.614Z",
-  "count": 127,
+  "generated_at": "2026-07-25T19:19:25.856Z",
+  "count": 128,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -3169,6 +3169,35 @@
       "date_published": "2026-06-29",
       "date_modified": "2026-06-29",
       "search_text": "tulum vs playa del carmen which one should you choose bohemian eco-chic or walkable beach town a practical side-by-side on beaches logistics food and budget to choose your riviera maya base riviera-maya riviera-maya beaches budget"
+    },
+    {
+      "slug": "vacation-rentals-vs-hotels-tulum-playa-del-carmen",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "riviera-maya",
+      "related_destinations": [
+        "tulum",
+        "playa-del-carmen"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "hotel-mistakes",
+        "scam-warning",
+        "budget"
+      ],
+      "audience": [],
+      "featured": 0,
+      "intent": "book",
+      "title": "Vacation Rentals vs Hotels in Tulum and Playa del Carmen: When Airbnb Actually Makes Sense",
+      "description": "A condo looks cheaper until you add cleaning fees, service fees, lodging tax and four taxis a day. Here is where rentals genuinely win and where hotels quietly do.",
+      "url": "https://travelradarlk.com/en/content/vacation-rentals-vs-hotels-tulum-playa-del-carmen",
+      "image": "https://travelradarlk.com/assets/images/content/vacation-rentals-vs-hotels-tulum-playa-del-carmen/card_1200x600.jpg",
+      "date_published": "2026-07-25",
+      "date_modified": "2026-07-25",
+      "search_text": "vacation rentals vs hotels in tulum and playa del carmen when airbnb actually makes sense a condo looks cheaper until you add cleaning fees service fees lodging tax and four taxis a day here is where rentals genuinely win and where hotels quietly do riviera-maya riviera-maya hotel-mistakes scam-warning budget"
     },
     {
       "slug": "valladolid-day-trip-overnight-or-skip",

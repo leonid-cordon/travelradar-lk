@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 127,
+  "record_count": 128,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -344,6 +344,9 @@
     },
     "tulum-vs-playa-del-carmen": {
       "primary_section": "destinations", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": [], "content_type": "comparison", "tags": ["beaches", "budget"], "audience": [], "featured": 0, "intent": "plan"
+    },
+    "vacation-rentals-vs-hotels-tulum-playa-del-carmen": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "riviera-maya", "related_destinations": ["tulum", "playa-del-carmen"], "content_type": "comparison", "tags": ["hotel-mistakes", "scam-warning", "budget"], "audience": [], "featured": 0, "intent": "book"
     },
     "valladolid-day-trip-overnight-or-skip": {
       "primary_section": "destinations", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "comparison", "tags": ["day-trips", "archaeology", "cenotes", "itinerary"], "audience": ["first-timer", "couples"], "featured": 0, "intent": "plan"
