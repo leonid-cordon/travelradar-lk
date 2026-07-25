@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-20T23:14:49.288Z",
-  "count": 126,
+  "generated_at": "2026-07-22T02:38:45.856Z",
+  "count": 127,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -644,6 +644,39 @@
       "date_published": "2026-04-01",
       "date_modified": "2026-04-25",
       "search_text": "лучшие отели канкуна 2026 где остановиться по районам практичный гид по отелям канкуна север центр и юг hotel zone downtown лучшие варианты цены и ошибки которых стоит избежать cancun"
+    },
+    {
+      "slug": "best-hotels-dive-resorts-cozumel",
+      "lang": "ru",
+      "primary_section": "stay",
+      "section_label": "Где жить",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cozumel",
+      "related_destinations": [
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "budget",
+        "snorkeling",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Лучшие отели и дайв-резорты на Косумеле: выбор базы на острове",
+      "description": "Дайв-резорты на побережье с собственными пирсами, бутик-отели в Сан-Мигеле или бюджетные номера у парома — как выбрать базу на Косумеле, с реальной математикой стоимости дайв-недели.",
+      "url": "https://travelradarlk.com/ru/content/best-hotels-dive-resorts-cozumel",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-dive-resorts-cozumel/card_1200x600.jpg",
+      "date_published": "2026-07-22",
+      "date_modified": "2026-07-22",
+      "search_text": "лучшие отели и дайв-резорты на косумеле выбор базы на острове дайв-резорты на побережье с собственными пирсами бутик-отели в сан-мигеле или бюджетные номера у парома как выбрать базу на косумеле с реальной математикой стоимости дайв-недели cozumel riviera-maya boutique-hotel budget snorkeling hotel-mistakes"
     },
     {
       "slug": "best-hotels-holbox",

@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-20T23:14:49.050Z",
-  "count": 126,
+  "generated_at": "2026-07-22T02:38:45.614Z",
+  "count": 127,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -644,6 +644,39 @@
       "date_published": "2026-04-01",
       "date_modified": "2026-04-25",
       "search_text": "best hotels in cancun 2026 where to stay by area a practical cancun hotel guide north center and south hotel zone downtown best hotel picks prices and mistakes to avoid cancun"
+    },
+    {
+      "slug": "best-hotels-dive-resorts-cozumel",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "mexico",
+      "region": "riviera-maya",
+      "destination": "cozumel",
+      "related_destinations": [
+        "playa-del-carmen"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "boutique-hotel",
+        "budget",
+        "snorkeling",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "couples",
+        "solo",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Best Hotels and Dive Resorts in Cozumel: Choosing Your Island Base",
+      "description": "Waterfront dive resorts with house piers, boutique San Miguel stays or budget rooms near the ferry — how to pick a Cozumel base, with real dive-week cost math.",
+      "url": "https://travelradarlk.com/en/content/best-hotels-dive-resorts-cozumel",
+      "image": "https://travelradarlk.com/assets/images/content/best-hotels-dive-resorts-cozumel/card_1200x600.jpg",
+      "date_published": "2026-07-22",
+      "date_modified": "2026-07-22",
+      "search_text": "best hotels and dive resorts in cozumel choosing your island base waterfront dive resorts with house piers boutique san miguel stays or budget rooms near the ferry how to pick a cozumel base with real dive-week cost math cozumel riviera-maya boutique-hotel budget snorkeling hotel-mistakes"
     },
     {
       "slug": "best-hotels-holbox",

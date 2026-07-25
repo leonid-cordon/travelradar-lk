@@ -4,7 +4,7 @@
   "source_of_truth": true,
   "updated": "2026-06-07",
   "note": "Language-invariant taxonomy only. Per-language fields (title, description, url, card_image, dates) are reused from each article's <head>/JSON-LD at generation time, NOT stored here. One record per slug applies to en/ru/uk.",
-  "record_count": 126,
+  "record_count": 127,
   "records": {
     "7-day-riviera-maya-itinerary": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["itinerary", "day-trips"], "audience": [], "featured": 0, "intent": null
@@ -71,6 +71,9 @@
     },
     "best-hotels-cancun-2026": {
       "primary_section": "stay", "country": "mexico", "region": null, "destination": "cancun", "related_destinations": [], "content_type": "listicle", "tags": [], "audience": [], "featured": 0, "intent": null
+    },
+    "best-hotels-dive-resorts-cozumel": {
+      "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "cozumel", "related_destinations": ["playa-del-carmen"], "content_type": "guide", "tags": ["boutique-hotel", "budget", "snorkeling", "hotel-mistakes"], "audience": ["couples", "solo", "first-timer"], "featured": 0, "intent": "plan"
     },
     "best-hotels-holbox": {
       "primary_section": "stay", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["boutique-hotel", "island-trip", "booking-checklist", "hotel-mistakes"], "audience": ["couples", "first-timer"], "featured": 0, "intent": "book"
