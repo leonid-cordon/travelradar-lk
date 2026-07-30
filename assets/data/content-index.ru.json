@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-07-25T20:40:45.921Z",
-  "count": 128,
+  "generated_at": "2026-07-27T20:45:22.442Z",
+  "count": 129,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2791,6 +2791,39 @@
       "date_published": "2026-06-16",
       "date_modified": "2026-06-16",
       "search_text": "гид по пуэрто-морелосу тихая деревня у рифа рядом с канкуном риф в нескольких минутах от сонной рыбацкой деревни никакой курортной стены и простой трансфер из аэропорта кому пуэрто-морелос подходит кому нет и как добраться riviera-maya snorkeling beaches cenotes airport-transfer boutique-hotel"
+    },
+    {
+      "slug": "punta-cana-travel-guide-first-timers",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "dominican-republic",
+      "region": "punta-cana",
+      "destination": "punta-cana",
+      "related_destinations": [
+        "cancun",
+        "riviera-maya"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "all-inclusive",
+        "visa-entry",
+        "best-time",
+        "airport-transfer",
+        "money"
+      ],
+      "audience": [
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Гид по Пунта-Кане для новичков: что это такое и как там всё устроено",
+      "description": "Что на самом деле представляет собой Пунта-Кана, почему это не Канкун, бесплатный eTicket, за который все переплачивают, сезоны, деньги и районы курорта — честный разбор для новичков.",
+      "url": "https://travelradarlk.com/ru/content/punta-cana-travel-guide-first-timers",
+      "image": "https://travelradarlk.com/assets/images/content/punta-cana-travel-guide-first-timers/card_1200x600.jpg",
+      "date_published": "2026-07-27",
+      "date_modified": "2026-07-27",
+      "search_text": "гид по пунта-кане для новичков что это такое и как там всё устроено что на самом деле представляет собой пунта-кана почему это не канкун бесплатный eticket за который все переплачивают сезоны деньги и районы курорта честный разбор для новичков punta-cana punta-cana all-inclusive visa-entry best-time airport-transfer money"
     },
     {
       "slug": "punta-cana-vs-cancun",

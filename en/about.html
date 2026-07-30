@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="site-base" content="">
-    <title>About the Travel Radar LK Project</title>
-    <meta name="description" content="About Travel Radar LK — an independent Mexico-first travel project built around practical trip planning, hotel-area research, and travel experience in Turkey and the Dominican Republic.">
+    <title>About Us | Travel Radar LK</title>
+    <meta name="description" content="Travel Radar LK is an independent travel research project focused on Mexico and the Caribbean — Cancun, the Riviera Maya, Tulum, and the Dominican Republic — with practical trip-planning guides.">
     <link rel="canonical" href="https://travelradarlk.com/en/about">
-    <meta property="og:title" content="About — Travel Radar LK">
-    <meta property="og:description" content="About Travel Radar LK — an independent Mexico-first travel project built around practical trip planning, hotel-area research, and travel experience in Turkey and the Dominican Republic.">
+    <meta property="og:title" content="About Us | Travel Radar LK">
+    <meta property="og:description" content="Travel Radar LK is an independent travel research project focused on Mexico and the Caribbean — Cancun, the Riviera Maya, Tulum, and the Dominican Republic — with practical trip-planning guides.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://travelradarlk.com/en/about">
     <meta property="og:image" content="https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg">
     <meta property="og:site_name" content="Travel Radar LK">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About — Travel Radar LK">
-    <meta name="twitter:description" content="About Travel Radar LK — an independent Mexico-first travel project built around practical trip planning, hotel-area research, and travel experience in Turkey and the Dominican Republic.">
+    <meta name="twitter:title" content="About Us | Travel Radar LK">
+    <meta name="twitter:description" content="Travel Radar LK is an independent travel research project focused on Mexico and the Caribbean — Cancun, the Riviera Maya, Tulum, and the Dominican Republic — with practical trip-planning guides.">
     <meta name="twitter:image" content="https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg">
     <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/about">
     <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/about">
@@ -29,15 +29,17 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "About",
-      "headline": "About — Travel Radar LK",
-      "description": "About Travel Radar LK — an independent Mexico-first travel project built around practical trip planning, hotel-area research, and travel experience in Turkey and the Dominican Republic.",
+      "name": "About Us",
+      "headline": "About Us | Travel Radar LK",
+      "description": "Travel Radar LK is an independent travel research project focused on Mexico and the Caribbean — Cancun, the Riviera Maya, Tulum, and the Dominican Republic — with practical trip-planning guides.",
       "url": "https://travelradarlk.com/en/about",
       "inLanguage": "en-US",
       "author": {
         "@type": "Person",
-        "name": "Leonid K.",
-        "url": "https://travelradarlk.com/en/about"
+        "name": "Leonid Kadantsev",
+        "url": "https://travelradarlk.com/en/about",
+        "jobTitle": "Founder, Editor-in-Chief, Lead Researcher",
+        "sameAs": "https://www.linkedin.com/in/leonid-cordon/"
       },
       "publisher": {
         "@type": "Organization",
@@ -75,10 +77,7 @@
             --ab-muted:         #7a8099;
             --ab-accent:        #c8a96e;
             --ab-accent-soft:   rgba(200,169,110,0.12);
-            --ab-accent2:       #5fa8d3;
             --ab-divider:       rgba(255,255,255,0.07);
-            --ab-shadow:        0 8px 40px rgba(0,0,0,0.5);
-            --ab-card-shadow:   0 2px 16px rgba(0,0,0,0.35);
         }
         [data-theme="light"] {
             --ab-bg:            #f7f8fc;
@@ -89,11 +88,10 @@
             --ab-muted:         #6b7280;
             --ab-accent:        #b8942a;
             --ab-accent-soft:   rgba(184,148,42,0.09);
-            --ab-accent2:       #2a7fa8;
             --ab-divider:       rgba(0,0,0,0.06);
-            --ab-shadow:        0 8px 40px rgba(0,0,0,0.08);
-            --ab-card-shadow:   0 2px 16px rgba(0,0,0,0.08);
         }
+
+
 
         /* ---- Page wrapper ---- */
         .about-page {
@@ -139,397 +137,209 @@
             margin: 0 0 1.2rem;
         }
 
-        .about-list {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
-            line-height: 1.75;
-            color: var(--ab-text);
-            margin: 0.5rem 0 1.4rem 1.2rem;
-            padding: 0;
-        }
 
-        .about-list li {
-            margin-bottom: 0.35rem;
-        }
 
-        .about-list li::marker {
-            color: var(--ab-accent);
-        }
 
-        /* ---- Section headings ---- */
-        .about-section-title {
-            font-family: 'Fraunces', serif;
-            font-size: 1.55rem;
-            font-weight: 700;
-            color: var(--ab-text);
-            margin: 2.8rem 0 1.2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--ab-divider);
-        }
-
-        /* ---- Affiliate note ---- */
-        .about-note {
-            background: var(--ab-surface2);
-            border-left: 3px solid var(--ab-accent);
-            border-radius: 0 8px 8px 0;
-            padding: 1rem 1.25rem;
-            margin: 2rem 0;
-        }
-
-        .about-note .about-text {
-            margin: 0;
-            font-size: 0.9rem;
-            color: var(--ab-muted);
-        }
 
         /* ============================================
-           AUTHOR BLOCK
+           EDITORIAL COVERAGE
            ============================================ */
-        .author-block {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 2.2rem;
-            align-items: start;
-            margin: 1.5rem 0 2rem;
-            background: var(--ab-surface);
-            border: 1px solid var(--ab-border);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: var(--ab-card-shadow);
-        }
-
-        /* ---- Photo ---- */
-        .author-photo-wrap {
-            position: relative;
-        }
-
-        .author-photo-btn {
-            display: block;
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: zoom-in;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .author-photo-btn img {
-            display: block;
-            width: 100%;
-            aspect-ratio: 3/4;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 10px;
-            transition: transform 0.35s ease, filter 0.35s ease;
-        }
-
-        .author-photo-btn:hover img {
-            transform: scale(1.03);
-            filter: brightness(1.05);
-        }
-
-        .photo-zoom-hint {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.55);
-            color: #fff;
-            font-size: 0.65rem;
-            padding: 3px 8px;
-            border-radius: 20px;
-            letter-spacing: 0.04em;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.2s;
-            text-transform: uppercase;
-        }
-
-        .author-photo-btn:hover .photo-zoom-hint {
-            opacity: 1;
-        }
-
-        .author-photo-caption {
-            font-size: 0.72rem;
-            color: var(--ab-muted);
-            margin-top: 0.5rem;
-            text-align: center;
-            font-style: italic;
-            line-height: 1.4;
-        }
-
-        /* ---- Bio text ---- */
-        .author-bio {
+        .coverage-container {
             display: flex;
             flex-direction: column;
-            gap: 0;
+            gap: 1rem;
+            margin: 1.5rem 0 2.5rem;
         }
 
-        .author-name {
-            font-family: 'Fraunces', serif;
-            font-size: 1.65rem;
+        .coverage-card {
+            background: var(--ab-surface);
+            border: 1px solid var(--ab-accent);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .coverage-main-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-left: 4px solid var(--ab-accent);
+        }
+
+        @media (min-width: 680px) {
+            .coverage-main-card {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .coverage-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            min-width: 140px;
+        }
+        
+        .coverage-emoji {
+            font-size: 1.3rem;
+        }
+
+        .coverage-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
             font-weight: 700;
-            color: var(--ab-text);
-            margin: 0 0 0.2rem;
-            line-height: 1.1;
+            color: var(--ab-accent);
+            margin: 0;
+        }
+        
+        .coverage-main-card .coverage-title {
+            font-size: 1.35rem;
+            filter: brightness(1.15);
+        }
+        
+        .coverage-main-card .coverage-emoji {
+            font-size: 1.6rem;
         }
 
-        .author-tagline {
-            font-size: 0.78rem;
-            color: var(--ab-muted);
-            margin: 0 0 1.2rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        .author-bio .about-text {
-            font-size: 0.96rem;
-            margin-bottom: 0.9rem;
-        }
-
-        /* ---- Resort badges ---- */
-        .resort-badges {
+        .coverage-regions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin: 0.8rem 0 1.2rem;
         }
 
-        .resort-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--ab-text);
-            border: 1px solid var(--ab-border);
-            background: var(--ab-surface2);
-            white-space: nowrap;
-            font-family: 'DM Sans', sans-serif;
-        }
-
-        /* ---- Stats row ---- */
-        .author-stats {
-            display: flex;
-            gap: 0;
-            border: 1px solid var(--ab-border);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 0.5rem;
-        }
-
-        .author-stat {
-            flex: 1;
-            text-align: center;
-            padding: 0.85rem 0.5rem;
-            border-right: 1px solid var(--ab-border);
-            background: var(--ab-surface2);
-        }
-
-        .author-stat:last-child {
-            border-right: none;
-        }
-
-        .author-stat-number {
-            display: block;
-            font-family: 'Fraunces', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--ab-accent);
-            line-height: 1;
-        }
-
-        .author-stat-label {
-            display: block;
-            font-size: 0.65rem;
-            color: var(--ab-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 0.3rem;
-            line-height: 1.3;
-            font-family: 'DM Sans', sans-serif;
-        }
-
-        /* ============================================
-           WHAT THIS SITE COVERS — CARDS
-           ============================================ */
-        .focus-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 1.5rem 0 2rem;
-        }
-
-        .focus-card {
-            background: var(--ab-surface);
-            border: 1px solid var(--ab-border);
-            border-radius: 12px;
-            padding: 1.2rem 1.25rem;
-            box-shadow: var(--ab-card-shadow);
-        }
-
-        .focus-card-icon {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .focus-card-title {
-            font-family: 'Fraunces', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--ab-text);
-            margin: 0 0 0.35rem;
-        }
-
-        .focus-card-text {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.84rem;
-            color: var(--ab-muted);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* ============================================
-           DESTINATIONS COVERAGE ROW
-           ============================================ */
-        .destinations-row {
+        .coverage-secondary {
             display: flex;
             flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .coverage-secondary .coverage-card {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            align-items: center;
             gap: 0.6rem;
-            margin: 1rem 0 1.8rem;
         }
 
         .dest-pill {
             display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 1rem;
-            border-radius: 24px;
-            font-size: 0.82rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: 600;
             font-family: 'DM Sans', sans-serif;
-            border: 1.5px solid var(--ab-border);
+            border: 1px solid var(--ab-border);
             color: var(--ab-text);
-            background: var(--ab-surface);
+            background: var(--ab-surface2);
         }
 
-        .dest-pill.primary {
-            border-color: var(--ab-accent);
-            background: var(--ab-accent-soft);
-            color: var(--ab-accent);
-        }
 
-        /* ============================================
-           LIGHTBOX
-           ============================================ */
-        .lightbox-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: rgba(0,0,0,0.88);
-            align-items: center;
-            justify-content: center;
-            cursor: zoom-out;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-        }
-
-        .lightbox-overlay.open {
-            display: flex;
-            animation: lbFadeIn 0.22s ease;
-        }
-
-        @keyframes lbFadeIn {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-
-        .lightbox-img-wrap {
-            position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-            cursor: default;
-            animation: lbScaleIn 0.25s cubic-bezier(0.34,1.56,0.64,1);
-        }
-
-        @keyframes lbScaleIn {
-            from { transform: scale(0.88); opacity: 0; }
-            to   { transform: scale(1);    opacity: 1; }
-        }
-
-        .lightbox-img-wrap img {
-            max-width: 90vw;
-            max-height: 88vh;
-            width: auto;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-            box-shadow: 0 20px 80px rgba(0,0,0,0.7);
-        }
-
-        .lightbox-caption {
-            text-align: center;
-            color: rgba(255,255,255,0.6);
-            font-size: 0.8rem;
-            margin-top: 0.75rem;
-            font-family: 'DM Sans', sans-serif;
-            font-style: italic;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -14px;
-            right: -14px;
-            width: 32px;
-            height: 32px;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.25);
-            color: #fff;
-            border-radius: 50%;
-            font-size: 1rem;
-            line-height: 30px;
-            text-align: center;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .lightbox-close:hover {
-            background: rgba(255,255,255,0.3);
-        }
 
         /* ============================================
            RESPONSIVE
            ============================================ */
         @media (max-width: 680px) {
-            .author-block {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem;
+            .team-profile {
+                flex-direction: column;
             }
 
-            .author-photo-btn img {
-                aspect-ratio: 4/3;
-                object-position: center 15%;
-            }
-
-            .focus-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .author-stats {
-                flex-direction: row;
-            }
-
-            .author-stat-number {
-                font-size: 1.15rem;
+            .team-profile-img {
+                width: 100px;
+                height: 100px;
             }
         }
+
+        /* ============================================
+           HERO BANNER OVERRIDE
+           ============================================ */
+        .hero-strip {
+            height: auto !important;
+            aspect-ratio: 16 / 9;
+            max-height: none !important; 
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+        }
+
+        .hero-strip img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top !important; 
+        }
+
+        @media (max-width: 768px) {
+            .hero-strip {
+                aspect-ratio: 1 / 1;
+                margin-top: 0 !important;
+            }
+            .hero-strip img {
+                object-position: left top !important;
+            }
+        }
+
+        /* ============================================
+           CLEANED & REFINED ABOUT PAGE CSS
+           ============================================ */
+        /* Workflow */
+        .workflow-steps { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; margin: 1.5rem 0 2.5rem; }
+        .workflow-step { background: var(--ab-surface2); border: 1px solid var(--ab-border); padding: 0.7rem 1rem; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--ab-text); display: flex; align-items: center; gap: 0.5rem; }
+        .workflow-arrow { color: var(--ab-muted); font-size: 1rem; }
+        
+        /* Editorial Policy (Trust & Principles merged) */
+        .editorial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0 1rem; }
+        .editorial-card { background: var(--ab-surface); border: 1px solid var(--ab-border); border-radius: 10px; padding: 1.4rem; display: flex; flex-direction: column; gap: 0.8rem; }
+        .editorial-icon { width: 24px; height: 24px; fill: var(--ab-accent); flex-shrink: 0; }
+        .editorial-title { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--ab-text); margin: 0; }
+        .editorial-text { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ab-muted); margin: 0; line-height: 1.6; }
+        .last-updated { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; background: var(--ab-surface2); border: 1px solid var(--ab-border); border-radius: 20px; font-size: 0.8rem; color: var(--ab-muted); font-weight: 600; margin-bottom: 2.5rem; }
+
+        /* Timeline */
+        .timeline { position: relative; max-width: 600px; margin: 2rem 0; padding-left: 2rem; border-left: 2px solid var(--ab-border); }
+        .timeline-item { position: relative; margin-bottom: 2rem; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-dot { position: absolute; left: -2.4rem; top: 0.2rem; width: 14px; height: 14px; border-radius: 50%; background: var(--ab-accent); border: 2px solid var(--ab-bg); }
+        .timeline-date { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--ab-accent); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.3rem; }
+        .timeline-title { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--ab-text); margin: 0 0 0.3rem; }
+        .timeline-text { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ab-muted); margin: 0; line-height: 1.5; }
+        
+        /* HORIZONTAL TEAM PROFILES */
+        .team-profile { display: flex; flex-direction: column; gap: 1.5rem; background: var(--ab-surface); border: 1px solid var(--ab-border); border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+        @media (min-width: 768px) { .team-profile { flex-direction: row; align-items: flex-start; } }
+        .team-profile-img { flex-shrink: 0; width: 140px; height: 140px; border-radius: 50%; background: var(--ab-surface2); border: 3px solid var(--ab-border); display: flex; align-items: center; justify-content: center; color: var(--ab-muted); font-size: 3rem; overflow: hidden; }
+        .team-profile-img img { width: 100%; height: 100%; object-fit: cover; }
+        .team-profile-content { flex: 1; }
+        .team-profile-role { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ab-accent); margin-bottom: 0.4rem; font-weight: 700; }
+        .team-profile-name { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; color: var(--ab-text); margin: 0 0 0.4rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+        .verified-badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.5rem; background: #d32f2f; border: 1px solid #b71c1c; border-radius: 4px; font-size: 0.7rem; font-family: 'DM Sans', sans-serif; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;  box-shadow: 0 2px 5px rgba(211,47,47,0.3); }
+        .verified-badge svg { fill: #ffffff; }
+        .team-profile-text { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ab-text); opacity: 0.85; margin: 0 0 1rem; }
+        .team-profile-text:last-child { margin-bottom: 0; }
+
+        /* Focus Cards for Analytical Approach */
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2.5rem; }
+        .focus-card { background: var(--ab-surface); border: 1px solid var(--ab-border); border-radius: 10px; padding: 1.5rem; }
+        .focus-icon { width: 32px; height: 32px; fill: var(--ab-accent); margin-bottom: 1rem; }
+        .focus-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; color: var(--ab-text); margin: 0 0 0.6rem; }
+        .focus-text { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ab-muted); margin: 0; line-height: 1.6; }
+
+
+        /* Contact Section */
+        .contact-box { background: linear-gradient(135deg, var(--ab-surface2), var(--ab-surface)); border: 1px solid var(--ab-border); border-left: 4px solid var(--ab-accent); border-radius: 8px; padding: 2rem; margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem; }
+        .contact-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; color: var(--ab-text); margin: 0; }
+        .contact-text { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ab-muted); margin: 0; line-height: 1.6; }
+        .btn-contact { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: var(--ab-accent); color: #fff; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; width: fit-content; transition: background 0.2s ease; border: none; font-size: 0.9rem; }
+        .btn-contact:hover { background: #b88d35; color: #fff; }
+
+        [data-theme="light"] .team-profile { background: #fff; border-color: rgba(60,50,30,0.14); box-shadow: 0 4px 20px rgba(60,50,30,0.06); }
+        [data-theme="light"] .team-profile-img { background: #edeae5; border-color: rgba(60,50,30,0.14); }
+        [data-theme="light"] .workflow-step { background: #fff; }
+        [data-theme="light"] .editorial-card { background: #fff; box-shadow: 0 2px 10px rgba(60,50,30,0.05); }
+        [data-theme="light"] .focus-card { background: #fff; box-shadow: 0 2px 10px rgba(60,50,30,0.05); }
+        [data-theme="light"] .contact-box { background: #fff; }
+        [data-theme="light"] .coverage-card { background: #fff; box-shadow: 0 2px 10px rgba(60,50,30,0.05); }
+        [data-theme="light"] .dest-pill { background: #f7f8fc; border-color: rgba(60,50,30,0.14); }
+
     </style>
 
     <script>
@@ -546,17 +356,9 @@
 
     <!-- Hero Banner Strip -->
     <section class="hero-strip" aria-label="Hero banner">
-        <img src="../assets/images/hero/hero-desktop_2400x1350.jpg" width="2400" height="1350" alt="Banner" loading="eager">
+        <img src="../assets/images/about/hero-about.jpg" width="2400" height="1350" alt="Travel Radar LK Banner" loading="eager">
     </section>
 
-    <!-- Lightbox -->
-    <div class="lightbox-overlay" id="lightbox" role="dialog" aria-label="Photo enlarged">
-        <div class="lightbox-img-wrap">
-            <div class="lightbox-close" id="lightboxClose" title="Close">✕</div>
-            <img id="lightboxImg" src="" alt="Leonid K. — Punta Cana, Dominican Republic">
-            <div class="lightbox-caption">Leonid K. — Punta Cana, Dominican Republic</div>
-        </div>
-    </div>
 
     <!-- About Page Main Content -->
     <section class="about-page">
@@ -566,132 +368,213 @@
                 <!-- Title -->
                 <div class="about-page-intro">
                     <h1 class="about-page-title">About</h1>
-                    <p class="about-page-subtitle">Travel Radar LK — an independent Mexico-first travel information project</p>
+                    <p class="about-page-subtitle">Travel Radar LK is an independent travel research project focused on Mexico and the Caribbean — Cancun, the Riviera Maya, Tulum, and the Dominican Republic — with practical trip-planning guides.</p>
                 </div>
 
-                <!-- What the project is -->
                 <p class="about-text">
-                    <strong>Travel Radar LK</strong> is an independent travel information project built around practical travel decisions: where to stay, how to compare areas, and what to check before booking.
+                    <strong>Travel Radar LK</strong> is built around helping travelers make smarter travel decisions: where to stay, what transportation costs to expect, and how to avoid marketing hype when choosing a hotel.
                 </p>
+                <p class="about-text">We do not publish superficial, overly enthusiastic reviews. Instead, we focus on clear, honest, and thoroughly researched information.</p>
 
-                <p class="about-text">No surface-level reviews, generic inspiration, or unnecessary filler. Just structured, honest information you can actually use.</p>
-
-                <!-- What this site covers — cards -->
-                <h2 class="about-section-title">What This Site Covers</h2>
-
-                <div class="focus-cards">
+                <!-- 1. Our Analytical Approach -->
+                <h2 class="about-section-title">Our Analytical Approach</h2>
+                <p class="about-text">We believe that choosing the right area is more important than choosing a specific hotel. Here's how we research every destination.</p>
+                <div class="focus-grid">
                     <div class="focus-card">
-                        <span class="focus-card-icon">🏨</span>
-                        <p class="focus-card-title">Hotel zones &amp; areas</p>
-                        <p class="focus-card-text">Which zone fits your trip — not just which hotel looks nice in photos.</p>
+                        <svg class="focus-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <h3 class="focus-title">Neighborhood-by-Neighborhood Analysis</h3>
+                        <p class="focus-text">We break down large resort areas (e.g., the Hotel Zone in Cancun) into micro-neighborhoods, detailing the pros and cons of each.</p>
                     </div>
                     <div class="focus-card">
-                        <span class="focus-card-icon">💰</span>
-                        <p class="focus-card-title">Real costs</p>
-                        <p class="focus-card-text">What a vacation actually costs — all-in, without surprises.</p>
-                    </div>
-                    <div class="focus-card">
-                        <span class="focus-card-icon">📍</span>
-                        <p class="focus-card-title">Neighborhood trade-offs</p>
-                        <p class="focus-card-text">Location, convenience, beach access, transport — laid out honestly.</p>
-                    </div>
-                    <div class="focus-card">
-                        <span class="focus-card-icon">✅</span>
-                        <p class="focus-card-title">Booking decisions</p>
-                        <p class="focus-card-text">Which hotels genuinely deliver on their price — and which ones don't.</p>
+                        <svg class="focus-icon" viewBox="0 0 24 24"><path d="M21.1 11.1L12.9 2.9C12.7 2.7 12.4 2.6 12 2.6C11.6 2.6 11.3 2.7 11.1 2.9L2.9 11.1C2.5 11.5 2.5 12.1 2.9 12.5L11.1 20.7C11.3 20.9 11.6 21 12 21C12.4 21 12.7 20.9 12.9 20.7L21.1 12.5C21.5 12.1 21.5 11.5 21.1 11.1ZM12 19.3L3.7 11.1L12 2.8L20.3 11.1L12 19.3Z"/></svg>
+                        <h3 class="focus-title">Transportation Costs</h3>
+                        <p class="focus-text">We analyze transfer costs and distances from airports and ferries. A cheap hotel far from infrastructure often ends up costing more.</p>
                     </div>
                 </div>
 
-                <!-- Destinations -->
-                <p class="about-text">Primary coverage is Mexico and the Caribbean. Supporting guides cover Egypt and Turkey.</p>
-
-                <div class="destinations-row">
-                    <span class="dest-pill primary">🇲🇽 Cancun</span>
-                    <span class="dest-pill primary">🌴 Riviera Maya</span>
-                    <span class="dest-pill primary">🏖️ Tulum</span>
-                    <span class="dest-pill primary">🌊 Playa del Carmen</span>
-                    <span class="dest-pill">🇩🇴 Dominican Republic</span>
-                    <span class="dest-pill">🇹🇷 Turkey</span>
-                    <span class="dest-pill">🇪🇬 Egypt</span>
+                <!-- 2. Методология -->
+                <h2 class="about-section-title">Our Research Methodology</h2>
+                <p class="about-text">Every guide goes through our editorial review process. Here is how we create our content:</p>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/><path d="M4.5 4a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/></svg>
+                        Analyzing thousands of guest reviews
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                        Maps & Travel Logistics
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/><path d="M2 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                        Hidden Costs
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step" style="border-color: var(--ab-accent); color: var(--ab-accent);">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>
+                        Verified by Local Experts
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step" style="background: var(--ab-accent); color: #fff; border-color: var(--ab-accent);">
+                        Final guide
+                    </div>
                 </div>
 
-                <!-- About the Author -->
-                <h2 class="about-section-title">About the Author</h2>
-
-                <div class="author-block">
-
-                    <!-- Photo + lightbox trigger -->
-                    <div class="author-photo-wrap">
-                        <button
-                            class="author-photo-btn"
-                            id="photoBtn"
-                            aria-label="Click to enlarge photo"
-                            title="Click to enlarge"
-                        >
-                            <img
-                                src="../assets/images/about/leonid-k-punta-cana.jpg"
-                                alt="Leonid K. — Travel Radar LK founder, Punta Cana"
-                                width="200"
-                                height="267"
-                                loading="lazy"
-                            >
-                            <span class="photo-zoom-hint">enlarge</span>
-                        </button>
-                        <p class="author-photo-caption">Leonid K.<br>Punta Cana, Dominican Republic</p>
-                    </div>
-
-                    <!-- Bio -->
-                    <div class="author-bio">
-                        <h3 class="author-name">Leonid K.</h3>
-                        <p class="author-tagline">Lviv, Ukraine &nbsp;·&nbsp; Travel researcher &amp; photographer</p>
-
-                        <p class="about-text">
-                            I've spent over a decade shooting photo and video professionally — events, productions, and travel. That background changed how I look at resorts: I notice things that don't make it into standard reviews. Light, space, how a place actually feels versus how it photographs for a brochure.
-                        </p>
-
-                        <p class="about-text">
-                            I've stayed at premium all-inclusive resorts in Turkey and the Dominican Republic. That firsthand experience shapes the comparisons and breakdowns on this site and helps me recognize what a well-run resort should feel like from the inside.
-                        </p>
-
-                        <div class="resort-badges">
-                            <span class="resort-badge">🇹🇷 Utopia World, Turkey</span>
-                            <span class="resort-badge">🇩🇴 Majestic Colonial, Punta Cana</span>
+                <!-- 3. Команда -->
+                <h2 class="about-section-title">Our Team</h2>
+                <p class="about-text">We do not pretend that a single person has personally visited thousands of hotels. Instead, Travel Radar LK relies on a small team with different areas of expertise.</p>
+                
+                <div class="team-profiles">
+                    <!-- Leonid -->
+                    <div class="team-profile" id="leonid">
+                        <div class="team-profile-img">
+                            <img src="../assets/images/about/lk_photo_800x800.jpg" alt="Leonid Kadantsev" width="800" height="800" loading="lazy">
                         </div>
-
-                        <div class="author-stats">
-                            <div class="author-stat">
-                                <span class="author-stat-number">10+</span>
-                                <span class="author-stat-label">years photo &amp; video</span>
-                            </div>
-                            <div class="author-stat">
-                                <span class="author-stat-number">80+</span>
-                                <span class="author-stat-label">Mexico guides</span>
-                            </div>
-                            <div class="author-stat">
-                                <span class="author-stat-number">🇲🇽</span>
-                                <span class="author-stat-label">primary focus</span>
-                            </div>
+                        <div class="team-profile-content">
+                            <div class="team-profile-role">Founder • Editor-in-Chief • Lead Researcher</div>
+                            <h3 class="team-profile-name">
+                                Leonid Kadantsev
+                            </h3>
+                            <p class="team-profile-text">Leonid founded Travel Radar LK and created its research methodology. As Editor-in-Chief, he oversees the project's research standards, editorial direction, and the final review of every guide. Instead of relying on superficial reviews, he analyzes thousands of guest reviews, studies satellite maps, and evaluates travel logistics to cut through marketing claims.</p>
+                            <p class="team-profile-text">This analytical approach was shaped by more than twenty years of managing complex IT infrastructure projects as a Senior Infrastructure & Systems Engineer — a discipline he now applies to travel research.</p>
+                            <a href="https://www.linkedin.com/in/leonid-cordon/" target="_blank" class="btn-contact" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; font-size: 0.8rem; border-radius: 20px;">
+                                View Professional Profile
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Kimalie -->
+                    <div class="team-profile" id="kimalie">
+                        <div class="team-profile-img">
+                            <img src="../assets/images/about/ks_photo_800x800.jpg" alt="Kimalie Smith" width="800" height="800" loading="lazy">
+                        </div>
+                        <div class="team-profile-content">
+                            <div class="team-profile-role">Caribbean Local Expert • Regional Advisor</div>
+                            <h3 class="team-profile-name">
+                                Kimalie Smith
+                                <span class="verified-badge" title="Identity, experience, and location verified by Travel Radar LK editors">
+                                    <svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                                    Verified Contributor
+                                </span>
+                            </h3>
+                            <p class="team-profile-text">Born and raised on St. Thomas (US Virgin Islands). As a native of the region, Kimalie possesses a deep understanding of regional history, culture, and the specifics of island life.</p>
+                            <p class="team-profile-text">His US military background and attention to detail help the project monitor regional news, verify facts, and assess conditions on the ground. Kimalie regularly takes part in editorial discussions, ensuring our guides reflect the local context rather than an outsider's assumptions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Claire -->
+                    <div class="team-profile" id="claire">
+                        <div class="team-profile-img">
+                            <img src="../assets/images/about/cb_photo_800x800.jpg" alt="Claire Bennett" width="800" height="800" loading="lazy">
+                        </div>
+                        <div class="team-profile-content">
+                            <div class="team-profile-role">Mexico Destination Specialist</div>
+                            <h3 class="team-profile-name">
+                                Claire Bennett
+                                <span class="verified-badge" title="Identity, experience, and location verified by Travel Radar LK editors">
+                                    <svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                                    Verified Contributor
+                                </span>
+                            </h3>
+                            <p class="team-profile-text">A professional American journalist and graduate of the University of Wisconsin-Madison. After years of working as a travel magazine editor in Denver, Claire moved to Puerto Morelos — a small coastal town between Cancun and Playa del Carmen.</p>
+                            <p class="team-profile-text">She has visited over 24 of Mexico's 32 states, exploring everything from popular resorts to hidden cenotes. Claire assesses what travelers can realistically expect from Mexican destinations, creates custom itineraries, and manages the project's visual content.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <p class="about-text">
-                    Mexico and the Riviera Maya are my primary research focus — built on deep study of hotel zones, booking patterns, area trade-offs, and the questions travelers consistently get wrong. Rather than relying on broad destination summaries, every guide here combines structured research with the attention to detail that comes from years behind a professional camera.
-                </p>
-
-                <p class="about-text">
-                    For Mexico and Caribbean guides, I cross-check official sources, resort pages, map locations, recent traveler reviews, booking-platform details, local fees, transfer logistics, and seasonal risks before publishing or updating recommendations.
-                </p>
-
-                <div class="about-note">
-                    <p class="about-text">
-                        The site may include affiliate links to booking services. This does not affect the cost for you — it helps keep the project independent and running.
-                    </p>
+                <!-- 4. История проекта -->
+                <h2 class="about-section-title">Our History</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">October 2025</div>
+                        <h4 class="timeline-title">Concept Genesis</h4>
+                        <p class="timeline-text">After seeing how biased many travel reviews had become, we created our own research methodology.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Early 2026</div>
+                        <h4 class="timeline-title">First Mexico Guides</h4>
+                        <p class="timeline-text">We launched our first in-depth guides to Cancun and the Riviera Maya.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Summer 2026</div>
+                        <h4 class="timeline-title">More Than 130 Guides Published</h4>
+                        <p class="timeline-text">We published more than 130 travel guides.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Present</div>
+                        <h4 class="timeline-title">Expanding Across the Caribbean</h4>
+                        <p class="timeline-text">We are continuously updating our existing guides while actively expanding our in-depth coverage to new destinations across the Caribbean.</p>
+                    </div>
                 </div>
 
-                <p class="about-text">
-                    If you're planning a trip to Mexico or the Caribbean — you'll find structured, clear, and genuinely useful information here. No noise, no filler.
-                </p>
+                <!-- Editorial Coverage -->
+                <h2 class="about-section-title">Our Editorial Coverage</h2>
+                <p class="about-text">Our editorial coverage focuses on Mexico, with expanding coverage across the Dominican Republic and the Caribbean.</p>
+                
+                <div class="coverage-container">
+                    <div class="coverage-card coverage-main-card">
+                        <div class="coverage-header">
+                            <span class="coverage-emoji">🇲🇽</span> 
+                            <span class="coverage-title">Mexico</span>
+                        </div>
+                        <div class="coverage-regions">
+                            <span class="dest-pill">Cancun</span>
+                            <span class="dest-pill">Riviera Maya</span>
+                            <span class="dest-pill">Tulum</span>
+                            <span class="dest-pill">Playa del Carmen</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coverage-secondary">
+                        <div class="coverage-card">
+                            <span class="coverage-emoji">🇩🇴</span> 
+                            <span class="coverage-title">Dominican Republic</span>
+                        </div>
+                        <div class="coverage-card">
+                            <span class="coverage-emoji">🌴</span> 
+                            <span class="coverage-title">Caribbean</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Our Editorial Policy (Слияние Trust + Principles + Affiliate) -->
+                <h2 class="about-section-title" style="margin-top: 4rem;">Our Editorial Policy</h2>
+                <div class="editorial-grid">
+                    <div class="editorial-card">
+                        <svg class="editorial-icon" viewBox="0 0 24 24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-2.33v8.02z"/></svg>
+                        <h4 class="editorial-title">Facts Over Opinions</h4>
+                        <p class="editorial-text">We prioritize statistics, geolocation data, and aggregated information over isolated personal opinions.</p>
+                    </div>
+                    <div class="editorial-card">
+                        <svg class="editorial-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        <h4 class="editorial-title">Complete Independence</h4>
+                        <p class="editorial-text">We don't accept payment for hotel reviews, and we don't sell placement in our rankings. Every recommendation is based solely on our own analysis.</p>
+                    </div>
+                    <div class="editorial-card">
+                        <svg class="editorial-icon" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                        <h4 class="editorial-title">Transparent Monetization</h4>
+                        <p class="editorial-text">We may earn a commission through affiliate links. These links do not increase the booking cost for you, but they help maintain the project's independence.</p>
+                    </div>
+                </div>
+                <div class="last-updated">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                    Last updated: July 2026
+                </div>
+
+                <!-- Контакты -->
+                <div class="contact-box">
+                    <h3 class="contact-title">Contact the Editors</h3>
+                    <p class="contact-text">Found an inaccuracy in a review? Want to suggest a research idea or share your hotel experience? We appreciate your feedback and suggestions.</p>
+                    <a href="mailto:contact@travelradarlk.com" class="btn-contact">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/></svg>
+                        contact@travelradarlk.com
+                    </a>
+                </div>
 
             </div>
         </div>
@@ -701,38 +584,6 @@
 
     <script src="../js/load-header.js"></script>
 
-    <script>
-        // Lightbox
-        (function () {
-            const overlay   = document.getElementById('lightbox');
-            const lbImg     = document.getElementById('lightboxImg');
-            const closeBtn  = document.getElementById('lightboxClose');
-            const photoBtn  = document.getElementById('photoBtn');
-            const srcImg    = photoBtn ? photoBtn.querySelector('img') : null;
-
-            function openLightbox() {
-                if (!srcImg) return;
-                // Use full-res path — swap thumbnail suffix if needed
-                lbImg.src = srcImg.src;
-                overlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeLightbox() {
-                overlay.classList.remove('open');
-                document.body.style.overflow = '';
-            }
-
-            if (photoBtn) photoBtn.addEventListener('click', openLightbox);
-            if (closeBtn) closeBtn.addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
-            if (overlay)  overlay.addEventListener('click', closeLightbox);
-
-            // Close on Escape
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') closeLightbox();
-            });
-        })();
-    </script>
 
 </body>
 </html>

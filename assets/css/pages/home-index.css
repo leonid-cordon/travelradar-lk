@@ -359,6 +359,14 @@ body[data-page="home"] .destination-card[data-country="turkey"] .card-image {
     background-image: url('../../images/countries/turkey-1200.jpg');
 }
 
+body[data-page="home"] .destination-card[data-country="dominican"] .card-image {
+    background-image: url('../../images/countries/dominican-1200.jpg');
+}
+
+body[data-page="home"] .destination-card[data-country="caribbean"] .card-image {
+    background-image: url('../../images/countries/caribbean-1200.jpg');
+}
+
 body[data-page="home"] .card-badge {
     position: absolute;
     top: .85rem;
