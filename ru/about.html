@@ -313,7 +313,7 @@
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-leonid-kadantsev",
       "name": "Leonid Kadantsev",
-      "url": "https://travelradarlk.com/en/about",
+      "url": "https://travelradarlk.com/ru/about",
       "image": {
         "@type": "ImageObject",
         "@id": "https://travelradarlk.com#person-leonid-image",
@@ -343,7 +343,7 @@
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-claire-bennett",
       "name": "Claire Bennett",
-      "url": "https://travelradarlk.com/en/about#person-claire-bennett",
+      "url": "https://travelradarlk.com/ru/about#claire-bennett",
       "image": {
         "@type": "ImageObject",
         "@id": "https://travelradarlk.com#person-claire-image",
@@ -368,7 +368,7 @@
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-kimalie-smith",
       "name": "Kimalie Smith",
-      "url": "https://travelradarlk.com/en/about#person-kimalie-smith",
+      "url": "https://travelradarlk.com/ru/about#kimalie",
       "image": {
         "@type": "ImageObject",
         "@id": "https://travelradarlk.com#person-kimalie-image",
@@ -405,13 +405,16 @@
     {
       "@type": "AboutPage",
       "@id": "https://travelradarlk.com/ru/about#webpage",
-      "name": "О нас | Travel Radar LK",
-      "headline": "О нас | Travel Radar LK",
-      "description": "Travel Radar LK — это независимый проект о путешествиях по Мексике и Карибам с практическими руководствами для планирования поездок.",
+      "name": "О проекте",
+      "headline": "О проекте | Travel Radar LK",
+      "description": "О проекте Travel Radar LK — независимом travel-проекте с главным фокусом на Мексике и Карибах, практичном планировании поездок, а также с разделами по Египту и Турции.",
       "url": "https://travelradarlk.com/ru/about",
       "inLanguage": "ru-RU",
       "isPartOf": {
         "@id": "https://travelradarlk.com#website"
+      },
+      "breadcrumb": {
+        "@id": "https://travelradarlk.com/ru/about#breadcrumb"
       },
       "mainEntity": [
         {
@@ -425,6 +428,24 @@
         },
         {
           "@id": "https://travelradarlk.com#person-kimalie-smith"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://travelradarlk.com/ru/about#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://travelradarlk.com/ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "О проекте",
+          "item": "https://travelradarlk.com/ru/about"
         }
       ]
     }

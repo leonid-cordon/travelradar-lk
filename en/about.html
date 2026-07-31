@@ -401,7 +401,7 @@
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-claire-bennett",
       "name": "Claire Bennett",
-      "url": "https://travelradarlk.com/en/about#person-claire-bennett",
+      "url": "https://travelradarlk.com/en/about#claire-bennett",
       "image": {
         "@type": "ImageObject",
         "@id": "https://travelradarlk.com#person-claire-image",
@@ -426,7 +426,7 @@
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-kimalie-smith",
       "name": "Kimalie Smith",
-      "url": "https://travelradarlk.com/en/about#person-kimalie-smith",
+      "url": "https://travelradarlk.com/en/about#kimalie",
       "image": {
         "@type": "ImageObject",
         "@id": "https://travelradarlk.com#person-kimalie-image",
@@ -471,6 +471,9 @@
       "isPartOf": {
         "@id": "https://travelradarlk.com#website"
       },
+      "breadcrumb": {
+        "@id": "https://travelradarlk.com/en/about#breadcrumb"
+      },
       "mainEntity": [
         {
           "@id": "https://travelradarlk.com#organization"
@@ -483,6 +486,24 @@
         },
         {
           "@id": "https://travelradarlk.com#person-kimalie-smith"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://travelradarlk.com/en/about#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://travelradarlk.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://travelradarlk.com/en/about"
         }
       ]
     }
