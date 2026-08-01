@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /_dev/
+Disallow: /dev/
 Sitemap: https://travelradarlk.com/sitemap.xml
