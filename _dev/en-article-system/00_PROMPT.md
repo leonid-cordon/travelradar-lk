@@ -371,12 +371,22 @@ Weak: `Cancun Beach Guide` · Better: `Cancun Beach Guide: Calm Water, Waves and
 ### 7. Schema.org
 **Author / Publisher** (required in every EN article):
 ```json
-"author": {
-  "@type": "Person", "name": "Leonid K.",
-  "url": "https://travelradarlk.com/en/about",
-  "affiliation": { "@type": "Organization", "name": "Travel Radar LK",
-    "url": "https://travelradarlk.com" }
-},
+"author": [
+  {
+    "@type": "Person",
+    "@id": "https://travelradarlk.com#person-leonid-kadantsev",
+    "name": "Leonid Kadantsev",
+    "url": "https://travelradarlk.com/en/about#person-leonid-kadantsev",
+    "jobTitle": "Founder, Editor-in-Chief, Lead Researcher"
+  },
+  {
+    "@type": "Person",
+    "@id": "https://travelradarlk.com#person-[reviewer-id]",
+    "name": "[Reviewer Name]",
+    "url": "https://travelradarlk.com/en/about#person-[reviewer-id]",
+    "jobTitle": "[Reviewer Job Title from about.html]"
+  }
+],
 "publisher": {
   "@type": "Organization", "name": "Travel Radar LK",
   "url": "https://travelradarlk.com",
@@ -385,9 +395,16 @@ Weak: `Cancun Beach Guide` · Better: `Cancun Beach Guide: Calm Water, Waves and
     "width": 512, "height": 512 }
 }
 ```
-Hero author line:
+*(The AI must select the correct reviewer ID, Name, and Job Title based on the geography rules below).*
+Hero author line (include reviewer based on geography):
+- Mexico destinations (Cancun, Riviera Maya, Tulum, Playa del Carmen, etc.): reviewer is **Claire Bennett** (link: `/en/about#person-claire-bennett`, Job Title: `Regional Expert, Mexico`).
+- Caribbean / Dominican Republic destinations (Punta Cana, etc.): reviewer is **Kimalie Smith** (link: `/en/about#person-kimalie-smith`, Job Title: `Regional Expert, Caribbean`).
+
 ```html
-<p class="hero-subtitle">By <a href="/en/about" class="author-link">Leonid K.</a>, founder/editor of Travel Radar LK</p>
+<p class="hero-subtitle">
+  By <a href="/en/about#person-leonid-kadantsev" class="author-link">Leonid Kadantsev</a> &bull; 
+  Reviewed by <a href="/en/about#person-[reviewer-id]" class="author-link">[Reviewer Name]</a>
+</p>
 ```
 **Dates:** `datePublished` = first public release; `dateModified` = last substantial change. Don't
 backdate. The visible hero line must match the JSON-LD dates:
@@ -395,6 +412,35 @@ backdate. The visible hero line must match the JSON-LD dates:
 <p class="hero-subtitle">Published [Month D, YYYY] &bull; Updated [Month D, YYYY] &bull; Sources checked [Month D, YYYY] &bull; [X]&ndash;[Y] min read</p>
 ```
 For a brand-new article Published and Updated may be equal.
+
+**Visible Breadcrumbs HTML:** 
+Immediately after the opening `<main>` and before the `<article>` content begins (or inside the top of the article container), insert the premium breadcrumbs wrapper. DO NOT use the legacy `<nav aria-label="Breadcrumb">`.
+
+```html
+<div class="premium-breadcrumb-wrapper">
+  <div class="container">
+    <div class="breadcrumb-scroll-container">
+      <ul class="premium-breadcrumb">
+        <li>
+          <a href="/en/">Home</a>
+        </li>
+        <li class="separator">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </li>
+        <li>
+          <a href="/en/content/">Content</a>
+        </li>
+        <li class="separator">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </li>
+        <li>
+          <a href="/en/content/[primary-section]/">[Primary Section Name]</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
 **BreadcrumbList** — a separate JSON-LD block using the **Content Hub v2** taxonomy:
 `Home → Content → <Primary Section> → [Article]`, where `<Primary Section>` is one of
 `destinations` · `stay` · `things-to-do` · `weather` · `planning` · `safety`. Do NOT use the
@@ -504,8 +550,9 @@ Don't check mechanically — but every line below must be true or consciously N/
 - [ ] Hero `width="1920" height="320"`; block images no `width`/`height`; all card/block 2:1
 - [ ] All images from the current slug's folder; filename standard kept
 - [ ] SEO filled: title, meta, canonical, hreflang (ru/en/uk/x-default), og (incl. image w/h), twitter
-- [ ] Article JSON-LD: human author `Leonid K.` (clickable, `class="author-link"`), `publisher.logo`,
+- [ ] Article JSON-LD: author array includes `Leonid Kadantsev` AND the correct reviewer (`Claire Bennett` or `Kimalie Smith`). Visible hero line includes both with correct `#person-` anchors.
       `datePublished`/`dateModified`/`mainEntityOfPage`/`inLanguage=en-US` consistent with visible hero
+- [ ] Visible HTML breadcrumbs use `<div class="premium-breadcrumb-wrapper">` (no legacy `<nav>`).
 - [ ] Breadcrumbs use Hub v2 section taxonomy (not legacy Countries/Mexico)
 - [ ] FAQPage JSON-LD only if FAQ is final & visible, and matches the visible HTML EXACTLY, including quote characters (escape `\"` in JSON to mirror visible double quotes)
 - [ ] Spine unchanged; variation lives only in the decision-element form and mid-article enrichment
