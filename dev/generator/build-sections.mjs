@@ -121,31 +121,115 @@ function renderPage(cfg, recs) {
   const url = cfg.isShowcase ? `${SITE}/${lang.folder}/content/` : `${SITE}/${lang.folder}/content/${cfg.slug}/`;
   const heroImageAbs = `${SITE}${cfg.heroImage}`;
 
-  const collectionLd = {
+  const collectionLdGraph = {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: cfg.label,
-    headline: cfg.ogTitle,
-    description: cfg.description,
-    url,
-    inLanguage: lang.inLanguage,
-    isPartOf: { '@type': 'WebSite', name: 'Travel Radar LK', url: `${SITE}/` },
-    publisher: { '@type': 'Organization', name: 'Travel Radar LK' },
-    image: heroImageAbs,
-  };
-  const breadcrumbLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: cfg.isShowcase
-      ? [
-          { '@type': 'ListItem', position: 1, name: lang.ui.home, item: `${SITE}/${lang.folder}/` },
-          { '@type': 'ListItem', position: 2, name: cfg.label, item: url },
-        ]
-      : [
-          { '@type': 'ListItem', position: 1, name: lang.ui.home, item: `${SITE}/${lang.folder}/` },
-          { '@type': 'ListItem', position: 2, name: lang.ui.contentRoot, item: `${SITE}/${lang.folder}/content/` },
-          { '@type': 'ListItem', position: 3, name: cfg.label, item: url },
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': 'https://travelradarlk.com#organization',
+        name: 'Travel Radar LK',
+        alternateName: 'TravelRadar LK',
+        url: 'https://travelradarlk.com',
+        email: 'contact@travelradarlk.com',
+        foundingDate: '2025-11',
+        founder: { '@id': 'https://travelradarlk.com#person-leonid-kadantsev' },
+        logo: {
+          '@type': 'ImageObject',
+          '@id': 'https://travelradarlk.com#logo',
+          url: 'https://travelradarlk.com/assets/images/brand/travel-radar-lk-logo-512.png',
+          width: 512,
+          height: 512,
+          caption: 'Travel Radar LK Logo'
+        },
+        image: { '@id': 'https://travelradarlk.com#logo' },
+        sameAs: [
+          'https://www.pinterest.com/travelradarlk/',
+          'https://www.youtube.com/@TravelRadar_LK',
+          'https://www.instagram.com/travelradarlk/',
+          'https://www.tiktok.com/@travelradarlk'
         ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: 'contact@travelradarlk.com',
+          contactType: 'customer support',
+          availableLanguage: ['English', 'Russian', 'Ukrainian']
+        }
+      },
+      {
+        '@type': 'Person',
+        '@id': 'https://travelradarlk.com#person-leonid-kadantsev',
+        name: 'Leonid Kadantsev',
+        url: 'https://travelradarlk.com/en/about#person-leonid-kadantsev',
+        image: {
+          '@type': 'ImageObject',
+          '@id': 'https://travelradarlk.com#person-leonid-image',
+          url: 'https://travelradarlk.com/assets/images/about/lk_photo_800x800.jpg',
+          width: 800,
+          height: 800,
+          caption: 'Leonid Kadantsev'
+        },
+        jobTitle: 'Founder & Lead Researcher',
+        worksFor: { '@id': 'https://travelradarlk.com#organization' },
+        sameAs: ['https://www.linkedin.com/in/leonid-cordon/', 'https://t.me/TravelRadar_LK']
+      },
+      {
+        '@type': 'Person',
+        '@id': 'https://travelradarlk.com#person-claire-bennett',
+        name: 'Claire Bennett',
+        url: 'https://travelradarlk.com/en/about#person-claire-bennett',
+        image: {
+          '@type': 'ImageObject',
+          '@id': 'https://travelradarlk.com#person-claire-bennett-image',
+          url: 'https://travelradarlk.com/assets/images/about/cb_photo_800x800.jpg',
+          width: 800,
+          height: 800,
+          caption: 'Claire Bennett'
+        },
+        jobTitle: 'Regional Expert',
+        worksFor: { '@id': 'https://travelradarlk.com#organization' },
+        sameAs: ['https://t.me/SoulReaper1715']
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://travelradarlk.com#website',
+        name: 'Travel Radar LK',
+        url: 'https://travelradarlk.com',
+        publisher: { '@id': 'https://travelradarlk.com#organization' }
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': `${url}#webpage`,
+        name: cfg.ogTitle,
+        headline: cfg.ogTitle,
+        description: cfg.description,
+        url: url,
+        inLanguage: lang.inLanguage,
+        isPartOf: { '@id': 'https://travelradarlk.com#website' },
+        primaryImageOfPage: { '@id': `${url}#primaryimage` }
+      },
+      {
+        '@type': 'ImageObject',
+        '@id': `${url}#primaryimage`,
+        url: heroImageAbs,
+        width: 2400,
+        height: 1350,
+        caption: cfg.heroAlt || cfg.label
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: cfg.isShowcase
+          ? [
+              { '@type': 'ListItem', position: 1, name: lang.ui.home, item: `${SITE}/${lang.folder}/` },
+              { '@type': 'ListItem', position: 2, name: lang.ui.contentRoot, item: url }
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: lang.ui.home, item: `${SITE}/${lang.folder}/` },
+              { '@type': 'ListItem', position: 2, name: lang.ui.contentRoot, item: `${SITE}/${lang.folder}/content/` },
+              { '@type': 'ListItem', position: 3, name: cfg.label }
+            ]
+      }
+    ]
   };
 
   // hreflang block (showcase only); empty string keeps thematic sections byte-identical.
@@ -153,16 +237,40 @@ function renderPage(cfg, recs) {
     ? Object.entries(cfg.hreflang).map(([k, v]) => `    <link rel="alternate" hreflang="${k}" href="${v}">`).join('\n') + '\n'
     : '';
 
-  // Breadcrumb trail: showcase is 2-level (Home › Content); sections are 3-level.
+  // Breadcrumb trail (premium capsule): showcase is 2-level (Home › Content); sections are 3-level.
   const breadcrumbNav = cfg.isShowcase
-    ? `<a href="/${lang.folder}/" style="color:inherit;text-decoration:none;">${esc(lang.ui.home)}</a>
-        <span aria-hidden="true"> › </span>
-        <span aria-current="page">${esc(cfg.label)}</span>`
-    : `<a href="/${lang.folder}/" style="color:inherit;text-decoration:none;">${esc(lang.ui.home)}</a>
-        <span aria-hidden="true"> › </span>
-        <a href="/${lang.folder}/content/" style="color:inherit;text-decoration:none;">${esc(lang.ui.contentRoot)}</a>
-        <span aria-hidden="true"> › </span>
-        <span aria-current="page">${esc(cfg.label)}</span>`;
+    ? `<div class="premium-breadcrumb-wrapper" style="top: calc(var(--header-height) + clamp(12px, 2vw, 18px)); z-index: 10;">
+                <nav aria-label="Breadcrumb">
+                    <ol class="premium-breadcrumb">
+                        <li>
+                            <a href="/${lang.folder}/">
+                                <svg class="breadcrumb-icon" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"></path></svg>
+                                ${esc(lang.ui.home)}
+                            </a>
+                        </li>
+                        <li class="separator" aria-hidden="true"></li>
+                        <li class="active" aria-current="page">${esc(cfg.label)}</li>
+                    </ol>
+                </nav>
+            </div>`
+    : `<div class="premium-breadcrumb-wrapper" style="top: calc(var(--header-height) + clamp(12px, 2vw, 18px)); z-index: 10;">
+                <nav aria-label="Breadcrumb">
+                    <ol class="premium-breadcrumb">
+                        <li>
+                            <a href="/${lang.folder}/">
+                                <svg class="breadcrumb-icon" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"></path></svg>
+                                ${esc(lang.ui.home)}
+                            </a>
+                        </li>
+                        <li class="separator" aria-hidden="true"></li>
+                        <li>
+                            <a href="/${lang.folder}/content/">${esc(lang.ui.contentRoot)}</a>
+                        </li>
+                        <li class="separator" aria-hidden="true"></li>
+                        <li class="active" aria-current="page">${esc(cfg.label)}</li>
+                    </ol>
+                </nav>
+            </div>`;
 
   // back-link is omitted on the showcase (it is the all-content page).
   const backLink = cfg.isShowcase ? '' : `
@@ -202,10 +310,7 @@ function renderPage(cfg, recs) {
     <meta name="twitter:image" content="${heroImageAbs}">
 
     <script type="application/ld+json">
-${JSON.stringify(collectionLd, null, 4)}
-    </script>
-    <script type="application/ld+json">
-${JSON.stringify(breadcrumbLd, null, 4)}
+${JSON.stringify(collectionLdGraph, null, 4)}
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -237,6 +342,7 @@ ${hreflang}</head>
     <!-- Hero -->
     <section class="content-hero">
         <div class="hero-image-container">
+${breadcrumbNav}
             <img src="${cfg.heroImage}" width="2400" height="1350" alt="${esc(cfg.heroAlt)}" class="hero-image">
             <div class="hero-overlay"></div>
 
@@ -250,10 +356,7 @@ ${hreflang}</head>
         </div>
     </section>
 
-${switcher}    <!-- Breadcrumb -->
-    <nav class="container" aria-label="Breadcrumb" style="padding-top:1rem;font-size:.85rem;color:var(--ci-muted);">
-        ${breadcrumbNav}
-    </nav>
+${switcher}
 
     <!-- Intro -->
     <section class="content-section content-intro-section">
