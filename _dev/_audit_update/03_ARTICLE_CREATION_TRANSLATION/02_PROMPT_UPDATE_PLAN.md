@@ -67,30 +67,29 @@ Hero author line (include reviewer based on geography):
 **На что мы заменим (Что ДОБАВИМ):**
 ```html
 **Visible Breadcrumbs HTML:** 
-Immediately after the opening `<main>` and before the `<article>` content begins, insert the premium breadcrumbs wrapper. DO NOT use the legacy `<nav aria-label="Breadcrumb">`.
+Immediately after the opening `<main>` and before the `<article>` content begins, insert the premium breadcrumbs wrapper. Use the EXACT structure below (with `<nav>`, `<ol>`, and the active page at the end).
 
 <div class="premium-breadcrumb-wrapper">
-  <div class="container">
-    <div class="breadcrumb-scroll-container">
-      <ul class="premium-breadcrumb">
-        <li>
-          <a href="/en/">Home</a>
-        </li>
-        <li class="separator">
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </li>
-        <li>
-          <a href="/en/content/">Content</a>
-        </li>
-        <li class="separator">
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </li>
-        <li>
-          <a href="/en/content/[primary-section]/">[Primary Section Name]</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <nav aria-label="Breadcrumb">
+    <ol class="premium-breadcrumb">
+      <li>
+        <a href="/en/">
+          <svg class="breadcrumb-icon" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125-.504 1.125-1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"></path></svg>
+          Home
+        </a>
+      </li>
+      <li class="separator" aria-hidden="true"></li>
+      <li>
+        <a href="/en/content/">Content</a>
+      </li>
+      <li class="separator" aria-hidden="true"></li>
+      <li>
+        <a href="/en/content/[primary-section]/">[Primary Section Name]</a>
+      </li>
+      <li class="separator" aria-hidden="true"></li>
+      <li class="active" aria-current="page">[Article Title]</li>
+    </ol>
+  </nav>
 </div>
 ```
 
@@ -102,4 +101,4 @@ Immediately after the opening `<main>` and before the `<article>` content begins
 
 **На что мы заменим:**
 `- [ ] Article JSON-LD: author array includes Leonid Kadantsev AND the correct reviewer (Claire Bennett or Kimalie Smith). Visible hero line includes both with correct #person- anchors.`
-`- [ ] Visible HTML breadcrumbs use <div class="premium-breadcrumb-wrapper"> (no legacy <nav>).`
+`- [ ] Visible HTML breadcrumbs use exact structure: <div class="premium-breadcrumb-wrapper"> with <nav>, <ol>, and <li class="active" aria-current="page">[Title]</li> at the end.`
