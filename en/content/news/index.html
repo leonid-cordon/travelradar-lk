@@ -155,21 +155,27 @@
       }
     },
     {
-      "@type": "WebPage",
+      "@type": "CollectionPage",
       "@id": "https://travelradarlk.com/en/content/news/#webpage",
-      "url": "https://travelradarlk.com/en/content/news/",
       "name": "Travel News for Mexico and the Riviera Maya",
+      "headline": "Travel News for Mexico and the Riviera Maya",
       "description": "Timely travel news for Mexico's Caribbean coast — sargassum, weather events, entry rules and other developments that change how you plan Cancun, Tulum and the Riviera Maya.",
+      "url": "https://travelradarlk.com/en/content/news/",
       "inLanguage": "en-US",
       "isPartOf": {
         "@id": "https://travelradarlk.com#website"
       },
-      "breadcrumb": {
-        "@id": "https://travelradarlk.com/en/content/news/#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://travelradarlk.com/en/content/news/#article"
+      "primaryImageOfPage": {
+        "@id": "https://travelradarlk.com/en/content/news/#primaryimage"
       }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://travelradarlk.com/en/content/news/#primaryimage",
+      "url": "https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg",
+      "width": 2400,
+      "height": 1350,
+      "caption": "Travel news for Mexico's Caribbean coast"
     },
     {
       "@type": "BreadcrumbList",
@@ -190,50 +196,9 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "News",
-          "item": "https://travelradarlk.com/en/content/news/"
+          "name": "News"
         }
       ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://travelradarlk.com/en/content/news/#article",
-      "isPartOf": {
-        "@id": "https://travelradarlk.com/en/content/news/#webpage"
-      },
-      "mainEntityOfPage": {
-        "@id": "https://travelradarlk.com/en/content/news/#webpage"
-      },
-      "headline": "Travel News for Mexico and the Riviera Maya",
-      "description": "Timely travel news for Mexico's Caribbean coast — sargassum, weather events, entry rules and other developments that change how you plan Cancun, Tulum and the Riviera Maya.",
-      "wordCount": 500,
-      "timeRequired": "PT2M",
-      "image": {
-        "@type": "ImageObject",
-        "@id": "https://travelradarlk.com/en/content/news/#primaryimage",
-        "url": "https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg",
-        "width": 2400,
-        "height": 1350
-      },
-      "datePublished": "2026-01-01T08:00:00+00:00",
-      "dateModified": "2026-07-30T12:00:00+00:00",
-      "inLanguage": "en-US",
-      "author": {
-        "@id": "https://travelradarlk.com#person-leonid-kadantsev"
-      },
-      "reviewedBy": {
-        "@id": "https://travelradarlk.com#person-claire-bennett"
-      },
-      "publisher": {
-        "@id": "https://travelradarlk.com#organization"
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Travel Destination",
-        "sameAs": [
-          "https://www.wikidata.org/wiki/Q36643"
-        ]
-      }
     }
   ]
 }
@@ -277,13 +242,24 @@
     </section>
 
     <!-- Breadcrumb -->
-    <nav class="container" aria-label="Breadcrumb" style="padding-top:1rem;font-size:.85rem;color:var(--ci-muted);">
-        <a href="/en/" style="color:inherit;text-decoration:none;">Home</a>
-        <span aria-hidden="true"> › </span>
-        <a href="/en/content/" style="color:inherit;text-decoration:none;">Content</a>
-        <span aria-hidden="true"> › </span>
-        <span aria-current="page">News</span>
-    </nav>
+    <div class="premium-breadcrumb-wrapper" style="padding-top:1rem;">
+        <nav class="container" aria-label="Breadcrumb">
+            <ol class="premium-breadcrumb">
+                <li>
+                    <a href="/en/">
+                        <svg class="breadcrumb-icon" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"></path></svg>
+                        Home
+                    </a>
+                </li>
+                <li class="separator" aria-hidden="true"></li>
+                <li>
+                    <a href="/en/content/">Content</a>
+                </li>
+                <li class="separator" aria-hidden="true"></li>
+                <li class="active" aria-current="page">News</li>
+            </ol>
+        </nav>
+    </div>
 
     <!-- Intro -->
     <section class="content-section content-intro-section">
