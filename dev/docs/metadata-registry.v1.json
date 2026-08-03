@@ -234,17 +234,8 @@
     "diving-in-cozumel-first-timers-certified-divers": {
       "primary_section": "things-to-do", "country": "mexico", "region": "riviera-maya", "destination": "cozumel", "related_destinations": ["playa-del-carmen"], "content_type": "guide", "tags": ["snorkeling", "island-trip", "day-trips", "best-time"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
     },
-    "egypt-bez-obmana": {
-      "primary_section": "safety", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["scam-warning"], "audience": [], "featured": 0, "intent": null
-    },
-    "entry-egypt-2026": {
-      "primary_section": "planning", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["visa-entry"], "audience": [], "featured": 0, "intent": null
-    },
     "first-time-mexico-vacation-planner": {
       "primary_section": "destinations", "country": "mexico", "region": null, "destination": null, "related_destinations": ["cancun", "riviera-maya", "tulum", "punta-cana"], "content_type": "comparison", "tags": ["all-inclusive", "beaches", "cenotes", "day-trips", "airport-transfer", "best-time", "sargassum", "budget"], "audience": ["first-timer"], "featured": 0, "intent": "plan"
-    },
-    "flights-egypt": {
-      "primary_section": "planning", "country": "egypt", "region": null, "destination": null, "related_destinations": [], "content_type": "guide", "tags": ["flights"], "audience": [], "featured": 0, "intent": null
     },
     "food-water-safety-mexico": {
       "primary_section": "safety", "country": "mexico", "region": null, "destination": null, "related_destinations": [], "content_type": "advice", "tags": ["food-safety"], "audience": [], "featured": 0, "intent": null
@@ -266,9 +257,6 @@
     },
     "isla-mujeres-day-trip-from-cancun": {
       "primary_section": "things-to-do", "country": "mexico", "region": null, "destination": "isla-mujeres", "related_destinations": [], "content_type": "guide", "tags": ["day-trips", "island-trip"], "audience": [], "featured": 0, "intent": null
-    },
-    "istanbul-neighborhoods-guide": {
-      "primary_section": "destinations", "country": "turkey", "region": "istanbul", "destination": "istanbul", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
     },
     "las-coloradas-pink-lake-day-trip": {
       "primary_section": "things-to-do", "country": "mexico", "region": "yucatan", "destination": null, "related_destinations": ["cancun", "riviera-maya"], "content_type": "advice", "tags": ["day-trips", "best-time", "itinerary"], "audience": [], "featured": 0, "intent": "plan"
@@ -380,9 +368,6 @@
     },
     "where-to-stay-in-tulum-beach-zone-vs-town-vs-aldea-zama": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "tulum", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
-    },
-    "where-to-stay-istanbul": {
-      "primary_section": "stay", "country": "turkey", "region": "istanbul", "destination": "istanbul", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
     },
     "where-to-stay-playa-del-carmen": {
       "primary_section": "stay", "country": "mexico", "region": "riviera-maya", "destination": "playa-del-carmen", "related_destinations": [], "content_type": "guide", "tags": ["neighborhoods"], "audience": [], "featured": 0, "intent": null
