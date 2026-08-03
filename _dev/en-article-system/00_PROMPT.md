@@ -409,12 +409,12 @@ Hero author line (include reviewer based on geography):
 **Dates:** `datePublished` = first public release; `dateModified` = last substantial change. Don't
 backdate. The visible hero line must match the JSON-LD dates:
 ```html
-<p class="hero-subtitle">Published [Month D, YYYY] &bull; Updated [Month D, YYYY] &bull; Sources checked [Month D, YYYY] &bull; [X]&ndash;[Y] min read</p>
+<p class="hero-subtitle">Published [Month D, YYYY] &bull; Sources checked [Month D, YYYY] &bull; [X]&ndash;[Y] min read</p>
 ```
-For a brand-new article Published and Updated may be equal.
+For a brand-new article, ONLY include the `Published` date. **Do not output the `Updated` date** in the visible hero subtitle or in the `dateModified` field of the JSON-LD schema. The `Updated` date should only be added during future revisions.
 
 **Visible Breadcrumbs HTML:** 
-Immediately after the opening `<main>` and before the `<article>` content begins, insert the premium breadcrumbs wrapper. Use the EXACT structure below (with `<nav>`, `<ol>`, and the active page at the end).
+Place the `premium-breadcrumb-wrapper` **INSIDE** the `<section class="article-hero">`, immediately before the `<img class="article-hero-image">` tag. Use the EXACT structure below (with `<nav>`, `<ol>`, and the active page at the end).
 
 ```html
 <div class="premium-breadcrumb-wrapper">
@@ -528,6 +528,34 @@ owner. (Full editorial QA for monetization & conversion path lives in `02_QA_CHE
 
 ---
 
+**HTML Skeleton & Scripts:**
+1. Immediately after `<body>`, insert `<div id="site-header"></div>`.
+2. Immediately before `</body>`, insert `<div id="site-footer"></div>` followed by:
+```html
+<script src="/js/load-header.js"></script>
+<script src="/assets/js/article-image-viewer.js"></script>
+```
+
+**Article Menu (`site-nav`):**
+Immediately after the closing `</section>` of the `article-hero`, you MUST insert the following menu block exactly:
+```html
+<div class="article-nav-wrap">
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a href="/en/content/" class="nav-link">All</a>
+      <a href="/en/content/destinations/" class="nav-link">Destinations</a>
+      <a href="/en/content/stay/" class="nav-link">Stay &amp; Hotels</a>
+      <a href="/en/content/things-to-do/" class="nav-link">Things to Do</a>
+      <a href="/en/content/weather/" class="nav-link">Weather</a>
+      <a href="/en/content/planning/" class="nav-link">Planning</a>
+      <a href="/en/content/safety/" class="nav-link">Safety</a>
+    </div>
+  </nav>
+</div>
+```
+
+---
+
 # FINAL QUALITY GATE (must pass before finishing)
 
 Don't check mechanically — but every line below must be true or consciously N/A.
@@ -550,8 +578,9 @@ Don't check mechanically — but every line below must be true or consciously N/
 - [ ] All images from the current slug's folder; filename standard kept
 - [ ] SEO filled: title, meta, canonical, hreflang (ru/en/uk/x-default), og (incl. image w/h), twitter
 - [ ] Article JSON-LD: author array includes `Leonid Kadantsev` AND the correct reviewer (`Claire Bennett` or `Kimalie Smith`). Visible hero line includes both with correct `#person-` anchors.
-      `datePublished`/`dateModified`/`mainEntityOfPage`/`inLanguage=en-US` consistent with visible hero
+      `datePublished`/`mainEntityOfPage`/`inLanguage=en-US` consistent with visible hero (no `dateModified` for new articles)
 - [ ] Visible HTML breadcrumbs use exact structure: `<div class="premium-breadcrumb-wrapper">` with `<nav>`, `<ol>`, and `<li class="active" aria-current="page">[Title]</li>` at the end.
+- [ ] Breadcrumbs are placed INSIDE the hero section. Article menu (`site-nav`) and footer scripts are included.
 - [ ] Breadcrumbs use Hub v2 section taxonomy (not legacy Countries/Mexico)
 - [ ] FAQPage JSON-LD only if FAQ is final & visible, and matches the visible HTML EXACTLY, including quote characters (escape `\"` in JSON to mirror visible double quotes)
 - [ ] Spine unchanged; variation lives only in the decision-element form and mid-article enrichment
