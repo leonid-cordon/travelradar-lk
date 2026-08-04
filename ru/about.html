@@ -9,6 +9,10 @@
     <title>О проекте | Travel Radar LK</title>
     <meta name="description" content="Travel Radar LK — независимый travel-проект с главным фокусом на Мексике и Карибах (Канкун, Ривьера-Майя, Тулум и Доминикана), предоставляющий практичные гайды для планирования поездок.">
     <link rel="canonical" href="https://travelradarlk.com/ru/about">
+    <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/about">
+    <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/about">
+    <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/about">
+    <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/en/about">
     <meta property="og:title" content="О проекте | Travel Radar LK">
     <meta property="og:description" content="Travel Radar LK — независимый travel-проект с главным фокусом на Мексике и Карибах (Канкун, Ривьера-Майя, Тулум и Доминикана), предоставляющий практичные гайды для планирования поездок.">
     <meta property="og:type" content="website">
@@ -20,10 +24,6 @@
     <meta name="twitter:title" content="О проекте | Travel Radar LK">
     <meta name="twitter:description" content="Travel Radar LK — независимый travel-проект с главным фокусом на Мексике и Карибах (Канкун, Ривьера-Майя, Тулум и Доминикана), предоставляющий практичные гайды для планирования поездок.">
     <meta name="twitter:image" content="https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg">
-    <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/about">
-    <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/about">
-    <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/about">
-    <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/en/about">
 
     
 
@@ -328,7 +328,6 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "Organization",
       "@id": "https://travelradarlk.com#organization",
@@ -361,15 +360,18 @@
         "@type": "ContactPoint",
         "email": "contact@travelradarlk.com",
         "contactType": "customer support",
-        "availableLanguage": ["English", "Russian", "Ukrainian"]
+        "availableLanguage": [
+          "English",
+          "Russian",
+          "Ukrainian"
+        ]
       }
     },
-
     {
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-leonid-kadantsev",
       "name": "Leonid Kadantsev",
-      "url": "https://travelradarlk.com/ru/about",
+      "url": "https://travelradarlk.com/ru/about#person-leonid-kadantsev",
       "image": {
         "@type": "ImageObject",
         "@id": "https://travelradarlk.com#person-leonid-image",
@@ -378,8 +380,8 @@
         "height": 800,
         "caption": "Leonid Kadantsev, Founder of Travel Radar LK"
       },
-      "jobTitle": "Основатель, Главный редактор, Ведущий исследователь",
-      "description": "Travel-исследователь, специализирующийся на практичных и независимых гайдах по Мексике, Доминикане и Карибам.",
+      "jobTitle": "Founder, Editor-in-Chief, Lead Researcher",
+      "description": "Travel researcher specializing in practical, un-sponsored guides for Mexico, the Dominican Republic, and the Caribbean.",
       "knowsAbout": [
         "Mexico travel",
         "Caribbean resorts",
@@ -394,7 +396,6 @@
         "https://t.me/TravelRadar_LK"
       ]
     },
-
     {
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-claire-bennett",
@@ -402,14 +403,14 @@
       "url": "https://travelradarlk.com/ru/about#person-claire-bennett",
       "image": {
         "@type": "ImageObject",
-        "@id": "https://travelradarlk.com#person-claire-image",
+        "@id": "https://travelradarlk.com#person-claire-bennett-image",
         "url": "https://travelradarlk.com/assets/images/about/cb_photo_800x800.jpg",
         "width": 800,
         "height": 800,
         "caption": "Claire Bennett"
       },
-      "jobTitle": "Региональный эксперт, Мексика",
-      "description": "Цифровой кочевник и региональный исследователь с фокусом на Мексике.",
+      "jobTitle": "Regional Expert, Mexico",
+      "description": "Digital nomad and regional researcher focusing on Mexico.",
       "knowsAbout": [
         "Mexico travel",
         "Cancun",
@@ -419,7 +420,6 @@
         "@id": "https://travelradarlk.com#organization"
       }
     },
-
     {
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-kimalie-smith",
@@ -427,14 +427,14 @@
       "url": "https://travelradarlk.com/ru/about#person-kimalie-smith",
       "image": {
         "@type": "ImageObject",
-        "@id": "https://travelradarlk.com#person-kimalie-image",
+        "@id": "https://travelradarlk.com#person-kimalie-smith-image",
         "url": "https://travelradarlk.com/assets/images/about/ks_photo_800x800.jpg",
         "width": 800,
         "height": 800,
         "caption": "Kimalie Smith"
       },
-      "jobTitle": "Региональный эксперт, Карибы",
-      "description": "Житель Карибского региона и travel-исследователь.",
+      "jobTitle": "Regional Expert, Caribbean",
+      "description": "Caribbean resident and travel researcher.",
       "knowsAbout": [
         "Caribbean resorts",
         "Dominican Republic travel",
@@ -447,7 +447,6 @@
         "https://t.me/SoulReaper1715"
       ]
     },
-
     {
       "@type": "WebSite",
       "@id": "https://travelradarlk.com#website",
@@ -457,20 +456,30 @@
         "@id": "https://travelradarlk.com#organization"
       }
     },
-
+    {
+      "@type": "ImageObject",
+      "@id": "https://travelradarlk.com/ru/about#primaryimage",
+      "url": "https://travelradarlk.com/assets/images/about/hero-about.jpg",
+      "contentUrl": "https://travelradarlk.com/assets/images/about/hero-about.jpg",
+      "width": 1920,
+      "height": 1280,
+      "caption": "Банер Travel Radar LK"
+    },
     {
       "@type": "AboutPage",
       "@id": "https://travelradarlk.com/ru/about#webpage",
-      "name": "О проекте",
-      "headline": "О проекте | Travel Radar LK",
-      "description": "Travel Radar LK — независимый travel-проект с главным фокусом на Мексике и Карибах (Канкун, Ривьера-Майя, Тулум и Доминикана), предоставляющий практичные гайды для планирования поездок.",
       "url": "https://travelradarlk.com/ru/about",
+      "name": "О проекте",
+      "description": "Travel Radar LK — независимый travel-проект с главным фокусом на Мексике и Карибах (Канкун, Ривьера-Майя, Тулум и Доминикана), предоставляющий практичные гайды для планирования поездок.",
       "inLanguage": "ru-RU",
       "isPartOf": {
         "@id": "https://travelradarlk.com#website"
       },
-      "breadcrumb": {
-        "@id": "https://travelradarlk.com/ru/about#breadcrumb"
+      "publisher": {
+        "@id": "https://travelradarlk.com#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://travelradarlk.com/ru/about#primaryimage"
       },
       "mainEntity": [
         {
@@ -486,26 +495,7 @@
           "@id": "https://travelradarlk.com#person-kimalie-smith"
         }
       ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://travelradarlk.com/ru/about#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Главная",
-          "item": "https://travelradarlk.com/ru/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "О проекте",
-          "item": "https://travelradarlk.com/ru/about"
-        }
-      ]
     }
-
   ]
 }
 </script>
@@ -517,7 +507,7 @@
 
     <!-- Hero Banner Strip -->
     <section class="hero-strip" aria-label="Банер">
-        <img src="../assets/images/about/hero-about.jpg" width="2400" height="1350" alt="Банер Travel Radar LK" loading="eager">
+        <img src="../assets/images/about/hero-about.jpg" width="1920" height="1280" alt="Банер Travel Radar LK" loading="eager">
     </section>
 
 

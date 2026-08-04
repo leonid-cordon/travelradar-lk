@@ -9,6 +9,10 @@
     <meta name="description" content="Travel Radar LK is an independent travel research project focused on Mexico, the Dominican Republic, and the Caribbean, with practical trip-planning guides.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://travelradarlk.com/en/">
+    <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/">
+    <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/">
+    <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/">
+    <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/en/">
     <meta property="og:title" content="Mexico Travel Guides: Cancun, Tulum &amp; Riviera Maya | Travel Radar LK">
     <meta property="og:description" content="Travel Radar LK is an independent travel research project focused on Mexico, the Dominican Republic, and the Caribbean, with practical trip-planning guides.">
     <meta property="og:type" content="website">
@@ -25,10 +29,6 @@
     <meta name="twitter:description" content="Travel Radar LK is an independent travel research project focused on Mexico, the Dominican Republic, and the Caribbean, with practical trip-planning guides.">
     <meta name="twitter:image" content="https://travelradarlk.com/assets/images/hero/og-default_1200x630.jpg">
 
-    <link rel="alternate" hreflang="ru" href="https://travelradarlk.com/ru/">
-    <link rel="alternate" hreflang="en" href="https://travelradarlk.com/en/">
-    <link rel="alternate" hreflang="uk" href="https://travelradarlk.com/ua/">
-    <link rel="alternate" hreflang="x-default" href="https://travelradarlk.com/en/">
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,14 +86,18 @@
         "@type": "ContactPoint",
         "email": "contact@travelradarlk.com",
         "contactType": "customer support",
-        "availableLanguage": ["English", "Russian", "Ukrainian"]
+        "availableLanguage": [
+          "English",
+          "Russian",
+          "Ukrainian"
+        ]
       }
     },
     {
       "@type": "Person",
       "@id": "https://travelradarlk.com#person-leonid-kadantsev",
       "name": "Leonid Kadantsev",
-      "url": "https://travelradarlk.com/en/about",
+      "url": "https://travelradarlk.com/en/about#person-leonid-kadantsev",
       "image": {
         "@type": "ImageObject",
         "@id": "https://travelradarlk.com#person-leonid-image",
@@ -128,27 +132,30 @@
       }
     },
     {
+      "@type": "ImageObject",
+      "@id": "https://travelradarlk.com/en/#primaryimage",
+      "url": "https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg",
+      "contentUrl": "https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg",
+      "width": 2400,
+      "height": 1350,
+      "caption": "Luxury terrace with an infinity pool overlooking a Caribbean sunset"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://travelradarlk.com/en/#webpage",
-      "name": "Mexico Travel Guides: Cancun, Tulum & Riviera Maya | Travel Radar LK",
-      "headline": "Travel Radar LK — English Home",
-      "description": "Travel Radar LK is an independent travel research project focused on Mexico, the Dominican Republic, and the Caribbean, with practical trip-planning guides.",
       "url": "https://travelradarlk.com/en/",
+      "name": "Travel Radar LK",
+      "description": "Travel Radar LK is an independent travel research project focused on Mexico, the Dominican Republic, and the Caribbean, with practical trip-planning guides.",
       "inLanguage": "en-US",
       "isPartOf": {
         "@id": "https://travelradarlk.com#website"
       },
+      "publisher": {
+        "@id": "https://travelradarlk.com#organization"
+      },
       "primaryImageOfPage": {
         "@id": "https://travelradarlk.com/en/#primaryimage"
       }
-    },
-    {
-      "@type": "ImageObject",
-      "@id": "https://travelradarlk.com/en/#primaryimage",
-      "url": "https://travelradarlk.com/assets/images/hero/hero-desktop_2400x1350.jpg",
-      "width": 2400,
-      "height": 1350,
-      "caption": "Luxury terrace with an infinity pool overlooking a Caribbean sunset"
     }
   ]
 }
@@ -419,6 +426,24 @@
 
             <div class="content-grid">
                 <!-- AUTO:latest:start -->
+                <a href="content/where-to-stay-punta-cana-areas" class="content-card">
+                    <div class="content-image">
+                        <img src="../assets/images/content/where-to-stay-punta-cana-areas/card_1200x600.jpg" width="1200" height="600" alt="Where to Stay in Punta Cana: Bavaro, Cap Cana or Uvero Alto?" loading="lazy">
+                    </div>
+
+                    <div class="content-body">
+                        <span class="content-category">Stay &amp; Hotels</span>
+
+                        <h3 class="content-title">
+                            Where to Stay in Punta Cana: Bavaro, Cap Cana or Uvero Alto?
+                        </h3>
+
+                        <p class="content-excerpt">
+                            Three Punta Cana districts create three different vacations. Compare beaches, atmosphere, transfers, prices and resort fit before booking.
+                        </p>
+                    </div>
+                </a>
+
                 <a href="content/punta-cana-travel-guide-first-timers" class="content-card">
                     <div class="content-image">
                         <img src="../assets/images/content/punta-cana-travel-guide-first-timers/card_1200x600.jpg" width="1200" height="600" alt="Punta Cana Travel Guide for First-Timers: What It Is and How It Works" loading="lazy">
@@ -566,25 +591,6 @@
 
                         <p class="content-excerpt">
                             Staying on Akumal Bay buys one real thing: early-morning snorkeling with turtles before the tour buses. Beachfront picks, adults-only vs family, and when a day trip is enough.
-                        </p>
-                    </div>
-                </a>
-
-                <a href="content/best-all-inclusive-resorts-cozumel" class="content-card">
-                    <div class="content-image">
-                        <img src="../assets/images/content/best-all-inclusive-resorts-cozumel/card_1200x600.jpg" width="1200" height="600" alt="Best All-Inclusive Resorts in Cozumel: Diving, Beach and Staying on the Island" loading="lazy">
-                    </div>
-
-                    <div class="content-body">
-                        <span class="content-category">Mexico</span>
-                        <span class="content-category">Stay &amp; Hotels</span>
-
-                        <h3 class="content-title">
-                            Best All-Inclusive Resorts in Cozumel: Diving, Beach and Staying on the Island
-                        </h3>
-
-                        <p class="content-excerpt">
-                            Pick a Cozumel all-inclusive by dive access, beach type and traveler style, not star rating: coral-shore reality, on-site dive shops and San Miguel distance explained.
                         </p>
                     </div>
                 </a>

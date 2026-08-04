@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-08-02T14:41:51.953Z",
-  "count": 124,
+  "generated_at": "2026-08-04T09:29:53.657Z",
+  "count": 125,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -271,8 +271,8 @@
       "description": "Pick an adults-only resort north of Cancun by calm, beach quality, transfer time and isolation: Playa Mujeres, Costa Mujeres or the livelier Hotel Zone.",
       "url": "https://travelradarlk.com/en/content/best-adults-only-resorts-playa-mujeres-costa-mujeres",
       "image": "https://travelradarlk.com/assets/images/content/best-adults-only-resorts-playa-mujeres-costa-mujeres/card_1200x600.jpg",
-      "date_published": "2026-01-01T08:00:00+00:00",
-      "date_modified": "2026-07-30T12:00:00+00:00",
+      "date_published": "2026-07-04T12:00:00+00:00",
+      "date_modified": "2026-07-04T12:00:00+00:00",
       "search_text": "best adults-only resorts in playa mujeres and costa mujeres pick an adults-only resort north of cancun by calm beach quality transfer time and isolation playa mujeres costa mujeres or the livelier hotel zone cancun adults-only all-inclusive honeymoon beaches airport-transfer"
     },
     {
@@ -3471,6 +3471,38 @@
       "date_published": "2026-07-14T12:00:00+00:00",
       "date_modified": "2026-07-14T12:00:00+00:00",
       "search_text": "where to stay in puerto morelos quiet beach town vs mega-resorts two very different puerto morelos vacations a boutique room a block from the town square or a luxury all-inclusive north of town how to pick the right one riviera-maya riviera-maya all-inclusive boutique-hotel beaches hotel-mistakes budget"
+    },
+    {
+      "slug": "where-to-stay-punta-cana-areas",
+      "lang": "en",
+      "primary_section": "stay",
+      "section_label": "Stay & Hotels",
+      "country": "dominican-republic",
+      "region": "punta-cana",
+      "destination": "punta-cana",
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "all-inclusive",
+        "beaches",
+        "airport-transfer",
+        "neighborhoods",
+        "hotel-mistakes"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Where to Stay in Punta Cana: Bavaro, Cap Cana or Uvero Alto?",
+      "description": "Three Punta Cana districts create three different vacations. Compare beaches, atmosphere, transfers, prices and resort fit before booking.",
+      "url": "https://travelradarlk.com/en/content/where-to-stay-punta-cana-areas",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-stay-punta-cana-areas/card_1200x600.jpg",
+      "date_published": "2026-08-03T12:00:00+00:00",
+      "date_modified": "2026-08-03T12:00:00+00:00",
+      "search_text": "where to stay in punta cana bavaro cap cana or uvero alto three punta cana districts create three different vacations compare beaches atmosphere transfers prices and resort fit before booking punta-cana punta-cana all-inclusive beaches airport-transfer neighborhoods hotel-mistakes"
     },
     {
       "slug": "xcaret-vs-xel-ha-vs-xplor",
