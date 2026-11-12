@@ -42,7 +42,7 @@ function getCurrentLang() {
 /* Версия partials: меняйте вручную при правке header/footer,
    чтобы сбросить кэш у пользователей. Не используем Date.now()/no-store,
    иначе header и footer перекачиваются с сети на каждой навигации. */
-const PARTIALS_VERSION = '2026-06-08';
+const PARTIALS_VERSION = '2026-11-12';
 
 async function loadPartials() {
     try {
@@ -236,18 +236,60 @@ function updateThemeIcon(theme) {
     toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
 }
 
-/* ========= MOBILE MENU ========= */
+/* ========= MOBILE & SUBMENU NAVIGATION ========= */
 function initMobileMenu() {
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
 
     if (!mobileToggle || !navMenu) return;
 
+    const closeAllSubmenus = (scope = document) => {
+        scope.querySelectorAll('#site-header .dropdown-subitem.sub-open').forEach(item => {
+            item.classList.remove('sub-open');
+            item.querySelector('.dropdown-item.has-submenu')?.setAttribute('aria-expanded', 'false');
+        });
+    };
+
     document.querySelectorAll('#site-header .nav-link.has-dropdown').forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
-            link.closest('.nav-item')?.classList.toggle('dropdown-open');
+            const navItem = link.closest('.nav-item');
+            if (!navItem) return;
+            const isOpen = navItem.classList.toggle('dropdown-open');
+            if (!isOpen) {
+                closeAllSubmenus(navItem);
+            }
         });
+    });
+
+    document.querySelectorAll('#site-header .dropdown-item.has-submenu').forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            const subItem = btn.closest('.dropdown-subitem');
+            const menu = btn.closest('.dropdown-menu');
+            if (!subItem || !menu) return;
+
+            menu.querySelectorAll('.dropdown-subitem.sub-open').forEach(other => {
+                if (other !== subItem) {
+                    other.classList.remove('sub-open');
+                    other.querySelector('.dropdown-item.has-submenu')?.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            const isOpen = subItem.classList.toggle('sub-open');
+            btn.setAttribute('aria-expanded', String(isOpen));
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('#site-header .nav-item')) {
+            document.querySelectorAll('#site-header .nav-item.dropdown-open').forEach(item => {
+                item.classList.remove('dropdown-open');
+            });
+            closeAllSubmenus();
+        }
     });
 
     mobileToggle.addEventListener('click', () => {
@@ -255,6 +297,12 @@ function initMobileMenu() {
         mobileToggle.classList.toggle('active');
         mobileToggle.setAttribute('aria-expanded', isActive);
         document.body.style.overflow = isActive ? 'hidden' : '';
+        if (!isActive) {
+            document.querySelectorAll('#site-header .nav-item.dropdown-open').forEach(item => {
+                item.classList.remove('dropdown-open');
+            });
+            closeAllSubmenus();
+        }
     });
 
     window.addEventListener('resize', () => {
@@ -262,6 +310,10 @@ function initMobileMenu() {
             navMenu.classList.remove('active');
             mobileToggle.classList.remove('active');
             document.body.style.overflow = '';
+            document.querySelectorAll('#site-header .nav-item.dropdown-open').forEach(item => {
+                item.classList.remove('dropdown-open');
+            });
+            closeAllSubmenus();
         }
     });
 }
