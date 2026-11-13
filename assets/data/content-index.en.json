@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-08-05T09:36:59.910Z",
-  "count": 126,
+  "generated_at": "2026-11-13T07:35:02.011Z",
+  "count": 127,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -3399,6 +3399,39 @@
       "date_published": "2026-06-26T12:00:00+00:00",
       "date_modified": "2026-06-26T12:00:00+00:00",
       "search_text": "where to eat in tulum beach clubs restaurants and the reality behind the photos navigate tulum s food scene without the shock overpriced beach clubs authentic food in town avoiding hidden tips and real meal budgets tulum budget food-safety"
+    },
+    {
+      "slug": "where-to-go-dominican-republic-regions",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "dominican-republic",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "punta-cana"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "beaches",
+        "sargassum",
+        "best-time",
+        "airport-transfer"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Where to Go in the Dominican Republic: Punta Cana vs Bayahibe vs Puerto Plata vs Samaná",
+      "description": "Choose the right Dominican Republic region before booking flights: compare coasts, airports, sargassum exposure, resort style and typical costs.",
+      "url": "https://travelradarlk.com/en/content/where-to-go-dominican-republic-regions",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-go-dominican-republic-regions/card_1200x600.jpg",
+      "date_published": "2026-11-12T12:00:00+00:00",
+      "date_modified": "2026-11-12T12:00:00+00:00",
+      "search_text": "where to go in the dominican republic punta cana vs bayahibe vs puerto plata vs saman choose the right dominican republic region before booking flights compare coasts airports sargassum exposure resort style and typical costs beaches sargassum best-time airport-transfer"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",

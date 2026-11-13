@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-08-05T09:37:00.199Z",
-  "count": 126,
+  "generated_at": "2026-11-13T07:35:02.514Z",
+  "count": 127,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -3399,6 +3399,39 @@
       "date_published": "2026-06-26T12:00:00+00:00",
       "date_modified": "2026-06-26T12:00:00+00:00",
       "search_text": "де поїсти в тулумі пляжні клуби ресторани та реальність за красивими фото навігація по ресторанах тулума без шоку від цін дорогі пляжні клуби справжня їжа в місті приховані чайові та реальні бюджети tulum budget food-safety"
+    },
+    {
+      "slug": "where-to-go-dominican-republic-regions",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "dominican-republic",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "punta-cana"
+      ],
+      "content_type": "comparison",
+      "tags": [
+        "beaches",
+        "sargassum",
+        "best-time",
+        "airport-transfer"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Куди поїхати в Домінікані: Пунта-Кана, Баяїбе, Пуерто-Плата чи Самана",
+      "description": "Як обрати правильний регіон Домінікани ще до купівлі квитків: порівнюємо узбережжя, аеропорти, ризик водоростей, готелі та бюджет.",
+      "url": "https://travelradarlk.com/ua/content/where-to-go-dominican-republic-regions",
+      "image": "https://travelradarlk.com/assets/images/content/where-to-go-dominican-republic-regions/card_1200x600.jpg",
+      "date_published": "2026-11-12T12:00:00+00:00",
+      "date_modified": "2026-11-12T12:00:00+00:00",
+      "search_text": "куди поїхати в домінікані пунта-кана баяїбе пуерто-плата чи самана як обрати правильний регіон домінікани ще до купівлі квитків порівнюємо узбережжя аеропорти ризик водоростей готелі та бюджет beaches sargassum best-time airport-transfer"
     },
     {
       "slug": "where-to-stay-in-cancun-hotel-zone-vs-downtown",
