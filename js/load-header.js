@@ -181,33 +181,32 @@ function initActiveNav() {
         link.removeAttribute('aria-current');
     });
 
-    if (pathname.includes('/content')) {
+    const activateMatching = (predicate) => {
         navLinks.forEach(link => {
-            if (link.href.includes('content')) {
+            const rawHref = link.getAttribute('href');
+            if (!rawHref || rawHref === '#' || link.classList.contains('has-dropdown')) {
+                return;
+            }
+            const url = new URL(rawHref, window.location.origin);
+            if (predicate(url)) {
                 link.classList.add('active');
                 link.setAttribute('aria-current', 'page');
             }
         });
+    };
+
+    if (pathname.includes('/content/') || pathname.endsWith('/content')) {
+        activateMatching(url => url.pathname.includes('/content/'));
         return;
     }
 
     if (pathname.includes('/about')) {
-        navLinks.forEach(link => {
-            if (link.href.includes('/about')) {
-                link.classList.add('active');
-                link.setAttribute('aria-current', 'page');
-            }
-        });
+        activateMatching(url => url.pathname.includes('/about'));
         return;
     }
 
     if (hash === '#destinations') {
-        navLinks.forEach(link => {
-            if (link.href.includes('#destinations')) {
-                link.classList.add('active');
-                link.setAttribute('aria-current', 'page');
-            }
-        });
+        activateMatching(url => url.hash === '#destinations');
     }
 }
 
