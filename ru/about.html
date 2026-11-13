@@ -237,34 +237,7 @@
             }
         }
 
-        /* ============================================
-           HERO BANNER OVERRIDE
-           ============================================ */
-        .hero-strip {
-            height: auto !important;
-            aspect-ratio: 16 / 9;
-            max-height: none !important; 
-            overflow: hidden;
-            display: flex;
-            width: 100%;
-        }
-
-        .hero-strip img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top !important; 
-        }
-
-        @media (max-width: 768px) {
-            .hero-strip {
-                aspect-ratio: 1 / 1;
-                margin-top: 0 !important;
-            }
-            .hero-strip img {
-                object-position: left top !important;
-            }
-        }
+        /* Hero banner layout is styled in assets/css/pages/home-index.css under body[data-page="about"] */
 
         /* ============================================
            CLEANED & REFINED ABOUT PAGE CSS
@@ -521,7 +494,13 @@
 
     <!-- Hero Banner Strip -->
     <section class="hero-strip" aria-label="Банер">
-        <img src="../assets/images/about/hero-about.jpg" width="1920" height="1280" alt="Банер Travel Radar LK" loading="eager">
+        <div class="container">
+            <div class="about-content">
+                <div class="hero-strip-frame">
+                    <img src="../assets/images/about/hero-about.jpg" width="1920" height="1280" alt="Банер Travel Radar LK" loading="eager">
+                </div>
+            </div>
+        </div>
     </section>
 
 
