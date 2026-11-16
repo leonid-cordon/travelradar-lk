@@ -29,7 +29,7 @@ function getCurrentLang() {
         return first;
     }
 
-    return 'ru';
+    return 'en';
 }
 
 /* ========= EARLY THEME ========= */
@@ -42,7 +42,7 @@ function getCurrentLang() {
 /* Версия partials: меняйте вручную при правке header/footer,
    чтобы сбросить кэш у пользователей. Не используем Date.now()/no-store,
    иначе header и footer перекачиваются с сети на каждой навигации. */
-const PARTIALS_VERSION = '2026-11-12';
+const PARTIALS_VERSION = '2026-11-17';
 
 async function loadPartials() {
     try {
