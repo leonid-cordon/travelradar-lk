@@ -170,7 +170,7 @@ function renderPage(cfg, recs) {
         },
         jobTitle: 'Founder & Lead Researcher',
         worksFor: { '@id': 'https://travelradarlk.com#organization' },
-        sameAs: ['https://www.linkedin.com/in/leonid-cordon/', 'https://t.me/TravelRadar_LK']
+        sameAs: ['https://www.linkedin.com/in/leonid-kadantsev/', 'https://t.me/TravelRadar_LK']
       },
       {
         '@type': 'Person',
