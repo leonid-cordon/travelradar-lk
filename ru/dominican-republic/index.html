@@ -185,6 +185,15 @@
         },
         {
           "@id": "https://travelradarlk.com/ru/content/puerto-plata-north-coast-travel-guide#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ru/content/punta-cana-vs-cancun#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ru/content/cancun-riviera-maya-punta-cana-all-inclusive#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ru/content/hotel-rating-9-trap#webpage"
         }
       ],
       "about": {
@@ -259,9 +268,11 @@
                 Планируйте поездку в Доминиканскую Республику уверенно. Сравните Punta Cana, Bayahibe, La Romana, Puerto Plata и другие курорты, а затем воспользуйтесь нашими гайдами по отелям, аэропортам, eSIM, бюджету и выездам, чтобы спланировать каждый шаг.
             </p>
             <nav class="mh-hero-chips" aria-label="Jump to section">
+                <a href="#mh-choose-base" class="mh-hero-chip">Выбрать регион</a>
                 <a href="#mh-hotels" class="mh-hero-chip">Сравнить отели</a>
                 <a href="#mh-transfer" class="mh-hero-chip">Спланировать трансфер</a>
                 <a href="#mh-guides" class="mh-hero-chip">Гайды по Доминикане</a>
+                <a href="#mh-mistakes" class="mh-hero-chip">Избежать ошибок</a>
             </nav>
         </div>
     </section>
@@ -285,7 +296,7 @@
             <nav class="country-nav-list" aria-label="Навигация по хабу">
                 <a href="#mh-helper" class="country-nav-item">Помощник</a>
                 <a href="#mh-choose-base" class="country-nav-item">Карта</a>
-                <a href="#mh-trip-style" class="country-nav-item">Стиль поездки</a>
+                <!-- <a href="#mh-trip-style" class="country-nav-item">Стиль поездки</a> -->
                 <a href="#mh-essentials" class="country-nav-item">База</a>
                 <a href="#mh-guides" class="country-nav-item">Гайды</a>
                 <a href="#mh-mistakes" class="country-nav-item">Ошибки</a>
@@ -298,9 +309,201 @@
     <!-- ================================================================
          TRIP HELPER
          ================================================================ -->
+    <section class="mh-section mh-section-soft" id="mh-helper">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Помощник по Доминикане</span>
+                <h2 class="mh-section-title">Начните с проблемы, которой хотите избежать</h2>
+                <p class="mh-section-lead">Выберите главный риск поездки, а мы подскажем нужный гайд или следующий шаг для планирования.</p>
+            </header>
+
+            <p class="mh-helper-note">Это не чат-бот, а быстрый маршрут: выберите проблему, и мы покажем, что читать и делать дальше.</p>
+
+            <div class="mh-helper-grid">
+                <!-- Scenario buttons -->
+                <div class="mh-helper-scenarios" role="group" aria-label="Сценарии планирования">
+                    <button class="mh-scenario-btn" data-scenario="wrong-area" aria-pressed="true">
+                        <span class="mh-scenario-icon" aria-hidden="true">🗺️</span>
+                        Не хочу ошибиться с выбором района
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="overpaying" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">💸</span>
+                        Не хочу переплатить за курорт
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="transfer" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚌</span>
+                        Переживаю за долгий трансфер из аэропорта
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="beach-photos" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📸</span>
+                        Не хочу, чтобы пляж оказался хуже, чем на фото
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="no-data" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📵</span>
+                        Нужен мобильный интернет сразу по прилете
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="bad-tours" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚢</span>
+                        Хочу экскурсии без плохой логистики
+                    </button>
+                </div>
+
+                <!-- Result panel -->
+                <div class="mh-helper-result" id="mh-helper-result" aria-live="polite" aria-atomic="true">
+                    <div class="mh-result-placeholder" id="mh-result-placeholder" hidden>
+                        <span class="mh-result-placeholder-icon" aria-hidden="true">🧭</span>
+                        <p>Выберите сценарий слева, чтобы увидеть, что читать и делать в первую очередь.</p>
+                    </div>
+                    <div id="mh-result-content">
+                        <span class="mh-result-scenario-label">Сначала выберите район, затем отель</span>
+                        <p class="mh-result-title">Сначала выберите район, затем отель</p>
+                        <p class="mh-result-body">Punta Cana, Bayahibe и Samaná могут казаться похожими издалека, но они создают совершенно разные поездки, если добавить время на трансфер, стиль пляжа и формат отеля. Решение о районе должно предшествовать поиску отеля.</p>
+                        <div class="mh-result-links">
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Читать сначала:</span>
+                                <a href="../content/where-to-go-dominican-republic-regions">Сравнить 5 регионов Доминиканы</a>
+                            </div>
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Также полезно:</span>
+                                <a href="../content/where-to-stay-punta-cana-areas">Где остановиться в Пунта-Кане</a>
+                            </div>
+                        </div>
+                        <p class="mh-result-next">Следующий шаг: Сначала сравните курортные зоны, затем ищите отели в выбранном районе.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
          INTERACTIVE MAP — CHOOSE YOUR BASE
          ================================================================ -->
+    <section class="mh-section" id="mh-choose-base">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Сравнение регионов</span>
+                <h2 class="mh-section-title">Выберите базу в Доминикане до бронирования</h2>
+                <p class="mh-section-lead">Выбор отеля менее важен, чем выбор правильного побережья и аэропорта. Каждый регион задает свой формат отдыха.</p>
+            </header>
+
+            <!-- Mobile zone chips (hidden on desktop via CSS) -->
+            <div class="mh-zone-chips" role="group" aria-label="Выберите регион Доминиканы">
+                <button class="mh-zone-chip" data-zone="puerto-plata" aria-pressed="false">Пуэрто-Плата</button>
+                <button class="mh-zone-chip" data-zone="samana" aria-pressed="false">Самана</button>
+                <button class="mh-zone-chip" data-zone="punta-cana" aria-pressed="false">Пунта-Кана</button>
+                <button class="mh-zone-chip" data-zone="airport" aria-pressed="false">Аэропорт PUJ</button>
+                <button class="mh-zone-chip" data-zone="bayahibe" aria-pressed="false">Байяхибе</button>
+                <button class="mh-zone-chip" data-zone="la-romana" aria-pressed="false">Ла-Романа</button>
+                <button class="mh-zone-chip" data-zone="santo-domingo" aria-pressed="false">Санто-Доминго</button>
+            </div>
+
+            <div class="mh-map-layout">
+                <!-- SVG Map -->
+                <div class="mh-map-sticky">
+                    <div class="mh-map-wrap">
+                        <svg viewBox="0 0 520 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема выбора регионов Доминиканской Республики">
+                            <title>Карта регионов Доминиканской Республики — нажмите на зону для подробностей</title>
+
+                            <!-- Water background -->
+                            <rect width="520" height="640" class="mh-map-water-fill"/>
+                            <rect x="24" y="24" width="472" height="592" rx="18" class="mh-route-panel"/>
+                            <text x="52" y="58" class="mh-map-title-text">Выбор региона по побережью и аэропорту</text>
+
+                            <!-- Editorial coast cue -->
+                            <path d="M 110 116 C 210 104 320 110 385 150 C 428 195 430 278 395 348 C 345 415 280 465 255 512"
+                                  class="mh-route-coast" pointer-events="none"/>
+
+                            <!-- Main route & airport links -->
+                            <path d="M 145 119 L 377 119 M 145 247 L 375 247 L 377 375 L 145 375 L 260 503"
+                                  class="mh-route-main" pointer-events="none"/>
+                            <path d="M 145 280 L 145 342 M 377 152 L 375 214"
+                                  class="mh-route-branch" pointer-events="none"/>
+                            <g pointer-events="none">
+                                <text x="52" y="188" class="mh-map-title-text">Атлантическое побережье и хаб POP</text>
+                                <text x="52" y="316" class="mh-map-title-text">Коридор прилета через PUJ (15–70 мин)</text>
+                                <text x="52" y="444" class="mh-map-title-text">Спокойное Карибское море и столица</text>
+                            </g>
+
+                            <!-- Puerto Plata -->
+                            <g class="mh-map-zone" data-zone="puerto-plata" tabindex="0" role="button" aria-label="Puerto Plata">
+                                <rect x="34" y="80" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="86" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-puerto-plata"/>
+                                <circle cx="68" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="86" y="114" class="mh-zone-label">Пуэрто-Плата</text>
+                                <text x="86" y="132" class="mh-zone-label-small">Север · аэропорт POP</text>
+                            </g>
+
+                            <!-- Samaná -->
+                            <g class="mh-map-zone" data-zone="samana" tabindex="0" role="button" aria-label="Samaná">
+                                <rect x="266" y="80" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="86" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-samana"/>
+                                <circle cx="300" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="318" y="114" class="mh-zone-label">Самана</text>
+                                <text x="318" y="132" class="mh-zone-label-small">Киты · Los Haitises · эко</text>
+                            </g>
+
+                            <!-- PUJ Airport -->
+                            <g class="mh-map-zone" data-zone="airport" tabindex="0" role="button" aria-label="PUJ Airport">
+                                <rect x="34" y="208" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="214" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-airport"/>
+                                <circle cx="68" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="86" y="242" class="mh-zone-label">Аэропорт PUJ</text>
+                                <text x="86" y="260" class="mh-zone-label-small">Главный прилет и трансферы</text>
+                            </g>
+
+                            <!-- Punta Cana -->
+                            <g class="mh-map-zone" data-zone="punta-cana" tabindex="0" role="button" aria-label="Punta Cana">
+                                <rect x="266" y="208" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="214" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-punta-cana"/>
+                                <circle cx="300" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="318" y="242" class="mh-zone-label">Пунта-Кана</text>
+                                <text x="318" y="260" class="mh-zone-label-small">Курорты · Баваро и Кап-Кана</text>
+                            </g>
+
+                            <!-- Bayahibe -->
+                            <g class="mh-map-zone" data-zone="bayahibe" tabindex="0" role="button" aria-label="Bayahibe">
+                                <rect x="34" y="336" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="342" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-bayahibe"/>
+                                <circle cx="68" cy="375" r="8" class="mh-route-marker"/>
+                                <text x="86" y="370" class="mh-zone-label">Байяхибе</text>
+                                <text x="86" y="388" class="mh-zone-label-small">Спокойное море · о. Саона</text>
+                            </g>
+
+                            <!-- La Romana -->
+                            <g class="mh-map-zone" data-zone="la-romana" tabindex="0" role="button" aria-label="La Romana">
+                                <rect x="266" y="336" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="342" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-la-romana"/>
+                                <circle cx="300" cy="375" r="8" class="mh-route-marker"/>
+                                <text x="318" y="370" class="mh-zone-label">Ла-Романа</text>
+                                <text x="318" y="388" class="mh-zone-label-small">Casa de Campo · гольф и яхты</text>
+                            </g>
+
+                            <!-- Santo Domingo -->
+                            <g class="mh-map-zone" data-zone="santo-domingo" tabindex="0" role="button" aria-label="Santo Domingo">
+                                <rect x="134" y="464" width="252" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="140" y="470" width="240" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-santo-domingo"/>
+                                <circle cx="168" cy="503" r="8" class="mh-route-marker"/>
+                                <text x="186" y="498" class="mh-zone-label">Санто-Доминго</text>
+                                <text x="186" y="516" class="mh-zone-label-small">Zona Colonial · SDQ · 1–2 ночи</text>
+                            </g>
+
+                        </svg>
+                    </div>
+                    <p class="mh-map-caption">Схематичная карта регионов, не точная география.</p>
+                </div>
+
+                <!-- Zone detail card -->
+                <div class="mh-zone-card" id="mh-zone-card" aria-live="polite" aria-atomic="true">
+                    <div class="mh-zone-card-placeholder" id="mh-zone-placeholder">
+                        <span class="mh-zone-card-placeholder-icon" aria-hidden="true">📍</span>
+                        <p>Нажмите на регион на карте, чтобы увидеть его главные плюсы и важные нюансы до бронирования.</p>
+                    </div>
+                    <div id="mh-zone-content" hidden></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
          CHOOSE BY TRIP STYLE
          ================================================================ -->
@@ -540,6 +743,18 @@
                             <span class="mh-cluster-link-title">Пуэрто-Плата и северное побережье: полный путеводитель</span>
                             <span class="mh-cluster-link-reason">Лучше всего: сравнить Плая-Дораду, Сосуа и Кабарете, рассчитать бюджет и разобраться с прилётом в POP</span>
                         </a>
+                        <a href="../content/punta-cana-vs-cancun" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Пунта-Кана или Канкун: какое направление лучше подходит?</span>
+                            <span class="mh-cluster-link-reason">Лучше всего: выбрать между Доминиканой и Мексикой до бронирования авиабилетов</span>
+                        </a>
+                        <a href="../caribbean/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Хаб планирования Карибов →</span>
+                            <span class="mh-cluster-link-reason">Лучше всего: сравнить Доминикану с Ямайкой, Багамами и другими островами Карибского моря</span>
+                        </a>
+                        <a href="../mexico/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Хаб планирования Мексики →</span>
+                            <span class="mh-cluster-link-reason">Лучше всего: перейти к планированию Канкуна и Ривьера-Майя, если выбираете Мексику</span>
+                        </a>
                     </div>
                 </div>
 
@@ -554,6 +769,14 @@
                         <a href="../content/punta-cana-hotel-booking-checklist" class="mh-cluster-link">
                             <span class="mh-cluster-link-title">Чек-лист бронирования отеля в Пунта-Кане: водоросли, скрытые доплаты и локация</span>
                             <span class="mh-cluster-link-reason">Лучше всего: проверить реальное расстояние до пляжа, риск саргассума и итоговый счёт до оплаты</span>
+                        </a>
+                        <a href="../content/cancun-riviera-maya-punta-cana-all-inclusive" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">«Всё включено» в Канкуне, Ривьера-Майя или Пунта-Кане</span>
+                            <span class="mh-cluster-link-reason">Лучше всего: сравнить формат курортов, спокойствие пляжей и логистику трансферов</span>
+                        </a>
+                        <a href="../content/hotel-rating-9-trap" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Почему рейтинг отеля 9.2 может испортить отпуск</span>
+                            <span class="mh-cluster-link-reason">Лучше всего: проверить тип гостей, реальный доступ к пляжу и инфраструктуру за высокой оценкой</span>
                         </a>
                     </div>
                 </div>
@@ -575,6 +798,61 @@
     <!-- ================================================================
          AVOID THE MISTAKES
          ================================================================ -->
+    <section class="mh-section" id="mh-mistakes">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Частые ошибки</span>
+                <h2 class="mh-section-title">Избегайте ошибок, из-за которых Доминикана кажется хуже</h2>
+                <p class="mh-section-lead">Эти шесть просчётов при планировании вызывают большинство разочарований в Пунта-Кане, Байяхибе и на северном побережье.</p>
+            </header>
+
+            <div class="mh-mistakes-grid">
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">🗺️</div>
+                    <h3 class="mh-mistake-title">Выбирать курорт до выбора побережья и региона</h3>
+                    <p class="mh-mistake-body">Пунта-Кана, Байяхибе, Пуэрто-Плата и Самана привязаны к разным аэропортам и разным морям. Сначала выбирается регион, и только потом отель.</p>
+                    <a href="../content/where-to-go-dominican-republic-regions" class="mh-mistake-link">→ Сравнить 5 регионов ДР</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">🏨</div>
+                    <h3 class="mh-mistake-title">Считать Баваро, Кап-Кану и Уверо-Альто одним пляжем</h3>
+                    <p class="mh-mistake-body">Все три зоны относятся к Пунта-Кане, но сильно различаются по волнам, плотности курортов, цене и длине трансфера. Важно попасть в свою зону.</p>
+                    <a href="../content/where-to-stay-punta-cana-areas" class="mh-mistake-link">→ Сравнить зоны Пунта-Каны</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">📸</div>
+                    <h3 class="mh-mistake-title">Бронировать по фото без проверки водорослей и сборов</h3>
+                    <p class="mh-mistake-body">Рекламные снимки скрывают барьеры от саргассума, долгую дорогу до пляжа из дальних корпусов и скрытые доплаты. Пять быстрых проверок защитят бюджет.</p>
+                    <a href="../content/punta-cana-hotel-booking-checklist" class="mh-mistake-link">→ Открыть чек-лист отеля</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">⭐</div>
+                    <h3 class="mh-mistake-title">Слепо доверять рейтингу отеля 9.2</h3>
+                    <p class="mh-mistake-body">Высокая оценка говорит лишь о том, что прошлые гости были довольны своим форматом — но отель всё равно может не подойти по шуму, контингенту или пляжу.</p>
+                    <a href="../content/hotel-rating-9-trap" class="mh-mistake-link">→ Как проверять рейтинг 9.2</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">🚐</div>
+                    <h3 class="mh-mistake-title">Недооценивать eTicket, прилёт в PUJ и уловки с трансферами</h3>
+                    <p class="mh-mistake-body">Отсутствие бесплатного QR-кода eTicket, навязанное такси у выхода из терминала или ошибка со временем дороги способны испортить первый же день отпуска.</p>
+                    <a href="../content/punta-cana-airport-arrival-guide" class="mh-mistake-link">→ Подготовиться к прилёту в PUJ</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">⚖️</div>
+                    <h3 class="mh-mistake-title">Выбирать между Доминиканой и Мексикой наугад</h3>
+                    <p class="mh-mistake-body">На рекламных буклетах Пунта-Кана и Канкун похожи, но они отличаются перелётами, экскурсиями за пределами отеля, сезоном водорослей и общей ценой.</p>
+                    <a href="../content/punta-cana-vs-cancun" class="mh-mistake-link">→ Сравнить Пунта-Кану и Канкун</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
     <!-- ================================================================
          FINAL START HERE
          ================================================================ -->

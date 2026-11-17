@@ -185,6 +185,15 @@
         },
         {
           "@id": "https://travelradarlk.com/en/content/puerto-plata-north-coast-travel-guide#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/punta-cana-vs-cancun#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/cancun-riviera-maya-punta-cana-all-inclusive#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/hotel-rating-9-trap#webpage"
         }
       ],
       "about": {
@@ -259,9 +268,11 @@
                 Plan your Dominican Republic trip with confidence. Compare Punta Cana, Bayahibe, La Romana, Puerto Plata and other destinations, then use our hotel, airport, eSIM, budget and travel guides to plan every step.
             </p>
             <nav class="mh-hero-chips" aria-label="Jump to section">
+                <a href="#mh-choose-base" class="mh-hero-chip">Choose your region</a>
                 <a href="#mh-hotels" class="mh-hero-chip">Compare hotels</a>
                 <a href="#mh-transfer" class="mh-hero-chip">Plan airport transfer</a>
                 <a href="#mh-guides" class="mh-hero-chip">Read DR guides</a>
+                <a href="#mh-mistakes" class="mh-hero-chip">Avoid booking mistakes</a>
             </nav>
         </div>
     </section>
@@ -285,7 +296,7 @@
             <nav class="country-nav-list" aria-label="Destination planning">
                 <a href="#mh-helper" class="country-nav-item">Helper</a>
                 <a href="#mh-choose-base" class="country-nav-item">Map</a>
-                <a href="#mh-trip-style" class="country-nav-item">Trip style</a>
+                <!-- <a href="#mh-trip-style" class="country-nav-item">Trip style</a> -->
                 <a href="#mh-essentials" class="country-nav-item">Essentials</a>
                 <a href="#mh-guides" class="country-nav-item">Guides</a>
                 <a href="#mh-mistakes" class="country-nav-item">Mistakes</a>
@@ -298,9 +309,201 @@
     <!-- ================================================================
          TRIP HELPER
          ================================================================ -->
+    <section class="mh-section mh-section-soft" id="mh-helper">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Dominican Republic Trip Helper</span>
+                <h2 class="mh-section-title">Start with the problem you want to avoid</h2>
+                <p class="mh-section-lead">Choose the planning problem that worries you most, then jump to the guide or next step that fits.</p>
+            </header>
+
+            <p class="mh-helper-note">This is a guided shortcut, not a chatbot: pick one travel problem and we'll point you to the right next step.</p>
+
+            <div class="mh-helper-grid">
+                <!-- Scenario buttons -->
+                <div class="mh-helper-scenarios" role="group" aria-label="Planning scenarios">
+                    <button class="mh-scenario-btn" data-scenario="wrong-area" aria-pressed="true">
+                        <span class="mh-scenario-icon" aria-hidden="true">🗺️</span>
+                        I don't want to choose the wrong area
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="overpaying" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">💸</span>
+                        I don't want to overpay for a resort
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="transfer" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚌</span>
+                        I'm worried about a long airport transfer
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="beach-photos" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📸</span>
+                        I don't want the beach to look worse than photos
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="no-data" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📵</span>
+                        I need mobile data right after landing
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="bad-tours" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚢</span>
+                        I want tours, but not bad logistics
+                    </button>
+                </div>
+
+                <!-- Result panel -->
+                <div class="mh-helper-result" id="mh-helper-result" aria-live="polite" aria-atomic="true">
+                    <div class="mh-result-placeholder" id="mh-result-placeholder" hidden>
+                        <span class="mh-result-placeholder-icon" aria-hidden="true">🧭</span>
+                        <p>Select a scenario on the left to see what to read and do first.</p>
+                    </div>
+                    <div id="mh-result-content">
+                        <span class="mh-result-scenario-label">Choose the base before the hotel</span>
+                        <p class="mh-result-title">Choose the base before the hotel</p>
+                        <p class="mh-result-body">Punta Cana, Bayahibe and Samaná can look similar from a distance, but they create very different trips once you add transfer time, beach style and hotel format. The area decision should come before the hotel search.</p>
+                        <div class="mh-result-links">
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Read first:</span>
+                                <a href="../content/where-to-go-dominican-republic-regions">Compare 5 Dominican Republic regions</a>
+                            </div>
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Also useful:</span>
+                                <a href="../content/where-to-stay-punta-cana-areas">Where to stay in Punta Cana</a>
+                            </div>
+                        </div>
+                        <p class="mh-result-next">Next step: Compare resort areas first, then search for hotels in your chosen zone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
          INTERACTIVE MAP — CHOOSE YOUR BASE
          ================================================================ -->
+    <section class="mh-section" id="mh-choose-base">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Region comparison</span>
+                <h2 class="mh-section-title">Choose your Dominican Republic base before you book</h2>
+                <p class="mh-section-lead">The hotel choice matters less than choosing the right coast and airport. Each region creates a different trip.</p>
+            </header>
+
+            <!-- Mobile zone chips (hidden on desktop via CSS) -->
+            <div class="mh-zone-chips" role="group" aria-label="Select a Dominican Republic zone">
+                <button class="mh-zone-chip" data-zone="puerto-plata" aria-pressed="false">Puerto Plata</button>
+                <button class="mh-zone-chip" data-zone="samana" aria-pressed="false">Samaná</button>
+                <button class="mh-zone-chip" data-zone="punta-cana" aria-pressed="false">Punta Cana</button>
+                <button class="mh-zone-chip" data-zone="airport" aria-pressed="false">PUJ Airport</button>
+                <button class="mh-zone-chip" data-zone="bayahibe" aria-pressed="false">Bayahibe</button>
+                <button class="mh-zone-chip" data-zone="la-romana" aria-pressed="false">La Romana</button>
+                <button class="mh-zone-chip" data-zone="santo-domingo" aria-pressed="false">Santo Domingo</button>
+            </div>
+
+            <div class="mh-map-layout">
+                <!-- SVG Map -->
+                <div class="mh-map-sticky">
+                    <div class="mh-map-wrap">
+                        <svg viewBox="0 0 520 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision map for Dominican Republic regions">
+                            <title>Dominican Republic regions decision map - tap a zone to explore</title>
+
+                            <!-- Water background -->
+                            <rect width="520" height="640" class="mh-map-water-fill"/>
+                            <rect x="24" y="24" width="472" height="592" rx="18" class="mh-route-panel"/>
+                            <text x="52" y="58" class="mh-map-title-text">Choose the base by coast &amp; airport</text>
+
+                            <!-- Editorial coast cue -->
+                            <path d="M 110 116 C 210 104 320 110 385 150 C 428 195 430 278 395 348 C 345 415 280 465 255 512"
+                                  class="mh-route-coast" pointer-events="none"/>
+
+                            <!-- Main route & airport links -->
+                            <path d="M 145 119 L 377 119 M 145 247 L 375 247 L 377 375 L 145 375 L 260 503"
+                                  class="mh-route-main" pointer-events="none"/>
+                            <path d="M 145 280 L 145 342 M 377 152 L 375 214"
+                                  class="mh-route-branch" pointer-events="none"/>
+                            <g pointer-events="none">
+                                <text x="52" y="188" class="mh-map-title-text">Atlantic coast &amp; POP hub</text>
+                                <text x="52" y="316" class="mh-map-title-text">PUJ arrival corridor (15–70 min)</text>
+                                <text x="52" y="444" class="mh-map-title-text">Calm Caribbean side &amp; capital</text>
+                            </g>
+
+                            <!-- Puerto Plata -->
+                            <g class="mh-map-zone" data-zone="puerto-plata" tabindex="0" role="button" aria-label="Puerto Plata">
+                                <rect x="34" y="80" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="86" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-puerto-plata"/>
+                                <circle cx="68" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="86" y="114" class="mh-zone-label">Puerto Plata</text>
+                                <text x="86" y="132" class="mh-zone-label-small">North coast · POP airport</text>
+                            </g>
+
+                            <!-- Samaná -->
+                            <g class="mh-map-zone" data-zone="samana" tabindex="0" role="button" aria-label="Samaná">
+                                <rect x="266" y="80" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="86" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-samana"/>
+                                <circle cx="300" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="318" y="114" class="mh-zone-label">Samaná</text>
+                                <text x="318" y="132" class="mh-zone-label-small">Whales · Los Haitises · eco</text>
+                            </g>
+
+                            <!-- PUJ Airport -->
+                            <g class="mh-map-zone" data-zone="airport" tabindex="0" role="button" aria-label="PUJ Airport">
+                                <rect x="34" y="208" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="214" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-airport"/>
+                                <circle cx="68" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="86" y="242" class="mh-zone-label">PUJ Airport</text>
+                                <text x="86" y="260" class="mh-zone-label-small">Main arrival &amp; transfers</text>
+                            </g>
+
+                            <!-- Punta Cana -->
+                            <g class="mh-map-zone" data-zone="punta-cana" tabindex="0" role="button" aria-label="Punta Cana">
+                                <rect x="266" y="208" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="214" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-punta-cana"/>
+                                <circle cx="300" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="318" y="242" class="mh-zone-label">Punta Cana</text>
+                                <text x="318" y="260" class="mh-zone-label-small">Resorts · Bavaro &amp; Cap Cana</text>
+                            </g>
+
+                            <!-- Bayahibe -->
+                            <g class="mh-map-zone" data-zone="bayahibe" tabindex="0" role="button" aria-label="Bayahibe">
+                                <rect x="34" y="336" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="342" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-bayahibe"/>
+                                <circle cx="68" cy="375" r="8" class="mh-route-marker"/>
+                                <text x="86" y="370" class="mh-zone-label">Bayahibe</text>
+                                <text x="86" y="388" class="mh-zone-label-small">Calm sea · Saona gateway</text>
+                            </g>
+
+                            <!-- La Romana -->
+                            <g class="mh-map-zone" data-zone="la-romana" tabindex="0" role="button" aria-label="La Romana">
+                                <rect x="266" y="336" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="342" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-la-romana"/>
+                                <circle cx="300" cy="375" r="8" class="mh-route-marker"/>
+                                <text x="318" y="370" class="mh-zone-label">La Romana</text>
+                                <text x="318" y="388" class="mh-zone-label-small">Casa de Campo · golf &amp; marina</text>
+                            </g>
+
+                            <!-- Santo Domingo -->
+                            <g class="mh-map-zone" data-zone="santo-domingo" tabindex="0" role="button" aria-label="Santo Domingo">
+                                <rect x="134" y="464" width="252" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="140" y="470" width="240" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-santo-domingo"/>
+                                <circle cx="168" cy="503" r="8" class="mh-route-marker"/>
+                                <text x="186" y="498" class="mh-zone-label">Santo Domingo</text>
+                                <text x="186" y="516" class="mh-zone-label-small">Zona Colonial · SDQ · 1–2 nights</text>
+                            </g>
+
+                        </svg>
+                    </div>
+                    <p class="mh-map-caption">Schematic region map, not exact geography.</p>
+                </div>
+
+                <!-- Zone detail card -->
+                <div class="mh-zone-card" id="mh-zone-card" aria-live="polite" aria-atomic="true">
+                    <div class="mh-zone-card-placeholder" id="mh-zone-placeholder">
+                        <span class="mh-zone-card-placeholder-icon" aria-hidden="true">📍</span>
+                        <p>Tap a region on the map to see what's best about each area — and what to watch out for before booking.</p>
+                    </div>
+                    <div id="mh-zone-content" hidden></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
          CHOOSE BY TRIP STYLE
          ================================================================ -->
@@ -540,6 +743,18 @@
                             <span class="mh-cluster-link-title">Puerto Plata and the North Coast: Complete Travel Guide</span>
                             <span class="mh-cluster-link-reason">Best for: comparing Playa Dorada, Sosúa and Cabarete, planning POP airport arrivals and Atlantic beach conditions</span>
                         </a>
+                        <a href="../content/punta-cana-vs-cancun" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Punta Cana vs Cancun: Which Destination Fits Better?</span>
+                            <span class="mh-cluster-link-reason">Best for: deciding between the Dominican Republic and Mexico before locking flights</span>
+                        </a>
+                        <a href="../caribbean/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Caribbean Trip Planning Hub →</span>
+                            <span class="mh-cluster-link-reason">Best for: comparing the Dominican Republic with Jamaica, the Bahamas and wider Caribbean islands</span>
+                        </a>
+                        <a href="../mexico/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Mexico Trip Planning Hub →</span>
+                            <span class="mh-cluster-link-reason">Best for: planning Cancun or Riviera Maya if you pivot to Mexico instead</span>
+                        </a>
                     </div>
                 </div>
 
@@ -554,6 +769,14 @@
                         <a href="../content/punta-cana-hotel-booking-checklist" class="mh-cluster-link">
                             <span class="mh-cluster-link-title">Punta Cana Hotel Booking Checklist: Avoid Seaweed, Hidden Fees &amp; Bad Locations</span>
                             <span class="mh-cluster-link-reason">Best for: verifying real walking distance to the beach, sargassum exposure and total bill before paying</span>
+                        </a>
+                        <a href="../content/cancun-riviera-maya-punta-cana-all-inclusive" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Cancun, Riviera Maya or Punta Cana All-Inclusive</span>
+                            <span class="mh-cluster-link-reason">Best for: comparing resort value, calm beaches and transfer logistics across major all-inclusive coasts</span>
+                        </a>
+                        <a href="../content/hotel-rating-9-trap" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Why a 9.2 Hotel Rating Can Ruin Your Vacation</span>
+                            <span class="mh-cluster-link-reason">Best for: verifying guest type, real beach access and infrastructure behind high review scores</span>
                         </a>
                     </div>
                 </div>
@@ -575,6 +798,61 @@
     <!-- ================================================================
          AVOID THE MISTAKES
          ================================================================ -->
+    <section class="mh-section" id="mh-mistakes">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Common pitfalls</span>
+                <h2 class="mh-section-title">Avoid the mistakes that make the Dominican Republic feel worse than it is</h2>
+                <p class="mh-section-lead">These six planning errors explain most post-trip regrets across Punta Cana, Bayahibe and the North Coast.</p>
+            </header>
+
+            <div class="mh-mistakes-grid">
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">🗺️</div>
+                    <h3 class="mh-mistake-title">Picking a resort before choosing the right coast</h3>
+                    <p class="mh-mistake-body">Punta Cana, Bayahibe, Puerto Plata and Samaná use different airports, face different oceans and deliver completely different trips. Choose the region before the hotel.</p>
+                    <a href="../content/where-to-go-dominican-republic-regions" class="mh-mistake-link">→ Compare all 5 DR regions</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">🏨</div>
+                    <h3 class="mh-mistake-title">Treating Bavaro, Cap Cana and Uvero Alto as the same beach</h3>
+                    <p class="mh-mistake-body">All three sit in Punta Cana, yet they differ sharply in transfer length, surf strength, resort density and pricing. Matching the strip to your trip matters.</p>
+                    <a href="../content/where-to-stay-punta-cana-areas" class="mh-mistake-link">→ Compare Punta Cana areas</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">📸</div>
+                    <h3 class="mh-mistake-title">Booking from marketing photos without checking seaweed or fees</h3>
+                    <p class="mh-mistake-body">Glossy resort photos hide sargassum barriers, long walks from distant room blocks and extra taxes or club upgrades. Five quick checks protect your budget.</p>
+                    <a href="../content/punta-cana-hotel-booking-checklist" class="mh-mistake-link">→ Read the hotel booking checklist</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">⭐</div>
+                    <h3 class="mh-mistake-title">Trusting a 9.2 hotel rating blindly</h3>
+                    <p class="mh-mistake-body">A high review score only means previous guests liked what that property offers — it may still be the wrong crowd, noise level or beach setup for your trip.</p>
+                    <a href="../content/hotel-rating-9-trap" class="mh-mistake-link">→ Learn the three-match check</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">🚐</div>
+                    <h3 class="mh-mistake-title">Underestimating PUJ arrival, eTicket and transfer scams</h3>
+                    <p class="mh-mistake-body">Arriving without your free Dominican eTicket QR code, falling for unofficial curb taxis or mistiming a 70-minute transfer can derail your first hours.</p>
+                    <a href="../content/punta-cana-airport-arrival-guide" class="mh-mistake-link">→ Plan your PUJ arrival</a>
+                </article>
+
+                <article class="mh-mistake-card">
+                    <div class="mh-mistake-icon" aria-hidden="true">⚖️</div>
+                    <h3 class="mh-mistake-title">Choosing between DR and Mexico by guesswork</h3>
+                    <p class="mh-mistake-body">Punta Cana and Cancun look similar in all-inclusive brochures, but they differ in off-resort day trips, flights, seaweed patterns and overall value.</p>
+                    <a href="../content/punta-cana-vs-cancun" class="mh-mistake-link">→ Read Punta Cana vs Cancun</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
     <!-- ================================================================
          FINAL START HERE
          ================================================================ -->

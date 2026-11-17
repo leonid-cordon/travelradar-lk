@@ -167,6 +167,29 @@
       "primaryImageOfPage": {
         "@id": "https://travelradarlk.com/en/caribbean/#primaryimage"
       },
+      "hasPart": [
+        {
+          "@id": "https://travelradarlk.com/en/content/cancun-vs-jamaica#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/cancun-vs-bahamas#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/cancun-riviera-maya-punta-cana-all-inclusive#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/hotel-check-before-booking#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/hotel-rating-9-trap#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/punta-cana-vs-cancun#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/where-to-go-dominican-republic-regions#webpage"
+        }
+      ],
       "about": {
         "@type": "Place",
         "name": "Caribbean",
@@ -239,8 +262,10 @@
                 Plan your Caribbean getaway with confidence. Compare the Dominican Republic, Jamaica, Aruba, Bahamas, and other stunning islands, then use our hotel, flights, eSIM, budget and travel guides to plan every step.
             </p>
             <nav class="mh-hero-chips" aria-label="Jump to section">
-                <a href="#mh-hotels" class="mh-hero-chip">Compare islands</a>
-                <a href="#mh-transfer" class="mh-hero-chip">Plan island hopping</a>
+                <a href="#mh-choose-base" class="mh-hero-chip">Choose your island</a>
+                <a href="#mh-hotels" class="mh-hero-chip">Compare hotels</a>
+                <a href="#mh-transfer" class="mh-hero-chip">Plan island logistics</a>
+                <a href="#mh-guides" class="mh-hero-chip">Read Caribbean guides</a>
             </nav>
         </div>
     </section>
@@ -264,10 +289,10 @@
             <nav class="country-nav-list" aria-label="Destination planning">
                 <a href="#mh-helper" class="country-nav-item">Helper</a>
                 <a href="#mh-choose-base" class="country-nav-item">Map</a>
-                <a href="#mh-trip-style" class="country-nav-item">Trip style</a>
+                <!-- <a href="#mh-trip-style" class="country-nav-item">Trip style</a> -->
                 <a href="#mh-essentials" class="country-nav-item">Essentials</a>
                 <a href="#mh-guides" class="country-nav-item">Guides</a>
-                <a href="#mh-mistakes" class="country-nav-item">Mistakes</a>
+                <!-- <a href="#mh-mistakes" class="country-nav-item">Mistakes</a> -->
             </nav>
         </div>
     </section>
@@ -277,9 +302,201 @@
     <!-- ================================================================
          TRIP HELPER
          ================================================================ -->
+    <section class="mh-section mh-section-soft" id="mh-helper">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Caribbean Trip Helper</span>
+                <h2 class="mh-section-title">Start with the problem you want to avoid</h2>
+                <p class="mh-section-lead">Choose the planning problem that worries you most, then jump to the guide or next step that fits.</p>
+            </header>
+
+            <p class="mh-helper-note">This is a guided shortcut, not a chatbot: pick one travel problem and we'll point you to the right next step.</p>
+
+            <div class="mh-helper-grid">
+                <!-- Scenario buttons -->
+                <div class="mh-helper-scenarios" role="group" aria-label="Planning scenarios">
+                    <button class="mh-scenario-btn" data-scenario="wrong-area" aria-pressed="true">
+                        <span class="mh-scenario-icon" aria-hidden="true">🗺️</span>
+                        I don't want to choose the wrong island
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="overpaying" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">💸</span>
+                        I don't want to overpay for a resort
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="transfer" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚌</span>
+                        I'm worried about island hopping &amp; flights
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="beach-photos" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📸</span>
+                        I don't want the beach to look worse than photos
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="no-data" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📵</span>
+                        I need regional mobile data right after landing
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="bad-tours" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚢</span>
+                        I want tours, without cruise crowds or bad logistics
+                    </button>
+                </div>
+
+                <!-- Result panel -->
+                <div class="mh-helper-result" id="mh-helper-result" aria-live="polite" aria-atomic="true">
+                    <div class="mh-result-placeholder" id="mh-result-placeholder" hidden>
+                        <span class="mh-result-placeholder-icon" aria-hidden="true">🧭</span>
+                        <p>Select a scenario on the left to see what to read and do first.</p>
+                    </div>
+                    <div id="mh-result-content">
+                        <span class="mh-result-scenario-label">Choose the island before the hotel</span>
+                        <p class="mh-result-title">Choose the island before the hotel</p>
+                        <p class="mh-result-body">The Bahamas, Jamaica, the Dominican Republic, and Saint Lucia can look similar in brochures, but they offer completely different cultures, landscapes, and travel logistics. The destination decision must come before the hotel search.</p>
+                        <div class="mh-result-links">
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Read first:</span>
+                                <a href="../content/cancun-vs-jamaica">Cancun vs Jamaica: Caribbean All-Inclusive Compared</a>
+                            </div>
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Also useful:</span>
+                                <a href="../content/cancun-vs-bahamas">Cancun vs Bahamas: Which Beach Destination Is Better?</a>
+                            </div>
+                        </div>
+                        <p class="mh-result-next">Next step: Compare islands first using the map below, then search for accommodations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
-         INTERACTIVE MAP вЂ” CHOOSE YOUR BASE
+         INTERACTIVE MAP — CHOOSE YOUR BASE
          ================================================================ -->
+    <section class="mh-section" id="mh-choose-base">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Island comparison</span>
+                <h2 class="mh-section-title">Choose your Caribbean island before you book</h2>
+                <p class="mh-section-lead">The hotel choice matters less than choosing the right island. Each destination creates a different trip.</p>
+            </header>
+
+            <!-- Mobile zone chips (hidden on desktop via CSS) -->
+            <div class="mh-zone-chips" role="group" aria-label="Select a Caribbean island group">
+                <button class="mh-zone-chip" data-zone="bahamas" aria-pressed="false">The Bahamas</button>
+                <button class="mh-zone-chip" data-zone="turks-caicos" aria-pressed="false">Turks &amp; Caicos</button>
+                <button class="mh-zone-chip" data-zone="jamaica" aria-pressed="false">Jamaica</button>
+                <button class="mh-zone-chip" data-zone="dominican-republic" aria-pressed="false">Dominican Republic</button>
+                <button class="mh-zone-chip" data-zone="puerto-rico-usvi" aria-pressed="false">Puerto Rico &amp; USVI</button>
+                <button class="mh-zone-chip" data-zone="aruba-curacao" aria-pressed="false">Aruba &amp; Curaçao</button>
+                <button class="mh-zone-chip" data-zone="saint-lucia-antigua" aria-pressed="false">Saint Lucia &amp; Antigua</button>
+            </div>
+
+            <div class="mh-map-layout">
+                <!-- SVG Map -->
+                <div class="mh-map-sticky">
+                    <div class="mh-map-wrap">
+                        <svg viewBox="0 0 520 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision map for Caribbean island groups">
+                            <title>Caribbean Island Groups decision map - tap a destination to explore</title>
+
+                            <!-- Water background -->
+                            <rect width="520" height="640" class="mh-map-water-fill"/>
+                            <rect x="24" y="24" width="472" height="592" rx="18" class="mh-route-panel"/>
+                            <text x="52" y="58" class="mh-map-title-text">Compare islands by flight &amp; trip logic</text>
+
+                            <!-- Editorial island-arc cue -->
+                            <path d="M 120 118 C 215 110 310 120 385 170 C 425 225 415 305 320 375 C 245 430 165 465 145 505"
+                                  class="mh-route-coast" pointer-events="none"/>
+
+                            <!-- Flight & hub connections -->
+                            <path d="M 145 119 L 378 119 M 149 247 L 377 247 L 260 375 L 377 503"
+                                  class="mh-route-main" pointer-events="none"/>
+                            <path d="M 145 152 L 149 214 M 260 408 L 149 470 M 377 152 L 377 214"
+                                  class="mh-route-branch" pointer-events="none"/>
+                            <g pointer-events="none">
+                                <text x="52" y="188" class="mh-map-title-text">Quick East Coast flights</text>
+                                <text x="52" y="316" class="mh-map-title-text">Major all-inclusive hubs</text>
+                                <text x="52" y="444" class="mh-map-title-text">Outside main hurricane belt &amp; volcanic arc</text>
+                            </g>
+
+                            <!-- The Bahamas -->
+                            <g class="mh-map-zone" data-zone="bahamas" tabindex="0" role="button" aria-label="The Bahamas">
+                                <rect x="34" y="80" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="86" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-bahamas"/>
+                                <circle cx="68" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="86" y="114" class="mh-zone-label">The Bahamas</text>
+                                <text x="86" y="132" class="mh-zone-label-small">Short US flight · clear cays</text>
+                            </g>
+
+                            <!-- Turks & Caicos -->
+                            <g class="mh-map-zone" data-zone="turks-caicos" tabindex="0" role="button" aria-label="Turks and Caicos">
+                                <rect x="266" y="80" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="86" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-turks-caicos"/>
+                                <circle cx="300" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="318" y="114" class="mh-zone-label">Turks &amp; Caicos</text>
+                                <text x="318" y="132" class="mh-zone-label-small">Grace Bay · upscale reef</text>
+                            </g>
+
+                            <!-- Jamaica -->
+                            <g class="mh-map-zone" data-zone="jamaica" tabindex="0" role="button" aria-label="Jamaica">
+                                <rect x="34" y="208" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="214" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-jamaica"/>
+                                <circle cx="68" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="86" y="242" class="mh-zone-label">Jamaica</text>
+                                <text x="86" y="260" class="mh-zone-label-small">Culture · falls · AI resorts</text>
+                            </g>
+
+                            <!-- Dominican Republic -->
+                            <g class="mh-map-zone" data-zone="dominican-republic" tabindex="0" role="button" aria-label="Dominican Republic">
+                                <rect x="266" y="208" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="214" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-dominican-republic"/>
+                                <circle cx="300" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="318" y="242" class="mh-zone-label">Dominican Rep.</text>
+                                <text x="318" y="260" class="mh-zone-label-small">Best AI value · 5 regions</text>
+                            </g>
+
+                            <!-- Puerto Rico & USVI -->
+                            <g class="mh-map-zone" data-zone="puerto-rico-usvi" tabindex="0" role="button" aria-label="Puerto Rico and US Virgin Islands">
+                                <rect x="134" y="336" width="252" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="140" y="342" width="240" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-puerto-rico-usvi"/>
+                                <circle cx="168" cy="375" r="8" class="mh-route-marker"/>
+                                <text x="186" y="370" class="mh-zone-label">Puerto Rico &amp; USVI</text>
+                                <text x="186" y="388" class="mh-zone-label-small">No US passport · SJU hub</text>
+                            </g>
+
+                            <!-- Aruba & Curaçao -->
+                            <g class="mh-map-zone" data-zone="aruba-curacao" tabindex="0" role="button" aria-label="Aruba and Curacao">
+                                <rect x="34" y="464" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="470" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-aruba-curacao"/>
+                                <circle cx="68" cy="503" r="8" class="mh-route-marker"/>
+                                <text x="86" y="498" class="mh-zone-label">Aruba &amp; Curaçao</text>
+                                <text x="86" y="516" class="mh-zone-label-small">Dry climate · less storm risk</text>
+                            </g>
+
+                            <!-- Saint Lucia & Antigua -->
+                            <g class="mh-map-zone" data-zone="saint-lucia-antigua" tabindex="0" role="button" aria-label="Saint Lucia and Antigua">
+                                <rect x="266" y="464" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="470" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-saint-lucia-antigua"/>
+                                <circle cx="300" cy="503" r="8" class="mh-route-marker"/>
+                                <text x="318" y="498" class="mh-zone-label">St. Lucia &amp; Antigua</text>
+                                <text x="318" y="516" class="mh-zone-label-small">Pitons · boutique romance</text>
+                            </g>
+
+                        </svg>
+                    </div>
+                    <p class="mh-map-caption">Schematic region map, not exact geography.</p>
+                </div>
+
+                <!-- Zone detail card -->
+                <div class="mh-zone-card" id="mh-zone-card" aria-live="polite" aria-atomic="true">
+                    <div class="mh-zone-card-placeholder" id="mh-zone-placeholder">
+                        <span class="mh-zone-card-placeholder-icon" aria-hidden="true">📍</span>
+                        <p>Tap an island group on the map to see what it does best — and what to watch out for before booking.</p>
+                    </div>
+                    <div id="mh-zone-content" hidden></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
          CHOOSE BY TRIP STYLE
          ================================================================ -->
@@ -330,13 +547,11 @@
                             Saint Lucia and Antigua trade mega-resort convenience for dramatic volcanic scenery, intimate boutique hotels, and unparalleled romance.
                         </p>
                         <p class="mh-essential-note">Choose the island vibe first, then search hotels filtered to that specific aesthetic. Don't work backwards from a single photo.</p>
-                        <!-- 
                         <div class="mh-essential-actions">
-                            <a href="#" class="mh-btn mh-btn-primary">Best Caribbean resorts</a>
-                            <a href="#" class="mh-btn mh-btn-outline">Island hopping guide</a>
-                            <a href="#" class="mh-btn mh-btn-ghost">Booking checklist</a>
+                            <a href="../content/cancun-riviera-maya-punta-cana-all-inclusive" class="mh-btn mh-btn-primary">Compare all-inclusive styles</a>
+                            <a href="../content/hotel-check-before-booking" class="mh-btn mh-btn-outline">Hotel booking checklist</a>
+                            <a href="../content/hotel-rating-9-trap" class="mh-btn mh-btn-ghost">Why 9.2 ratings mislead</a>
                         </div>
-                        -->
                     </div>
                 </div>
 
@@ -495,6 +710,71 @@
     <!-- ================================================================
          READ THE GUIDE CLUSTERS
          ================================================================ -->
+    <section class="mh-section mh-section-soft" id="mh-guides">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Planning library</span>
+                <h2 class="mh-section-title">Read the guide that matches your decision</h2>
+                <p class="mh-section-lead">Each cluster targets a specific decision moment in the planning process — starting with the guides already live.</p>
+            </header>
+
+            <div class="mh-clusters-grid mh-clusters">
+
+                <!-- Cluster 1 -->
+                <div class="mh-cluster">
+                    <h3 class="mh-cluster-title">Before you choose the island</h3>
+                    <div class="mh-cluster-links">
+                        <a href="../content/cancun-vs-jamaica" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Cancun vs Jamaica: Caribbean All-Inclusive Compared</span>
+                            <span class="mh-cluster-link-reason">Best for: comparing Jamaica's culture, safety and resorts with Mexico's main coast</span>
+                        </a>
+                        <a href="../content/cancun-vs-bahamas" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Cancun vs Bahamas: Which Beach Fits East Coast US Flyers?</span>
+                            <span class="mh-cluster-link-reason">Best for: weighing short US flight times and clear cays against resort value</span>
+                        </a>
+                        <a href="../content/punta-cana-vs-cancun" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Punta Cana vs Cancun: Which Destination Fits Better?</span>
+                            <span class="mh-cluster-link-reason">Best for: deciding between the Dominican Republic's resort coast and Mexico</span>
+                        </a>
+                        <a href="../content/where-to-go-dominican-republic-regions" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Where to Go in the Dominican Republic: 5 Regions Compared</span>
+                            <span class="mh-cluster-link-reason">Best for: exploring Punta Cana, Bayahibe, Puerto Plata and Samaná before committing</span>
+                        </a>
+                        <a href="../dominican-republic/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Dominican Republic Trip Planning Hub →</span>
+                            <span class="mh-cluster-link-reason">Best for: our full dedicated library on Dominican Republic regions, hotels and PUJ arrivals</span>
+                        </a>
+                        <a href="../mexico/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Mexico Trip Planning Hub →</span>
+                            <span class="mh-cluster-link-reason">Best for: comparing the wider Caribbean with Cancun, Riviera Maya and Tulum</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cluster 2 -->
+                <div class="mh-cluster">
+                    <h3 class="mh-cluster-title">Before you book the hotel</h3>
+                    <div class="mh-cluster-links">
+                        <a href="../content/cancun-riviera-maya-punta-cana-all-inclusive" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Cancun, Riviera Maya or Punta Cana All-Inclusive</span>
+                            <span class="mh-cluster-link-reason">Best for: matching resort style, calm beaches, transfers and value across major hubs</span>
+                        </a>
+                        <a href="../content/hotel-check-before-booking" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">What to Check Before Booking a Hotel</span>
+                            <span class="mh-cluster-link-reason">Best for: a 5-minute check of guest beach photos, real location, hidden fees and refund terms</span>
+                        </a>
+                        <a href="../content/hotel-rating-9-trap" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Why a 9.2 Hotel Rating Can Ruin Your Vacation</span>
+                            <span class="mh-cluster-link-reason">Best for: avoiding resorts that score high on reviews but miss your guest type or beach expectation</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TODO: Activate additional clusters as Caribbean guides publish (#205 comparison, #206 hotel checklist, #207 island hopping, #210 regional eSIM, #197 sargassum/season, budget) -->
+
+            </div>
+        </div>
+    </section>
     <!-- ================================================================
          AVOID THE MISTAKES
          ================================================================ -->
@@ -517,23 +797,23 @@
         'use strict';
 
         /* ---------------------------------------------------------------
-           SCENARIO DATA вЂ” Trip Helper
+           SCENARIO DATA — Trip Helper
            --------------------------------------------------------------- */
         var scenarios = {
             'wrong-area': {
                 title: 'Choose the island before the hotel',
-                body: 'The Bahamas, Jamaica, and Saint Lucia can look similar in brochures, but they offer completely different cultures, landscapes, and travel logistics. The destination decision must come before the hotel search.',
-                readFirst: { text: 'Caribbean island comparison', href: '#' },
-                alsoUseful: { text: 'Best luxury resorts in the Caribbean', href: '#' },
-                next: 'Compare islands first, then search for accommodations.'
+                body: 'The Bahamas, Jamaica, the Dominican Republic, and Saint Lucia can look similar in brochures, but they offer completely different cultures, landscapes, and travel logistics. The destination decision must come before the hotel search.',
+                readFirst: { text: 'Cancun vs Jamaica: Caribbean All-Inclusive Compared', href: '../content/cancun-vs-jamaica' },
+                alsoUseful: { text: 'Cancun vs Bahamas: Which Beach Destination Is Better?', href: '../content/cancun-vs-bahamas' },
+                next: 'Compare islands first using the map below, then search for accommodations.'
             },
             'overpaying': {
                 title: 'Compare hotels only after understanding the destination',
-                body: 'A cheaper room can become expensive if it puts you on an island with high dining costs or requires expensive ferries. In places like Turks and Caicos, location changes the real value of a stay.',
-                readFirst: { text: 'Caribbean hotel booking checklist', href: '#' },
-                alsoUseful: { text: 'Caribbean budget guide', href: '#' },
-                next: 'Filter hotels by island vibe, not only by star rating.',
-                cta: { text: 'Read booking checklist', href: '#', ext: false }
+                body: 'A cheaper room can become expensive if it puts you on an island with high dining costs, hidden resort fees, or poor beach access. Verify the real total and location before judging by a review score.',
+                readFirst: { text: 'What to Check Before Booking a Hotel', href: '../content/hotel-check-before-booking' },
+                alsoUseful: { text: 'Why a 9.2 Hotel Rating Can Ruin Your Vacation', href: '../content/hotel-rating-9-trap' },
+                next: 'Filter hotels by real location, hidden fees and guest type — not only star rating.',
+                cta: { text: 'Read hotel booking checklist', href: '../content/hotel-check-before-booking', ext: false }
             },
             'transfer': {
                 title: 'Do not ignore inter-island logistics',
@@ -544,10 +824,10 @@
             },
             'beach-photos': {
                 title: 'Beach photos do not tell the whole story',
-                body: 'A resort can look perfect in photos, but beaches across the Caribbean vary wildly—from calm turquoise bays to rugged Atlantic surf. Seasonal weather, including hurricane season, matters immensely.',
-                readFirst: { text: 'Best time to visit the Caribbean', href: '#' },
-                alsoUseful: { text: 'Understanding Caribbean weather', href: '#' },
-                next: 'Check seasonal climate data before booking.'
+                body: 'A resort can look perfect in brochure photos and still disappoint because of water quality, beach width, seaweed, or distance from the sand. Guest photos and real infrastructure checks matter more than marketing.',
+                readFirst: { text: 'What to Check Before Booking a Hotel', href: '../content/hotel-check-before-booking' },
+                alsoUseful: { text: 'Why a 9.2 Hotel Rating Can Ruin Your Vacation', href: '../content/hotel-rating-9-trap' },
+                next: 'Check recent guest photos and actual beach infrastructure before paying.'
             },
             'no-data': {
                 title: 'Set regional mobile data before you land',
@@ -579,30 +859,35 @@
             if (!d) return;
             if (!resultContent || !resultPlaceholder) return;
 
-            var isExternal = d.alsoUseful.href.indexOf('http') === 0;
-            var isReadFirstExternal = d.readFirst.href.indexOf('http') === 0;
             var ctaHtml = '';
-
-            if (d.cta) {
+            if (d.cta && d.cta.href && d.cta.href !== '#') {
                 var isCtaExternal = d.cta.ext || d.cta.href.indexOf('http') === 0;
                 ctaHtml = '<div class="mh-result-cta">' +
-                    '<!-- <a href="#" class="mh-btn mh-btn-primary"' + (isCtaExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.cta.text) + '</a> -->' +
+                    '<a href="' + escHtml(d.cta.href) + '" class="mh-btn mh-btn-primary"' + (isCtaExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.cta.text) + '</a>' +
                     '</div>';
             }
+
+            var linkRows = '';
+            if (d.readFirst && d.readFirst.href && d.readFirst.href !== '#') {
+                var isReadFirstExternal = d.readFirst.href.indexOf('http') === 0;
+                linkRows += '<div class="mh-result-link-row">' +
+                    '<span class="mh-result-link-label">Read first:</span>' +
+                    '<a href="' + escHtml(d.readFirst.href) + '"' + (isReadFirstExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.readFirst.text) + '</a>' +
+                    '</div>';
+            }
+            if (d.alsoUseful && d.alsoUseful.href && d.alsoUseful.href !== '#') {
+                var isExternal = d.alsoUseful.href.indexOf('http') === 0;
+                linkRows += '<div class="mh-result-link-row">' +
+                    '<span class="mh-result-link-label">Also useful:</span>' +
+                    '<a href="' + escHtml(d.alsoUseful.href) + '"' + (isExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.alsoUseful.text) + '</a>' +
+                    '</div>';
+            }
+            var linksHtml = linkRows ? '<div class="mh-result-links">' + linkRows + '</div>' : '';
 
             var html = '<span class="mh-result-scenario-label">' + escHtml(d.title) + '</span>' +
                        '<p class="mh-result-title">' + escHtml(d.title) + '</p>' +
                        '<p class="mh-result-body">' + escHtml(d.body) + '</p>' +
-                       '<div class="mh-result-links">' +
-                         '<div class="mh-result-link-row">' +
-                           '<span class="mh-result-link-label">Read first:</span>' +
-                           '<!-- <a href="#"' + (isReadFirstExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.readFirst.text) + '</a> -->' +
-                         '</div>' +
-                         '<div class="mh-result-link-row">' +
-                           '<span class="mh-result-link-label">Also useful:</span>' +
-                           '<!-- <a href="#"' + (isExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.alsoUseful.text) + '</a> -->' +
-                         '</div>' +
-                       '</div>' +
+                       linksHtml +
                        '<p class="mh-result-next">Next step: ' + escHtml(d.next) + '</p>' +
                        ctaHtml;
 
@@ -621,7 +906,7 @@
                     this.setAttribute('aria-pressed', 'true');
                     renderResult(this.getAttribute('data-scenario'));
                 } else {
-                    // Deselect вЂ” show placeholder
+                    // Deselect — show placeholder
                     resultContent.hidden = true;
                     resultPlaceholder.hidden = false;
                 }
@@ -634,28 +919,28 @@
 
 
         /* ---------------------------------------------------------------
-           ZONE DATA вЂ” Map
+           ZONE DATA — Map
            --------------------------------------------------------------- */
         var zones = {
             'dominican-republic': {
                 name: 'Dominican Republic',
                 bestFor: 'All-inclusive resorts, beautiful white-sand beaches, easy direct flights, and excellent value for money.',
                 watchOut: 'Highly tourist-focused in Punta Cana; can lack authentic local culture if you don\'t leave the resort.',
-                readFirst: { text: 'Dominican Republic guide', href: '#' },
-                bookNext: { text: 'Read DR shortlist', href: '#', ext: false }
+                readFirst: { text: 'Compare 5 DR regions', href: '../content/where-to-go-dominican-republic-regions' },
+                bookNext: { text: 'Open Dominican Republic hub', href: '../dominican-republic/', ext: false }
             },
             'jamaica': {
                 name: 'Jamaica',
                 bestFor: 'Rich culture, vibrant music scene, incredible food (jerk chicken), waterfalls, and lush mountainous landscapes.',
                 watchOut: 'Some areas have higher crime rates; many tourists stay within gated resort zones. Roads can be challenging.',
-                readFirst: { text: 'Caribbean destination comparison', href: '#' },
+                readFirst: { text: 'Cancun vs Jamaica comparison', href: '../content/cancun-vs-jamaica' },
                 bookNext: { text: 'Read Jamaica guide', href: '#', ext: false }
             },
             'bahamas': {
                 name: 'The Bahamas',
                 bestFor: 'Proximity to the US, crystal-clear shallow waters, swimming with pigs, luxury mega-resorts, and endless cays.',
                 watchOut: 'Premium pricing. Can be very busy with cruise ship passengers, particularly in Nassau.',
-                readFirst: { text: 'Caribbean destination comparison', href: '#' },
+                readFirst: { text: 'Cancun vs Bahamas comparison', href: '../content/cancun-vs-bahamas' },
                 bookNext: { text: 'Read Bahamas guide', href: '#', ext: false }
             },
             'aruba-curacao': {
@@ -701,16 +986,22 @@
             if (!d) return;
             if (!zoneContent || !zonePlaceholder) return;
 
+            var actions = '';
+            if (d.readFirst && d.readFirst.href && d.readFirst.href !== '#') {
+                actions += '<a href="' + escHtml(d.readFirst.href) + '" class="mh-btn mh-btn-ghost">' + escHtml(d.readFirst.text) + '</a>';
+            }
+            if (d.bookNext && d.bookNext.href && d.bookNext.href !== '#') {
+                actions += '<a href="' + escHtml(d.bookNext.href) + '" class="mh-btn mh-btn-primary"' + (d.bookNext.ext ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.bookNext.text) + '</a>';
+            }
+            var actionsHtml = actions ? '<div class="mh-zone-card-actions">' + actions + '</div>' : '';
+
             var html = '<span class="mh-result-scenario-label">' + escHtml(d.name) + '</span>' +
                        '<h3 class="mh-zone-card-title">' + escHtml(d.name) + '</h3>' +
                        '<div class="mh-zone-meta-row">' +
                          '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Best for</span><span class="mh-zone-meta-val">' + escHtml(d.bestFor) + '</span></div>' +
                          '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Watch out</span><span class="mh-zone-meta-val">' + escHtml(d.watchOut) + '</span></div>' +
                        '</div>' +
-                       '<div class="mh-zone-card-actions">' +
-                         '<!-- <a href="#" class="mh-btn mh-btn-ghost">Read first</a> -->' +
-                         '<!-- <a href="#" class="mh-btn mh-btn-primary"' + (d.bookNext.ext ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.bookNext.text) + '</a> -->' +
-                       '</div>';
+                       actionsHtml;
 
             zoneContent.innerHTML = html;
             zoneContent.hidden = false;

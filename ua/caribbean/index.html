@@ -167,6 +167,29 @@
       "primaryImageOfPage": {
         "@id": "https://travelradarlk.com/ua/caribbean/#primaryimage"
       },
+      "hasPart": [
+        {
+          "@id": "https://travelradarlk.com/ua/content/cancun-vs-jamaica#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ua/content/cancun-vs-bahamas#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ua/content/cancun-riviera-maya-punta-cana-all-inclusive#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ua/content/hotel-check-before-booking#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ua/content/hotel-rating-9-trap#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ua/content/punta-cana-vs-cancun#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/ua/content/where-to-go-dominican-republic-regions#webpage"
+        }
+      ],
       "about": {
         "@type": "Place",
         "name": "Карибський регіон",
@@ -239,8 +262,10 @@
                 Плануйте поїздку на Кариби впевнено. Порівняйте Домініканську Республіку, Jamaica, Aruba, Bahamas та інші приголомшливі острови, а потім скористайтеся нашими гайдами по готелях, авіарейсах, eSIM, бюджету та переміщеннях, щоб спланувати кожен крок.
             </p>
             <nav class="mh-hero-chips" aria-label="Jump to section">
-                <a href="#mh-hotels" class="mh-hero-chip">Порівняти острови</a>
-                <a href="#mh-transfer" class="mh-hero-chip">Спланувати маршрут</a>
+                <a href="#mh-choose-base" class="mh-hero-chip">Обрати острів</a>
+                <a href="#mh-hotels" class="mh-hero-chip">Порівняти готелі</a>
+                <a href="#mh-transfer" class="mh-hero-chip">Логістика островів</a>
+                <a href="#mh-guides" class="mh-hero-chip">Читати гайди</a>
             </nav>
         </div>
     </section>
@@ -264,10 +289,10 @@
             <nav class="country-nav-list" aria-label="Навігація по хабу">
                 <a href="#mh-helper" class="country-nav-item">Помічник</a>
                 <a href="#mh-choose-base" class="country-nav-item">Карта</a>
-                <a href="#mh-trip-style" class="country-nav-item">Стиль поїздки</a>
+                <!-- <a href="#mh-trip-style" class="country-nav-item">Стиль поїздки</a> -->
                 <a href="#mh-essentials" class="country-nav-item">База</a>
                 <a href="#mh-guides" class="country-nav-item">Гайди</a>
-                <a href="#mh-mistakes" class="country-nav-item">Помилки</a>
+                <!-- <a href="#mh-mistakes" class="country-nav-item">Помилки</a> -->
             </nav>
         </div>
     </section>
@@ -277,9 +302,201 @@
     <!-- ================================================================
          TRIP HELPER
          ================================================================ -->
+    <section class="mh-section mh-section-soft" id="mh-helper">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Помічник по Карибах</span>
+                <h2 class="mh-section-title">Почніть із проблеми, якої хочете уникнути</h2>
+                <p class="mh-section-lead">Оберіть головний ризик поїздки, а ми підкажемо потрібний гайд або наступний крок для планування.</p>
+            </header>
+
+            <p class="mh-helper-note">Це не чат-бот, а швидкий маршрут: оберіть проблему, і ми покажемо, що читати та робити далі.</p>
+
+            <div class="mh-helper-grid">
+                <!-- Scenario buttons -->
+                <div class="mh-helper-scenarios" role="group" aria-label="Сценарії планування">
+                    <button class="mh-scenario-btn" data-scenario="wrong-area" aria-pressed="true">
+                        <span class="mh-scenario-icon" aria-hidden="true">🗺️</span>
+                        Не хочу помилитися з вибором острова
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="overpaying" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">💸</span>
+                        Не хочу переплатити за курорт
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="transfer" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚌</span>
+                        Хвилююся за перельоти й переправи між островами
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="beach-photos" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📸</span>
+                        Не хочу, щоб пляж виявився гіршим, ніж на фото
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="no-data" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">📵</span>
+                        Потрібен регіональний інтернет одразу після прильоту
+                    </button>
+                    <button class="mh-scenario-btn" data-scenario="bad-tours" aria-pressed="false">
+                        <span class="mh-scenario-icon" aria-hidden="true">🚢</span>
+                        Хочу екскурсії без круїзних натовпів і поганої логістики
+                    </button>
+                </div>
+
+                <!-- Result panel -->
+                <div class="mh-helper-result" id="mh-helper-result" aria-live="polite" aria-atomic="true">
+                    <div class="mh-result-placeholder" id="mh-result-placeholder" hidden>
+                        <span class="mh-result-placeholder-icon" aria-hidden="true">🧭</span>
+                        <p>Оберіть сценарій зліва, щоб побачити, що читати та робити насамперед.</p>
+                    </div>
+                    <div id="mh-result-content">
+                        <span class="mh-result-scenario-label">Спочатку виберіть острів, потім готель</span>
+                        <p class="mh-result-title">Спочатку виберіть острів, потім готель</p>
+                        <p class="mh-result-body">Bahamas, Jamaica, Домініканська Республіка та Saint Lucia можуть здаватися схожими в брошурах, але вони пропонують абсолютно різні культури, пейзажі та логістику. Рішення про напрямок має передувати пошуку готелю.</p>
+                        <div class="mh-result-links">
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Читати спочатку:</span>
+                                <a href="../content/cancun-vs-jamaica">Канкун проти Ямайки: порівняння відпочинку «все включено» на Карибах</a>
+                            </div>
+                            <div class="mh-result-link-row">
+                                <span class="mh-result-link-label">Також корисно:</span>
+                                <a href="../content/cancun-vs-bahamas">Канкун чи Багами: який пляжний напрямок кращий?</a>
+                            </div>
+                        </div>
+                        <p class="mh-result-next">Наступний крок: Спочатку порівняйте острови на карті нижче, потім шукайте варіанти розміщення.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
          INTERACTIVE MAP — CHOOSE YOUR BASE
          ================================================================ -->
+    <section class="mh-section" id="mh-choose-base">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Порівняння островів</span>
+                <h2 class="mh-section-title">Оберіть острів на Карибах до бронювання</h2>
+                <p class="mh-section-lead">Вибір готелю менш важливий, ніж правильний вибір острова. Кожен напрямок задає свій формат поїздки.</p>
+            </header>
+
+            <!-- Mobile zone chips (hidden on desktop via CSS) -->
+            <div class="mh-zone-chips" role="group" aria-label="Оберіть групу островів">
+                <button class="mh-zone-chip" data-zone="bahamas" aria-pressed="false">Багами</button>
+                <button class="mh-zone-chip" data-zone="turks-caicos" aria-pressed="false">Теркс і Кайкос</button>
+                <button class="mh-zone-chip" data-zone="jamaica" aria-pressed="false">Ямайка</button>
+                <button class="mh-zone-chip" data-zone="dominican-republic" aria-pressed="false">Домінікана</button>
+                <button class="mh-zone-chip" data-zone="puerto-rico-usvi" aria-pressed="false">Пуерто-Рико і USVI</button>
+                <button class="mh-zone-chip" data-zone="aruba-curacao" aria-pressed="false">Аруба і Кюрасао</button>
+                <button class="mh-zone-chip" data-zone="saint-lucia-antigua" aria-pressed="false">Сент-Люсія і Антигуа</button>
+            </div>
+
+            <div class="mh-map-layout">
+                <!-- SVG Map -->
+                <div class="mh-map-sticky">
+                    <div class="mh-map-wrap">
+                        <svg viewBox="0 0 520 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема вибору напрямків на Карибах">
+                            <title>Карта вибору карибських островів — натисніть на напрямок для деталей</title>
+
+                            <!-- Water background -->
+                            <rect width="520" height="640" class="mh-map-water-fill"/>
+                            <rect x="24" y="24" width="472" height="592" rx="18" class="mh-route-panel"/>
+                            <text x="52" y="58" class="mh-map-title-text">Вибір острова за логікою перельотів і стилю</text>
+
+                            <!-- Editorial island-arc cue -->
+                            <path d="M 120 118 C 215 110 310 120 385 170 C 425 225 415 305 320 375 C 245 430 165 465 145 505"
+                                  class="mh-route-coast" pointer-events="none"/>
+
+                            <!-- Flight & hub connections -->
+                            <path d="M 145 119 L 378 119 M 149 247 L 377 247 L 260 375 L 377 503"
+                                  class="mh-route-main" pointer-events="none"/>
+                            <path d="M 145 152 L 149 214 M 260 408 L 149 470 M 377 152 L 377 214"
+                                  class="mh-route-branch" pointer-events="none"/>
+                            <g pointer-events="none">
+                                <text x="52" y="188" class="mh-map-title-text">Короткі перельоти зі США</text>
+                                <text x="52" y="316" class="mh-map-title-text">Головні хаби «все включено»</text>
+                                <text x="52" y="444" class="mh-map-title-text">Поза поясом ураганів і вулканічна дуга</text>
+                            </g>
+
+                            <!-- The Bahamas -->
+                            <g class="mh-map-zone" data-zone="bahamas" tabindex="0" role="button" aria-label="The Bahamas">
+                                <rect x="34" y="80" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="86" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-bahamas"/>
+                                <circle cx="68" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="86" y="114" class="mh-zone-label">Багами</text>
+                                <text x="86" y="132" class="mh-zone-label-small">Близько до США · лагуни</text>
+                            </g>
+
+                            <!-- Turks & Caicos -->
+                            <g class="mh-map-zone" data-zone="turks-caicos" tabindex="0" role="button" aria-label="Turks and Caicos">
+                                <rect x="266" y="80" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="86" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-turks-caicos"/>
+                                <circle cx="300" cy="119" r="8" class="mh-route-marker"/>
+                                <text x="318" y="114" class="mh-zone-label">Теркс і Кайкос</text>
+                                <text x="318" y="132" class="mh-zone-label-small">Grace Bay · люкс і риф</text>
+                            </g>
+
+                            <!-- Jamaica -->
+                            <g class="mh-map-zone" data-zone="jamaica" tabindex="0" role="button" aria-label="Jamaica">
+                                <rect x="34" y="208" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="214" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-jamaica"/>
+                                <circle cx="68" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="86" y="242" class="mh-zone-label">Ямайка</text>
+                                <text x="86" y="260" class="mh-zone-label-small">Культура · водоспади · AI</text>
+                            </g>
+
+                            <!-- Dominican Republic -->
+                            <g class="mh-map-zone" data-zone="dominican-republic" tabindex="0" role="button" aria-label="Dominican Republic">
+                                <rect x="266" y="208" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="214" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-dominican-republic"/>
+                                <circle cx="300" cy="247" r="8" class="mh-route-marker"/>
+                                <text x="318" y="242" class="mh-zone-label">Домінікана</text>
+                                <text x="318" y="260" class="mh-zone-label-small">Найкраща ціна AI · 5 зон</text>
+                            </g>
+
+                            <!-- Puerto Rico & USVI -->
+                            <g class="mh-map-zone" data-zone="puerto-rico-usvi" tabindex="0" role="button" aria-label="Puerto Rico and US Virgin Islands">
+                                <rect x="134" y="336" width="252" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="140" y="342" width="240" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-puerto-rico-usvi"/>
+                                <circle cx="168" cy="375" r="8" class="mh-route-marker"/>
+                                <text x="186" y="370" class="mh-zone-label">Пуерто-Рико і USVI</text>
+                                <text x="186" y="388" class="mh-zone-label-small">Без паспорта США · SJU</text>
+                            </g>
+
+                            <!-- Aruba & Curaçao -->
+                            <g class="mh-map-zone" data-zone="aruba-curacao" tabindex="0" role="button" aria-label="Aruba and Curacao">
+                                <rect x="34" y="464" width="222" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="40" y="470" width="210" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-aruba-curacao"/>
+                                <circle cx="68" cy="503" r="8" class="mh-route-marker"/>
+                                <text x="86" y="498" class="mh-zone-label">Аруба і Кюрасао</text>
+                                <text x="86" y="516" class="mh-zone-label-small">Сухий клімат · менше штормів</text>
+                            </g>
+
+                            <!-- Saint Lucia & Antigua -->
+                            <g class="mh-map-zone" data-zone="saint-lucia-antigua" tabindex="0" role="button" aria-label="Saint Lucia and Antigua">
+                                <rect x="266" y="464" width="220" height="78" rx="14" fill="transparent" class="mh-zone-hit"/>
+                                <rect x="272" y="470" width="208" height="66" rx="14" class="mh-zone-area mh-route-node-card" id="dot-saint-lucia-antigua"/>
+                                <circle cx="300" cy="503" r="8" class="mh-route-marker"/>
+                                <text x="318" y="498" class="mh-zone-label">Сент-Люсія і Антигуа</text>
+                                <text x="318" y="516" class="mh-zone-label-small">Пітони · бутик-романтика</text>
+                            </g>
+
+                        </svg>
+                    </div>
+                    <p class="mh-map-caption">Схематична карта напрямків, не точна географія.</p>
+                </div>
+
+                <!-- Zone detail card -->
+                <div class="mh-zone-card" id="mh-zone-card" aria-live="polite" aria-atomic="true">
+                    <div class="mh-zone-card-placeholder" id="mh-zone-placeholder">
+                        <span class="mh-zone-card-placeholder-icon" aria-hidden="true">📍</span>
+                        <p>Натисніть на групу островів на карті, щоб побачити її сильні сторони та важливі нюанси до бронювання.</p>
+                    </div>
+                    <div id="mh-zone-content" hidden></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================================================================
          CHOOSE BY TRIP STYLE
          ================================================================ -->
@@ -330,13 +547,11 @@
                             Saint Lucia та Antigua міняють зручність мега-курортів на мальовничі вулканічні краєвиди, камерні бутик-готелі та незрівнянну романтику.
                         </p>
                         <p class="mh-essential-note">Спочатку виберіть атмосферу острова, потім шукайте готелі з фільтром за цією естетикою. Не приймайте рішення відштовхуючись лише від однієї фотографії.</p>
-                        <!-- 
                         <div class="mh-essential-actions">
-                            <a href="#" class="mh-btn mh-btn-primary">Найкращі карибські курорти</a>
-                            <a href="#" class="mh-btn mh-btn-outline">Гайд із переміщень між островами</a>
-                            <a href="#" class="mh-btn mh-btn-ghost">Чек-лист бронювання</a>
+                            <a href="../content/cancun-riviera-maya-punta-cana-all-inclusive" class="mh-btn mh-btn-primary">Порівняти формати курортів</a>
+                            <a href="../content/hotel-check-before-booking" class="mh-btn mh-btn-outline">Чек-лист перевірки готелю</a>
+                            <a href="../content/hotel-rating-9-trap" class="mh-btn mh-btn-ghost">Пастка рейтингу 9.2</a>
                         </div>
-                        -->
                     </div>
                 </div>
 
@@ -495,6 +710,71 @@
     <!-- ================================================================
          READ THE GUIDE CLUSTERS
          ================================================================ -->
+    <section class="mh-section mh-section-soft" id="mh-guides">
+        <div class="mh-container">
+            <header class="mh-section-header">
+                <span class="mh-kicker">Бібліотека планування</span>
+                <h2 class="mh-section-title">Читайте гайд під своє рішення</h2>
+                <p class="mh-section-lead">Кожен кластер закриває конкретний етап планування — починаючи з уже опублікованих матеріалів щодо регіону.</p>
+            </header>
+
+            <div class="mh-clusters-grid mh-clusters">
+
+                <!-- Cluster 1 -->
+                <div class="mh-cluster">
+                    <h3 class="mh-cluster-title">Перед вибором острова</h3>
+                    <div class="mh-cluster-links">
+                        <a href="../content/cancun-vs-jamaica" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Канкун проти Ямайки: порівняння відпочинку «все включено» на Карибах</span>
+                            <span class="mh-cluster-link-reason">Найкраще: порівняти культуру, безпеку та курорти Ямайки з узбережжям Мексики</span>
+                        </a>
+                        <a href="../content/cancun-vs-bahamas" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Канкун чи Багами: який пляжний напрямок кращий?</span>
+                            <span class="mh-cluster-link-reason">Найкраще: зважити короткий переліт зі США та лагуни проти ціни all-inclusive</span>
+                        </a>
+                        <a href="../content/punta-cana-vs-cancun" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Пунта-Кана чи Канкун: який напрямок краще підходить?</span>
+                            <span class="mh-cluster-link-reason">Найкраще: обрати між курортним узбережжям Домінікани та Мексикою</span>
+                        </a>
+                        <a href="../content/where-to-go-dominican-republic-regions" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Куди поїхати в Домінікані: 5 регіонів у порівнянні</span>
+                            <span class="mh-cluster-link-reason">Найкраще: оцінити Пунта-Кану, Баяїбе, Пуерто-Плату та Саману до бронювання</span>
+                        </a>
+                        <a href="../dominican-republic/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Хаб планування Домініканської Республіки →</span>
+                            <span class="mh-cluster-link-reason">Найкраще: перейти до повної добірки гайдів по регіонах, готелях та аеропорту PUJ</span>
+                        </a>
+                        <a href="../mexico/" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Хаб планування Мексики →</span>
+                            <span class="mh-cluster-link-reason">Найкраще: порівняти Карибські острови з Канкуном, Рив'єра-Майя та Тулумом</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cluster 2 -->
+                <div class="mh-cluster">
+                    <h3 class="mh-cluster-title">Перед бронюванням готелю</h3>
+                    <div class="mh-cluster-links">
+                        <a href="../content/cancun-riviera-maya-punta-cana-all-inclusive" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">«Все включено» в Канкуні, Рив'єра-Майя чи Пунта-Кані</span>
+                            <span class="mh-cluster-link-reason">Найкраще: підібрати стиль курорту, спокій пляжу, трансфер і співвідношення ціни</span>
+                        </a>
+                        <a href="../content/hotel-check-before-booking" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Що перевірити перед бронюванням готелю</span>
+                            <span class="mh-cluster-link-reason">Найкраще: за 5 хвилин перевірити реальні фото пляжу від гостей, локацію, приховані збори та повернення</span>
+                        </a>
+                        <a href="../content/hotel-rating-9-trap" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Чому рейтинг готелю 9.2 може зіпсувати відпустку</span>
+                            <span class="mh-cluster-link-reason">Найкраще: не помилитися з типом гостей, реальним пляжем та інфраструктурою за високим балом</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TODO: Активувати додаткові кластери в міру виходу нових гайдів (#205 порівняння островів, #206 чек-лист Кариби, #207 логістика островів, #210 eSIM, #197 саргасум/сезон, бюджет) -->
+
+            </div>
+        </div>
+    </section>
     <!-- ================================================================
          AVOID THE MISTAKES
          ================================================================ -->
@@ -522,18 +802,18 @@
         var scenarios = {
             'wrong-area': {
                 title: 'Спочатку виберіть острів, потім готель',
-                body: 'Bahamas, Jamaica та Saint Lucia можуть здаватися схожими в брошурах, але вони пропонують абсолютно різні культури, пейзажі та логістику. Рішення про напрямок має передувати пошуку готелю.',
-                readFirst: { text: 'Порівняння карибських островів', href: '#' },
-                alsoUseful: { text: 'Найкращі розкішні курорти на Карибах', href: '#' },
-                next: 'Спочатку порівняйте острови, потім шукайте варіанти розміщення.'
+                body: 'Bahamas, Jamaica, Домініканська Республіка та Saint Lucia можуть здаватися схожими в брошурах, але вони пропонують абсолютно різні культури, пейзажі та логістику. Рішення про напрямок має передувати пошуку готелю.',
+                readFirst: { text: 'Канкун проти Ямайки: порівняння відпочинку на Карибах', href: '../content/cancun-vs-jamaica' },
+                alsoUseful: { text: 'Канкун чи Багами: який пляжний напрямок кращий?', href: '../content/cancun-vs-bahamas' },
+                next: 'Спочатку порівняйте острови на карті нижче, потім шукайте варіанти розміщення.'
             },
             'overpaying': {
                 title: 'Порівнюйте готелі лише після того, як зрозумієте напрямок',
-                body: 'Дешевий номер може виявитися дорогим, якщо він знаходиться на острові з високими цінами на ресторани або вимагає дорогих поромів. У таких місцях, як Turks and Caicos, розташування змінює реальну цінність поїздки.',
-                readFirst: { text: 'Чек-лист бронювання карибських готелів', href: '#' },
-                alsoUseful: { text: 'Карибський бюджетний гайд', href: '#' },
-                next: 'Фільтруйте готелі за атмосферою острова, а не лише за кількістю зірок.',
-                cta: { text: 'Читати чек-лист бронювання', href: '#', ext: false }
+                body: 'Дешевий номер може виявитися дорогим, якщо він розташований у невдалій локації, додає приховані курортні збори або позбавлений нормального доступу до пляжу. Перевірте реальну суму й деталі до оплати.',
+                readFirst: { text: 'Що перевірити перед бронюванням готелю', href: '../content/hotel-check-before-booking' },
+                alsoUseful: { text: 'Чому рейтинг готелю 9.2 може зіпсувати відпустку', href: '../content/hotel-rating-9-trap' },
+                next: 'Фільтруйте готелі за реальною локацією, прихованими зборами й типом гостей — а не лише за оцінкою.',
+                cta: { text: 'Читати чек-лист перевірки готелю', href: '../content/hotel-check-before-booking', ext: false }
             },
             'transfer': {
                 title: 'Не ігноруйте логістику між островами',
@@ -544,10 +824,10 @@
             },
             'beach-photos': {
                 title: 'Фотографії пляжу не говорять про все',
-                body: 'Курорт може виглядати ідеально на фото, але пляжі Карибського басейну сильно відрізняються — від тихих бірюзових заток до суворих атлантичних хвиль. Сезонна погода, включаючи сезон ураганів, має величезне значення.',
-                readFirst: { text: 'Найкращий час для відвідування Карибів', href: '#' },
-                alsoUseful: { text: 'Розуміння карибської погоди', href: '#' },
-                next: 'Перевірте дані про сезонний клімат перед бронюванням.'
+                body: 'Курорт може виглядати ідеально на рекламних знімках, але розчарувати глибиною води, водоростями чи відстанню до берега. Реальні фото гостей та перевірка інфраструктури важливіші за маркетинг.',
+                readFirst: { text: 'Що перевірити перед бронюванням готелю', href: '../content/hotel-check-before-booking' },
+                alsoUseful: { text: 'Чому рейтинг готелю 9.2 може зіпсувати відпустку', href: '../content/hotel-rating-9-trap' },
+                next: 'Перевірте свіжі фото гостей та реальний пляж до бронювання.'
             },
             'no-data': {
                 title: 'Налаштуйте регіональний інтернет до приземлення',
@@ -579,30 +859,35 @@
             if (!d) return;
             if (!resultContent || !resultPlaceholder) return;
 
-            var isExternal = d.alsoUseful.href.indexOf('http') === 0;
-            var isReadFirstExternal = d.readFirst.href.indexOf('http') === 0;
             var ctaHtml = '';
-
-            if (d.cta) {
+            if (d.cta && d.cta.href && d.cta.href !== '#') {
                 var isCtaExternal = d.cta.ext || d.cta.href.indexOf('http') === 0;
                 ctaHtml = '<div class="mh-result-cta">' +
-                    '<!-- <a href="#" class="mh-btn mh-btn-primary"' + (isCtaExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.cta.text) + '</a> -->' +
+                    '<a href="' + escHtml(d.cta.href) + '" class="mh-btn mh-btn-primary"' + (isCtaExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.cta.text) + '</a>' +
                     '</div>';
             }
+
+            var linkRows = '';
+            if (d.readFirst && d.readFirst.href && d.readFirst.href !== '#') {
+                var isReadFirstExternal = d.readFirst.href.indexOf('http') === 0;
+                linkRows += '<div class="mh-result-link-row">' +
+                    '<span class="mh-result-link-label">Читати спочатку:</span>' +
+                    '<a href="' + escHtml(d.readFirst.href) + '"' + (isReadFirstExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.readFirst.text) + '</a>' +
+                    '</div>';
+            }
+            if (d.alsoUseful && d.alsoUseful.href && d.alsoUseful.href !== '#') {
+                var isExternal = d.alsoUseful.href.indexOf('http') === 0;
+                linkRows += '<div class="mh-result-link-row">' +
+                    '<span class="mh-result-link-label">Також корисно:</span>' +
+                    '<a href="' + escHtml(d.alsoUseful.href) + '"' + (isExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.alsoUseful.text) + '</a>' +
+                    '</div>';
+            }
+            var linksHtml = linkRows ? '<div class="mh-result-links">' + linkRows + '</div>' : '';
 
             var html = '<span class="mh-result-scenario-label">' + escHtml(d.title) + '</span>' +
                        '<p class="mh-result-title">' + escHtml(d.title) + '</p>' +
                        '<p class="mh-result-body">' + escHtml(d.body) + '</p>' +
-                       '<div class="mh-result-links">' +
-                         '<div class="mh-result-link-row">' +
-                           '<span class="mh-result-link-label">Читати спочатку:</span>' +
-                           '<!-- <a href="#"' + (isReadFirstExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.readFirst.text) + '</a> -->' +
-                         '</div>' +
-                         '<div class="mh-result-link-row">' +
-                           '<span class="mh-result-link-label">Також корисно:</span>' +
-                           '<!-- <a href="#"' + (isExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.alsoUseful.text) + '</a> -->' +
-                         '</div>' +
-                       '</div>' +
+                       linksHtml +
                        '<p class="mh-result-next">Наступний крок: ' + escHtml(d.next) + '</p>' +
                        ctaHtml;
 
@@ -641,21 +926,21 @@
                 name: 'Dominican Republic',
                 bestFor: 'All-inclusive курорти, красиві пляжі з білим піском, легкі прямі рейси та відмінне співвідношення ціни та якості.',
                 watchOut: 'Сильна туристична орієнтація в Punta Cana; може не вистачати автентичної місцевої культури, якщо ви не залишаєте курорт.',
-                readFirst: { text: 'Гайд по Dominican Republic', href: '#' },
-                bookNext: { text: 'Читати шорт-лист по DR', href: '#', ext: false }
+                readFirst: { text: 'Порівняти 5 регіонів ДР', href: '../content/where-to-go-dominican-republic-regions' },
+                bookNext: { text: 'Відкрити хаб Домінікани', href: '../dominican-republic/', ext: false }
             },
             'jamaica': {
                 name: 'Jamaica',
                 bestFor: 'Багата культура, жива музична сцена, неймовірна їжа (курка джерк), водоспади та пишні гірські пейзажі.',
                 watchOut: 'У деяких районах рівень злочинності вищий; багато туристів залишаються в закритих курортних зонах. Дороги можуть бути складними.',
-                readFirst: { text: 'Порівняння карибських напрямків', href: '#' },
+                readFirst: { text: 'Канкун проти Ямайки', href: '../content/cancun-vs-jamaica' },
                 bookNext: { text: 'Читати гайд по Jamaica', href: '#', ext: false }
             },
             'bahamas': {
                 name: 'The Bahamas',
                 bestFor: 'Близькість до США, кришталево чисті мілководдя, купання зі свинями, розкішні мега-курорти та нескінченні коралові острови.',
                 watchOut: 'Преміальні ціни. Може бути дуже багато людей через круїзні лайнери, особливо в Nassau.',
-                readFirst: { text: 'Порівняння карибських напрямків', href: '#' },
+                readFirst: { text: 'Канкун чи Багами', href: '../content/cancun-vs-bahamas' },
                 bookNext: { text: 'Читати гайд по Bahamas', href: '#', ext: false }
             },
             'aruba-curacao': {
@@ -701,16 +986,22 @@
             if (!d) return;
             if (!zoneContent || !zonePlaceholder) return;
 
+            var actions = '';
+            if (d.readFirst && d.readFirst.href && d.readFirst.href !== '#') {
+                actions += '<a href="' + escHtml(d.readFirst.href) + '" class="mh-btn mh-btn-ghost">' + escHtml(d.readFirst.text) + '</a>';
+            }
+            if (d.bookNext && d.bookNext.href && d.bookNext.href !== '#') {
+                actions += '<a href="' + escHtml(d.bookNext.href) + '" class="mh-btn mh-btn-primary"' + (d.bookNext.ext ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.bookNext.text) + '</a>';
+            }
+            var actionsHtml = actions ? '<div class="mh-zone-card-actions">' + actions + '</div>' : '';
+
             var html = '<span class="mh-result-scenario-label">' + escHtml(d.name) + '</span>' +
                        '<h3 class="mh-zone-card-title">' + escHtml(d.name) + '</h3>' +
                        '<div class="mh-zone-meta-row">' +
                          '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Ідеально для</span><span class="mh-zone-meta-val">' + escHtml(d.bestFor) + '</span></div>' +
                          '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Зверніть увагу</span><span class="mh-zone-meta-val">' + escHtml(d.watchOut) + '</span></div>' +
                        '</div>' +
-                       '<div class="mh-zone-card-actions">' +
-                         '<!-- <a href="#" class="mh-btn mh-btn-ghost">Читати спочатку</a> -->' +
-                         '<!-- <a href="#" class="mh-btn mh-btn-primary"' + (d.bookNext.ext ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.bookNext.text) + '</a> -->' +
-                       '</div>';
+                       actionsHtml;
 
             zoneContent.innerHTML = html;
             zoneContent.hidden = false;
