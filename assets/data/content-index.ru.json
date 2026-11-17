@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-13T07:35:02.326Z",
-  "count": 127,
+  "generated_at": "2026-11-17T00:10:26.189Z",
+  "count": 128,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2695,6 +2695,43 @@
       "date_published": "2026-06-16T12:00:00+00:00",
       "date_modified": "2026-06-16T12:00:00+00:00",
       "search_text": "гид по пуэрто-морелосу тихая деревня у рифа рядом с канкуном риф в нескольких минутах от сонной рыбацкой деревни никакой курортной стены и простой трансфер из аэропорта кому пуэрто-морелос подходит кому нет и как добраться riviera-maya snorkeling beaches cenotes airport-transfer boutique-hotel"
+    },
+    {
+      "slug": "puerto-plata-north-coast-travel-guide",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "dominican-republic",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "punta-cana"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "neighborhoods",
+        "airport-transfer",
+        "budget",
+        "best-time",
+        "day-trips",
+        "snorkeling"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Пуэрто-Плата и северное побережье: Сосуа, Кабарете и где остановиться",
+      "description": "Атлантический океан, горы и живые города: чем север Доминиканы отличается от Пунта-Каны, какой район выбрать, сколько стоит неделя отдыха и почему стоит лететь в POP.",
+      "url": "https://travelradarlk.com/ru/content/puerto-plata-north-coast-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/puerto-plata-north-coast-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-17T12:00:00+00:00",
+      "date_modified": "2026-11-17T12:00:00+00:00",
+      "search_text": "пуэрто-плата и северное побережье сосуа кабарете и где остановиться атлантический океан горы и живые города чем север доминиканы отличается от пунта-каны какой район выбрать сколько стоит неделя отдыха и почему стоит лететь в pop beaches neighborhoods airport-transfer budget best-time day-trips snorkeling"
     },
     {
       "slug": "punta-cana-airport-arrival-guide",

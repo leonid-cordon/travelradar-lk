@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-13T07:35:02.011Z",
-  "count": 127,
+  "generated_at": "2026-11-17T00:10:26.034Z",
+  "count": 128,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2695,6 +2695,43 @@
       "date_published": "2026-06-16T12:00:00+00:00",
       "date_modified": "2026-06-16T12:00:00+00:00",
       "search_text": "puerto morelos guide the quiet reef village near cancun reef snorkeling minutes from a sleepy fishing village no resort wall and an easy airport transfer who puerto morelos suits who should skip it and how to get there riviera-maya snorkeling beaches cenotes airport-transfer boutique-hotel"
+    },
+    {
+      "slug": "puerto-plata-north-coast-travel-guide",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "dominican-republic",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "punta-cana"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "neighborhoods",
+        "airport-transfer",
+        "budget",
+        "best-time",
+        "day-trips",
+        "snorkeling"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Puerto Plata & the North Coast: Sosúa, Cabarete and Where to Base Yourself",
+      "description": "Atlantic water, mountains and real towns: how the Dominican north coast differs from Punta Cana, which base fits your trip, and why you should fly into POP.",
+      "url": "https://travelradarlk.com/en/content/puerto-plata-north-coast-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/puerto-plata-north-coast-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-17T12:00:00+00:00",
+      "date_modified": "2026-11-17T12:00:00+00:00",
+      "search_text": "puerto plata the north coast sos a cabarete and where to base yourself atlantic water mountains and real towns how the dominican north coast differs from punta cana which base fits your trip and why you should fly into pop beaches neighborhoods airport-transfer budget best-time day-trips snorkeling"
     },
     {
       "slug": "punta-cana-airport-arrival-guide",
