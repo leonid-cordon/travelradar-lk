@@ -179,6 +179,9 @@
         },
         {
           "@id": "https://travelradarlk.com/en/content/punta-cana-travel-guide-first-timers#webpage"
+        },
+        {
+          "@id": "https://travelradarlk.com/en/content/puerto-plata-north-coast-travel-guide#webpage"
         }
       ],
       "about": {
@@ -529,6 +532,10 @@
                             <span class="mh-cluster-link-title">Punta Cana Travel Guide for First-Timers</span>
                             <span class="mh-cluster-link-reason">Best for: understanding how the country's largest resort coast actually works before committing</span>
                         </a>
+                        <a href="../content/puerto-plata-north-coast-travel-guide" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Puerto Plata and the North Coast: Complete Travel Guide</span>
+                            <span class="mh-cluster-link-reason">Best for: comparing Playa Dorada, Sosúa and Cabarete, planning POP airport arrivals and Atlantic beach conditions</span>
+                        </a>
                     </div>
                 </div>
 
@@ -703,49 +710,49 @@
                 name: 'Punta Cana',
                 bestFor: 'First Dominican Republic trip, all-inclusive resorts, short transfer from PUJ airport, beautiful white-sand beaches.',
                 watchOut: 'Resort areas can feel isolated from local culture. Some stretches have seaweed seasonally. Noise varies between resort zones.',
-                readFirst: { text: 'Best hotels in Punta Cana 2026', href: '#' },
-                bookNext: { text: 'Read Punta Cana hotel shortlist', href: '#', ext: false }
+                readFirst: { text: 'Punta Cana first-timer guide', href: '../content/punta-cana-travel-guide-first-timers' },
+                bookNext: { text: 'Where to stay in Punta Cana', href: '../content/where-to-stay-punta-cana-areas', ext: false }
             },
             'bayahibe': {
                 name: 'Bayahibe',
                 bestFor: 'Quieter beach experience, gateway to Saona Island, excellent snorkeling and diving, fewer crowds than Punta Cana.',
                 watchOut: 'Fewer dining options outside resorts. Transfer from PUJ airport is 45–70 minutes. Smaller town feel with limited nightlife.',
-                readFirst: { text: 'Dominican Republic destination comparison', href: '#' },
+                readFirst: { text: 'Compare 5 DR regions', href: '../content/where-to-go-dominican-republic-regions' },
                 bookNext: { text: 'Read destination comparison', href: '#', ext: false }
             },
             'la-romana': {
                 name: 'La Romana',
                 bestFor: 'Upscale resort experience at Casa de Campo, golf courses, marina village of Altos de Chavón, proximity to Bayahibe.',
                 watchOut: 'Premium pricing. More isolated resort setting — not ideal for exploring local towns on foot.',
-                readFirst: { text: 'Dominican Republic destination comparison', href: '#' },
+                readFirst: { text: 'Compare 5 DR regions', href: '../content/where-to-go-dominican-republic-regions' },
                 bookNext: { text: 'Read destination comparison', href: '#', ext: false }
             },
             'puerto-plata': {
                 name: 'Puerto Plata',
-                bestFor: 'North coast charm, Playa Dorada resorts, cable car to Mount Isabel de Torres, 27 Waterfalls of Damajagua nearby.',
+                bestFor: 'North coast charm, Playa Dorada resorts, Sosúa bay snorkeling, Cabarete surf and kitesurfing, 27 Waterfalls of Damajagua and Victorian old town.',
                 watchOut: 'Separate airport (POP) — not connected to PUJ. Atlantic coast waves can be stronger. Fewer all-inclusive mega-resorts.',
-                readFirst: { text: 'Dominican Republic destination comparison', href: '#' },
-                bookNext: { text: 'Read north coast guide', href: '#', ext: false }
+                readFirst: { text: 'Compare 5 DR regions', href: '../content/where-to-go-dominican-republic-regions' },
+                bookNext: { text: 'Read north coast guide', href: '../content/puerto-plata-north-coast-travel-guide', ext: false }
             },
             'samana': {
                 name: 'Samaná',
                 bestFor: 'Whale watching (Jan–Mar), Los Haitises National Park, Playa Rincón, eco-tourism and natural beauty away from resort crowds.',
                 watchOut: 'Long overland transfer from PUJ (3–4 hours) or requires a domestic flight. Limited resort infrastructure compared to Punta Cana.',
-                readFirst: { text: 'Dominican Republic destination comparison', href: '#' },
+                readFirst: { text: 'Compare 5 DR regions', href: '../content/where-to-go-dominican-republic-regions' },
                 bookNext: { text: 'Read Samaná travel guide', href: '#', ext: false }
             },
             'santo-domingo': {
                 name: 'Santo Domingo',
                 bestFor: 'Colonial history, Zona Colonial UNESCO site, museums, nightlife, authentic Dominican food scene, city culture.',
                 watchOut: 'Not a beach destination. City traffic can be intense. Best as a 1–2 night extension, not a main base for beach trips.',
-                readFirst: { text: 'Dominican Republic destination comparison', href: '#' },
+                readFirst: { text: 'Compare 5 DR regions', href: '../content/where-to-go-dominican-republic-regions' },
                 bookNext: { text: 'Read Santo Domingo city guide', href: '#', ext: false }
             },
             'airport': {
                 name: 'Punta Cana International Airport (PUJ)',
                 bestFor: 'Your entry point for most Punta Cana, Bayahibe and La Romana trips. Plan transfer logistics from here.',
                 watchOut: 'Airport transfer time to your hotel depends on where you are staying — from 15 min (Punta Cana resorts) to over 1 hour (Bayahibe/La Romana).',
-                readFirst: { text: 'Transfer times by area', href: '#' },
+                readFirst: { text: 'Read PUJ arrival & transfer guide', href: '../content/punta-cana-airport-arrival-guide' },
                 bookNext: { text: 'Read airport transfer guide', href: '#', ext: false }
             }
         };
@@ -763,16 +770,22 @@
             if (!d) return;
             if (!zoneContent || !zonePlaceholder) return;
 
+            var actions = '';
+            if (d.readFirst && d.readFirst.href && d.readFirst.href !== '#') {
+                actions += '<a href="' + escHtml(d.readFirst.href) + '" class="mh-btn mh-btn-ghost">' + escHtml(d.readFirst.text) + '</a>';
+            }
+            if (d.bookNext && d.bookNext.href && d.bookNext.href !== '#') {
+                actions += '<a href="' + escHtml(d.bookNext.href) + '" class="mh-btn mh-btn-primary"' + (d.bookNext.ext ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.bookNext.text) + '</a>';
+            }
+            var actionsHtml = actions ? '<div class="mh-zone-card-actions">' + actions + '</div>' : '';
+
             var html = '<span class="mh-result-scenario-label">' + escHtml(d.name) + '</span>' +
                        '<h3 class="mh-zone-card-title">' + escHtml(d.name) + '</h3>' +
                        '<div class="mh-zone-meta-row">' +
                          '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Best for</span><span class="mh-zone-meta-val">' + escHtml(d.bestFor) + '</span></div>' +
                          '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Watch out</span><span class="mh-zone-meta-val">' + escHtml(d.watchOut) + '</span></div>' +
                        '</div>' +
-                       '<div class="mh-zone-card-actions">' +
-                         '<!-- <a href="#" class="mh-btn mh-btn-ghost">Read first</a> -->' +
-                         '<!-- <a href="#" class="mh-btn mh-btn-primary"' + (d.bookNext.ext ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.bookNext.text) + '</a> -->' +
-                       '</div>';
+                       actionsHtml;
 
             zoneContent.innerHTML = html;
             zoneContent.hidden = false;
