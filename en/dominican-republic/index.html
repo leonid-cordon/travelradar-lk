@@ -175,6 +175,9 @@
           "@id": "https://travelradarlk.com/en/content/where-to-stay-punta-cana-areas#webpage"
         },
         {
+          "@id": "https://travelradarlk.com/en/content/punta-cana-hotel-booking-checklist#webpage"
+        },
+        {
           "@id": "https://travelradarlk.com/en/content/punta-cana-airport-arrival-guide#webpage"
         },
         {
@@ -352,6 +355,7 @@
                         <div class="mh-essential-actions">
                             <a href="../content/where-to-go-dominican-republic-regions" class="mh-btn mh-btn-primary">Compare 5 DR regions</a>
                             <a href="../content/where-to-stay-punta-cana-areas" class="mh-btn mh-btn-outline">Where to stay in Punta Cana</a>
+                            <a href="../content/punta-cana-hotel-booking-checklist" class="mh-btn mh-btn-ghost">Hotel booking checklist</a>
                         </div>
                     </div>
                 </div>
@@ -547,6 +551,10 @@
                             <span class="mh-cluster-link-title">Where to Stay in Punta Cana: Bavaro, Cap Cana or Uvero Alto?</span>
                             <span class="mh-cluster-link-reason">Best for: matching beach stretch, resort style and crowd level to your trip priorities</span>
                         </a>
+                        <a href="../content/punta-cana-hotel-booking-checklist" class="mh-cluster-link">
+                            <span class="mh-cluster-link-title">Punta Cana Hotel Booking Checklist: Avoid Seaweed, Hidden Fees &amp; Bad Locations</span>
+                            <span class="mh-cluster-link-reason">Best for: verifying real walking distance to the beach, sargassum exposure and total bill before paying</span>
+                        </a>
                     </div>
                 </div>
 
@@ -592,37 +600,37 @@
             'wrong-area': {
                 title: 'Choose the base before the hotel',
                 body: 'Punta Cana, Bayahibe and Samaná can look similar from a distance, but they create very different trips once you add transfer time, beach style and hotel format. The area decision should come before the hotel search.',
-                readFirst: { text: 'Dominican Republic destination comparison', href: '#' },
-                alsoUseful: { text: 'Best hotels in Punta Cana 2026', href: '#' },
+                readFirst: { text: 'Compare 5 Dominican Republic regions', href: '../content/where-to-go-dominican-republic-regions' },
+                alsoUseful: { text: 'Where to stay in Punta Cana', href: '../content/where-to-stay-punta-cana-areas' },
                 next: 'Compare resort areas first, then search for hotels in your chosen zone.'
             },
             'overpaying': {
                 title: 'Compare hotels only after you understand the area',
                 body: 'A cheaper room can become expensive if it puts you far from the beach, restaurants or pickup points. In Punta Cana and the southeast coast, location changes the real value of a hotel.',
-                readFirst: { text: 'Punta Cana hotel booking checklist', href: '#' },
-                alsoUseful: { text: 'Dominican Republic budget guide', href: '#' },
+                readFirst: { text: 'Punta Cana hotel booking checklist', href: '../content/punta-cana-hotel-booking-checklist' },
+                alsoUseful: { text: 'Where to stay in Punta Cana', href: '../content/where-to-stay-punta-cana-areas' },
                 next: 'Filter hotels by area, not only by star rating or photos.',
-                cta: { text: 'Read hotel booking checklist', href: '#', ext: false }
+                cta: { text: 'Read hotel booking checklist', href: '../content/punta-cana-hotel-booking-checklist', ext: false }
             },
             'transfer': {
                 title: 'Do not ignore the first drive after landing',
                 body: 'Punta Cana resorts, Bayahibe and Samaná are not the same arrival day. A long transfer after a flight can change how the trip feels from the first hour.',
-                readFirst: { text: 'DR airport transfer options', href: '#' },
-                alsoUseful: { text: 'Dominican Republic destination comparison', href: '#' },
+                readFirst: { text: 'Punta Cana airport & transfer guide', href: '../content/punta-cana-airport-arrival-guide' },
+                alsoUseful: { text: 'Compare 5 Dominican Republic regions', href: '../content/where-to-go-dominican-republic-regions' },
                 next: 'Confirm the hotel address before choosing a transfer option.'
             },
             'beach-photos': {
                 title: 'Beach photos do not tell the whole story',
                 body: 'A resort can look perfect in photos and still have a beach that feels different because of location, waves, seaweed, construction or seasonal conditions. Recent reviews and current beach context matter more than polished marketing images.',
-                readFirst: { text: 'Best hotels in Punta Cana 2026', href: '#' },
-                alsoUseful: { text: 'Best time to visit Dominican Republic', href: '#' },
+                readFirst: { text: 'Punta Cana hotel booking checklist', href: '../content/punta-cana-hotel-booking-checklist' },
+                alsoUseful: { text: 'Where to stay in Punta Cana', href: '../content/where-to-stay-punta-cana-areas' },
                 next: 'Check recent reviews and beach context before booking.'
             },
             'no-data': {
                 title: 'Set mobile data before you land',
                 body: 'Maps, hotel messages, transfer chats and two-factor codes matter immediately after arrival. An eSIM is easier to set up before the trip than at the airport.',
                 readFirst: { text: 'Dominican Republic eSIM for US travelers', href: '#' },
-                alsoUseful: { text: 'DR airport transfer options', href: '#' },
+                alsoUseful: { text: 'Punta Cana airport & transfer guide', href: '../content/punta-cana-airport-arrival-guide' },
                 next: 'Install the eSIM before departure and keep your home SIM active for bank codes.',
                 cta: { text: 'Read DR eSIM guide', href: '#', ext: false }
             },
@@ -630,7 +638,7 @@
                 title: 'Tours are not just about the attraction',
                 body: 'Pickup point, total day length, boat time and return logistics can matter as much as the destination itself. A beautiful tour can feel exhausting if the base is wrong.',
                 readFirst: { text: 'Best day trips from Punta Cana', href: '#' },
-                alsoUseful: { text: 'Dominican Republic destination comparison', href: '#' },
+                alsoUseful: { text: 'Compare 5 Dominican Republic regions', href: '../content/where-to-go-dominican-republic-regions' },
                 next: 'Choose tours after choosing your base, not before.',
                 cta: { text: 'Plan day trips by base', href: '#', ext: false }
             }
@@ -648,30 +656,35 @@
             if (!d) return;
             if (!resultContent || !resultPlaceholder) return;
 
-            var isExternal = d.alsoUseful.href.indexOf('http') === 0;
-            var isReadFirstExternal = d.readFirst.href.indexOf('http') === 0;
             var ctaHtml = '';
-
-            if (d.cta) {
+            if (d.cta && d.cta.href && d.cta.href !== '#') {
                 var isCtaExternal = d.cta.ext || d.cta.href.indexOf('http') === 0;
                 ctaHtml = '<div class="mh-result-cta">' +
-                    '<!-- <a href="#" class="mh-btn mh-btn-primary"' + (isCtaExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.cta.text) + '</a> -->' +
+                    '<a href="' + escHtml(d.cta.href) + '" class="mh-btn mh-btn-primary"' + (isCtaExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.cta.text) + '</a>' +
                     '</div>';
             }
+
+            var linkRows = '';
+            if (d.readFirst && d.readFirst.href && d.readFirst.href !== '#') {
+                var isReadFirstExternal = d.readFirst.href.indexOf('http') === 0;
+                linkRows += '<div class="mh-result-link-row">' +
+                    '<span class="mh-result-link-label">Read first:</span>' +
+                    '<a href="' + escHtml(d.readFirst.href) + '"' + (isReadFirstExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.readFirst.text) + '</a>' +
+                    '</div>';
+            }
+            if (d.alsoUseful && d.alsoUseful.href && d.alsoUseful.href !== '#') {
+                var isExternal = d.alsoUseful.href.indexOf('http') === 0;
+                linkRows += '<div class="mh-result-link-row">' +
+                    '<span class="mh-result-link-label">Also useful:</span>' +
+                    '<a href="' + escHtml(d.alsoUseful.href) + '"' + (isExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.alsoUseful.text) + '</a>' +
+                    '</div>';
+            }
+            var linksHtml = linkRows ? '<div class="mh-result-links">' + linkRows + '</div>' : '';
 
             var html = '<span class="mh-result-scenario-label">' + escHtml(d.title) + '</span>' +
                        '<p class="mh-result-title">' + escHtml(d.title) + '</p>' +
                        '<p class="mh-result-body">' + escHtml(d.body) + '</p>' +
-                       '<div class="mh-result-links">' +
-                         '<div class="mh-result-link-row">' +
-                           '<span class="mh-result-link-label">Read first:</span>' +
-                           '<!-- <a href="#"' + (isReadFirstExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.readFirst.text) + '</a> -->' +
-                         '</div>' +
-                         '<div class="mh-result-link-row">' +
-                           '<span class="mh-result-link-label">Also useful:</span>' +
-                           '<!-- <a href="#"' + (isExternal ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.alsoUseful.text) + '</a> -->' +
-                         '</div>' +
-                       '</div>' +
+                       linksHtml +
                        '<p class="mh-result-next">Next step: ' + escHtml(d.next) + '</p>' +
                        ctaHtml;
 
