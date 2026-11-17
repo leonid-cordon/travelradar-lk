@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-17T13:00:29.931Z",
-  "count": 129,
+  "generated_at": "2026-11-17T21:59:33.140Z",
+  "count": 130,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1907,6 +1907,40 @@
       "date_published": "2026-04-25T12:00:00+00:00",
       "date_modified": "2026-04-25T12:00:00+00:00",
       "search_text": "cancun vs tulum vs playa del carmen де зупинитися в мексиці пляжі ціни атмосфера нічне життя та логістика практичне порівняння трьох головних баз рив єри майя neighborhoods"
+    },
+    {
+      "slug": "caribbean-island-comparison",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "beaches",
+        "all-inclusive",
+        "budget",
+        "flights",
+        "sargassum",
+        "hurricane-season",
+        "best-time"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Порівняння островів Карибського моря: який острів підійде саме вам?",
+      "description": "Домінікана, Ямайка, Багами, Аруба та Кюрасао, Сент-Люсія, Теркс і Кайкос та Пуерто-Рико: реальні щоденні витрати, якість пляжів, ризик ураганів і перельоти.",
+      "url": "https://travelradarlk.com/ua/content/caribbean-island-comparison",
+      "image": "https://travelradarlk.com/assets/images/content/caribbean-island-comparison/card_1200x600.jpg",
+      "date_published": "2026-11-17T12:00:00+00:00",
+      "date_modified": "2026-11-17T12:00:00+00:00",
+      "search_text": "порівняння островів карибського моря який острів підійде саме вам домінікана ямайка багами аруба та кюрасао сент-люсія теркс і кайкос та пуерто-рико реальні щоденні витрати якість пляжів ризик ураганів і перельоти beaches all-inclusive budget flights sargassum hurricane-season best-time"
     },
     {
       "slug": "cenotes-near-cancun-playa-tulum",

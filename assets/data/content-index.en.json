@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-17T13:00:29.499Z",
-  "count": 129,
+  "generated_at": "2026-11-17T21:59:32.599Z",
+  "count": 130,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1907,6 +1907,40 @@
       "date_published": "2026-04-25T12:00:00+00:00",
       "date_modified": "2026-04-25T12:00:00+00:00",
       "search_text": "cancun vs tulum vs playa del carmen where to stay in mexico beaches prices vibe nightlife logistics - an honest side-by-side comparison of mexico s three most popular riviera maya bases neighborhoods"
+    },
+    {
+      "slug": "caribbean-island-comparison",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "beaches",
+        "all-inclusive",
+        "budget",
+        "flights",
+        "sargassum",
+        "hurricane-season",
+        "best-time"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Caribbean Island Comparison: Which Island Is Right for You?",
+      "description": "Dominican Republic, Jamaica, Bahamas, Aruba & Curaçao, Saint Lucia, Turks & Caicos, and Puerto Rico compared by real daily costs, beach quality, hurricane risk, and flights.",
+      "url": "https://travelradarlk.com/en/content/caribbean-island-comparison",
+      "image": "https://travelradarlk.com/assets/images/content/caribbean-island-comparison/card_1200x600.jpg",
+      "date_published": "2026-11-17T12:00:00+00:00",
+      "date_modified": "2026-11-17T12:00:00+00:00",
+      "search_text": "caribbean island comparison which island is right for you dominican republic jamaica bahamas aruba cura ao saint lucia turks caicos and puerto rico compared by real daily costs beach quality hurricane risk and flights beaches all-inclusive budget flights sargassum hurricane-season best-time"
     },
     {
       "slug": "cenotes-near-cancun-playa-tulum",
