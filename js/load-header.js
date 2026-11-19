@@ -305,7 +305,7 @@ function initMobileMenu() {
     });
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 1024) {
             navMenu.classList.remove('active');
             mobileToggle.classList.remove('active');
             document.body.style.overflow = '';

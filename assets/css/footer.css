@@ -19,11 +19,6 @@
     margin-bottom: 2rem;
 }
 
-.footer .footer-content {
-    grid-template-columns:
-        minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-}
-
 .footer-logo {
     display: flex;
     align-items: center;
