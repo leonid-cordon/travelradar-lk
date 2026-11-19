@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-18T14:36:19.616Z",
-  "count": 131,
+  "generated_at": "2026-11-19T01:48:20.305Z",
+  "count": 132,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -187,6 +187,43 @@
       "date_published": "2026-06-17T12:00:00+00:00",
       "date_modified": "2026-06-17T12:00:00+00:00",
       "search_text": "бакалар лагуна семи цветов в мексике стоит ли ехать из канкуна насколько бакалар далеко от канкуна почему это ночёвка а не поездка на день кому подходит лагуна и как спланировать дорогу day-trips itinerary"
+    },
+    {
+      "slug": "bayahibe-la-romana-travel-guide",
+      "lang": "ru",
+      "primary_section": "destinations",
+      "section_label": "Направления",
+      "country": "dominican-republic",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "punta-cana"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "snorkeling",
+        "island-trip",
+        "sargassum",
+        "neighborhoods",
+        "airport-transfer",
+        "budget",
+        "best-time"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Байяхибе и Ла-Романа: путеводитель по спокойному Карибскому побережью Доминиканы",
+      "description": "Чем южный берег Доминиканы отличается от Пунта-Каны: Доминикус против Байяхибе и Casa de Campo, лодки на Саону, рэк-дайвинг и реальные бюджеты 2026 года.",
+      "url": "https://travelradarlk.com/ru/content/bayahibe-la-romana-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/bayahibe-la-romana-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-19T12:00:00+00:00",
+      "date_modified": "2026-11-19T12:00:00+00:00",
+      "search_text": "байяхибе и ла-романа путеводитель по спокойному карибскому побережью доминиканы чем южный берег доминиканы отличается от пунта-каны доминикус против байяхибе и casa de campo лодки на саону рэк-дайвинг и реальные бюджеты 2026 года beaches snorkeling island-trip sargassum neighborhoods airport-transfer budget best-time"
     },
     {
       "slug": "best-adults-only-resorts-cancun",

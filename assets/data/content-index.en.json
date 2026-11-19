@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-18T14:36:19.299Z",
-  "count": 131,
+  "generated_at": "2026-11-19T01:48:20.013Z",
+  "count": 132,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -187,6 +187,43 @@
       "date_published": "2026-06-17T12:00:00+00:00",
       "date_modified": "2026-06-17T12:00:00+00:00",
       "search_text": "bacalar mexico s lagoon of seven colors is it worth the trip from cancun how far bacalar really is from cancun why it works as an overnight rather than a day trip who the lagoon suits and how to plan the journey day-trips itinerary"
+    },
+    {
+      "slug": "bayahibe-la-romana-travel-guide",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "dominican-republic",
+      "region": null,
+      "destination": null,
+      "related_destinations": [
+        "punta-cana"
+      ],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "snorkeling",
+        "island-trip",
+        "sargassum",
+        "neighborhoods",
+        "airport-transfer",
+        "budget",
+        "best-time"
+      ],
+      "audience": [
+        "couples",
+        "family",
+        "first-timer"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Bayahibe and La Romana Travel Guide: The Calm Caribbean Side of the Dominican Republic",
+      "description": "How the Dominican south coast compares to Punta Cana: Bayahibe Village vs Dominicus vs Casa de Campo, Saona Island access, wreck diving and real 2026 budgets.",
+      "url": "https://travelradarlk.com/en/content/bayahibe-la-romana-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/bayahibe-la-romana-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-19T12:00:00+00:00",
+      "date_modified": "2026-11-19T12:00:00+00:00",
+      "search_text": "bayahibe and la romana travel guide the calm caribbean side of the dominican republic how the dominican south coast compares to punta cana bayahibe village vs dominicus vs casa de campo saona island access wreck diving and real 2026 budgets beaches snorkeling island-trip sargassum neighborhoods airport-transfer budget best-time"
     },
     {
       "slug": "best-adults-only-resorts-cancun",
