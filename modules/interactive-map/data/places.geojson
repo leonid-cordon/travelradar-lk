@@ -1,0 +1,666 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.7485, 21.1356] },
+      "properties": {
+        "id": "cancun-hotel-zone",
+        "name": "Cancun Hotel Zone",
+        "shortName": "Cancun Hotel Zone",
+        "labelAnchor": "left",
+        "category": "resort",
+        "categoryLabel": "Resort Zone",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Easiest first-time beachfront base — shortest ride from CUN",
+        "image": "/assets/images/countries/mexico-hotels-beachfront-900x1100.jpg",
+        "description": "A 22 km barrier-island resort strip along Boulevard Kukulcan between the Caribbean Sea and Nichupte Lagoon, lined with large all-inclusive hotels, beach clubs, and R1/R2 public buses.",
+        "facts": [
+          { "label": "Airport & Transfer", "value": "CUN · 20–30 min", "targetId": "cancun-airport" },
+          { "label": "Beach & Sea", "value": "Turquoise surf (north calmer)" },
+          { "label": "Stay Style", "value": "All-inclusive resorts" },
+          { "label": "Price Level", "value": "$$–$$$" }
+        ],
+        "bestFor": "First Cancun trip, short airport transfer, beachfront resorts with dining and tours at your doorstep.",
+        "watchOut": "Beach width and wave strength vary sharply by kilometer marker (north-facing Punta Cancun is calmest; east-facing blocks have stronger surf and occasional summer sargassum).",
+        "logistics": "Pre-booked shared/private transfers from CUN take 20–30 min. Within the Hotel Zone, frequent R1 and R2 buses run along Boulevard Kukulcan day and night (~12 MXN), avoiding expensive hotel-zone taxi fares.",
+        "seasonsNote": "Best weather: Dec–Apr (dry, warm, low humidity). May–Oct is hotter and carries sargassum and rain risk; north-facing beaches near Playa Mujeres / Punta Cancun stay noticeably clearer.",
+        "featuredSlugs": [
+          "best-all-inclusive-resorts-cancun-hotel-zone",
+          "cancun-vs-tulum-vs-playa-del-carmen-where-to-stay",
+          "cancun-airport-transfer-options",
+          "cancun-seaweed-season"
+        ],
+        "matchDestinations": ["cancun"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.8515, 21.1619] },
+      "properties": {
+        "id": "cancun-downtown",
+        "name": "Downtown Cancun (El Centro)",
+        "shortName": "Cancun Downtown",
+        "labelAnchor": "right",
+        "category": "resort",
+        "categoryLabel": "City District",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Real Mexican food & budget stays — but no direct beach",
+        "image": "/assets/images/countries/mexico-1200.jpg",
+        "description": "Mainland urban center of Cancun around Avenida Tulum, Parque Las Palapas, and the main ADO bus terminal — offering local prices, street food, and easy connections to Riviera Maya and islands.",
+        "facts": [
+          { "label": "Airport & Transfer", "value": "CUN · 25–35 min", "targetId": "cancun-airport" },
+          { "label": "Getting Around", "value": "ADO bus, R1/R2, Uber/taxi" },
+          { "label": "Atmosphere", "value": "Local city & dining" },
+          { "label": "Price Level", "value": "$" }
+        ],
+        "bestFor": "Budget-conscious travelers, street-food fans, overnight layovers before ferries to Isla Mujeres or Holbox, and travelers using ADO buses.",
+        "watchOut": "There is no beachfront in Downtown Cancun — reaching public beaches in the Hotel Zone takes a 15–25 min bus or rideshare each way.",
+        "logistics": "ADO airport buses arrive directly at the Downtown terminal every 20–30 min. From here, R1/R2 city buses reach Hotel Zone beaches and Puerto Juarez ferries to Isla Mujeres.",
+        "seasonsNote": "Urban dining and day-trip hubs work year-round; summer humidity is more noticeable inland without sea breeze, making air-conditioned hotels worthwhile.",
+        "featuredSlugs": [
+          "where-to-stay-in-cancun-hotel-zone-vs-downtown",
+          "cancun-budget-2026",
+          "where-to-eat-in-cancun",
+          "best-hotels-cancun-2026"
+        ],
+        "matchDestinations": ["cancun"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.8770, 21.0365] },
+      "properties": {
+        "id": "cancun-airport",
+        "name": "Cancun International Airport (CUN)",
+        "shortName": "CUN Airport",
+        "labelAnchor": "right",
+        "category": "airport",
+        "categoryLabel": "Airport",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Main air gateway for Cancun, Riviera Maya, Tulum & islands",
+        "image": "/assets/images/countries/mexico-flights-cancun-900x1100.jpg",
+        "description": "Busiest international tourist airport in Mexico (Terminals 2, 3, and 4), sitting right off Highway 307 with direct ADO coaches and private transfers along the entire Caribbean coast.",
+        "facts": [
+          { "label": "IATA Code", "value": "CUN (4 terminals)" },
+          { "label": "Serves", "value": "Cancun to Tulum & islands" },
+          { "label": "Transfer Modes", "value": "Private van, ADO bus, rental" },
+          { "label": "Arrival Tip", "value": "Pre-book transfer + eSIM" }
+        ],
+        "bestFor": "Almost all international arrivals to Cancun, Playa del Carmen, Cozumel, Isla Mujeres, Puerto Morelos, Akumal, and Tulum.",
+        "watchOut": "Walk past the indoor timeshare/taxi hall ('shark tank') straight outside to your pre-booked transfer or official ADO booth; on-site airport taxis charge much higher rates.",
+        "logistics": "ADO coaches run from outside every terminal to Downtown Cancun, Playa del Carmen, and Tulum. Private vans are fastest for resorts along Highway 307 and groups of 2+.",
+        "seasonsNote": "Typical transfer times along Highway 307 (allow +20 min during afternoon rush or rain):",
+        "transferTimes": [
+          { "dest": "Cancun Hotel Zone", "time": "20–30 min (van / taxi)", "targetId": "cancun-hotel-zone" },
+          { "dest": "Downtown Cancun / ADO", "time": "25–35 min (ADO / van)", "targetId": "cancun-downtown" },
+          { "dest": "Puerto Morelos", "time": "25–35 min (van / car)", "targetId": "puerto-morelos" },
+          { "dest": "Isla Mujeres (via Puerto Juarez)", "time": "35 min drive + 20 min ferry", "targetId": "isla-mujeres" },
+          { "dest": "Playa del Carmen", "time": "50–65 min (ADO / van)", "targetId": "playa-del-carmen" },
+          { "dest": "Akumal", "time": "70–85 min (van / car)", "targetId": "akumal" },
+          { "dest": "Tulum", "time": "90–130 min (ADO / van)", "targetId": "tulum" },
+          { "dest": "Isla Holbox (via Chiquila)", "time": "2 hr drive + 25 min ferry", "targetId": "isla-holbox" },
+          { "dest": "Compare: Tulum Airport (TQO)", "time": "South hub for Tulum & Akumal", "targetId": "tulum-airport" }
+        ],
+        "featuredSlugs": [
+          "cancun-airport-arrival-guide",
+          "cancun-airport-transfer-options",
+          "ado-bus-private-transfer-rental-car-cancun-riviera-maya",
+          "best-hotels-near-cancun-airport"
+        ],
+        "matchDestinations": ["cancun"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.7311, 21.2322] },
+      "properties": {
+        "id": "isla-mujeres",
+        "name": "Isla Mujeres",
+        "shortName": "Isla Mujeres",
+        "labelAnchor": "bottom-left",
+        "category": "island",
+        "categoryLabel": "Island",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Calm-water island 20 min by ferry from Cancun",
+        "image": "/assets/images/countries/mexico-tours-island-900x1100.jpg",
+        "description": "A narrow 7 km Caribbean island directly across Bahia de Mujeres from Cancun, famous for shallow turquoise Playa Norte, golf-cart exploration, and laid-back sunsets.",
+        "facts": [
+          { "label": "How to Reach", "value": "20–30 min ferry (Cancun)" },
+          { "label": "On-Island", "value": "Golf cart, taxi, walking" },
+          { "label": "Coast & Water", "value": "Very calm at Playa Norte" },
+          { "label": "Stay Length", "value": "Day trip or 1–3 nights" }
+        ],
+        "bestFor": "Travelers seeking calm, wave-free swimming water, small boutique hotels, and a slower pace close to Cancun.",
+        "watchOut": "Last ferries limit evening flexibility if you stay on the mainland; staying on the island makes mainland day trips (chichen itza / cenotes) inconvenient.",
+        "logistics": "Ultramar ferries depart every 30 min from Puerto Juarez (plus select Hotel Zone piers like Playa Tortugas/El Embarcadero). Once on the island, Centro and Playa Norte are walkable; golf carts cover Punta Sur.",
+        "seasonsNote": "Playa Norte faces north-west, so it stays calmer and far more sheltered from sargassum than open east-facing Riviera Maya beaches.",
+        "featuredSlugs": [
+          "isla-mujeres-day-trip-from-cancun",
+          "staying-overnight-isla-mujeres-worth-it",
+          "best-hotels-isla-mujeres",
+          "holbox-vs-isla-mujeres"
+        ],
+        "matchDestinations": ["isla-mujeres"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-87.3792, 21.5236] },
+      "properties": {
+        "id": "isla-holbox",
+        "name": "Isla Holbox",
+        "shortName": "Isla Holbox",
+        "category": "island",
+        "categoryLabel": "Island",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Car-free sandbar island for bohemian stays & whale sharks",
+        "image": "/assets/images/countries/mexico-tours-island-900x1100.jpg",
+        "description": "A relaxed, sandy-street island north of the Yucatan Peninsula inside the Yum Balam reserve — far more remote than Isla Mujeres, known for shallow sandbars, sunsets, and summer whale shark tours.",
+        "facts": [
+          { "label": "How to Reach", "value": "2 hr to Chiquila + 25 min ferry" },
+          { "label": "On-Island", "value": "Car-free (golf cart / bike)" },
+          { "label": "Coast & Water", "value": "Shallow lagoon sandbars" },
+          { "label": "Stay Length", "value": "2–4 nights (too far for 1 day)" }
+        ],
+        "bestFor": "Slow travel, boutique barefoot stays, bioluminescence/whale shark season, and disconnecting from mega-resorts.",
+        "watchOut": "Too far from CUN for a rushed day trip; sandy unpaved streets puddle heavily after rain, and mosquitoes can be intense around mangroves at dusk.",
+        "logistics": "Take a private transfer, rental car (leave parked in Chiquila), or ADO bus to Chiquila port (~2 hours from Cancun), then a 25-minute passenger ferry across the lagoon.",
+        "seasonsNote": "Dry season (Dec–Apr) gives the driest streets and clearest skies. Whale shark swimming season runs roughly June through mid-September.",
+        "featuredSlugs": [
+          "holbox-island-guide",
+          "best-hotels-holbox",
+          "holbox-vs-isla-mujeres",
+          "whale-shark-swimming-cancun-holbox"
+        ],
+        "matchDestinations": ["yucatan", "isla-mujeres"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.8758, 20.8481] },
+      "properties": {
+        "id": "puerto-morelos",
+        "name": "Puerto Morelos",
+        "shortName": "Puerto Morelos",
+        "labelAnchor": "left",
+        "category": "resort",
+        "categoryLabel": "Resort Village",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Quiet reef-side fishing town 25 min south of CUN",
+        "image": "/assets/images/countries/mexico-hotels-adults-only-900x1100.jpg",
+        "description": "A peaceful coastal town tucked between Cancun and Playa del Carmen, featuring a protected national marine reef right offshore and the Ruta de los Cenotes running inland.",
+        "facts": [
+          { "label": "Airport & Transfer", "value": "CUN · 25–35 min", "targetId": "cancun-airport" },
+          { "label": "Getting Around", "value": "Walkable town / taxi / car" },
+          { "label": "Atmosphere", "value": "Quiet village & reef" },
+          { "label": "Base Role", "value": "Relaxed low-key base" }
+        ],
+        "bestFor": "Couples and families who want a calm, walkable beach town near CUN with easy snorkeling and Ruta de los Cenotes access without Cancun or Playa crowds.",
+        "watchOut": "Limited nightlife and shopping compared to Playa del Carmen; many large Riviera Maya resorts north/south of town sit far from the village center on Highway 307.",
+        "logistics": "Quick 25–35 min private transfer from CUN. Playa Express colectivos and ADO buses stop on Highway 307 (a short taxi ride from the beachside town center).",
+        "seasonsNote": "Protected offshore reef dampens big surf year-round, though summer sargassum can collect along parts of the coast.",
+        "featuredSlugs": [
+          "puerto-morelos-quiet-village-guide",
+          "where-to-stay-puerto-morelos-hotels",
+          "best-resorts-protected-beaches-cancun-riviera-maya"
+        ],
+        "matchDestinations": ["riviera-maya"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-87.0739, 20.6296] },
+      "properties": {
+        "id": "playa-del-carmen",
+        "name": "Playa del Carmen",
+        "shortName": "Playa del Carmen",
+        "labelAnchor": "right",
+        "category": "resort",
+        "categoryLabel": "Resort Town",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Most walkable Riviera Maya hub + Cozumel ferry pier",
+        "image": "/assets/images/countries/mexico-1200.jpg",
+        "description": "Vibrant mid-coast city centered on pedestrian Quinta Avenida (5th Avenue), combining independent restaurants, city-center hotels, Playacar resorts, and direct ferries to Cozumel.",
+        "facts": [
+          { "label": "Airport & Transfer", "value": "CUN · 50–65 min", "targetId": "cancun-airport" },
+          { "label": "Getting Around", "value": "Walkable + ADO + colectivo" },
+          { "label": "Atmosphere", "value": "Lively town & dining" },
+          { "label": "Base Role", "value": "Best central excursion base" }
+        ],
+        "bestFor": "Travelers who want restaurants and nightlife on foot, easy ADO/colectivo day trips, or frequent ferry crossings to Cozumel.",
+        "watchOut": "Central beaches near the ferry pier are narrower and busier; staying right next to 12th Street clubs brings late-night noise.",
+        "logistics": "Direct ADO buses from CUN arrive right at 5th Avenue. Colectivos along Highway 307 connect south to Akumal and Tulum in 30–60 min; ferries to Cozumel depart every 30–60 min.",
+        "seasonsNote": "Central location makes it practical all year; Playacar (south end) and northern beaches offer more space during peak winter months.",
+        "featuredSlugs": [
+          "playa-del-carmen-travel-guide",
+          "where-to-stay-playa-del-carmen",
+          "where-to-eat-in-playa-del-carmen",
+          "cancun-vs-tulum-vs-playa-del-carmen-where-to-stay"
+        ],
+        "matchDestinations": ["playa-del-carmen"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.9458, 20.5083] },
+      "properties": {
+        "id": "cozumel",
+        "name": "Cozumel",
+        "shortName": "Cozumel",
+        "category": "island",
+        "categoryLabel": "Island",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "World-class drift diving island off Playa del Carmen",
+        "image": "/assets/images/countries/mexico-tours-island-900x1100.jpg",
+        "description": "Mexico's largest Caribbean island, separated from Playa del Carmen by a 45-minute ferry channel and home to protected Mesoamerican reef walls, dive resorts, and a rugged eastern coast.",
+        "facts": [
+          { "label": "How to Reach", "value": "45 min ferry (Playa) or CZM" },
+          { "label": "On-Island", "value": "Rental car, taxi, scooter" },
+          { "label": "Coast & Water", "value": "Clear reef (west), surf (east)" },
+          { "label": "Stay Length", "value": "Day trip or 2–4 nights" }
+        ],
+        "bestFor": "Scuba divers, snorkelers, and travelers wanting a relaxed island extension away from mainland Riviera Maya traffic.",
+        "watchOut": "Most western shores are rocky/ironshore rather than wide powdery sand (better for entering reef water than long beach walks); cruise ships bring midday crowds to San Miguel.",
+        "logistics": "Passenger ferries (Winjet/Ultramar/Xcaret) cross from Playa del Carmen pier in ~45 min; car ferries run from Calica. Cozumel also has its own airport (CZM).",
+        "seasonsNote": "West-facing reefs stay calm and clear for diving most of the year and largely avoid heavy sargassum buildup compared to the mainland.",
+        "featuredSlugs": [
+          "cozumel-day-trip-from-playa-del-carmen",
+          "diving-in-cozumel-first-timers-certified-divers",
+          "cozumel-vs-isla-mujeres",
+          "best-hotels-dive-resorts-cozumel"
+        ],
+        "matchDestinations": ["cozumel"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-87.3145, 20.3976] },
+      "properties": {
+        "id": "akumal",
+        "name": "Akumal",
+        "shortName": "Akumal",
+        "labelAnchor": "right",
+        "category": "resort",
+        "categoryLabel": "Resort Coast",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Calm bays for sea-turtle snorkeling between Playa & Tulum",
+        "image": "/assets/images/countries/mexico-tours-cenote-900x1100.jpg",
+        "description": "Protected coastal bay community along southern Riviera Maya famous for wild green sea turtles grazing in shallow seagrass, Yal-Ku Lagoon, and beachfront family & adults-only resorts.",
+        "facts": [
+          {
+            "label": "Airport & Transfer",
+            "value": "CUN (~75m) or TQO (~60m)",
+            "targets": [
+              { "label": "CUN (~75m)", "targetId": "cancun-airport" },
+              { "label": "TQO (~60m)", "targetId": "tulum-airport" }
+            ]
+          },
+          { "label": "Getting Around", "value": "Rental car / colectivo / taxi" },
+          { "label": "Beach & Sea", "value": "Sheltered snorkeling bays" },
+          { "label": "Price Level", "value": "$$–$$$" }
+        ],
+        "bestFor": "Snorkeling with sea turtles, calmer bay swimming, and quieter all-inclusive resorts mid-way to Tulum.",
+        "watchOut": "Strict turtle-zone rules require a certified guide and life vest in protected sections; outside the resorts there is very little town nightlife.",
+        "logistics": "Reached in ~75 min south from CUN or ~55–65 min north from Tulum Airport (TQO) via Highway 307, plus frequent colectivos running between Playa del Carmen and Tulum.",
+        "seasonsNote": "Morning hours offer the calmest visibility in Akumal Bay; Half Moon Bay and Yal-Ku Lagoon provide sheltered snorkeling alternatives.",
+        "featuredSlugs": [
+          "akumal-swim-with-sea-turtles",
+          "best-resorts-akumal-snorkeling-turtles",
+          "best-resorts-protected-beaches-cancun-riviera-maya"
+        ],
+        "matchDestinations": ["riviera-maya"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-87.4654, 20.2114] },
+      "properties": {
+        "id": "tulum",
+        "name": "Tulum",
+        "shortName": "Tulum",
+        "labelAnchor": "left",
+        "category": "resort",
+        "categoryLabel": "Resort Town",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Boutique beach clubs, Mayan ruins & cenotes — split town vs beach",
+        "image": "/assets/images/countries/mexico-tours-cenote-900x1100.jpg",
+        "description": "Southern Riviera Maya hotspot split into three distinct zones — inland Tulum Pueblo, residential Aldea Zama, and the narrow beachfront Hotel Zone — surrounded by cenotes and cliffside ruins.",
+        "facts": [
+          {
+            "label": "Airport & Transfer",
+            "value": "TQO (~45m) or CUN (~110m)",
+            "targets": [
+              { "label": "TQO (~45m)", "targetId": "tulum-airport" },
+              { "label": "CUN (~110m)", "targetId": "cancun-airport" }
+            ]
+          },
+          { "label": "Getting Around", "value": "Bike / scooter / car / taxi" },
+          { "label": "Stay Style", "value": "Boutique & eco-hotels" },
+          { "label": "Price Level", "value": "$$$ (high beach prices)" }
+        ],
+        "bestFor": "Design-focused boutique trips, cenote hopping, ruins (Tulum & Coba), and beach-club aesthetics.",
+        "watchOut": "Long transfer from CUN (90–130 min); taxis between Tulum Pueblo and the Beach Zone are steep, and the single two-lane beach road often jams in high season.",
+        "logistics": "New Tulum Airport (TQO) cuts arrival drives (~35–45 min to Town, ~45–65 min to Beach Zone) compared to CUN. ADO buses connect both TQO and CUN to Tulum Centro; bikes work well inside Aldea Zama and Pueblo.",
+        "seasonsNote": "Nov–Apr offers the best beach conditions. May–Sep sees higher humidity and significant sargassum risk along Tulum's open beachfront, though freshwater cenotes remain clear year-round.",
+        "featuredSlugs": [
+          "best-hotels-tulum-beach-zone-town-aldea-zama",
+          "best-time-to-visit-tulum",
+          "tulum-budget-2026",
+          "tulum-public-beaches"
+        ],
+        "matchDestinations": ["tulum"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-87.6380, 20.1344] },
+      "properties": {
+        "id": "tulum-airport",
+        "name": "Tulum International Airport (TQO)",
+        "shortName": "TQO Airport",
+        "labelAnchor": "right",
+        "category": "airport",
+        "categoryLabel": "Airport",
+        "region": "mexico",
+        "regionLabel": "Eastern Mexico",
+        "detailLevel": "full",
+        "verdict": "Southern Riviera Maya air gateway cutting Tulum & Akumal drive times",
+        "image": "/assets/images/countries/mexico-transfer-airport-900x1100.jpg",
+        "description": "Felipe Carrillo Puerto International Airport (TQO), opened in late 2023 in the jungle ~20 km southwest of Tulum Pueblo — a modern southern alternative to CUN for Tulum, Akumal, and southern Riviera Maya stays.",
+        "facts": [
+          { "label": "IATA Code", "value": "TQO (1 main terminal)" },
+          { "label": "Best Serves", "value": "Tulum, Akumal & South" },
+          { "label": "Transfer Modes", "value": "ADO bus, private van, rental" },
+          { "label": "Compare Gateway", "value": "CUN Airport (north)", "targetId": "cancun-airport" }
+        ],
+        "bestFor": "Travelers staying in Tulum (Pueblo, Aldea Zama, or Beach Zone) or Akumal who want to skip the 90–130 min Highway 307 drive from Cancun (CUN).",
+        "watchOut": "TQO sits ~20 km inland in the jungle, not next to the coast — reaching Tulum Beach Zone still takes 45–65 min, and walk-up airport taxis charge high fixed rates unless you pre-book a transfer or take ADO.",
+        "logistics": "ADO coaches connect TQO directly to Tulum Centro terminal. For beachfront hotels along the Tulum Hotel Zone or resorts in Akumal, pre-booked private vans or terminal rental cars are the smoothest choice.",
+        "seasonsNote": "Typical transfer times from TQO (compare airfare + transfer cost against CUN, which still has more daily flight options):",
+        "transferTimes": [
+          { "dest": "Tulum (Town / Aldea Zama)", "time": "35–45 min (ADO / van)", "targetId": "tulum" },
+          { "dest": "Tulum Beach Hotel Zone", "time": "45–65 min (van / taxi)", "targetId": "tulum" },
+          { "dest": "Akumal", "time": "55–65 min (van / car)", "targetId": "akumal" },
+          { "dest": "Playa del Carmen", "time": "75–90 min (ADO / van)", "targetId": "playa-del-carmen" },
+          { "dest": "Cozumel (via Playa ferry)", "time": "85 min drive + 45 min ferry", "targetId": "cozumel" },
+          { "dest": "Puerto Morelos", "time": "100–115 min (CUN is closer)", "targetId": "puerto-morelos" },
+          { "dest": "Compare: CUN Airport (Cancun)", "time": "Main northern hub (~2 hr)", "targetId": "cancun-airport" }
+        ],
+        "featuredSlugs": [
+          "ado-bus-private-transfer-rental-car-cancun-riviera-maya",
+          "where-to-stay-in-tulum-beach-zone-vs-town-vs-aldea-zama",
+          "best-hotels-tulum-beach-zone-town-aldea-zama",
+          "tulum-budget-2026"
+        ],
+        "matchDestinations": ["tulum", "riviera-maya"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-68.4043, 18.6813] },
+      "properties": {
+        "id": "punta-cana-bavaro",
+        "name": "Punta Cana & Bavaro",
+        "shortName": "Punta Cana",
+        "labelAnchor": "bottom",
+        "category": "resort",
+        "categoryLabel": "Resort Zone",
+        "region": "dominican-republic",
+        "regionLabel": "Dominican Republic",
+        "detailLevel": "basic",
+        "verdict": "Dominican Republic's main eastern all-inclusive coastline",
+        "image": "/assets/images/countries/dominican-hotels-beachfront-900x1100.jpg",
+        "description": "Flagship eastern resort corridor stretching from Cap Cana through Bavaro to Uvero Alto. Detailed zone-by-zone guides are available in the Dominican Republic Hub.",
+        "facts": [
+          { "label": "Gateway Airport", "value": "PUJ (~15–40 min)", "targetId": "punta-cana-airport" },
+          { "label": "Region", "value": "Dominican Republic" }
+        ],
+        "featuredSlugs": [
+          "punta-cana-travel-guide-first-timers",
+          "where-to-stay-punta-cana-areas"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-68.3634, 18.5674] },
+      "properties": {
+        "id": "punta-cana-airport",
+        "name": "Punta Cana International Airport (PUJ)",
+        "shortName": "PUJ Airport",
+        "labelAnchor": "left",
+        "category": "airport",
+        "categoryLabel": "Airport",
+        "region": "dominican-republic",
+        "regionLabel": "Dominican Republic",
+        "detailLevel": "basic",
+        "verdict": "Primary tourist air hub for eastern Dominican Republic",
+        "image": "/assets/images/countries/dominican-transfer-airport-900x1100.jpg",
+        "description": "Busiest leisure gateway in the Dominican Republic, linked by Autopista del Coral to Cap Cana, Bavaro, Bayahibe, and La Romana.",
+        "facts": [
+          { "label": "IATA Code", "value": "PUJ" },
+          { "label": "Serves", "value": "Punta Cana & Bayahibe" }
+        ],
+        "featuredSlugs": [
+          "punta-cana-airport-arrival-guide"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-68.8396, 18.3714] },
+      "properties": {
+        "id": "bayahibe",
+        "name": "Bayahibe",
+        "shortName": "Bayahibe",
+        "labelAnchor": "top",
+        "category": "resort",
+        "categoryLabel": "Resort Town",
+        "region": "dominican-republic",
+        "regionLabel": "Dominican Republic",
+        "detailLevel": "basic",
+        "verdict": "Calm Caribbean-side beach town & Saona Island departure port",
+        "image": "/assets/images/countries/dominican-tours-saona-900x1100.jpg",
+        "description": "Caribbean-facing coastal base west of Punta Cana, positioned along calmer water with boat departures to Saona Island.",
+        "facts": [
+          { "label": "Gateway Airport", "value": "PUJ (~50 min) / LRM", "targetId": "punta-cana-airport" },
+          { "label": "Region", "value": "Dominican Republic" }
+        ],
+        "featuredSlugs": [
+          "where-to-go-dominican-republic-regions"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-69.3369, 19.2056] },
+      "properties": {
+        "id": "samana-peninsula",
+        "name": "Samana Peninsula",
+        "shortName": "Samana",
+        "category": "resort",
+        "categoryLabel": "Resort Region",
+        "region": "dominican-republic",
+        "regionLabel": "Dominican Republic",
+        "detailLevel": "basic",
+        "verdict": "Lush northeastern peninsula for nature & winter whale watching",
+        "image": "/assets/images/countries/dominican-tours-island-900x1100.jpg",
+        "description": "Mountainous northeastern peninsula around Las Terrenas and Samana Bay, known for coves, waterfalls, and winter humpback whales.",
+        "facts": [
+          { "label": "Gateway Airport", "value": "AZS / SDQ" },
+          { "label": "Region", "value": "Dominican Republic" }
+        ],
+        "featuredSlugs": [
+          "where-to-go-dominican-republic-regions"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-69.9312, 18.4861] },
+      "properties": {
+        "id": "santo-domingo",
+        "name": "Santo Domingo",
+        "shortName": "Santo Domingo",
+        "labelAnchor": "right",
+        "category": "resort",
+        "categoryLabel": "City",
+        "region": "dominican-republic",
+        "regionLabel": "Dominican Republic",
+        "detailLevel": "basic",
+        "verdict": "Historic capital city & Zona Colonial on the Caribbean coast",
+        "image": "/assets/images/countries/dominican-1200.jpg",
+        "description": "Capital of the Dominican Republic featuring the UNESCO-listed Zona Colonial and highway links east toward La Romana and Punta Cana.",
+        "facts": [
+          { "label": "Gateway Airport", "value": "SDQ (~30 min)" },
+          { "label": "Region", "value": "Dominican Republic" }
+        ],
+        "featuredSlugs": [
+          "where-to-go-dominican-republic-regions"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-77.3554, 25.0443] },
+      "properties": {
+        "id": "nassau-bahamas",
+        "name": "Nassau (The Bahamas)",
+        "shortName": "Nassau",
+        "category": "island",
+        "categoryLabel": "Island Hub",
+        "region": "caribbean",
+        "regionLabel": "Caribbean Islands",
+        "detailLevel": "basic",
+        "verdict": "Quick-flight Bahamas hub on New Providence & Paradise Island",
+        "image": "/assets/images/countries/caribbean-1200.jpg",
+        "description": "Capital island hub in The Bahamas, linked by bridge to Paradise Island and connected by short flights from the US East Coast.",
+        "facts": [
+          { "label": "Airport", "value": "NAS (~20 min)" },
+          { "label": "Region", "value": "Caribbean Islands" }
+        ],
+        "featuredSlugs": [
+          "caribbean-island-comparison"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-72.2659, 21.7738] },
+      "properties": {
+        "id": "providenciales-tci",
+        "name": "Providenciales (Turks & Caicos)",
+        "shortName": "Turks & Caicos",
+        "category": "island",
+        "categoryLabel": "Island Hub",
+        "region": "caribbean",
+        "regionLabel": "Caribbean Islands",
+        "detailLevel": "basic",
+        "verdict": "Clear shallow turquoise reefs & Grace Bay beachfront",
+        "image": "/assets/images/countries/caribbean-hotels-beachfront-900x1100.jpg",
+        "description": "Main tourism island of Turks and Caicos, anchored by Grace Bay Beach and shallow reef waters.",
+        "facts": [
+          { "label": "Airport", "value": "PLS (~15 min)" },
+          { "label": "Region", "value": "Caribbean Islands" }
+        ],
+        "featuredSlugs": [
+          "caribbean-island-comparison"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-77.9188, 18.4762] },
+      "properties": {
+        "id": "montego-bay-jamaica",
+        "name": "Montego Bay (Jamaica)",
+        "shortName": "Montego Bay",
+        "category": "island",
+        "categoryLabel": "Island Hub",
+        "region": "caribbean",
+        "regionLabel": "Caribbean Islands",
+        "detailLevel": "basic",
+        "verdict": "Jamaica's main northern resort coast & MBJ air gateway",
+        "image": "/assets/images/countries/caribbean-hotels-adults-only-900x1100.jpg",
+        "description": "Northern resort hub of Jamaica along Highway A1, providing fast transfers from MBJ to beachfront resorts and excursions.",
+        "facts": [
+          { "label": "Airport", "value": "MBJ (~10–25 min)" },
+          { "label": "Region", "value": "Caribbean Islands" }
+        ],
+        "featuredSlugs": [
+          "cancun-vs-jamaica",
+          "caribbean-island-comparison"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-66.1057, 18.4655] },
+      "properties": {
+        "id": "san-juan-puerto-rico",
+        "name": "San Juan (Puerto Rico)",
+        "shortName": "San Juan",
+        "category": "island",
+        "categoryLabel": "Island Hub",
+        "region": "caribbean",
+        "regionLabel": "Caribbean Islands",
+        "detailLevel": "basic",
+        "verdict": "Historic Old San Juan & major Eastern Caribbean flight hub",
+        "image": "/assets/images/countries/caribbean-flights-900x1100.jpg",
+        "description": "Primary gateway of Puerto Rico combining colonial Old San Juan, urban beach districts, and highway access to El Yunque.",
+        "facts": [
+          { "label": "Airport", "value": "SJU (~15 min)" },
+          { "label": "Region", "value": "Caribbean Islands" }
+        ],
+        "featuredSlugs": [
+          "caribbean-island-comparison"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-70.0367, 12.5186] },
+      "properties": {
+        "id": "aruba",
+        "name": "Aruba",
+        "shortName": "Aruba",
+        "category": "island",
+        "categoryLabel": "Island Hub",
+        "region": "caribbean",
+        "regionLabel": "Caribbean Islands",
+        "detailLevel": "basic",
+        "verdict": "Dry sunny island outside the main Caribbean hurricane belt",
+        "image": "/assets/images/countries/caribbean-hotels-luxury-room-900x1100.jpg",
+        "description": "Southern Caribbean island favored for dry trade-wind weather outside the primary summer hurricane track.",
+        "facts": [
+          { "label": "Airport", "value": "AUA (~15 min)" },
+          { "label": "Region", "value": "Caribbean Islands" }
+        ],
+        "featuredSlugs": [
+          "caribbean-island-comparison"
+        ]
+      }
+    }
+  ]
+}

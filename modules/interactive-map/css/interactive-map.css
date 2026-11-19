@@ -1,0 +1,994 @@
+/* Standalone page shell (only used on map-lab/index.html) */
+body.lab-standalone-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #0a0e27;
+    color: #e8edf4;
+    font-family: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#map-lab-root {
+    height: 100vh;
+    width: 100%;
+}
+
+/* ===================================================================
+   TravelRadarMap — Self-Contained Modular Widget (.tr-map-widget)
+   =================================================================== */
+.tr-map-widget {
+    --tr-bg-primary: #0a0e27;
+    --tr-bg-secondary: #141933;
+    --tr-bg-tertiary: #1e2545;
+    --tr-bg-elevated: rgba(14, 19, 40, 0.92);
+    --tr-text-primary: #e8edf4;
+    --tr-text-secondary: #b5c0cf;
+    --tr-text-muted: #8391a8;
+    --tr-border: #2a3256;
+    --tr-border-strong: #3d4878;
+    --tr-gold: #d4a96a;
+    --tr-gold-bg: rgba(212, 169, 106, 0.16);
+    --tr-blue: #64b5f6;
+    --tr-island: #38bdf8;
+    --tr-airport: #e07a5f;
+    --tr-radius: 12px;
+    --tr-radius-sm: 8px;
+    --tr-shadow: 0 14px 32px rgba(0, 0, 0, 0.42);
+
+    display: flex;
+    flex-direction: column;
+    background: var(--tr-bg-primary);
+    color: var(--tr-text-primary);
+    font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+}
+
+.tr-map-widget *,
+.tr-map-widget *::before,
+.tr-map-widget *::after {
+    box-sizing: border-box;
+}
+
+.tr-map-widget--fullscreen {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tr-map-widget--embedded {
+    width: 100%;
+    height: 620px;
+    border-radius: var(--tr-radius);
+    border: 1px solid var(--tr-border);
+    box-shadow: var(--tr-shadow);
+    overflow: hidden;
+}
+
+.tr-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* -------------------------------------------------------------------
+   Compact Toolbar (~48-52px desktop, 2 compact swipeable rows mobile)
+   ------------------------------------------------------------------- */
+.tr-map-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.42rem 0.75rem;
+    min-height: 48px;
+    background: var(--tr-bg-secondary);
+    border-bottom: 1px solid var(--tr-border);
+    flex-shrink: 0;
+}
+
+.tr-toolbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.55rem;
+    min-width: 0;
+}
+
+.tr-focus-btn {
+    display: none;
+    appearance: none;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.28rem 0.68rem;
+    border-radius: 999px;
+    border: 1px solid rgba(212, 169, 106, 0.55);
+    background: var(--tr-gold-bg);
+    color: var(--tr-gold);
+    font-family: inherit;
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.tr-focus-btn:hover {
+    background: var(--tr-gold);
+    color: #0a0e27;
+}
+
+.tr-map-widget.is-mobile-focus .tr-focus-btn {
+    background: var(--tr-bg-tertiary);
+    border-color: var(--tr-border-strong);
+    color: var(--tr-text-primary);
+}
+
+.tr-map-widget.is-mobile-focus .tr-focus-btn:hover {
+    border-color: var(--tr-gold);
+    color: var(--tr-gold);
+}
+
+.tr-brand-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.5rem;
+    border-radius: 6px;
+    background: var(--tr-gold-bg);
+    border: 1px solid rgba(212, 169, 106, 0.4);
+    color: var(--tr-gold);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tr-toolbar-groups {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-end;
+}
+
+.tr-chip-row {
+    display: flex;
+    align-items: center;
+    gap: 0.28rem;
+    flex-wrap: nowrap;
+}
+
+.tr-toolbar-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--tr-border-strong);
+    flex-shrink: 0;
+}
+
+.tr-chip {
+    appearance: none;
+    border: 1px solid var(--tr-border);
+    background: var(--tr-bg-tertiary);
+    color: var(--tr-text-secondary);
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.77rem;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.tr-chip:hover {
+    border-color: var(--tr-border-strong);
+    color: var(--tr-text-primary);
+}
+
+.tr-chip.is-active {
+    background: var(--tr-gold-bg);
+    border-color: var(--tr-gold);
+    color: var(--tr-text-primary);
+}
+
+.tr-chip-count {
+    opacity: 0.72;
+    font-size: 0.7rem;
+    margin-left: 0.2rem;
+}
+
+/* -------------------------------------------------------------------
+   Main Stage + Right Info Panel
+   ------------------------------------------------------------------- */
+.tr-map-workspace {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    position: relative;
+}
+
+.tr-map-stage {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    background: #0d1629;
+}
+
+.tr-map-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Bottom HUD */
+.tr-map-hud {
+    position: absolute;
+    left: 10px;
+    bottom: 28px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    pointer-events: none;
+}
+
+.tr-hud-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.tr-hud-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.58rem;
+    border-radius: 7px;
+    background: var(--tr-bg-elevated);
+    border: 1px solid var(--tr-border-strong);
+    backdrop-filter: blur(8px);
+    font-size: 0.72rem;
+    color: var(--tr-text-secondary);
+}
+
+.tr-hud-pill[hidden] {
+    display: none;
+}
+
+.tr-hint-pill {
+    border-color: rgba(212, 169, 106, 0.52);
+    color: var(--tr-text-primary);
+}
+
+.tr-hud-btn {
+    pointer-events: auto;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.tr-hud-btn:hover {
+    border-color: var(--tr-gold);
+    color: var(--tr-text-primary);
+}
+
+.tr-hud-btn.is-active {
+    border-color: var(--tr-gold);
+    color: var(--tr-gold);
+}
+
+.tr-zoom-val {
+    font-weight: 600;
+    color: var(--tr-gold);
+    font-variant-numeric: tabular-nums;
+}
+
+.tr-zoom-detail.is-overzoom {
+    color: #fbbf24;
+}
+
+.tr-legend-pill {
+    gap: 0.65rem;
+    font-size: 0.7rem;
+}
+
+.tr-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.tr-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1.5px solid #0a0e27;
+}
+
+.tr-dot-resort { background: var(--tr-gold); }
+.tr-dot-island { background: var(--tr-island); }
+.tr-dot-airport { background: var(--tr-airport); }
+
+.tr-map-toast {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 6;
+    padding: 0.45rem 0.75rem;
+    border-radius: 7px;
+    background: rgba(175, 48, 48, 0.94);
+    color: #fff;
+    font-size: 0.78rem;
+}
+
+/* MapLibre dark controls inside widget */
+.tr-map-widget .maplibregl-ctrl-group {
+    background: var(--tr-bg-elevated) !important;
+    border: 1px solid var(--tr-border-strong) !important;
+}
+
+.tr-map-widget .maplibregl-ctrl-group button + button {
+    border-top: 1px solid var(--tr-border) !important;
+}
+
+.tr-map-widget .maplibregl-ctrl-icon {
+    filter: invert(0.9);
+}
+
+.tr-map-widget .maplibregl-ctrl-scale {
+    background: var(--tr-bg-elevated) !important;
+    color: var(--tr-text-secondary) !important;
+    border-color: var(--tr-text-secondary) !important;
+}
+
+.tr-map-widget .maplibregl-ctrl-attrib {
+    background: var(--tr-bg-elevated) !important;
+    color: var(--tr-text-secondary) !important;
+    border: 1px solid var(--tr-border) !important;
+    border-radius: 7px !important;
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+}
+
+.tr-map-widget .maplibregl-ctrl-attrib a {
+    color: var(--tr-text-primary) !important;
+}
+
+.tr-map-widget .maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button {
+    background-color: transparent !important;
+    filter: invert(0.9);
+}
+
+/* -------------------------------------------------------------------
+   Right Info Panel (Desktop 390px) & 2-state Bottom Sheet (Mobile)
+   ------------------------------------------------------------------- */
+.tr-info-panel {
+    width: 390px;
+    flex-shrink: 0;
+    background: var(--tr-bg-secondary);
+    border-left: 1px solid var(--tr-border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.tr-info-panel[hidden] {
+    display: none;
+}
+
+.tr-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.7rem 0.95rem;
+    border-bottom: 1px solid var(--tr-border);
+    flex-shrink: 0;
+}
+
+.tr-panel-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--tr-gold);
+    background: var(--tr-gold-bg);
+    border: 1px solid rgba(212, 169, 106, 0.36);
+    padding: 0.2rem 0.52rem;
+    border-radius: 999px;
+}
+
+.tr-panel-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.tr-panel-expand-btn,
+.tr-panel-close-btn {
+    appearance: none;
+    background: var(--tr-bg-tertiary);
+    border: 1px solid var(--tr-border);
+    color: var(--tr-text-secondary);
+    height: 28px;
+    border-radius: 7px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.tr-panel-expand-btn {
+    display: none;
+    padding: 0 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.tr-panel-close-btn {
+    width: 28px;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.tr-panel-expand-btn:hover,
+.tr-panel-close-btn:hover {
+    color: var(--tr-text-primary);
+    border-color: var(--tr-border-strong);
+}
+
+.tr-panel-body {
+    padding: 0.85rem 0.95rem calc(1.15rem + env(safe-area-inset-bottom, 0px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.tr-panel-title {
+    margin: 0;
+    font-size: 1.16rem;
+    font-weight: 700;
+    line-height: 1.24;
+    color: var(--tr-text-primary);
+}
+
+.tr-panel-verdict {
+    margin: -0.35rem 0 0;
+    font-size: 0.83rem;
+    color: var(--tr-gold);
+    font-weight: 500;
+}
+
+.tr-panel-photo-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--tr-radius-sm);
+    overflow: hidden;
+    background: var(--tr-bg-tertiary);
+    border: 1px solid var(--tr-border);
+    flex-shrink: 0;
+}
+
+.tr-panel-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 2x2 Key Facts Grid */
+.tr-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+}
+
+.tr-fact-card {
+    padding: 0.45rem 0.58rem;
+    border-radius: var(--tr-radius-sm);
+    background: var(--tr-bg-tertiary);
+    border: 1px solid var(--tr-border);
+}
+
+.tr-fact-card--interactive {
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.tr-fact-card--interactive:hover,
+.tr-fact-card--interactive:focus-visible {
+    border-color: var(--tr-gold);
+    background: rgba(212, 169, 106, 0.11);
+    outline: none;
+}
+
+.tr-fact-arrow {
+    color: var(--tr-gold);
+    font-weight: 700;
+}
+
+.tr-fact-targets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.28rem;
+    margin-top: 0.16rem;
+}
+
+.tr-fact-target-btn {
+    appearance: none;
+    padding: 0.16rem 0.42rem;
+    border-radius: 5px;
+    border: 1px solid rgba(212, 169, 106, 0.42);
+    background: rgba(212, 169, 106, 0.1);
+    color: var(--tr-text-primary);
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.25;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.tr-fact-target-btn:hover,
+.tr-fact-target-btn:focus-visible {
+    border-color: var(--tr-gold);
+    background: var(--tr-gold);
+    color: #0a0e27;
+    outline: none;
+}
+
+.tr-fact-label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--tr-text-muted);
+    font-weight: 600;
+    margin-bottom: 0.14rem;
+}
+
+.tr-fact-value {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--tr-text-primary);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Panel Inner Tabs */
+.tr-panel-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.3rem;
+    padding: 0.22rem;
+    border-radius: var(--tr-radius-sm);
+    background: var(--tr-bg-primary);
+    border: 1px solid var(--tr-border);
+}
+
+.tr-tab-btn {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--tr-text-muted);
+    padding: 0.34rem 0.35rem;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.74rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tr-tab-btn:hover {
+    color: var(--tr-text-primary);
+}
+
+.tr-tab-btn.is-active {
+    background: var(--tr-bg-tertiary);
+    color: var(--tr-gold);
+}
+
+.tr-tab-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.tr-tab-pane[hidden] {
+    display: none;
+}
+
+.tr-panel-desc {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--tr-text-secondary);
+}
+
+.tr-callout {
+    padding: 0.52rem 0.68rem;
+    border-radius: var(--tr-radius-sm);
+    background: var(--tr-bg-tertiary);
+    border: 1px solid var(--tr-border);
+}
+
+.tr-callout--good {
+    border-left: 3px solid var(--tr-gold);
+}
+
+.tr-callout--warn {
+    border-left: 3px solid var(--tr-airport);
+}
+
+.tr-callout-title {
+    display: block;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: var(--tr-text-muted);
+    margin-bottom: 0.18rem;
+}
+
+.tr-callout--good .tr-callout-title { color: var(--tr-gold); }
+.tr-callout--warn .tr-callout-title { color: var(--tr-airport); }
+
+.tr-callout-text {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--tr-text-secondary);
+}
+
+/* Transfer table inside Airport card */
+.tr-transfer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.38rem;
+}
+
+.tr-transfer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.44rem 0.62rem;
+    border-radius: 7px;
+    background: var(--tr-bg-tertiary);
+    border: 1px solid var(--tr-border);
+    font-size: 0.79rem;
+}
+
+.tr-transfer-row--interactive {
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.tr-transfer-row--interactive:hover,
+.tr-transfer-row--interactive:focus-visible {
+    border-color: var(--tr-gold);
+    background: rgba(212, 169, 106, 0.11);
+    outline: none;
+}
+
+.tr-transfer-dest {
+    color: var(--tr-text-primary);
+    font-weight: 500;
+}
+
+.tr-transfer-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38rem;
+    flex-shrink: 0;
+}
+
+.tr-transfer-time {
+    color: var(--tr-gold);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tr-transfer-arrow {
+    color: var(--tr-text-muted);
+    font-size: 0.82rem;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.tr-transfer-row--interactive:hover .tr-transfer-arrow {
+    color: var(--tr-gold);
+    transform: translateX(2px);
+}
+
+/* Inline hub triggers that jump to a destination on the map */
+.tr-inline-map-link {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(212, 169, 106, 0.65);
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.tr-inline-map-link:hover,
+.tr-inline-map-link:focus-visible {
+    color: #d4a96a;
+    text-decoration-color: #d4a96a;
+    outline: none;
+}
+
+/* Guides block */
+.tr-guides-block {
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--tr-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.tr-guides-heading {
+    margin: 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--tr-text-muted);
+    font-weight: 700;
+}
+
+.tr-guides-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.36rem;
+}
+
+.tr-guide-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.48rem 0.62rem;
+    border-radius: var(--tr-radius-sm);
+    background: var(--tr-bg-tertiary);
+    border: 1px solid var(--tr-border);
+    color: var(--tr-text-primary);
+    text-decoration: none;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.tr-guide-link:hover {
+    border-color: var(--tr-gold);
+    background: rgba(212, 169, 106, 0.09);
+}
+
+.tr-guide-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+}
+
+.tr-guide-tag {
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--tr-gold);
+    font-weight: 700;
+}
+
+.tr-guide-title {
+    font-size: 0.79rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--tr-text-primary);
+}
+
+.tr-guide-arrow {
+    color: var(--tr-text-muted);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.tr-hub-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.2rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--tr-radius-sm);
+    background: var(--tr-gold-bg);
+    border: 1px solid rgba(212, 169, 106, 0.45);
+    color: var(--tr-gold);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tr-hub-cta:hover {
+    background: var(--tr-gold);
+    color: #0a0e27;
+}
+
+.tr-panel-coords {
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.71rem;
+    color: var(--tr-text-muted);
+}
+
+/* Background scroll lock when Mobile Map Focus is active */
+html.tr-map-scroll-lock,
+body.tr-map-scroll-lock {
+    overflow: hidden !important;
+    overscroll-behavior: none !important;
+}
+
+/* -------------------------------------------------------------------
+   Responsive / Mobile (2 compact horizontal scroll rows + Map Focus + 2-state sheet)
+   ------------------------------------------------------------------- */
+@media (max-width: 960px) {
+    .tr-map-widget--embedded {
+        height: clamp(420px, 60vh, 490px);
+    }
+
+    .tr-map-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.32rem;
+        padding: 0.38rem 0.55rem;
+    }
+
+    .tr-toolbar-left {
+        width: 100%;
+    }
+
+    .tr-toolbar-groups {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.3rem;
+        justify-content: flex-start;
+    }
+
+    .tr-toolbar-divider {
+        display: none;
+    }
+
+    .tr-chip-row {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1px;
+    }
+
+    .tr-chip-row::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .tr-map-widget--mobile-focus-enabled .tr-focus-btn {
+        display: inline-flex;
+    }
+
+    .tr-map-widget.is-mobile-focus {
+        position: fixed;
+        top: var(--tr-header-offset, 70px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100vh - var(--tr-header-offset, 70px));
+        height: calc(100dvh - var(--tr-header-offset, 70px));
+        z-index: 900;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .tr-map-workspace {
+        flex-direction: column;
+    }
+
+    .tr-info-panel {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 45%;
+        min-height: 210px;
+        max-height: calc(100% - 44px);
+        border-left: none;
+        border-top: 1px solid var(--tr-border-strong);
+        border-radius: 14px 14px 0 0;
+        box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.55);
+        transition: height 0.22s ease;
+    }
+
+    .tr-info-panel.is-expanded {
+        height: 83%;
+    }
+
+    .tr-info-panel:not(.is-expanded) .tr-panel-photo-wrap,
+    .tr-info-panel:not(.is-expanded) .tr-panel-tabs,
+    .tr-info-panel:not(.is-expanded) .tr-tab-pane,
+    .tr-info-panel:not(.is-expanded) .tr-guides-block,
+    .tr-info-panel:not(.is-expanded) .tr-panel-coords {
+        display: none;
+    }
+
+    .tr-panel-expand-btn {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .tr-map-widget.is-mobile-focus [data-role="scroll-toggle"] {
+        display: none;
+    }
+
+    .tr-map-hud {
+        left: 8px;
+        bottom: calc(42px + env(safe-area-inset-bottom, 0px));
+        max-width: calc(100% - 108px);
+    }
+
+    .tr-map-workspace.has-open-panel .tr-map-hud {
+        bottom: calc(45% + 8px);
+        max-width: calc(100% - 16px);
+    }
+
+    .tr-map-widget .maplibregl-ctrl-bottom-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin: 0 8px calc(6px + env(safe-area-inset-bottom, 0px)) 8px;
+        max-width: calc(100% - 16px);
+    }
+
+    .tr-map-widget .maplibregl-ctrl-bottom-right .maplibregl-ctrl {
+        margin: 0 !important;
+    }
+
+    .tr-map-widget .maplibregl-ctrl-attrib.maplibregl-compact {
+        min-height: 22px;
+        padding: 2px 24px 2px 7px;
+    }
+
+    .tr-map-widget .maplibregl-ctrl-attrib.maplibregl-compact-show {
+        padding: 2px 26px 2px 7px;
+    }
+}

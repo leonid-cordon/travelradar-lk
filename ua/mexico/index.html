@@ -242,6 +242,8 @@
   ]
 }
 </script>
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../modules/interactive-map/css/interactive-map.css">
 </head>
 
 <body data-page="mexico">
@@ -404,136 +406,7 @@
                 <p class="mh-section-lead">Оберіть головний ризик поїздки, а ми підкажемо потрібний гайд або наступний крок для планування.</p>
             </header>
 
-            <!-- Mobile zone chips (hidden on desktop via CSS) -->
-            <div class="mh-zone-chips" role="group" aria-label="Оберіть зону">
-                <button class="mh-zone-chip" data-zone="cancun-hz" aria-pressed="false">Hotel Zone</button>
-                <button class="mh-zone-chip" data-zone="cancun-dt" aria-pressed="false">Downtown Cancun</button>
-                <button class="mh-zone-chip" data-zone="isla-mujeres" aria-pressed="false">Isla Mujeres</button>
-                <button class="mh-zone-chip" data-zone="playa" aria-pressed="false">Playa del Carmen</button>
-                <button class="mh-zone-chip" data-zone="cozumel" aria-pressed="false">Cozumel</button>
-                <button class="mh-zone-chip" data-zone="riviera-maya" aria-pressed="false">Riviera Maya</button>
-                <button class="mh-zone-chip" data-zone="tulum" aria-pressed="false">Tulum</button>
-                <button class="mh-zone-chip" data-zone="airport" aria-pressed="false">Cancun Airport</button>
-            </div>
-
-            <div class="mh-map-layout">
-                <!-- SVG Карта -->
-                <div class="mh-map-sticky">
-                    <div class="mh-map-wrap">
-                        <svg viewBox="0 0 520 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Карта вибору бази: Cancun, Riviera Maya і Tulum">
-                            <title>Карта карибського узбережжя Mexico: оберіть зону</title>
-
-                            <!-- Water background -->
-                            <rect width="520" height="640" class="mh-map-water-fill"/>
-                            <rect x="24" y="24" width="472" height="592" rx="18" class="mh-route-panel"/>
-                            <text x="52" y="58" class="mh-map-title-text">База за логікою маршруту</text>
-
-                            <!-- Editorial coast cue -->
-                            <path d="M 330 52 C 306 98 318 142 300 198 C 282 256 322 303 292 364 C 260 432 282 486 248 570"
-                                  class="mh-route-coast" pointer-events="none"/>
-
-                            <!-- Main route and ferry links -->
-                            <path d="M 112 168 C 150 187 220 187 320 168 C 272 199 182 221 116 255 C 156 291 238 303 278 328 C 244 358 148 370 116 420 C 138 472 174 505 196 552"
-                                  class="mh-route-main" pointer-events="none"/>
-                            <path d="M 320 168 C 350 126 382 96 402 82"
-                                  class="mh-route-branch" pointer-events="none"/>
-                            <path d="M 116 420 C 196 407 286 407 365 420"
-                                  class="mh-route-branch" pointer-events="none"/>
-                            <g pointer-events="none">
-                                <text x="78" y="212" class="mh-map-title-text">Кластер Cancun</text>
-                                <text x="286" y="276" class="mh-map-title-text">Курортне узбережжя</text>
-                                <text x="345" y="372" class="mh-map-title-text">Пором із Playa del Carmen</text>
-                                <text x="168" y="505" class="mh-map-title-text">Довший трансфер</text>
-                            </g>
-
-                            <!-- === Zone hit areas (transparent, for click) === -->
-
-                            <!-- Зона Cancun Airport -->
-                            <g class="mh-map-zone" data-zone="airport" tabindex="0" role="button" aria-label="Зона Cancun Airport">
-                                <rect x="62" y="226" width="232" height="72" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="70" y="232" width="216" height="60" rx="14" class="mh-zone-area mh-route-node-card" id="dot-airport"/>
-                                <circle cx="116" cy="262" r="9" class="mh-route-marker"/>
-                                <text x="136" y="258" class="mh-zone-label">Cancun Airport</text>
-                                <text x="136" y="276" class="mh-zone-label-small">Старт після прильоту</text>
-                            </g>
-
-                            <!-- Cancun Hotel Zone -->
-                            <g class="mh-map-zone" data-zone="cancun-hz" tabindex="0" role="button" aria-label="Cancun Hotel Zone">
-                                <rect x="292" y="132" width="184" height="72" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="300" y="138" width="168" height="60" rx="14" class="mh-zone-area mh-route-node-card" id="dot-cancun-hz"/>
-                                <circle cx="330" cy="168" r="8" class="mh-route-marker"/>
-                                <text x="350" y="164" class="mh-zone-label">Hotel Zone</text>
-                                <text x="350" y="182" class="mh-zone-label-small">Пляж + простий трансфер</text>
-                            </g>
-
-                            <!-- Downtown Cancun -->
-                            <g class="mh-map-zone" data-zone="cancun-dt" tabindex="0" role="button" aria-label="Downtown Cancun">
-                                <rect x="66" y="132" width="216" height="72" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="74" y="138" width="200" height="60" rx="14" class="mh-zone-area mh-route-node-card" id="dot-cancun-dt"/>
-                                <circle cx="112" cy="168" r="8" class="mh-route-marker"/>
-                                <text x="132" y="164" class="mh-zone-label">Downtown Cancun</text>
-                                <text x="132" y="182" class="mh-zone-label-small">Бюджет + місцева їжа</text>
-                            </g>
-
-                            <!-- Isla Mujeres -->
-                            <g class="mh-map-zone" data-zone="isla-mujeres" tabindex="0" role="button" aria-label="Isla Mujeres">
-                                <rect x="318" y="52" width="174" height="70" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="326" y="58" width="158" height="58" rx="14" class="mh-zone-area mh-route-node-card" id="dot-isla-mujeres"/>
-                                <circle cx="402" cy="87" r="8" class="mh-route-marker"/>
-                                <text x="348" y="83" class="mh-zone-label">Isla Mujeres</text>
-                                <text x="348" y="101" class="mh-zone-label-small">Пором із Cancun</text>
-                            </g>
-
-                            <!-- Playa del Carmen -->
-                            <g class="mh-map-zone" data-zone="playa" tabindex="0" role="button" aria-label="Playa del Carmen">
-                                <rect x="68" y="388" width="262" height="76" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="76" y="394" width="246" height="64" rx="14" class="mh-zone-area mh-route-node-card" id="dot-playa"/>
-                                <circle cx="116" cy="426" r="8" class="mh-route-marker"/>
-                                <text x="136" y="422" class="mh-zone-label">Playa del Carmen</text>
-                                <text x="136" y="440" class="mh-zone-label-small">Місто для прогулянок + виїзди</text>
-                            </g>
-
-                            <!-- Cozumel -->
-                            <g class="mh-map-zone" data-zone="cozumel" tabindex="0" role="button" aria-label="Cozumel">
-                                <rect x="332" y="390" width="166" height="70" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="340" y="396" width="150" height="58" rx="14" class="mh-zone-area mh-route-node-card" id="dot-cozumel"/>
-                                <circle cx="368" cy="425" r="8" class="mh-route-marker"/>
-                                <text x="388" y="421" class="mh-zone-label">Cozumel</text>
-                                <text x="388" y="439" class="mh-zone-label-small">Острів для дайвінгу</text>
-                            </g>
-
-                            <!-- Riviera Maya (stretch label) -->
-                            <g class="mh-map-zone" data-zone="riviera-maya" tabindex="0" role="button" aria-label="Курорти Riviera Maya">
-                                <rect x="238" y="292" width="244" height="76" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="246" y="298" width="228" height="64" rx="14" class="mh-zone-area mh-route-node-card" id="dot-riviera-maya"/>
-                                <circle cx="278" cy="330" r="8" class="mh-route-marker"/>
-                                <text x="298" y="326" class="mh-zone-label">Курорти Riviera Maya</text>
-                                <text x="298" y="344" class="mh-zone-label-small">Тиха зона all-inclusive</text>
-                            </g>
-
-                            <!-- Tulum -->
-                            <g class="mh-map-zone" data-zone="tulum" tabindex="0" role="button" aria-label="Tulum">
-                                <rect x="150" y="520" width="222" height="76" rx="14" fill="transparent" class="mh-zone-hit"/>
-                                <rect x="158" y="526" width="206" height="64" rx="14" class="mh-zone-area mh-route-node-card" id="dot-tulum"/>
-                                <circle cx="196" cy="558" r="8" class="mh-route-marker"/>
-                                <text x="216" y="554" class="mh-zone-label">Tulum</text>
-                                <text x="216" y="572" class="mh-zone-label-small">Бутик-формат південніше</text>
-                            </g>
-
-                        </svg>
-                    </div>
-                    <p class="mh-map-caption">Порядок маршруту, не точна географія.</p>
-                </div>
-
-                <!-- Zone detail card -->
-                <div class="mh-zone-card" id="mh-zone-card" aria-live="polite" aria-atomic="true">
-                    <div class="mh-zone-card-placeholder" id="mh-zone-placeholder">
-                        <span class="mh-zone-card-placeholder-icon" aria-hidden="true">📍</span>
-                        <p>Натисніть зону на карті, щоб побачити плюси району та важливі нюанси.</p>
-                    </div>
-                    <div id="mh-zone-content" hidden></div>
-                </div>
-            </div>
+            <div id="map-lab-root" lang="en" data-preset="mexico" data-embedded="true" data-mobile-focus="true" data-link-lang="ua"></div>
         </div>
     </section>
 
@@ -555,7 +428,7 @@
                     <h3 class="mh-style-card-title">Перша поїздка в Cancun</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Cancun Hotel Zone</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="cancun-hotel-zone">Cancun Hotel Zone</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -569,7 +442,7 @@
                     <h3 class="mh-style-card-title">Сімейний курортний відпочинок</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Cancun Hotel Zone або Riviera Maya</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="cancun-hotel-zone">Cancun Hotel Zone</button> або <button type="button" class="tr-inline-map-link" data-map-focus="playa-del-carmen">Riviera Maya</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -583,7 +456,7 @@
                     <h3 class="mh-style-card-title">All-inclusive тільки для дорослих</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Riviera Maya або Cancun Hotel Zone</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="puerto-morelos">Riviera Maya</button> або <button type="button" class="tr-inline-map-link" data-map-focus="cancun-hotel-zone">Cancun Hotel Zone</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -597,7 +470,7 @@
                     <h3 class="mh-style-card-title">Поїздка з контролем бюджету</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Downtown Cancun або Playa del Carmen</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="cancun-downtown">Downtown Cancun</button> або <button type="button" class="tr-inline-map-link" data-map-focus="playa-del-carmen">Playa del Carmen</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -611,7 +484,7 @@
                     <h3 class="mh-style-card-title">Поїздка у стилі Tulum</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Tulum Beach Road</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="tulum">Tulum Beach Road</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -625,7 +498,7 @@
                     <h3 class="mh-style-card-title">Відпочинок заради пляжу</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Cancun Hotel Zone</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="cancun-hotel-zone">Cancun Hotel Zone</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -639,7 +512,7 @@
                     <h3 class="mh-style-card-title">Маршрут із частими виїздами</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Cancun Hotel Zone або Playa del Carmen</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="cancun-hotel-zone">Cancun Hotel Zone</button> або <button type="button" class="tr-inline-map-link" data-map-focus="playa-del-carmen">Playa del Carmen</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -653,7 +526,7 @@
                     <h3 class="mh-style-card-title">Виїзд на острів</h3>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Найкраща база</span>
-                        <span class="mh-style-row-val">Cancun Hotel Zone для Isla Mujeres або Playa del Carmen для Cozumel</span>
+                        <span class="mh-style-row-val"><button type="button" class="tr-inline-map-link" data-map-focus="cancun-hotel-zone">Cancun Hotel Zone</button> для <button type="button" class="tr-inline-map-link" data-map-focus="isla-mujeres">Isla Mujeres</button> або <button type="button" class="tr-inline-map-link" data-map-focus="playa-del-carmen">Playa del Carmen</button> для <button type="button" class="tr-inline-map-link" data-map-focus="cozumel">Cozumel</button></span>
                     </div>
                     <div class="mh-style-row">
                         <span class="mh-style-row-label">Спочатку читати</span>
@@ -1294,137 +1167,6 @@
 
 
         /* ---------------------------------------------------------------
-           ZONE DATA — Карта
-           --------------------------------------------------------------- */
-        var zones = {
-            'cancun-hz': {
-                name: 'Cancun Hotel Zone',
-                bestFor: 'Перша поїздка в Cancun, готелі на пляжі, короткий трансфер від аеропорту, проста логістика.',
-                watchOut: 'Маркетингові фото не завжди збігаються з реальним пляжем. На окремих ділянках бувають водорості або будівництво. Рівень шуму сильно залежить від блоку готелю.',
-                readFirst: { text: 'Найкращі готелі в Cancun 2026', href: '../content/best-hotels-cancun-2026' },
-                bookNext: { text: 'Читати шортлист готелів Cancun', href: '../content/best-hotels-cancun-2026', ext: false }
-            },
-            'cancun-dt': {
-                name: 'Downtown Cancun',
-                bestFor: 'Поїздки з фокусом на бюджет, місцеві ресторани та виїзди. Хороший варіант, якщо пляж біля дверей не головний критерій.',
-                watchOut: 'Немає прямого доступу до пляжу: до Hotel Zone або громадських пляжів потрібен автобус чи таксі.',
-                readFirst: { text: 'Бюджет Cancun 2026', href: '../content/cancun-budget-2026' },
-                bookNext: { text: 'Читати гайд по бюджету Cancun', href: '../content/cancun-budget-2026', ext: false }
-            },
-            'isla-mujeres': {
-                name: 'Isla Mujeres',
-                bestFor: 'Повільніша й спокійніша альтернатива Hotel Zone. Спокійна вода, гольф-кари, пляжні клуби.',
-                watchOut: 'Розклад порома обмежує повернення. Не найкращий варіант, якщо плануєте багато виїздів із Cancun.',
-                readFirst: { text: 'Cancun vs Tulum vs Playa del Carmen', href: '../content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay' },
-                // TODO: Add Cozumel vs Isla Mujeres article when published
-                bookNext: { text: 'Читати порівняння островів', href: '../content/cozumel-vs-isla-mujeres', ext: false }
-            },
-            'playa': {
-                name: 'Playa del Carmen',
-                bestFor: 'Місто для прогулянок, ресторани на 5th Avenue, пором на Cozumel, зручна база для виїздів по Riviera Maya.',
-                watchOut: 'Якість пляжу залежить від ділянки. Біля деяких готелів увечері шумніше. Для Cozumel перевірте близькість до порома.',
-                readFirst: { text: 'Cancun vs Tulum vs Playa del Carmen', href: '../content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay' },
-                bookNext: { text: 'Читати гайд по вибору бази', href: '../content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay', ext: false }
-            },
-            'cozumel': {
-                name: 'Cozumel',
-                bestFor: 'Дайвінг і снорклінг високого рівня, спокійний острівний темп, виїзд на день або 1-2 ночі подалі від натовпу.',
-                watchOut: 'Потрібен пором із Playa del Carmen. Краще як додаток на 1-2 ночі, а не головна база більшості поїздок.',
-                readFirst: { text: 'Cancun vs Tulum vs Playa del Carmen', href: '../content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay' },
-                bookNext: { text: 'Читати порівняння островів', href: '../content/cozumel-vs-isla-mujeres', ext: false }
-            },
-            'riviera-maya': {
-                name: 'Курорти Riviera Maya',
-                bestFor: 'All-inclusive тільки для дорослих, приватні ділянки пляжу, спокійний курортний формат між Cancun і Playa del Carmen.',
-                watchOut: 'Більш ізольовано, ніж Cancun Hotel Zone: до ресторанів поза курортом часто потрібне таксі. Влітку на деяких пляжах є ризик водоростей.',
-                readFirst: { text: 'Найкращі готелі в Cancun 2026', href: '../content/best-hotels-cancun-2026' },
-                bookNext: { text: 'Читати шортлист готелів Cancun', href: '../content/best-hotels-cancun-2026', ext: false }
-            },
-            'tulum': {
-                name: 'Tulum',
-                bestFor: 'Бутик-готелі, пляжні клуби й поїздки заради стилю. Сеноти поруч. Атмосфера джунглів біля пляжу.',
-                watchOut: 'Довший трансфер з аеропорту: 90-130 хвилин. Їжа й сервіси дорожчі. Для виїздів у бік Cancun менш зручно. Будівництво нового Tulum впливає на окремі райони.',
-                readFirst: { text: 'Cancun vs Tulum vs Playa del Carmen', href: '../content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay' },
-                bookNext: { text: 'Читати гайд по вибору бази', href: '../content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay', ext: false }
-            },
-            'airport': {
-                name: 'Cancun Airport (CUN)',
-                bestFor: 'Точка входу майже для всіх поїздок у Cancun, Riviera Maya і Tulum. Плануйте трансфер звідси.',
-                watchOut: 'Час трансферу до готелю повністю залежить від району: від 20 хвилин до Hotel Zone до 2+ годин до Tulum.',
-                readFirst: { text: 'Час трансферу за районами', href: '../content/cancun-airport-transfer-options' },
-                bookNext: { text: 'Читати гайд по трансферах з аеропорту', href: '../content/cancun-airport-transfer-options', ext: false }
-            }
-        };
-
-        /* ---------------------------------------------------------------
-           Карта zone interactivity
-           --------------------------------------------------------------- */
-        var zoneEls = document.querySelectorAll('.mh-map-zone');
-        var zoneChips = document.querySelectorAll('.mh-zone-chip');
-        var zonePlaceholder = document.getElementById('mh-zone-placeholder');
-        var zoneContent = document.getElementById('mh-zone-content');
-
-        function renderZone(key) {
-            var d = zones[key];
-            if (!d) return;
-
-            var html = '<span class="mh-result-scenario-label">' + escHtml(d.name) + '</span>' +
-                       '<h3 class="mh-zone-card-title">' + escHtml(d.name) + '</h3>' +
-                       '<div class="mh-zone-meta-row">' +
-                         '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Найкраще</span><span class="mh-zone-meta-val">' + escHtml(d.bestFor) + '</span></div>' +
-                         '<div class="mh-zone-meta-item"><span class="mh-zone-meta-label">Врахувати</span><span class="mh-zone-meta-val">' + escHtml(d.watchOut) + '</span></div>' +
-                       '</div>' +
-                       '<div class="mh-zone-card-actions">' +
-                         '<a href="' + d.readFirst.href + '" class="mh-btn mh-btn-ghost">Спочатку читати</a>' +
-                         '<a href="' + d.bookNext.href + '" class="mh-btn mh-btn-primary"' + (d.bookNext.ext ? ' target="_blank" rel="sponsored nofollow noopener"' : '') + '>' + escHtml(d.bookNext.text) + '</a>' +
-                       '</div>';
-
-            zoneContent.innerHTML = html;
-            zoneContent.hidden = false;
-            zonePlaceholder.hidden = true;
-
-            // Highlight the corresponding SVG element
-            document.querySelectorAll('.mh-zone-area').forEach(function (el) {
-                el.classList.remove('is-active');
-            });
-            var dotEl = document.getElementById('dot-' + key);
-            if (dotEl) dotEl.classList.add('is-active');
-        }
-
-        function activateZone(key) {
-            renderZone(key);
-            // Sync chips
-            zoneChips.forEach(function (c) {
-                c.setAttribute('aria-pressed', c.getAttribute('data-zone') === key ? 'true' : 'false');
-                c.classList.toggle('is-active', c.getAttribute('data-zone') === key);
-            });
-            // Sync SVG zone groups
-            zoneEls.forEach(function (el) {
-                var active = el.getAttribute('data-zone') === key;
-                el.setAttribute('aria-expanded', active ? 'true' : 'false');
-            });
-        }
-
-        zoneEls.forEach(function (el) {
-            el.addEventListener('click', function () {
-                activateZone(this.getAttribute('data-zone'));
-            });
-            el.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    activateZone(this.getAttribute('data-zone'));
-                }
-            });
-        });
-
-        zoneChips.forEach(function (chip) {
-            chip.addEventListener('click', function () {
-                activateZone(this.getAttribute('data-zone'));
-            });
-        });
-
-
-        /* ---------------------------------------------------------------
            Utility: escape HTML
            --------------------------------------------------------------- */
         function escHtml(str) {
@@ -1454,5 +1196,11 @@
     })();
     </script>
 
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="../../modules/interactive-map/js/config.js"></script>
+    <script src="../../modules/interactive-map/js/guides.js"></script>
+    <script src="../../modules/interactive-map/js/panel.js"></script>
+    <script src="../../modules/interactive-map/js/map.js"></script>
+    <script src="../../modules/interactive-map/js/app.js"></script>
 </body>
 </html>
