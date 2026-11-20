@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-19T01:48:20.615Z",
-  "count": 132,
+  "generated_at": "2026-11-20T11:38:24.509Z",
+  "count": 133,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -1944,6 +1944,39 @@
       "date_published": "2026-04-25T12:00:00+00:00",
       "date_modified": "2026-04-25T12:00:00+00:00",
       "search_text": "cancun vs tulum vs playa del carmen де зупинитися в мексиці пляжі ціни атмосфера нічне життя та логістика практичне порівняння трьох головних баз рив єри майя neighborhoods"
+    },
+    {
+      "slug": "caribbean-hotel-booking-checklist",
+      "lang": "uk",
+      "primary_section": "stay",
+      "section_label": "Де зупинитися",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "advice",
+      "tags": [
+        "booking-checklist",
+        "hotel-mistakes",
+        "all-inclusive",
+        "budget",
+        "airport-transfer",
+        "hurricane-season"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Повний чек-ліст бронювання готелю на Карибах: харчування, збори і трансфери",
+      "description": "Порівнюйте готелі на Карибах за реальною вартістю за тиждень: вибір між AI та EP для кожного острова, 20–32% податків і зборів, час трансферу та умови скасування в сезон ураганів.",
+      "url": "https://travelradarlk.com/ua/content/caribbean-hotel-booking-checklist",
+      "image": "https://travelradarlk.com/assets/images/content/caribbean-hotel-booking-checklist/card_1200x600.jpg",
+      "date_published": "2026-11-20T12:00:00+00:00",
+      "date_modified": "2026-11-20T12:00:00+00:00",
+      "search_text": "повний чек-ліст бронювання готелю на карибах харчування збори і трансфери порівнюйте готелі на карибах за реальною вартістю за тиждень вибір між ai та ep для кожного острова 20 32 податків і зборів час трансферу та умови скасування в сезон ураганів booking-checklist hotel-mistakes all-inclusive budget airport-transfer hurricane-season"
     },
     {
       "slug": "caribbean-island-comparison",
