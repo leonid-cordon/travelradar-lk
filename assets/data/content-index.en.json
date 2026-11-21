@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T20:15:11.188Z",
-  "count": 136,
+  "generated_at": "2026-11-21T23:33:18.704Z",
+  "count": 137,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2078,6 +2078,38 @@
       "date_published": "2026-11-21T12:00:00+00:00",
       "date_modified": "2026-11-21T12:00:00+00:00",
       "search_text": "caribbean island hopping guide ferries regional flights and routes that actually work which caribbean island chains connect cleanly by ferry why cross-basin flights detour through miami real port fees and when a cruise beats diy hopping island-trip flights itinerary visa-entry budget day-trips"
+    },
+    {
+      "slug": "caribbean-regional-esim-guide",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "esim",
+        "island-trip",
+        "budget",
+        "money"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Best eSIM for a Caribbean Cruise: Ports, Sea Days & Island Hopping (2026)",
+      "description": "Compare Saily, Airalo, GigSky, Saily Cruise, Yesim, and Holafly for Caribbean cruises and island hopping against U.S./Canadian roaming and ship Wi-Fi.",
+      "url": "https://travelradarlk.com/en/content/caribbean-regional-esim-guide",
+      "image": "https://travelradarlk.com/assets/images/content/caribbean-regional-esim-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-22T12:00:00+00:00",
+      "search_text": "best esim for a caribbean cruise ports sea days island hopping 2026 compare saily airalo gigsky saily cruise yesim and holafly for caribbean cruises and island hopping against u s canadian roaming and ship wi-fi esim island-trip budget money"
     },
     {
       "slug": "cenotes-near-cancun-playa-tulum",

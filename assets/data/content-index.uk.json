@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T20:15:11.749Z",
-  "count": 136,
+  "generated_at": "2026-11-21T23:33:19.264Z",
+  "count": 137,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2078,6 +2078,38 @@
       "date_published": "2026-11-21T12:00:00+00:00",
       "date_modified": "2026-11-21T12:00:00+00:00",
       "search_text": "подорожі островами карибів пороми регіональні рейси й маршрути які справді працюють які карибські острови зручно поєднувати поромами чому перельоти між далекими островами ведуть через маямі реальні портові збори та коли круїз вигідніший island-trip flights itinerary visa-entry budget day-trips"
+    },
+    {
+      "slug": "caribbean-regional-esim-guide",
+      "lang": "uk",
+      "primary_section": "planning",
+      "section_label": "Планування і бюджет",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "comparison",
+      "tags": [
+        "esim",
+        "island-trip",
+        "budget",
+        "money"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "book",
+      "title": "Найкраща eSIM для круїзу Карибами: порти, дні в морі та переїзди між островами (2026)",
+      "description": "Порівнюємо Saily, Airalo, GigSky, Saily Cruise, Yesim і Holafly для карибських круїзів та переїздів між островами проти роумінгу операторів США/Канади й бортового Wi-Fi.",
+      "url": "https://travelradarlk.com/ua/content/caribbean-regional-esim-guide",
+      "image": "https://travelradarlk.com/assets/images/content/caribbean-regional-esim-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-22T12:00:00+00:00",
+      "search_text": "найкраща esim для круїзу карибами порти дні в морі та переїзди між островами 2026 порівнюємо saily airalo gigsky saily cruise yesim і holafly для карибських круїзів та переїздів між островами проти роумінгу операторів сша канади й бортового wi-fi esim island-trip budget money"
     },
     {
       "slug": "cenotes-near-cancun-playa-tulum",
