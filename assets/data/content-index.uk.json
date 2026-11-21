@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T14:43:58.482Z",
-  "count": 135,
+  "generated_at": "2026-11-21T20:15:11.749Z",
+  "count": 136,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2556,6 +2556,40 @@
       "date_published": "2026-04-27T12:00:00+00:00",
       "date_modified": "2026-04-27T12:00:00+00:00",
       "search_text": "поїздка на isla mujeres з канкуна пором пляжі та типові помилки практичний гід по поїздці на isla mujeres з канкуна термінали порома playa norte самостійно чи туром і помилки через які день виходить слабшим isla-mujeres day-trips island-trip"
+    },
+    {
+      "slug": "jamaica-travel-guide",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "all-inclusive",
+        "boutique-hotel",
+        "beaches",
+        "day-trips",
+        "airport-transfer",
+        "budget",
+        "neighborhoods"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Монтего-Бей, Негріл чи Очо-Ріос: де зупинитися на Ямайці (2026)",
+      "description": "Порівняння Монтего-Бей, Негріла, Очо-Ріос, Порт-Антоніо та Південного узбережжя: правила безпеки поза курортом, водоспади, джерк-гриль і бюджети 2026 року з податками.",
+      "url": "https://travelradarlk.com/ua/content/jamaica-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/jamaica-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-21T12:00:00+00:00",
+      "search_text": "монтего-бей негріл чи очо-ріос де зупинитися на ямайці 2026 порівняння монтего-бей негріла очо-ріос порт-антоніо та південного узбережжя правила безпеки поза курортом водоспади джерк-гриль і бюджети 2026 року з податками all-inclusive boutique-hotel beaches day-trips airport-transfer budget neighborhoods"
     },
     {
       "slug": "las-coloradas-pink-lake-day-trip",

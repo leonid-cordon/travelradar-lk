@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T14:43:57.917Z",
-  "count": 135,
+  "generated_at": "2026-11-21T20:15:11.188Z",
+  "count": 136,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2556,6 +2556,40 @@
       "date_published": "2026-04-27T12:00:00+00:00",
       "date_modified": "2026-04-27T12:00:00+00:00",
       "search_text": "isla mujeres day trip from cancun ferry beaches and mistakes a practical isla mujeres day trip guide from cancun ferry terminals playa norte diy vs tour and the mistakes that waste the day isla-mujeres day-trips island-trip"
+    },
+    {
+      "slug": "jamaica-travel-guide",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "all-inclusive",
+        "boutique-hotel",
+        "beaches",
+        "day-trips",
+        "airport-transfer",
+        "budget",
+        "neighborhoods"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Montego Bay vs Negril vs Ocho Rios: Where to Stay in Jamaica (2026)",
+      "description": "Compare Montego Bay, Negril, Ocho Rios, Port Antonio, and the South Coast — plus off-resort safety rules, waterfalls, jerk pits, and all-in 2026 budgets.",
+      "url": "https://travelradarlk.com/en/content/jamaica-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/jamaica-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-21T12:00:00+00:00",
+      "search_text": "montego bay vs negril vs ocho rios where to stay in jamaica 2026 compare montego bay negril ocho rios port antonio and the south coast plus off-resort safety rules waterfalls jerk pits and all-in 2026 budgets all-inclusive boutique-hotel beaches day-trips airport-transfer budget neighborhoods"
     },
     {
       "slug": "las-coloradas-pink-lake-day-trip",
