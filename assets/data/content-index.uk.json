@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T00:27:57.033Z",
-  "count": 134,
+  "generated_at": "2026-11-21T14:43:58.482Z",
+  "count": 135,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -29,6 +29,40 @@
       "date_published": "2026-06-02T12:00:00+00:00",
       "date_modified": "2026-06-02T12:00:00+00:00",
       "search_text": "маршрут рив єрою майя на 7 днів канкун плая тулум та острови сплануйте тиждень на рив єрі майя без перевантаження одна розумна база дві великі поїздки захищений відпочинок і чесний ритм день за днем riviera-maya itinerary day-trips"
+    },
+    {
+      "slug": "abc-islands-travel-guide",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "snorkeling",
+        "island-trip",
+        "hurricane-season",
+        "visa-entry",
+        "budget",
+        "flights"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Аруба, Бонайре і Кюрасао (острови ABC): путівник трьома островами",
+      "description": "Як обрати між Арубою, Кюрасао та Бонайре: сухий пустельний клімат поза поясом ураганів, пісок проти бухт і берегового дайвінгу, податки й бюджет 2026.",
+      "url": "https://travelradarlk.com/ua/content/abc-islands-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/abc-islands-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-21T12:00:00+00:00",
+      "search_text": "аруба бонайре і кюрасао острови abc путівник трьома островами як обрати між арубою кюрасао та бонайре сухий пустельний клімат поза поясом ураганів пісок проти бухт і берегового дайвінгу податки й бюджет 2026 beaches snorkeling island-trip hurricane-season visa-entry budget flights"
     },
     {
       "slug": "add-cancun-to-world-cup-2026-trip",

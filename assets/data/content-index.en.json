@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T00:27:56.339Z",
-  "count": 134,
+  "generated_at": "2026-11-21T14:43:57.917Z",
+  "count": 135,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -29,6 +29,40 @@
       "date_published": "2026-06-02T12:00:00+00:00",
       "date_modified": "2026-06-02T12:00:00+00:00",
       "search_text": "7-day riviera maya itinerary cancun playa tulum and islands plan a 7-day riviera maya trip without overbooking it one smart base two big day trips protected rest and an honest day-by-day rhythm riviera-maya itinerary day-trips"
+    },
+    {
+      "slug": "abc-islands-travel-guide",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "snorkeling",
+        "island-trip",
+        "hurricane-season",
+        "visa-entry",
+        "budget",
+        "flights"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Aruba, Bonaire, and Curaçao (ABC Islands) Travel Guide",
+      "description": "How to choose between Aruba, Curaçao, and Bonaire: dry desert weather outside the hurricane belt, sand vs coves vs shore diving, entry taxes and 2026 budgets.",
+      "url": "https://travelradarlk.com/en/content/abc-islands-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/abc-islands-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-21T12:00:00+00:00",
+      "search_text": "aruba bonaire and cura ao abc islands travel guide how to choose between aruba cura ao and bonaire dry desert weather outside the hurricane belt sand vs coves vs shore diving entry taxes and 2026 budgets beaches snorkeling island-trip hurricane-season visa-entry budget flights"
     },
     {
       "slug": "add-cancun-to-world-cup-2026-trip",
