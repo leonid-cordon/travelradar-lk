@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "ru",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-20T11:38:24.217Z",
-  "count": 133,
+  "generated_at": "2026-11-21T00:27:56.680Z",
+  "count": 134,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2011,6 +2011,39 @@
       "date_published": "2026-11-17T12:00:00+00:00",
       "date_modified": "2026-11-17T12:00:00+00:00",
       "search_text": "сравнение островов карибского моря какой остров подойдёт именно вам доминикана ямайка багамы аруба и кюрасао сент-люсия тёркс и кайкос и пуэрто-рико реальные ежедневные расходы качество пляжей риск ураганов и перелёты beaches all-inclusive budget flights sargassum hurricane-season best-time"
+    },
+    {
+      "slug": "caribbean-island-hopping-guide",
+      "lang": "ru",
+      "primary_section": "planning",
+      "section_label": "Планирование и бюджет",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "flights",
+        "itinerary",
+        "visa-entry",
+        "budget",
+        "day-trips"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Путешествие по островам Карибов: паромы, региональные рейсы и маршруты, которые реально работают",
+      "description": "Какие карибские острова удобно связывать паромами, почему перелёты между дальними островами ведут через Майами, реальные портовые сборы и когда круиз выгоднее.",
+      "url": "https://travelradarlk.com/ru/content/caribbean-island-hopping-guide",
+      "image": "https://travelradarlk.com/assets/images/content/caribbean-island-hopping-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-21T12:00:00+00:00",
+      "search_text": "путешествие по островам карибов паромы региональные рейсы и маршруты которые реально работают какие карибские острова удобно связывать паромами почему перелёты между дальними островами ведут через майами реальные портовые сборы и когда круиз выгоднее island-trip flights itinerary visa-entry budget day-trips"
     },
     {
       "slug": "cenotes-near-cancun-playa-tulum",

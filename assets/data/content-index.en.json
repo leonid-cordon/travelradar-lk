@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-20T11:38:23.927Z",
-  "count": 133,
+  "generated_at": "2026-11-21T00:27:56.339Z",
+  "count": 134,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -2011,6 +2011,39 @@
       "date_published": "2026-11-17T12:00:00+00:00",
       "date_modified": "2026-11-17T12:00:00+00:00",
       "search_text": "caribbean island comparison which island is right for you dominican republic jamaica bahamas aruba cura ao saint lucia turks caicos and puerto rico compared by real daily costs beach quality hurricane risk and flights beaches all-inclusive budget flights sargassum hurricane-season best-time"
+    },
+    {
+      "slug": "caribbean-island-hopping-guide",
+      "lang": "en",
+      "primary_section": "planning",
+      "section_label": "Planning & Budget",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "island-trip",
+        "flights",
+        "itinerary",
+        "visa-entry",
+        "budget",
+        "day-trips"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "solo"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Caribbean Island Hopping Guide: Ferries, Regional Flights and Routes That Actually Work",
+      "description": "Which Caribbean island chains connect cleanly by ferry, why cross-basin flights detour through Miami, real port fees, and when a cruise beats DIY hopping.",
+      "url": "https://travelradarlk.com/en/content/caribbean-island-hopping-guide",
+      "image": "https://travelradarlk.com/assets/images/content/caribbean-island-hopping-guide/card_1200x600.jpg",
+      "date_published": "2026-11-21T12:00:00+00:00",
+      "date_modified": "2026-11-21T12:00:00+00:00",
+      "search_text": "caribbean island hopping guide ferries regional flights and routes that actually work which caribbean island chains connect cleanly by ferry why cross-basin flights detour through miami real port fees and when a cruise beats diy hopping island-trip flights itinerary visa-entry budget day-trips"
     },
     {
       "slug": "cenotes-near-cancun-playa-tulum",
