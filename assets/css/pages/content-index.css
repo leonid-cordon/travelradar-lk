@@ -52,6 +52,7 @@ body[data-page="content"] .hero-image {
     object-fit: cover;
     object-position: 72% center;
     transform: scale(1.01);
+    filter: saturate(1.04);
     transition: transform 6s ease;
 }
 
@@ -59,13 +60,21 @@ body[data-page="content"] .content-hero:hover .hero-image {
     transform: scale(1.035);
 }
 
+/* Эксперимент Hero Вариант B (B-Editorial): градиент в зоне текста + лёгкая общая вуаль */
 body[data-page="content"] .hero-image-container::after {
     content: "";
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(to right, rgba(0, 0, 0, .05), rgba(0, 0, 0, .10) 48%, rgba(0, 0, 0, .16)),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .10));
+        linear-gradient(to top,
+            rgba(9, 11, 16, .84) 0%,
+            rgba(9, 11, 16, .56) 44%,
+            rgba(9, 11, 16, .22) 78%,
+            rgba(9, 11, 16, .16) 100%),
+        linear-gradient(to right,
+            rgba(9, 11, 16, .40) 0%,
+            rgba(9, 11, 16, .14) 55%,
+            rgba(9, 11, 16, 0) 100%);
     pointer-events: none;
 }
 
@@ -94,17 +103,17 @@ body[data-page="content"] .hero-title {
     line-height: 1.12;
     letter-spacing: 0;
     margin: 0 0 .45rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, .65), 0 4px 18px rgba(0, 0, 0, .45);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .48);
 }
 
 body[data-page="content"] .hero-subtitle {
     max-width: 620px;
     margin: 0;
-    color: var(--ci-copy);
+    color: rgba(244, 246, 250, .90);
     font-size: clamp(.98rem, 1.6vw, 1.15rem);
     line-height: 1.55;
     font-weight: 400;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, .38);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .42);
 }
 
 body[data-page="content"] .quick-nav {
@@ -420,18 +429,26 @@ body[data-page="content"] .card-description {
     border-bottom-color: var(--ci-border);
 }
 
+/* Эксперимент Hero Вариант B (светлая тема): сохраняем единый читаемый градиент под белым текстом */
 [data-theme="light"] body[data-page="content"] .hero-image {
-    filter: saturate(1.06) brightness(1.06);
+    filter: saturate(1.04);
 }
 
 [data-theme="light"] body[data-page="content"] .hero-image-container::after {
     background:
-        linear-gradient(to right, rgba(0, 0, 0, .03), rgba(0, 0, 0, .055) 48%, rgba(0, 0, 0, .10)),
-        linear-gradient(to bottom, rgba(255, 255, 255, .03), rgba(0, 0, 0, .055));
+        linear-gradient(to top,
+            rgba(9, 11, 16, .84) 0%,
+            rgba(9, 11, 16, .56) 44%,
+            rgba(9, 11, 16, .22) 78%,
+            rgba(9, 11, 16, .16) 100%),
+        linear-gradient(to right,
+            rgba(9, 11, 16, .40) 0%,
+            rgba(9, 11, 16, .14) 55%,
+            rgba(9, 11, 16, 0) 100%);
 }
 
 [data-theme="light"] body[data-page="content"] .hero-subtitle {
-    color: rgba(255, 255, 255, .82);
+    color: rgba(244, 246, 250, .90);
 }
 
 [data-theme="light"] body[data-page="content"] .quick-nav-item,

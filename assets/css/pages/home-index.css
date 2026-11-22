@@ -83,17 +83,23 @@ body[data-page="home"] .hero-image {
     filter: saturate(1.04) contrast(1.02);
 }
 
-/* Scrim: keeps overlaid text legible in both themes, over any photo */
+/* Эксперимент Hero Вариант B (B-Cinematic): градиент в зоне текста + лёгкая общая вуаль */
 body[data-page="home"] .hero::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(to top,
-        rgba(8, 10, 16, .85) 0%,
-        rgba(8, 10, 16, .55) 28%,
-        rgba(8, 10, 16, 0) 60%);
+    background:
+        linear-gradient(to top,
+            rgba(9, 11, 16, .86) 0%,
+            rgba(9, 11, 16, .64) 36%,
+            rgba(9, 11, 16, .24) 68%,
+            rgba(9, 11, 16, .14) 100%),
+        linear-gradient(to right,
+            rgba(9, 11, 16, .34) 0%,
+            rgba(9, 11, 16, .12) 56%,
+            rgba(9, 11, 16, 0) 100%);
 }
 
 body[data-page="home"] .hero-container {
@@ -107,12 +113,13 @@ body[data-page="home"] .hero-content {
 
 body[data-page="home"] .hero-title {
     margin: 0 0 1rem;
-    color: #f4f1ea;
+    color: #ffffff;
     font-family: 'Fraunces', Georgia, serif;
     font-size: clamp(2.35rem, 5vw, 4.15rem);
     font-weight: 700;
     line-height: 1.04;
     letter-spacing: 0;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, .48);
 }
 
 body[data-page="home"] .hero-plane {
@@ -128,10 +135,11 @@ body[data-page="home"] .hero-plane {
 body[data-page="home"] .hero-subtitle {
     max-width: 520px;
     margin: 0 0 1.6rem;
-    color: rgba(244, 241, 234, .88);
+    color: rgba(244, 246, 250, .92);
     font-size: clamp(1.16rem, 2vw, 1.55rem);
     font-weight: 500;
     line-height: 1.45;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, .45);
 }
 
 body[data-page="home"] .btn-primary,
