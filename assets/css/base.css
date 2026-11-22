@@ -317,6 +317,7 @@ body[data-theme="dark"] .btn-secondary {
     font-size: .82rem;
     font-weight: 500;
     letter-spacing: .015em;
+    white-space: nowrap;
     color: rgba(255, 255, 255, .88);
     text-decoration: none;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
@@ -405,10 +406,27 @@ body[data-theme="dark"] .btn-secondary {
     background: linear-gradient(135deg, rgba(185, 131, 50, .16), rgba(185, 131, 50, .07));
     text-shadow: none;
 }
+/* Защитный однострочный свайп-контейнер для хлебных крошек на мобильных и планшетах */
+@media (max-width: 768px) {
+    .premium-breadcrumb-wrapper nav {
+        display: flex;
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .premium-breadcrumb-wrapper nav::-webkit-scrollbar {
+        display: none;
+    }
+    .premium-breadcrumb {
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+    }
+}
 @media (max-width: 560px) {
     .premium-breadcrumb { padding: .32rem .4rem; }
     .premium-breadcrumb li a { font-size: .76rem; padding: .24rem .56rem; gap: .3rem; }
-    .premium-breadcrumb li.active { font-size: .76rem; padding: .24rem .62rem; max-width: 38vw; }
+    .premium-breadcrumb li.active { font-size: .76rem; padding: .24rem .62rem; max-width: 36vw; }
     .breadcrumb-icon { width: 12px; height: 12px; }
     .premium-breadcrumb li.separator { margin: 0 .08rem; }
 }

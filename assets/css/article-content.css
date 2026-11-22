@@ -40,15 +40,22 @@
         }
 
         /* ── HERO ─────────────────────────────────────── */
+        /* Потоковая автовысота Hero статей (Desktop + Mobile): защищает от перекрытия крошек и длинных H1 */
         .article-hero {
             position: relative;
+            display: flex;
+            align-items: flex-end;
             overflow: hidden;
-            height: 320px;
+            height: auto;
+            min-height: 320px;
             padding: 0;
             background: #090b10;
         }
 
         .article-hero-image {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
             display: block;
             width: 100%;
             height: 100%;
@@ -67,6 +74,8 @@
             content: '';
             position: absolute;
             inset: 0;
+            z-index: 1;
+            pointer-events: none;
             background:
                 linear-gradient(to top,
                     rgba(9, 11, 16, .86) 0%,
@@ -80,14 +89,12 @@
         }
 
         .hero-content {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
+            position: relative;
+            z-index: 2;
+            width: 100%;
             margin: 0 auto;
             max-width: 1040px;
-            padding: 1.6rem clamp(1.25rem, 5vw, 3rem);
+            padding: 94px clamp(1.25rem, 5vw, 3rem) 1.6rem;
         }
 
         .hero-content h1 {
@@ -1980,12 +1987,14 @@
                 grid-template-columns: 1fr;
             }
 
+            /* Мобильная автовысота Hero статей: сохраняет 460px для обычных статей и растёт при длинных H1 */
             .article-hero {
-                height: 460px;
+                min-height: 460px;
+                height: auto;
             }
 
             .hero-content {
-                padding: 1.5rem clamp(1rem, 5vw, 1.5rem);
+                padding: 76px clamp(1rem, 5vw, 1.5rem) 1.5rem;
             }
 
             .hero-content h1 {
@@ -1999,6 +2008,14 @@
 
             .hero-subtitle {
                 margin-top: .55rem;
+            }
+        }
+
+        /* Вариант M2: на мобильных статьях скрываем некликабельный дубль H1 в хлебных крошках (в HTML/Schema сохраняется) */
+        @media (max-width: 640px) {
+            .article-hero .premium-breadcrumb li.active,
+            .article-hero .premium-breadcrumb li.separator:has(+ li.active) {
+                display: none;
             }
         }
 
