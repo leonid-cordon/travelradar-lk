@@ -98,10 +98,11 @@
             if (!rec || !rec.slug || seenSlugs[rec.slug]) return false;
             seenSlugs[rec.slug] = true;
             seenSections[rec.primary_section || 'other'] = true;
+            var locRec = (indexData && indexData.localizedBySlug) ? indexData.localizedBySlug[rec.slug] : null;
             chosen.push({
                 slug: rec.slug,
-                title: rec.title,
-                section: rec.section_label || rec.primary_section || 'Guide',
+                title: (locRec && locRec.title) ? locRec.title : rec.title,
+                section: (locRec && locRec.section_label) ? locRec.section_label : (rec.section_label || rec.primary_section || 'Guide'),
                 url: resolveGuideUrl(indexData, rec)
             });
             return true;

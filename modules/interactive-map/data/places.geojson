@@ -31,7 +31,7 @@
           "best-all-inclusive-resorts-cancun-hotel-zone",
           "cancun-vs-tulum-vs-playa-del-carmen-where-to-stay",
           "cancun-airport-transfer-options",
-          "cancun-seaweed-season"
+          "mexico-sargassum-2026-hotel-geography"
         ],
         "matchDestinations": ["cancun"]
       }
@@ -215,7 +215,8 @@
         "featuredSlugs": [
           "puerto-morelos-quiet-village-guide",
           "where-to-stay-puerto-morelos-hotels",
-          "best-resorts-protected-beaches-cancun-riviera-maya"
+          "best-resorts-protected-beaches-cancun-riviera-maya",
+          "cancun-airport-transfer-options"
         ],
         "matchDestinations": ["riviera-maya"]
       }
@@ -325,7 +326,8 @@
         "featuredSlugs": [
           "akumal-swim-with-sea-turtles",
           "best-resorts-akumal-snorkeling-turtles",
-          "best-resorts-protected-beaches-cancun-riviera-maya"
+          "best-resorts-protected-beaches-cancun-riviera-maya",
+          "riviera-maya-explained"
         ],
         "matchDestinations": ["riviera-maya"]
       }
@@ -438,7 +440,9 @@
         ],
         "featuredSlugs": [
           "punta-cana-travel-guide-first-timers",
-          "where-to-stay-punta-cana-areas"
+          "where-to-stay-punta-cana-areas",
+          "punta-cana-hotel-booking-checklist",
+          "romantic-getaways-punta-cana-cap-cana"
         ]
       }
     },
@@ -463,7 +467,9 @@
           { "label": "Serves", "value": "Punta Cana & Bayahibe" }
         ],
         "featuredSlugs": [
-          "punta-cana-airport-arrival-guide"
+          "punta-cana-airport-arrival-guide",
+          "where-to-go-dominican-republic-regions",
+          "bayahibe-la-romana-travel-guide"
         ]
       }
     },
@@ -488,6 +494,34 @@
           { "label": "Region", "value": "Dominican Republic" }
         ],
         "featuredSlugs": [
+          "bayahibe-la-romana-travel-guide",
+          "where-to-go-dominican-republic-regions",
+          "punta-cana-airport-arrival-guide"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-70.6931, 19.7934] },
+      "properties": {
+        "id": "puerto-plata",
+        "name": "Puerto Plata & North Coast",
+        "shortName": "Puerto Plata",
+        "labelAnchor": "bottom",
+        "category": "resort",
+        "categoryLabel": "Resort Coast",
+        "region": "dominican-republic",
+        "regionLabel": "Dominican Republic",
+        "detailLevel": "basic",
+        "verdict": "Atlantic north coast for Cabarete surfing, Sosua & mountain views",
+        "image": "/assets/images/content/puerto-plata-north-coast-travel-guide/card_1200x600.jpg",
+        "description": "Northern Dominican coast linking Puerto Plata, Sosua, and kitesurfing hub Cabarete with direct POP airport access.",
+        "facts": [
+          { "label": "Gateway Airport", "value": "POP (~20–30 min)" },
+          { "label": "Region", "value": "Dominican Republic" }
+        ],
+        "featuredSlugs": [
+          "puerto-plata-north-coast-travel-guide",
           "where-to-go-dominican-republic-regions"
         ]
       }
@@ -561,7 +595,10 @@
           { "label": "Region", "value": "Caribbean Islands" }
         ],
         "featuredSlugs": [
-          "caribbean-island-comparison"
+          "caribbean-island-comparison",
+          "cancun-vs-bahamas",
+          "caribbean-hotel-booking-checklist",
+          "caribbean-regional-esim-guide"
         ]
       }
     },
@@ -585,7 +622,10 @@
           { "label": "Region", "value": "Caribbean Islands" }
         ],
         "featuredSlugs": [
-          "caribbean-island-comparison"
+          "caribbean-island-comparison",
+          "caribbean-hotel-booking-checklist",
+          "caribbean-island-hopping-guide",
+          "caribbean-regional-esim-guide"
         ]
       }
     },
@@ -609,8 +649,10 @@
           { "label": "Region", "value": "Caribbean Islands" }
         ],
         "featuredSlugs": [
+          "jamaica-travel-guide",
           "cancun-vs-jamaica",
-          "caribbean-island-comparison"
+          "caribbean-hotel-booking-checklist",
+          "caribbean-regional-esim-guide"
         ]
       }
     },
@@ -634,7 +676,10 @@
           { "label": "Region", "value": "Caribbean Islands" }
         ],
         "featuredSlugs": [
-          "caribbean-island-comparison"
+          "caribbean-island-comparison",
+          "caribbean-island-hopping-guide",
+          "caribbean-regional-esim-guide",
+          "visa-free-travel-destinations"
         ]
       }
     },
@@ -658,7 +703,10 @@
           { "label": "Region", "value": "Caribbean Islands" }
         ],
         "featuredSlugs": [
-          "caribbean-island-comparison"
+          "abc-islands-travel-guide",
+          "caribbean-island-comparison",
+          "caribbean-hotel-booking-checklist",
+          "caribbean-island-hopping-guide"
         ]
       }
     }
