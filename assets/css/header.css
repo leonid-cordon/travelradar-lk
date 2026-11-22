@@ -320,10 +320,16 @@
     z-index: 1001;
 }
 
+.mobile-toggle:focus-visible {
+    outline: 2px solid rgba(212, 169, 106, 0.85);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
 .mobile-toggle span {
     width: 24px;
     height: 2px;
-    background: var(--text-primary);
+    background: var(--text-primary, #e8eaf0);
     transition: all 0.3s;
     border-radius: 2px;
 }
@@ -704,6 +710,18 @@
 [data-theme="dark"] .lang-link.active {
     color: #d4a96a;
 }
+/* Симметричные правила для разделителя языков и кнопки мобильного меню в тёмной теме */
+[data-theme="dark"] .lang-divider {
+    color: rgba(255, 255, 255, 0.24);
+}
+[data-theme="dark"] .mobile-toggle span {
+    background: rgba(232, 234, 240, 0.90);
+}
+[data-theme="dark"] .mobile-toggle:hover span,
+[data-theme="dark"] .mobile-toggle:focus-visible span,
+[data-theme="dark"] .mobile-toggle.active span {
+    background: #d4a96a;
+}
 [data-theme="dark"] .dropdown-menu,
 [data-theme="dark"] .dropdown-submenu {
     background: #181c26;
@@ -768,8 +786,17 @@
 [data-theme="light"] .lang-divider {
     color: rgba(60, 50, 30, 0.25);
 }
+/* Усиленный контраст и интерактивные состояния кнопки мобильного меню в светлой теме */
 [data-theme="light"] .mobile-toggle span {
-    background: rgba(28, 24, 20, 0.7);
+    background: rgba(28, 24, 20, 0.82);
+}
+[data-theme="light"] .mobile-toggle:hover span,
+[data-theme="light"] .mobile-toggle:focus-visible span,
+[data-theme="light"] .mobile-toggle.active span {
+    background: #a07828;
+}
+[data-theme="light"] .mobile-toggle:focus-visible {
+    outline-color: rgba(160, 120, 40, 0.85);
 }
 [data-theme="light"] .dropdown-menu,
 [data-theme="light"] .dropdown-submenu {
