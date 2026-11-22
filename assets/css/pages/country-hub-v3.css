@@ -1,0 +1,1903 @@
+/* ==========================================================================
+   TravelRadarLK — Country Hub Architecture v3 (country-hub-v3.css)
+   Mobile-First Decision Hub Design System (Dark & Light Theme Ready)
+   Scoped to .country-hub-v3 and body[data-page] — zero impact on global CSS.
+   ========================================================================== */
+
+html:has(body[data-page="mexico"]),
+html:has(body[data-page="dominican-republic"]),
+html:has(body[data-page="caribbean"]) {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body[data-page="mexico"],
+body[data-page="dominican-republic"],
+body[data-page="caribbean"] {
+    --hub-bg: #0d0f14;
+    --hub-bg2: #13161e;
+    --hub-bg3: #171b24;
+    --hub-card: #181c26;
+    --hub-card-elevated: #1e2330;
+    --hub-surface: rgba(255, 255, 255, 0.04);
+    --hub-surface-hover: rgba(255, 255, 255, 0.075);
+    --hub-border: rgba(255, 255, 255, 0.09);
+    --hub-border-strong: rgba(255, 255, 255, 0.16);
+    --hub-text: #e8eaf0;
+    --hub-copy: rgba(232, 234, 240, 0.84);
+    --hub-muted: rgba(232, 234, 240, 0.64);
+    --hub-subtle: rgba(232, 234, 240, 0.52);
+    --hub-accent: #d4a96a;
+    --hub-accent-bright: #ecd2a1;
+    --hub-accent-light: rgba(212, 169, 106, 0.13);
+    --hub-accent-border: rgba(212, 169, 106, 0.36);
+    --hub-teal: #4ec9b0;
+    --hub-teal-light: rgba(78, 201, 176, 0.12);
+    --hub-blue: #7eb8f7;
+    --hub-warm: #e07a5f;
+    --hub-warm-light: rgba(224, 122, 95, 0.12);
+    --hub-warm-border: rgba(224, 122, 95, 0.28);
+    --hub-radius-lg: 16px;
+    --hub-radius: 13px;
+    --hub-radius-sm: 9px;
+    --hub-anchor-offset: 132px;
+    --hub-shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.24);
+    --hub-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+    --hub-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.46);
+    background: var(--hub-bg);
+    color: var(--hub-text);
+    font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+[data-theme="light"] body[data-page="mexico"],
+[data-theme="light"] body[data-page="dominican-republic"],
+[data-theme="light"] body[data-page="caribbean"] {
+    --hub-bg: #f5f2ee;
+    --hub-bg2: #ebe6df;
+    --hub-bg3: #e3ddd4;
+    --hub-card: #ffffff;
+    --hub-card-elevated: #faf8f5;
+    --hub-surface: rgba(60, 50, 30, 0.045);
+    --hub-surface-hover: rgba(60, 50, 30, 0.085);
+    --hub-border: rgba(60, 50, 30, 0.11);
+    --hub-border-strong: rgba(60, 50, 30, 0.20);
+    --hub-text: #1c1814;
+    --hub-copy: rgba(28, 24, 20, 0.82);
+    --hub-muted: rgba(28, 24, 20, 0.66);
+    --hub-subtle: rgba(28, 24, 20, 0.56);
+    --hub-accent: #9a6f1a;
+    --hub-accent-bright: #7a550e;
+    --hub-accent-light: rgba(160, 120, 40, 0.11);
+    --hub-accent-border: rgba(160, 120, 40, 0.32);
+    --hub-teal: #14856e;
+    --hub-teal-light: rgba(20, 133, 110, 0.10);
+    --hub-blue: #2368b2;
+    --hub-warm: #b84f2e;
+    --hub-warm-light: rgba(184, 79, 46, 0.09);
+    --hub-warm-border: rgba(184, 79, 46, 0.24);
+    --hub-shadow-sm: 0 3px 10px rgba(40, 30, 15, 0.06);
+    --hub-shadow: 0 8px 24px rgba(40, 30, 15, 0.09);
+    --hub-shadow-lg: 0 14px 34px rgba(40, 30, 15, 0.13);
+}
+
+/* Harmonize Back-to-Top button with Hub Gold palette without touching base.css */
+body[data-page="mexico"] .back-to-top,
+body[data-page="dominican-republic"] .back-to-top,
+body[data-page="caribbean"] .back-to-top {
+    background: var(--hub-card-elevated);
+    color: var(--hub-accent);
+    border: 1px solid var(--hub-accent-border);
+    box-shadow: var(--hub-shadow);
+}
+
+body[data-page="mexico"] .back-to-top:hover,
+body[data-page="dominican-republic"] .back-to-top:hover,
+body[data-page="caribbean"] .back-to-top:hover {
+    background: var(--hub-accent);
+    color: #0d0f14;
+}
+
+/* --------------------------------------------------------------------------
+   Base Container & Section Rhythm
+   -------------------------------------------------------------------------- */
+.country-hub-v3 *,
+.country-hub-v3 *::before,
+.country-hub-v3 *::after {
+    box-sizing: border-box;
+}
+
+.country-hub-v3 img {
+    max-width: 100%;
+}
+
+.country-hub-v3 {
+    background: var(--hub-bg);
+    color: var(--hub-text);
+    line-height: 1.6;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.country-hub-v3 .mh-container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3.8vw, 2rem);
+}
+
+.country-hub-v3 .mh-section {
+    padding: clamp(2.4rem, 4.8vw, 4.2rem) 0;
+    scroll-margin-top: var(--hub-anchor-offset);
+}
+
+.country-hub-v3 .mh-section-soft {
+    background: var(--hub-bg2);
+    border-top: 1px solid var(--hub-border);
+    border-bottom: 1px solid var(--hub-border);
+}
+
+/* Fix anchor scroll offset on all targetable subsections & cards */
+.country-hub-v3 [id] {
+    scroll-margin-top: var(--hub-anchor-offset);
+}
+
+.country-hub-v3 .mh-section-header {
+    margin-bottom: clamp(1.35rem, 3vw, 2.1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.country-hub-v3 .mh-section-header-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: clamp(1.35rem, 3vw, 2.1rem);
+}
+
+.country-hub-v3 .mh-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.18;
+    color: var(--hub-text);
+    margin: 0;
+}
+
+.country-hub-v3 .mh-section-lead {
+    font-size: clamp(0.94rem, 1.5vw, 1.04rem);
+    color: var(--hub-copy);
+    max-width: 680px;
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO v3 — Zero Collision Flow + Quick-Start 3-Step Track
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-hero-v3 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #090b10;
+    border-bottom: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.country-hub-v3 .mh-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+    filter: brightness(0.82) saturate(1.08);
+}
+
+.country-hub-v3 .mh-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(9, 11, 16, 0.58) 0%, rgba(9, 11, 16, 0.68) 48%, rgba(13, 15, 20, 0.96) 100%),
+        linear-gradient(90deg, rgba(9, 11, 16, 0.72) 0%, rgba(9, 11, 16, 0.28) 100%);
+}
+
+[data-theme="light"] .country-hub-v3 .mh-hero-bg::after {
+    background:
+        linear-gradient(180deg, rgba(14, 18, 26, 0.52) 0%, rgba(14, 18, 26, 0.64) 50%, rgba(20, 22, 28, 0.92) 100%),
+        linear-gradient(90deg, rgba(14, 18, 26, 0.68) 0%, rgba(14, 18, 26, 0.24) 100%);
+}
+
+.country-hub-v3 .mh-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: clamp(1rem, 2.5vw, 1.5rem) clamp(1rem, 3.8vw, 2rem) clamp(1.5rem, 3.5vw, 2.3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+/* Flow-positioned breadcrumb inside Hero v3 (never overlaps kicker or H1) */
+.country-hub-v3 .mh-hero-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.country-hub-v3 .mh-hero-v3 .premium-breadcrumb-wrapper {
+    position: static;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.country-hub-v3 .mh-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.country-hub-v3 .mh-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.28rem 0.68rem;
+    border-radius: 999px;
+    font-size: 0.73rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #f2ddb4;
+    background: rgba(212, 169, 106, 0.18);
+    border: 1px solid rgba(212, 169, 106, 0.38);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.country-hub-v3 .mh-hero-badge--teal {
+    color: #9ef0de;
+    background: rgba(78, 201, 176, 0.16);
+    border-color: rgba(78, 201, 176, 0.36);
+}
+
+.country-hub-v3 .mh-hero-main {
+    max-width: 780px;
+}
+
+.country-hub-v3 .mh-hero-kicker {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ecd2a1;
+    margin-bottom: 0.4rem;
+}
+
+.country-hub-v3 .mh-hero-v3 h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.75rem, 4.4vw, 2.85rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.12;
+    margin: 0 0 0.65rem;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+.country-hub-v3 .mh-hero-subtitle {
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.86);
+    margin: 0;
+    line-height: 1.55;
+    max-width: 680px;
+}
+
+/* Integrated First-Timer 3-Step Quick-Start Track in Hero */
+.country-hub-v3 .mh-quickstart {
+    margin-top: 0.35rem;
+    background: rgba(19, 22, 30, 0.84);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--hub-radius-lg);
+    padding: 0.95rem 1.1rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.country-hub-v3 .mh-quickstart-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.country-hub-v3 .mh-quickstart-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ecd2a1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.country-hub-v3 .mh-quickstart-note {
+    font-size: 0.76rem;
+    color: rgba(232, 234, 240, 0.68);
+}
+
+.country-hub-v3 .mh-quickstart-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.55rem;
+}
+
+@media (min-width: 768px) {
+    .country-hub-v3 .mh-quickstart-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+}
+
+.country-hub-v3 .mh-quickstart-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.7rem 0.85rem;
+    border-radius: var(--hub-radius-sm);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #ffffff;
+    transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.country-hub-v3 .mh-quickstart-card:hover,
+.country-hub-v3 .mh-quickstart-card:focus-visible {
+    background: rgba(212, 169, 106, 0.14);
+    border-color: rgba(212, 169, 106, 0.48);
+    transform: translateY(-1px);
+    outline: none;
+}
+
+.country-hub-v3 .mh-quickstart-num {
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 50%;
+    background: rgba(212, 169, 106, 0.22);
+    border: 1px solid rgba(212, 169, 106, 0.5);
+    color: #ecd2a1;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.country-hub-v3 .mh-quickstart-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.country-hub-v3 .mh-quickstart-step {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ecd2a1;
+}
+
+.country-hub-v3 .mh-quickstart-title {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.country-hub-v3 .mh-quickstart-desc {
+    font-size: 0.75rem;
+    color: rgba(232, 234, 240, 0.68);
+    line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   2. STICKY SECTION NAV (.country-nav) & DISCLOSURE BAR
+   -------------------------------------------------------------------------- */
+.country-nav {
+    position: sticky;
+    top: var(--header-height, 70px);
+    z-index: 60;
+    padding: 0;
+    background: rgba(13, 15, 20, 0.94);
+    border-bottom: 1px solid var(--hub-border);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+[data-theme="light"] .country-nav {
+    background: rgba(245, 242, 238, 0.95);
+    border-bottom-color: var(--hub-border);
+}
+
+.country-nav .container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 clamp(0.75rem, 3vw, 2rem);
+    position: relative;
+}
+
+.country-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.country-nav-list::-webkit-scrollbar {
+    display: none;
+}
+
+.country-nav-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.72rem 0.9rem;
+    border-bottom: 2px solid transparent;
+    color: var(--hub-muted);
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.country-nav-item:hover,
+.country-nav-item.active {
+    color: var(--hub-accent);
+    border-bottom-color: var(--hub-accent);
+}
+
+@media (max-width: 860px) {
+    .country-nav-list {
+        justify-content: flex-start;
+        padding-right: 1.75rem;
+    }
+
+    /* Subtle right fade cue on mobile so users know the nav bar scrolls horizontally */
+    .country-nav .container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 1px;
+        width: 32px;
+        pointer-events: none;
+        background: linear-gradient(to right, transparent, rgba(13, 15, 20, 0.95));
+    }
+
+    [data-theme="light"] .country-nav .container::after {
+        background: linear-gradient(to right, transparent, rgba(245, 242, 238, 0.96));
+    }
+
+    .country-nav-item {
+        padding: 0.68rem 0.75rem;
+        font-size: 0.78rem;
+    }
+}
+
+.country-hub-v3 .mh-disclosure {
+    background: var(--hub-bg2);
+    border-bottom: 1px solid var(--hub-border);
+    padding: 0.55rem 0;
+}
+
+.country-hub-v3 .mh-disclosure-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    font-size: 0.76rem;
+    color: var(--hub-muted);
+}
+
+.country-hub-v3 .mh-disclosure strong {
+    color: var(--hub-text);
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   3. INTERACTIVE MAP SECTION & QUICK FOCUS BAR (#mh-choose-base)
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-map-quickbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.85rem;
+}
+
+.country-hub-v3 .mh-map-quickbar::-webkit-scrollbar {
+    display: none;
+}
+
+.country-hub-v3 .mh-map-quickbar-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--hub-subtle);
+    white-space: nowrap;
+    margin-right: 0.25rem;
+    flex-shrink: 0;
+}
+
+.country-hub-v3 .mh-map-focus-pill {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.36rem 0.72rem;
+    border-radius: 999px;
+    border: 1px solid var(--hub-border-strong);
+    background: var(--hub-card);
+    color: var(--hub-copy);
+    font-family: inherit;
+    font-size: 0.77rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.country-hub-v3 .mh-map-focus-pill:hover,
+.country-hub-v3 .mh-map-focus-pill:focus-visible {
+    background: var(--hub-accent-light);
+    border-color: var(--hub-accent);
+    color: var(--hub-accent);
+    outline: none;
+}
+
+.country-hub-v3 .mh-map-focus-pill--airport {
+    border-color: var(--hub-warm-border);
+    color: var(--hub-warm);
+}
+
+.country-hub-v3 .mh-map-focus-pill--airport:hover {
+    background: var(--hub-warm-light);
+    border-color: var(--hub-warm);
+    color: var(--hub-warm);
+}
+
+/* --------------------------------------------------------------------------
+   4. 7 COASTAL ZONES DEEP-DIVE EXPLORER (#mh-zones)
+      Zero Off-Screen Updates: Tabs sit directly above active Zone Card
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-zones-shell {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border-strong);
+    border-radius: var(--hub-radius-lg);
+    box-shadow: var(--hub-shadow);
+    overflow: hidden;
+}
+
+.country-hub-v3 .mh-zones-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.75rem 0.9rem;
+    background: var(--hub-bg3);
+    border-bottom: 1px solid var(--hub-border);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.country-hub-v3 .mh-zones-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.country-hub-v3 .mh-zone-tab {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--hub-border);
+    background: var(--hub-card);
+    color: var(--hub-muted);
+    font-family: inherit;
+    font-size: 0.81rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.country-hub-v3 .mh-zone-tab:hover {
+    color: var(--hub-text);
+    border-color: var(--hub-border-strong);
+}
+
+.country-hub-v3 .mh-zone-tab[aria-selected="true"] {
+    background: var(--hub-accent-light);
+    border-color: var(--hub-accent);
+    color: var(--hub-accent);
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-zone-tab[aria-selected="true"] {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-zone-panel {
+    padding: clamp(1.15rem, 3vw, 1.85rem);
+}
+
+.country-hub-v3 .mh-zone-panel[hidden] {
+    display: none;
+}
+
+.country-hub-v3 .mh-zone-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.35rem;
+}
+
+.country-hub-v3 .mh-zone-left,
+.country-hub-v3 .mh-zone-right {
+    min-width: 0;
+}
+
+@media (min-width: 920px) {
+    .country-hub-v3 .mh-zone-grid {
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+        gap: 2rem;
+        align-items: start;
+    }
+}
+
+.country-hub-v3 .mh-zone-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+}
+
+.country-hub-v3 .mh-zone-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.country-hub-v3 .mh-zone-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-zone-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.country-hub-v3 .mh-zone-map-btn {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.42rem 0.8rem;
+    border-radius: var(--hub-radius-sm);
+    border: 1px solid var(--hub-accent-border);
+    background: var(--hub-accent-light);
+    color: var(--hub-accent);
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.16s ease, color 0.16s ease;
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-zone-map-btn {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-zone-map-btn:hover {
+    background: var(--hub-accent);
+    color: #0d0f14;
+}
+
+.country-hub-v3 .mh-zone-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 560px) {
+    .country-hub-v3 .mh-zone-facts {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-zone-fact {
+    padding: 0.55rem 0.7rem;
+    border-radius: var(--hub-radius-sm);
+    background: var(--hub-bg2);
+    border: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-zone-fact-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hub-subtle);
+    margin-bottom: 0.15rem;
+}
+
+.country-hub-v3 .mh-zone-fact-val {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--hub-text);
+    line-height: 1.3;
+}
+
+.country-hub-v3 .mh-zone-desc {
+    font-size: 0.92rem;
+    color: var(--hub-copy);
+    margin: 0 0 1rem;
+    line-height: 1.6;
+}
+
+.country-hub-v3 .mh-zone-callouts {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+}
+
+@media (min-width: 600px) {
+    .country-hub-v3 .mh-zone-callouts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-zone-callout {
+    padding: 0.75rem 0.9rem;
+    border-radius: var(--hub-radius-sm);
+    background: var(--hub-bg2);
+    border: 1px solid var(--hub-border);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--hub-copy);
+}
+
+.country-hub-v3 .mh-zone-callout--good {
+    border-left: 3px solid var(--hub-teal);
+}
+
+.country-hub-v3 .mh-zone-callout--warn {
+    border-left: 3px solid var(--hub-warm);
+}
+
+.country-hub-v3 .mh-zone-callout-title {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.22rem;
+}
+
+.country-hub-v3 .mh-zone-callout--good .mh-zone-callout-title {
+    color: var(--hub-teal);
+}
+
+.country-hub-v3 .mh-zone-callout--warn .mh-zone-callout-title {
+    color: var(--hub-warm);
+}
+
+/* Right side of Zone Panel: Photo + Curated Zone Guides */
+.country-hub-v3 .mh-zone-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    background: var(--hub-bg2);
+    border: 1px solid var(--hub-border);
+    border-radius: var(--hub-radius);
+    padding: 0.95rem;
+}
+
+.country-hub-v3 .mh-zone-media {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    border-radius: var(--hub-radius-sm);
+    overflow: hidden;
+    background: var(--hub-bg3);
+    border: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-zone-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.country-hub-v3 .mh-zone-guides-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--hub-subtle);
+    margin: 0;
+}
+
+.country-hub-v3 .mh-zone-guides-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.country-hub-v3 .mh-zone-guide-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: var(--hub-radius-sm);
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border);
+    text-decoration: none;
+    color: var(--hub-text);
+    transition: border-color 0.16s ease, background 0.16s ease;
+}
+
+.country-hub-v3 .mh-zone-guide-link:hover {
+    border-color: var(--hub-accent);
+    background: var(--hub-accent-light);
+}
+
+.country-hub-v3 .mh-zone-guide-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.08rem;
+    min-width: 0;
+}
+
+.country-hub-v3 .mh-zone-guide-tag {
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-zone-guide-title {
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--hub-text);
+    line-height: 1.3;
+}
+
+.country-hub-v3 .mh-zone-guide-arrow {
+    color: var(--hub-subtle);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. CHOOSE BY TRIP STYLE (#mh-trip-style) — 8 Niche-Matched Cards
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-style-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 600px) {
+    .country-hub-v3 .mh-style-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1080px) {
+    .country-hub-v3 .mh-style-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-style-card {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border);
+    border-radius: var(--hub-radius);
+    padding: 1.25rem;
+    box-shadow: var(--hub-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-width: 0;
+    transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.country-hub-v3 .mh-style-card:hover {
+    border-color: var(--hub-border-strong);
+    transform: translateY(-2px);
+    box-shadow: var(--hub-shadow);
+}
+
+.country-hub-v3 .mh-style-card-top {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.country-hub-v3 .mh-style-card-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: var(--hub-radius-sm);
+    background: var(--hub-surface);
+    border: 1px solid var(--hub-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.country-hub-v3 .mh-style-card-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.country-hub-v3 .mh-style-base {
+    font-size: 0.78rem;
+    color: var(--hub-muted);
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-style-base strong {
+    color: var(--hub-subtle);
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    margin-right: 0.3rem;
+}
+
+.country-hub-v3 .tr-inline-map-link {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    color: var(--hub-teal);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.country-hub-v3 .tr-inline-map-link:hover {
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-style-desc {
+    font-size: 0.81rem;
+    color: var(--hub-copy);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.country-hub-v3 .mh-style-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.38rem;
+    flex: 1;
+}
+
+.country-hub-v3 .mh-style-link {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--hub-accent);
+    text-decoration: none;
+    line-height: 1.35;
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-style-link {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-style-link::before {
+    content: '→';
+    font-size: 0.75rem;
+    color: var(--hub-accent);
+    flex-shrink: 0;
+}
+
+.country-hub-v3 .mh-style-link:hover {
+    text-decoration: underline;
+}
+
+.country-hub-v3 .mh-style-avoid {
+    font-size: 0.76rem;
+    color: var(--hub-warm);
+    background: var(--hub-warm-light);
+    border: 1px solid var(--hub-warm-border);
+    border-radius: var(--hub-radius-sm);
+    padding: 0.4rem 0.6rem;
+    margin: auto 0 0;
+    line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   6. PROBLEM SOLVER / TRIP HELPER v3 (#mh-helper)
+      Mobile: Compact Top Pills + Immediate In-Viewport Result Card
+      Desktop: 2-Column Interactive Split
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-helper-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 900px) {
+    .country-hub-v3 .mh-helper-shell {
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+        gap: 1.75rem;
+        align-items: stretch;
+    }
+}
+
+/* Mobile horizontal / 2-col compact selector; Desktop vertical stack */
+.country-hub-v3 .mh-helper-scenarios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+}
+
+@media (max-width: 420px) {
+    .country-hub-v3 .mh-helper-scenarios {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .country-hub-v3 .mh-helper-scenarios {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+.country-hub-v3 .mh-scenario-btn {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.75rem 0.9rem;
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border);
+    border-radius: var(--hub-radius-sm);
+    font-family: inherit;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--hub-text);
+    text-align: left;
+    cursor: pointer;
+    line-height: 1.3;
+    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.country-hub-v3 .mh-scenario-btn:hover {
+    background: var(--hub-surface-hover);
+    border-color: var(--hub-border-strong);
+}
+
+.country-hub-v3 .mh-scenario-btn[aria-pressed="true"] {
+    background: var(--hub-accent-light);
+    border-color: var(--hub-accent);
+    color: var(--hub-accent);
+    font-weight: 600;
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-scenario-btn[aria-pressed="true"] {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-scenario-icon {
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.country-hub-v3 .mh-helper-panel {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border-strong);
+    border-radius: var(--hub-radius-lg);
+    padding: clamp(1.25rem, 3vw, 1.85rem);
+    box-shadow: var(--hub-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    min-width: 0;
+}
+
+.country-hub-v3 .mh-helper-panel[hidden] {
+    display: none;
+}
+
+.country-hub-v3 .mh-helper-kicker {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-helper-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.country-hub-v3 .mh-helper-body {
+    font-size: 0.91rem;
+    color: var(--hub-copy);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.country-hub-v3 .mh-helper-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-helper-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--hub-radius-sm);
+    background: var(--hub-bg2);
+    border: 1px solid var(--hub-border);
+    text-decoration: none;
+    color: var(--hub-text);
+    transition: border-color 0.16s ease, background 0.16s ease;
+}
+
+.country-hub-v3 .mh-helper-link-item:hover {
+    border-color: var(--hub-accent);
+    background: var(--hub-accent-light);
+}
+
+.country-hub-v3 .mh-helper-link-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.08rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.country-hub-v3 .mh-helper-link-role {
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-helper-link-name {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--hub-text);
+}
+
+.country-hub-v3 .mh-helper-next {
+    font-size: 0.81rem;
+    color: var(--hub-copy);
+    background: var(--hub-accent-light);
+    border-left: 3px solid var(--hub-accent);
+    border-radius: var(--hub-radius-sm);
+    padding: 0.6rem 0.85rem;
+    margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   7. STEP TWO: COMPACT BOOKING ESSENTIALS BENTO GRID (#mh-essentials)
+      Replaces 4500px wall of 4:5 portraits with sleek 2x3 action cards
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-bento-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.15rem;
+}
+
+@media (min-width: 680px) {
+    .country-hub-v3 .mh-bento-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1080px) {
+    .country-hub-v3 .mh-bento-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-bento-card {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border);
+    border-radius: var(--hub-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--hub-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.country-hub-v3 .mh-bento-card:hover {
+    border-color: var(--hub-border-strong);
+    box-shadow: var(--hub-shadow);
+}
+
+.country-hub-v3 .mh-bento-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 175px;
+    overflow: hidden;
+    background: var(--hub-bg3);
+    border-bottom: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-bento-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.country-hub-v3 .mh-bento-card:hover .mh-bento-media img {
+    transform: scale(1.03);
+}
+
+.country-hub-v3 .mh-bento-badge {
+    position: absolute;
+    top: 0.65rem;
+    left: 0.65rem;
+    padding: 0.24rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(13, 15, 20, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ecd2a1;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.country-hub-v3 .mh-bento-body {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    flex: 1;
+}
+
+.country-hub-v3 .mh-bento-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.country-hub-v3 .mh-bento-copy {
+    font-size: 0.85rem;
+    color: var(--hub-copy);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.country-hub-v3 .mh-bento-tip {
+    font-size: 0.78rem;
+    color: var(--hub-muted);
+    border-left: 2.5px solid var(--hub-accent);
+    padding-left: 0.65rem;
+    line-height: 1.45;
+}
+
+.country-hub-v3 .mh-bento-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.38rem;
+    margin-top: auto;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-bento-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.48rem 0.68rem;
+    border-radius: var(--hub-radius-sm);
+    background: var(--hub-bg2);
+    border: 1px solid var(--hub-border);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--hub-text);
+    text-decoration: none;
+    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.country-hub-v3 .mh-bento-link:hover {
+    background: var(--hub-accent-light);
+    border-color: var(--hub-accent);
+    color: var(--hub-accent);
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-bento-link:hover {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-bento-link--primary {
+    background: var(--hub-accent-light);
+    border-color: var(--hub-accent-border);
+    color: var(--hub-accent);
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-bento-link--primary {
+    color: var(--hub-accent-bright);
+}
+
+/* --------------------------------------------------------------------------
+   8. INTERACTIVE GUIDE LIBRARY (#mh-guides) — Filterable Clusters + Gateway
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-library-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.35rem;
+}
+
+.country-hub-v3 .mh-library-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.country-hub-v3 .mh-library-filter-btn {
+    appearance: none;
+    padding: 0.45rem 0.88rem;
+    border-radius: 999px;
+    border: 1px solid var(--hub-border-strong);
+    background: var(--hub-card);
+    color: var(--hub-muted);
+    font-family: inherit;
+    font-size: 0.79rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.country-hub-v3 .mh-library-filter-btn:hover {
+    color: var(--hub-text);
+}
+
+.country-hub-v3 .mh-library-filter-btn.is-active {
+    background: var(--hub-accent-light);
+    border-color: var(--hub-accent);
+    color: var(--hub-accent);
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-library-filter-btn.is-active {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-clusters-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .country-hub-v3 .mh-clusters-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+.country-hub-v3 .mh-cluster-card {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border);
+    border-radius: var(--hub-radius-lg);
+    padding: 1.35rem;
+    box-shadow: var(--hub-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    min-width: 0;
+}
+
+.country-hub-v3 .mh-cluster-card[hidden] {
+    display: none;
+}
+
+.country-hub-v3 .mh-cluster-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-cluster-title {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--hub-warm);
+    margin: 0;
+}
+
+.country-hub-v3 .mh-cluster-count {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--hub-subtle);
+    background: var(--hub-surface);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+}
+
+.country-hub-v3 .mh-cluster-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.country-hub-v3 .mh-cluster-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.68rem 0;
+    border-bottom: 1px solid var(--hub-border);
+    text-decoration: none;
+}
+
+.country-hub-v3 .mh-cluster-link:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.country-hub-v3 .mh-cluster-link-title {
+    font-size: 0.89rem;
+    font-weight: 600;
+    color: var(--hub-text);
+    line-height: 1.35;
+    transition: color 0.15s ease;
+}
+
+.country-hub-v3 .mh-cluster-link:hover .mh-cluster-link-title {
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-cluster-link-reason {
+    font-size: 0.78rem;
+    color: var(--hub-muted);
+    line-height: 1.4;
+}
+
+/* Full 119-Guide Index Gateway Banner */
+.country-hub-v3 .mh-library-gateway {
+    margin-top: 1.75rem;
+    background: linear-gradient(135deg, var(--hub-card) 0%, var(--hub-card-elevated) 100%);
+    border: 1px solid var(--hub-accent-border);
+    border-radius: var(--hub-radius-lg);
+    padding: clamp(1.2rem, 3vw, 1.75rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    box-shadow: var(--hub-shadow);
+}
+
+.country-hub-v3 .mh-gateway-copy {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.country-hub-v3 .mh-gateway-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+}
+
+.country-hub-v3 .mh-gateway-desc {
+    font-size: 0.88rem;
+    color: var(--hub-copy);
+    margin: 0;
+}
+
+.country-hub-v3 .mh-gateway-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.country-hub-v3 .mh-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.62rem 1.15rem;
+    border-radius: var(--hub-radius-sm);
+    font-family: inherit;
+    font-size: 0.83rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.country-hub-v3 .mh-btn-primary {
+    background: var(--hub-accent);
+    color: #0d0f14;
+    border-color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-btn-primary:hover {
+    background: var(--hub-accent-bright);
+    border-color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-btn-ghost {
+    background: var(--hub-surface);
+    color: var(--hub-text);
+    border-color: var(--hub-border-strong);
+}
+
+.country-hub-v3 .mh-btn-ghost:hover {
+    background: var(--hub-accent-light);
+    border-color: var(--hub-accent);
+    color: var(--hub-accent);
+}
+
+/* --------------------------------------------------------------------------
+   9. 6 COMMON MISTAKES (#mh-mistakes) & CROSS-HUB COMPARISON BAR
+   -------------------------------------------------------------------------- */
+.country-hub-v3 .mh-mistakes-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.95rem;
+}
+
+@media (min-width: 640px) {
+    .country-hub-v3 .mh-mistakes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 980px) {
+    .country-hub-v3 .mh-mistakes-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-mistake-card {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-warm-border);
+    border-radius: var(--hub-radius);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    min-width: 0;
+}
+
+.country-hub-v3 .mh-mistake-top {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.country-hub-v3 .mh-mistake-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--hub-warm-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.country-hub-v3 .mh-mistake-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.country-hub-v3 .mh-mistake-body {
+    font-size: 0.83rem;
+    color: var(--hub-copy);
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+}
+
+.country-hub-v3 .mh-mistake-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--hub-accent);
+    text-decoration: none;
+    margin-top: 0.2rem;
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-mistake-link {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-mistake-link:hover {
+    text-decoration: underline;
+}
+
+/* Cross-Hub Comparison Strip */
+.country-hub-v3 .mh-compare-strip {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .country-hub-v3 .mh-compare-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-compare-card {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border);
+    border-radius: var(--hub-radius);
+    padding: 1.15rem;
+    text-decoration: none;
+    color: var(--hub-text);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+    transition: border-color 0.16s ease, transform 0.16s ease;
+}
+
+.country-hub-v3 .mh-compare-card:hover {
+    border-color: var(--hub-accent);
+    transform: translateY(-2px);
+}
+
+.country-hub-v3 .mh-compare-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--hub-accent);
+}
+
+.country-hub-v3 .mh-compare-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.04rem;
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+}
+
+.country-hub-v3 .mh-compare-desc {
+    font-size: 0.81rem;
+    color: var(--hub-muted);
+    margin: 0;
+    line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   10. ELASTIC MULTI-HUB MODIFIERS (2x2 Bento Grid & Micro-Zone / Fault-Line Cards)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1080px) {
+    .country-hub-v3 .mh-bento-grid--2x2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-microzones-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.2rem;
+}
+
+@media (min-width: 860px) {
+    .country-hub-v3 .mh-microzones-grid--3col {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .country-hub-v3 .mh-microzones-grid--2col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.country-hub-v3 .mh-microzone-card {
+    background: var(--hub-card);
+    border: 1px solid var(--hub-border);
+    border-radius: var(--hub-radius-lg);
+    padding: 1.35rem;
+    box-shadow: var(--hub-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 0;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.country-hub-v3 .mh-microzone-card:hover {
+    border-color: var(--hub-border-strong);
+    box-shadow: var(--hub-shadow);
+}
+
+.country-hub-v3 .mh-microzone-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.country-hub-v3 .mh-microzone-badge {
+    font-size: 0.69rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.22rem 0.6rem;
+    border-radius: 999px;
+    background: var(--hub-accent-light);
+    border: 1px solid var(--hub-accent-border);
+    color: var(--hub-accent);
+}
+
+[data-theme="dark"] .country-hub-v3 .mh-microzone-badge {
+    color: var(--hub-accent-bright);
+}
+
+.country-hub-v3 .mh-microzone-transfer {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--hub-teal);
+}
+
+.country-hub-v3 .mh-microzone-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: var(--hub-text);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.country-hub-v3 .mh-microzone-desc {
+    font-size: 0.87rem;
+    color: var(--hub-copy);
+    line-height: 1.58;
+    margin: 0;
+}
+
+.country-hub-v3 .mh-microzone-specs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+    padding: 0.65rem 0;
+    border-top: 1px solid var(--hub-border);
+    border-bottom: 1px solid var(--hub-border);
+}
+
+.country-hub-v3 .mh-microzone-spec-label {
+    display: block;
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hub-subtle);
+}
+
+.country-hub-v3 .mh-microzone-spec-val {
+    display: block;
+    font-size: 0.79rem;
+    font-weight: 600;
+    color: var(--hub-text);
+}
+
+.country-hub-v3 .mh-microzone-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: auto;
+}
