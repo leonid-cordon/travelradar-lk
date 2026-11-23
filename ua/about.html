@@ -47,259 +47,7 @@
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/pages/home-index.css">
-
-    <style>
-        /* =============================================
-           ABOUT PAGE — PREMIUM INLINE STYLES
-           Supports [data-theme="dark"] and [data-theme="light"]
-           ============================================= */
-
-        /* ---- Tokens ---- */
-        [data-theme="dark"] {
-            --ab-bg:            #0f1117;
-            --ab-surface:       #181c27;
-            --ab-surface2:      #1e2333;
-            --ab-border:        rgba(255,255,255,0.08);
-            --ab-text:          #e4e6ef;
-            --ab-muted:         #7a8099;
-            --ab-accent:        #c8a96e;
-            --ab-accent-soft:   rgba(200,169,110,0.12);
-            --ab-divider:       rgba(255,255,255,0.07);
-        }
-        [data-theme="light"] {
-            --ab-bg:            #f7f8fc;
-            --ab-surface:       #ffffff;
-            --ab-surface2:      #f0f2f8;
-            --ab-border:        rgba(0,0,0,0.08);
-            --ab-text:          #1a1d2e;
-            --ab-muted:         #6b7280;
-            --ab-accent:        #b8942a;
-            --ab-accent-soft:   rgba(184,148,42,0.09);
-            --ab-divider:       rgba(0,0,0,0.06);
-        }
-
-
-
-        /* ---- Page wrapper ---- */
-        .about-page {
-            background: var(--ab-bg);
-            padding: 3rem 0 5rem;
-        }
-
-        .about-content {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 0 1.25rem;
-        }
-
-        /* ---- Intro ---- */
-        .about-page-intro {
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid var(--ab-divider);
-            padding-bottom: 2rem;
-        }
-
-        .about-page-title {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2.2rem, 5vw, 3rem);
-            font-weight: 700;
-            color: var(--ab-text);
-            margin: 0 0 0.4rem;
-            line-height: 1.1;
-        }
-
-        .about-page-subtitle {
-            font-size: 1rem;
-            color: var(--ab-muted);
-            margin: 0;
-            font-weight: 400;
-        }
-
-        /* ---- Body text ---- */
-        .about-text {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1.0rem;
-            line-height: 1.78;
-            color: var(--ab-text);
-            margin: 0 0 1.2rem;
-        }
-
-
-
-
-
-        /* ============================================
-           EDITORIAL COVERAGE
-           ============================================ */
-        .coverage-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin: 1.5rem 0 2.5rem;
-        }
-
-        .coverage-card {
-            background: var(--ab-surface);
-            border: 1px solid var(--ab-accent);
-            border-radius: 12px;
-            padding: 1.2rem 1.5rem;
-        }
-
-        .coverage-main-card {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            border-left: 4px solid var(--ab-accent);
-        }
-
-        @media (min-width: 680px) {
-            .coverage-main-card {
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-
-        .coverage-header {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            min-width: 140px;
-        }
-        
-        .coverage-emoji {
-            font-size: 1.3rem;
-        }
-
-        .coverage-title {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--ab-accent);
-            margin: 0;
-        }
-        
-        .coverage-main-card .coverage-title {
-            font-size: 1.35rem;
-            filter: brightness(1.15);
-        }
-        
-        .coverage-main-card .coverage-emoji {
-            font-size: 1.6rem;
-        }
-
-        .coverage-regions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .coverage-secondary {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .coverage-secondary .coverage-card {
-            flex: 1;
-            min-width: 220px;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .dest-pill {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.35rem 0.9rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            font-family: 'DM Sans', sans-serif;
-            border: 1px solid var(--ab-border);
-            color: var(--ab-text);
-            background: var(--ab-surface2);
-        }
-
-
-
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 680px) {
-            .team-profile {
-                flex-direction: column;
-            }
-
-            .team-profile-img {
-                width: 100px;
-                height: 100px;
-            }
-        }
-
-        /* Hero banner layout is styled in assets/css/pages/home-index.css under body[data-page="about"] */
-
-        /* ============================================
-           CLEANED & REFINED ABOUT PAGE CSS
-           ============================================ */
-        /* Workflow */
-        .workflow-steps { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; margin: 1.5rem 0 2.5rem; }
-        .workflow-step { background: var(--ab-surface2); border: 1px solid var(--ab-border); padding: 0.7rem 1rem; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--ab-text); display: flex; align-items: center; gap: 0.5rem; }
-        .workflow-arrow { color: var(--ab-muted); font-size: 1rem; }
-        
-        /* Editorial Policy (Trust & Principles merged) */
-        .editorial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0 1rem; }
-        .editorial-card { background: var(--ab-surface); border: 1px solid var(--ab-border); border-radius: 10px; padding: 1.4rem; display: flex; flex-direction: column; gap: 0.8rem; }
-        .editorial-icon { width: 24px; height: 24px; fill: var(--ab-accent); flex-shrink: 0; }
-        .editorial-title { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--ab-text); margin: 0; }
-        .editorial-text { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ab-muted); margin: 0; line-height: 1.6; }
-        .last-updated { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; background: var(--ab-surface2); border: 1px solid var(--ab-border); border-radius: 20px; font-size: 0.8rem; color: var(--ab-muted); font-weight: 600; margin-bottom: 2.5rem; }
-
-        /* Timeline */
-        .timeline { position: relative; max-width: 600px; margin: 2rem 0; padding-left: 2rem; border-left: 2px solid var(--ab-border); }
-        .timeline-item { position: relative; margin-bottom: 2rem; }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-dot { position: absolute; left: -2.4rem; top: 0.2rem; width: 14px; height: 14px; border-radius: 50%; background: var(--ab-accent); border: 2px solid var(--ab-bg); }
-        .timeline-date { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--ab-accent); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.3rem; }
-        .timeline-title { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--ab-text); margin: 0 0 0.3rem; }
-        .timeline-text { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ab-muted); margin: 0; line-height: 1.5; }
-        
-        /* HORIZONTAL TEAM PROFILES */
-        .team-profile { display: flex; flex-direction: column; gap: 1.5rem; background: var(--ab-surface); border: 1px solid var(--ab-border); border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
-        @media (min-width: 768px) { .team-profile { flex-direction: row; align-items: flex-start; } }
-        .team-profile-img { flex-shrink: 0; width: 140px; height: 140px; border-radius: 50%; background: var(--ab-surface2); border: 3px solid var(--ab-border); display: flex; align-items: center; justify-content: center; color: var(--ab-muted); font-size: 3rem; overflow: hidden; }
-        .team-profile-img img { width: 100%; height: 100%; object-fit: cover; }
-        .team-profile-content { flex: 1; }
-        .team-profile-role { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ab-accent); margin-bottom: 0.4rem; font-weight: 700; }
-        .team-profile-name { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; color: var(--ab-text); margin: 0 0 0.4rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
-        .verified-badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.5rem; background: #d32f2f; border: 1px solid #b71c1c; border-radius: 4px; font-size: 0.7rem; font-family: 'DM Sans', sans-serif; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;  box-shadow: 0 2px 5px rgba(211,47,47,0.3); }
-        .verified-badge svg { fill: #ffffff; }
-        .team-profile-text { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ab-text); opacity: 0.85; margin: 0 0 1rem; }
-        .team-profile-text:last-child { margin-bottom: 0; }
-
-        /* Focus Cards for Analytical Approach */
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2.5rem; }
-        .focus-card { background: var(--ab-surface); border: 1px solid var(--ab-border); border-radius: 10px; padding: 1.5rem; }
-        .focus-icon { width: 32px; height: 32px; fill: var(--ab-accent); margin-bottom: 1rem; }
-        .focus-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; color: var(--ab-text); margin: 0 0 0.6rem; }
-        .focus-text { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ab-muted); margin: 0; line-height: 1.6; }
-
-
-        /* Contact Section */
-        .contact-box { background: linear-gradient(135deg, var(--ab-surface2), var(--ab-surface)); border: 1px solid var(--ab-border); border-left: 4px solid var(--ab-accent); border-radius: 8px; padding: 2rem; margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem; }
-        .contact-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; color: var(--ab-text); margin: 0; }
-        .contact-text { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ab-muted); margin: 0; line-height: 1.6; }
-        .btn-contact { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: var(--ab-accent); color: #fff; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; width: fit-content; transition: background 0.2s ease; border: none; font-size: 0.9rem; }
-        .btn-contact:hover { background: #b88d35; color: #fff; }
-
-        [data-theme="light"] .team-profile { background: #fff; border-color: rgba(60,50,30,0.14); box-shadow: 0 4px 20px rgba(60,50,30,0.06); }
-        [data-theme="light"] .team-profile-img { background: #edeae5; border-color: rgba(60,50,30,0.14); }
-        [data-theme="light"] .workflow-step { background: #fff; }
-        [data-theme="light"] .editorial-card { background: #fff; box-shadow: 0 2px 10px rgba(60,50,30,0.05); }
-        [data-theme="light"] .focus-card { background: #fff; box-shadow: 0 2px 10px rgba(60,50,30,0.05); }
-        [data-theme="light"] .contact-box { background: #fff; }
-
-    </style>
+    <link rel="stylesheet" href="../assets/css/pages/about-page.css">
 
     <script>
         (function () {
@@ -492,238 +240,398 @@
 
     <div id="site-header" data-lang="uk"></div>
 
-    <!-- Hero Banner Strip -->
-    <section class="hero-strip" aria-label="Банер">
-        <div class="container">
-            <div class="about-content">
-                <div class="hero-strip-frame">
-                    <img src="../assets/images/about/hero-about.jpg" width="1620" height="1080" alt="Банер Travel Radar LK" loading="eager">
+    <main class="ab-main">
+        <!-- 1. Editorial Cover Hero -->
+        <section class="ab-hero" aria-label="Про проєкт Travel Radar LK">
+            <figure class="ab-hero-media">
+                <img src="../assets/images/content/riviera-maya-travel-hub/card_1200x600.jpg"
+                    alt="Вид із висоти на узбережжя Канкуна та Карибське море на заході сонця"
+                    class="ab-hero-img" width="1200" height="600" loading="eager" fetchpriority="high">
+            </figure>
+            <div class="ab-container ab-hero-inner">
+                <div class="ab-hero-content">
+                    <p class="ab-hero-kicker">Про проєкт Travel Radar LK · Незалежні travel-дослідження</p>
+                    <h1 class="ab-hero-title">Незалежні дослідження Мексики та Карибів.</h1>
+                    <p class="ab-hero-subtitle">Структуровані розбори мікрорайонів, реальна логістика та чесна економіка поїздок до Канкуна, Рів'єри-Майя, Тулума й Домінікани — без маркетингового шуму.</p>
+                    <div class="ab-hero-actions">
+                        <a href="content/riviera-maya-travel-hub" class="ab-btn ab-btn--hero-primary">
+                            Перейти до гайдів
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <a href="#methodology" class="ab-btn ab-btn--hero-ghost">
+                            Як ми досліджуємо
+                            <span aria-hidden="true">↓</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- 2. Editorial Proof Strip -->
+        <section class="ab-proof" aria-label="Проєкт у цифрах">
+            <div class="ab-container">
+                <ul class="ab-proof-grid">
+                    <li class="ab-proof-item">
+                        <span class="ab-proof-val">135+</span>
+                        <span class="ab-proof-label">Детальних гайдів</span>
+                    </li>
+                    <li class="ab-proof-item">
+                        <span class="ab-proof-val">0</span>
+                        <span class="ab-proof-label">Проплачених рейтингів</span>
+                    </li>
+                    <li class="ab-proof-item">
+                        <span class="ab-proof-val">3 хаби</span>
+                        <span class="ab-proof-label">Мексика, Домінікана і Кариби</span>
+                    </li>
+                    <li class="ab-proof-item">
+                        <span class="ab-proof-val">EN · RU · UA</span>
+                        <span class="ab-proof-label">3 мовні версії</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- About Page Main Content -->
-    <section class="about-page">
-        <div class="container">
-            <div class="about-content">
+        <!-- 3. Editorial Manifesto & Analytical Approach -->
+        <section class="ab-section" id="approach" aria-labelledby="approach-heading">
+            <div class="ab-container">
+                <div class="ab-manifesto-grid">
+                    <div>
+                        <p class="ab-kicker">Наша місія</p>
+                        <blockquote class="ab-pullquote">
+                            Правильний вибір району важливіший за вибір конкретного готелю.
+                        </blockquote>
+                        <figure class="ab-editorial-photo">
+                            <img src="../assets/images/content/riviera-maya-explained/card_1200x600.jpg"
+                                alt="Тераса з видом на океан, друкованою картою Рів'єри-Майя та робочими нотатками"
+                                width="1200" height="600" loading="lazy" decoding="async">
+                            <figcaption>Кожен матеріал починається з географії, транспортних реалій і повторюваних патернів у відгуках — без рекламних брошур.</figcaption>
+                        </figure>
+                    </div>
 
-                <!-- Title -->
-                <div class="about-page-intro">
-                    <h1 class="about-page-title">Про проєкт</h1>
-                    <p class="about-page-subtitle">Travel Radar LK — незалежний travel-проєкт із головним фокусом на Мексиці та Карибах (Канкун, Рів'єра-Майя, Тулум і Домінікана), що надає практичні гайди для планування поїздок.</p>
-                </div>
+                    <div>
+                        <h2 class="ab-section-title" id="approach-heading">Наш аналітичний підхід</h2>
+                        <p class="ab-body">
+                            Проєкт <strong>Travel Radar LK</strong> створений, щоб допомогти мандрівникам ухвалювати виважені рішення: у якому районі зупинитися, які приховані витрати закласти в бюджет і як уникнути маркетингових пасток під час вибору готелю.
+                        </p>
+                        <p class="ab-body">
+                            Ми не публікуємо поверхневі захоплені огляди. Наш фокус — структурована, чесна інформація, що базується на глибокому дослідженні кожного напрямку.
+                        </p>
 
-                <p class="about-text">
-                    Проєкт **Travel Radar LK** створений, щоб допомогти мандрівникам ухвалювати більш виважені рішення: у якому районі зупинитися, які приховані витрати закласти в бюджет і як уникнути маркетингових пасток під час вибору готелю.
-                </p>
-                <p class="about-text">Ми не публікуємо поверхневі захоплені огляди. Наш фокус — це структурована, чесна інформація, що базується на глибокому дослідженні.</p>
+                        <div class="ab-pillars">
+                            <article class="ab-pillar-card">
+                                <div class="ab-pillar-head">
+                                    <span class="ab-icon-badge" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                                    </span>
+                                    <h3 class="ab-pillar-title">Розбір мікрорайонів</h3>
+                                </div>
+                                <p class="ab-pillar-text">Ми розділяємо великі курортні зони — наприклад, Hotel Zone у Канкуні або Тулум — на мікрорайони з чесним описом плюсів і мінусів кожної ділянки.</p>
+                            </article>
 
-                <!-- 1. Our Analytical Approach -->
-                <h2 class="about-section-title">Наш аналітичний підхід</h2>
-                <p class="about-text">Ми вважаємо, що правильний вибір району важливіший за вибір конкретного готелю. Ось як ми підходимо до дослідження кожного напрямку.</p>
-                <div class="focus-grid">
-                    <div class="focus-card">
-                        <svg class="focus-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        <h3 class="focus-title">Детальний розбір мікрорайонів</h3>
-                        <p class="focus-text">Ми розділяємо величезні курортні зони (наприклад, Hotel Zone у Канкуні) на мікрорайони з детальним описом плюсів і мінусів кожного.</p>
-                    </div>
-                    <div class="focus-card">
-                        <svg class="focus-icon" viewBox="0 0 24 24"><path d="M21.1 11.1L12.9 2.9C12.7 2.7 12.4 2.6 12 2.6C11.6 2.6 11.3 2.7 11.1 2.9L2.9 11.1C2.5 11.5 2.5 12.1 2.9 12.5L11.1 20.7C11.3 20.9 11.6 21 12 21C12.4 21 12.7 20.9 12.9 20.7L21.1 12.5C21.5 12.1 21.5 11.5 21.1 11.1ZM12 19.3L3.7 11.1L12 2.8L20.3 11.1L12 19.3Z"/></svg>
-                        <h3 class="focus-title">Транспортна логістика</h3>
-                        <p class="focus-text">Ми аналізуємо вартість трансферів і віддаленість від аеропортів та поромів. Дешевий готель далеко від інфраструктури часто обходиться дорожче.</p>
-                    </div>
-                </div>
-
-                <!-- 2. Методология -->
-                <h2 class="about-section-title">Методологія досліджень</h2>
-                <p class="about-text">Кожен гайд проходить суворий редакційний контроль. Ось як ми створюємо наші матеріали:</p>
-                <div class="workflow-steps">
-                    <div class="workflow-step">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/><path d="M4.5 4a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/></svg>
-                        Аналіз тисяч відгуків
-                    </div>
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-step">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-                        Карти та логістика
-                    </div>
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-step">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/><path d="M2 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
-                        Приховані витрати
-                    </div>
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-step" style="border-color: var(--ab-accent); color: var(--ab-accent);">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>
-                        Перевірка локальними експертами
-                    </div>
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-step" style="background: var(--ab-accent); color: #fff; border-color: var(--ab-accent);">
-                        Фінальний гайд
-                    </div>
-                </div>
-
-                <!-- 3. Команда -->
-                <h2 class="about-section-title">Наша команда</h2>
-                <p class="about-text">Ми не вдаємо, що одна людина особисто відвідала тисячі готелів. Travel Radar LK — це злагоджена робота невеликої команди з різною експертизою.</p>
-                
-                <div class="team-profiles">
-                    <!-- Leonid -->
-                    <div class="team-profile" id="person-leonid-kadantsev">
-                        <div class="team-profile-img">
-                            <img src="../assets/images/about/lk_photo_800x800.jpg" alt="Leonid Kadantsev" width="800" height="800" loading="lazy">
+                            <article class="ab-pillar-card">
+                                <div class="ab-pillar-head">
+                                    <span class="ab-icon-badge" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M15 6l6 6-6 6"/><circle cx="6" cy="12" r="2"/></svg>
+                                    </span>
+                                    <h3 class="ab-pillar-title">Транспортна логістика</h3>
+                                </div>
+                                <p class="ab-pillar-text">Ми аналізуємо вартість трансферів і віддаленість від аеропортів та поромів. Дешевий готель далеко від інфраструктури на практиці часто обходиться дорожче.</p>
+                            </article>
                         </div>
-                        <div class="team-profile-content">
-                            <div class="team-profile-role">Засновник • Головний редактор • Провідний дослідник</div>
-                            <h3 class="team-profile-name">
-                                Leonid Kadantsev
-                            </h3>
-                            <p class="team-profile-text">Леонід заснував Travel Radar LK і розробив його дослідницьку методологію. Як головний редактор він контролює стандарти досліджень, редакційний напрямок та фінальну перевірку кожного гайда. Замінюючи поверхневі оцінки парсингом тисяч відгуків, вивченням супутникових карт та оцінкою логістики, він допомагає відокремити реальні факти від маркетингового шуму.</p>
-                            <p class="team-profile-text">Цей аналітичний підхід був сформований більш ніж двадцятирічним досвідом управління складними ІТ-інфраструктурними проєктами на позиції Senior Infrastructure & Systems Engineer — дисципліна, яку він тепер успішно застосовує до travel-досліджень.</p>
-                            <a href="https://www.linkedin.com/in/leonid-kadantsev/" target="_blank" rel="noopener" class="btn-contact" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; font-size: 0.8rem; border-radius: 20px;">
-                                Переглянути профіль у LinkedIn
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Research Methodology -->
+        <section class="ab-section ab-section--alt" id="methodology" aria-labelledby="methodology-heading">
+            <div class="ab-container">
+                <div class="ab-section-head">
+                    <p class="ab-kicker">Редакційний процес</p>
+                    <h2 class="ab-section-title" id="methodology-heading">Як створюється кожен гайд</h2>
+                    <p class="ab-section-lead">Кожен розбір напрямку та чек-лист проходить чотири послідовні етапи перевірки перед публікацією.</p>
+                </div>
+
+                <ol class="ab-steps">
+                    <li class="ab-step">
+                        <span class="ab-step-num" aria-hidden="true">01</span>
+                        <div class="ab-step-body">
+                            <h3 class="ab-step-title">Аналіз тисяч відгуків</h3>
+                            <p class="ab-step-text">Вивчаємо повторювані скарги та сильні сторони у реальних відгуках гостей, а не лише середній рейтинг готелю.</p>
+                        </div>
+                    </li>
+                    <li class="ab-step">
+                        <span class="ab-step-num" aria-hidden="true">02</span>
+                        <div class="ab-step-body">
+                            <h3 class="ab-step-title">Карти та логістика</h3>
+                            <p class="ab-step-text">Перевіряємо супутникові карти, доступ до пляжу, сезонність саргасуму, час у дорозі від аеропорту та локальний транспорт.</p>
+                        </div>
+                    </li>
+                    <li class="ab-step">
+                        <span class="ab-step-num" aria-hidden="true">03</span>
+                        <div class="ab-step-body">
+                            <h3 class="ab-step-title">Приховані витрати</h3>
+                            <p class="ab-step-text">Враховуємо трансфери, курортні збори, податки та реальні витрати на місці, щоб бюджет відповідав дійсності.</p>
+                        </div>
+                    </li>
+                    <li class="ab-step ab-step--final">
+                        <span class="ab-step-num" aria-hidden="true">04</span>
+                        <div class="ab-step-body">
+                            <h3 class="ab-step-title">Регіональна та фінальна перевірка</h3>
+                            <p class="ab-step-text">Звірка локального контексту з регіональними фахівцями та фінальний редакційний контроль перед публікацією.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 5. The Editorial Masthead (Team) -->
+        <section class="ab-section" id="team" aria-labelledby="team-heading">
+            <div class="ab-container">
+                <div class="ab-section-head">
+                    <p class="ab-kicker">Редакція</p>
+                    <h2 class="ab-section-title" id="team-heading">Хто стоїть за Travel Radar LK</h2>
+                    <p class="ab-section-lead">Ми не вдаємо, що одна людина особисто відвідала тисячі готелів. Travel Radar LK поєднує системну аналітику та локальну регіональну експертизу.</p>
+                </div>
+
+                <div class="ab-team-stack">
+                    <!-- Founder Feature Card -->
+                    <article class="ab-founder-card" id="person-leonid-kadantsev">
+                        <div class="ab-founder-media">
+                            <img src="../assets/images/about/lk-editorial-4x3.jpg"
+                                alt="Leonid Kadantsev — засновник і головний редактор Travel Radar LK на терасі з видом на океан"
+                                width="1024" height="768" loading="lazy" decoding="async">
+                        </div>
+                        <div>
+                            <p class="ab-member-role">Засновник · Головний редактор · Провідний дослідник</p>
+                            <h3 class="ab-member-name">Leonid Kadantsev</h3>
+                            <p class="ab-member-text">Леонід заснував Travel Radar LK і розробив його дослідницьку методологію. Як головний редактор він контролює стандарти досліджень, редакційний напрямок та фінальну перевірку кожного гайда — замінюючи поверхневі оцінки аналізом тисяч відгуків, супутникових карт та транспортної логістики.</p>
+                            <p class="ab-member-text">Цей системний підхід сформований більш ніж двадцятирічним досвідом управління складними ІТ-інфраструктурними проєктами на позиції Senior Infrastructure &amp; Systems Engineer — дисципліною, яку він сьогодні застосовує до travel-досліджень.</p>
+                            <div class="ab-member-links">
+                                <a href="https://www.linkedin.com/in/leonid-kadantsev/" target="_blank" rel="noopener" class="ab-btn ab-btn--primary">
+                                    Профіль у LinkedIn
+                                    <span aria-hidden="true">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Regional Contributors -->
+                    <div class="ab-contributors-grid">
+                        <article class="ab-contributor-card" id="person-kimalie-smith">
+                            <div class="ab-contributor-media">
+                                <img src="../assets/images/about/ks-editorial-4x3.jpg"
+                                    alt="Kimalie Smith — карибський регіональний радник Travel Radar LK на терасі з видом на Карибське море"
+                                    width="1024" height="768" loading="lazy" decoding="async">
+                            </div>
+                            <div class="ab-contributor-body">
+                                <p class="ab-member-role">Карибський регіональний радник</p>
+                                <h3 class="ab-member-name">Kimalie Smith</h3>
+                                <p class="ab-member-meta">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                                    Сент-Томас, Американські Віргінські острови
+                                </p>
+                                <p class="ab-member-text">Народився і виріс на острові Сент-Томас. Як корінний житель регіону, Кімалі глибоко розуміє історію, культуру та реальну специфіку острівного життя на Карибах.</p>
+                                <p class="ab-member-text">Його армійський бекграунд у США та увага до деталей допомагають проєкту в моніторингу регіональних новин, фактчекінгу й оцінці реальної ситуації — щоб гайди відображали місцевий контекст, а не здогадки аутсайдерів.</p>
+                                <div class="ab-member-links">
+                                    <a href="caribbean/" class="ab-inline-link">Відкрити хаб Карибів <span aria-hidden="true">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="ab-contributor-card" id="person-claire-bennett">
+                            <div class="ab-contributor-media">
+                                <img src="../assets/images/about/cb-editorial-4x3.jpg"
+                                    alt="Claire Bennett — спеціаліст із напрямку Мексика в сонячному мексиканському дворику з арками та фонтаном"
+                                    width="1024" height="768" loading="lazy" decoding="async">
+                            </div>
+                            <div class="ab-contributor-body">
+                                <p class="ab-member-role">Спеціаліст із напрямку Мексика</p>
+                                <h3 class="ab-member-name">Claire Bennett</h3>
+                                <p class="ab-member-meta">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                                    Пуерто-Морелос, Рів'єра-Майя
+                                </p>
+                                <p class="ab-member-text">Професійна американська журналістка, випускниця Університету Вісконсин-Медісон. Після років роботи редакторкою журналу про подорожі в Денвері Клер переїхала до Пуерто-Морелос — прибережного містечка між Канкуном і Плайя-дель-Кармен.</p>
+                                <p class="ab-member-text">Відвідала понад 24 із 32 штатів Мексики — від популярних курортів до прихованих сенотів та автентичних міст. Клер відповідає за оцінку реальної атмосфери мексиканських напрямків, авторські маршрути та візуальну подачу проєкту.</p>
+                                <div class="ab-member-links">
+                                    <a href="mexico/" class="ab-inline-link">Відкрити хаб Мексики <span aria-hidden="true">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Coverage Atlas (Clickable Regional Hubs) -->
+        <section class="ab-section ab-section--alt" id="coverage" aria-labelledby="coverage-heading">
+            <div class="ab-container">
+                <div class="ab-section-head">
+                    <p class="ab-kicker">Напрямки досліджень</p>
+                    <h2 class="ab-section-title" id="coverage-heading">Географія наших гайдів</h2>
+                    <p class="ab-section-lead">Головний фокус редакції — карибське узбережжя Мексики, з активним розширенням матеріалів по Домінікані та островах Карибського басейну.</p>
+                </div>
+
+                <div class="ab-atlas-grid">
+                    <!-- Mexico -->
+                    <article class="ab-atlas-card">
+                        <a href="mexico/" class="ab-atlas-media">
+                            <img src="../assets/images/countries/mexico-1200.jpg"
+                                alt="Узбережжя Рів'єри-Майя та скелі Тулума в Мексиці на заході сонця"
+                                width="1200" height="800" loading="lazy" decoding="async">
+                            <span class="ab-atlas-badge">Головний фокус</span>
+                            <h3 class="ab-atlas-title-overlay">Мексика</h3>
+                        </a>
+                        <div class="ab-atlas-body">
+                            <p class="ab-atlas-desc">Порівняння районів, чек-листи вибору готелю, сезонність саргасуму, трансфери з аеропорту та реальні бюджети поїздок 2026.</p>
+                            <div class="ab-atlas-pills">
+                                <a href="content/where-to-stay-in-cancun-hotel-zone-vs-downtown" class="ab-pill-link">Канкун</a>
+                                <a href="content/riviera-maya-explained" class="ab-pill-link">Рів'єра-Майя</a>
+                                <a href="content/where-to-stay-in-tulum-beach-zone-vs-town-vs-aldea-zama" class="ab-pill-link">Тулум</a>
+                                <a href="content/cancun-vs-tulum-vs-playa-del-carmen-where-to-stay" class="ab-pill-link">Плайя-дель-Кармен</a>
+                            </div>
+                            <a href="mexico/" class="ab-atlas-cta">Відкрити хаб Мексики <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Dominican Republic -->
+                    <article class="ab-atlas-card">
+                        <a href="dominican-republic/" class="ab-atlas-media">
+                            <img src="../assets/images/countries/dominican-1200.jpg"
+                                alt="Білосніжний пляж і бірюзова вода Пунта-Кани в Домінікані"
+                                width="1200" height="600" loading="lazy" decoding="async">
+                            <span class="ab-atlas-badge">Хаб країни</span>
+                            <h3 class="ab-atlas-title-overlay">Домінікана</h3>
+                        </a>
+                        <div class="ab-atlas-body">
+                            <p class="ab-atlas-desc">Пунта-Кана, Кап-Кана, Байяібе та північне узбережжя — чесне порівняння пляжів, спокійної води, логістики та готелів all-inclusive.</p>
+                            <a href="dominican-republic/" class="ab-atlas-cta">Відкрити хаб Домінікани <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Caribbean -->
+                    <article class="ab-atlas-card">
+                        <a href="caribbean/" class="ab-atlas-media">
+                            <img src="../assets/images/countries/caribbean-1200.jpg"
+                                alt="Карибська бухта та зелені вершини над бірюзовим морем"
+                                width="1200" height="600" loading="lazy" decoding="async">
+                            <span class="ab-atlas-badge">Регіональний хаб</span>
+                            <h3 class="ab-atlas-title-overlay">Кариби</h3>
+                        </a>
+                        <div class="ab-atlas-body">
+                            <p class="ab-atlas-desc">Порівняння островів, маршрути та пороми, круїзні eSIM, планування поза сезоном ураганів і реальна вартість тижневого відпочинку.</p>
+                            <a href="caribbean/" class="ab-atlas-cta">Відкрити хаб Карибів <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Editorial Standards & Project Story -->
+        <section class="ab-section" id="standards" aria-labelledby="standards-heading">
+            <div class="ab-container">
+                <div class="ab-section-head">
+                    <p class="ab-kicker">Редакційна політика</p>
+                    <h2 class="ab-section-title" id="standards-heading">Стандарти та незалежність</h2>
+                    <p class="ab-section-lead">Принципи, за якими ми відбираємо факти, перевіряємо рекомендації та зберігаємо незалежність від готельного маркетингу.</p>
+                </div>
+
+                <div class="ab-standards-grid">
+                    <article class="ab-standard-card">
+                        <span class="ab-icon-badge" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5.2 3.4 9.9 8 11 4.6-1.1 8-5.8 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </span>
+                        <h3 class="ab-standard-title">Факти важливіші за думки</h3>
+                        <p class="ab-standard-text">Ми віддаємо пріоритет геолокації, реальній вартості трансферів та агрегованим даним відгуків, а не поодиноким суб'єктивним враженням.</p>
+                    </article>
+
+                    <article class="ab-standard-card">
+                        <span class="ab-icon-badge" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+                        </span>
+                        <h3 class="ab-standard-title">Абсолютна незалежність</h3>
+                        <p class="ab-standard-text">Ми не приймаємо оплату за огляди готелів і не продаємо місця в рейтингах. Усі рекомендації базуються виключно на власному аналізі.</p>
+                    </article>
+
+                    <article class="ab-standard-card">
+                        <span class="ab-icon-badge" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </span>
+                        <h3 class="ab-standard-title">Прозора монетизація</h3>
+                        <p class="ab-standard-text">У матеріалах можуть бути партнерські посилання. Вони не збільшують вартість бронювання для вас, але допомагають підтримувати незалежність проєкту.</p>
+                    </article>
+                </div>
+
+                <!-- Compact Milestones -->
+                <div class="ab-history-wrap">
+                    <div class="ab-history-head">
+                        <h3 class="ab-history-title">Історія розвитку проєкту</h3>
+                        <span class="ab-updated-note">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Редакційна перевірка: Листопад 2026
+                        </span>
+                    </div>
+
+                    <ol class="ab-milestones">
+                        <li class="ab-milestone">
+                            <p class="ab-milestone-date">Листопад 2025</p>
+                            <h4 class="ab-milestone-title">Зародження концепції</h4>
+                            <p class="ab-milestone-text">Створили власну методологію досліджень у відповідь на необ'єктивні рекламні огляди.</p>
+                        </li>
+                        <li class="ab-milestone">
+                            <p class="ab-milestone-date">Початок 2026</p>
+                            <h4 class="ab-milestone-title">Перші гайди по Мексиці</h4>
+                            <p class="ab-milestone-text">Запустили базову серію глибоких розборів районів Канкуна та Рів'єри-Майя.</p>
+                        </li>
+                        <li class="ab-milestone">
+                            <p class="ab-milestone-date">Літо 2026</p>
+                            <h4 class="ab-milestone-title">135+ гайдів трьома мовами</h4>
+                            <p class="ab-milestone-text">Сформували структуровану бібліотеку за районами, готелями, бюджетами, безпекою та сезонами.</p>
+                        </li>
+                        <li class="ab-milestone">
+                            <p class="ab-milestone-date">Теперішній час</p>
+                            <h4 class="ab-milestone-title">Розширення на Карибах</h4>
+                            <p class="ab-milestone-text">Регулярно оновлюємо наявні гайди та розширюємо глибоке покриття Домінікани й Карибських островів.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Editorial Desk & Start Reading -->
+        <section class="ab-section ab-section--alt" id="contact" aria-label="Контакти та перехід до гайдів">
+            <div class="ab-container">
+                <div class="ab-closing-grid">
+                    <div class="ab-closing-card ab-closing-card--featured">
+                        <p class="ab-kicker">Редакція</p>
+                        <h2 class="ab-closing-title">Зв'язатися з редакцією</h2>
+                        <p class="ab-closing-text">Знайшли неточність в огляді, помітили зміну умов готелю чи хочете запропонувати тему для дослідження? Будемо раді вашому повідомленню.</p>
+                        <div class="ab-closing-actions">
+                            <a href="mailto:contact@travelradarlk.com" class="ab-btn ab-btn--primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                                contact@travelradarlk.com
                             </a>
                         </div>
                     </div>
 
-
-                    <!-- Kimalie -->
-                    <div class="team-profile" id="person-kimalie-smith">
-                        <div class="team-profile-img">
-                            <img src="../assets/images/about/ks_photo_800x800.jpg" alt="Kimalie Smith" width="800" height="800" loading="lazy">
-                        </div>
-                        <div class="team-profile-content">
-                            <div class="team-profile-role">Карибський локальний експерт • Регіональний радник</div>
-                            <h3 class="team-profile-name">
-                                Kimalie Smith
-                                <span class="verified-badge" title="Особа, досвід та локація перевірені редакцією Travel Radar LK">
-                                    <svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                                    Верифікований експерт
-                                </span>
-                            </h3>
-                            <p class="team-profile-text">Народився і виріс на острові Сент-Томас (Американські Віргінські острови). Як корінний житель, Кімалі володіє глибоким розумінням регіональної історії, культури та специфіки острівного життя.</p>
-                            <p class="team-profile-text">Його армійський бекграунд у США та увага до деталей допомагають проєкту в моніторингу регіональних новин, фактчекінгу та оцінці реальної ситуації. Кімалі регулярно бере участь у редакційних обговореннях, допомагаючи нашим гайдам відображати місцевий контекст, а не поверхневі здогадки аутсайдерів.</p>
-                        </div>
-                    </div>
-
-                    <!-- Claire -->
-                    <div class="team-profile" id="person-claire-bennett">
-                        <div class="team-profile-img">
-                            <img src="../assets/images/about/cb_photo_800x800.jpg" alt="Claire Bennett" width="800" height="800" loading="lazy">
-                        </div>
-                        <div class="team-profile-content">
-                            <div class="team-profile-role">Спеціаліст із напрямку Мексика</div>
-                            <h3 class="team-profile-name">
-                                Claire Bennett
-                                <span class="verified-badge" title="Особа, досвід та локація перевірені редакцією Travel Radar LK">
-                                    <svg width="12" height="12" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                                    Верифікований експерт
-                                </span>
-                            </h3>
-                            <p class="team-profile-text">Професійна американська журналістка, випускниця Університету Вісконсін-Медісон. Після багатьох років роботи редактором журналу про подорожі в Денвері, Клер переїхала до Пуэрто-Морелос — невеликого прибережного містечка між Канкуном і Плайя-дель-Кармен.</p>
-                            <p class="team-profile-text">Вона відвідала понад 24 із 32 штатів Мексики, досліджуючи не лише популярні курорти, а й приховані сеноти та автентичні міста. Клер відповідає за оцінку реальної атмосфери мексиканських напрямків, розробку авторських маршрутів та управління візуальним контентом проєкту.</p>
+                    <div class="ab-closing-card">
+                        <p class="ab-kicker">Почніть планування</p>
+                        <h2 class="ab-closing-title">Флагманські матеріали</h2>
+                        <p class="ab-closing-text">Почніть із центрального хаба по Рів'єрі-Майя або перейдіть до всієї бібліотеки гайдів по Мексиці та Карибах.</p>
+                        <div class="ab-closing-actions">
+                            <a href="content/riviera-maya-travel-hub" class="ab-btn ab-btn--outline">
+                                Хаб Рів'єри-Майя <span aria-hidden="true">→</span>
+                            </a>
+                            <a href="content/" class="ab-btn ab-btn--outline">
+                                Усі гайди <span aria-hidden="true">→</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- 4. История проекта -->
-                <h2 class="about-section-title">Історія проєкту</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Листопад 2025</div>
-                        <h4 class="timeline-title">Зародження концепції</h4>
-                        <p class="timeline-text">Бачачи, наскільки необ'єктивними стали багато туристичних відгуків, ми розробили власну методологію досліджень.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Початок 2026</div>
-                        <h4 class="timeline-title">Перші гайди по Мексиці</h4>
-                        <p class="timeline-text">Ми запустили наші перші глибокі огляди Канкуна та Рів'єри-Майя.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Літо 2026</div>
-                        <h4 class="timeline-title">Опубліковано понад 130 гайдів</h4>
-                        <p class="timeline-text">Ми випустили понад 130 детальних матеріалів для планування поїздок.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Теперішній час</div>
-                        <h4 class="timeline-title">Розширення в Карибському регіоні</h4>
-                        <p class="timeline-text">Ми безперервно оновлюємо наявні гайди та активно розширюємо наше покриття, додаючи нові напрямки на Карибах.</p>
-                    </div>
-                </div>
-
-                <!-- Editorial Coverage -->
-                <h2 class="about-section-title">Напрямки досліджень</h2>
-                <p class="about-text">Наш редакційний фокус насамперед спрямований на Мексику, з активним розширенням матеріалів по Домініканській Республіці та інших країнах Карибського басейну.</p>
-                
-                <div class="coverage-container">
-                    <div class="coverage-card coverage-main-card">
-                        <div class="coverage-header">
-                            <span class="coverage-emoji">🇲🇽</span> 
-                            <span class="coverage-title">Мексика</span>
-                        </div>
-                        <div class="coverage-regions">
-                            <span class="dest-pill">Канкун</span>
-                            <span class="dest-pill">Рів'єра-Майя</span>
-                            <span class="dest-pill">Тулум</span>
-                            <span class="dest-pill">Плайя-дель-Кармен</span>
-                        </div>
-                    </div>
-                    
-                    <div class="coverage-secondary">
-                        <div class="coverage-card">
-                            <span class="coverage-emoji">🇩🇴</span> 
-                            <span class="coverage-title">Домінікана</span>
-                        </div>
-                        <div class="coverage-card">
-                            <span class="coverage-emoji">🌴</span> 
-                            <span class="coverage-title">Кариби</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Our Editorial Policy -->
-                <h2 class="about-section-title" style="margin-top: 4rem;">Редакційна політика</h2>
-                <div class="editorial-grid">
-                    <div class="editorial-card">
-                        <svg class="editorial-icon" viewBox="0 0 24 24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-2.33v8.02z"/></svg>
-                        <h4 class="editorial-title">Факти важливіші за думки</h4>
-                        <p class="editorial-text">Ми віддаємо пріоритет статистиці, геолокации та агрегованим даним над суб'єктивними враженнями.</p>
-                    </div>
-                    <div class="editorial-card">
-                        <svg class="editorial-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                        <h4 class="editorial-title">Абсолютна незалежність</h4>
-                        <p class="editorial-text">Ми не приймаємо гроші за огляди готелів і не продаємо місця в рейтингах. Усі рекомендації базуються виключно на нашому власному аналізі.</p>
-                    </div>
-                    <div class="editorial-card">
-                        <svg class="editorial-icon" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-                        <h4 class="editorial-title">Прозора монетизація</h4>
-                        <p class="editorial-text">На сайті присутні партнерські посилання. При переході за ними вартість бронювання для вас не збільшується, але це допомагає нам підтримувати незалежність проєкту.</p>
-                    </div>
-                </div>
-                <div class="last-updated">
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
-                    Останнє оновлення: Липень 2026
-                </div>
-
-                <!-- Контакты -->
-                <div class="contact-box">
-                    <h3 class="contact-title">Зв'язатися з редакцією</h3>
-                    <p class="contact-text">Знайшли неточність в огляді? Хочете запропонувати ідею для дослідження або поділитися своїм досвідом? Ми будемо раді вашему повідомленню.</p>
-                    <a href="mailto:contact@travelradarlk.com" class="btn-contact">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/></svg>
-                        contact@travelradarlk.com
-                    </a>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div id="site-footer" data-lang="uk"></div>
 
