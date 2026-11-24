@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "en",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T23:33:18.704Z",
-  "count": 137,
+  "generated_at": "2026-11-24T11:10:38.329Z",
+  "count": 138,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -221,6 +221,41 @@
       "date_published": "2026-06-17T12:00:00+00:00",
       "date_modified": "2026-06-17T12:00:00+00:00",
       "search_text": "bacalar mexico s lagoon of seven colors is it worth the trip from cancun how far bacalar really is from cancun why it works as an overnight rather than a day trip who the lagoon suits and how to plan the journey day-trips itinerary"
+    },
+    {
+      "slug": "bahamas-travel-guide",
+      "lang": "en",
+      "primary_section": "destinations",
+      "section_label": "Destinations",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "island-trip",
+        "airport-transfer",
+        "flights",
+        "budget",
+        "visa-entry",
+        "hurricane-season",
+        "neighborhoods"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Bahamas Travel Guide: Nassau, Paradise Island & Out Islands (Exuma, Eleuthera)",
+      "description": "How to choose between Nassau's Cable Beach, Paradise Island mega-resorts, and the Out Islands (Exuma, Harbour Island, Eleuthera), with entry rules, real EP + tax math, and cruise-crowd timing.",
+      "url": "https://travelradarlk.com/en/content/bahamas-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/bahamas-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-24T12:00:00+00:00",
+      "date_modified": "2026-11-24T12:00:00+00:00",
+      "search_text": "bahamas travel guide nassau paradise island out islands exuma eleuthera how to choose between nassau s cable beach paradise island mega-resorts and the out islands exuma harbour island eleuthera with entry rules real ep tax math and cruise-crowd timing beaches island-trip airport-transfer flights budget visa-entry hurricane-season neighborhoods"
     },
     {
       "slug": "bayahibe-la-romana-travel-guide",

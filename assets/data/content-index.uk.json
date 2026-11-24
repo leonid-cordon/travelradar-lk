@@ -2,8 +2,8 @@
   "version": 1,
   "lang": "uk",
   "generated_from": "metadata-registry.v1.json",
-  "generated_at": "2026-11-21T23:33:19.264Z",
-  "count": 137,
+  "generated_at": "2026-11-24T11:10:38.787Z",
+  "count": 138,
   "records": [
     {
       "slug": "7-day-riviera-maya-itinerary",
@@ -221,6 +221,41 @@
       "date_published": "2026-06-17T12:00:00+00:00",
       "date_modified": "2026-06-17T12:00:00+00:00",
       "search_text": "бакалар лагуна семи кольорів у мексиці чи варто їхати з канкуна наскільки бакалар далеко від канкуна чому це ночівля а не поїздка на день кому підходить лагуна і як спланувати дорогу day-trips itinerary"
+    },
+    {
+      "slug": "bahamas-travel-guide",
+      "lang": "uk",
+      "primary_section": "destinations",
+      "section_label": "Напрямки",
+      "country": "caribbean",
+      "region": null,
+      "destination": null,
+      "related_destinations": [],
+      "content_type": "guide",
+      "tags": [
+        "beaches",
+        "island-trip",
+        "airport-transfer",
+        "flights",
+        "budget",
+        "visa-entry",
+        "hurricane-season",
+        "neighborhoods"
+      ],
+      "audience": [
+        "first-timer",
+        "couples",
+        "family"
+      ],
+      "featured": 0,
+      "intent": "plan",
+      "title": "Путівник Багамами: Нассау, Парадайз-Айленд і Зовнішні острови (Екзума, Ельютера)",
+      "description": "Як обрати між Cable Beach у Нассау, мега-курортами Парадайз-Айленду та Зовнішніми островами (Екзума, Гарбор-Айленд, Ельютера): правила в'їзду, податки на Room-Only і графік круїзів.",
+      "url": "https://travelradarlk.com/ua/content/bahamas-travel-guide",
+      "image": "https://travelradarlk.com/assets/images/content/bahamas-travel-guide/card_1200x600.jpg",
+      "date_published": "2026-11-24T12:00:00+00:00",
+      "date_modified": "2026-11-24T12:00:00+00:00",
+      "search_text": "путівник багамами нассау парадайз-айленд і зовнішні острови екзума ельютера як обрати між cable beach у нассау мега-курортами парадайз-айленду та зовнішніми островами екзума гарбор-айленд ельютера правила в їзду податки на room-only і графік круїзів beaches island-trip airport-transfer flights budget visa-entry hurricane-season neighborhoods"
     },
     {
       "slug": "bayahibe-la-romana-travel-guide",
